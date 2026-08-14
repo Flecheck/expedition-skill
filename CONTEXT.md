@@ -74,6 +74,12 @@ addresses the human directly. Named for its role rather than for the harness, be
 replaceable.
 _Avoid_: subagent, crewmate, subtask (which names the work, not the worker)
 
+**AFK / HITL**:
+Whether a node needs the human in order to be worked. An AFK worker needs no live answer to proceed, though
+it may still raise a broken premise; a HITL worker cannot finish without the human's own words. Both are
+properties of the node's kind rather than of the harness running it.
+_Avoid_: autonomous, unattended, automatic, interactive
+
 **Attempt**:
 One worker instance on one node. A node outlives its attempts: a dead worker is replaced, and the
 replacement is a new attempt.
@@ -83,7 +89,9 @@ _Avoid_: retry, run, session
 The second, independent, read-only agent that checks a landed implementation against its acceptance
 condition and the bar before the human sees it. It checks against something stated, so it is not a
 second opinion. Started by the manager and never by the implementer, because whoever spawns it chooses
-what it sees. Its outcomes are `PASS` and `FAIL`, and a `FAIL` names which of the two was not met.
+what it sees. Its outcomes are `PASS` and `FAIL`, and a `FAIL` names which of the two was not met. It may
+instead raise, in which case it issues no verdict at all — its characteristic case is an acceptance
+condition that is incoherent or unmeasurable, which it alone ever reads cold.
 _Avoid_: reviewer, verifier, auditor — reviewing is the human's; reject — that is the human's word at
 the gate
 
@@ -103,8 +111,8 @@ A probe built to be reacted to and then discarded. Need not be code, and lives o
 tree.
 
 **implementation**:
-Product code that lands in the repo and has to be correct. Its worker never asks a live question,
-and the node ends at the gate.
+Product code that lands in the repo and has to be correct. Its worker needs no live answer in order to
+proceed and raises only when its premise is broken, and the node ends at the gate.
 
 **precondition**:
 Work that must happen before something else can be decided. It decides nothing, probes nothing, and
@@ -178,6 +186,14 @@ manager passes both along unaltered and answers nothing itself.
 _Note_: firstmate's Relay means external channels like X and Discord, which this workflow rules out
 of scope.
 
+**Raise**:
+Bringing something to the human that stops work until they act. The gate is the scheduled kind, on a
+finished diff. A worker raises an unscheduled one when its premise is broken — the thing that is wrong is
+not the worker's to change, the decision changes a lot, or the choice is genuinely too hard to make alone.
+Below that line it decides and leaves a flag instead. A raise blocks while keeping the code slot, it
+pre-empts grilling work in the manager's queue, and its answer either continues that worker or stops it.
+_Avoid_: escalate, interrupt; and *ask*, since a HITL worker's ordinary relayed question is not a raise
+
 **Manager note**:
 The manager's own annotation on a relayed question, drawn only from context it already holds.
 
@@ -221,6 +237,12 @@ not exist. Not a verdict on quality — a node whose code is merely wrong takes 
 the node does not resolve, the working tree is cleaned, and what survives is the discovery. The word is
 the human's alone; the checker's outcomes are `PASS` and `FAIL`.
 _Avoid_: refuse, discard, abandon (which names losing the code, not learning why)
+
+**Salvage**:
+The unfinished work saved off a stopped attempt before the working tree is cleaned: a path-limited diff the
+manager writes without reading it, kept out of the product tree and linked from whichever node inherits the
+work. Saved and never finished — nothing is tidied, made to build, or brought to the bar on its way out.
+_Avoid_: stash, WIP, draft, backup
 
 **Correction round**:
 One cycle of the human saying what is wrong and the worker fixing it, while the node stays claimed.
