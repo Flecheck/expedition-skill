@@ -135,6 +135,48 @@ because the glossary makes collisions visible.
 - **No new node, and deliberately so.** Each finding lands on a question the map already holds. Promoting
   any of them now would pre-empt the node that owns it.
 
+## Annotation: finding 8 was right about the constraint and wrong about the mechanism
+
+Added on the human's correction, given immediately after this node resolved. Verbatim: *"For the manager
+context, I compacted it in between each task as one task took aroung 200k tokens. Ideally in the final
+workflow, most of the context is in the workers and not in the manager."*
+
+**Nothing broke. It was operated.** Finding 8 said the manager's context *"was, repeatedly, [the thing
+that broke]"*, which reads as a failure discovered in flight. It was not: the human compacted between
+nodes as standing procedure, because a node costs about that much. The direction of the finding stands
+and its mechanism was wrong — a managed cost, not a crash.
+
+**And the number makes the finding quantitative, which it badly needed:**
+
+- **~200k tokens of manager context per node.** Measured across the sessions that built this graph, by
+  the person paying for them.
+- **The inherited sizing rule says 100k.** A node's question is specified as *"sized to one 100K token
+  agent session"*. The manager pays roughly **double** what that budgets, and the gap is exactly its
+  overhead — reading `map.md` and the graph, holding the interview, writing the files — none of which a
+  worker handed three pointers would carry.
+- **Extrapolated to the dogfood target, hand-operation is impossible rather than merely slow.** 179
+  nodes × ~200k ≈ **36M tokens of manager context** if the manager keeps doing the work itself. That is
+  the number that ends the argument, and it is the same argument finding 10 makes from a different
+  direction: the relay exists to move that cost off the manager and has been used once.
+
+**The human's own statement of intent, now a standing preference on the map:** *most of the context lives
+in the workers, not in the manager.* Recorded in `map.md`'s `## Notes`, because it governs decisions no
+single node owns — what a spawn carries, what a handover returns, whether the manager renders or points.
+
+### Finding 15 — a node's name hid its contents from the person who wrote it
+
+Surfaced in the same message. The human proposed creating a node for prioritisation of work, *"as just
+taking issues in order is not good enough"*, and that node already existed: [Human-initiated
+steering](16-human-steering.md) has owned the manager's selection policy since [Dogfood
+target](09-dogfood-target.md) sharpened it, holds Lang's fan-out-ranking precedent, and holds the
+flags-pulled-forward point the human raised in the same breath.
+
+The refer-by-name rule is finding 12 and it works — **but it only works if the name covers the node.**
+This one is named for the *override* and owns the *policy* being overridden. Two costs, both real: a
+duplicate node was nearly created, and the node sat on the frontier for four sessions while the thing it
+answers was being felt as friction. Cheap to fix and its own node's call, since renaming is free while a
+node is unstarted.
+
 ## Flags
 
 `ASSUMPTION` — **resolved as a second node in one session**, which the inherited one-node-per-session

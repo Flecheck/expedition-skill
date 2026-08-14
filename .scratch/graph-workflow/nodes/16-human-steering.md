@@ -7,6 +7,19 @@ Status: open
 
 How does the human say what they want to work on next, rather than only answering what they are handed?
 
+> **This node owns prioritisation, not just the override.** Stated up front because the name does not say
+> so and that cost something real: the human proposed creating a separate node for *"priorisation of
+> work, as just taking issues in order is not good enough"* while this one sat on the frontier already
+> holding it — recorded as finding 15 of [Friction from running this map by hand](24-self-hosted-friction.md).
+> Two questions, one node: **what the manager picks by default**, and **how the human overrides it**. A
+> better name is this node's to choose when it resolves; renaming is free while a node is unstarted.
+>
+> One thing the human added that this node did not have: prioritisation should be able to **raise flags
+> earlier** as a deliberate choice rather than leaving them to the closing report. The bullet added by
+> [Done-ness and termination](10-done-ness.md) below has the *class* of thing right; what is new is that
+> the friction record measured the consequence — 15 outstanding flags, 0 settled, across 24 nodes, so
+> flags are write-only in practice and not merely in theory.
+
 Surfaced by [Relay protocol](08-relay-protocol.md). "Ask me later" turned out not to be a pause but an act of **prioritization** — in the human's own words, *"if I want to work on something else, if there is something more important."* Declining the question in front of them is only half of that act. The other half — saying what they want instead — has no mechanism anywhere in the graph.
 
 This is the **inverse direction of the relay**, and the one direction the design has never specified. [Concurrency model](04-concurrency-model.md) sizes the HITL budget, [Relay protocol](08-relay-protocol.md) routes questions from subagent to human and back, but nothing lets the human reorder the frontier.
