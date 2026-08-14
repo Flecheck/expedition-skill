@@ -162,3 +162,21 @@ Added by [Naming](14-naming.md), which **corrects this answer rather than supers
 - **The cost accepted:** the token is invisible in `git log --oneline`. Its reader is an agent rather than the human, and `git log -- <path>` prints full messages anyway.
 - **The two streams are the `code commit` and the `graph commit`.** This answer noted the pair had no names and that the distinction was load-bearing; naming each side turned out to be enough, and the pair needs no collective noun.
 - **The gate, approval and correction round** keep the names used here, and **review** now belongs to the human alone — the agent that goes first is the **checker**.
+
+## Annotation: the gate is no longer the only claimant holding the code slot while it waits
+
+Added by [When an AFK worker cannot proceed](23-worker-cannot-proceed.md). This answer's *"the only claimant
+that holds a lock while it waits"* was true while the gate was the only way an implementation node could
+reach the human. It now has a sibling: an AFK worker that hits a broken premise **blocks and keeps the code
+slot**, its half-written code left in the tree.
+
+- **Two claimants, and the new one is unscheduled.** The gate arrives at a predictable point in the
+  lifecycle; a raise can arrive at any moment, including before a line of code is written.
+- **The trigger this answer named for flipping landing asynchronous arrives sooner.** It was *the code slot
+  idling on approvals*; there are now two ways for the slot to idle on human attention rather than one.
+- **What bounds it is a priority rule rather than a cap.** The manager must get a blocking raise answered
+  before it goes on filling the human's queue with grilling questions — recorded on [Human-initiated
+  steering](16-human-steering.md), which owns the selection policy.
+- **A stop cleans the tree, and something is saved first.** `reject` here says the working tree is cleaned;
+  that node adds that a diff is saved to the effort's own directory before the cleaning, written by the
+  manager without reading it and path-limited exactly as a code commit is.

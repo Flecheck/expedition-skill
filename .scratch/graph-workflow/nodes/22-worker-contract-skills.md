@@ -47,6 +47,25 @@ generically, this one now fixes concretely:
 - **The gate is raised even when the checker will not pass**, so the implementation contract cannot treat
   a passing check as a precondition of finishing.
 
+## Annotation: the third blocker resolved, and both affected contracts have their answers
+
+Added by [When an AFK worker cannot proceed](23-worker-cannot-proceed.md). **All three blockers are resolved
+and this node is on the frontier** — the map's second implementation node. The `Blocked by:` line keeps all
+three, because unblockedness is computed rather than recorded.
+
+- **The implementation contract gains a `raise` as a return variant** (condition 2), with the threshold
+  stated as three triggers a worker can test on itself, and the rule that a raise **blocks while keeping the
+  code slot** rather than parking.
+- **The checker contract gains a third outcome, not a third value.** `PASS`, `FAIL`, or a raise that issues
+  no verdict at all. Its characteristic case is an acceptance condition that is incoherent or unmeasurable,
+  since it is the only party that reads one cold.
+- **Both must say what happens on a stop.** The worker writes nothing and is dropped; the manager saves the
+  salvage and cleans the tree. Condition 8 is untouched — a worker still writes no graph file, and the
+  salvage is the manager's to write.
+- **One rule to trace for condition 3**: `AFK` now means *does not need the human in order to proceed*.
+  That is [Node type taxonomy](07-node-type-taxonomy.md)'s clause as corrected there, not a new rule
+  invented in a contract.
+
 ## Acceptance condition
 
 1. Six contracts exist and each is independently invocable by name from a spawn prompt: one per node

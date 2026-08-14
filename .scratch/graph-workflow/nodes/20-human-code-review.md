@@ -280,7 +280,10 @@ every implementation node, which is why it is flagged rather than assumed quietl
 trip.** The human defined what reject *means* and not what happens to the work. Decided on their own
 definition — the artifact of a reject is the discovery, not the code — but the opposite call was
 obviously right under the weaker reading of reject that was offered, so the reasoning depends entirely on
-a distinction they drew in one sentence.
+a distinction they drew in one sentence. **Answered by [When an AFK worker cannot
+proceed](23-worker-cannot-proceed.md)**, where the human ruled that a stop saves what can be salvaged before
+the tree is cleaned — *"do not work on it, just save it"*. A reject is the gate's stop, so it saves too, and
+the offer this flag guessed at is unnecessary. Settleable in [flags.md](../flags.md) whenever the human likes.
 
 `ASSUMPTION` — **a checker that will not pass still reaches the gate.** This qualifies the human's plain
 statement that *"the issues raised by the checker should be already fixed by the impementor"*. The

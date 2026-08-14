@@ -9,8 +9,11 @@ build the completion report: the report is the unchecked lines. Specified by
   section, so the two can never disagree and settling a flag never touches a node file.
 - Three kinds, from [Node type taxonomy](nodes/07-node-type-taxonomy.md) and
   [Relay protocol](nodes/08-relay-protocol.md): `ASSUMPTION` (an implementer decided a small
-  ambiguity itself), `CONDITION-WRONG` (an implementer judged its acceptance condition wrong but may
-  not rewrite it), `DELEGATED` (the human said "you decide" and the subagent answered).
+  ambiguity itself), `CONDITION-WRONG` (~~an implementer judged its acceptance condition wrong but may
+  not rewrite it~~ **the human answered a raise about a wrong acceptance condition with *carry on, ship it
+  anyway*; the judgement is no longer the worker's alone**, changed by [When an AFK worker cannot
+  proceed](nodes/23-worker-cannot-proceed.md)), `DELEGATED` (the human said "you decide" and the subagent
+  answered).
 - **Append-only.** A settled flag is checked, never removed.
 
 Format:
@@ -38,3 +41,8 @@ Format:
 - [ ] ASSUMPTION · [Human review of landed code](nodes/20-human-code-review.md) — depth of review is never measured, leaving node 10's accepted residual risk unquantified by construction.
 - [ ] ASSUMPTION · [Friction from running this map by hand](nodes/24-self-hosted-friction.md) — resolved as a second node in one session, which the inherited one-node-per-session rhythm forbids.
 - [ ] ASSUMPTION · [Friction from running this map by hand](nodes/24-self-hosted-friction.md) — written retrospectively from a manager's memory across compacted sessions; the transcripts were not re-read.
+- [ ] ASSUMPTION · [When an AFK worker cannot proceed](nodes/23-worker-cannot-proceed.md) — the salvage's form and place are chosen here: an unread path-limited diff at `<effort>/salvage/NN-<attempt>.patch`, with new files marked intent-to-add.
+- [ ] ASSUMPTION · [When an AFK worker cannot proceed](nodes/23-worker-cannot-proceed.md) — corrected node 07's "never asks live" by annotation and redefined `AFK` to absorb it; second settled clause corrected this way.
+- [ ] ASSUMPTION · [When an AFK worker cannot proceed](nodes/23-worker-cannot-proceed.md) — read the three triggers as disjunctive and ungated, so a worker that could pick must still raise; the reading most likely to produce noise.
+- [ ] ASSUMPTION · [When an AFK worker cannot proceed](nodes/23-worker-cannot-proceed.md) — let the human rewrite an acceptance condition in place on a claimed node, a third revision case node 06 does not name.
+- [ ] ASSUMPTION · [When an AFK worker cannot proceed](nodes/23-worker-cannot-proceed.md) — resolved with no worker and no relay: a node about the worker's channel to the human routed nothing through it.

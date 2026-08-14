@@ -62,3 +62,18 @@ Added by [Naming](14-naming.md).
 - **The thing the human most needs to ask for by name now has one.** The **gate** is the step, **approval** is their yes, a **correction round** is one cycle of fixing. So *"the gate first"* — the steering expression this node was told it needed, since the gate is the only claimant holding the code slot while it waits — is sayable in the workflow's own words instead of described.
 - **`promote` covers both halves of "what is banked and waiting".** A parked node holds banked answers; an outstanding flag is promoted into a node. One verb turns either into work.
 - The **manager** may be overridden but never answers for the human — now a glossary guarantee rather than a convention, which matters here because steering is the one place the human's instruction and the manager's judgement compete directly.
+
+## Annotation: the first fragment of the selection policy is decided, and it was not decided here
+
+Added by [When an AFK worker cannot proceed](23-worker-cannot-proceed.md).
+
+- **A blocking raise outranks grilling work.** The human's words: *"the manager should priorise answering the
+  worker instead of continuing working on grilling (ask the user to do it)"*. So this node inherits one fixed
+  rule rather than a blank sheet — and it is a **pre-emption** rather than a ranking: the manager stops
+  feeding the human's queue and asks.
+- **There are now two claimants that hold the code slot while they wait**, not one. The paragraph above says
+  the gate is the only one; a blocked worker is the second, and unlike the gate it can arrive at any moment.
+  Both have to be expressible as *"that first"*.
+- **A third thing the manager must be able to report**, alongside *which node awaits approval*: whether a
+  worker is blocked on a raise. Same property that made the first one worth naming — it is invisible in the
+  graph files, because the node reads `claimed` like any other.

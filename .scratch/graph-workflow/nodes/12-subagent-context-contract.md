@@ -271,3 +271,23 @@ questions, five answers, all `verbatim` where quoted.
   and the answer supplied the mechanism the recommendation was missing: not a path to read, a skill to
   invoke.
 - **What is the return payload called?** → *Handover.* `verbatim` (option chosen as written).
+
+## Annotation: "HITL types only" is lifted, and the checker gains a third outcome
+
+Added by [When an AFK worker cannot proceed](23-worker-cannot-proceed.md) — the node this answer's
+three-word restriction on the relay was holding shut.
+
+- **AFK workers may use the relay's question variant**, on three triggers: the broken thing is not theirs to
+  change, the decision changes a lot, or the choice is too hard to make alone. Below that line they still
+  decide and flag.
+- **The checker's return set widens.** This answer gave it `PASS` or `FAIL` and nothing else. It may now
+  also raise, and it is the party best placed to — the only one that ever reads an acceptance condition
+  cold. A raising checker **issues no verdict at all**, which makes this a third *outcome* rather than a
+  third value, and gives [Human review of landed code](20-human-code-review.md)'s `## Review` chronology a
+  third entry kind to carry.
+- **The payload needed nothing.** A raise is the question variant already specified here — the node,
+  `ABOUT`, `SO FAR`, `ASK`, `RECOMMENDED`, `ALTERNATIVES`, returned verbatim with its divergence marker.
+  That is why the human's ask turned out to be a permission and a threshold rather than a build.
+- **The scribe rule reaches one more place.** A raise lands under `## Interview` on an implementation node,
+  which previously could not have one, and the manager files the human's answer there unaltered like any
+  other.

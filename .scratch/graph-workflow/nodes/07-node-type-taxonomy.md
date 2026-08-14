@@ -102,3 +102,21 @@ Added by [Naming](14-naming.md).
 - **The reviewer is the `checker`.** This resolves a collision this answer created: two review-shaped steps now end one implementation node. The human **reviews and approves**; the agent **checks** against something stated — which is what this answer already demanded of it, on pain of the review *"collapsing into a second opinion"*. `## Review` on a node file means everything that happened after the code landed, by either of them.
 - **`grilling` survives**, against a consistency argument that all five kinds should name their output. A better axis was already latent in these names: **the type names what its worker does**, and three of the five name a skill the worker invokes — `/grilling`, `/research`, `/prototype`. `Type: grilling` tells a worker what to run. `precondition` is the one kind with no procedure to name, which suits the residual category.
 - The **acceptance condition** and the three flag markers `ASSUMPTION`, `CONDITION-WRONG`, `DELEGATED` all keep their names.
+
+## Annotation: "never asks live" is narrowed, and `AFK` is redefined to carry it
+
+Added by [When an AFK worker cannot proceed](23-worker-cannot-proceed.md), which **corrects two clauses of
+this answer rather than superseding it**. The five types, their deliverables and their AFK/HITL assignment
+all stand.
+
+- **An AFK worker may now block on the human through a `raise`, on three narrow triggers**: the broken thing
+  is not the worker's to change, the decision changes a lot, or the choice is genuinely too hard to make
+  alone. So *"never asks live"* is false as written. What preserves the type system is a sharper reading of
+  `AFK` — it means the worker **does not need** the human in order to proceed, not that it **cannot reach**
+  them.
+- **"Genuine forks become grilling nodes" stops being the worker's move.** Its outlets are now exactly two:
+  decide-and-flag, or raise. Minting the grilling node is one of the *human's* answers to a raise, which is
+  their own constraint on that node — a worker free to create the node that replaces its own is deciding.
+- **`CONDITION-WRONG` keeps its name and changes origin.** A wrong acceptance condition trips the first
+  trigger, so the flag is no longer an implementer's unilateral deferral: it records a raise the human
+  answered *carry on, ship it anyway*.
