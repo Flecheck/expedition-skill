@@ -106,6 +106,8 @@ The manager gains exactly four powers in this protocol — relay verbatim, instr
 ### Adopted on agent judgement, revisable
 
 1. **The human-delegated flag is a record, not a blocker.** A delegated answer is marked so a later reader can see which parts of a node the human did not personally decide, but it does not gate done-ness. [Done-ness](10-done-ness.md) owns that question; this is an input saying this particular flag does not block.
+
+   **Narrowed — not overturned — by [Done-ness and termination](10-done-ness.md):** a delegated flag still does not gate the frontier, and it now appears in the **completion report** the human must read before an effort can be closed. So it blocks nothing, and no delegated answer reaches a closed effort unseen. If the human wants to revisit one, postponing it there creates a node, which does then keep the frontier non-empty.
 2. **Per-question and whole-node delegation are two different acts.** Bare "you decide" is per-question and the interview stays HITL. Whole-node delegation must be said explicitly and converts the remainder to AFK: the subagent finishes alone, each remaining call is recorded as a delegated flag, and the slot frees at once. **The manager may never infer whole-node scope from a per-question answer** — silence about scope means per-question, because widening it on inference silently removes the human from a node.
 3. **`CONTEXT-PROOF` was instrumentation and is dropped** from the shipped contract. What replaces it is the provenance marker above, which is cheaper and answers the question that actually mattered.
 
@@ -116,3 +118,20 @@ The manager gains exactly four powers in this protocol — relay verbatim, instr
 - **[Graph file format](13-graph-file-format.md)** inherits per-attempt relay blocks, a durable routing key per attempt, dead-attempt marking, an append-only Q&A log, banked progress, and delegated flags — and needs **no new status** for any of them.
 - **[Naming](14-naming.md)** inherits: relay, park, attempt, banked answer, delegated flag, manager note, provenance.
 - The map's *Failure handling* fog splits: the death half is answered here, the garbage half becomes a node. *Resume and recovery* gains a mechanism. *How the human sees graph progress* gains a sharp requirement — parked nodes now hold banked human answers, so a graph read must surface **which nodes are half-interviewed**, or a deferral becomes invisible debt.
+
+## Annotation: a second kind of traffic, and replay on implementation nodes
+
+Added by [Git and code-landing policy](11-git-and-code-landing.md), which put a human gate at the end of every implementation node. Two things this answer did not anticipate:
+
+- **The channel now carries traffic in the other direction.** Everything here is a *question* travelling from subagent to human with `ABOUT`, `SO FAR`, provenance and redirects. A gate is a **work product raised by the manager** — a reviewed diff, an acceptance condition, a reviewer's verdict, the flags the implementer left — and the human's reply is an instruction rather than an answer. Its payload shape is [Human review of landed code](20-human-code-review.md)'s to fix; what this node contributes is the discipline that the human's words go back **verbatim**, which now applies to correction instructions as well as answers.
+- **Death and replay now apply to implementation nodes too.** They were designed for interviews, but a subagent correcting a diff over several rounds can die or exhaust its context exactly as an interviewer can, and it is holding the exclusive code slot when it does. The machinery transfers unchanged — lazy detection by failed resume, replay from an at-relay-time log, two respawns then escalation as node-too-coarse — with the node's `## Review` section as the log instead of `## Interview`, and the working tree as a second piece of recoverable state that no interview ever had.
+
+## Annotation: the relay keeps its name; two of the words it coined do not
+
+Added by [Naming](14-naming.md).
+
+- **`relay` confirmed, on merit rather than inheritance.** To relay is to pass along unaltered, which is exactly the guarantee specified here — verbatim, with a divergence marker, and the manager answering nothing. A name that encodes its own constraint is the best kind, and firstmate's unrelated Relay is out of scope for this effort anyway.
+- **`provenance` → `verbatim` / `paraphrase`.** A two-valued label needs no abstraction over it; mark the answer with what it is.
+- **`park` confirmed, `postpone` killed.** This node's *park* and [Done-ness](10-done-ness.md)'s *postpone* were flagged as one mechanism wearing two words. They are in fact two mechanisms — park returns an existing node to `open`, postpone creates a node from a flag — but the second was named for the human's intent rather than the effect. Named for the effect it is **promote**.
+- **`attempt`**, **`banked answer`** and **`manager note`** are confirmed unchanged.
+- The **subagent** is a **worker** throughout, named for its role rather than for the harness — since [Runtime host](02-runtime-host.md) is the part of the design flagged as most likely to be replaced.

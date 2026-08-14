@@ -1,6 +1,6 @@
 # Relay protocol — prototype run 1
 
-Asset for [Relay protocol](../../issues/08-relay-protocol.md). Built live in the Claude Code harness: two HITL issue subagents in flight at once, each pausing on a question, relayed through the manager to the human, resumed with `SendMessage`.
+Asset for [Relay protocol](../../nodes/08-relay-protocol.md). Built live in the Claude Code harness: two HITL issue subagents in flight at once, each pausing on a question, relayed through the manager to the human, resumed with `SendMessage`.
 
 The two subagents were given **Relay protocol's own listed open sub-questions**, so the human's answers feed the node's resolution rather than being spent on a toy.
 
@@ -9,7 +9,7 @@ The two subagents were given **Relay protocol's own listed open sub-questions**,
 
 ## The contract each subagent was spawned with
 
-Structurally identical for both, differing only in the node name and question. This *is* the prototype of the inbound half of [Subagent context contract](../../issues/12-subagent-context-contract.md).
+Structurally identical for both, differing only in the node name and question. This *is* the prototype of the inbound half of [Subagent context contract](../../nodes/12-subagent-context-contract.md).
 
 ```
 You are an **issue subagent** in a graph workflow that is currently being prototyped.
@@ -48,8 +48,8 @@ two questions in total, then return:
 
 Three deliberate design choices in that contract, each of which the run tests:
 
-1. **Context is passed as file pointers, not inlined.** Settles the open question in [Subagent context contract](../../issues/12-subagent-context-contract.md) in favour of wayfinder's zoom-as-needed pattern — if the subagents come back well-oriented, pointers are enough.
-2. **Read-only.** Two HITL subagents live at once must not both be writing the graph. This is the concurrency lock from [Concurrency model](../../issues/04-concurrency-model.md) expressed as a contract clause rather than a scheduler.
+1. **Context is passed as file pointers, not inlined.** Settles the open question in [Subagent context contract](../../nodes/12-subagent-context-contract.md) in favour of wayfinder's zoom-as-needed pattern — if the subagents come back well-oriented, pointers are enough.
+2. **Read-only.** Two HITL subagents live at once must not both be writing the graph. This is the concurrency lock from [Concurrency model](../../nodes/04-concurrency-model.md) expressed as a contract clause rather than a scheduler.
 3. **`CONTEXT-PROOF` is an instrumented probe**, not part of the real protocol — it exists only to prove the resume preserved context, and would be dropped from the shipped contract.
 
 ## Mechanical findings from the harness itself
@@ -72,7 +72,7 @@ It also confirms the taxonomy's decision that a subagent must **report** its own
 
 ### F3 — Concurrency was free at the manager level
 
-Both subagents were launched in a single message and both ran at once, with no queueing visible to the manager. The two-HITL budget from [Concurrency model](../../issues/04-concurrency-model.md) needs no scheduler in v1 — it is a number the manager chooses to respect, not a limit the runtime imposes.
+Both subagents were launched in a single message and both ran at once, with no queueing visible to the manager. The two-HITL budget from [Concurrency model](../../nodes/04-concurrency-model.md) needs no scheduler in v1 — it is a number the manager chooses to respect, not a limit the runtime imposes.
 
 ### F4 — The human's channel is serial no matter how many subagents are live
 
@@ -86,7 +86,7 @@ Resuming a paused subagent reported *"had no active task; resumed from transcrip
 
 Three consequences, and this is the finding that most changes the design:
 
-1. **The ~2 HITL budget is not a resource constraint.** No machine resource is held by a waiting interview. The number is purely about the human's attention, which is precisely what [Concurrency model](../../issues/04-concurrency-model.md) claimed on principle — now confirmed mechanically rather than assumed.
+1. **The ~2 HITL budget is not a resource constraint.** No machine resource is held by a waiting interview. The number is purely about the human's attention, which is precisely what [Concurrency model](../../nodes/04-concurrency-model.md) claimed on principle — now confirmed mechanically rather than assumed.
 2. **"Suspend in place" and "store progress then stop" are much closer than either the subagent or the human assumed**, because there is no live thing to stop and no slot to release. The real difference between them is not resource release but whether the *graph* records the half-finished interview durably.
 3. **The harness already persists subagent context to disk** — that is what makes transcript replay possible. But the manager cannot read it (F2) and it is harness-internal, so the graph still cannot rely on it. The node-file log the human asked for is not redundant with it; it is the part the graph can actually see.
 

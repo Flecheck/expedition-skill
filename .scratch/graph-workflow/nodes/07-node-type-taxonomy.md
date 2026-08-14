@@ -84,3 +84,21 @@ These are the most revisable parts of this answer.
 - [Graph file format](13-graph-file-format.md) inherits a five-value type vocabulary, an acceptance-condition field, and somewhere to put assumption flags and the reviewer's outcome.
 - [Naming](14-naming.md) inherits five kinds to name, plus the reviewer, the acceptance condition, and the assumption flag.
 - A clarifying note was added to [Revision semantics](06-revision-semantics.md) recording the scoping in point 2. That is an additive annotation to a resolved node, not a revision of it: its answer is not wrong, it simply did not consider mid-flight review. Superseding it would have manufactured a chain out of a cross-reference.
+
+## Annotation: implementation is AFK while it works and HITL at the gate
+
+Added by [Git and code-landing policy](11-git-and-code-landing.md), on the human's instruction that an implementation node ends by being raised to them for review before anything is committed. This refines the *implementation is AFK* call rather than contradicting it, and the distinction matters:
+
+- **During the work, nothing changes.** The subagent still never asks live: small ambiguities are decided and flagged, genuine forks become grilling nodes. That was a rule about *ambiguity*, and it stands.
+- **At the end, the node is HITL.** The lifecycle is implement → independent reviewer → manager raises the diff → human reviews → subagent corrects until the human is happy → manager commits → resolve. So an implementation node holds a claim on the human's attention that this answer did not budget for.
+- **The independent reviewer survives, and its purpose sharpens.** It is not redundant with the human: it exists so the human's gate is spent on judgement rather than on build failures, and it guarantees they never review a red tree. Dropping it because the human reads the diff anyway would spend the scarce resource to save the abundant one.
+- **Rejection is not supersession** — the scoping in point 2 now covers a second reviewer. The human's correction rounds arrive while the node is still `claimed`, so they cost no chain and no replacement node, exactly as the agent reviewer's rounds do. Supersession is spent only when the verdict is that the node's whole approach was wrong. Uncapped rounds are the human's authority; the agent's death or context exhaustion mid-round falls to [Relay protocol](08-relay-protocol.md)'s existing replay.
+
+## Annotation: two of the five names changed, and one axis explains why the other three did not
+
+Added by [Naming](14-naming.md).
+
+- **`task` → `precondition`.** The old name carried no information — every node is a task in ordinary English — and it collided twice: with *subtask*, the human's original word for a worker, and with the harness's own task tooling. The replacement is this answer's own test, *"precondition versus deliverable"*, used as the name. No node on this map carries `Type: task`, so the rename cost nothing.
+- **The reviewer is the `checker`.** This resolves a collision this answer created: two review-shaped steps now end one implementation node. The human **reviews and approves**; the agent **checks** against something stated — which is what this answer already demanded of it, on pain of the review *"collapsing into a second opinion"*. `## Review` on a node file means everything that happened after the code landed, by either of them.
+- **`grilling` survives**, against a consistency argument that all five kinds should name their output. A better axis was already latent in these names: **the type names what its worker does**, and three of the five name a skill the worker invokes — `/grilling`, `/research`, `/prototype`. `Type: grilling` tells a worker what to run. `precondition` is the one kind with no procedure to name, which suits the residual category.
+- The **acceptance condition** and the three flag markers `ASSUMPTION`, `CONDITION-WRONG`, `DELEGATED` all keep their names.
