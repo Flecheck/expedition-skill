@@ -37,3 +37,4 @@ declares a label vocabulary; flat where it does not. Split out of `map.md` and c
 - [Write the graph conventions document](nodes/21-conventions-document.md) — the format and its seven procedures ship at `.claude/skills/expedition/`, instructions only, wayfinder differences in a sibling file. Commit `92407d4`.
 - [Subagent context contract](nodes/12-subagent-context-contract.md) — the spawn dispatches to a contract skill over three pointers; the worker returns a **handover** the manager pastes unaltered; the checker is blind.
 - [Human review of landed code](nodes/20-human-code-review.md) — the gate has three outcomes, approve / correct / reject; the manager assembles the payload from others' text and never renders the diff.
+- [Friction from running this map by hand](nodes/24-self-hosted-friction.md) — fourteen findings; the constraint that actually failed every session is the manager's context, not the human's attention.

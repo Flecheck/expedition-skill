@@ -36,3 +36,5 @@ Format:
 - [ ] ASSUMPTION · [Human review of landed code](nodes/20-human-code-review.md) — a checker that will not pass still reaches the gate, qualifying the human's statement that its findings are fixed first.
 - [ ] ASSUMPTION · [Human review of landed code](nodes/20-human-code-review.md) — renamed the checker's `REJECT` to `FAIL` to free the word for the gate, correcting a token node 12 fixed.
 - [ ] ASSUMPTION · [Human review of landed code](nodes/20-human-code-review.md) — depth of review is never measured, leaving node 10's accepted residual risk unquantified by construction.
+- [ ] ASSUMPTION · [Friction from running this map by hand](nodes/24-self-hosted-friction.md) — resolved as a second node in one session, which the inherited one-node-per-session rhythm forbids.
+- [ ] ASSUMPTION · [Friction from running this map by hand](nodes/24-self-hosted-friction.md) — written retrospectively from a manager's memory across compacted sessions; the transcripts were not re-read.
