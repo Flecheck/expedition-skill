@@ -351,3 +351,22 @@ of the three: each answer was a composite or an addition, recorded verbatim abov
 3. **The answer's reach.** The human took the recommended two-shape option and added the salvage rule,
    which none of the three options contained. That addition reaches backwards into [Human review of landed
    code](20-human-code-review.md)'s `reject` and settles a flag left open there.
+
+## Annotation: the raise reaches `precondition` too
+
+Added by [Write the worker contract skills](22-worker-contract-skills.md), from the human's instruction at
+its gate: *"I guess precondition could raise, as it is more reseach that is supposed to be fully
+autonomous."*
+
+- **This answer's channel was written for the implementer and the checker.** Its threshold section named
+  `research` and `precondition` only to observe that a flag left on either waits for the closing report,
+  which the contracts read as flag-only. The human has now extended the channel one kind further.
+- **`research` stays flag-only, and now on the human's own reasoning rather than on the glossary's.**
+  [`CONTEXT.md`](../../../CONTEXT.md) already says a research node *"never involves the human"*; they have
+  named it as the kind that is meant to need nobody.
+- **A precondition's raise holds no code slot and has no salvage.** It writes no product code, so the two
+  parts of this answer that exist to protect a half-written working tree do not apply to it. What carries
+  over is the threshold, the two answer shapes, and the record under `## Interview`.
+- **It is not a fourth return variant.** A raise reuses the question shape [Subagent context
+  contract](12-subagent-context-contract.md) already specified, which is what made this cheap for the
+  implementer and is what makes it cheap here.

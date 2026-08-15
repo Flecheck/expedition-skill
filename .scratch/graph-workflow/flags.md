@@ -5,8 +5,17 @@ build the completion report: the report is the unchecked lines. Specified by
 [Graph file format](nodes/13-graph-file-format.md).
 
 - `[ ]` outstanding · `[x]` settled by the human
-- The checkbox lives **only here**. The flag's text and reasoning live in its node's `## Flags`
-  section, so the two can never disagree and settling a flag never touches a node file.
+- ~~The checkbox lives **only here**. The flag's text and reasoning live in its node's `## Flags`
+  section, so the two can never disagree and settling a flag never touches a node file.~~
+  **Overruled by the human** at [Write the worker contract skills](nodes/22-worker-contract-skills.md)'s
+  gate: a settled flag is marked `settled` in its node's `## Flags` section too, so someone reading a node
+  can see which of its judgements are still live without opening this file. The state is genuinely in two
+  places now — **this file wins** where they disagree, since the report is built from it. The flag's text
+  and reasoning still live on the node.
+- **The manager aims to settle a node's flags as it closes that node**, putting them to the human then
+  rather than leaving them here for the report. The human's instruction at the same gate: while the node is
+  still open the work is still there, so acting on a flag is cheap. Eleven of eleven were settled that way
+  on that node.
 - Three kinds, from [Node type taxonomy](nodes/07-node-type-taxonomy.md) and
   [Relay protocol](nodes/08-relay-protocol.md): `ASSUMPTION` (an implementer decided a small
   ambiguity itself), `CONDITION-WRONG` (~~an implementer judged its acceptance condition wrong but may
@@ -19,8 +28,13 @@ build the completion report: the report is the unchecked lines. Specified by
 Format:
 
 ```
-- [ ] ASSUMPTION · [<node name>](nodes/NN-<name>.md) — <one line>
+- [ ] NN.k ASSUMPTION · [<node name>](nodes/NN-<name>.md) — <one line>
 ```
+
+**`NN.k` is the flag's id**, added at the same gate: the node's own number, then a sequence
+within that node, allocated in write order and never reused. It is what lets a human name one flag out of
+eleven, and it turns mechanical check 6 into an exact join rather than a match on prose. The twenty lines
+below predate it and carry none.
 
 ## Outstanding and settled
 
@@ -46,3 +60,18 @@ Format:
 - [ ] ASSUMPTION · [When an AFK worker cannot proceed](nodes/23-worker-cannot-proceed.md) — read the three triggers as disjunctive and ungated, so a worker that could pick must still raise; the reading most likely to produce noise.
 - [ ] ASSUMPTION · [When an AFK worker cannot proceed](nodes/23-worker-cannot-proceed.md) — let the human rewrite an acceptance condition in place on a claimed node, a third revision case node 06 does not name.
 - [ ] ASSUMPTION · [When an AFK worker cannot proceed](nodes/23-worker-cannot-proceed.md) — resolved with no worker and no relay: a node about the worker's channel to the human routed nothing through it.
+- [x] 22.1 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — six sibling skill directories at `.claude/skills/expedition-<type>/SKILL.md`, inheriting node 21's install-location assumption.
+- [x] 22.2 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — the raise reaches implementer, checker and precondition; `research` alone is flag-only, on the glossary rather than on a stated scope.
+- [x] 22.3 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — the code reaches the checker as changed paths in the working tree rather than as rendered text.
+- [x] 22.4 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — the checker is given the node's name to address a raise, on the reading that a name is not part of the node file.
+- [x] 22.5 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — each contract carries the glossary subset its own text uses, so the vocabulary now lives in seven places.
+- [x] 22.6 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — written by the manager rather than by a worker, so none of the six has been run by the agent it is written for.
+- [x] 22.7 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — the checker's contract uses `code-review`, a word the glossary refuses for the agent, as the name of a thing a repo may carry.
+- [x] 22.8 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — the checker's blindness outranks a method skill's procedure, written from what a checker did unprompted mid-run.
+- [x] 22.9 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — the checker finds the standards it holds work against rather than being handed them, loosening *checks against something stated*.
+- [x] 22.10 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — a method skill's question to the human is non-blocking, carried alongside the outcome rather than waited on.
+- [x] 22.11 ASSUMPTION · [Write the worker contract skills](nodes/22-worker-contract-skills.md) — a re-checking checker distrusts the manager's statement of what changed, finding omissions by modification time.
+- [x] 17.1 ASSUMPTION · [Off-contract subagent output](nodes/17-off-contract-output.md) — an implementer whose code fails its acceptance condition was ruled outside this node alone; the human was never asked whether the two are one mechanism.
+- [x] 17.2 ASSUMPTION · [Off-contract subagent output](nodes/17-off-contract-output.md) — an unfileable return is never written onto the node, reading never-delete as governing what is in the graph's files rather than what must enter them.
+- [x] 17.3 ASSUMPTION · [Off-contract subagent output](nodes/17-off-contract-output.md) — declined the human's own word `reject` for an unfileable handover, changing their wording rather than following it.
+- [x] 17.4 ASSUMPTION · [Off-contract subagent output](nodes/17-off-contract-output.md) — filed by the manager running this node's own check: a paragraph of the answer rests on a manager note rather than on anything the human said.

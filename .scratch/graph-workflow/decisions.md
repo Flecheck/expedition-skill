@@ -39,3 +39,5 @@ declares a label vocabulary; flat where it does not. Split out of `map.md` and c
 - [Human review of landed code](nodes/20-human-code-review.md) — the gate has three outcomes, approve / correct / reject; the manager assembles the payload from others' text and never renders the diff.
 - [Friction from running this map by hand](nodes/24-self-hosted-friction.md) — fourteen findings; the constraint that actually failed every session is the manager's context, not the human's attention.
 - [When an AFK worker cannot proceed](nodes/23-worker-cannot-proceed.md) — three triggers open a blocking raise; the human's answer continues or stops the worker, and a stop salvages the work first.
+- [Write the worker contract skills](nodes/22-worker-contract-skills.md) — six standalone skills, one per node kind plus the checker, each carrying its own vocabulary and every return variant. Commit `e72f444`.
+- [Off-contract subagent output](nodes/17-off-contract-output.md) — on-contract means the manager can file it, however far it departs; departures become flags, and only an unfileable return is re-prompted, once.
