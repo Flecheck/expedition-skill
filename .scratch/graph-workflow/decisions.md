@@ -41,3 +41,4 @@ declares a label vocabulary; flat where it does not. Split out of `map.md` and c
 - [When an AFK worker cannot proceed](nodes/23-worker-cannot-proceed.md) — three triggers open a blocking raise; the human's answer continues or stops the worker, and a stop salvages the work first.
 - [Write the worker contract skills](nodes/22-worker-contract-skills.md) — six standalone skills, one per node kind plus the checker, each carrying its own vocabulary and every return variant. Commit `e72f444`.
 - [Off-contract subagent output](nodes/17-off-contract-output.md) — on-contract means the manager can file it, however far it departs; departures become flags, and only an unfileable return is re-prompted, once.
+- [What is recorded when the human takes an option as offered](nodes/25-recording-an-option-taken.md) — the manager pastes the human's reply as written, marked `verbatim`, with the option quoted beside it and attributed to the worker.

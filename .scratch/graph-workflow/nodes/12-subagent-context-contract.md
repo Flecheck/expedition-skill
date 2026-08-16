@@ -255,12 +255,27 @@ worker. Consistent with every earlier grilling node on this map, and the same ga
 ## Interview
 
 No worker, no attempt: the manager grilled directly, as on every earlier grilling node here. Five
-questions, five answers, all `verbatim` where quoted.
+questions, five answers, ~~all `verbatim` where quoted~~ **two of them verbatim and three of them not**,
+corrected below.
 
-- **Does the checker read the node it is checking?** → *Blind — condition, bar, diff.* `verbatim`
-  (option chosen as written).
-- **Is the manager a scribe or an author?** → *Scribe — paste, never rewrite.* `verbatim` (option
-  chosen as written).
+**Annotation from [What is recorded when the human takes an option as
+offered](25-recording-an-option-taken.md).** Three of these five entries record *the option's* text as
+the human's answer. The human's own reply to those three was never kept and no session holds it now.
+Under that node's answer such an entry is a `paraphrase`, and claiming `verbatim` for it is the one
+direction that fails unsafely: it puts the manager's words on the permanent record as the human's, which
+is [Relay protocol](08-relay-protocol.md)'s `F6` restated as practice. The three markers are struck
+through and corrected in place; the entries themselves and this node's `## Answer` are untouched, so this
+is an annotation and not a supersession.
+
+One of the three is the reason the correction is worth making at all: **the answer that established the
+scribe rule was itself recorded by the manager authoring.**
+
+- **Does the checker read the node it is checking?** → *Blind — condition, bar, diff.* ~~`verbatim`
+  (option chosen as written)~~ **`paraphrase`** — the manager's rendering of its own option, not the
+  human's reply.
+- **Is the manager a scribe or an author?** → *Scribe — paste, never rewrite.* ~~`verbatim` (option
+  chosen as written)~~ **`paraphrase`** — the manager's rendering of its own option, not the human's
+  reply.
 - **How does a worker learn a source is untrustworthy?** → *"It seeems specific to lang but I think it
   should go in map.md, I belive it's not too long"* `verbatim`. Read as two things: the location, and a
   constraint that it stay short optional prose rather than a mechanism.
@@ -270,7 +285,8 @@ questions, five answers, all `verbatim` where quoted.
   hard rules into the spawn, on the grounds that the prototype's rules were prompt text. Overruled,
   and the answer supplied the mechanism the recommendation was missing: not a path to read, a skill to
   invoke.
-- **What is the return payload called?** → *Handover.* `verbatim` (option chosen as written).
+- **What is the return payload called?** → *Handover.* ~~`verbatim` (option chosen as written)~~
+  **`paraphrase`** — the manager's rendering of its own option, not the human's reply.
 
 ## Annotation: "HITL types only" is lifted, and the checker gains a third outcome
 

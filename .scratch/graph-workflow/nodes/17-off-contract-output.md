@@ -47,6 +47,14 @@ A handover that satisfies its shape while inventing its content files perfectly.
 
 **The check has a limit, stated rather than fixed.** Its baseline can itself be one remove from the human: an answer given by taking an option as it was written is recorded in the manager's wording. The check catches a worker inventing the human's words and cannot catch a manager having supplied them, and afterwards the two look alike on the page. All three answers on this node were given that way. The remedy belongs to the relay's verbatim rule, not here, and is the new node below.
 
+**The limit is now closed**, by [What is recorded when the human takes an option as
+offered](25-recording-an-option-taken.md): the manager pastes the human's reply as they wrote it, however
+terse, and quotes the option beside it attributed to the worker. The baseline of this check is therefore
+the human's own words from here on, and *resting on words the human did not say* becomes decidable rather
+than merely stated. This node's own three `paraphrase` markers **stand** — they were accurate about the
+text they carried — while [Subagent context contract](12-subagent-context-contract.md)'s three `verbatim`
+markers for the same act were corrected there.
+
 ### The narrow lane: one re-prompt, then the human
 
 Where the manager genuinely cannot file the thing, it re-prompts **once**, naming exactly which part is missing. A second unfileable return is not re-prompted again and is not respawned: the manager files what it can, leaves the node `open` holding what is already on it, and tells the human once by node name — the same single notice a death gets.
