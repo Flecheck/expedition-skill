@@ -166,3 +166,23 @@ Added by [Naming](14-naming.md).
 - **`postpone` → `promote`.** Turning a flag into a node is the same act as turning a note of friction into one, which is what [Workflow self-improvement](19-workflow-self-improvement.md) asked for; one verb now covers both.
 - **`sweep` survives, re-derived.** It was distinguished from `cascade` only by scope, which this node itself called thin ground for two words. The honest distinction is purpose: a cascade propagates a change it knows about, a sweep looks for changes nobody propagated. Same machinery, opposite direction.
 - **`the bar` keeps its bare form.** *Quality bar* is redundant, and *default checks* is actively wrong: this answer made the bar a set of **properties** whose commands are discovered per repo, so a name saying "checks" would invite hardcoding the commands it deliberately refused to hardcode.
+
+## Annotation: when a flag is paid for
+
+Reported as an invalidation by [Whether flags.md survives the settle-at-close
+practice](27-does-flags-file-survive.md), and **caused** by [Write the worker contract
+skills](22-worker-contract-skills.md)'s gate rather than by that node.
+
+This node's *"flags cost nothing until the report"* no longer holds. The human's instruction at that gate
+made the manager **settle a node's flags as it closes that node**, on the ground that while the node is
+still open the work is still there, so acting on a flag is cheap. A flag is therefore paid for at its own
+node's close, and eleven of eleven, then four of four, then four of four were settled that way.
+
+What that leaves for the **closing report** is the exception rather than the rule: flags raised before the
+practice existed — twenty of them, permanently unreachable at a close since their nodes are resolved — and
+flags from the two node kinds that never end in front of the human, a `research` node and an AFK
+`precondition` node. Everything else has been settled already.
+
+**This node's four human moves on the report stand unchanged**, as does its definition of the report's
+contents and its rule that a promoted flag postpones closure. Only the claim about *when* a flag is paid
+for is contradicted.
