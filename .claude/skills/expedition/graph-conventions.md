@@ -7,8 +7,10 @@ Terms are used exactly as the glossary (`CONTEXT.md`) defines them.
 A repo whose tracker doc already documents a different local-markdown scheme: see
 `wayfinder-divergences.md`.
 
-**The manager is the graph's only writer.** A worker returns text; the manager writes it. No procedure
-below is ever performed by a worker.
+**The manager is the graph's only writer, and it writes as a scribe.** A worker returns text; the
+manager pastes each part of it under the right heading and never re-authors, shortens, re-orders or
+re-renders it. What the manager has of its own goes in beside that text as its own marked note. No
+procedure below is ever performed by a worker.
 
 **No edit deletes.** When any graph file changes, text that no longer holds is struck through or
 marked in place and the new text is added around it. Text leaves a file only when it is wrong or the
@@ -29,7 +31,11 @@ human asks for it gone.
 - `## Destination` — what reaching the end of the effort looks like.
 - `## Notes` — the domain, the skills every session consults, and standing preferences for this
   effort. Also the two things the manager maintains here: the **declared label vocabulary**, and the
-  bar's commands once they have been discovered for this repo.
+  bar's commands once they have been discovered for this repo. Two further blocks are optional prose,
+  written where the effort has them: its **ground rules**, and a **standing over sources** declared by
+  path and glob — which sources are authoritative, which are evidence only, and which hold statements
+  known to be false. Absent any declaration, every source a worker is pointed at is authoritative.
+  Both live here because the map is a pointer every worker already receives.
 - `## Not yet specified` — the fog.
 - `## Out of scope` — one line per node ruled beyond the destination, and per area consciously ruled
   out.
@@ -38,14 +44,28 @@ human asks for it gone.
 relevance, never a restatement. Grouped under the declared labels where a vocabulary exists, flat
 where it does not.
 
-`flags.md` holds one line per flag, in this form:
+`flags.md` is the graph's **capped index of every judgement an agent made on its own** — the flag
+counterpart to `decisions.md`, standing to a node's `## Flags` as `decisions.md` stands to its
+`## Answer`. One line per flag, one sentence, written report-shaped at raise time by whoever holds the
+context and never reconstructed later. The closing report's outstanding flags are this file's unchecked
+lines, and they are readable only because each was written to be read.
+
+The form:
 
 ```
-- [ ] ASSUMPTION · [<node name>](nodes/NN-<name>.md) — <one line>
+- [ ] NN.k ASSUMPTION · [<node name>](nodes/NN-<name>.md) — <one line>
 ```
 
-`- [ ]` is outstanding, `- [x]` is settled by the human. **The checkbox lives only in `flags.md`.** The
-flag's node is the **first** link on the line; the text after the dash may contain others.
+Every flag carries an **id**, `NN.k` — its node's number, then a sequence within that node, allocated
+in write order and never reused. It sits between the checkbox and the marker here, and in front of the
+marker on the node's `## Flags` entry. Without it a flag can only be pointed at by its position in a
+list.
+
+`- [ ]` is outstanding; `- [x]` is the human having dealt with the flag, which is not the same as
+having agreed with it. The same state is on the node, where a settled flag is marked `settled`, so the
+two can genuinely disagree. **Where they disagree `flags.md` wins, because the sweep and the closing
+report are built from it.** The flag's node is the **first** link on the line; the text after the dash
+may contain others.
 
 ## Adding a node
 
@@ -89,31 +109,70 @@ Sections appear in that order and only when they have content.
 ### `## Acceptance condition`
 
 What done means for this implementation node. Written by the node that spawned it, before any work
-starts. Its worker may raise a `CONDITION-WRONG` flag against it and may not rewrite it.
+starts, and its worker may not rewrite it. A worker that judges the condition wrong **raises** rather
+than shipping quietly past it, because a broken condition is not the worker's to fix. The
+`CONDITION-WRONG` flag is the manager's to file afterwards, and only where the human's answer was
+*carry on, ship it anyway*.
 
 ### `## Flags`
 
-One entry per flag, free prose, each prefixed with one of three markers:
+One entry per flag, free prose, each prefixed with the flag's id and then one of three markers:
 
 - `ASSUMPTION` — the worker decided a small ambiguity itself.
-- `CONDITION-WRONG` — the worker judged its acceptance condition wrong.
+- `CONDITION-WRONG` — the manager's, filed after a worker raised its acceptance condition as wrong and
+  the human answered *ship it anyway*.
 - `DELEGATED` — the human said "you decide" and the worker answered.
 
-No checkbox here.
+A flag the human has confirmed is marked `settled` here as well as checked in `flags.md`, so a reader
+of the node can tell which of its judgements are still live without opening a second file:
+
+```
+`NN.k` **· settled** `ASSUMPTION` — <the judgement, in the worker's own prose>
+```
+
+The word is `settled` rather than `resolved`: a node resolves, a flag settles. No checkbox here — the
+checkbox is `flags.md`'s.
+
+### The human's words, in either log
+
+`## Interview` and `## Review` are the two sections that hold them, and these rules cover both.
+
+**Ordering: the graph is written the moment the human speaks.** Their answer goes into its section at
+relay time. Resuming a worker is a background send and does not block, so the manager issues the resume
+and the write in one turn rather than one after the other. What the ordering protects is that the answer
+reaches disk before the worker can return, so a worker that dies still leaves the human's words banked.
+
+Every recorded answer carries one of two markers, `verbatim` or `paraphrase`. **The manager pastes the
+reply as they wrote it, however terse, and marks it `verbatim`.** *"ok for recommended"* is a complete
+answer and is recorded as one. Where the reply takes an option or an outcome it was offered, that option
+is quoted in the same entry and attributed to whoever wrote it — usually the worker — because the reply
+is unreadable without it and it is not the human's prose.
+
+**Nothing is rendered, so nothing on either log is marked `paraphrase`** unless the manager genuinely
+could not avoid rendering it. Copying is the manager's cheapest act and it yields `verbatim` every
+time, which is what stops the marker from needing a judgement.
+
+Where a terse reply does not make clear which option it points at, the manager records the reply and
+asks which.
 
 ### `## Review`
 
-Everything that happened after the code landed, appended per round: the checker's outcome, and the
-human's corrections at the gate. Rounds accumulate in this one node.
+Everything that happened after the code was written, appended per round; rounds accumulate in this one
+node. Three things, and nothing beyond them:
+
+1. **the checker's chronology, one entry per run.** A run either names `PASS`, or names `FAIL` and
+   which of the two it failed — the acceptance condition or the bar — or **raised instead of judging**,
+   in which case it issued no verdict at all and the entry says what it raised.
+2. **each correction round, numbered**, with the human's words verbatim and what the worker changed.
+3. **the gate's outcome, named as one of approve / correct / reject.** A reject also records what
+   implementing the node surfaced, and which of the three routes the node then took: `out-of-scope`,
+   `superseded` by a replacement, or back to `open` behind a new `Blocked by:` edge.
 
 ### `## Interview`
 
-One block per attempt: the attempt's routing key, then each relayed question and each human answer.
-An answer is marked `verbatim` or `paraphrase`. An answer that contradicts the recommendation the
-worker gave is additionally marked `DIVERGENCE`. A dead attempt is marked in its own heading.
-
-**Ordering requirement: write the human's answer into `## Interview` at relay time** — the moment the
-human gives it, before the manager attempts to resume the worker.
+One block per attempt: the attempt's routing key, then each relayed question and each human answer. An
+answer that contradicts the recommendation the worker gave is additionally marked `DIVERGENCE`. A dead
+attempt is marked in its own heading.
 
 At most three attempt blocks per node.
 
@@ -220,17 +279,32 @@ The progress is written before the status changes. Answers already relayed are a
 
 ### Raise a flag
 
-1. `nodes/NN-<name>.md`: append the flag under `## Flags`, prefixed with its marker.
-2. `flags.md`: append one unchecked line naming the same marker and linking the node.
+1. `nodes/NN-<name>.md`: append the flag under `## Flags`, prefixed with its id — the next unused `k`
+   for that node — and its marker.
+2. `flags.md`: append one unchecked line carrying the same id and marker, and linking the node.
 
-The flag's text is written before its line.
+The flag's text is written before its line. Both writes belong to the act of raising the flag and never
+to a tidy-up afterwards: a `## Flags` section assembled once does not stay assembled.
+
+The round that raised the flag — an `## Interview` attempt or a `## Review` round — says **what produced
+it**, and for a flag written from a worker's own unprompted judgement that means what the worker
+actually did, in its words. A one-line summary is enough under `## Flags`; it is not enough in the round
+that created it. Where there is no round at all — a `research` node, an AFK `precondition` node — the
+`## Flags` entry carries that account itself.
 
 ### Settle a flag
 
 1. `flags.md`: change that flag's `- [ ]` to `- [x]`.
+2. `nodes/NN-<name>.md`: mark that flag `settled` under `## Flags`.
 
-No other file changes, and the node file is not touched. A flag the human turns into a node is
-checked the same way; the node itself is created by the ordinary add-a-node step.
+**The norm is settling a node's flags at the human moment that ends it** — a grilling node's last
+answer, an implementation node's gate — while the work is still there and judging one is cheap. The
+closing report is the exception path rather than the ordinary destination: it carries the flags that
+never had a human moment at all, those raised before this practice existed and those on the kinds of
+node that never end in front of the human, `research` and an AFK `precondition`.
+
+A flag the human turns into a node is settled the same way; the node itself is created by the ordinary
+add-a-node step.
 
 ## Mechanical checks
 
@@ -241,6 +315,8 @@ Every one of these is decidable by reading the files.
 3. No `NN` used twice, and no gap that indicates a reused number.
 4. Every `Labels:` entry appears in the map's declared vocabulary.
 5. Every `resolved` node has an `## Answer` and exactly one line in `decisions.md`.
-6. Every `## Flags` entry has a line in `flags.md`, and none the other way.
+6. Every `## Flags` entry has a line in `flags.md` carrying the same id, and none the other way — and
+   the two agree on state: a flag `- [x]` in `flags.md` is marked `settled` on its node, and one marked
+   `settled` on its node is `- [x]`.
 7. Every `implementation` node has an `## Acceptance condition` before it is `claimed`.
 8. No node has more than three `## Interview` attempt blocks.

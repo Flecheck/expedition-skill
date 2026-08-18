@@ -96,8 +96,9 @@ MANAGER NOTES: <optional, the manager's own, never the human's>
 ```
 
 `HUMAN ANSWER` holds their words, not a rendering of them. Reason from what they wrote rather than from
-the option you offered. Where `DIVERGENCE` is present, your recommendation lost: do not carry on as
-though it had won.
+the option you offered — **except where what they wrote is an assent to one of the options you offered**,
+as *"ok for recommended"* is. Then that option is what they endorsed, and you read it as theirs. Where
+`DIVERGENCE` is present, your recommendation lost: do not carry on as though it had won.
 
 ### When the answer is not an answer
 

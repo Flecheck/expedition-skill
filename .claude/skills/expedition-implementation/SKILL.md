@@ -33,7 +33,9 @@ your work. No other implementation worker is running while you do.
 - **gate** — the one point on the code path where work stops until the human acts. The manager raises
   your work; nothing is committed until they approve.
 - **correction round** — one cycle of the human saying what is wrong and you fixing it.
-- **raise** — bringing something to the human that stops your work until they act.
+- **raise** — putting something to the human. Both your outlets do that, and whether it waits is the
+  channel's property rather than the word's: where this contract says *raise* alone it means the one that
+  stops your work until they act, and a flag waits for the gate.
 - **flag** — a note recording a judgement the human may want to revisit.
 - **handover** — what you hand back when you have finished.
 - **resolve** — answering a node's question and writing that answer onto it. The manager's act, never

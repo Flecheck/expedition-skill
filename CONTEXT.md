@@ -154,8 +154,10 @@ a cascade knows what changed, and a sweep is looking.
 _Avoid_: audit, full cascade
 
 **Flag**:
-A note a worker leaves recording a judgement the human may want to revisit. It costs nothing until
-the effort closes.
+A note recording a judgement an agent made on its own and the human may want to revisit — usually a
+worker's, and the manager's where a judgement of its own reached the graph. Raising one blocks nothing.
+It is settled at the human moment that ends its node, and reaches the closing report only where that
+moment never came.
 _Avoid_: TODO, warning
 
 **Promote**:
@@ -164,7 +166,9 @@ _Avoid_: postpone, defer (both blur into park)
 
 **Acceptance condition**:
 What done means for one implementation node, written by the node that spawned it, before any work
-starts. Its worker may flag the condition wrong but may not rewrite it.
+starts. Its worker may not rewrite it, and a condition it judges wrong is a raise rather than a flag of
+its own: the `CONDITION-WRONG` flag is the manager's to file, and only where the human's answer to that
+raise was to carry on and ship it anyway.
 _Avoid_: definition of done, criteria, spec
 
 **The bar**:
@@ -187,12 +191,16 @@ _Note_: firstmate's Relay means external channels like X and Discord, which this
 of scope.
 
 **Raise**:
-Bringing something to the human that stops work until they act. The gate is the scheduled kind, on a
-finished diff. A worker raises an unscheduled one when its premise is broken — the thing that is wrong is
-not the worker's to change, the decision changes a lot, or the choice is genuinely too hard to make alone.
-Below that line it decides and leaves a flag instead. A raise blocks while keeping the code slot, it
+An agent putting something to the human. Whether it waits is a property of the channel rather than of the
+word: a worker's raise stops its work until the human acts, a checker's question handed back alongside
+its outcome does not, and a flag waits for the human moment that ends its node — a grilling node's last
+answer, an implementation node's gate. The gate is the scheduled form of the blocking kind, on a finished
+diff; a worker opens an unscheduled one when its premise is broken — the thing that is wrong is not the
+worker's to change, the decision changes a lot, or the choice is genuinely too hard to make alone. Below
+that line it decides and leaves a flag instead. A blocking raise holds the code slot while it waits, it
 pre-empts grilling work in the manager's queue, and its answer either continues that worker or stops it.
-_Avoid_: escalate, interrupt; and *ask*, since a HITL worker's ordinary relayed question is not a raise
+_Avoid_: escalate, interrupt; and *ask*, the ordinary mode of a worker built to question the human, where
+a raise is what a worker meant to work mostly by itself does when it needs input it does not have
 
 **Manager note**:
 The manager's own annotation on a relayed question, drawn only from context it already holds.

@@ -23,7 +23,9 @@ You are read-only. You do not fix what you find.
 - **acceptance condition** — the statement of what done means for this work. Written before the work
   started, by neither you nor its writer.
 - **the bar** — the standing quality properties every implementation leaves the working tree meeting.
-- **raise** — bringing something to the human that stops work until they act.
+- **raise** — putting something to the human. Both your channels to them do that, and whether it waits is
+  the channel's property rather than the word's: where this contract says *raise* alone it means the one
+  that stops your check and hands back no outcome, and a question alongside your outcome stops nothing.
 - **the human** — the one person this effort belongs to. Yours only through the manager: by a raise, or by
   a question handed back alongside your outcome.
 
