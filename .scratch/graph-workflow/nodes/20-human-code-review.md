@@ -54,6 +54,22 @@ Added by [Naming](14-naming.md).
 - **The vocabulary this node needs is settled**: the **gate** is the step, **approval** the outcome, a **correction round** one cycle — and a correction round is emphatically not a **revision**, which means supersession here. Its four open questions are untouched: the payload, what a round looks like, the abandoned diff, and whether the review is recorded.
 - **`## Review` is where it is recorded if it is recorded** — that section holds everything after the code lands, from the checker or from the human.
 
+### Added by [Carry the recorded deltas into the shipped skill files](26-carry-deltas-into-shipped-files.md): the gate payload's flags
+
+The payload this node fixed says the manager assembles it from others' text and never renders the diff. It
+did not say **how a flag travels in it**, and the manager read the silence as permission to relay a flag's
+one-line index entry. The human's instruction at that node's gate, `verbatim`:
+
+> Also for flags, when asking the user, please explain in more detail what was done and why and the context.
+> Idealy I don't have to go into the files to find out what happened and how to respond
+
+**A flag reaches the human as what was done, why, and the context it needs to be answered — and answering it
+never requires opening a file.** Neither of a flag's two existing forms is a payload: its
+[flags.md](../flags.md) line is capped at one sentence by [Graph file format](13-graph-file-format.md), and
+its node entry is written for a reader who already has the node open. The manager writes a third form for
+the gate, and this is the same scribe-versus-render boundary this node already drew for the diff, arriving
+on the one part of the payload that is not somebody else's text to lay end to end.
+
 ## Answer
 
 **The gate has three outcomes — approve, correct, reject — and the manager *assembles* what it raises
