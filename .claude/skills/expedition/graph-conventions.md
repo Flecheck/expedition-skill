@@ -114,6 +114,25 @@ than shipping quietly past it, because a broken condition is not the worker's to
 `CONDITION-WRONG` flag is the manager's to file afterwards, and only where the human's answer was
 *carry on, ship it anyway*.
 
+**A condition is self-contained text.** Everything needed to judge whether the work is done is in the
+condition, and its reader never goes anywhere else to find out what it demands. That reader is the
+**checker**: it is handed the condition as text and has not read the node, so a condition pointing at
+something it was not given cannot be checked at all — and the manager, supplying what the condition
+left out, becomes the author of the standard the work is judged against.
+
+So the condition states **what must be true** in its own words. A **path** may say where — the work must
+touch that file, produce it, or leave it in a stated state — because the checker has the repo. What may
+never sit outside the text is the demand itself: *as decided at node NN*, *the section agreed in the
+interview*, *the wording the human chose* — each sends its reader away to learn what is being required
+of them. Where a condition genuinely depends on material held elsewhere, whoever writes one **copies
+that material into it**. The bar is the one thing it need not copy, and only because that reaches the
+checker by its own route.
+
+**A condition that points anyway is not repaired on the way to the checker.** The manager hands it over
+as written and supplies nothing it omits. Where what is missing is what the check turns on, it goes to
+the human instead — raised by the manager where it meets one before the check, or by the checker on a
+condition it cannot check.
+
 ### `## Flags`
 
 One entry per flag, free prose, each prefixed with the flag's id and then one of three markers:
