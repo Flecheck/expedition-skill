@@ -39,6 +39,17 @@ A handover is on-contract when the manager can paste it under the node's heading
 
 **What a handover departs by becomes a flag beside it**, filed by the manager against the node — at the gate where the node has one, and as the manager closes the node where it does not, which is where a flag is still cheap because the work is still there. Where the human wants a departure kept, **amending the contract is an implementation node against that skill file**, never something the manager does mid-flight. That path has already run once, on these very files.
 
+**Annotated by [Whether a spawn may override a shipped worker contract](28-spawn-overriding-a-contract.md),
+which made that sentence load-bearing and found the hole beside it.** The sentence holds unqualified and is
+not amended. What node 28 adds is what the manager does when the defect is found **while a node is being
+worked**: the repair is an implementation node and a gate, and the node in front of the manager cannot wait
+for it. So the manager raises, and the human's answer produces a **licence for that one attempt** — recorded
+as a flag on the node — alongside a **node for the permanent fix**. **A licence is not an amendment: nothing
+on disk changes**, so the prohibition above is untouched and the two rules are not competing. The evidence
+that both outputs are needed is that [Whether flags.md survives the settle-at-close
+practice](27-does-flags-file-survive.md) took the departure and minted no node, and a session later the
+clause was still unchanged in five contracts.
+
 ### What fileability cannot see, and the one check against it
 
 A handover that satisfies its shape while inventing its content files perfectly. The exposure is narrower than this node feared, for a structural reason: a worker writes no graph file, and the manager writes the human's words into `## Interview` itself, in the same turn it resumes the worker. That record is the manager's own text and never passes through a worker, so no worker can forge an entry in it. What a worker can still do is write an `ANSWER` — the node's permanent text, pasted unaltered — resting on something the human never said, or rendering its own call as theirs.

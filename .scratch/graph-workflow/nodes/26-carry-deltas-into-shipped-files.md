@@ -290,19 +290,19 @@ with the widened sense and with the closing report as the exception path.
 
 ## Flags
 
-- `26.1` `ASSUMPTION` **· settled** — stated the option-taken rule and the ordering rule **once**, in a new shared
+- `26.1` **· settled** `ASSUMPTION` — stated the option-taken rule and the ordering rule **once**, in a new shared
   subsection naming both `## Interview` and `## Review`, rather than twice under each heading;
   acceptance condition 2 says "for both" and this satisfies it by reference rather than by duplication,
   and it also hoists the ordering rule into a place where it now visibly governs `## Review`.
-- `26.2` `ASSUMPTION` **· settled** — chose the punctuation for the flag id in a `flags.md` line, a bare space between
+- `26.2` **· settled** `ASSUMPTION` — chose the punctuation for the flag id in a `flags.md` line, a bare space between
   checkbox and marker, since the map fixes only its position and `flags.md` was left unread per the
   contract; any retrofit of the twenty existing lines has to follow this form. *(Manager's note on
   filing: the form the worker guessed blind is the form already in the file, verified after the
   handover arrived. The assumption was sound and the guess was right.)*
-- `26.3` `ASSUMPTION` **· settled** — made two edits to `graph-conventions.md` that no delta strictly required, both
+- `26.3` **· settled** `ASSUMPTION` — made two edits to `graph-conventions.md` that no delta strictly required, both
   grounded in node 20: `### Review` now opens *"after the code was written"* rather than *"after the
   code landed"*, and item 3 names the three reject routes inline instead of leaving "route" undefined.
-- `26.4` `ASSUMPTION` **· settled** — **filed by the manager**, on spawning the checker. Two of this node's six
+- `26.4` **· settled** `ASSUMPTION` — **filed by the manager**, on spawning the checker. Two of this node's six
   acceptance conditions point **into the record**: condition 1 names the nine deltas by reference to
   `map.md`'s `## Notes` rather than stating them, and condition 4 forbids changing "any decision on any
   resolved node". A checker is blind by contract — *"run no part of one that would take you into the
@@ -314,13 +314,13 @@ with the widened sense and with the closing report as the exception path.
 
 Three more from correction round 1, the first two the worker's and the third the manager's.
 
-- `26.5` `ASSUMPTION` **· settled** — corrected [`CONTEXT.md`](../../../CONTEXT.md)'s **Flag** entry on *who leaves a
+- `26.5` **· settled** `ASSUMPTION` — corrected [`CONTEXT.md`](../../../CONTEXT.md)'s **Flag** entry on *who leaves a
   flag*, not only on `CONDITION-WRONG`: it now reads that a flag records a judgement **an agent** made on
   its own, usually a worker's and the manager's where a judgement of its own reached the graph. Judged
   inside the human's word `fix` because it is the same sentence delta 5 falsifies, and because this graph's
   own record already carries four manager-filed flags — `17.4`, `25.4`, `27.3`, `26.4`. The manager put the
   point to the worker to judge rather than deciding it, and this is the judgement.
-- `26.6` `ASSUMPTION` **· settled** — also replaced that entry's *"It costs nothing until the effort closes"*, which **no
+- `26.6` **· settled** `ASSUMPTION` — also replaced that entry's *"It costs nothing until the effort closes"*, which **no
   delta names**, on the ground that [Whether flags.md survives the settle-at-close
   practice](27-does-flags-file-survive.md) retired the queue reading and condition 4 says a shipped file
   disagreeing with a node is what moves. The worker's own words: *"Went further than `fix` strictly asked
@@ -329,7 +329,7 @@ Three more from correction round 1, the first two the worker's and the third the
   termination](10-done-ness.md)'s `## Annotation: when a flag is paid for` says exactly that *"flags cost
   nothing until the report"* no longer holds. So the sentence the worker judged stale on its own authority
   was stale on the record too, in a node it never read.
-- `26.7` `ASSUMPTION` **· settled** — **filed by the manager**, on re-spawning the checker. The node's work now includes a
+- `26.7` **· settled** `ASSUMPTION` — **filed by the manager**, on re-spawning the checker. The node's work now includes a
   file **no acceptance condition covers**. The human's `fix` put `CONTEXT.md` in scope without rewriting
   the condition, which the contract permits them to do and permits the worker never to do — so conditions
   1, 2, 3 and 5 still name three files, and a later reader holding only the condition cannot tell the
@@ -337,7 +337,7 @@ Three more from correction round 1, the first two the worker's and the third the
   and nothing else, and told not to invent a condition to fill the gap. Nothing in the design says what
   happens when a human extends a node's scope by instruction rather than by correcting its condition.
 
-- `26.8` `ASSUMPTION` **· settled** — **filed by the manager**, from the checker's third run-2 question, and shipped
+- `26.8` **· settled** `ASSUMPTION` — **filed by the manager**, from the checker's third run-2 question, and shipped
   unresolved. **`raise` carries two senses and the glossary now holds both in adjacent entries.** *Raise*
   reads *"Bringing something to the human that stops work until they act… Below that line it decides and
   leaves a flag instead"*, while *Flag* now reads *"Raising one blocks nothing."* The collision is
@@ -352,7 +352,7 @@ Three more from correction round 1, the first two the worker's and the third the
 
 One more from correction round 2, the worker's.
 
-- `26.9` `ASSUMPTION` **· settled** — **there is no *Ask* entry in the glossary**, so condition 7's requirement that it not
+- `26.9` **· settled** `ASSUMPTION` — **there is no *Ask* entry in the glossary**, so condition 7's requirement that it not
   contradict the general sense had to be read as the clause refusing `ask` inside *Raise*'s own `_Avoid_`
   line — and the worker **re-grounded that clause** rather than leaving it. From *"a HITL worker's ordinary
   relayed question is not a raise"* to *"is its node's own work rather than a raise"*. Its reason: once

@@ -109,6 +109,23 @@ to follow `/grilling` discipline and both held it. What the manager adds on top 
 capped exactly as [Relay protocol](08-relay-protocol.md)'s F9 caps a manager note: only from context
 the manager already holds.
 
+**Annotated by [Whether a spawn may override a shipped worker contract](28-spawn-overriding-a-contract.md):
+the spawn template above is missing an element, and the cap in the paragraph above now has a stated
+exception.** Neither is a contradiction of this node; both are things it had no case for.
+
+- **A carried direction of the human's** is a fourth element, and it is neither a `<per-type addition>` nor a
+  manager note: it is the human's own words, marked as theirs rather than as the manager's, travelling to a
+  worker that has no channel to them. It happened on [Carry the recorded deltas into the shipped skill
+  files](26-carry-deltas-into-shipped-files.md) — the flag validity pass — and is lawful under node 28's
+  route 2.
+- **A licence granted by a manager raise** is likewise neither. Where a contract clause blocks the node in
+  front of the manager, the manager raises and the human's answer licenses that one attempt; the licence
+  travels in the spawn and is recorded as a flag on the node.
+
+So the cap — *"only from context the manager already holds"* — governs a **manager note** and does not govern
+either of these, because neither is the manager's own. What the cap protects is untouched: the manager still
+authors nothing of its own beyond what it already holds.
+
 That makes **independent invocability by name** a requirement on all six contracts, which is a
 constraint on where the skill files land rather than something this node can settle. It inherits the
 install-location assumption already flagged on [Write the graph conventions

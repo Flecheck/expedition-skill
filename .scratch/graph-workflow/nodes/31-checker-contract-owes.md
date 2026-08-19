@@ -53,6 +53,22 @@ entry from the diff it had read the round before, unwrapped both, and word-diffe
 whole change was one inserted phrase. It also **unwrapped before grepping** to confirm shared wording, noting
 that a line-based grep misses a phrase that wraps.
 
+### A fourth, added in place by [Whether a spawn may override a shipped worker
+contract](28-spawn-overriding-a-contract.md)
+
+**4. What to do when the acceptance condition itself moves while the check is live.** On that same node,
+condition 7 was **amended twice mid-node** and the manager said so in each resume. The contract's *"When you
+are handed the same work again"* section is written for a changed **work** against a fixed condition — the
+whole design says a condition is written before work starts and is not the worker's to rewrite — so nothing
+in it covers this. The checker handled it correctly with no instruction: it re-checked against the amended
+text and did not treat its own earlier conclusion as inherited.
+
+Node 28 ruled this **not a departure from the contract but an uncovered case**, which is why it lands here
+rather than being licensed. It meets this node's own criterion exactly — real, handled right without
+instruction, and invisible to the next checker, which gets the file and not the transcript.
+
+Added in place because this node was unstarted, per [Revision semantics](06-revision-semantics.md).
+
 ## Acceptance condition
 
 1. `expedition-checker/SKILL.md` states the operative-content-versus-rationale test for a standard the work
@@ -74,6 +90,15 @@ that a line-based grep misses a phrase that wraps.
 5. The bar as [map.md](../map.md) records it for this repo: no build, no tests, no formatter, so the project
    criteria, this map's standing preferences, `CONTEXT.md`'s `_Avoid_` lines, and these conditions are the
    whole of it.
+
+6. Its *"When you are handed the same work again"* section says what the checker does when **the acceptance
+   condition** has changed since its last outcome, distinguished from a changed work: re-check against the
+   amended text, and do not inherit a conclusion reached against the old wording. *(Added with the fourth
+   case above, by [Whether a spawn may override a shipped worker
+   contract](28-spawn-overriding-a-contract.md). **Manager-written**, and so subject to the same warning as
+   the rest of this condition — read it against the file before trusting it. Added rather than left to the
+   `## Question` alone because flag `26.7` records what a described case with no condition covering it costs:
+   one product file in scope and no condition reaching it.)*
 
 **One warning to whoever spawns this**, learned the hard way on node 26: **that node's acceptance condition
 was the first written by the manager rather than by a spawning node or its worker, and it had to be amended

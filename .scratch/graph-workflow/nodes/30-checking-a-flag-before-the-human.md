@@ -103,9 +103,24 @@ and both of these are re-authorings of a worker's flag for a specific reader. Re
   check it, and the scribe rule says the manager does not re-author what a worker wrote.
 - **What a false flag does.** It is not a `FAIL` — the acceptance condition is met either way. Whether it
   blocks the gate, reaches the human as a marked warning, or goes back to the worker is undecided.
-- **Whether this is a contract change at all.** It was run once as a declared extension, which is
+- ~~**Whether this is a contract change at all.** It was run once as a declared extension, which is
   [Whether a spawn may override a shipped worker contract](28-spawn-overriding-a-contract.md)'s open
-  question. If a spawn may not extend a contract, this has to land *in* the checker's contract instead.
+  question. If a spawn may not extend a contract, this has to land *in* the checker's contract instead.~~
+  **Decided by that node, and it is a contract change.** The pass was lawful **as it happened**, under route
+  2 — the human's own direction, which the spawn may carry — so nothing about the one run needs excusing. But
+  a direction that should bind later workers becomes a contract edit, which is [Off-contract subagent
+  output](17-off-contract-output.md)'s existing sentence. This is a standing practice rather than a one-off,
+  so **it lands in `expedition-checker/SKILL.md`**. This node is not blocked on any further permission, and
+  it needs no licence.
+
+  One thing node 28 hands this node rather than deciding for it: the checker contract's *"That is
+  everything"* — the sentence the pass contradicted — is **load-bearing but mis-grounded**. It sits directly
+  above the blindfold clause it protects (*"There is a record behind this work… You do not read it"*), so the
+  closure guards the blindfold rather than being an arbitrary absolutism. The pass contradicted its
+  **letter** while respecting what it guards, the flags having reached the checker stripped of their reason —
+  claims about the work rather than record. **The repair is to state the closure as what it guards rather
+  than to remove it, and it is one clause in the file this node's answer lands in.** Recorded as flag `28.3`,
+  decided by that node's worker alone.
 
 Feeds `expedition-checker/SKILL.md` and the **manager's own skill**, which is where flag-gathering lives.
 Sits directly beside [Whether a spawn may override a shipped worker contract](28-spawn-overriding-a-contract.md),
