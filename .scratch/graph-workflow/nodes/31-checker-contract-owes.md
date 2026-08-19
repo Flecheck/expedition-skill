@@ -69,6 +69,40 @@ instruction, and invisible to the next checker, which gets the file and not the 
 
 Added in place because this node was unstarted, per [Revision semantics](06-revision-semantics.md).
 
+### A fifth and a sixth, added in place by [An acceptance condition is self-contained
+text](33-condition-is-self-contained.md)
+
+**5. The raise for a bad condition does not name the case node 33 routes to it.** The contract opens that
+raise for a condition *"incoherent, self-contradicting, unmeasurable, or naming something that cannot be
+observed"*. A condition whose **demand is held in material the checker was not given** is none of those on
+its face: the thing named can be observed perfectly well, by somebody else. Node 33 shipped the rule that
+sends exactly such a condition here — *"raised by the manager where it meets one before the check, or by the
+checker on a condition it cannot check"* — so the list now owes it a clause.
+
+What happened instead, for the fourth time: handed node 33's condition 6, whose deliverable lands in a node's
+`## Answer` that no checker is given, the checker **neither passed nor failed nor raised it**. It returned
+`PASS` and recorded that one clause was outside what it could establish, in its own words:
+
+> Reading it as "in the file" would be checking against my own repair of the condition, which my contract
+> forbids. **The manager holds that handover and is the only party that can verify the audit was reported; my
+> `PASS` does not cover it.**
+
+That is item 2's third route again, arriving unprompted on a different trigger — and it is now the shape this
+node has seen most often. Whether the two cases want one return shape or two is this node's to say.
+
+**6. A blind checker that invokes a reviewing skill loses its blindfold to the sub-agents that skill
+spawns.** The contract tells the checker to run a reviewing skill for code standards. Node 33's checker found
+one on the machine and **declined to invoke it**, giving the reason:
+
+> because it runs its axes in spawned sub-agents that would be handed none of that and would go looking,
+> including into the record
+
+It applied that skill's standards axis by hand instead, and left its spec axis unrun on the ground that the
+axis holds work against an originating document — which here is the node file the checker may not read.
+Nothing in the contract says any of this. The blindfold is a property of what the checker is *given*, and
+delegation hands a fresh agent a fresh set of givens; the contract treats *"invoke a reviewing skill"* as
+free.
+
 ## Acceptance condition
 
 1. `expedition-checker/SKILL.md` states the operative-content-versus-rationale test for a standard the work
@@ -99,6 +133,23 @@ Added in place because this node was unstarted, per [Revision semantics](06-revi
    the rest of this condition — read it against the file before trusting it. Added rather than left to the
    `## Question` alone because flag `26.7` records what a described case with no condition covering it costs:
    one product file in scope and no condition reaching it.)*
+
+7. Its raise for a bad condition covers a condition the checker cannot check **because what the condition
+   demands is held in material the checker was not given** — distinguished from the four grounds already
+   listed, none of which fit: such a demand is neither incoherent nor self-contradicting nor unmeasurable,
+   and what it names is observable by a party that has the material. Where the answer to condition 2 is a
+   fourth return shape, this case uses it too, or the contract says why the two differ. *(Added with the
+   fifth case above, by [An acceptance condition is self-contained
+   text](33-condition-is-self-contained.md). **Manager-written**, and subject to the same warning as the
+   rest of this condition.)*
+
+8. It states that a reviewing skill run under this contract must not delegate the check to agents that would
+   not be handed the checker's own givens — or, where the contract cannot bind what a skill does internally,
+   it says that the checker judges this itself before invoking one and reports which axes it ran and which it
+   left. The blindfold is a property of what the checker is given, and the current text treats invoking a
+   reviewing skill as free. *(Added with the sixth case above, by the same node, and **manager-written**.
+   If the honest answer is that no contract can constrain a third-party skill's internals, say so and write
+   the reporting duty alone.)*
 
 **One warning to whoever spawns this**, learned the hard way on node 26: **that node's acceptance condition
 was the first written by the manager rather than by a spawning node or its worker, and it had to be amended
