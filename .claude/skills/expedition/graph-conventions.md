@@ -128,6 +128,22 @@ of them. Where a condition genuinely depends on material held elsewhere, whoever
 that material into it**. The bar is the one thing it need not copy, and only because that reaches the
 checker by its own route.
 
+**One demand no copy repairs: the record as a whole.** A condition may not hold the work against every
+decision the effort has recorded — that the work contradicts none of them, or that everything in it
+traces back to one. Copying reaches a demand that **names** material held elsewhere; it cannot reach one
+that **quantifies over the record**, where there is no bounded material to bring inside the text and
+what there is grows every time a node resolves. Any wording of that shape is the same demand — *no
+decision on any resolved node changes*, *every rule here traces to a resolved node*, *the work is
+consistent with every decision so far* — and each leaves its reader no standard to hold the work
+against. A demand about **what changed in the tree** is a different thing and stays permitted: *no file
+under `.scratch/` changes* is answerable from the diff, whatever those files decided.
+
+**The duty behind it is real, and it is owed on the handover instead.** Every worker returns
+`INVALIDATIONS` — which resolved node its work contradicts, and how — answered by the party that built
+the work and may read the record to see what it touches. The checker is in neither position: it holds
+the condition as text, has not read the node, and does not read the record at all. So the demand belongs
+on the handover and in no condition.
+
 **A condition that points anyway is not repaired on the way to the checker.** The manager hands it over
 as written and supplies nothing it omits. Where what is missing is what the check turns on, it goes to
 the human instead — raised by the manager where it meets one before the check, or by the checker on a
