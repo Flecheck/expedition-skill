@@ -50,6 +50,42 @@ it"* is the option already known to cost two amendments.
 
 Reported by [An acceptance condition is self-contained text](33-condition-is-self-contained.md)'s worker.
 
+### The same defect on a second handover part: `FLAGS` names one artifact where the graph needs two
+
+Added in place by [The clause that says no resolved node changes cannot be
+self-contained](36-resolved-node-clause-cannot-be-self-contained.md) at its gate, this node being open and
+unstarted. It is the **same shape** as the node's own subject — a handover part naming one artifact where
+the graph needs two — so it belongs here rather than in a node of its own.
+
+All five contracts write:
+
+```
+FLAGS:         <one line each, prefixed ASSUMPTION>
+```
+
+But a flag lands in **two** places under **two different caps**, fixed by
+[`graph-conventions.md`](../../../.claude/skills/expedition/graph-conventions.md)'s `### Raise a flag`
+procedure: free prose under the node's `## Flags`, and one capped sentence in [flags.md](../flags.md).
+*"One line each"* names neither, and nothing in any contract says which of the two a worker is writing.
+
+**What happens in practice, twice measured.** The worker writes the prose — the more useful half — and the
+manager condenses each flag into its index line, authoring text that is neither the worker's nor the
+human's. That is the scribe rule broken by omission rather than by choice: the manager is not re-authoring
+what it was given, it is writing what it was not given at all.
+
+- Flag `33.4` recorded it at [An acceptance condition is self-contained
+  text](33-condition-is-self-contained.md), where the manager authored all four index lines. Settled at
+  that node's gate, and **settled is not fixed**.
+- It recurred immediately at [The clause that says no resolved node changes cannot be
+  self-contained](36-resolved-node-clause-cannot-be-self-contained.md) — two flags, two index lines, both
+  the manager's. No flag was filed the second time: a duplicate of a settled flag is noise, and what the
+  recurrence establishes is that **nothing owned the fix**, which is what this annotation changes.
+
+Whoever takes this node decides both parts together or says why they differ. One thing not to assume: the
+answer may be that a worker writes only the prose and the *capped line is the manager's by design* — in
+which case the contracts should say so, and `graph-conventions.md`'s *"written report-shaped at raise time
+by whoever holds the context"* is the clause to hold that answer against.
+
 ### The acceptance condition is owed
 
 Written by whoever spawns this, and it may not be claimed without one — which is this node's own subject

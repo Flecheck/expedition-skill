@@ -103,6 +103,20 @@ Nothing in the contract says any of this. The blindfold is a property of what th
 delegation hands a fresh agent a fresh set of givens; the contract treats *"invoke a reviewing skill"* as
 free.
 
+**A second checker met the same case and answered it differently, and both answers are right.** Added in
+place by [The clause that says no resolved node changes cannot be
+self-contained](36-resolved-node-clause-cannot-be-self-contained.md). That node's checker found the same
+reviewing skill and **invoked its standards axis anyway — with the standards and the smell baseline pasted
+into the sub-agent**, so the delegate was handed givens rather than sent looking. It left the same spec
+axis unrun, on the same ground and adding one detail the first did not: *its search order points into
+`.scratch/`*, which is the record, so the axis would have walked there before reading anything.
+
+So the uncovered case has two correct discharges — **decline to invoke**, and **invoke with the givens
+supplied** — and the contract names neither. The second is strictly more useful, since it gets the axis run;
+the first is safer where a skill's internals cannot be constrained. That is the distinction condition 8
+below has to make, and it is why the honest answer may be a duty to *judge and report* rather than a
+prohibition.
+
 ## Acceptance condition
 
 1. `expedition-checker/SKILL.md` states the operative-content-versus-rationale test for a standard the work
@@ -118,9 +132,32 @@ free.
 3. Its *"When you are handed the same work again"* section no longer claims modification times are **enough**
    to find unmentioned changes, and says what to do about a reflow: reconstruct and compare content, not
    lines. Unwrapping before searching is stated wherever the contract tells the checker to search.
-4. No other contract changes, and no decision on any resolved node changes. `CONTEXT.md` is touched only if a
+4. ~~No other contract changes, and no decision on any resolved node changes. `CONTEXT.md` is touched only if a
    term genuinely moves, and if it is, the [glossary-does-not-travel problem](29-shipped-file-consistency.md)
-   applies and is reported rather than solved here.
+   applies and is reported rather than solved here.~~
+
+   **Replaced in place**, by [The clause that says no resolved node changes cannot be
+   self-contained](36-resolved-node-clause-cannot-be-self-contained.md) at its gate. That node's audit found
+   this clause failing the self-containment rule **twice** — once on *"no decision on any resolved node
+   changes"*, which node 36 has now ruled out of every acceptance condition because no copy can repair a
+   demand that quantifies over the record; once on *"the glossary-does-not-travel problem"*, whose content
+   sits only in node 29 and which node 33's rule says to **copy in**. Both repairs are below, and this node
+   being open and unstarted, they are made here rather than by a node of their own — the worker that
+   reported them said the call was the manager's.
+
+   **No other contract file changes.** `expedition-checker/SKILL.md` is the only one this node's work
+   touches; the five `.claude/skills/expedition-<type>/SKILL.md` worker contracts and `CONTEXT.md` stay as
+   they are.
+
+   **Where a term does genuinely have to move, `CONTEXT.md` is edited and the move is reported rather than
+   propagated.** The reason, copied in rather than pointed at: **nothing checks the shipped files against
+   the glossary.** A decision that changes a word leaves every other shipped file still carrying the old
+   one, and no mechanical check and no agent's contract looks for it — so a term moving here is a report to
+   the human and a `NEW NODES` entry, never a sweep of the other files from inside this node.
+
+   The record-wide demand that used to sit here is now owed on the handover instead, where every worker
+   returns `INVALIDATIONS` — which resolved node its work contradicts, and how. Nothing about it is this
+   condition's business.
 5. The bar as [map.md](../map.md) records it for this repo: no build, no tests, no formatter, so the project
    criteria, this map's standing preferences, `CONTEXT.md`'s `_Avoid_` lines, and these conditions are the
    whole of it.
