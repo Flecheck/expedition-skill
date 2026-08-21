@@ -187,6 +187,16 @@ Two of thirty-one nodes have needed one, which is cheap and worth the frontier g
 - **The manager's own skill** inherits the raise, its two outputs, the floor on write rules, and the rule that a carried direction is marked as the human's words rather than as the manager's.
 - **[Subagent context contract](12-subagent-context-contract.md)'s spawn shape gains an element it does not list** — a carried direction, distinct from `<per-type additions>` and from a manager note capped to context the manager already holds.
 
+### Narrowed by [Workflow self-improvement during use](19-workflow-self-improvement.md)
+
+Reported as an `INVALIDATIONS` entry by that node's worker, in its words:
+
+> its rule of **two outputs, always both** (a licence for the attempt, and a node for the permanent fix) is
+> written unconditionally. It cannot hold on an effort whose repository does not own the thing being fixed,
+> because the second output is impossible there. Narrowed rather than overturned: on such an effort the
+> `FRICTION` flag takes the node's place, so the licence still has something behind it, which is what that
+> node's evidence was actually about.
+
 ## Flags
 
 `28.1` **· settled** `ASSUMPTION` — the **three-route triage** is this worker's, not the human's. They took the Q2 recommendation, whose opening clause — *the manager may not depart on its own authority* — is theirs by assent to the option as written. The triage itself was Q1's recommendation and was never picked; it is presupposed by what they took rather than chosen, and it is recorded here as a worker's judgement.

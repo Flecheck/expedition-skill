@@ -186,3 +186,13 @@ flags from the two node kinds that never end in front of the human, a `research`
 **This node's four human moves on the report stand unchanged**, as does its definition of the report's
 contents and its rule that a promoted flag postpones closure. Only the claim about *when* a flag is paid
 for is contradicted.
+
+## Annotation: which graph a promoted flag's node lands on
+
+Reported as an `INVALIDATIONS` entry by [Workflow self-improvement during
+use](19-workflow-self-improvement.md)'s worker, in its words:
+
+> its route for a flag the human does not settle (creating a node from it, since renamed `promote` by node 14)
+> assumes the node can be created on the graph holding the flag. For a `FRICTION` flag that is false: its node
+> is minted in the repository holding the expedition skill files, in a session there, and never on the graph
+> that raised it. The route survives; the graph it lands on changes.
