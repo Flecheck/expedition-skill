@@ -1,6 +1,6 @@
 ---
 name: expedition-prototype
-description: The worker contract for an expedition prototype node. Read it when a spawn names it, and follow it exactly.
+description: Prototype node worker contract for an expedition. Read it when a spawn names it.
 ---
 
 # Prototype worker contract
@@ -55,12 +55,23 @@ false. Follow both. Absent any declaration, every source you are pointed at is a
    words, see *When the answer is not an answer*.
 4. You have no human-facing tool. Do not call one. When you have a question, end your turn and make that
    question your entire final output, in the shape below.
-5. You never resolve your node, never mark it, and never create another one.
+5. You never resolve your node, never mark it, and never create another one. You hand your answer back
+   and the manager writes it, and a node you have found is reported on your handover's `NEW NODES` part
+   rather than created as a file.
 6. Your final output is consumed by the manager. It is not a message to a person.
 
 ## How you prototype
 
-Invoke `/prototype` if it is present. Where it is not, this is the whole of the discipline:
+Invoke `/prototype` if it is present.
+
+**Where a method skill's instructions and this contract's hard rules conflict, the hard rules
+govern.** Such a skill was written for an agent working alone, so three of its instructions collide
+with the rules above: to write or update a file of its own; to address the human directly, or wait
+for their reply rather than ending your turn; and to commit, branch, or place work somewhere this
+contract does not allow. Leave the conflicting part unrun, run the rest, and say in your handover
+which part you left and why.
+
+Where it is not present, this is the whole of the discipline:
 
 - Build the cheapest thing that can be reacted to. Rough is correct here.
 - Build it first, then put it in front of the human and ask what it changes.

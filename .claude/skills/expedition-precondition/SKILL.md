@@ -1,6 +1,6 @@
 ---
 name: expedition-precondition
-description: The worker contract for an expedition precondition node. Read it when a spawn names it, and follow it exactly.
+description: Precondition node worker contract for an expedition. Read it when a spawn names it.
 ---
 
 # Precondition worker contract
@@ -52,7 +52,9 @@ false. Follow both. Absent any declaration, every source you are pointed at is a
 
 1. You write no product code and no graph file. Where the work itself requires a file — a configuration,
    a directory, an installed dependency — write it and say so in your handover.
-2. You never resolve your node, never mark it, and never create another one.
+2. You never resolve your node, never mark it, and never create another one. You hand your answer back
+   and the manager writes it, and a node you have found is reported on your handover's `NEW NODES` part
+   rather than created as a file.
 3. You never answer your own question on the human's behalf, and you never carry out a step yourself that
    the node reserved for them. Where they hand a question back to you in as many words, see *When the
    answer is not an answer*.

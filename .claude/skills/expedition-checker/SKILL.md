@@ -1,6 +1,6 @@
 ---
 name: expedition-checker
-description: The worker contract for an expedition checker. Read it when a spawn names it, and follow it exactly.
+description: Checker contract for an expedition. Read it when a spawn names it.
 ---
 
 # Checker contract

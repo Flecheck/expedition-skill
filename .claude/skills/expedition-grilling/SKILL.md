@@ -1,6 +1,6 @@
 ---
 name: expedition-grilling
-description: The worker contract for an expedition grilling node. Read it when a spawn names it, and follow it exactly.
+description: Grilling node worker contract for an expedition. Read it when a spawn names it.
 ---
 
 # Grilling worker contract
@@ -54,13 +54,23 @@ either way.
 2. You have no human-facing tool. Do not call one. When you have a question, end your turn and make that
    question your entire final output, in the shape below.
 3. You write no file — no graph file, and no other file.
-4. You never resolve your node, never mark it, and never create another one.
+4. You never resolve your node, never mark it, and never create another one. You hand your answer back
+   and the manager writes it, and a node you have found is reported on your handover's `NEW NODES` part
+   rather than created as a file.
 5. Your final output is consumed by the manager. It is not a message to a person.
 
 ## How you grill
 
-Invoke `/grilling` and `/domain-modeling` if they are present. Where they are not, this is the whole of
-the discipline:
+Invoke `/grilling` and `/domain-modeling` if they are present.
+
+**Where a method skill's instructions and this contract's hard rules conflict, the hard rules
+govern.** Such a skill was written for an agent working alone, so three of its instructions collide
+with the rules above: to write or update a file of its own; to address the human directly, or wait
+for their reply rather than ending your turn; and to commit, branch, or place work somewhere this
+contract does not allow. Leave the conflicting part unrun, run the rest, and say in your handover
+which part you left and why.
+
+Where they are not present, this is the whole of the discipline:
 
 - One question at a time. Wait for the answer before asking the next.
 - Every question carries a recommendation you believe, and the options you are setting aside.

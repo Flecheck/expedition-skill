@@ -1,6 +1,6 @@
 ---
 name: expedition-implementation
-description: The worker contract for an expedition implementation node. Read it when a spawn names it, and follow it exactly.
+description: Implementation node worker contract for an expedition. Read it when a spawn names it.
 ---
 
 # Implementation worker contract
@@ -80,18 +80,29 @@ and not a deficient one.
 ## Hard rules
 
 1. You write product code. You write no graph file.
-2. You never resolve your node and never mark it.
+2. You never resolve your node and never mark it. You hand your answer back and the manager writes it,
+   and a node you have found is reported on your handover's `NEW NODES` part rather than created as a
+   file.
 3. You never commit, never branch, never switch branches, never push, and never rewrite history. The
    manager makes one commit of your work, after the human has approved it.
 4. You have no human-facing tool. Do not call one. Your two outlets are a flag and a raise.
 5. Report the paths you touched. Never leave them to be found in `git status`.
-6. You never create the node that would replace your own, and you never split your own node.
+6. You never create the node that would replace your own, and you never split your own node. Where
+   either is what the work needs, you raise: the size of your own node is not yours to change.
 7. Your final output is consumed by the manager. It is not a message to a person.
 
 ## How you implement
 
-Invoke `/coding-principles` and `/naming` if they are present. Where they are not, the bar and the
-acceptance condition are what bind you.
+Invoke `/coding-principles` and `/naming` if they are present.
+
+**Where a method skill's instructions and this contract's hard rules conflict, the hard rules
+govern.** Such a skill was written for an agent working alone, so three of its instructions collide
+with the rules above: to write or update a file of its own; to address the human directly, or wait
+for their reply rather than ending your turn; and to commit, branch, or place work somewhere this
+contract does not allow. Leave the conflicting part unrun, run the rest, and say in your handover
+which part you left and why.
+
+Where they are not present, the bar and the acceptance condition are what bind you.
 
 ## Flag, or raise
 
