@@ -207,28 +207,44 @@ node. Three things, and nothing beyond them:
 
 **A part a run did not cover.** A checker's `PASS` or `FAIL` may name a part of the acceptance condition
 its outcome does not reach: a part it could not establish, because establishing it needs material the
-checker was not given. The run's entry carries that part as the checker wrote it, quoted, and the outcome
-on that entry covers the rest of the condition and no more. So the entry says both halves — the parts
-named are what the run left, and the rest of the condition is what it covered.
+checker was not given. The run's entry carries those parts under a `NOT COVERED:` label, one item per
+part, each quoting the part as the checker wrote it — and the outcome on that entry covers the rest of
+the condition and no more. So the entry says both halves — the parts named are what the run left, and the
+rest of the condition is what it covered.
 
-The part is still owed, and **establishing it is recorded on that same entry**: beside the part, who
-established it and what they read or ran. Usually that is the manager, which holds the handover the
-checker does not; it may instead be the human at the gate reading it themselves, or a later run of the
-check. It happens by the gate at the latest, the node resolving there with nothing after it to establish
-anything.
+The part is still owed, and **establishing it is recorded on that same item**: who established it, and
+what they read or ran. Usually that is the manager, which holds the handover the checker does not; it may
+instead be the human at the gate reading it themselves, or a later run of the check. It happens by the
+gate at the latest, the node resolving there with nothing after it to establish anything.
 
-**An entry for a run that covered the whole condition carries none of this** — no part to name, nothing
-owed, no field and no sentence, and the entry reads exactly as it did before. A condition whose every
-demand lands in a file gives a checker nothing to name here, which is what `## Acceptance condition`
-above already asks of one.
+**Every item opens with its state**, and establishing a part rewrites that opening and nothing else:
+
+```
+NOT COVERED:
+- OWED — "<the part, as the checker wrote it>"
+- ESTABLISHED BY <who> · <what they read or ran> — "<the part, as the checker wrote it>"
+```
+
+`OWED` and `ESTABLISHED BY` are the only two openings an item may take, so whether a part has an
+establisher is read off the item's first word and never judged from the prose after it. The marker opens
+the **item**, so a quote that wraps over several lines cannot carry it away, and one item is one part, so
+parts are counted by items and never by sentences. The label stands alone on its own line, so prose that
+mentions the words names no part at all. The state is the manager's bookkeeping, as a flag's state is;
+the part is the checker's own text, pasted.
+
+**An entry for a run that covered the whole condition carries none of this** — no `NOT COVERED:` label,
+no item and no marker, and the entry reads exactly as it did before. A condition whose every demand lands
+in a file gives a checker nothing to name here, which is what `## Acceptance condition` above already
+asks of one.
 
 Both halves sit on the entry that named the part, rather than being recorded where the establishing
 happens, because the part is an obligation left **open** and what a later reader needs is whether it
 still is. Recorded where the establishing happens, the record moves with whoever acted — three parties,
 each writing somewhere else — so there is no one place to look; and a part nobody ever established writes
 nothing anywhere, which is the case the record exists for. Keyed to the entry that named it there is one
-place whatever happened, and a part still open is legible there as a part with nothing beside it. **This
-is not a fourth thing on the log**: it is entry kind 1 carrying what its run handed back.
+place whatever happened, and a part nobody has established is legible there as an item still opening
+`OWED`, which is what check 9 below reads. **This is not a fourth thing on the log**: it is entry kind 1
+carrying what its run handed back.
 
 ### `## Interview`
 
@@ -382,3 +398,5 @@ Every one of these is decidable by reading the files.
    `settled` on its node is `- [x]`.
 7. Every `implementation` node has an `## Acceptance condition` before it is `claimed`.
 8. No node has more than three `## Interview` attempt blocks.
+9. Every item under a `NOT COVERED:` label in a `## Review` opens with `OWED` or with `ESTABLISHED BY`,
+   and no `resolved` node still carries one opening with `OWED`.
