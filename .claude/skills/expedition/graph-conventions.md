@@ -197,11 +197,38 @@ node. Three things, and nothing beyond them:
 
 1. **the checker's chronology, one entry per run.** A run either names `PASS`, or names `FAIL` and
    which of the two it failed — the acceptance condition or the bar — or **raised instead of judging**,
-   in which case it issued no verdict at all and the entry says what it raised.
+   in which case it issued no verdict at all and the entry says what it raised. A run may additionally
+   name a part of the acceptance condition it did **not cover**, and its entry then carries that part
+   and, later, who established it — below.
 2. **each correction round, numbered**, with the human's words verbatim and what the worker changed.
 3. **the gate's outcome, named as one of approve / correct / reject.** A reject also records what
    implementing the node surfaced, and which of the three routes the node then took: `out-of-scope`,
    `superseded` by a replacement, or back to `open` behind a new `Blocked by:` edge.
+
+**A part a run did not cover.** A checker's `PASS` or `FAIL` may name a part of the acceptance condition
+its outcome does not reach: a part it could not establish, because establishing it needs material the
+checker was not given. The run's entry carries that part as the checker wrote it, quoted, and the outcome
+on that entry covers the rest of the condition and no more. So the entry says both halves — the parts
+named are what the run left, and the rest of the condition is what it covered.
+
+The part is still owed, and **establishing it is recorded on that same entry**: beside the part, who
+established it and what they read or ran. Usually that is the manager, which holds the handover the
+checker does not; it may instead be the human at the gate reading it themselves, or a later run of the
+check. It happens by the gate at the latest, the node resolving there with nothing after it to establish
+anything.
+
+**An entry for a run that covered the whole condition carries none of this** — no part to name, nothing
+owed, no field and no sentence, and the entry reads exactly as it did before. A condition whose every
+demand lands in a file gives a checker nothing to name here, which is what `## Acceptance condition`
+above already asks of one.
+
+Both halves sit on the entry that named the part, rather than being recorded where the establishing
+happens, because the part is an obligation left **open** and what a later reader needs is whether it
+still is. Recorded where the establishing happens, the record moves with whoever acted — three parties,
+each writing somewhere else — so there is no one place to look; and a part nobody ever established writes
+nothing anywhere, which is the case the record exists for. Keyed to the entry that named it there is one
+place whatever happened, and a part still open is legible there as a part with nothing beside it. **This
+is not a fourth thing on the log**: it is entry kind 1 carrying what its run handed back.
 
 ### `## Interview`
 
