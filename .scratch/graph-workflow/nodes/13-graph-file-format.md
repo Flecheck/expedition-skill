@@ -206,3 +206,40 @@ Added by [Naming](14-naming.md), which this answer explicitly handed the field a
 - **`## Interview` over Lang's `## Comments` is confirmed** — this answer's one knowing divergence in name. An interview log is structured, and *interview* is what the `/grilling` skill itself calls the exchange.
 - **`Labels:` keeps its name, and the collision is resolved by retirement instead.** `Label: wayfinder:map` had no function in a markdown tracker holding one file called `map.md`, so it is struck from the map and the word `label` belongs to `Labels:` alone.
 - **`decisions.md` keeps its name**, though it indexes resolved implementation nodes too. Under [Lifecycle scope](03-lifecycle-scope.md)'s thesis — implementing is how you find out what to decide — a landed implementation *is* a decision on the route, so the name is correct rather than merely convenient. `resolved.md` was the alternative considered.
+
+## Annotation: the two bookkeeping duties are the manager's steps, not the pass's writes
+
+Added by [Cascade pass mechanics](15-cascade-pass-mechanics.md), reported as an `INVALIDATIONS` entry by
+that node's worker, in its words:
+
+> **[Graph file format](13-graph-file-format.md).** Its consequences read *"[Cascade pass mechanics] gains
+> two concrete duties — striking through a superseded node's `decisions.md` line, and appending flag lines
+> to `flags.md`"*, and its answer says the cascade *"does this at no extra cost"*. Under this answer no
+> agent in the pass writes any file, so both duties are the manager's procedural steps — where the shipped
+> `graph-conventions.md` already puts them, under `Supersede` and `Raise a flag`. The duties survive
+> intact; only the party performing them changes.
+
+Flagged as that worker's own judgement at `15.3`.
+
+## Annotation: the graph becomes five files, and for the reason this node got wrong
+
+*Filed by the manager, in the reporting worker's own words.* From [What the token findings change in the workflow
+and its skills](53-what-token-findings-change.md):
+
+> Its answer fixes *"the graph is four files"*; part 2 of this answer makes it five. Its stated reason for
+> splitting `decisions.md` out — two growth rates, an index growing without bound in node count while *"this
+> map's other sections grow only with fog items and notes"* — is already recorded as falsified in the map's own
+> fog, and this answer acts on that falsification: the other sections grew too, in **words per item** rather than
+> item count. So the same remedy is applied to the same file for the reason node 13 got wrong, on measured
+> numbers rather than predicted ones.
+
+**Everything else this node fixed is untouched**: the identity conventions, the `Labels:` field, the fifth
+status, and the eight mechanical invariants — now nine. The repair is [Restructure `map.md` to what every worker
+needs](59-restructure-the-map.md), whose clause 10 requires `graph-conventions.md` to name the correct number
+and describe the new file's role.
+
+**Worth keeping beside it: the split this node made was right and its reasoning was the weaker half.** It
+predicted one growth rate would dominate; the measurement four days later found the growth is **words per item**
+in every section, which is why `map.md` reached 92,113 characters while `decisions.md` stayed at one capped line
+per node. The remedy that works is the same one — an index cites and never restates — applied to the file this
+node exempted.

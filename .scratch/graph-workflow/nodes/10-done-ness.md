@@ -196,3 +196,17 @@ use](19-workflow-self-improvement.md)'s worker, in its words:
 > assumes the node can be created on the graph holding the flag. For a `FRICTION` flag that is false: its node
 > is minted in the repository holding the expedition skill files, in a session there, and never on the graph
 > that raised it. The route survives; the graph it lands on changes.
+
+## Annotation: the sweep now has a shape
+
+Added by [Cascade pass mechanics](15-cascade-pass-mechanics.md), which specified the machinery this node's
+termination test depends on. In that worker's words:
+
+> Under this answer the sweep is triage with every resolved answer as its input rather than one, fanning
+> out identically — plus the flag collection that node owes the closing report, which is a single read of
+> `flags.md`.
+
+Two things follow for the closing report. The sweep's fan-out is the same two-role shape as the triggered
+pass, so termination needs no machinery of its own. And the code-slot question this node had already settled
+for the sweep is now settled for the triggered pass as well, on a different ground: the pass modifies no
+product code and so never holds the slot, and only its per-candidate agent waits while the slot is occupied.

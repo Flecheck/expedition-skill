@@ -471,3 +471,27 @@ payload clause asks for and the second gate to arrive that way.
 grounds inline and asked for them to be settled either way; `approve` covers the payload it answers, which
 is the practice the map records — flags are settled as the node closes, eleven of eleven that way before
 this. Recorded as a reading rather than as words of theirs, since neither flag was named.
+
+## Annotation: the ground this node discarded a finding on has been replaced
+
+*Filed by the manager, in the reporting worker's own words.* From [What the token findings change in the workflow
+and its skills](53-what-token-findings-change.md), reported as a partial `INVALIDATION` **of this node's
+reasoning rather than its product**:
+
+> Its answer records discarding a checker's finding that the `unwrap` rule is stated at four sites *"because
+> condition 3 demands exactly that and the map endorses completeness for an agent reader over brevity"*. Ruling 2
+> above replaces that ground for shipped contracts: they keep their completeness on the fragility of
+> format-bearing text, and the boundary is that prose explaining why may be compressed while shapes may not —
+> under which a leading-word refactor of the four `unwrap` sites is admissible. **The discard was correct on the
+> record as it stood and node 31 is not reopened for having made it; what no longer holds is the reason given.**
+
+**Why it was reported here rather than folded into a node**, in the same worker's words: *"the human's ruling 1
+says the two discards already made stay discarded, and whether that reaches this one is theirs to read rather
+than a worker's to assume."* It is flagged as `53.5` and the refactor node that node minted was scoped to
+`scribe` alone, leaving the four `unwrap` sites unclaimed.
+
+**So the four sites are a live, unowned finding.** [Co-locate the scan rules with the mechanical
+checks](49-colocate-scan-rules.md) is the node whose subject they are — its own annotation already records the
+inversion, that `unwrap` is stated four times in the checker contract and **zero** times in the file whose checks
+it protects — but its condition names the co-location and not the restatement. One line from the human settles
+which it is.

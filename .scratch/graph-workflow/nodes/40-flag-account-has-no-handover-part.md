@@ -67,3 +67,23 @@ contracts](32-narrow-flags-file-clause.md) and [Nothing tells a worker to hold i
 record](37-invalidations-is-not-a-check.md). The landing policy forbids a second commit against one **node**,
 not against one **file**, so these may run in any order — but not concurrently, the code slot being
 exclusive.
+
+## Annotation: this node is now startable, on the same decision that unstuck node 32
+
+*Filed by the manager.* This node has been unclaimable since 2026-08-20 for one reason only — no acceptance
+condition, and nobody assigned to write one, this node having been **promoted by the human** from a checker's
+note rather than reported by any worker. [Who writes the acceptance condition for an implementation node the
+manager mints itself](39-condition-for-a-manager-minted-node.md) settles it: the manager writes it, under the
+four constraints recorded there, and this node is the **first route** that node named — the human's steering —
+rather than the manager's own reading of the graph, which was node 32's.
+
+**The constraint that bites hardest here.** Constraint 1 permits the condition to demand only what is already
+fixed. What is fixed for this node is the requirement in `graph-conventions.md`'s `### Raise a flag` procedure,
+quoted in full in the `## Question` above, and the shape of the five contracts' handover sections as node 35
+left them. What is **not** fixed is which handover part carries the account and whether it is a new part or a
+widening of `FLAGS` — so the condition states the property and leaves the form, or that choice goes to the human
+as a raise.
+
+Beside it, and not this node's to fix: [Widen the invalidation channel](43-widen-the-invalidation-channel.md)
+already widens a different handover part, so the two touch the same sections of the same five files and are not
+concurrently claimable.

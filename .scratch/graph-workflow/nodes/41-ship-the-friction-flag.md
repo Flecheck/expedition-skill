@@ -3,6 +3,8 @@
 Type: implementation
 Status: open
 
+Blocked by: 56
+
 ## Question
 
 Land in the shipped files what node 19 settled: the `FRICTION` marker, its settlement rule, the fact that an
@@ -77,3 +79,24 @@ claim time meets it rather than has to find it, and so that whoever claims this 
 live rather than settled. Note also that this is [What keeps the shipped files consistent when a decision
 changes a term](29-shipped-file-consistency.md)'s problem recurring inside a condition: a list of files a
 decision is owed to, correct about the files it knew.
+
+## Annotation: now blocked, and it is the deliberate first test of node 29's mechanism
+
+*Filed by the manager at [What keeps the shipped files consistent when a decision changes a
+term](29-shipped-file-consistency.md)'s resolution, in that worker's own words:*
+
+> [Ship the FRICTION flag and the self-edit disclosure duty](41-ship-the-friction-flag.md) gains `Blocked by:`
+> that node. It coins `FRICTION` and its condition never reaches the glossary; landing it second means its
+> worker owes the entry under the bar, without the condition being amended and without the manager writing it.
+> That is this answer's first real test, and it is the case the manager recorded twice and left alone.
+
+**So this node's `Blocked by:` gains 56** — not because its work depends on the glossary's location, but because
+it is the case node 29's mechanism was designed to catch, and running it first would waste the only clean test
+available. `FRICTION` is one of the two terms this effort has shipped with no glossary entry; the other,
+`ground rules`, is written by node 56 itself. **Under the mechanism, this node's worker owes the `FRICTION`
+entry by way of the bar, with nothing in its acceptance condition saying so** — and if it does not deliver it,
+the blind checker should fault the work for it. Either outcome is informative.
+
+The manager notes against its own past practice: this is the case it met twice while filing conditions and left
+unrepaired both times, on the ground that supplying what a condition omits makes the manager the author of the
+standard. Node 29's answer is what makes that refusal correct rather than merely principled.

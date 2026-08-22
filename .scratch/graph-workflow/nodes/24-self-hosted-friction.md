@@ -188,3 +188,21 @@ the rhythm rather than an exception carved for convenience.
 `ASSUMPTION` — **written retrospectively rather than during the run**, so findings 1, 5 and 8 are
 reconstructions from a manager's memory across compacted sessions rather than notes taken at the time. The
 transcripts are the primary source and were not re-read to produce this.
+
+## Annotation: finding 4 names the wrong party, measured
+
+*Filed by the manager, in the reporting worker's own words.* [How an agent workflow and its skills reduce their
+own token cost](52-token-cost-of-a-workflow.md)'s worker reported this as an `INVALIDATION` against this node:
+
+> Both state that never-delete and load-once-cheaply are in direct conflict *and that never-delete is winning*.
+> Measured: struck-through text is 1,649 of 79,361 characters in `map.md` (2.1%) and 4,269 of 982,260 across all
+> 54 node files (0.4%). The cost is live prose under the append-in-place practice — `map.md:75` alone is 20,589
+> characters, 26% of the file — not retained superseded text. The conflict is real; the party winning it is
+> misidentified, and one of the fog item's four candidate remedies (prune struck text into an archive) is
+> therefore worth 2.1% while another (cap an item's updates) addresses the actual cost.
+
+**Finding 8 is not invalidated and is supported, with one correction of frame**, in the same worker's words:
+*"it is the binding constraint on the **window**, priced by the harness at the cached-read rate, so it is an
+accuracy and capacity limit rather than the place the bill is incurred."* The bill is the fleet: every worker
+pays its whole opening payload **uncached**, because a subagent's prefix differs from its parent's and reads none
+of the parent's cache.

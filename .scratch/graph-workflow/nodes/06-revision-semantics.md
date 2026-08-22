@@ -87,3 +87,17 @@ This adds no scheduling machinery: it falls out of [the concurrency model](04-co
 - [Git and code-landing policy](11-git-and-code-landing.md) is now unblocked, with its revision input settled: a revision is a distinct replacement node, not an edit to the original.
 - [Graph file format](13-graph-file-format.md) inherits its revision fields — the `superseded` status, both edge directions, stable identity — and no `Touches:` field.
 - [Done-ness](10-done-ness.md) gains a sub-question: whether anything verifies that the cascade did not miss a node.
+
+## Annotation: the inbound-edge repointing is the manager's step, not the pass's write
+
+Added by [Cascade pass mechanics](15-cascade-pass-mechanics.md), reported as an `INVALIDATIONS` entry by
+that node's worker, in its words:
+
+> **[Revision semantics](06-revision-semantics.md).** Its *"The cascade repoints inbound edges from the
+> superseded node onto its replacement(s)"* is contradicted in the same way and for the same reason: the
+> repointing is the manager's step in the `Supersede` procedure. The rest of that node's cascade section
+> stands — it fixed what the pass must achieve and left when it runs, how many agents it is and who applies
+> its edits explicitly open, which is what this node answered.
+
+The duty survives intact; only the party performing it changes. Flagged as that worker's own judgement at
+`15.3`, which records why it is worth revisiting: the reading contradicts the letter of this node.

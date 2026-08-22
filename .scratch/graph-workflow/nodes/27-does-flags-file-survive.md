@@ -254,3 +254,31 @@ files](26-carry-deltas-into-shipped-files.md) to rewrite that line as an id join
 checker this map is run with compares counts per node rather than ids. So the check exists and is already
 being rewritten, and the state comparison is one clause on it rather than new machinery. `27.2` is
 reversed on that basis and node 26 carries it.
+
+## Annotation: approving the node's end settles its flags, with no separate assent
+
+The human's standing instruction, `verbatim`, given while four nodes were live: *"Also, when I approve the end
+of the node, the flags should be considered ok"*.
+
+This refines the settle-at-close practice this node was written about rather than replacing it. The practice
+already put a node's flags to the human at **the human moment that ends its node** — a grilling node's last
+answer, an implementation node's gate — and [What the manager works on next, and how the human redirects
+it](16-human-steering.md) had just fixed that flag settlement *"rides the human moment that already ends its
+node… so it never queues on its own"*. What is new is that riding that moment means **settled by it**: the
+approval is the settlement, and the manager neither asks a second time nor waits for a second assent.
+
+**It corrects a practice the manager had been following twice in one session.** At [The checker's spawn
+carries the effort's ground rules](42-checker-spawn-carries-ground-rules.md)'s gate and at [Record a
+checker's not-covered part on `## Review`](38-recording-a-not-covered-part.md)'s, the manager recorded the
+node's flag as standing **outstanding** on the ground that the human's approval *"did not reach it"* —
+reasoning that approving a diff is not the same act as confirming the judgement that produced it. Under this
+instruction the approval did reach it. Both flags were settled shortly afterwards by an explicit word, so no
+state was ever wrong; the reasoning written on those two nodes is superseded, and is left there under the
+never-delete rule.
+
+**The manager's note on what now makes this safe, not the human's.** A flag exists to record a judgement the
+human may want to revisit, so settling one by implication is only sound if they saw it. That puts weight on
+the **gate payload**: it must present each of the node's flags — what was decided and on what — because
+approval now discharges them. The duty already existed and was being met; what changes is that it stops
+being good practice and becomes the thing the settlement rests on. A gate payload that omits a flag now
+settles it silently.

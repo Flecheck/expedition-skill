@@ -120,3 +120,18 @@ all stand.
 - **`CONDITION-WRONG` keeps its name and changes origin.** A wrong acceptance condition trips the first
   trigger, so the flag is no longer an implementer's unilateral deferral: it records a raise the human
   answered *carry on, ship it anyway*.
+
+## Annotation: the universal form of one decision line is contradicted
+
+*Filed by the manager, in the reporting worker's own words.* [Who writes the acceptance condition for an
+implementation node the manager mints itself](39-condition-for-a-manager-minted-node.md)'s worker reported this
+as an `INVALIDATION`:
+
+> its decision line reads *"Acceptance conditions are written by the spawning node"*, stated universally. This
+> answer contradicts the universal form: where no node spawned the node, the condition is the manager's. The
+> narrower claim the line was making survives intact for every node another node spawned, which is 52 of the 54
+> in this graph.
+
+So the line is right about the case it was made for and wrong as a universal. The repair to the shipped files is
+[Say who writes a condition when no node spawned the
+node](55-who-writes-a-condition-with-no-spawning-node.md).

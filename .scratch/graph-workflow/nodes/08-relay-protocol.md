@@ -135,3 +135,23 @@ Added by [Naming](14-naming.md).
 - **`park` confirmed, `postpone` killed.** This node's *park* and [Done-ness](10-done-ness.md)'s *postpone* were flagged as one mechanism wearing two words. They are in fact two mechanisms — park returns an existing node to `open`, postpone creates a node from a flag — but the second was named for the human's intent rather than the effect. Named for the effect it is **promote**.
 - **`attempt`**, **`banked answer`** and **`manager note`** are confirmed unchanged.
 - The **subagent** is a **worker** throughout, named for its role rather than for the harness — since [Runtime host](02-runtime-host.md) is the part of the design flagged as most likely to be replaced.
+
+## Annotation: finding `F4` is overturned — the channel is one deep and batching is dead
+
+Added by [What the manager works on next, and how the human redirects it](16-human-steering.md), reported as
+an `INVALIDATIONS` entry by that node's worker, in its words:
+
+> **Node 08, Relay protocol — finding `F4`.** Its answer reads: *"The manager therefore chooses between
+> streaming and batching. v1 streams, because a ready question should never wait — accepting that the human
+> answers in arrival order rather than an order they chose. That cost is real and is what surfaced [Human-
+> initiated steering]."* Three parts of that are now false, and this node is the one that was surfaced to make
+> them so. A ready question **does** wait, the channel being exactly one deep. The human does **not** answer in
+> arrival order, the order being two-tier. And the choice between streaming and batching no longer has two
+> branches, batching being refused.
+>
+> What survives untouched: park, verbatim-with-divergence, the death-and-replay machinery, and the observation
+> that a waiting interview holds no machine resource — which this answer uses.
+
+Worth noting how it was overturned: this node named the cost of streaming and named the node that would
+carry it, and that node came back and refused the premise. The prediction was right about where the answer
+would come from and wrong about which way it would go.

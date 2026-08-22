@@ -71,3 +71,15 @@ outward, and [What keeps the shipped files consistent when a decision changes a
 term](29-shipped-file-consistency.md) owns the same problem for product files. Both are about acting on an
 invalidation once someone has found one. This node is about **finding** it, at the one moment a party with
 the work in front of it is already being asked.
+
+## Annotation: the same question, with a larger share of the traffic riding on it
+
+Added by [Cascade pass mechanics](15-cascade-pass-mechanics.md)'s worker, in its words:
+
+> [Nothing tells a worker to hold its work against the record](37-invalidations-is-not-a-check.md) keeps
+> its whole question and gains a reason it matters more: part 1 now carries eighteen twenty-eighths of this
+> effort's propagation traffic on a channel nothing tells a worker to go and look at.
+
+One sequencing fact for whoever claims this node: [Widen the invalidation channel from contradiction to
+change](43-widen-the-invalidation-channel.md) rewords the same part in the same five contracts this node's
+answer would reach, and the code slot is exclusive, so the two run in some order and never together.

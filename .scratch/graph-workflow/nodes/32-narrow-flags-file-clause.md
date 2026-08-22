@@ -45,3 +45,38 @@ Written by whoever spawns this, per [Node type taxonomy](07-node-type-taxonomy.m
 without one. Deliberately **not** written by node 28's manager, on [What the checker contract owes to having
 been run](31-checker-contract-owes.md)'s warning: node 26's condition was the first written by a manager
 rather than by a spawning node or its worker, and it had to be amended twice.
+
+## Annotation: the sentence that made this node unclaimable is superseded, and the node is now startable
+
+*Filed by the manager.* This node's `### Why it is worth a node` records that its condition was *"Deliberately
+**not** written by node 28's manager, on [What the checker contract owes to having been
+run](31-checker-contract-owes.md)'s warning: node 26's condition was the first written by a manager rather than
+by a spawning node or its worker, and it had to be amended twice."*
+
+**That sentence is superseded** by [Who writes the acceptance condition for an implementation node the manager
+mints itself](39-condition-for-a-manager-minted-node.md), decided by the human on 2026-08-22 with the words
+*"ok for recommendation"*. The manager may write this node's condition, under four constraints: it may demand
+only what is already fixed by a resolved node, this node's own `## Question`, or the state of the files; the
+manager reads it back against the self-containment rule and the no-quantifying-over-the-record rule before the
+claim and records that reading here; the condition is marked as the manager's own; and the pick report names
+that it is the manager's and what it demands, without the work waiting for a reply.
+
+**The cost of the refusal, measured on this node.** It has been unclaimable since 2026-08-19 — ten node
+resolutions and seven landed commits — and the node 39 worker's summary of the outcome is *"Two nodes stopped,
+no defect avoided."* The other is [Nothing carries a flag's account of what produced it out of a
+worker](40-flag-account-has-no-handover-part.md).
+
+**One thing whoever writes this condition must not do.** This node's `## Question` holds a live fork — whether
+the carve-out is *a conditional pointer the spawn names* or *a condition the worker judges for itself* — and
+constraint 1 forbids the condition from deciding it. Under [Node type taxonomy](07-node-type-taxonomy.md) that
+is either a small ambiguity the implementer decides and flags, or a genuine fork that becomes a grilling node,
+and the node already says the implementer's judgement decides which. So the condition states the property and
+leaves the form, or the fork goes to the human as a raise. **A condition made writable by deciding that fork
+does not pass the readiness floor.**
+
+A second thing that has arrived since: [Review every shipped file against
+`/writing-great-skills`](47-review-shipped-skills.md) found *"`flags.md` is not yours. Leave it unread"* to be a
+**bare prohibition with no positive target beside it**, and assigned that repair here rather than to
+[Reconcile a method skill's instructions with the contract's hard rules](48-method-skill-conflicts-hard-rules.md),
+whose clause 2 names two other sentences. So this node now carries two changes to the same clause in the same
+five files: the carve-out it was minted for, and a stated positive beside the prohibition.

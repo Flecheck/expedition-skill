@@ -199,3 +199,16 @@ reader.
 **What is still unchecked.** Conditions 3, 4 and 5 rest on the implementer's greps, which are mechanical
 rather than judgement, and on the `CONDITION-WRONG` flag above. No independent agent formed an overall
 verdict — Phase 1's pass is being read as a pass, which is an inference and is flagged.
+
+## Annotation: the glossary this document points at is moving
+
+*Filed by the manager, in the reporting worker's own words.* From [What keeps the shipped files consistent when
+a decision changes a term](29-shipped-file-consistency.md):
+
+> its answer makes reading the glossary a precondition and names it by the root path, which moves. **What it
+> required is unchanged; where it points is not.**
+
+The repair is clause 6 of [Ship the glossary inside the skill directory and make it state its own
+completeness](56-ship-the-glossary-into-the-skill-set.md), which requires the path this document gives to
+resolve from its own directory rather than from the repository root. Nothing this node decided about *what* the
+document must contain is affected.

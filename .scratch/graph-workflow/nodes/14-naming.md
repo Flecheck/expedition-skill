@@ -275,3 +275,26 @@ the entry that check expects. Nothing is moved.
 `ASSUMPTION` — wrote [`CONTEXT.md`](../../../CONTEXT.md) into the product tree from a `grilling` node,
 so the glossary passed no checker and no gate. See the answer section named above for the full
 reasoning and the two alternatives rejected.
+
+## Annotation: two invalidations from node 29 — the glossary moves, and its count was always wrong
+
+*Filed by the manager, in the reporting worker's own words.* [What keeps the shipped files consistent when a
+decision changes a term](29-shipped-file-consistency.md)'s worker reported this node twice:
+
+> Its answer puts the glossary at the repository root, and this answer moves it into the shipped set, leaving the
+> root path holding a forward pointer. And its count is stale: it fixed *"forty terms"*, the file holds fifty
+> term entries and forty `_Avoid_` lines, and the figure was copied from that node into `map.md` and into
+> `decisions.md`.
+
+**Verified by the manager rather than taken on trust:** `grep -cE '^\*\*[^*]+\*\*:' CONTEXT.md` returns **50**
+and `grep -c '^_Avoid_' CONTEXT.md` returns **40**. So the *"forty"* was never a term count — it was the
+`_Avoid_` count, and it propagated as a term count into two other files. The map is corrected;
+`decisions.md` is append-only and its line stands with this annotation as the correction.
+
+**This node's own outstanding flag is answered rather than contradicted.** It records that the glossary *"passed
+no checker and no gate"* because a `grilling` node wrote it into the product tree. [Ship the glossary inside the
+skill directory and make it state its own completeness](56-ship-the-glossary-into-the-skill-set.md) puts it
+through both, for the first time.
+
+**Where the glossary sits is now the only part of this node's answer that has moved.** The vocabulary itself, the
+forty refusals, and the rule that the glossary is authoritative are all untouched.

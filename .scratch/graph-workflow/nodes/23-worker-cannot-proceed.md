@@ -370,3 +370,29 @@ autonomous."*
 - **It is not a fourth return variant.** A raise reuses the question shape [Subagent context
   contract](12-subagent-context-contract.md) already specified, which is what made this cheap for the
   implementer and is what makes it cheap here.
+
+## Annotation: the human has reversed their own exclusion of `research`
+
+*Filed by the manager.* This node's answer records that **`research` stays flag-only, and now on the human's own
+reasoning rather than on the glossary's** — the human's words at this node's gate being *"I guess precondition
+could raise, as it is more reseach that is supposed to be fully autonomous."* That reasoning is now withdrawn by
+the party who gave it. Their words, during [What the token findings change in the workflow and its
+skills](53-what-token-findings-change.md)'s interview: *"I think a research node should be able to raise when it
+can do nothing."*
+
+**So the exclusion is superseded and the channel itself is not.** Everything this node built — the threshold, the
+two answer shapes, the record under `## Interview`, the reuse of node 12's question shape — is untouched and is
+what the fourth kind inherits. The repair is [Give a research node the cannot-proceed
+raise](57-research-can-raise.md).
+
+**What changed the human's mind is on the record and is worth keeping beside the reversal.** Two research workers
+in one session met a real blocker — each was told by its own contract to invoke a method skill that instructs
+what its hard rules forbid — and neither had anywhere to put it. The first said so exactly, on flag `47.1`: *"A
+research node has no raise channel, so a flag was the only outlet."* Both resolved the conflict on their own
+authority and carried on, which is the behaviour the exclusion produces: **not a stuck node, but a decision taken
+by the party with the least standing to take it.** So the exclusion cost two flags and no wrong result, and what
+it actually bought was silence rather than autonomy.
+
+This node's own observation that *"a `research` or `precondition` node has no gate, so a flag left on either
+waits for the closing report"* is what makes that distinction sharp: a flag is not a channel, because nothing
+reads it until the effort closes.
