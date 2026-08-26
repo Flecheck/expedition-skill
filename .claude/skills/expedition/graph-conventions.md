@@ -14,7 +14,8 @@ procedure below is ever performed by a worker.
 
 **No edit deletes.** When any graph file changes, text that no longer holds is struck through or
 marked in place and the new text is added around it. Text leaves a file only when it is wrong or the
-human asks for it gone.
+human asks for it gone. `map.md` is the one file whose superseded text is also *moved* rather than
+left in place, and it is moved whole: see `## Writing the map` below.
 
 ## The five files
 
@@ -27,11 +28,7 @@ human asks for it gone.
   nodes/NN-<name>.md     One file per node. All detail.
 ```
 
-`map-history.md` holds, verbatim, whatever the map has appended in place and no longer needs to
-carry: every worker reads the map cold once per node, so the account of how a note reached its
-current form moves here while the map keeps the note.
-
-`map.md` has four sections, in this order:
+`map.md` has five sections, in this order:
 
 - `## Destination` — what reaching the end of the effort looks like.
 - `## Notes` — the domain, the skills every session consults, and standing preferences for this
@@ -41,6 +38,8 @@ current form moves here while the map keeps the note.
   path and glob — which sources are authoritative, which are evidence only, and which hold statements
   known to be false. Absent any declaration, every source a worker is pointed at is authoritative.
   Both live here because the map is a pointer every worker already receives.
+- `## Decisions so far` — a pointer to `decisions.md`. No decision is written here; the section
+  exists so that a reader of the map is told where the index is.
 - `## Not yet specified` — the fog.
 - `## Out of scope` — one line per node ruled beyond the destination, and per area consciously ruled
   out.
@@ -71,6 +70,21 @@ having agreed with it. The same state is on the node, where a settled flag is ma
 two can genuinely disagree. **Where they disagree `flags.md` wins, because the sweep and the closing
 report are built from it.** The flag's node is the **first** link on the line; the text after the dash
 may contain others.
+
+## Writing the map
+
+Every note, standing preference and fog item in `map.md` is a **current statement**: what holds now,
+citing by markdown link the nodes that shaped it and never restating what those nodes hold. The
+**account** behind it — how it came to say that, what was measured, what it used to say — belongs in
+`map-history.md`, under a heading mirroring the map section it came from. So the map is rewritten as
+it changes rather than grown by appending: the superseded text moves out, and what replaces it stands
+alone. Every worker reads the whole map cold, so its size is a cost paid once per node.
+
+**This deletes nothing.** Text moved to `map-history.md` is moved **verbatim** — never summarised,
+paraphrased or shortened — and text already struck through moves struck through. The never-delete
+rule is satisfied by the move rather than exempted from it: the account is still there in full, in
+the file that exists to hold it. An item carrying no account beyond its current statement moves
+nothing.
 
 ## Adding a node
 
@@ -319,8 +333,10 @@ Save before any work starts. An `implementation` node may not be claimed until i
 1. `nodes/NN-<name>.md`: append the `## Answer`.
 2. `nodes/NN-<name>.md`: set `Status: resolved`.
 3. `decisions.md`: append one capped line, under the node's label group where a vocabulary exists.
-4. `map.md`: remove from `## Not yet specified` any fog the answer has made specifiable, which now
-   exists as its own node instead. Mark, never delete.
+4. `map-history.md`: where the answer has made a fog item specifiable, so that it now exists as its
+   own node instead, append that item's text there verbatim.
+5. `map.md`: remove that item from `## Not yet specified`. The text moves rather than being struck in
+   place, step 4 having already appended it verbatim.
 
 The answer is written before the status changes.
 
@@ -388,6 +404,19 @@ node that never end in front of the human, `research` and an AFK `precondition`.
 
 A flag the human turns into a node is settled the same way; the node itself is created by the ordinary
 add-a-node step.
+
+### Change the map
+
+Use when a note, a standing preference or a fog item in `map.md` no longer says what holds. A new
+item is written straight into `map.md` and changes nothing else.
+
+1. `map-history.md`: append that item's existing text, verbatim, under the heading mirroring the map
+   section it came from. Struck-through text stays struck through.
+2. `map.md`: replace it with the item's new current statement, citing by markdown link the nodes that
+   shaped it.
+
+The account is written before the map is changed, so a run that dies leaves it banked rather than
+lost. See `## Writing the map` above for why the map carries the statement and not the account.
 
 ## Mechanical checks
 
