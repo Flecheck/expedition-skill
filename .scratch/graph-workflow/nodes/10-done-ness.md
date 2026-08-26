@@ -210,3 +210,22 @@ Two things follow for the closing report. The sweep's fan-out is the same two-ro
 pass, so termination needs no machinery of its own. And the code-slot question this node had already settled
 for the sweep is now settled for the triggered pass as well, on a different ground: the pass modifies no
 product code and so never holds the slot, and only its per-candidate agent waits while the slot is occupied.
+
+## Annotation: the bar now runs twice, and the second run is the manager's
+
+*Filed by the manager at [Gather the manager's accumulated duties into one enumerated
+list](75-gather-the-managers-duties.md)'s resolution, in that worker's own words. **Not reported by node 68's
+worker.***
+
+> Its answer gives the bar to *"the independent reviewer at every implementation node, alongside the acceptance
+> condition, before the node may resolve."* [Run an implementation node's work in a
+> worktree](68-implementation-in-a-worktree.md) splits it: the acceptance condition is checked by the checker in the
+> worktree, and **the manager re-runs the bar itself** on the rebased tree, before the fast-forward, on the ground
+> that the condition is a statement about one node's work while the bar is a property of a tree. **Node 10's
+> requirement that the bar hold before the node resolves survives; what is new is a second run of it by a party
+> node 10 did not name.**
+
+**The manager records the live question rather than settling it.** Node 68 asserts that running the bar's commands
+is *assembling rather than authoring* and therefore inside the scribe boundary [Subagent context
+contract](12-subagent-context-contract.md) drew. **Nothing else confirms that reading**, and node 75's worker lists
+it among the places two settled duties pull against each other.

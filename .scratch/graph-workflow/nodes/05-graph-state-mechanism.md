@@ -24,3 +24,22 @@ Acknowledged counter-argument, to revisit: prose invariants cost manager context
 **The `check` command is now specified in everything but the trigger**, by [Graph file format](13-graph-file-format.md), which enumerates **eight invariants that are decidable with no judgement at all** — dangling and superseded and out-of-scope edge targets, missing `Supersedes:`/`Superseded by:` back-edges, reused numbers, undeclared labels, index and flag consistency, missing acceptance conditions, and the attempt-block cap. The reasoning above is unchanged and the trigger still has not fired: this is an additive note recording that the extraction, when it happens, no longer needs designing. It also confirms the prediction in point 1 — the command surface stayed unbuildable exactly until the semantics stopped moving, and the mechanical half turned out to bake in no revision policy whatever.
 
 **A ninth check exists, and it is a different kind**, added by [Git and code-landing policy](11-git-and-code-landing.md): *no uncommitted changes outside the effort's own directory*, which is the precondition for starting an implementation node and the read that tells whether the exclusive code slot is free. Unlike the eight, it reads **git rather than markdown** — so if a `check` command is ever extracted, the write lock stops being a thing the manager remembers and becomes a thing the repository already knows. It also makes one failure legible for free: a dirty product tree with no `claimed` implementation node means an agent died holding the slot, and the diff is the replay input.
+
+## Annotation: the ninth check's premise is replaced by counting worktrees
+
+*Filed by the manager at [Gather the manager's accumulated duties into one enumerated
+list](75-gather-the-managers-duties.md)'s resolution, in that worker's own words. **Not reported by node 68's
+worker**, this node mentioning the mechanism in passing rather than owning it.*
+
+> Its answer records a ninth check of a different kind from the eight — *"no uncommitted changes outside the
+> effort's own directory"* — as *"the precondition for starting an implementation node and the read that tells
+> whether the exclusive code slot is free"*, and adds that it makes one failure legible for free: *"a dirty product
+> tree with no `claimed` implementation node means an agent died holding the slot, and the diff is the replay
+> input."* [Run an implementation node's work in a worktree](68-implementation-in-a-worktree.md) replaces both
+> readings by counting live worktrees, and names the old heuristic as one that *"reads the human's own hand-edits as
+> a dead worker"*. [Git and code-landing policy](11-git-and-code-landing.md) carries the annotation for its half of
+> this; **node 05 does not, and its statement about a future `check` command reading git rather than markdown rests
+> on the replaced heuristic.**
+
+**Everything else this node fixed stands**: markdown files and prose rules rather than a CLI, and the extraction
+trigger, which has still not fired.

@@ -396,3 +396,24 @@ it actually bought was silence rather than autonomy.
 This node's own observation that *"a `research` or `precondition` node has no gate, so a flag left on either
 waits for the closing report"* is what makes that distinction sharp: a flag is not a channel, because nothing
 reads it until the effort closes.
+
+## Annotation: the salvage mechanism and its stated reason are both replaced by worktrees
+
+*Filed by the manager at [Gather the manager's accumulated duties into one enumerated
+list](75-gather-the-managers-duties.md)'s resolution, in that worker's own words. **Node 68's own worker did not
+report this** — it is one of three misses that node 75's worker found by reading the two answers together.*
+
+> Its answer specifies salvage as a diff the manager takes from the **main product tree**: mark the node's paths
+> intent-to-add, diff them, write `<effort>/salvage/NN-<attempt>.patch`, then clean — path-limited throughout, and
+> justified by the danger that *"a stray untracked file would surface in the next `git status` as if it were live
+> work"*. Under [Run an implementation node's work in a worktree](68-implementation-in-a-worktree.md) the work is
+> not in the product tree, the human's tree does not participate in the signal at all, and the equivalent operation
+> for a discarded attempt is committing onto the worktree's own branch and removing the directory — which node 68
+> states costs nothing and cannot be miscounted as an occupied slot. **Both the mechanism and its stated reason are
+> contradicted; the duty to save before cleaning is untouched.**
+
+**The manager adds one thing.** Node 69's worker independently reached the same territory from the other side — the
+glossary's **Salvage** entry still describes a path-limited diff written out of a shared tree — and node 74's worker
+listed it among six statements it left standing. **No resolved node settles what salvage becomes when a stopped
+attempt's work already sits alone on its own branch**, and it is a question for the human rather than work anyone
+has been able to condition.
