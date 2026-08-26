@@ -311,3 +311,28 @@ conditions; and whether the dynamic-workflow runtime hosts the AFK passes given 
 input. The one candidate that is not a judgement — instrumenting the next few nodes with `/usage` attribution to
 produce the spend-per-node-type table — is already committed by two of `map.md`'s fog items, and minting a node
 for something the map already commits to is the delta-list failure the map warns about."*
+
+## Annotation: the worktree cache finding is right as a mechanism and wrong as a cost
+
+*Filed by the manager at [Run an implementation node's work in a worktree](68-implementation-in-a-worktree.md)'s
+resolution, in that worker's own words.*
+
+> Its finding *"`isolation: worktree` forfeits prefix sharing — a cost the effort has never priced"* is **correct as
+> a mechanism and wrong as a cost for this design.** The same node's primary source says a subagent never reads its
+> parent's cache regardless, and the directory-scoped sharing requires several agents matching on model, effort
+> level, agent type, tools, output schema *and* directory. **Nothing in this design matches on those** — a worker
+> and its checker differ in tools, every other worker differs in type. **There is no sharing for a worktree to
+> forfeit.** The cost that is real is the **cold build**, which this node does not name.
+
+**Everything else this node established stands**, including the two figures that finding sits between — that a
+subagent pays its whole opening payload uncached, and that its cache TTL is five minutes against the main
+conversation's hour. The defect is an inference drawn from a true fact, not a false fact.
+
+**And the reporting worker named the pattern, which the manager records as the more useful half:**
+
+> This is the second time in this effort that an unestablished claim hardened by repetition. **The claim was true,
+> the inference from it was not, and nothing between the two re-derived it.** It had already propagated into my node
+> file and into my spawn, both of which repeat it as a priced cost this effort must pay.
+
+The manager confirms the propagation: it wrote that inference into [node 68's own
+question](68-implementation-in-a-worktree.md) and into two spawns, in each case as settled fact.

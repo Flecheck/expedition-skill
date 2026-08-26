@@ -143,10 +143,18 @@ problem a general rule would touch. So the rules are local and check 6 is untouc
 ## Review
 
 **Checker, run 1 — dead.** Spawned with the five givens node 42 fixed and terminated by the harness before it
-took a single turn: *"Agent terminated early due to an API error: You've hit your session limit."* It
-established nothing, judged nothing and raised nothing. Recorded because the record of a check is the run and
-not only its verdict, and because this is the **third** dead checker run in this effort — the second inside one
-day.
+took a single turn: *"Agent terminated early due to an API error: You've hit your session limit."* ~~It
+established nothing, judged nothing and raised nothing.~~ **It handed nothing back; whether it established
+anything is not known and was never checked** — see the correction below. Recorded because the record of a check
+is the run and not only its verdict, and because this is the **third** dead checker run in this effort — the
+second inside one day.
+
+*Corrected at [Restructure `map.md` to what every worker needs](59-restructure-the-map.md), where the same claim
+was made about a dead run whose transcript turned out to hold 27 records and 202,683 bytes of work. The manager
+read "established nothing" off the harness's one-line summary in all three cases. This run's transcript is no
+longer addressable, so what it did is now unrecoverable — which is the cost of the error rather than a footnote to
+it. The standing practice from there: a dead run is **resumed, not respawned**, unless a live run has overtaken
+it.*
 
 **Checker, run 2 — spawned fresh**, with the same five givens and **no statement of what changed**, run 1 having
 established nothing at all. Telling it that a predecessor existed would be the account of what happened that

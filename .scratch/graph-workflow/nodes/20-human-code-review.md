@@ -371,3 +371,19 @@ the answer is built on, and it is also what makes the abandoned diff's dispositi
 than the one asked — so the diff was decided rather than re-asked, and flagged.
 
 The 2×2's second axis went unanswered. Recorded as decided-not-asked in the answer.
+
+## Annotation: the reject clause keeps its decision and loses its premise
+
+*Filed by the manager at [Run an implementation node's work in a worktree](68-implementation-in-a-worktree.md)'s
+resolution, in that worker's own words.*
+
+> Its clause *"The tree must be cleaned — the code slot is discovered from the working tree, so leaving a rejected
+> diff in place would read as a dead worker forever"* loses its premise. The slot is no longer discovered from the
+> working tree, so a rejected diff left in a worktree does not read as a dead worker. **The decision it supports is
+> unchanged; its reasoning is.**
+
+**And the discard default gets cheaper on both sides**, which refines this node's `ASSUMPTION` flag rather than
+contradicting its decision: discarding is now `git worktree remove --force` with no path-limited cleaning of a tree
+that also holds the human's bookkeeping, and **keeping costs nothing** — the work is committed onto the unmerged
+worktree branch and the directory removed, so a kept reject cannot be miscounted as an occupied slot. Node 68 notes
+that keeping was defaulted against partly because it meant a standing directory of dead work, and it no longer does.

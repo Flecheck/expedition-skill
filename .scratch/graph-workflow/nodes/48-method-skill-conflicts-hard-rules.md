@@ -265,6 +265,27 @@ item, alongside the gate and a blocked worker.
 checker's spawn carries the effort's ground rules](42-checker-spawn-carries-ground-rules.md) forbids travelling
 by the ground-rules route.
 
+### Annotation: respawning was the expensive option, and this run is the clearest case of it
+
+*Filed by the manager at [Restructure `map.md` to what every worker needs](59-restructure-the-map.md), where the
+human raised it.*
+
+**Run 1 here reached the mechanical half of the check**, by its own last line. That work was recoverable by
+**resuming** the dead run — the harness keeps a dead agent's context addressable — and it was discarded instead,
+with a fresh run re-paying its entire opening payload uncached, a subagent never reading its parent's cache
+([What one node actually costs](52-token-cost-of-a-workflow.md)). Of this effort's dead runs, **this is the one where the
+most work was thrown away**, because it is the one known to have got furthest.
+
+**The reason recorded above for respawning does not hold.** Node 42 bars carrying an account of what happened to a
+blind checker; **resuming carries no account** — the resumed run *is* the predecessor and learns nothing it did not
+see itself. So respawning was one option, not the required one, and the ground-rules argument was never the
+obstacle.
+
+**Standing practice from here: a dead run is resumed, not respawned**, unless a live run has already overtaken it.
+And a dead run's state is read from its transcript's record count, never from the harness's one-line summary —
+which is the error corrected at [Nothing checks that a part a checker left uncovered was ever
+established](45-nothing-checks-an-uncovered-part.md).
+
 **Run 2 spawned at 22:04, past the reset**, with the same condition, bar, paths and name — and with the
 **five-item ground rules block the human approved minutes earlier** at [What keeps the shipped files consistent
 when a decision changes a term](29-shipped-file-consistency.md)'s A2, rather than the manager's own selection

@@ -180,3 +180,21 @@ slot**, its half-written code left in the tree.
 - **A stop cleans the tree, and something is saved first.** `reject` here says the working tree is cleaned;
   that node adds that a diff is saved to the effort's own directory before the cleaning, written by the
   manager without reading it and path-limited exactly as a code commit is.
+
+## Annotation: branching and rebasing arrive, exactly where this node deferred them
+
+*Filed by the manager at [Run an implementation node's work in a worktree](68-implementation-in-a-worktree.md)'s
+resolution, in that worker's own words.*
+
+> Its answer states *"The workflow never branches, never pushes, and never rewrites history"* and, under *No branch
+> policy, and no push*, *"The workflow never creates, switches or deletes a branch. It commits onto whatever HEAD
+> is."* Both are contradicted on two of three counts: the workflow now creates and deletes a per-node branch, and a
+> rebase rewrites history. **Never-pushes stands.** That node's own reasoning is not contradicted — it deferred
+> branches to *"exactly with the worktrees in Concurrency model's later phase"*, which is what has now arrived. Its
+> clause *"no uncommitted changes outside the effort's own directory means the code slot is free"* is also
+> replaced, by counting live worktrees.
+
+**The manager adds one thing this node got right that is now load-bearing.** Its finding that the human commits the
+graph files by hand, periodically, while work is in flight is what makes the rebase necessary **even at a count of
+one** — the branch moves under an in-flight node, and `--ff-only` would refuse. Node 68 calls absorbing those
+commits *"the rebase's real job"*.

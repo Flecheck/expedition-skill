@@ -59,7 +59,7 @@ Blocked on revision semantics and the taxonomy because the fields are a direct e
 
 ## Answer
 
-**Wayfinder's local-markdown tracker, extended in four places and split into four files.** Two of the splits were forced rather than chosen: the standing never-delete rule makes every index append-only, and an append-only file cannot also be the file that has to stay small enough to load every session.
+**Wayfinder's local-markdown tracker, extended in four places and split into ~~four files~~ five files** — *the count was raised by [What the token findings change in the workflow and its skills](53-what-token-findings-change.md) and carried out by [Restructure `map.md` to what every worker needs](59-restructure-the-map.md), for the reason annotated at the foot of this node.* Two of the splits were forced rather than chosen: the standing never-delete rule makes every index append-only, and an append-only file cannot also be the file that has to stay small enough to load every session.
 
 ### Identity is `NN`; the name carries everything else
 
