@@ -16,15 +16,20 @@ procedure below is ever performed by a worker.
 marked in place and the new text is added around it. Text leaves a file only when it is wrong or the
 human asks for it gone.
 
-## The four files
+## The five files
 
 ```
 .scratch/<effort>/
   map.md                 The whole effort at low resolution. Read once per session.
+  map-history.md         The account behind the map's lines. Read for history, not to work a node.
   decisions.md           One capped line per resolved node. Append-only.
   flags.md               One capped line per flag, with its state. Append-only.
   nodes/NN-<name>.md     One file per node. All detail.
 ```
+
+`map-history.md` holds, verbatim, whatever the map has appended in place and no longer needs to
+carry: every worker reads the map cold once per node, so the account of how a note reached its
+current form moves here while the map keeps the note.
 
 `map.md` has four sections, in this order:
 
