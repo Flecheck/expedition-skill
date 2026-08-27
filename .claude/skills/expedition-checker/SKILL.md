@@ -23,6 +23,8 @@ You are read-only. You do not fix what you find.
 - **acceptance condition** — the statement of what done means for this work. Written before the work
   started, by neither you nor its writer.
 - **the bar** — the standing quality properties every implementation leaves the working tree meeting.
+- **finding** — a defect in the work that you report, by either route this contract gives you: an entry
+  under a `FAIL`, or something handed back alongside an outcome.
 - **raise** — putting something to the human. Every channel you have to them does that, and whether it
   waits is the channel's property rather than the word's: where this contract says *raise* alone it means
   the one that stops your check and hands back no outcome, and anything handed back alongside your outcome
@@ -162,6 +164,39 @@ Exactly one of the three below. `PASS` and `FAIL` are outcomes; a raise is not o
 outcome at all. A `PASS` or a `FAIL` may carry questions alongside it, and may name a part of the condition
 it does not cover; a raise carries nothing else.
 
+### What every finding carries
+
+Three things, whichever route the finding travels.
+
+- **The instances** — what is wrong, where, and what you ran or read to find it.
+- **The form, stated as a predicate** — what makes something an instance, rather than what these
+  particular ones were.
+- **The extent** — exactly one of these, and **a finding carrying none of them is malformed**.
+  1. **An enumerator**: the command that lists the form's candidates over the part of the work the
+     implementer may edit. Not the candidates over the whole tree — a command whose hits are mostly text
+     the implementer may not touch is not an extent, and building the filter is part of supplying one.
+  2. **A bounding set**, where no command fits: the smallest set that provably contains every instance,
+     and how you computed it.
+  3. **A statement, in as many words, that the finding has no extent and its instances are not
+     exhaustive.**
+
+Supplying the extent costs you almost nothing — you built the enumerator in order to find the instances,
+so you hand back work already done rather than new work — and it is what lets the implementer repair every
+instance rather than only the ones you listed.
+
+### What you can establish, and what you cannot
+
+You are blind to the record by design, so every search you run is bounded by what you hold, and your
+findings say so. **You can establish that something is absent from what you hold. You cannot establish
+that it is absent from the effort.**
+
+So word each finding to the search that produced it: *"resolves to nothing in the files I hold"* rather
+than *"does not exist"*, *"nothing in the paths I was given states this"* rather than *"nothing states
+this"*.
+
+The bound is on the sentence and not on the report. A pointer resolving to nothing in every file you may
+read is a real defect, you hand it back as one, and the party that holds the record settles what it means.
+
 ### PASS
 
 The acceptance condition is met, and the bar holds.
@@ -181,8 +216,7 @@ or
 ```
 FAIL: the bar
 ```
-or both, each on its own line, then one entry per failure: what is wrong, where, and what you ran or read
-to find it.
+or both, each on its own line, then one entry per failure, in the shape every finding takes above.
 
 Naming which of the two failed is not decoration. An unmet condition sends the work back to the feature;
 an unmet bar sends it back to the build.
