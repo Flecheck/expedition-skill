@@ -215,3 +215,58 @@ branch was taken over a surviving directory *"so a kept reject cannot be miscoun
 `68.4` `ASSUMPTION` — **Worktree reuse is recorded as an unestablished belief and left out of the specification.**
 The human offered it as *"i belive"*; the harness's wording reads as per-agent creation; and it is moot for a
 manager-created worktree. Written as a remedy available against measurement rather than as a property.
+
+## Annotation: two things the worktree lifecycle broke, found on its first two runs
+
+*Filed by the manager at [What a finding must carry so it can be swept](71-what-a-finding-must-carry.md)'s landing —
+the second implementation node to use the lifecycle this node decided. Not a change to the answer above.*
+
+### 1. The worktree moves inside the repository, and flag `68.2` stays open
+
+**What broke.** The manager presented node 71's gate describing a diff. The human replied, `verbatim`: *"what are
+the changes ? I don't see them in git ?"* — because `git diff` in the repository showed only the manager's graph
+bookkeeping, the work being uncommitted in a checkout under `/tmp`. `map.md` records that one of the human's two
+interfaces **is** the diff, so a gate that describes one and points at nothing has not been presented.
+
+**The instruction**, `verbatim`: *"Also for the next times, add the worktrees in the project directory"*, and on
+being told it costs an ignore rule: *"For the worktree, I think it might be needed as otherwise it is too anoying
+for the review"*.
+
+**What it costs, stated because this node decided the opposite.** Flag `68.2` reads: *an expedition places an
+implementation node's worktree outside the repository's working tree, on the property that no ignore rule may be
+assumed in a repository the workflow does not own.* That property is untouched and the reasoning still holds for
+what the workflow **ships**. What changed is this effort's own practice, which owns its repository and can carry an
+ignore rule: worktrees now live at `.worktrees/NN-<name>/`, and a `.gitignore` was added for them where none
+existed. **Flag `68.2` is therefore still outstanding**, and the shipped answer for a repository the workflow does
+not own is undecided.
+
+**Nobody could have caught this from the record.** Three resolved nodes each hold a piece — this one moved the work
+out of the repository, [Human review of landed code](20-human-code-review.md) settled that the human reviews a
+diff, and `map.md` names the diff as an interface — and the hole is between them. That is recorded as a duty
+missing from [Gather the manager's accumulated duties into one enumerated list](75-gather-the-managers-duties.md)'s
+list, with the method's limit stated there.
+
+### 2. The landing step cannot run in the manager's sandbox
+
+**What broke.** `git merge --ff-only` failed with *"unable to unlink old
+'.claude/skills/expedition-checker/SKILL.md': Read-only file system"*. The manager's sandbox allows the project
+directory and carves specific paths back out inside it — `.claude/skills`, `.claude/hooks`, and the settings files
+— which is the harness's guard against an agent rewriting its own instructions. Verified by test rather than
+assumed: `touch` in the project root succeeds and `touch .claude/skills/…` does not, and this project ships no
+settings files, so nothing here configured it.
+
+**Why this lifecycle created it and the old one did not.** Before worktrees, a worker wrote the file in the main
+checkout and the manager only committed it; `git commit` **reads** the file. A merge **writes** it. So the same
+paths that were readable became unwritable, and the failure appears at the last step of the node rather than the
+first.
+
+**It is not fixed by moving the worktree inside the repository** — the merge writes the main checkout's
+`.claude/skills` wherever the worktree lives. The human's word, `verbatim`: *"you can run it outside the sandbox"*,
+and the merge, the prune and the branch delete were run with the sandbox off. **That is a per-node exception and
+not a rule**: it recurs on every implementation node whose work is a shipped skill file, which on this effort is
+most of them.
+
+**A second artifact of the same guard.** `git worktree remove` and `git worktree prune` both failed with *"failed
+to delete '.git/worktrees/wt-71': Device or resource busy"*. `/proc/mounts` shows the sandbox bind-mounts
+`.git/worktrees` and each worktree's admin directory, so the directory cannot be unlinked from inside it. The
+checkout itself was removed; only the admin directory persisted, and the prune succeeded with the sandbox off.

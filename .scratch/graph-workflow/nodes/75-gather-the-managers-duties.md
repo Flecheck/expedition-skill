@@ -391,3 +391,29 @@ These reached a working manager as instructions rather than as answers to any no
 **4. What was stale, wrong, or contradictory.** Fifteen instances in §P plus three invalidations. **The pattern it named is the finding:** *"twelve of the fifteen are already annotated, and every one of those twelve was found by an agent reading two answers together rather than by any mechanism. The three that are not annotated share a shape: node 68 changed a mechanism, its worker reported the invalidations it saw, and the ones it missed are the nodes that mention that mechanism **in passing** rather than owning it. A worker reporting `INVALIDATIONS` looks at the nodes its work is about; the misses are the nodes its work merely touches."*
 
 **And one correction of the manager's own audit, which the worker turned back on the manager.** Its node file's clause 2 states 575,779 characters of answers and annotations; the worker's own extraction came to **480,240**, roughly 20% high. *"No clause depends on it, and I mention it only because the manager's audit of this very condition records the pattern of a corrected preamble leaving its neighbouring figures unchecked."* **The manager records that as upheld**: it repaired one figure in that preamble and did not re-derive the one beside it, which is the third time this session the same shape has been caught, and the first time by the party the audit was written for.
+
+## Annotation: one duty discovered after the gather, and how it was missed
+
+*Filed by the manager at [What a finding must carry so it can be swept](71-what-a-finding-must-carry.md)'s gate.
+Not a change to this node's answer, which is closed — an addendum to the list it produced, so that [Write the first
+version of the manager's skill](76-write-the-manager-skill.md) is not built from a list known to be one short.*
+
+**The duty: the gate payload names the worktree's path and the command that shows its diff.**
+
+**How it was missed, which is the part worth keeping.** This list was gathered from **45 resolved nodes**, and the
+duty does not exist in any of them. [Run an implementation node's work in a worktree](68-implementation-in-a-worktree.md)
+moved an implementation node's work into a checkout outside the repository; [Human review of landed
+code](20-human-code-review.md) settled that the human reviews a diff; and `map.md` records that the human's two
+interfaces are the manager's chat payload and the diff. **Each is intact and the three together leave a hole no one
+of them contains.** A gather over resolved nodes cannot find a duty that no resolved node states, however complete
+it is over what they do state — which is a limit of the method rather than a miss by the worker that ran it.
+
+**It was found the way such things are found here.** The manager presented node 71's gate describing a diff and
+naming no path; the human's reply, `verbatim`: *"what are the changes ? I don't see them in git ?"*. `git diff` in
+the main checkout showed only the manager's own graph bookkeeping, and the work — one modified file, uncommitted on
+branch `node-71` — was invisible from where they were standing.
+
+**Where it now stands:** written into `map.md`'s landing policy, beside the worktree lifecycle that created the
+need. §Q of this node's answer separates the human's standing instructions from practice the manager invented; this
+one is neither — it is a **consequence of a shipped decision that nobody drew**, which is a third kind, and the
+first instance of it.

@@ -161,3 +161,22 @@ length unstated on purpose). The checker will establish 43 clauses over a docume
 condition the worker wrote and it is not the manager's to trim**, but it is worth the human knowing before the check
 is spent, and it is the strongest case yet for [What a finding must carry so it can be
 swept](71-what-a-finding-must-carry.md) landing before this node's check rather than after.
+
+## Manager's note: one duty was added after node 75's list closed
+
+*Filed at [What a finding must carry so it can be swept](71-what-a-finding-must-carry.md)'s gate, before this node
+was claimed. **Not a change to the acceptance condition above**, which stands exactly as node 75's worker wrote it.*
+
+The list this node is built from is **one duty short**, and the missing one is recorded as an annotation on
+[Gather the manager's accumulated duties into one enumerated list](75-gather-the-managers-duties.md) rather than
+here: *the gate payload names the worktree's path and the command that shows its diff.* It is also now in
+`map.md`'s landing policy.
+
+**Whoever claims this node reads that annotation with the list**, and decides whether the duty belongs in the
+skill's first version. The manager has not decided it, and the condition does not reach it either way — clause
+coverage is defined over node 75's answer, and this is an addendum to it.
+
+**Why it matters beyond one line.** The annotation records *how* it was missed: three resolved nodes each intact,
+and the duty living in the hole between them. A gather over resolved nodes cannot produce a duty no resolved node
+states. If the skill this node writes is going to claim completeness over the manager's conduct, that limit is the
+one it should be honest about.

@@ -72,3 +72,28 @@ paragraph is not doing the work this node claims for it.
 glossary makes it reachable **inside the shipped set**, not **by a worker**: no `SKILL.md` points at anything in
 `.claude/skills/expedition/`, and that directory holds no `SKILL.md` of its own. Nothing in this condition fixes
 that, and it was deliberately routed to the manager's own unwritten skill rather than minted as a node.
+
+## Annotation: `implementer` is used in the glossary's own prose and is not a headword
+
+*Filed by the manager at [What a finding must carry so it can be swept](71-what-a-finding-must-carry.md)'s check,
+on the human's word. Not a change to anything above.*
+
+Node 71's blind checker reported that the checker contract had gained *"the implementer"* — *"the part of the work
+the implementer may edit"* — and that `CONTEXT.md`'s actors are Manager, Worker and Checker. It routed this as a
+question rather than a finding, correctly: the wording is that node's acceptance condition's own and so was not its
+worker's to depart from.
+
+**The premise is narrower than the checker could establish.** `CONTEXT.md` already uses the word in its own prose,
+inside the **Checker** entry: *"Started by the manager and never by the implementer, because whoever spawns it
+chooses what it sees."* So the word is not new to the shipped corpus and names no new party. What is true is that
+**it is used and is not a headword** — and the checker contract's own `## Words used exactly` does not carry it
+either, while `.claude/skills/expedition-implementation/SKILL.md` names the same party as *"the worker holding the
+code"*.
+
+**What is open, therefore:** whether the glossary gains `implementer` as a headword with an `_Avoid_` line, or
+whether both uses become *"the worker holding the code"* and the word leaves the corpus. Nothing turns on it today.
+
+**The human's word**, `verbatim`: *"ok"*, on the manager's recommendation that it not be settled now and be picked
+up by this node, which is already moving that file. **This is not an addition to this node's acceptance condition**
+— it is one more entry-level question for whoever claims it, to raise or to carry as its own node, and the manager
+has not decided which.

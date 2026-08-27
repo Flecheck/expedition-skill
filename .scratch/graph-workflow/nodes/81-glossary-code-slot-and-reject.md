@@ -35,13 +35,14 @@ location.
 
 ## Acceptance condition
 
-*Written by node 74's worker.*
+*Written by node 74's worker, and **amended once by the manager on the human's instruction** — the amendment is
+recorded below the condition, and entry 3 is the whole of it.*
 
-`CONTEXT.md` at the repository root is edited, and nothing else is. Where that file has already moved to
-`.claude/skills/expedition/CONTEXT.md`, the file at its new path is the one edited and the entries named below
-resolve to it.
+`CONTEXT.md` at the repository root and `.claude/skills/expedition-prototype/SKILL.md` are edited, and nothing else
+is. Where `CONTEXT.md` has already moved to `.claude/skills/expedition/CONTEXT.md`, the file at its new path is the
+one edited and the entries named below resolve to it.
 
-Two entries are brought to what holds now.
+Three entries are brought to what holds now.
 
 **1. `**Code slot**`.** It currently reads: *"The right to modify product code, held by one worker at a time.
 Occupancy is discovered from the working tree rather than recorded, so a dying worker leaves nothing behind to clean
@@ -57,7 +58,17 @@ clause says that, and the rest of the entry — including *"Not a verdict on qua
 wrong takes a correction round"*, *"The word is the human's alone; the checker's outcomes are `PASS` and `FAIL`"*,
 and its `_Avoid_` line — is left exactly as it stands.
 
-No other entry changes, and no entry is added or removed.
+**3. `code slot`, in `.claude/skills/expedition-prototype/SKILL.md`'s `## Words used exactly`.** *This entry is the
+manager's amendment and not the minting worker's text.* It currently reads: *"the right to modify product code, held
+by one worker at a time. Never yours."* Its first clause is false for the same reason entry 1's first sentence is.
+The rewritten entry says what [Carry the worktree lifecycle into the shipped files](74-carry-the-worktree-lifecycle.md)
+has already shipped in the implementation contract — that one worker holds one slot, and that how many slots an
+effort runs is that effort's own setting — and keeps *"Never yours"*, which is still true of a prototype worker and
+is what the entry is there to say. It stays a single line in that list's own form, which carries no `_Avoid_` line.
+Nothing else in that file changes: its hard rule 1, *"You do not hold the code slot"*, is true under the lifecycle
+and is left exactly as it stands.
+
+No other entry changes in either file, and no entry is added or removed.
 
 The standing bar applies: the working tree builds, warns about nothing, is formatted, and passes the tests relevant
 to the change. This repository has no build, no tests and no formatter, which is a complete bar on its remaining
@@ -75,14 +86,45 @@ bolded term, a definition, and an `_Avoid_` line listing the synonyms it refuses
 the manager's accumulated duties into one enumerated list](75-gather-the-managers-duties.md)'s resolution, where a
 second worker reached the same conclusion independently.
 
-### The manager's note at filing, not a change to the condition
+### The amendment, and the human's word that licensed it
 
-**The condition says *"`CONTEXT.md` … is edited, and nothing else is"*, and node 74's checker found a fourth
-instance outside it**: `.claude/skills/expedition-prototype/SKILL.md`'s `code slot` glossary entry, still reading
-*"held by one worker at a time."* **Read literally, this condition forbids fixing it.**
+**What was wrong.** As filed, the condition said *"`CONTEXT.md` … is edited, and nothing else is"*, and node 74's
+checker had found a fourth instance outside that scope: `.claude/skills/expedition-prototype/SKILL.md`'s `code slot`
+glossary entry, still reading *"held by one worker at a time."* **Read literally, the condition forbade fixing it.**
+The manager filed the problem rather than repairing it, on the ground that the text was the minting worker's, and put
+two routes to the human: whoever claims the node raises, or the fourth instance becomes its own node.
 
-The manager did not amend the condition — that text is the minting worker's. Two routes are open and the choice is
-not the manager's: whoever claims this node **raises** on the ground that the condition's scope was written before
-the full extent was known, or the fourth instance becomes its own node. **Recorded here so the audit at claim time
-meets it rather than has to find it**, and noted as the second time in this effort a condition's scope was fixed
-before a checker enumerated the defect it addresses.
+**What the human said**, `verbatim`: *"For 81, fix it"*. Neither route — a third, which is the amendment above.
+
+**What the manager did under that word.** Widened the scope sentence to name both files, and added entry 3. Entry 3
+demands only what a resolved node already fixed: node 74's shipped wording in the implementation contract, copied
+across rather than composed here, which is why the amendment decides nothing. The node was **unclaimed** when this
+was written, so no worker had read the earlier text and no checker had been handed it.
+
+**What it departs from.** [Who writes the acceptance condition for an implementation node the manager mints
+itself](39-condition-for-a-manager-minted-node.md) gives the manager the pen only for nodes it minted itself, and
+says of the worker-minted case that *"the manager authoring one remains explicitly wrong"*. This is that case: node
+81 was minted by node 74's worker as flag `74.2`, and its condition is that worker's. Flag `81.1` carries the
+departure; the permanent fix is [How a condition's scope is amended once the extent turns out wider than it was
+written for](82-amending-a-condition-whose-scope-was-too-narrow.md).
+
+**Why a permanent fix and not just this repair.** The same shape has now run twice in a row, and this node is the
+second instance rather than the first. Node 74's condition named two files; the defect the worktree lifecycle
+created spanned four, which is flag `74.2` in as many words — *"both being outside the two files its condition
+named"* — and it is the reason this node exists at all. Then this node's own condition named one file and the same
+checker's enumeration reached two. **A condition's scope is written before anything enumerates the defect, and the
+enumeration arrives from the check**, which is after every route for changing the scope has closed. Both instances
+ended at the human for a decision neither needed.
+
+## Flags
+
+`81.1` `ASSUMPTION` — **The manager amended a condition written by another node's worker.** Licensed by the human in
+one line, *"For 81, fix it"*, for this node only. The departure is from node 39's rule that a worker-minted node's
+condition stays the minting worker's; the amendment's content decides nothing, being node 74's already-shipped
+wording copied across, so what is at risk is the precedent rather than this node's standard. The alternative on the
+record and not taken: the fourth instance becomes its own node, which costs a node and a worker and leaves node 81's
+scope honest. Recorded under [Whether a spawn may override a shipped worker
+contract](28-spawn-overriding-a-contract.md)'s shape — a licence for one attempt, flagged, plus a node for the
+permanent fix. *Filed as `ASSUMPTION` because the three kinds `flags.md` declares — `ASSUMPTION`,
+`CONDITION-WRONG`, `DELEGATED` — have no word for a departure the human licensed, and inventing a fourth here would
+be a second departure to cover the first.*

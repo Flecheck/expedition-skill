@@ -69,3 +69,33 @@ reached without deciding it, that is a **raise**, not a choice.
 
 **This node is not token-use work** and is deliberately not started under the human's standing instruction. The
 licence carries the one node that needs it in the meantime.
+
+## Annotation: a live instance of clause 5's open question, and it resolves the other way
+
+*Filed by the manager while [What a finding must carry so it can be swept](71-what-a-finding-must-carry.md) was
+under check. Not a change to the condition above.*
+
+Clause 5's note says `graph-conventions.md`'s *"The manager is the graph's only writer, and it writes as a scribe"*
+is **either still true** — a worker whose work is a graph file returns text and the manager writes it — **or it is
+not**, and that which of those it is has not been decided. Node 71 supplies the first instance of the first reading
+actually running, so the note now has evidence where it had none.
+
+**What happened.** The manager's spawn told the worker to *"file a `## Retrospective` annotation on the node
+file"*. The implementation contract's hard rule 1 — *"You write product code. You write no graph file"* — forbids
+that. The worker **reported the contradiction and handed the retrospective back as text**, which the manager then
+wrote onto the node. That is the scribe sentence holding, unaltered, in the one case that was supposed to test it.
+
+**Two things this does and does not settle.**
+
+- It **does** show that the return-text-and-let-the-manager-write route works, is cheap, and needed no licence.
+  A worker on the case clause 5 worries about — a node whose *subject* is a graph file — would return a whole file
+  rather than a section, and nothing in what happened here says whether that scales.
+- It **does not** touch the human's reading that this node was minted from, which is about a node whose *work is a
+  graph file* rather than a worker recording its own progress. The retrospective is the second kind: it is the
+  worker recording something about its own run, which is exactly what the rule was written for.
+
+**And the defect it exposed is the manager's, not a contract's.** `map.md`'s sentence left its subject open —
+*"It files as a `## Retrospective` annotation on the node"* — and every retrospective spawn this effort has sent
+carried the wrong reading. The map now names the subject. **No worker before this one reported it**, which is
+worth more than the fix: the instruction to break a hard rule travelled in every such spawn and was obeyed or
+worked around silently.
