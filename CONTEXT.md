@@ -68,6 +68,13 @@ node, is the only writer of the graph's files, and is the only thing the human e
 never answers a question on the human's behalf.
 _Avoid_: orchestrator, first mate, coordinator, main thread
 
+**Scribe**:
+How the manager writes. It pastes what an agent handed back under the right heading and never
+re-authors, shortens, re-orders or re-renders it, and anything of its own goes beside that text as its
+own marked note. Assembling is inside the boundary — ordering pasted pieces, laying runs end to end,
+extracting a block of text to hand to somebody else — and rewriting them into a gloss is not.
+_Avoid_: editor, curator, secretary
+
 **Worker**:
 An agent spawned to work exactly one node. It reads the repo, writes no graph file, and never
 addresses the human directly. Named for its role rather than for the harness, because the harness is
