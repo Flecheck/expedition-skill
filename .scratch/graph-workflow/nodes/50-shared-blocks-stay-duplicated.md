@@ -100,3 +100,33 @@ to stand on maintenance rather than on tokens."*
 in one measured agent scenario. The two duplicated sections are **exactly** that class: a five-part handover
 with named parts and a flag form. So the safe target is prose that explains why, and the unsafe target is the
 shapes.
+
+## Annotation: a ninth file joined the corpus, and the human ruled on that one file alone
+
+*Filed by the manager at [Write the first version of the manager's skill](76-write-the-manager-skill.md)'s third
+correction round. **Not an answer to this node**, which stays open and still owns the question for the corpus.*
+
+**New measurement, from a blind checker holding only the two files.** The manager's contract, shipped at node 76,
+shares **82 eight-grams with `graph-conventions.md`**, clustering into **nine passages** restated near word-for-word
+with *the manager* swapped for *you*: three against that document's `### The human's words, in either log`, three
+against `### Raise a flag` and `### Settle a flag`, one against its acceptance-condition section from the new file's
+`## The checker`, and two more against the same from its `## Acceptance conditions`. The enumerator is on node 76's
+`## Review` under run 1.
+
+**This is a different shape from the 216 lines this node was written about**, and worth separating. Those are
+byte-identical blocks across five sibling contracts, written that way deliberately to buy exact agreement between
+files that say the same thing to different readers. These nine are one document restating another document's
+operative content across a stated division of labour — the new file's own sentence being *"This contract says what
+you do; that document says what the files look like when you have done it."* **A ninth file makes it a nine-way
+edit, and this instance also crosses the division rather than sitting inside it.**
+
+**The human directed the repair on that one file.** Their word, `verbatim`: *"send it to the worker"*, against the
+manager's recommendation that it be left to this node. Recorded as a divergence on node 76. **What that settles is
+node 76's file and nothing else** — the five worker contracts go on duplicating, so the corpus is now deliberately
+inconsistent until this node answers, and that inconsistency is itself new evidence rather than a defect to fix
+here.
+
+**The constraint that governed the repair, unchanged from this node's own finding.** Clause 3 of node 76's condition
+requires the file to stand alone, so a rule may not simply become a pointer wherever one exists. What made any
+remedy possible is the gap **this node identified first**: a plain-file pointer is not skill invocation, and a
+skill-less runner can follow one.
