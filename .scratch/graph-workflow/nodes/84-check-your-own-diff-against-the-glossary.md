@@ -57,3 +57,29 @@ for one clause.
 
 Node 71's worker, in the retrospective it returned after the correction round that this would have prevented. Filed
 by the manager, that retrospective being effort-scoped and returning no `NEW NODES` of its own.
+
+## Annotation: a second scan belongs beside the first, and they catch disjoint classes
+
+*Filed by the manager after [Write the first version of the manager's skill](76-write-the-manager-skill.md), where
+the second scan was run for the first time. Not a change to the question above, which it widens.*
+
+The scan this node was written about compares a worker's prose against the **glossary's headwords**. A file that
+defines terms of its own needs a second and different one, and node 76 measured the difference across four
+correction rounds.
+
+**The inverse scan: extract every term the file itself claims to define, and read each later use of it against its
+own entry.** Node 76's worker stated the reason it is not the same check: *"it cannot see a term the file defines
+itself and then contradicts, because that term may not be a headword at all."*
+
+**Two of node 76's four correction rounds existed because only the first scan was being run**, and both defects
+were the same shape — a term defined, then used for a referent its own definition excludes. `marker` in one round,
+`interview` in the next, the second introduced by the edit that fixed the first. The worker had run the headword
+scan against its diff before handing over and it caught four real breaks; it could not catch either of these.
+
+**The second scan also ran ahead of a finding once**, which the first never did: it produced an unprompted repair,
+restoring a clause a checker had already **cleared** on a ground that stopped being true one round later.
+
+**So the answer this node reaches should cover both**, and the reason is that they guard different things: the
+headword scan guards the **shared vocabulary** against a file that borrows a word, and the inverse scan guards the
+**file's internal consistency** against a file that contradicts itself. A contract defining thirty-seven terms of
+its own needs the second more than the first.

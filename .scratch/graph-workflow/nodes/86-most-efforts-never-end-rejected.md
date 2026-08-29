@@ -68,3 +68,30 @@ past that node.
 The human's own words at node 76's interview, in answer to a manager's raise about two clause-mandated statements
 their edit had removed. The other of the two was settled there; this one was not, because it rejects a claim rather
 than trimming a sentence.
+
+## The manager's note on why this is the recommended next pick
+
+*Filed at the handover to a fresh manager, because [map.md](../map.md)'s `Resume and recovery` fog item records
+that **why the manager chose the nodes it chose** is exactly what a session does not leave behind. Not binding on
+whoever picks next — a manager picks for itself.*
+
+**Three grounds, in order of weight.**
+
+1. **It is the only open node that contradicts a *resolved* one.** Every other open node adds something missing;
+   this one says something already settled and cited is wrong. [Revision semantics](06-revision-semantics.md)
+   treats that as the case the graph is least able to leave alone, and nothing else on the frontier is in that
+   class.
+2. **One instance of it ships.** `CONTEXT.md`'s **Closed** entry states the rejected claim to every reader of the
+   skill set, including repositories that never see this graph. The other seven instances are in the record and
+   cost nothing until read; that one is in the product.
+3. **It is cheap and it unblocks reasoning elsewhere.** The likely answer — that the claim was never one a design
+   should make, no effort having ever terminated under this workflow — is a find-and-replace with a shape already
+   chosen, *"a frontier that never empties is a legitimate steady state"*, which states the operative half without
+   predicting frequency. Until it is settled, [Git and code-landing policy](11-git-and-code-landing.md)'s reason
+   for having no effort branch rests on a claim the human has rejected.
+
+**What argues against taking it first.** It is a grilling node and therefore spends the human, who is the scarce
+resource; three implementation nodes on the frontier spend nobody. And [The manager's cascade duties are in
+neither contract](87-managers-cascade-duties-have-no-contract.md) and [Carry the worktree lifecycle into the manager's contract](89-carry-worktree-lifecycle-into-managers-contract.md) both carry conditions written only in part, so each already owes the human a question before
+it can be claimed — bundling those two questions with this one is the cheaper use of a single human turn than
+taking this node alone.

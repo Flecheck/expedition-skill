@@ -516,8 +516,7 @@ respawned at every round including one it died in.
 
 **What the gate did not settle, recorded so it is not read as settled.** Four nodes were minted from this node's
 own run and none is closed: [The manager's cascade duties are in neither
-contract](87-managers-cascade-duties-have-no-contract.md), whose condition is written in part; **Carry the worktree
-lifecycle into the manager's contract**, reported by the worker with its condition written in part and blocked on
+contract](87-managers-cascade-duties-have-no-contract.md), whose condition is written in part; [Carry the worktree lifecycle into the manager's contract](89-carry-worktree-lifecycle-into-managers-contract.md), reported by the worker with its condition written in part and blocked on
 flag `68.2`; [A human edit lands in a worker's tree while the node is claimed](85-human-edits-a-claimed-tree.md);
 and [The human rejects *most efforts never end*](86-most-efforts-never-end-rejected.md). A fifth duty was filed onto
 [What the manager reports to the human, in one place](46-what-the-manager-reports.md).
