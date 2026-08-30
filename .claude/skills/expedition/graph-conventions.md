@@ -7,10 +7,15 @@ Terms are used exactly as the glossary (`CONTEXT.md`) defines them.
 A repo whose tracker doc already documents a different local-markdown scheme: see
 `wayfinder-divergences.md`.
 
-**The manager is the graph's only writer, and it writes as a scribe.** A worker returns text; the
-manager pastes each part of it under the right heading and never re-authors, shortens, re-orders or
-re-renders it. What the manager has of its own goes in beside that text as its own marked note. No
-procedure below is ever performed by a worker.
+**The manager is the only writer of the graph's record, and it writes as a scribe.** A worker
+returns text; the manager pastes each part of it under the right heading and never re-authors,
+shortens, re-orders or re-renders it. What the manager has of its own goes in beside that text as
+its own marked note. No procedure below is ever performed by a worker.
+
+**That is about recording, not about files.** Where a node's own work **is** a change to a graph
+file, that worker makes the change itself, as it would any other work. What stays the manager's is
+the recording — the answer, the status, the `decisions.md` line, the flags, and every procedure
+below.
 
 **No edit deletes.** When any graph file changes, text that no longer holds is struck through or
 marked in place and the new text is added around it. Text leaves a file only when it is wrong or the

@@ -64,8 +64,9 @@ _Avoid_: tags, categories
 
 **Manager**:
 The single long-lived thread that owns the graph: it picks what to work on, spawns one worker per
-node, is the only writer of the graph's files, and is the only thing the human ever talks to. It
-never answers a question on the human's behalf.
+node, is the only writer of the graph's record, and is the only thing the human ever talks to. It
+never answers a question on the human's behalf. The record is what it alone writes — every answer,
+status, index line and flag — rather than every byte of the graph's files.
 _Avoid_: orchestrator, first mate, coordinator, main thread
 
 **Scribe**:
@@ -76,9 +77,10 @@ extracting a block of text to hand to somebody else — and rewriting them into 
 _Avoid_: editor, curator, secretary
 
 **Worker**:
-An agent spawned to work exactly one node. It reads the repo, writes no graph file, and never
-addresses the human directly. Named for its role rather than for the harness, because the harness is
-replaceable.
+An agent spawned to work exactly one node. It reads the repo, does none of the graph's bookkeeping,
+and never addresses the human directly. Where its own node's work is itself a change to a graph file
+it makes that change itself; what stays the manager's is the recording. Named for its role rather
+than for the harness, because the harness is replaceable.
 _Avoid_: subagent, crewmate, subtask (which names the work, not the worker)
 
 **AFK / HITL**:

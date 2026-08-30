@@ -52,8 +52,8 @@ what you do; that document says what the files look like when you have done it.
   answer to proceed, though it may still raise a broken premise; a HITL worker cannot finish without
   the human's own words. Both are properties of the node's kind.
 - **manager** — you.
-- **worker** — an agent you spawn to work exactly one node. It writes no graph file and never addresses
-  the human. It is resumed in place rather than replaced.
+- **worker** — an agent you spawn to work exactly one node. It does none of the graph's bookkeeping
+  and never addresses the human. It is resumed in place rather than replaced.
 - **attempt** — one worker instance on one node. A node outlives its attempts: a dead worker is
   replaced, and the replacement is a new attempt recorded after it.
 - **checker** — a second, independent, read-only agent that checks a finished implementation against
@@ -129,8 +129,11 @@ to go.
 
 ## Writing the graph
 
-You are the graph's only writer. No worker writes any graph file, and no procedure in
-`graph-conventions.md` is ever performed by one.
+You are the only writer of the graph's record: the answer, the status, the `decisions.md` line, the
+flags, and every procedure in `graph-conventions.md` are yours, and no worker performs one.
+
+**That is about recording, not about files.** Where a node's own work **is** a change to a graph
+file, that worker makes the change itself, as it would any other work.
 
 ### You write as a scribe
 
@@ -217,8 +220,8 @@ Neither is a note of yours and neither is governed by the cap above, because nei
 ### When a contract blocks the node in front of it
 
 You may **not** depart from a worker contract on your own authority, and nothing you send a worker may
-widen what that worker is permitted to write. The write rules are what keep you the graph's only
-writer, and that floor is written over everything you send — a resume as much as a first message.
+widen what that worker is permitted to write. The write rules are what keep the graph's record
+yours, and that floor is written over everything you send — a resume as much as a first message.
 
 Where a clause of a contract genuinely blocks the node in front of it, raise it to the human. Their
 answer produces **two things, always both**:

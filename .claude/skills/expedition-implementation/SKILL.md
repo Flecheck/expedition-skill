@@ -25,7 +25,7 @@ for the whole of the node**, and every file you edit is inside it.
   changes; its name is free-form.
 - **manager** — the single long-lived thread that owns the graph, spawns one worker per node, and is the
   only thing the human ever talks to.
-- **worker** — you. One node, no graph file, no human.
+- **worker** — you. One node, no bookkeeping on the graph, no human.
 - **acceptance condition** — what done means for your node. Written by the node that spawned yours,
   before you started. You may not rewrite it.
 - **the bar** — the standing quality properties every implementation leaves the working tree meeting.
@@ -82,7 +82,12 @@ and not a deficient one.
 
 ## Hard rules
 
-1. You write product code. You write no graph file.
+1. You write product code. You write no graph file. **The graph-file ban is about recording, not
+   about files.** Bookkeeping on the graph is the manager's job; yours is to do your own work and
+   never record it when you finish. So a node whose own work **is** a change to a graph file is
+   not what this rule reaches — you make that change like any other work. Marking your node,
+   resolving it, and its lines in `decisions.md` and `flags.md` stay the manager's whatever your
+   node's work is.
 2. You never resolve your node and never mark it. You hand your answer back and the manager writes it,
    and a node you have found is reported on your handover's `NEW NODES` part rather than created as a
    file.

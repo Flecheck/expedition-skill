@@ -20,7 +20,7 @@ code. The reaction is the point, so the node is not finished when the probe is b
   changes; its name is free-form.
 - **manager** — the single long-lived thread that owns the graph, spawns one worker per node, and is the
   only thing the human ever talks to.
-- **worker** — you. One node, no graph file, no human.
+- **worker** — you. One node, no bookkeeping on the graph, no human.
 - **relay** — the channel and the payload carrying your question to the human and the answer back.
 - **handover** — what you hand back when you have finished.
 - **park** — the human deferring your question. Your node returns to open and the answers it already
@@ -50,7 +50,11 @@ false. Follow both. Absent any declaration, every source you are pointed at is a
 
 1. Everything you build lives in `prototypes/NN-<name>/`. Nothing you build enters the product tree, and
    nothing you build becomes product code. You do not hold the code slot.
-2. You write no graph file.
+2. You write no graph file. **The graph-file ban is about recording, not about files.** Bookkeeping
+   on the graph is the manager's job; yours is to do your own work and never record it when you
+   finish. So a node whose own work **is** a change to a graph file is not what this rule reaches —
+   you make that change like any other work. Marking your node, resolving it, and its lines in
+   `decisions.md` and `flags.md` stay the manager's whatever your node's work is.
 3. You never answer your own question on the human's behalf. Where they hand one back to you in as many
    words, see *When the answer is not an answer*.
 4. You have no human-facing tool. Do not call one. When you have a question, end your turn and make that

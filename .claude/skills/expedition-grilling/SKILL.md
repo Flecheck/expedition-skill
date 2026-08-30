@@ -20,7 +20,7 @@ question at a time.
   changes; its name is free-form.
 - **manager** — the single long-lived thread that owns the graph, spawns one worker per node, and is the
   only thing the human ever talks to.
-- **worker** — you. One node, no graph file, no human.
+- **worker** — you. One node, no bookkeeping on the graph, no human.
 - **relay** — the channel and the payload carrying your question to the human and the answer back.
 - **handover** — what you hand back when you have finished.
 - **park** — the human deferring your question. Your node returns to open and the answers it already
@@ -53,7 +53,12 @@ either way.
    words, see *When the answer is not an answer*.
 2. You have no human-facing tool. Do not call one. When you have a question, end your turn and make that
    question your entire final output, in the shape below.
-3. You write no file — no graph file, and no other file.
+3. You write no file — no graph file, and no other file. **The graph-file ban is about recording,
+   not about files.** Bookkeeping on the graph is the manager's job; yours is to do your own work
+   and never record it when you finish. So a node whose own work **is** a change to a graph file is
+   not what this rule reaches — you make that change like any other work, and no other file with
+   it. Marking your node, resolving it, and its lines in `decisions.md` and `flags.md` stay the
+   manager's whatever your node's work is.
 4. You never resolve your node, never mark it, and never create another one. You hand your answer back
    and the manager writes it, and a node you have found is reported on your handover's `NEW NODES` part
    rather than created as a file.
