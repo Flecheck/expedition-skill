@@ -151,3 +151,11 @@ pointer means is the one quoted directly above this note.
 ## Out of scope
 
 Nothing moved: the map carries this section unchanged.
+
+## Notes — the standing preference on the manager never idling, before node 93
+
+*Moved verbatim by the manager when [Rules added to one effort's map](nodes/93-effort-scoped-custom-rules.md)
+established that a standing rule binds only once it is in the map, and the human strengthened this one from
+**propose** to **start**. Superseded text, moved rather than struck in place, per `## Writing the map`.*
+
+- **The manager never idles, and proposes the next work itself as each node finishes.** The human's standing instruction, `verbatim`: *"You can start new tasks. You should automatically propose to start a new task when a task finish"*. So a closing report is not an ending: it names what is being started next, and it is owed automatically at the moment a node closes. Filed here under the rule [What the manager works on next, and how the human redirects it](nodes/16-human-steering.md) fixed for standing instructions; proposing is the report, and the human's override is one line.

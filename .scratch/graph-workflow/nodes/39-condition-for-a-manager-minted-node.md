@@ -350,3 +350,26 @@ node the flags arrive after the last answer**, in the handover, so *"ok for reco
 reached flags that did not yet exist. Both are therefore **outstanding and presented**, not settled silently.
 This is the first case where that ordering has mattered, and it is worth a line in whatever eventually states
 the settle-at-close practice: a gate's flags exist before the approval, and a grilling node's do not.
+
+## Annotation: the prohibition is narrowed to authoring, and does not reach widening a scope
+
+*Filed by the manager from [How a condition's scope is amended](82-amending-a-condition-whose-scope-was-too-narrow.md)'s
+`INVALIDATIONS`. This narrows one sentence of the answer above rather than superseding it, on the disposition node 86
+set as flag `86.1`. The answer's text is left as it stands under the never-delete rule.*
+
+`### The collision, exactly located` states without qualification: *"A worker-minted node's condition stays the
+minting worker's, and the manager authoring one remains explicitly wrong."* **That sentence is now true of
+*authoring* and false of *widening the scope*.**
+
+Node 82 permits the manager to extend a worker-written condition to further instances of a defect the condition
+already describes, **on this node's own ground**: the prohibition rests on the manager becoming the author of the
+standard the work is judged against, and an amendment that adds no requirement does not make it one. The set of
+places grew; the standard did not.
+
+**Constraint 1 above is what bounds it** — *demand only what is already fixed* — and node 82's test is that limit
+applied to an amendment rather than to a whole condition: *the amendment adds places, never demands.* Its guard 2
+applies all four of this node's constraints to an amendment unchanged.
+
+**The clause survives intact for every other edit to a worker-minted condition**, and three things stay outside the
+permission: a new demand at any place, an ambiguous demand at a place already listed, and a defect the condition does
+not describe.

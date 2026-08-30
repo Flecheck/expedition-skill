@@ -229,3 +229,26 @@ worker.***
 is *assembling rather than authoring* and therefore inside the scribe boundary [Subagent context
 contract](12-subagent-context-contract.md) drew. **Nothing else confirms that reading**, and node 75's worker lists
 it among the places two settled duties pull against each other.
+
+## Annotation: the frequency claim is withdrawn, and the taxonomy underneath it stands
+
+*Filed by the manager from [The human rejects *most efforts never end*](86-most-efforts-never-end-rejected.md)'s
+`INVALIDATIONS`, site 1. This corrects one sentence of the answer above rather than superseding it — the disposition
+is flag `86.1`. The answer's text is left as it stands under the never-delete rule.*
+
+The `## Answer` opens *"the fact that reframes this node is that most efforts will never be done at all."* **The human
+has rejected that**, at node 76's interview and again at node 86's: *"Yes for no frequency. I expect it to be more
+rare in practice that it doesn't ends."* The workflow now makes **no claim about how often efforts end, in any
+wording** — neither that most do, nor that most do not, nor that the proportion is unknown.
+
+**What this node's answer now rests on is its own `### Three kinds of effort, one mechanism`**, unchanged: bounded
+delivery efforts empty and get closed, open-ended ones may never empty, and **the destination decides whether an
+effort can terminate**. That taxonomy handles both cases and never needed the frequency.
+
+The answer's bullet *"A never-emptying frontier is a legitimate steady state, not a stalled one"* is already the
+surviving form and is untouched.
+
+**A consequence this node no longer answers**, filed as [Whether charting an effort establishes and records that it is
+expected to end](91-charting-records-whether-an-effort-ends.md): with no frequency claim anywhere, per-effort
+knowledge is the only thing left that can tell a manager whether this effort's frontier is expected to empty, and
+nothing records it.

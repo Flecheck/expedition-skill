@@ -243,3 +243,29 @@ predicted one growth rate would dominate; the measurement four days later found 
 in every section, which is why `map.md` reached 92,113 characters while `decisions.md` stayed at one capped line
 per node. The remedy that works is the same one — an index cites and never restates — applied to the file this
 node exempted.
+
+## Annotation: the decision count is 47, not 43, and the tracker-doc ground is vacuous for this target
+
+*Filed by the manager from [Adopting an in-flight effort](18-adopting-in-flight-effort.md)'s `INVALIDATIONS`. This
+corrects a count and one stated ground rather than superseding the answer, on the disposition node 86 set as flag
+`86.1`. The answer's text is left as it stands under the never-delete rule.*
+
+**The count.** This node's answer states *"43 decisions, not 47 — counted"*. **Counted again by node 18's worker:
+`decisions.md` holds 47 decision entries, `D1` through `D47` contiguous, none retracted — plus 9 question entries
+carrying their own states, which this node counted as neither. The corpus is 56 importable entries, not 43.**
+
+**The cause is diagnosable, and it is the failure the map already tracks.** Four entries — `D27` through `D30` — are
+written one heading level deeper than the rest, at `###` rather than `##`. A scan anchored on `^## D` returns exactly
+43. In node 18's worker's words, *"This is a thirteenth instance of the map's 'twelve false results from hand-written
+scans across seven sessions', and it is the first one to have reached three node files and a decision index."*
+
+**What it changes.** This node's conclusions about the *format* are untouched, nothing in them turning on the count.
+What it changes is every scale argument built on 43 — *"all of which hold about 30% more strongly than they were
+written to."* The other two sites carrying the number are node 18's own `## Question` and node 09's correction
+annotation.
+
+**A secondary correction, on ground rather than on conclusion.** This node justifies appending to the target's
+tracker doc rather than rewriting it by *"Every ticket already written under that doc stays valid unchanged, which is
+the property that makes a 179-node migration thinkable at all."* Lang's tracker doc specifies an `issues/` directory
+and **that directory has never been created — zero tickets exist under it.** The property is vacuous for this
+target. **The conclusion stands, on the other grounds this node gave rather than on that one.**

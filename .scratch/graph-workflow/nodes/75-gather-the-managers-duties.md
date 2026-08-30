@@ -417,3 +417,17 @@ branch `node-71` — was invisible from where they were standing.
 need. §Q of this node's answer separates the human's standing instructions from practice the manager invented; this
 one is neither — it is a **consequence of a shipped decision that nobody drew**, which is a third kind, and the
 first instance of it.
+
+## Annotation: duty 142's first half is withdrawn
+
+*Filed by the manager from [The human rejects *most efforts never end*](86-most-efforts-never-end-rejected.md)'s
+`INVALIDATIONS`, site 8. Corrects one duty of the gathered list rather than superseding the answer; the disposition
+is flag `86.1`.*
+
+Duty 142 reads *"Most efforts never terminate, and a never-emptying frontier is a legitimate steady state rather than
+a stalled one."* **The first half is withdrawn** — the human rejected the frequency claim, and the workflow now
+states none in any wording.
+
+**The second half stands, and so does the duty it states**: *"The workflow must be useful continuously rather than
+only at the end."* The manager's shipped contract at `.claude/skills/expedition/SKILL.md` already carries only the
+surviving half, the human having amended the frequency away at [node 76](76-write-the-manager-skill.md)'s interview.

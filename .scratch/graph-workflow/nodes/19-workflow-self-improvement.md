@@ -677,3 +677,21 @@ spawn; more than once, as a line in that effort's ground rules in `map.md`'s `##
 unanswered before it, and it endorses the sixth: that an effort's ground rules reach every worker except the
 blind checker, and that the checker's contract is a measured source of friction. It endorses the
 **observation** and names no remedy, so what to do about it is the worker's to write or to ask.
+
+## Annotation: both citations of the frequency claim are withdrawn, and both conclusions stand
+
+*Filed by the manager from [The human rejects *most efforts never end*](86-most-efforts-never-end-rejected.md)'s
+`INVALIDATIONS`, sites 6 and 7. Corrects two cited grounds rather than superseding the answer; the disposition is
+flag `86.1`.*
+
+**Site 6.** The answer says a `FRICTION` flag is raised where noticed *"because most efforts never close and the
+closing report would then never fire."* The frequency is withdrawn. **The conclusion stands on this node's own other
+wording**, three lines away: *"because a foreign effort may never close."* Node 86's worker recorded that this node
+*"states its point both ways within twenty-two lines"*, and that the possibility form was the best evidence the
+frequency was never carrying the argument.
+
+**Site 7.** An alternative was set aside as *"legitimate under [Done-ness]'s *most efforts never close*"*. **That
+citation is withdrawn.** The alternative was set aside on other grounds and stays set aside.
+
+**And this node's deeper ground is not about closing at all**: a friction node on a foreign graph *"can never be
+resolved there, the fix landing in `graph-agent` by node 11's policy"*. Untouched.

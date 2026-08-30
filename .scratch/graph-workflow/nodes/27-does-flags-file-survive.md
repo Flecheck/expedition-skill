@@ -282,3 +282,13 @@ the **gate payload**: it must present each of the node's flags — what was deci
 approval now discharges them. The duty already existed and was being met; what changes is that it stops
 being good practice and becomes the thing the settlement rests on. A gate payload that omits a flag now
 settles it silently.
+
+## Annotation: the frequency in `### The residual` is withdrawn, and the conclusion stands
+
+*Filed by the manager from [The human rejects *most efforts never end*](86-most-efforts-never-end-rejected.md)'s
+`INVALIDATIONS`, site 5. Corrects a cited ground rather than superseding the answer; the disposition is flag `86.1`.*
+
+`### The residual` says *"Most efforts are never closed."* The human has rejected that claim and the workflow now
+states no frequency in any wording. **The conclusion stands**, and the sentence's own next clause already carries the
+surviving form: *"on efforts like it that route may never open."* A route that exists for a case that occurs rarely
+is still required to exist.

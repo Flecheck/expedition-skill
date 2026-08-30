@@ -198,3 +198,34 @@ resolution, in that worker's own words.*
 graph files by hand, periodically, while work is in flight is what makes the rebase necessary **even at a count of
 one** — the branch moves under an in-flight node, and `--ff-only` would refuse. Node 68 calls absorbing those
 commits *"the rebase's real job"*.
+
+## Annotation: the no-effort-branch conclusion stands on a different ground
+
+*Filed by the manager from [The human rejects *most efforts never end*](86-most-efforts-never-end-rejected.md)'s
+`INVALIDATIONS`, site 4. This corrects the stated reason and not the conclusion; the disposition is flag `86.1`. It
+sits alongside this node's existing annotation recording that [node 68](68-implementation-in-a-worktree.md) replaced
+this section's conclusion.*
+
+`### No branch policy, and no push`'s first bullet reads *"**Most efforts never terminate** …, so an effort branch has
+no merge point"*, and calls it *"the decisive one"*. **The conclusion is not contradicted. Its decisive ground is** —
+the human rejected the frequency claim at node 86.
+
+**The ground that survives is about the interval, not the existence, of the merge point.** Even for an effort known to
+terminate, an effort branch's merge point sits at close while the human reviews partially and continuously and
+hand-commits the graph files while work is in flight. So such a branch must be merged back continuously — and this
+node's own next clause is the conclusion: *"at which point it was never a branch."* That clause never depended on
+frequency.
+
+**The second reason is untouched and sufficient alone**: *"The human owns branch choice. Lang is developed on `main`
+with no local branches; a work repo that requires a branch gets one before the workflow starts."* The human's new
+material at node 86 — *"If it is a very long running effort it will be talked about during the start of the effort I
+expect"* — **strengthens** it: that discussion is exactly where a human decides whether to cut a branch, and it is
+still not the workflow's act.
+
+**The repair the human was shown is not the repair recorded here**, and that is flag `86.3`: they assented to *"the
+workflow cannot name an effort branch's merge point at the time it would open one"*, which their own next sentence
+falsified.
+
+**What must not be lost:** only the **effort-wide** branch is refused. Per [node
+68](68-implementation-in-a-worktree.md) the workflow does create and delete per-node branches and does rewrite
+history by rebasing.
