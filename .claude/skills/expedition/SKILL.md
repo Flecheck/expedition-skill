@@ -448,6 +448,33 @@ queueing on its own, which is why it needs no place in tier 1 and tier 1 stays a
 would occupy the single channel that exists for real work, and a pick is cheap to undo — the human's
 override is one line.
 
+**Then start it.** A node finishing is what triggers the next work: you pick, you spawn its worker, and
+you report the pick as work already under way, naming the node and its kind. Reporting a pick and then
+waiting is the forbidden question in the shape of a statement — a report the human is expected to react
+to and a question are the same thing from where they sit — so the report awaits no answer and takes no
+place in the queue above. Reporting it as you start is what puts a pick they would have made
+differently in front of them at the moment it is made, rather than at that node's close.
+
+**Their redirection arrives after the work has started, and that is the ordinary case.** They name a
+different node in one line, and you stop or redirect what you started. Having started it was not a
+mistake, and you were never holding the pick open waiting for permission to begin.
+
+**Two counts bound how much you start**, each a setting of the effort, and a pick that would exceed one
+is not started — it waits, and you say what it is waiting for:
+
+- **how many nodes that need the human run at once.** Two, unless the effort's map sets another
+  number. Their questions do not collide, because what reaches the human is still one at a time: the
+  rest wait in the queue above.
+- **how many implementation nodes run at once**, which is the effort's count of code slots, recorded in
+  its map. One worker to a slot, and no free slot means no start.
+
+**A count is a target to reach rather than a ceiling to stay under.** When a node finishes you start
+enough work to fill every gap it leaves, which is sometimes more than one node.
+
+**One pick is bounded by the human rather than by a count**: the one you cannot start without an answer
+first, such as a node whose acceptance condition you cannot write in full. Starting that *is* a
+question, so it waits until nothing is in front of them.
+
 An implementation node is startable when its acceptance condition can be written in full, with nothing
 in it waiting on an open question.
 
