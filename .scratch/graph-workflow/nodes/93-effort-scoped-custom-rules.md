@@ -228,7 +228,7 @@ this file rather than an invalidation.
 
 *Each entry is the worker's own prose, pasted. The manager added the id, the marker and the state.*
 
-`93.1` `ASSUMPTION` — **Silence means the effort alone.** The human named two acts they can take when giving a
+`93.1` **· settled** `ASSUMPTION` — **Silence means the effort alone.** The human named two acts they can take when giving a
 standing rule — say it is a rule for this effort, or create a node to change the skill — and did not say what happens
 when they take neither. Settled as: the rule is the effort's, map-only, and the manager may not ship it on its own
 judgement. Decided on their own sentence that on other efforts a rule will be *"only in the map as there will be no
@@ -236,7 +236,7 @@ modifying the skills"*, which makes map-only the base state and shipping an elec
 contract's existing duty never to present a human's standing instruction as a rule of the workflow. The opposite
 default — the manager ships what it judges to be about the workflow — is the behaviour that duty exists to forbid.
 
-`93.2` `ASSUMPTION` — **No scope marking is owed on a map rule, and the map gains no scope field.** The node premised
+`93.2` **· settled** `ASSUMPTION` — **No scope marking is owed on a map rule, and the map gains no scope field.** The node premised
 that a worker cannot tell an effort's rule from a rule of the workflow and treated that as the defect to repair.
 Settled as not a defect: every line of the map binds every worker on the effort whatever its origin, so nothing turns
 on the distinction for the reader who pays for it on every node. The distinction is the human's and the manager's,
@@ -246,7 +246,7 @@ ordinary case; they were not asked, having answered a question about where a rul
 marked. The cost of being wrong is that a future reader of the map cannot see which rules were shipped, which is
 repairable by annotating those rules at the moment they ship.
 
-`93.3` `ASSUMPTION` — **The ground rules block is a derived subset, not a second kind of effort rule.** The node
+`93.3` **· settled** `ASSUMPTION` — **The ground rules block is a derived subset, not a second kind of effort rule.** The node
 asked whether node 42's test for what may travel to a blind checker governs all effort-scoped rules or only the rules
 in the ground-rules block. Settled as only that block: the map states of its own block that every rule in it is drawn
 from a standing preference and passes node 42's test, which makes the block a view over the standing preferences
@@ -255,7 +255,7 @@ without passing that test, and the retrospective duty — which is about a worke
 shape of any node's work — is a rule that fails it and is legitimate anyway. Read from `map.md` rather than judged,
 but recorded as a flag because the node posed it as open and the human never reached it.
 
-`93.4` `ASSUMPTION` — **A rule a node of this effort fixed for itself falls under the same default as one the human
+`93.4` **· settled** `ASSUMPTION` — **A rule a node of this effort fixed for itself falls under the same default as one the human
 gave.** Roughly half the map's effort rules are the human's, each carrying their words quoted and attributed; the
 other half — the four standing rules of writing, the never-delete rule — were fixed by nodes of this effort and are
 attributed to a node rather than scoped either way. The human's answer names only the case where they themselves give

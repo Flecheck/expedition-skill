@@ -417,3 +417,17 @@ glossary's **Salvage** entry still describes a path-limited diff written out of 
 listed it among six statements it left standing. **No resolved node settles what salvage becomes when a stopped
 attempt's work already sits alone on its own branch**, and it is a question for the human rather than work anyone
 has been able to condition.
+
+## Annotation: having no gate no longer implies waiting for the closing report
+
+*Filed by the manager from [Whether a research node's and an AFK precondition node's flags settle at the pick report
+too](102-do-afk-nodes-flags-settle-at-the-pick-report.md)'s `INVALIDATIONS`, in that node's own words. Nothing above
+is changed.*
+
+> Two sites, both the same claim. Its answer says *"a `research` or `precondition` node has no gate, so a flag left
+> there really does wait for the closing report"*, and its annotation on the human's reversal builds on it: *"a flag
+> is not a channel, because nothing reads it until the effort closes."* Having no gate no longer implies waiting for
+> the closing report, and a flag on those kinds is now read at the pick report, hours later. **The conclusion is not
+> at risk from this** — the human had already reversed the exclusion of `research` from the raise channel on their
+> own reasoning, and [Give a research node the cannot-proceed raise](57-research-can-raise.md) carries it — but the
+> argument's premise is no longer true as written, and a later reader would otherwise take it as standing.

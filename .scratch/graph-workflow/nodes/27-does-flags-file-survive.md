@@ -292,3 +292,42 @@ settles it silently.
 states no frequency in any wording. **The conclusion stands**, and the sentence's own next clause already carries the
 surviving form: *"on efforts like it that route may never open."* A route that exists for a case that occurs rarely
 is still required to exist.
+
+## Annotation: one of the grounds is false — those two kinds do have a human moment
+
+*Filed by the manager from [A node's flags arrive after the human moment that was supposed to settle
+them](99-flags-arrive-after-the-node-s-human-moment.md)'s `INVALIDATIONS`. This corrects a stated ground rather than
+superseding the answer, on the disposition node 86 set as flag `86.1`.*
+
+Under `### Why the premise cannot hold` this node states that *"the practice cannot reach every node by
+construction"*, because a `research` node's and an AFK `precondition` node's flags *"wait for the closing report,
+because those kinds never end in front of the human."*
+
+**That ground is false.** Every node's close is reported by a **pick report** — the message the manager owes the
+instant a node closes — those two kinds included. So they do end in front of the human, and they have exactly the
+moment they are said to lack.
+
+**The decision stands and does not rest on it.** `flags.md` survives as the capped index of every judgement an agent
+made on its own, on this node's other two grounds: the outstanding flags whose nodes resolved before the practice
+existed, and a flag surviving its own gate. Both are unaffected.
+
+**The same false ground is repeated in `graph-conventions.md`'s `### Settle a flag`.** Whether those two kinds move
+to the pick report is [Whether a research node's and an AFK precondition node's flags settle at the pick report
+too](102-do-afk-nodes-flags-settle-at-the-pick-report.md), and the repair to the shipped files is [Carry the
+pick-report settling moment into the shipped files and the map](103-carry-the-pick-report-settling-moment.md).
+
+## Annotation: the kind-based population of the closing report is empty by decision
+
+*Filed by the manager from [Whether a research node's and an AFK precondition node's flags settle at the pick report
+too](102-do-afk-nodes-flags-settle-at-the-pick-report.md)'s `INVALIDATIONS`, in that node's own words. **A second
+site, distinct from the one the annotation above corrects.** Nothing above is changed.*
+
+> Under *"What [node 26] has to write"*, item 4 defines the closing report's flag section as covering *"flags
+> predating the practice, and flags from the two kinds that never end in front of the human"*. That second clause is
+> now empty by decision. The item's point — settle-at-close as the norm, the report as the exception path — stands
+> and is strengthened. The node's decision is untouched, as its own `## Annotation` already records.
+
+**And the residual this node named is narrowed.** Node 102 kept this file on this node's other two grounds and
+quoted this node against itself — *"its value was never the state column"*. The one figure that is stale: this node
+says *twenty flags are outstanding*. The manager counted `flags.md` at node 102's filing and found **50 outstanding,
+110 settled, 160 in total**.

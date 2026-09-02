@@ -230,3 +230,21 @@ manager's authority, and its **first instance was this exact clause on this exac
 in the worker contracts](32-narrow-flags-file-clause.md) exists to fix it permanently and is still `open`, so the
 flat clause is on disk in five contracts and spawns are still departing from it silently. Nothing was lost — the one
 flag I needed, `58.3`, is on node 58's own `## Flags` where the contract permits me to read it.
+
+## Annotation: the deferred question is answered, and the instance count is five
+
+*Filed by the manager from [Whether a condition's scope stops being a list of
+files](94-condition-scope-as-a-predicate.md), in that node's own words. Nothing above is changed.*
+
+> Node 82's `### What this does not settle` second bullet — *"Whether a condition's scope should stop being an
+> enumeration at all… Not decided here, and reported as a node"* — is this node, and the answer is that the scope
+> does **not** stop being an enumeration: it keeps the enumeration and gains the enumerator. That bullet's framing
+> wants annotating as answered against the framing rather than within it.
+
+> Node 82's closing table, *"The four instances, and what each would have cost under this answer"*, is now five, and
+> the fifth is the one its answer does not reach.
+
+**And what node 94 found guard 1 was missing**, in its words: *"It instructs the manager to 're-run the search that
+produced that list', and in 42 of 43 cases that search exists nowhere — so the manager reconstructs a search it never
+saw, from a list. That is precisely how node 103's miss survives a re-derivation."* Node 94 strengthens guard 1 by
+giving it something real to re-run and removes nothing from this node's permission, test or guards.

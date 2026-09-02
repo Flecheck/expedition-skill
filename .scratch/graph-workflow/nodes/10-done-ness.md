@@ -252,3 +252,17 @@ surviving form and is untouched.
 expected to end](91-charting-records-whether-an-effort-ends.md): with no frequency claim anywhere, per-effort
 knowledge is the only thing left that can tell a manager whether this effort's frontier is expected to empty, and
 nothing records it.
+
+## Annotation: the closing report's second population is empty
+
+*Filed by the manager from [Whether a research node's and an AFK precondition node's flags settle at the pick report
+too](102-do-afk-nodes-flags-settle-at-the-pick-report.md)'s `INVALIDATIONS`, in that node's own words. Nothing above
+is changed.*
+
+> Its paragraph beginning *"What that leaves for the closing report is the exception rather than the rule"* names two
+> populations, and the second, *"flags from the two node kinds that never end in front of the human, a `research`
+> node and an AFK `precondition` node"*, is false and now also empty. Its first population stands, and so does
+> everything else the node says about the report. The correction is to a stated ground, not to the decision.
+
+**Its replacement**, from node 102's answer: the closing report is left with flags raised before the settle-at-close
+practice existed, and flags whose pick report the human never answered. Neither is a node kind.

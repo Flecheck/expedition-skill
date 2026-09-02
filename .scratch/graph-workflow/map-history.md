@@ -159,3 +159,45 @@ established that a standing rule binds only once it is in the map, and the human
 **propose** to **start**. Superseded text, moved rather than struck in place, per `## Writing the map`.*
 
 - **The manager never idles, and proposes the next work itself as each node finishes.** The human's standing instruction, `verbatim`: *"You can start new tasks. You should automatically propose to start a new task when a task finish"*. So a closing report is not an ending: it names what is being started next, and it is owed automatically at the moment a node closes. Filed here under the rule [What the manager works on next, and how the human redirects it](nodes/16-human-steering.md) fixed for standing instructions; proposing is the report, and the human's override is one line.
+
+## Notes — the standing preference on one question at a time, before the human set a grilling-node target
+
+*Moved verbatim by the manager when the human answered [The manager starts the next node rather than proposing
+it](nodes/100-the-manager-starts-the-next-node-rather-than-proposing-it.md)'s raise with a target count and a top-up
+rule. Superseded text, moved rather than struck in place, per `## Writing the map`.*
+
+- **The human is asked one question at a time.** Two grilling nodes run at once to keep the human's queue full, per [Concurrency model](nodes/04-concurrency-model.md) — a queue, which the manager serves one at a time. Where a second worker's question arrives while one is outstanding, the manager holds it and relays it after the first is answered. Their instruction, `verbatim`, after the manager stacked two: *"You forgot that it should be only one question at once."*
+
+## Superseded from `## Not yet specified`, at nodes 98 and 91's filing
+
+*Moved verbatim under the `Change the map` procedure. Reported as stale by node 98's worker, whose retrospective
+found it: the manager's own skill had shipped at [node 76](nodes/76-write-the-manager-skill.md) and the item still
+said it had no node.*
+
+> - **The implementation nodes that write the actual skill files.** Two pieces are left. The **manager's own skill**
+>   has no node yet and both blockers it last carried have since resolved; the requirements it has accumulated sit on
+>   the nodes that produced them rather than being restated here — chiefly [subagent context
+>   contract](nodes/12-subagent-context-contract.md), [what the manager reports to the
+>   human](nodes/46-what-the-manager-reports.md) and [collapse the manager's discipline onto
+>   `scribe`](nodes/61-collapse-onto-scribe.md), with the cascade's own contract already split out as [write the
+>   cascade pass's worker contract](nodes/44-cascade-worker-contract.md). The **adoption mode** waits on [adopting an
+>   in-flight effort](nodes/18-adopting-in-flight-effort.md). What would settle the item: a node per remaining file,
+>   each with a spawner-written acceptance condition.
+
+## Superseded from `## Destination`, at node 91's filing
+
+*Nothing was replaced — the section gained a line rather than losing one. Recorded here so the addition's moment is
+findable: before node 91, `## Destination` said what reaching the end looked like and said nothing about whether
+reaching it was expected.*
+
+## Superseded from `## Notes`, at node 103's filing — the standing preference on settling a node's flags
+
+*Moved verbatim under the `Change the map` procedure by [Carry the pick-report settling moment into the shipped files
+and the map](nodes/103-carry-the-pick-report-settling-moment.md)'s worker. The clause that failed is
+**the last answer on a grilling node**: a grilling node's flags do not exist at that moment, established at [A node's
+flags arrive after the human moment that was supposed to settle
+them](nodes/99-flags-arrive-after-the-node-s-human-moment.md) and widened to every kind of node at [Whether a
+research node's and an AFK precondition node's flags settle at the pick report too](nodes/102-do-afk-nodes-flags-settle-at-the-pick-report.md).
+The human's quoted instruction is unchanged by the replacement.*
+
+> - **Approving a node's end settles that node's flags.** The human's standing instruction, `verbatim`: *"Also, when I approve the end of the node, the flags should be considered ok"*. So the manager does not ask a second time — the approval at a gate, or the last answer on a grilling node, **is** the settlement, and it refines the practice on [Whether flags.md survives the settle-at-close practice](nodes/27-does-flags-file-survive.md). **The consequence the manager must carry:** the gate payload has to present every flag the node holds, because a payload that omits one settles it silently.

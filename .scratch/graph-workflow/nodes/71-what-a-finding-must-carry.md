@@ -395,3 +395,46 @@ text and the manager wrote it.
 The worker's second observation — `CONTEXT.md`'s `Code slot` entry — is already the work of [Bring the glossary's
 code-slot and reject entries up to the worktree lifecycle](81-glossary-code-slot-and-reject.md), which is open and
 whose condition names that entry.
+
+## Annotation: this node's own recorded enumerator returns two paths, not one, and its domain reaches the record
+
+*Filed by the manager from [Whether the checker re-runs a condition's own
+enumerator](110-does-the-checker-rerun-the-enumerator.md)'s worker, which ran the command as written. The manager
+re-ran it and confirms. **This node is resolved and its condition is discharged**, so under [node
+94](94-condition-scope-as-a-predicate.md) nothing here is repaired — it is recorded because this node is the exemplar
+the whole extent rule was modelled on.*
+
+Node 94 called this *"the only one on the record that never overflowed"*. Run verbatim,
+`grep -rln "one entry per failure" --include="*.md" .` returns **two** paths: `.claude/skills/expedition-checker/SKILL.md`,
+and **this node's own file** — because the condition quotes the phrase, so **the condition became a hit on its own
+enumerator**. Node 110's worker confirmed by git that this node file was committed the day before the work landed, so
+it was already true when this node's checker ran. This node's `## Review` records that the checker *"established the
+scope and its extent grep"*; either the command was not run or the difference was absorbed without being said.
+
+**And a second thing, which bears on what [node 109](109-carry-the-extent-rule-into-the-shipped-files.md) ships.**
+This enumerator globs `.`, so a checker running it as written **reads into `.scratch/` — the record it is blind to by
+design.** Node 94's flag `94.2` already bars that domain for a condition's enumerator; nothing enforces it, and the
+exemplar breaks it.
+
+## Annotation: this node's recorded return was already false when its own checker recorded establishing it
+
+*Filed by the manager from [Whether the checker re-runs a condition's own
+enumerator](110-does-the-checker-rerun-the-enumerator.md)'s `INVALIDATIONS`, in that node's own words. It supersedes
+nothing above — this node's condition is discharged and out of reach under [node
+94](94-condition-scope-as-a-predicate.md)'s reach-back rule, so this records the fact rather than repairing it. It
+sits beside the earlier annotation on the same enumerator rather than replacing it.*
+
+> One factual claim on it is false, and the node's decision is untouched. Its `## Acceptance condition` records that
+> `grep -rln "one entry per failure" --include="*.md" .` *"over the repository returns that path and nothing else"*.
+> It returns two paths: the shipped contract, and node 71's own node file, which matches because the condition quotes
+> the phrase it searches for. Git confirms the node file was committed before the work landed, so the claim was
+> already false when that node's `## Review` recorded that the checker *"established the scope and its extent grep"*.
+> Two consequences, neither reaching the node's answer: the condition is **discharged and out of reach** under node
+> 94's reach-back rule, so this is an annotation and not a repair; and the enumerator's domain is `.`, which includes
+> the effort's record, so **the exemplar node 94 modelled its rule on breaks flag `94.2`'s domain limit**. The three
+> repairs that node landed in the checker contract stand exactly as they are.
+
+**And what node 110 built on it**, since this node is where a later reader will come looking: part 3 of node 110's
+answer — *an enumerator whose domain reaches the effort's record is reported as a defect in the condition* — exists
+because of this instance. A record-reaching domain is invisible until somebody runs the command and reports where it
+went.

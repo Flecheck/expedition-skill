@@ -431,3 +431,13 @@ states none in any wording.
 **The second half stands, and so does the duty it states**: *"The workflow must be useful continuously rather than
 only at the end."* The manager's shipped contract at `.claude/skills/expedition/SKILL.md` already carries only the
 surviving half, the human having amended the frequency away at [node 76](76-write-the-manager-skill.md)'s interview.
+
+## Annotation: duty 84's ground is corrected — thirty-one nodes and nine forms, not three nodes and one report
+
+*Filed by the manager from [What the manager reports to the human, in one place](46-what-the-manager-reports.md)'s
+`INVALIDATIONS`, in that node's own words. Nothing above is changed.*
+
+> Its text reads *"At least four duties have accumulated on it from three nodes and no file collates them."* The
+> floor stands and the conclusion stands. **The ground does not:** the duties come from at least thirty-one nodes and
+> four shipped files, not three nodes, and they fall on nine distinct manager→human forms rather than on one report.
+> The duty's own citation — this node — is where the corrected count now lives.

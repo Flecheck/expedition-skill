@@ -793,3 +793,15 @@ minted while it ran and a third at its approval.
 `FAIL` path was never used, and the `QUESTIONS:` channel — added at [Write the worker contract
 skills](22-worker-contract-skills.md) as a courtesy for a method skill wanting to ask something — carried the
 entire correction history of the largest implementation node this effort has run.
+
+## Annotation: one of the two cases the wording was written to cover no longer exists
+
+*Filed by the manager from [Whether a research node's and an AFK precondition node's flags settle at the pick report
+too](102-do-afk-nodes-flags-settle-at-the-pick-report.md)'s `INVALIDATIONS`, in that node's own words. Nothing above
+is changed.*
+
+> It records choosing the wording *"where that moment never came"* deliberately, *"to cover both a node with no human
+> moment at all and a flag raised before the practice existed."* The wording survives and is exactly right; the first
+> of the two cases it was written to cover no longer exists. Separately it judged the `precondition` contract's *"a
+> flag here waits for the closing report"* line *"independently consistent with the widened sense"*, which was true
+> when written and is not any more — that line is a site node 103's condition does not name.

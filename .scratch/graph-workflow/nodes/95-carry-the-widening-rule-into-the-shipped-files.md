@@ -66,3 +66,24 @@ the two rules that bind every condition, and that reading recorded on the node.*
 - **It does not quantify over the record.** It passes. Clauses 6 and 8 are demands about **what changed in the two
   files**, answerable from the diff, which `graph-conventions.md` permits by name. No clause holds the work against
   the effort's resolved nodes.
+
+## Annotation: this condition's scope is short by measurement — five worker contracts it does not name
+
+*Filed by the manager from [Whether a condition's scope stops being a list of
+files](94-condition-scope-as-a-predicate.md)'s `INVALIDATIONS`, in that node's own words. **The condition above is
+not amended by this annotation**; amending it is a separate act under [How a condition's scope is
+amended](82-amending-a-condition-whose-scope-was-too-narrow.md)'s guard 2, and the manager has not performed it.*
+
+> **This one is the sharper finding, because node 95 is node 82's own carrier.** Its scope names two files. Its
+> subject is *who may change a condition after it is written*, and `grep -rn "not that worker's to fix"` over
+> `.claude/` returns that sentence **verbatim in all five worker contracts**, none of which the condition names: *"A
+> condition its worker judges wrong is not that worker's to fix: it stops that node and goes to the human."* That
+> sentence states the worker's half of exactly the three-party distinction node 95's clauses 1 and 2 exist to write,
+> and node 82 falsified its routing — a short scope now goes to the **manager** and never spends a human turn. So a
+> worker reading its contract after node 95 lands would still be told to stop the node and go to the human, which is
+> the wasted turn node 82 exists to prevent. **Node 82's carrier reproduces node 82's defect, five files over.** The
+> demand at the five new places is fixed by node 82's resolved answer, so this is a widening node 82 licenses
+> cleanly.
+
+**Why nobody reported it earlier**, in node 94's words: *"its scope came from a worker's `INVALIDATIONS` rather than
+from a search, which is the exact case rung 3 exists to expose."*
