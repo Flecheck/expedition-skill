@@ -73,3 +73,39 @@ instead of carrying an enumerator and its return, is a question this condition r
 
 **Clause 5 names the section `### ## Interview`, which is how the worker wrote it.** The manager did not correct it;
 the file on disk wins, and a worker that cannot find that heading reports it.
+
+## Annotation: two clauses of this condition are invalidated before the node was ever claimed
+
+*Filed by the manager from [What can actually stop a running worker](122-what-can-stop-a-running-worker.md)'s
+`INVALIDATIONS`, in that node's own words. **The condition above is not amended by this annotation**, and the manager
+has not touched it: rewriting a condition is not the manager's, and a condition that is wrong goes to the human. The
+node is open and holds no work, so [Revision semantics](06-revision-semantics.md)'s in-place route is available to
+whoever is entitled to take it.*
+
+> **Clause 3 instructs the worker to delete a true statement.** It says the section *"must no longer assert that an
+> agent the human stopped cannot be resumed."* That assertion is **correct for every route the manager has**, and it
+> is now grounded in the harness's source rather than resting on nobody's measurement: a resume of an agent carrying
+> `stoppedByUser` is refused unless the request is `userInitiated`, which is set only for a message the human types.
+> What the sentence needs is the missing half — that the human themselves can revive it, which clears the flag — not
+> deletion.
+>
+> **Clause 1 mandates a three-state table that is missing the state that matters.** It requires the section to say a
+> send *"reports which of three states it is in"* and enumerates alive, resumed, and gone. There is a fourth for an
+> agent target, `agent-stopped-by-user`, which returns `success:false` with `Agent "<name>" was stopped by the user
+> and was not resumed. Treat its work as cancelled; only start a new agent for it if the user explicitly asks.` and
+> **attempts no resume at all**. A manager holding the three-row table reads that reply as neither of its three rows.
+
+**The manager's note, and not node 122's worker's text.** Both defects are in clauses this node inherited from [node
+119](119-dead-attempt-respawned-rather-than-resumed.md)'s answer, written before anything about the human's stop was
+established. **Node 122's retrospective names the pattern behind them**: *"the record's claims about the harness are
+all of the form 'you cannot', and they are wrong in the permissive direction every time … Node 119 corrected five of
+these and introduced two more of the same kind, because it inferred a general incapacity from one refusal it did not
+read the reason for."*
+
+**What is not affected.** Clauses 2, 4, 5, 6, 7 and 8 are untouched by this, and clause 1's other demands — the
+session scoping, reading a dead run's state from its transcript, the quota-reset behaviour, the overtaking clause —
+all stand, node 122 having confirmed rather than contradicted them.
+
+**One overlap the whoever-claims-this must know:** [Give the manager's contract a procedure for stopping a running
+worker](124-a-procedure-for-stopping-a-running-worker.md) edits the same section of the same file and is sequenced
+after this node on its own author's instruction.

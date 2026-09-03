@@ -362,3 +362,36 @@ it the price of resuming a checker that holds its own earlier verdict.
 carried two false claims about node 103's checker, recorded as flags `103.7` and `103.8`. Both are in this
 retrospective's part 4 as instances of the habit the answer names. The manager files both readings side by side
 rather than choosing between them.
+
+## Annotation: three parts of this answer are corrected by node 122
+
+*Filed by the manager from [What can actually stop a running worker](122-what-can-stop-a-running-worker.md)'s
+`INVALIDATIONS`, in that node's own words. **The answer above is not rewritten** — under the never-delete rule its
+text stands and this annotation sits beside it. Node 122 was surfaced by this node and its worker read this answer
+whole.*
+
+> - Its hazard *"A message to a live agent is not an interrupt … 120 rounds later, in the case measured"* attributes
+>   to **delivery latency** what is a **compliance** effect. Delivery to a live agent was measured here at **one tool
+>   round, about 3.5 seconds**. What is genuinely bounded is different and worse: latency equals the worker's own
+>   longest single tool call, measured at 3 minutes 33 seconds for a worker inside one `sleep 240` and unbounded in
+>   principle; and separately, a worker may simply decline, measured across 230+ tool rounds and three escalating
+>   cancellations.
+> - Its `TaskStop` finding — *"refused on ownership grounds"* from the spawning agent — is reproduced, but its
+>   implied reading is wrong. The task is owned by **the agent itself**, so the refusal is not about the spawner's
+>   standing; it excludes every agent, and admits the main session alone.
+> - Its three-state table is a five-state machine, as above. Its rule — *"the manager attempts the resume and the
+>   harness answers"* — is untouched and holds.
+
+**A fourth correction, and it is to this answer's `## What is not established`.** That section left *"whether an
+agent the human stopped can be resumed"* open and said the shipped sentence *"should stop asserting it."* Node 122
+settled it from the harness's source: **the shipped sentence is true of every route the manager has and false as an
+absolute**, the human themselves being able to revive such an agent by typing to it, which clears the flag. So the
+sentence needs its missing half rather than deletion — and the instruction to delete it had already been carried into
+[node 120](120-carry-the-resume-rule-into-the-shipped-files.md)'s acceptance condition, where it is annotated.
+
+**One hazard of this answer's that the manager's own test did not reproduce.** *"A resumed agent continues its own
+task rather than obeying the resume message. A resume continues a worker; it does not redirect one."* A tool-stopped
+throwaway resumed by the manager **obeyed** its resume message, replying as instructed with no tool calls, against
+its own prompt's *"Do not stop early"*. The two cases differ in three ways at once — the kind of stop, the sender's
+standing, and whether the message was true — and **which of those does the work is unestablished**. The full record
+is on node 122 under `## The manager ran Tests 1 and 2, and both pass`.
