@@ -1,7 +1,7 @@
 # Two writers edit the map at once when an implementation node's work is a map change
 
 Type: grilling
-Status: open
+Status: claimed
 
 ## Question
 
