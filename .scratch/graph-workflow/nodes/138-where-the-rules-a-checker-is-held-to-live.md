@@ -226,3 +226,45 @@ node 139's worker nothing, its condition standing exactly as written.
 **Why the manager is not guessing even though the payload was about node 139's collision.** The payload named node
 139 four times, so a reply naming 139 is as consistent with *"that node is fine, proceed"* as with *"take the
 recommendation"*. The manager holds both readings and neither is weaker.
+
+### Attempt 1, answer 1 — the recommendation taken
+
+**The human's word, `verbatim`**, written at the moment they spoke, in answer to the manager's question about which
+node their previous reply named:
+
+> 138 recommendation taken
+
+**Reading 1 above is theirs.** The recommendation it settles, quoted in full and attributed to this node's worker
+rather than to the manager:
+
+> Into ITS OWN new file beside map.md, separate from the manager's file, holding the standards list, the bar's
+> commands and the landing policy, read directly by the checker and by the implementer, with map.md keeping a
+> one-line pointer. The review-route paragraph moves here rather than into node 139's manager file, and its operative
+> list is separated from its story — the part recording that two earlier checkers burned their biggest cost finding
+> these standards stays with the manager or goes to map-history.
+
+**No divergence.**
+
+***The manager's note. One measured consequence the worker did not have, and it breaks another node's condition.***
+
+**Taking this answer makes [node 139](139-move-the-managers-material-out-of-the-map.md)'s clause 7 unsatisfiable.**
+The manager measured the five bodies clause 3 moves, in the tree node 139's worktree was cut from:
+
+| body | bytes |
+| --- | --- |
+| `**The review route for this repo, discovered on first use**` | 1,589 |
+| `**The dogfood target is` | 743 |
+| `**Label vocabulary for this effort` | 455 |
+| `## Not yet specified` | 7,797 |
+| `## Out of scope` | 2,347 |
+| **total** | **12,931** |
+
+`map.md` is **43,707** bytes. Clause 7 demands it end **at least 12,000 bytes smaller**, and clause 4 adds a pointer
+of up to three lines back. Moving all five clears the floor by a few hundred bytes. **Moving four — the review route
+now belonging to the checker's file rather than the manager's — leaves 11,342, which is below the floor and cannot be
+reached by any other means the condition permits.**
+
+**The manager has amended nothing and invented no number.** Adjusting the floor would be the manager authoring the
+standard node 139 is judged against, which is not the manager's. The question is put back to this node's worker,
+which raised the collision and holds the surrounding decision, so that whatever repair reaches node 139 is phrased by
+an agent rather than by the manager.
