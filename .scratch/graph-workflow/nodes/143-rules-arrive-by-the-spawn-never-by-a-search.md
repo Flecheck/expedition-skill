@@ -170,3 +170,41 @@ answering the gate, asking the manager to re-pitch it with context, in ASD-STE10
 this effort's vocabulary. **The manager wrote that re-pitch itself and decided nothing.** It is the manager's own
 text and not this node's record; the gate payload of record is above. This is the third re-pitch the human has asked
 for on this effort, after nodes 132 and 141, and the first on a gate rather than on a question.
+
+### Gate — `correct`
+
+**The human's words**, `verbatim`:
+
+> These changes seem good, but what's weird is they seem to only touch what the skills expect to receive, but not
+> what is fed to them.
+> Here's the expected design:
+> - Map references a file .scratch/graph-workflow/map-implementation-rules.md which those skills should just state to
+> read - the manager doesn't actually need to pass them anything. Basically we replace the discovery pass with
+> reading that file.
+
+**This is a correction round rather than a reject.** *"These changes seem good"* — the files are the right files and
+the deletion is right. What is wrong is the mechanism that replaced the discovery pass.
+
+### The amendment to clause 2 and to the implementation contract's equivalent
+
+**Decided by the human at the gate**, above. The manager records the amendment rather than authoring it.
+
+~~Clause 2: *"the file states that the standards reach the checker in its spawn by either of two routes — copied in
+as text, or named as a path the checker reads"*~~ is amended. **The standards are not fed at all.** The contract
+states that the worker reads the effort's implementation-rules file — the sibling of the map that holds them — and
+the manager passes nothing. **The discovery pass is replaced by reading one known file, rather than by a spawn
+payload.** The same amendment reaches the implementation contract, where node 143 routed the standards, the bar's
+commands, the ground rules and the standing over sources through the spawn.
+
+***The manager's note.*** **Two things the amendment collides with, neither of which is the manager's to settle.**
+
+1. **Ground rule 1.** The human's words name `.scratch/graph-workflow/map-implementation-rules.md`, whose middle
+   segment is *this effort's* directory name. A shipped contract naming it literally assumes this effort.
+   `graph-conventions.md` already fixes the layout as `.scratch/<effort>/`, so the file is nameable by role and
+   position — *the implementation-rules file beside the map* — without assuming which effort. The manager has told
+   the worker to name it that way and to say so if it judges otherwise.
+2. **[Node 164](164-what-a-standards-path-may-hold.md) becomes pressing rather than latent.** It asks what a file
+   handed to a checker as a standard may contain, because `map-implementation-rules.md` also holds the landing policy
+   and links to every node — the record the checker is kept blind to. Under the spawn route a manager chose what to
+   name; under this amendment **the contract itself sends every checker into that file, every time.** Node 164 is
+   blocked on this node and on node 151, and the manager has not changed those edges.
