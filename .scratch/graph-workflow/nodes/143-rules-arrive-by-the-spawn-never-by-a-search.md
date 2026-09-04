@@ -20,6 +20,25 @@ and pasted as it wrote it.*
 
 ## Acceptance condition
 
+> [!IMPORTANT]
+> **Clauses 2, 3, 5 and 7 below are superseded by the human's amendment at this node's gate.** The amended text is in
+> `### The amendment to clause 2 and to the implementation contract's equivalent`, further down this file, and **that
+> is the condition in force**. The clauses are left standing here under the never-delete rule.
+>
+> - **Clause 2** below says the standards *"reach the checker in its spawn by either of two routes"*. **They are not
+>   fed at all**; the contract names a file and the reader reads it.
+> - **Clause 3**'s no-standards case is now a **no-file** case.
+> - **Clause 5**'s *"a skill its spawn names"* denotes nothing under the amendment, the spawn naming no standards.
+>   Read it as *the route the amended condition establishes*. **The manager did not name clause 5 among the amended
+>   clauses and its checker flagged the omission; the reading is the checker's and it is put to the human.**
+> - **Clause 7**'s *"No sentence remains in it sending that worker to a named section of the effort's map"* is
+>   contradicted on its face by the restored `## Notes` paragraph, which the amendment requires.
+>
+> **This marking exists because the checker found it missing.** Its words: *"A later checker handed this node cold
+> would read the file and fail work that meets the condition in force."* The manager had recorded the amendment in
+> its own section and had not marked the clauses it displaced.
+
+
 *Written by node 138's worker. Pasted as it wrote it, and not the manager's.*
 
 > The work is `.claude/skills/expedition-checker/SKILL.md` and
@@ -265,3 +284,54 @@ the one recording that the manager asserted something false in this node's spawn
 manager renumbered them to `143.6`, `143.7` and `143.8`. **Nothing about the judgements changed**, and the collision
 is the manager's to have prevented: a worker cannot see `flags.md`, its contract closing that file to it, so it
 cannot know which ids exist.
+
+### Checker run 2 — `PASS`
+
+*The same checker, resumed. Its own text, pasted.*
+
+**How it read the amendment:** *"The manager's statement of the amendment is what I held clauses 2, 3 and 7 against:
+the standards are **not fed at all**, both contracts name the effort's implementation-rules file and read it, and the
+manager passes nothing."*
+
+**Clause 5, which the manager failed to name among the amended clauses:**
+
+> Clause 5 as written demands the file describe running a skill *"its spawn names"*. Under the amendment the spawn
+> names no standards at all, and a reviewing skill is one of the standards, so *"a skill its spawn names"* denotes
+> nothing that can exist: clause 5's literal wording and amended clause 2 cannot both be satisfied. I took the
+> reading that carries clause 5 along with the amendment… because that leaves the condition coherent where the
+> literal reading leaves it self-contradicting. On that reading the work meets it. **Confirm this is the intended
+> scope**; on the literal reading clause 5 would be unmet, and the work could then only meet it by breaking clause 2.
+
+**All eleven clauses met.** Clause 4 established programmatically — six numbered items, item 6 is *The standards*.
+Clause 6 byte-identical against `HEAD`. Clause 7's restored `## Notes` paragraph compared against `HEAD`
+programmatically: **restored verbatim**. Clause 9 by enumerating every path-shaped token in both files.
+
+**The `<effort>` listing is not a discovery pass, judged as asked:**
+
+> What clause 1 bans is discovering **the standards**. The listing discovers no standard: the standards' location is
+> fixed by name, and what the listing resolves is one path segment. Against clause 1's three particulars: it does not
+> tell the checker to find the standards before reading the work; **a name *is* fixed here, which is the exact
+> inverse of "no name for any of them is fixed here"**; and there is no list of kinds to look for, there is one file.
+
+**On the worker's own flag about the ambiguous listing:** *"That is not a finding — no clause demands the ambiguous
+case be handled, and reading `/coding-principles`' no-silent-fail onto prose would be checking against my own
+preference. It reaches the human as the worker's flag."*
+
+**The bar: holds.** Command half enumerated. Non-command half against all five standards, and it records that the
+correction moves the work from *compatible-with* `graph-conventions.md` to **aligned-with** it.
+
+**Its question, handed back alongside the outcome:**
+
+> The bar's commands are now routed **asymmetrically** between the two agents, and this is a consequence of the
+> amendment's scope rather than the worker's choice. The implementer reads them from `map-implementation-rules.md`;
+> the checker's given 2 still says *"Where you are given properties and no commands, discover the commands from the
+> repo"*, so the checker gets them by spawn or by its own discovery. The checker's own new section asserts *"It is
+> the same file the implementer works from, so the two of you hold the work to one set of rules rather than two"* —
+> true now for the standards, not for the bar's commands, which can drift between the spawn copy and the file. The
+> wording of given 2 is the condition's own territory, so departing from it was not the worker's to do. **Should the
+> checker's bar-commands route follow the standards into the same file?**
+
+***The manager's note.*** **The run covered the whole condition and named no part it could not reach.** Two things it
+handed back are the manager's failures rather than the work's: the unmarked condition, now repaired above at the
+checker's prompting; and clause 5 left out of the amendment the manager relayed, which the checker had to resolve by
+reading for coherence. **Both travel to the human with the gate.**
