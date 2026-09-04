@@ -1,7 +1,7 @@
 # The rules a checker and an implementer work to arrive by the spawn, never by a search
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
