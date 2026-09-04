@@ -1,7 +1,7 @@
 # What to do about the record's token cost, given what `qmd` turns out to be
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none — [node 128](128-whether-qmd-lowers-this-workflows-token-cost.md) resolved
 

@@ -1,7 +1,7 @@
 # Move the implementer's and checker's material out of the map
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: 139 landed — see the completed condition below
 
