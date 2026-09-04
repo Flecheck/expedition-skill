@@ -317,3 +317,85 @@ floor was reachable only because all five bodies moved. **The manager's call, wh
 decision:** node 139 lands as built, and [node 140](140-move-the-implementers-and-checkers-material-out-of-the-map.md)
 takes the paragraph one step further, at the cost this node's worker measured — *"one paragraph and one word"*. Node
 138's worker has been told, and the amendment it was asked to phrase is retired.
+
+## The checker's runs
+
+### Run 1 — `PASS`
+
+*Spawned by the manager, given the condition as extracted text, the bar, the paths, the worktree and the effort's
+ground rules copied as text, and nothing from this record.* **This is the first checker on this effort spawned under
+the human's standing direction**: it was told to go looking for no reviewing skill and no rule set, that
+`mattpocock-skills:code-review` is barred by name, and that the contract's discovery sections do not apply. It
+reports having searched for none and used none.
+
+**It settled the standard-under-check problem before anything else, unprompted**, in its words:
+
+> `graph-conventions.md` is both a standard the bar carries and one of the four changed paths. I compared its
+> operative content element by element across `git show HEAD:` and the working tree, unwrapped. `git diff --numstat`
+> shows exactly `20 1` on that file, and the three hunks are precisely the three the condition dictates (clauses 9,
+> 10, 11) … The added elements are non-binding by their own text ("never a rule that forces text out", "reports and
+> never fails"), so they impose nothing on the map work that could change my reading … I therefore did **not** raise:
+> the condition names the delta to the standard and bounds it, and I verified the bound holds.
+
+**It established the before-state itself rather than taking the condition's figures**, which the condition told it to
+do: 43,847 bytes, 108 lines, five `##` headings, against the condition's *"for scale only"* 42,566 / 107 — *"it says
+not to rely on them, so this is not a discrepancy."*
+
+**Outcome: `PASS`**, all thirteen clauses met. Its returns against the worker's recorded ones:
+
+| clause | worker recorded | checker found |
+| --- | --- | --- |
+| 5 | 74 before-lines, 0 missing | **22** lost lines, 0 missing |
+| 7 | 43,847 → 31,481, −12,366 | same |
+| 8 | 791 bytes, byte-identical | **790** bytes, byte-identical |
+| 13 | 108 links, 0 unresolved | 108 links, **107 paths**, 107 resolve, 0 unresolved |
+
+***The manager's note on the three mismatches, none of which is a defect.*** Clause 5's two numbers measure different
+things: the worker checked **every** non-empty before-line survived somewhere, the checker checked the **lost** ones
+did. Clause 8's differ by one byte because the checker excluded the block's closing newline and said so. Clause 13's
+differ because the checker separated the one `https://` link from the 107 paths. **Under [node
+110](110-does-the-checker-rerun-the-enumerator.md)'s rule each rides alongside the outcome and none of them `FAIL`s
+the work**, and this is the first run on this effort where that rule has had anything to carry.
+
+**On the bar:** *"Verified the command half is vacuous rather than skipped… a `find` for `package.json`,
+`Cargo.toml`, `Makefile`, `justfile`, `pyproject.toml`, `*.mk` returns nothing. **No manifest or task runner
+contradicting the spawn.**"* It held the **authored** lines against `CONTEXT.md`'s 40 `_Avoid_` lines **by hand
+rather than by scan**, finding `item`, `index`, `report` and `verdict` in authored text and clearing each against
+pre-existing usage in the same file. It invoked `/writing-for-agents` by name without searching a plugin path.
+
+#### What it handed back alongside its outcome
+
+**One question**, in its words:
+
+> **Clause 11's "changes in no respect other than clauses 9, 10 and this one" forbade the worker from fixing two
+> things the split makes stale in `graph-conventions.md`, and complying is what leaves them stale.** (a) Line 41 still
+> reads ``map.md` has five sections, in this order:` and lists `## Not yet specified` and `## Out of scope` among
+> them, while clause 6 now requires this effort's `map.md` to hold exactly three; line 45 still names `the
+> **declared label vocabulary**` as one of two things the manager maintains in `map.md`'s `## Notes`, which clause 3
+> moved out. Sharper than the section list: the `### Resolve` procedure step 5 says ``map.md`: remove that item from
+> `## Not yet specified`` and `### Rule out of scope` step 2 says ``map.md`: append one line to `## Out of scope`` —
+> both instruct the manager to write into sections this effort's `map.md` no longer has. (b) The new check 10 and the
+> new target both say `the map's `## Notes``, and `map-manager-only.md` declares itself part of the map and carries
+> its own `## Notes`, so that phrase now resolves to two sections. Both are the condition's own wording rather than
+> the worker's, so neither was the worker's to depart from. Does the human want a follow-up node for the conventions
+> doc, or is the generic five-section shape meant to stand with the split as a per-effort variation?
+
+**One observation it explicitly excluded from its outcome**, in its words:
+
+> mechanical check 10 runs to five lines where checks 1–9 each run to one or two, and three of those lines are
+> rationale … Standing writing rule 1 (*compress the prose that explains why*) and `/writing-for-agents`'s
+> single-source-of-truth line both bear on it, but clause 10 mandates the duplicated sentence itself, and a check
+> whose semantics differ from all nine peers earns some explanation, so I do not read this as an unmet bar. **Form as
+> a predicate:** an entry in a flat peer-set of one-line reference items carrying rationale already stated elsewhere
+> in the same file. **Extent:** enumerator over the part of the work the implementer may edit … the diff is 46 added
+> lines and this is the only instance in them.
+
+***The manager's note.*** **The checker and the worker found the same defect independently and blind to each other**,
+which is the first time on this effort that has happened. [Node 142](142-bring-graph-conventions-map-shape-into-line.md)
+already owns the section list and the two procedure steps. **Two things in the checker's report node 142 does not
+cover:** the `label vocabulary` sentence at its line 45, and the `## Notes` ambiguity — `map-manager-only.md`
+declares itself part of the map and carries its own `## Notes`, so the new target and check 10 now name two sections.
+The second is a defect in text this node shipped rather than in text it left alone.
+
+**No part of the condition was uncovered.** The checker reported none, and it established clause 12 by a path-limited
+`git status --porcelain` over all six `expedition-*` directories returning nothing.
