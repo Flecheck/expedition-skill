@@ -450,3 +450,48 @@ procedure. I chose verification over trust because the setting cannot be passed 
 machine, and announces nothing when absent; and I chose stop-and-restart over resetting the tree because a base
 corrected after a worker has read the tree leaves it holding pre-repair content, which on node 140 would have
 silently reverted node 147's landed work with every check passing.
+
+## Revision: the human named a fourth route, and it is measured to work
+
+*Filed by the manager after this node resolved. **The answer above is superseded on the route and stands on
+everything else**, per the never-delete rule.*
+
+~~**An implementation node's worktree is created by the harness around the *worker*, at the moment the manager spawns
+it — the worker is spawned with the harness's worktree isolation**~~ — **superseded.** The human named the route this
+node's worker had set aside as unverifiable, and gave it in two steps, `verbatim`:
+
+> Here's what I expect from an agent that needs to start a worktree for an implementation:
+> 1. It calls EnterWorktree specifying a name tied to the node and vaguely describing the node's title
+> 2. If it didn't land on HEAD (but e.g. landed on origin/master because of the user's config) it does `git reset`
+> itself to reach the proper base
+>
+> So I don't see why you're blkocked on worktree.baseRef: we just established we don't need it.?
+
+**The manager tested it rather than reasoning about it, subagents being barred from `EnterWorktree`.** Three
+measurements, on this tree:
+
+1. `EnterWorktree` with a name landed the worktree at `c3d50bf` — `origin/master`, **32 commits behind** `master`.
+   So it takes the same `worktree.baseRef` default as the isolation route, and step 2 is what the route turns on.
+2. `git reset --hard master` **inside the manager's sandbox failed**: `fatal: Could not reset index file to revision
+   'master'`. It applied partially — working-tree files updated, `HEAD` unmoved, `.claude/skills/expedition/graph-conventions.md`
+   not written. Same class of restriction as the merge failure recorded on [node
+   140](140-move-the-implementers-and-checkers-material-out-of-the-map.md).
+3. **Outside the sandbox it succeeded**: `HEAD` at `master`, zero commits behind, working tree clean.
+
+**Why this beats what this node landed.** It needs no setting, so it assumes no machine and satisfies ground rule 1
+where the setting could not. It puts the node's id back in the path and the branch, which this node's answer had
+given up. And **the reset happens before any worker reads the tree**, which is precisely the case this node's own
+objection to resetting did not reach — that objection was about resetting *after* a worker has read it, and it still
+stands in that form.
+
+**What is still unverified, and the manager says so rather than assuming it.** Whether a worker spawned while the
+manager is inside the worktree inherits that working directory. The manager observed, from inside, that its own
+`Bash` refused a command targeting the shared checkout — *"a worktree-isolated session's git operations must target
+its own worktree"* — which is evidence that the isolation is real, but is not the spawn test. **It is the first thing
+the manager checks on the next implementation node**, and until it is checked, flag `150.3`'s status is unchanged.
+
+**Flags `150.1`, `150.4` and `150.5` are reached.** `150.1`'s elimination of *the manager enters the worktree* was
+about the manager **working** from one; entering transiently to create and reset, then leaving, is not that, and the
+manager did exactly it here and returned. `150.4`'s and `150.5`'s subject — the `worktree.baseRef` setting — is no
+longer load-bearing under this route; the base check survives, because a reset that does not happen is a stale base
+either way. **None is withdrawn**: they were correct about the route this node answered on.

@@ -17,7 +17,15 @@ worktree](nodes/150-which-harness-route-creates-a-worktree.md).** Added beside t
 rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instruction-lives.md) and [node
 144](nodes/144-make-the-rules-file-stand-alone.md) hold conditions quoting that paragraph's exact phrases.
 
-- **The manager creates nothing.** It spawns the implementation worker with the harness's worktree isolation. The
+- ~~**The manager creates nothing.** It spawns the implementation worker with the harness's worktree isolation.~~
+  **Superseded by the human's own route**, `verbatim`: *"It calls EnterWorktree specifying a name tied to the node
+  and vaguely describing the node's title"*, then *"If it didn't land on HEAD … it does `git reset` itself to reach
+  the proper base"*. **The manager calls `EnterWorktree` with a node-tied name**, checks the base it landed on, and
+  `git reset --hard`es to its own `HEAD` **before any worker reads the tree** — which is why this needs no
+  `worktree.baseRef` setting and assumes no machine. Measured: `EnterWorktree` lands on `origin/master` under the
+  default, and the reset **requires the sandbox off**, failing inside it with `Could not reset index file`. The path
+  is `.claude/worktrees/<name>/` and the branch `worktree-<name>`, so **the node's id is back in both**.
+- ~~The
   harness picks the path, `.claude/worktrees/agent-<agentId>/`, and the branch, `worktree-agent-<agentId>`, and the
   manager learns both from the worker's completion notification. **The node's id is no longer in either**; the commit
   trailer `Node: <effort>/<NN>` is the join key and is the manager's to write.
