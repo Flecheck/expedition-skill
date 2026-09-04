@@ -1,7 +1,7 @@
 # Ignore the harness's worktree directory
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
