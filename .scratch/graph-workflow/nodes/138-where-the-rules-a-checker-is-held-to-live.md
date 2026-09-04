@@ -198,3 +198,31 @@ one, which is what it was offered as.
 
 **The manager takes no view on the ask or on any alternative**, and has not weighed the two-files-versus-one
 argument.
+
+### Attempt 1, a reply that names a node other than the one asked — recorded, not read
+
+**The human's word, `verbatim`**, written at the moment they spoke:
+
+> 139 ok
+
+***The manager's note.*** **The live question was this node's, and the reply names [node
+139](139-move-the-managers-material-out-of-the-map.md).** Under [node 117](117-questions-sent-in-batches.md)'s rule
+an unnamed question is **unanswered rather than parked**, and the manager's own contract says that where a terse
+reply does not make clear which option it points at, the manager records it and asks which rather than picking. **So
+nothing is settled by it and it has been put back to them.**
+
+**The two readings, which are not variants of one act but opposites.**
+
+1. **It means this node's question**, `138` mistyped as `139`, taking the recommendation. Then the checker's and
+   implementer's material goes to **its own** new file, and **node 139's acceptance condition is wrong** — its clause
+   3 moves the review-route paragraph into the manager's file, which under that answer is the wrong destination.
+   Amending it is the human's act, not the manager's.
+2. **It means node 139 itself** — *carry on, that node is fine* — in which case node 139's condition stands
+   untouched, this node's question is still open, and node 140 is still unstartable.
+
+**Reading 1 changes a live node's condition; reading 2 leaves it alone.** The manager has done neither and has told
+node 139's worker nothing, its condition standing exactly as written.
+
+**Why the manager is not guessing even though the payload was about node 139's collision.** The payload named node
+139 four times, so a reply naming 139 is as consistent with *"that node is fine, proceed"* as with *"take the
+recommendation"*. The manager holds both readings and neither is weaker.
