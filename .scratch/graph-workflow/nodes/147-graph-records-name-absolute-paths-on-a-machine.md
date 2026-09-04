@@ -274,3 +274,101 @@ to hold the work against the acceptance condition, the bar and the ground rules 
 their content says about this effort or this node. That instruction is the manager's own judgement about a
 collision the contracts do not address, made because the alternative was a node that cannot be checked at all. The
 human has not been asked. It will recur on every node whose subject is the graph's own files, node 140 next.
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted. It was spawned by the manager, not by the worker, and was given the acceptance
+condition as extracted text together with the amendment.*
+
+**Standards found and used.** Per the spawn I went looking for no reviewing skill and invoked none, so no part of a
+reviewing skill ran in a spawned agent; I held the work against the named standards by hand. Used:
+`/coding-principles`, `/naming`, `CONTEXT.md`'s forty `_Avoid_` lines, `.claude/skills/expedition/graph-conventions.md`
+(incl. its `## Mechanical checks`), and `mattpocock-skills:writing-for-agents` (loaded into my own context, no agent
+spawned). None of these standards is among the paths that changed — the diff is confined to `.scratch/graph-workflow/`
+— so no standard moved under the check and the `Where the work moved one of them` route did not apply.
+
+**Preamble.** The set of files in `git diff --name-only` is byte-identically the set the clause 1 enumerator named at
+`c3d50bf` (compared with `diff` over both sorted lists). `git status --porcelain -uall` lists those sixteen and nothing
+else, tracked or untracked, so `decisions.md`, `flags.md` and `nodes/147-graph-records-name-absolute-paths-on-a-machine.md`
+are all untouched.
+
+**Clause 1, as amended.** Re-ran `git grep -c -F '/home/mathieu/projects/graph-agent' -- .` in the worktree. It returns
+one line: `.scratch/graph-workflow/nodes/147-graph-records-name-absolute-paths-on-a-machine.md:6`. Nothing outside that
+file, which is what the amendment demands. I also ran the command against `c3d50bf` and it returned 36 across 16 files,
+matching the recorded return exactly.
+
+**Clauses 2 and 3, established together by a byte-level test.** For each of the sixteen files,
+`git show HEAD:<f> | sed 's|/home/mathieu/projects/graph-agent/||g'` is byte-identical to the working-tree file
+(`diff -q`, all sixteen identical). That single result establishes both clauses at once and without relying on lines as
+units: every occurrence lost exactly the prefix and kept everything after it (clause 2), and no other byte moved
+anywhere in any file — no reword, no deletion, no unstrike, no renumbering (clause 3). I separately confirmed clause 2's
+premise held over the recorded 36: the only occurrence at HEAD lacking a trailing slash is inside node 147's own file,
+which the amendment excepts. I read the ellipsis-continuation sites (`nodes/61` line 31, `nodes/142` lines 44-46,
+`nodes/60` line 52) to confirm the `.../` forms still resolve against their now-relative sibling; they do.
+
+**Clause 4.** Recorded return verified true: at `c3d50bf` the command returns 4 across 4 files. The four recorded files
+each still return 1 and none is in the diff. The current return also carries a fifth hit; handed back below, and never
+on its own a `FAIL`.
+
+**Clause 5.** Recorded return verified true at `c3d50bf`: 8 occurrences across 6 files. Current return is identical —
+same six files, same per-file counts, summing 8. One of the six (`nodes/103-…`) is in the diff, and the byte-level test
+above proves its two lines are unchanged.
+
+**Clause 6.** `git status --porcelain -uall` lists only the sixteen, all under `.scratch/graph-workflow/`.
+
+**Clause 7.** Vacuously satisfied: this node rewrote no markdown link target. Checked on unwrapped text
+(`git show HEAD:<f> | tr '\n' ' '`, matching `](…)`), no link target in any of the sixteen files contained the prefix at
+HEAD, so none could have been rewritten. Separately, every repo-root path the rewrite produced that names a live
+location exists (`.claude/`, `.claude/skills/`, `.claude/skills/expedition-checker/`, `…/expedition-checker/SKILL.md`,
+`…/expedition/graph-conventions.md`, `…/expedition-implementation/SKILL.md`, `…/expedition-research/SKILL.md`,
+`CONTEXT.md`, `.scratch/`, `.scratch/graph-workflow/`, `…/map.md`, `…/nodes/`).
+
+**Clause 8 — the bar.** Its command half is genuinely empty and I confirmed rather than assumed it: the repository root
+holds only `.claude/`, `CONTEXT.md`, `.scratch/`, `.gitignore`, and a `find` for `package.json`, `Makefile`, `justfile`,
+`Cargo.toml`, `pyproject.toml`, `*.nix`, `.pre-commit-config.yaml` returned nothing. Nothing to invoke, so nothing was
+run. Non-command half:
+
+- `/coding-principles`, `/naming` — no code and no identifier was introduced; the byte-level test proves no text was
+  added anywhere.
+- `CONTEXT.md`'s `_Avoid_` lines — nothing added, so no avoided term entered. The change removes occurrences of
+  `graph-agent`, which line 17 avoids.
+- `graph-conventions.md` — none of its ten mechanical checks is reached: no edge, label, id, status, `## Answer`, flag
+  entry or `## Review` item moved.
+- `/writing-for-agents` — no prose was reworded, so its levers have nothing to bite on. The change removes a
+  machine-specific restatement in favour of paths the environment resolves, which is the direction that standard's
+  `cache` and `single source of truth` points.
+- Ground rules 1-5 and the four standing rules — nothing added. On `an in-place update never deletes`: the prefix's
+  removal is what the condition dictates and what the human directed, which is that constraint's own stated exception
+  (information leaves when it is clearly wrong or the human asks for it gone).
+
+Not a finding, reported so you know I saw it: `nodes/61-collapse-onto-scribe.md` cites `graph-conventions.md` by line
+number on one of the changed lines, against standing rule 4. It is present at HEAD, the work did not introduce it, and
+clause 3 forbade the worker to touch it.
+
+**FINDING, handed back alongside the `PASS` — clause 4's enumerator no longer returns the four it records.**
+
+- **Instances.** Re-running `git grep -c -F '/home/mathieu/projects/Lang' -- .` returns 5 occurrences across 5 files,
+  not the recorded 4 across 4. The four recorded files each return 1 and are byte-unchanged. The fifth is
+  `.scratch/graph-workflow/nodes/147-graph-records-name-absolute-paths-on-a-machine.md` line 70, which is clause 4's own
+  enumerator command quoted inside the condition. That file is tracked at HEAD (`c474ad2`), did not exist at `c3d50bf`,
+  and is untouched by the work — `git status --porcelain` reports nothing for it. So the work did not cause this and,
+  being outside the sixteen files it may edit, could not have repaired it. This is the same self-quotation the amendment
+  excepted for clause 1, and clause 4 carries no such exception.
+- **The form, as a predicate.** A file tracked in the working tree that contains the literal
+  `/home/mathieu/projects/Lang`, is not one of the four the condition records, and is not one of the sixteen files the
+  worker may edit.
+- **The extent — an enumerator.** Over the part of the work the implementer may edit:
+  `git grep -c -F '/home/mathieu/projects/Lang' -- $(git diff --name-only)` returns nothing (exit 1). Over the tree, the
+  instances of the form are listed by `git grep -l -F '/home/mathieu/projects/Lang' -- . | grep -vxF -e
+  .scratch/graph-workflow/decisions.md -e .scratch/graph-workflow/map-history.md -e
+  .scratch/graph-workflow/map-manager-only.md -e .scratch/graph-workflow/nodes/09-dogfood-target.md`, which returns
+  exactly the one file above. Both enumerators are bounded by the tracked working tree I hold; I can establish this is
+  the only such file there, not that it is the only one in the effort.
+
+***The manager's note.*** **The run covered the whole condition and named no part it could not reach**, so this entry
+carries no `NOT COVERED:` label. The finding above is an enumerator return reported alongside the outcome under [node
+110](110-does-the-checker-rerun-the-enumerator.md)'s rule, which is never on its own a `FAIL`; it travels into the gate
+payload. **The gate is not raised yet**: a grilling question was live in front of the human when this run returned, and
+nothing displaces a live question.
