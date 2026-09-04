@@ -179,3 +179,79 @@ nothing from what their content says about this effort or this node. **This is t
 predicted by name** (*"It will recur on every node whose subject is the graph's own files, node 140 next"*), and
 `147.3` was settled at node 147's gate with that sentence in front of the human. It is filed again rather than
 treated as covered, because a settlement on one node is not a standing licence.
+
+## Review
+
+### Checker run 1 — `FAIL: acceptance condition`
+
+*The checker's own text, pasted. It was spawned by the manager, not by the worker, and was given the acceptance
+condition as extracted text.*
+
+**Standards found and used.** No reviewing skill was invoked and none was sought — the spawn supplied the standards by
+name, and I read each directly and applied it by hand: `/coding-principles` and `/naming`, `/writing-for-agents`,
+`CONTEXT.md`'s 41 `_Avoid_` lines, and `graph-conventions.md`. No skill was run in a spawned agent, so nothing ran
+with less than I hold. No part was left unrun.
+
+**The standard that moved.** `graph-conventions.md` is both a bar standard and one of the changed paths, so I settled
+that first, on operative content alone. Its diff adds one element and changes a count `six`→`seven`; it removes and
+alters nothing it required or refused. The rest of the standard is byte-unchanged, so I held the work against it as I
+would have anyway.
+
+**The finding.** One instance. `map-manager-only.md`, in the dogfood-target item: `**The dogfood target is
+[Lang](/home/mathieu/projects/Lang)**`. The target does not exist on this machine, so the link does not resolve. This
+fails clause 14, *"which is worded as a property of the finished tree with no move-scoping."*
+
+**Extent — enumerator**, run over exactly the three files the clause names: `grep -oE '\]\([^)#][^)]*\)' map.md
+map-manager-only.md map-implementation-rules.md | sed 's/](//;s/)$//' | sort -u | while IFS=: read -r f t; do case
+"$t" in http*) continue;; esac; [ -e "${t%%#*}" ] || echo "UNRESOLVED $f -> $t"; done`. **Returns the one line and
+nothing else; 118 link targets checked, 1 unresolved.**
+
+**What the checker asked the manager to weigh, in its words:**
+
+> The line is byte-identical to the before-state — it is absent from `git diff` entirely, sits in the dogfood-target
+> item the move did not touch, and is an absolute path to the human's other machine, where Lang lives. So the work
+> did not introduce it, and the clause was already false at claim time. I check the condition as written and do not
+> repair it, so this is a `FAIL`; but if clause 14 was meant to catch links the move could have broken, amending the
+> clause is the cheaper repair than sending the work back. If it is sent back, the never-delete constraint permits
+> only unlinking the path in place, not removing it.
+
+**Every other clause established, and how.** Scope verified by `git status --porcelain -uall` returning exactly the
+five reported paths. Clause 1 — first sentence names both readers, states part-of-the-map and equal binding; neither
+name contains `provenance` or `criteria`. Clause 2 — no `## Notes` in the new file. Clauses 3 and 4 — each opener
+greps to 0 in its source and once in the new file. Clause 5 — **all five moved bodies byte-identical**, compared by
+script against `git show HEAD:<path>`: landing policy 2497 B, worker count 575 B, supersedes 376 B, bar's commands
+1010 B, review route 1588 B. Clause 6 — the live description now names the out-of-scope line; the prior wording is an
+exact quote beneath it. Clause 7 — one physical line, one link, one sentence; the four bodies grep to 0 in `map.md`.
+Clause 9 — **measured in both units**: 33,007 → 28,964 bytes, **−4,043**; 32,913 → 28,884 characters, **−4,029**;
+both clear the 3,900 floor. Clause 10 — exactly the three headings. Clause 11 — both blocks byte-identical and still
+in `map.md`. Clause 12 — count and one list entry and one sentence, 8 insertions / 1 deletion, nothing else; no other
+stale count. Clause 13 — the six named skill directories are untouched.
+
+**The reading it flagged on clause 8, in its words:**
+
+> I flag the reading: clause 8's second sentence cannot be an absolute universal, because clause 6 *requires*
+> `map-manager-only.md` to lose a line whose text cannot appear in the new file. Only the move-scoped reading makes
+> clauses 6 and 8 both satisfiable. If the manager intends the literal reading, clause 8 also fails on those three
+> lines.
+
+**The bar: holds.** Command half empty and confirmed so by inspection rather than assumption. Non-command half
+checked clause by clause, including a scan of only the newly-authored prose against the 41 `_Avoid_` lines, with no
+new refused usage and neither `provenance` nor `criteria` anywhere in the added text.
+
+**The question it handed back alongside its outcome:**
+
+> Complying with clause 12's *"It changes in no other respect"* leaves `graph-conventions.md`'s `## Notes` bullet
+> stating that the map's `## Notes` holds *"the two things the manager maintains here: the **declared label
+> vocabulary**, and the bar's commands once they have been discovered for this repo"*. Both halves are now false for
+> this effort: the label vocabulary moved to `map-manager-only.md` at node 139, and this node moved the bar's
+> commands to `map-implementation-rules.md`. The wording is the condition's own and so was not the worker's to depart
+> from. Should the convention's account of where those two live be corrected, and if so where?
+
+***The manager's note.*** **The run covered the whole condition and named no part it could not reach**, so this entry
+carries no `NOT COVERED:` label. **Three things the manager records rather than acts on.** The `FAIL` is on the one
+clause its own worker had already reported unmet at flag `140.5`, and it names a link [node
+154](154-the-dogfood-link-names-a-path-on-another-machine.md) was minted for. The checker's question is answered by
+[node 153](153-graph-conventions-notes-bullet-is-false.md), minted from this node's own first handover — **the
+checker found it independently and blind to that node.** And the checker's clause 8 reading is the same reading the
+worker reached at flag `140.2`, arrived at separately by two parties who could not see each other. **Amending a
+condition is not the manager's**, so clause 14 goes to the human at the gate.
