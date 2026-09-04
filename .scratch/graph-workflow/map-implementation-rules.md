@@ -41,7 +41,20 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
 - **A correction round resumes the worker** and never re-spawns it with isolation, a second isolated spawn creating a
   second empty tree at a fresh base and stranding the first one's work. Where resume is unavailable the replacement
   is pointed at the surviving path. Flagged at `150.3` as unverified.
-- **The merge step needs the sandbox off where the node touched a shipped file.** Measured at node 140: `git merge
+- **Two distinct sandbox restrictions bite this lifecycle, and they were once conflated. Isolated by experiment.**
+  - **The merge step needs the sandbox off where the node touched a file under `.claude/skills/`.** The **main
+    tree's** `.claude/skills` is a read-only bind mount; `touch` on a file there fails with `Read-only file system`.
+    So `git merge --ff-only` of a branch that changed one fails with `unable to unlink old …`. `HEAD` does not move
+    and nothing is lost; the merge succeeds outside the sandbox.
+  - **The reset step needs the sandbox off only for a *harness-created* worktree.** Measured both ways on one tree: a
+    worktree made by `git worktree add` resets across the same commits **inside** the sandbox without error, while
+    one made by `EnterWorktree` fails with `Could not reset index file to revision`. The difference visible in
+    `/proc/mounts` is that the sandbox places read-only bind mounts inside a harness worktree's admin directory —
+    `.git/worktrees/<name>/config.worktree` and `.../commondir` — and places none at all on a hand-made one.
+    **Correlation established both ways; the exact write that fails is not isolated.** Writing `.git` is not the
+    problem in general: `git add` and `git commit` both succeed inside the sandbox in a harness worktree, as does a
+    plain write to that worktree's own `.claude/skills/`.
+- ~~**The merge step needs the sandbox off where the node touched a shipped file.**~~ Measured at node 140: `git merge
   --ff-only` failed with `unable to unlink old '.claude/skills/expedition/graph-conventions.md': Read-only file
   system`, `/proc/mounts` showing `.claude/skills` bind-mounted `ro` inside the manager's sandbox. **`HEAD` does not
   move and nothing is lost** — the commit stays on its branch and the merge succeeds on a retry outside the sandbox —
