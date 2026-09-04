@@ -163,3 +163,12 @@ context are taken into account without being cited, so a count of explicit uses 
 It also names the failure the search instruction would cause — that a worker told it may search will mostly not — which
 is a claim about part (i)'s reliability and not only about (ii). The manager relayed it to the worker unaltered and
 put nothing to the human about it.
+
+***The manager's note on the first handover.*** **It arrived carrying part (ii) as landing, and was sent back once.**
+Its answer read *"(ii) `decisions.md` leaves every worker's read-whole list and becomes a searched pointer"*, and
+clause 1 of its surfaced acceptance condition read *"The effort's index of decisions is no longer an item of the read
+list"* — both of which the human had reverted before the handover was written. The two corrections had been relayed
+to the worker and are recorded above; whether they reached it before it finished is not something the manager can
+establish, the worker having reported no acknowledgement of either. **Nothing from that handover was written onto
+this node**, per the rule that a handover sent back is not recorded, and it was sent back naming exactly what was
+wrong.
