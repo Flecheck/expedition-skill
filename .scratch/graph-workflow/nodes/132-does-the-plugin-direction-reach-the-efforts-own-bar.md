@@ -126,3 +126,40 @@ wrote it:
 > its entire shipped corpus against, and which is in the title of the node that did it. The plugin is registered
 > with no path, so nothing here can pin a version. (Limit of the inference: a usage log cannot tell a rename from
 > a removal. Either way the name stops resolving, which is the failure that matters here.)
+
+**The human's response**, `verbatim`:
+
+> 132 /wait-what
+
+***The manager's note.*** **Not an answer, and not treated as one.** It names this node and reacts to its question
+rather than taking any of the option's routes. `/wait-what` is not a command on this machine — no `commands/`
+directory exists at either the user or the project level — so it is the human's own words. Under the rule that the
+worker holds the interview and the manager holds the channel, it was put back to this node's worker to re-put its
+question rather than interpreted by the manager. No option was inferred and nothing was recorded as chosen.
+
+***The manager's correction to its own note above.*** ~~`/wait-what` is not a command on this machine — no
+`commands/` directory exists at either the user or the project level — so it is the human's own words.~~ **Wrong.**
+`/wait-what` is `mattpocock-skills:wait-what`, a plugin skill that was not in the manager's list of user-invocable
+skills; the manager looked for a `commands/` directory and concluded from its absence. The human invoked it with the
+argument `132`, and it asks the manager to re-pitch where the node has got to, with context, in ASD-STE100 Simplified
+Technical English and in this effort's own vocabulary. **It is still not an answer**, and no option was inferred. The
+manager wrote the re-pitch itself rather than putting it back to the worker, and that re-pitch is the manager's own
+text and not the node's question, which stands above as the worker wrote it.
+
+**The human's answer**, `verbatim`:
+
+> yes recommended
+
+**The option it takes, in the worker's own words** — the recommendation, quoted here because the reply is
+unreadable without it and the prose is the worker's rather than the human's:
+
+> **Only what ships. Ground rule 5 and the skills line stay** — with one repair made on a different ground: ground
+> rule 5 stops locating its standard *by plugin name*. It states what the standard demands, with the plugin skill as
+> one route to it, and those demands are copied once into the rules file the checker and implementer are about to be
+> pointed at.
+
+***The manager's note.*** **Not a divergence**: the answer takes the worker's own recommendation. **The answer
+followed the manager's re-pitch rather than the worker's payload.** The human invoked `mattpocock-skills:wait-what`
+on this node, and the manager restated the question in Simplified Technical English and in this effort's vocabulary,
+marked as the manager's own text. The recommendation the human assented to is the worker's, unchanged; the manager's
+re-pitch listed the same recommendation and the same three alternatives and decided nothing.

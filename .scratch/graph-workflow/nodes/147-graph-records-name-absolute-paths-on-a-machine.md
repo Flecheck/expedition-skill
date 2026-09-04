@@ -102,10 +102,30 @@ is a node rather than something this one carries, and it is not yet minted.
 
 ## Flags
 
-`147.1` `ASSUMPTION` — The human's direction names the `graph-agent` prefix and excepts Lang by name. It says nothing
+`147.1` **· settled** `ASSUMPTION` — The human's direction names the `graph-agent` prefix and excepts Lang by name. It says nothing
 about the eight occurrences naming `~/.claude/`, `~/dotfiles/` and `~/.nix-profile/` on that machine. The manager
 scoped those out on the ground that they report where a file was found on an external machine and have no
 repo-relative form, and wrote that scoping into clauses 5 of the condition. The human has not been asked.
+
+`147.2` **· settled** `ASSUMPTION` — *The worker's own prose, pasted.* Clause 7 demands that every markdown link this node
+rewrote resolve to an existing path. No rewritten occurrence was a markdown link — verified before editing — so the
+clause is vacuously satisfied. But five of the rewritten paths do not resolve from the repository root:
+`.worktrees/103-pick-report-settling-moment` and its `CONTEXT.md` in node 103,
+`.worktrees/114-destination-entry/CONTEXT.md` in node 114, and `.worktrees/116-checker-enumerator-duty` in two forms
+in node 116. I left all five as bare rewritten paths rather than repairing, deleting or annotating them, on the
+judgement that they are historical records of gate payloads naming worktrees the landing policy removed once those
+nodes landed; they did not resolve before this change either, and a record of where work once stood is not a pointer
+anyone is meant to follow. Repairing them would have been a change of meaning, which clause 3 forbids. If the intent
+is that every path in the record resolve, these five need a different treatment and this node did not give them one.
+
+`147.3` **· settled** `ASSUMPTION` — *The manager's own, about its own conduct.* A checker is given nothing from the effort's
+record, so that it cannot be unblinded by what the record says. This node's **work is the record**: its diff is
+sixteen files under `.scratch/graph-workflow/`, and no checker can hold the work against the condition without
+opening them. The manager spawned the checker with an instruction to read those files as the work under check and
+to hold the work against the acceptance condition, the bar and the ground rules alone — deriving nothing from what
+their content says about this effort or this node. That instruction is the manager's own judgement about a
+collision the contracts do not address, made because the alternative was a node that cannot be checked at all. The
+human has not been asked. It will recur on every node whose subject is the graph's own files, node 140 next.
 
 ## Interview
 
@@ -200,17 +220,6 @@ because the condition quotes the string it repairs and cannot be satisfied while
 
 **This amendment is part of the condition** and travels with it to the checker.
 
-`147.2` `ASSUMPTION` — *The worker's own prose, pasted.* Clause 7 demands that every markdown link this node
-rewrote resolve to an existing path. No rewritten occurrence was a markdown link — verified before editing — so the
-clause is vacuously satisfied. But five of the rewritten paths do not resolve from the repository root:
-`.worktrees/103-pick-report-settling-moment` and its `CONTEXT.md` in node 103,
-`.worktrees/114-destination-entry/CONTEXT.md` in node 114, and `.worktrees/116-checker-enumerator-duty` in two forms
-in node 116. I left all five as bare rewritten paths rather than repairing, deleting or annotating them, on the
-judgement that they are historical records of gate payloads naming worktrees the landing policy removed once those
-nodes landed; they did not resolve before this change either, and a record of where work once stood is not a pointer
-anyone is meant to follow. Repairing them would have been a change of meaning, which clause 3 forbids. If the intent
-is that every path in the record resolve, these five need a different treatment and this node did not give them one.
-
 ## Retrospective
 
 *Filed by the manager from the worker's handover, this effort's seventh handover part. The worker's own text,
@@ -265,15 +274,6 @@ build, no tests..."*, which is accurate about the repository, while the working 
 `/home/ten/Projects/expedition` and the git author is a different person from the one every path in the record
 named. That gap between the record and the machine is precisely the defect this node was minted to repair, and the
 record contains no line noting it happened.
-
-`147.3` `ASSUMPTION` — *The manager's own, about its own conduct.* A checker is given nothing from the effort's
-record, so that it cannot be unblinded by what the record says. This node's **work is the record**: its diff is
-sixteen files under `.scratch/graph-workflow/`, and no checker can hold the work against the condition without
-opening them. The manager spawned the checker with an instruction to read those files as the work under check and
-to hold the work against the acceptance condition, the bar and the ground rules alone — deriving nothing from what
-their content says about this effort or this node. That instruction is the manager's own judgement about a
-collision the contracts do not address, made because the alternative was a node that cannot be checked at all. The
-human has not been asked. It will recur on every node whose subject is the graph's own files, node 140 next.
 
 ## Review
 
@@ -372,3 +372,14 @@ carries no `NOT COVERED:` label. The finding above is an enumerator return repor
 110](110-does-the-checker-rerun-the-enumerator.md)'s rule, which is never on its own a `FAIL`; it travels into the gate
 payload. **The gate is not raised yet**: a grilling question was live in front of the human when this run returned, and
 nothing displaces a live question.
+
+### Gate — `approve`
+
+**The human's word**, `verbatim`:
+
+> approve
+
+The payload carried checker run 1's `PASS` and the enumerator mismatch it handed back alongside it, the sixteen
+paths the worker reported touching, the worktree and the command showing its diff, the proposed commit message, and
+all three of this node's flags in full. **Approving the gate settles all three**, under this effort's standing
+instruction that approving a node's end settles its flags. No correction round was taken.
