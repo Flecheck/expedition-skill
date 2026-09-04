@@ -130,3 +130,15 @@ moments.
 **The `.gitignore` gap is confirmed by the manager**: `git check-ignore` reports `.claude/worktrees/` not ignored, and
 `git status` shows the running node's tree as untracked. The manager has changed nothing, that being a tracked file
 outside the graph and this node's subject.
+
+**A later message from the same attempt, pasted**, which the manager records because it partly reconciles the
+contradiction noted above:
+
+> No human answer has arrived — that was a background command of mine completing. It added nothing that changes the
+> question (only a minor detail: the harness maintains `extensions.worktreeConfig` in `.git/config`, which the
+> sandbox mounts read-only, producing a harmless warning on branch deletion; every operation I ran still succeeded).
+
+***The manager's note.*** **This corroborates the mechanism the manager measured and not its severity.** Both agree
+the sandbox mounts `.git/config` read-only; they differ on whether the resulting failure is fatal. The manager's
+attempt could not remove the worktree at all until it ran outside the sandbox; this worker's produced a warning and
+succeeded. Neither observation is withdrawn.
