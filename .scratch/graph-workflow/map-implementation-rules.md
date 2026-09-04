@@ -52,6 +52,13 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
   which leaves it holding pre-repair content for every file the worker has not touched. Node 140 was moving text
   verbatim between files, so a late reset there would have silently reverted [node
   147](nodes/147-graph-records-name-absolute-paths-on-a-machine.md)'s landed work with every check passing.
+- **A failed rebase leaves its partial checkout behind, and every retry then meets the dirt its predecessor made.**
+  Measured at node 143, after four failed attempts and two wrong diagnoses. `git rebase` reported only `could not
+  detach HEAD`; the underlying `git checkout --detach` reports the real cause, which was local changes and untracked
+  files that **the previous failed rebase had itself written**. **Cleaning and rebasing in separate calls cannot
+  converge.** The repair is one pass: `reset --hard` to the branch's own commit, `clean` the record directory, then
+  rebase — and read `git checkout --detach <target>` rather than the rebase's summary when it fails again.
+
 - **A correction round resumes the worker** and never re-spawns it with isolation, a second isolated spawn creating a
   second empty tree at a fresh base and stranding the first one's work. Where resume is unavailable the replacement
   is pointed at the surviving path. Flagged at `150.3` as unverified.

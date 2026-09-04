@@ -1,7 +1,7 @@
 # The rules a checker and an implementer work to arrive by the spawn, never by a search
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -90,6 +90,58 @@ clauses 3 and 5 and are outstanding; a worker on this node reads the clause rath
 145](145-whether-the-workflow-ships-its-own-reviewing-discipline.md) asks whether the workflow ships a reviewing
 discipline of its own — if the human says yes, this file gains something later, which is why clause 5 keeps the
 machinery rather than deleting it.
+
+## Answer
+
+*The worker's own text, pasted, from its correction round.*
+
+**The discovery pass is replaced by reading one known file. Nothing is fed.**
+
+**In `expedition-checker/SKILL.md`.** The section `## The standards this repo and this machine carry` is gone, with
+every instruction to hunt. `## The standards you hold the work against` stands in its place and says the standards
+are in **one known file the checker reads**: the sibling of the effort's map holding the rules an implementation
+node's work is held to, at `.scratch/<effort>/map-implementation-rules.md`, `<effort>` being the directory holding
+that effort's `map.md`. **The manager passes nothing.** The contract states that a single listing of `.scratch/`
+resolves `<effort>` and that the listing is the whole of the looking a checker does — the one place a discovery pass
+could creep back in, bounded in as many words.
+
+**The standards became a sixth thing the checker holds, and the list says how it holds it.** `## What you are given`
+opens *"Six things. Five reach you in the spawn; the sixth you read for yourself, from one file this contract
+names."* Items 1 to 5 are the original five at their original numbers — nothing about the spawn changed.
+
+**The blindness rule needed an exception, and it is stated rather than left implicit.** *"You do not read it, and you
+do not go looking for it"* now continues: the implementation-rules file is the single exception, and only for the
+standards in it. **This is what makes node 164 unavoidable rather than latent.**
+
+**The no-file case is an expected route, not a fault.** Where the file does not exist or states no standards, the
+acceptance condition and the bar are the whole of what the work is held against, and **an effort that has never
+written one is the ordinary case rather than a defect** — a fresh repository has no such file — so a checker does not
+report its absence as a finding.
+
+**What the deletion also took.** The sentence putting the standards **under the bar** is deleted and not carried
+forward, on the manager's instruction; [node 151](151-write-the-checker-contracts-how-you-check-section.md) owns the
+repair, and two sentences still lean on it.
+
+**In `expedition-implementation/SKILL.md`.** `## The standards your work is held to` names the same file and adds the
+thing only an implementer needs: **its checker reads the same file**, so the work is written and checked against one
+set of rules rather than two. `## What you read` gains that file, carrying the standards and the bar's commands.
+`## How you implement`'s closing line names three binding things where it named two.
+
+**What it reverted from the first round.** The ground rules and the standing over sources are back at the map's
+`## Notes`, verbatim. Routing them through the spawn was flag `143.3`, and the amendment makes that flag false.
+
+**The path is written by role and position, not literally**, `graph-conventions.md` fixing the `.scratch/<effort>/`
+layout and the filename, so the file is nameable without assuming which effort.
+
+***The manager's note.*** **Landed as commit `7b5bcf0`.** The node took one gate `correct` — the human's amendment,
+replacing a spawn payload with a file the contract names — and two checker runs, both `PASS`.
+
+**The landing cost four failed attempts and the diagnosis was the manager's to have got right sooner.** `git rebase`
+failed with `could not detach HEAD`; the manager attributed it first to the sandbox and then to untracked files, and
+both were wrong. **The real cause is that a failing rebase partially checks out its target and leaves that partial
+checkout behind, so every retry meets the dirt its predecessor made** — cleaning and rebasing in separate calls can
+never converge. It is recorded in [map-implementation-rules.md](../map-implementation-rules.md)'s landing policy.
+
 
 ## Flags
 
