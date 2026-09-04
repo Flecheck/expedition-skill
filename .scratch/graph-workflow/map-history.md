@@ -252,3 +252,22 @@ report. Verified: `expedition-grilling/SKILL.md` says *"Five parts, every time"*
 retrospective is the **sixth** part on the four kinds whose handover has five, and the **seventh** on an
 implementation node. The map's wording was right for four of the five kinds and wrong only for implementation;
 the worker read the implementation contract, which is the one case where its claim held.*
+
+## Archived when the human's checker direction arrived, 2026-09-04
+
+**The review route's naming of a reviewing skill, and its account of how much of that skill may run.** Superseded by
+the human's standing direction that the checker must not go looking for the skill or the rules, and that
+`mattpocock-skills:code-review` is not to be used at all. Their words are in the map's `## Notes`. The superseded
+text, `verbatim`:
+
+> **The reviewing skill is `mattpocock-skills:code-review`, and only part of it may run here.** Its spec step
+> searches `docs/`, `specs/` and **`.scratch/`** for a requirements document — and `.scratch/` is this effort's
+> record, which a checker is blind to by design, so that step is left unrun and the acceptance condition is the only
+> statement of intent. Its standards step looks for `CODING_STANDARDS.md` or `CONTRIBUTING.md`, neither of which
+> exists here, so the sources above are supplied by hand. Where it runs an agent of its own, that agent is **given**
+> the standards, the paths, the diff and the condition's mandated constraints, and is **denied** the node files,
+> `decisions.md` and `flags.md` — so it is handed no less than the checker and has nothing to go looking for.
+
+*What of the paragraph is **not** superseded and stays in the map: the list of standards to hold work against, the
+measured trap about `CONTEXT.md`'s refused words being unusable as a grep list, and the `where` correction. Those are
+the rules themselves, which the human's direction keeps — it moves where the rules come from, not what they are.*

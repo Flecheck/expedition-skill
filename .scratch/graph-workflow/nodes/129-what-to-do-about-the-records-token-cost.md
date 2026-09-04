@@ -3,7 +3,7 @@
 Type: grilling
 Status: open
 
-Blocked by: 128
+Blocked by: none — [node 128](128-whether-qmd-lowers-this-workflows-token-cost.md) resolved
 
 ## Question
 

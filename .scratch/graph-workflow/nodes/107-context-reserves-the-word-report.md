@@ -1,7 +1,7 @@
 # `CONTEXT.md` reserves the word `report` to the closing report, and the shipped contract now uses `pick report`
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 ## Question
 
@@ -436,3 +436,254 @@ does not reach it.
 **One number the manager records because it bears on more than this node.** *"closing report"* appears **197 times
 across 35 files** in the record. Whatever is decided here, that is the largest population of text this effort has put
 at risk of meaning something else, and nothing on the graph watches for it.
+
+### Attempt 1, answer 1 to Q2
+
+**The human's word, `verbatim`**, written at the moment they spoke:
+
+> ok for 107
+
+**A bare assent, and it takes the recommendation.** Under [node 117](117-questions-sent-in-batches.md)'s settled rule
+a bare assent settles **every recommendation in that payload and nothing that is not a recommendation**. This payload
+held one ask and one `RECOMMENDED`, so what is settled is the worker's own recommendation in the worker's own words:
+
+> Take the flip as you wrote it, and disarm it with one sentence in the glossary: the `Effort closing report` entry
+> states that an unqualified "closing report" means the node-level one, and that prose written before this change
+> means the effort-level one.
+
+**No divergence.** The worker recommended the human's option rather than its own, and the human's word takes it.
+
+***The manager's note, and not the human's words. Two facts recorded rather than decided.***
+
+1. **The assent is determinate even though it names the node rather than the number.** Node 117's rule makes an
+   unnamed question unanswered rather than parked — but only one number was in flight on this node, so naming the
+   node reaches exactly one ask and nothing is left unnamed. Had a second question been queued behind it, this reply
+   would not have been readable.
+2. **The worker's *reading* of the two-candidate reply is not covered by what the human just said, and the manager
+   takes no view on it.** The worker set out how it read *"closing report or close report"* — the conclusion
+   superseding the list — and offered it as *"the one thing to correct"* rather than as an ask or a recommendation.
+   The human corrected nothing. **Whether an uncorrected stated reading counts as confirmed is governed by nothing on
+   the graph**: node 117's rule speaks of recommendations, and this is neither a recommendation nor a question. The
+   worker holds the interview and may spend a question on it. Recorded here because it is a **gap in the batching
+   rule node 117 has just landed**, and not a fact about this node.
+
+***The manager's later note, added when the handover arrived.*** **The worker did not proceed on "uncorrected", and
+said so.** Its words: *"I proceed on my reading, and on stronger ground than 'uncorrected' — the recommendation they
+assented to is only coherent under the shared-head pair, so the reading is entailed by it rather than merely
+unchallenged."* It carried the judgement as flag `107.2` so it can be overturned cheaply. **The gap in node 117's
+rule that the manager named above is untouched by that** — the worker got past it on this node's particular facts
+rather than by settling the general question.
+
+## Answer
+
+*Attempt 1's handover, pasted as its worker wrote it. The manager authored none of it.*
+
+**`report` is not reserved as a word, and never was.** `CONTEXT.md`'s `_Avoid_` lines are each scoped to their own
+entry, and the one under **Handover** — `_Avoid_: report (the closing report owns that word), return, payload,
+deliverable` — forbids calling a *handover* a report. Nothing breached it. What overreaches is the parenthetical: it
+asserts that one term exclusively owns the word, and that assertion was already untrue when written, `CONTEXT.md`
+having carried a `Closing report` entry all along and `expedition/SKILL.md` having said *"report the pick"* and *"the
+report accompanying the pick"*. It is repaired rather than obeyed, and the ban it justifies stands untouched. The
+distinction that actually holds is **direction of travel — a report goes to the human, a handover goes to the
+manager** — which is true of every report the workflow has.
+
+**The vocabulary gains a pair, and `pick report` is retired.** The human's words, `verbatim`: *"We can rename the
+closing report to effort closing report and use closing report or close report for the node report. The effort
+closing report is rarely done in practice compared to the node one, so we can do effort closing report and node
+closing report, shortened to closing report as it is the one used the most and should be understandable in the
+context where it is used?"*
+
+- **effort closing report** — what the manager hands the human once the frontier empties: what was decided, what
+  landed, and every flag still outstanding. Once per effort.
+- **node closing report** — the message the manager sends the instant a node closes: the node that closed, every flag
+  that node holds carried in full (this being where those flags settle), and whatever work the manager started in
+  response. It awaits no answer and takes no place in the human's question queue.
+- **An unqualified `closing report` means the node-level one**, that being the one used most — a frequency claim
+  confirmed on measurement, the shipped files using the node-level term 14 times against the effort-level term 7.
+
+**`pick report` was wrong for a reason worth recording, since it cost a commit.** `/naming` had never been run on it;
+it was chosen at flag `99.2` on a worker's own authority. Run here, the method derives the sentence from what the
+thing does — *the message the manager owes the human when a node closes* — while "pick report" round-trips to *"a
+report about a pick"*, naming the consequence rather than the subject. The tell was in
+`expedition-precondition/SKILL.md`, which could not use the term without glossing it: *"the **pick report** the
+manager sends when your node closes"*, where "pick" names a **different node** than the one that worker just worked.
+The new name dissolves that defect rather than patching the sentence.
+
+**The flip is accepted, and disarmed by one sentence in the glossary.** The bare form means the node-level report
+from now on, where today it means the effort-level one in all 197 of its occurrences across 35 files of this effort's
+record. The never-delete rule keeps every one of them unaltered, and the map's standing answer — *"Prose written
+before a word changed still says the old word: that is the never-delete rule rather than drift, and the glossary is
+authoritative"* — was written for a **rename**, where stale prose says a word that is no longer vocabulary and is
+visibly old. **This is a flip**, where stale prose says a word that is current vocabulary and means the opposite
+thing, and is invisibly old. So the glossary states the cue explicitly: the unqualified form means the node-level
+report, and prose written before this change uses it for the effort-level one. One sentence in the file every worker
+must read before writing anything, which is the mechanism this effort already relies on, applied to a case it was not
+written for.
+
+**How the two-candidate reply was read, recorded because a later reader cannot otherwise tell.** The reply floats
+*"closing report or close report"* and then concludes *"so we can do effort closing report and node closing report"*.
+This node proceeds on the conclusion superseding the list, and on `close report` being raw material set aside. The
+ground is not that the reading went uncorrected but that it is **entailed** by the recommendation the human then
+assented to: an `effort closing report` entry and an unqualified `closing report` meaning the node one are coherent
+only under the shared-head pair, and `close report` neither shortens to `closing report` nor leaves the bare form
+meaningful. Carried as flag `107.2` so it can be overturned cheaply if the entailment is rejected.
+
+**The repair sites, all four files, measured on master at commit `106380a`.** `CONTEXT.md`;
+`.claude/skills/expedition/SKILL.md`; `.claude/skills/expedition/graph-conventions.md`;
+`.claude/skills/expedition-precondition/SKILL.md`. Fourteen occurrences of `pick report` become the node-level term;
+five occurrences of `closing report` take the `effort` prefix; the `Closing report` entry is renamed; one entry is
+added; the `Handover` `_Avoid_` parenthetical is rewritten; and `expedition/SKILL.md`'s surviving periphrasis *"the
+report accompanying the pick"* becomes the term. That is one implementation node, reported below.
+
+**Three things are not this node's, and are named so they are not lost.**
+
+- **Node 95's clause 5**, on an `open` and unclaimed acceptance condition, reads *"named in the report accompanying
+  the pick — or, where the amendment is made after the node is claimed, named in that node's closing report
+  instead."* It uses a periphrasis for the term and, worse, `closing report` for a **per-node** report. Under this
+  answer the bare form does now mean the node-level one, so the second half accidentally becomes correct and the
+  clause is still wrong in wording. Amending a condition is the manager's act, and `CONTEXT.md`'s `Revision` entry
+  puts an unstarted node's repair in place, so this is the manager's to fix before node 95 is claimed.
+- **`map.md`, `decisions.md`, `map-history.md` and the node files are not repair sites.** The map's own rule keeps
+  their old words, and the glossary is authoritative over them.
+- **`CONTEXT.md`'s `grilling` entry**, whose *"one question at a time"* node 113 superseded, is node 113's and is
+  deliberately not absorbed by this repair.
+
+## Flags this node raised
+
+`107.1` — `ASSUMPTION`, in the worker's own words:
+
+> Settled before the first question, and invariant across every branch it could have taken, that `CONTEXT.md` is owed
+> an entry for the per-node report whatever it ended up called, and that the entry belongs under `## Talking to the
+> human` beside `Relay` and `Raise` rather than under `## Closing an effort`. Ground: the file's own preamble says
+> *"This glossary is the vocabulary the skill files are written in"*, and the term was bolded exact vocabulary in
+> three shipped files with no entry anywhere. Both of node 103's checkers reported the gap independently and neither
+> could act on it. The human was never asked, this being a consequence of the file's stated role rather than a
+> choice.
+
+`107.2` — `ASSUMPTION`, in the worker's own words:
+
+> The human's answer to Q1 named two candidates for the node-level term and then converged on one. This node
+> proceeded on the converging clause rather than spending a question, on the ground that the pair is entailed by the
+> Q2 recommendation the human then assented to — `close report` does not shorten to `closing report`, and an
+> unqualified `closing report` meaning the node one presupposes the shared head. Recorded because node 117's rule
+> speaks of recommendations and says nothing about a stated reading left uncorrected, so nothing on the graph makes
+> this confirmed.
+
+`107.3` — `ASSUMPTION`, in the worker's own words:
+
+> The `_Avoid_` parenthetical's replacement wording is held as recommended rather than fixed. The human's *"ok for
+> 107"* was assent to a recommendation offered with "something like", so the repair node's condition demands the
+> **properties** the parenthetical must have — that it stop claiming exclusive ownership of the word and state the
+> human/manager direction of travel — and carries the wording as a recommendation its worker may improve on. The
+> manager proposed this reading first and this worker agrees with it.
+
+## Nodes this node surfaced
+
+One, minted as [node 137](137-rename-the-two-reports-and-repair-the-avoid-line.md). Its name, kind, blockers,
+question and acceptance condition were all written by this node's worker and are pasted there.
+
+## What this node's work invalidates
+
+*Pasted as the worker wrote it.*
+
+- **[Node 103](103-carry-the-pick-report-settling-moment.md)** — resolved and landed as commit `106380a`. Its answer
+  stands entirely; its **vocabulary does not**. The four files it shipped name the per-node message `pick report`,
+  which this node retires. Node 103's worker predicted this exactly, reporting the collision at its gate and
+  declining to act on it because node 107 was open.
+- **[Node 102](102-do-afk-nodes-flags-settle-at-the-pick-report.md)** — resolved. Its answer routes every kind's
+  flags to *"the pick report that closes it"*. The routing is untouched; the term in it is superseded.
+- **[Node 99](99-flags-arrive-after-the-node-s-human-moment.md)** — resolved, and **flag `99.2` is overturned**. That
+  flag records the name `pick report` chosen on a worker's own judgement; the human has now named the thing itself,
+  so the judgement it flagged has been taken out of the worker's hands rather than confirmed.
+- **[Node 14](14-naming.md)** — resolved. It fixed the vocabulary and the map records `CONTEXT.md` as holding *"50
+  term entries and 40 `_Avoid_` lines"*. Both counts move: one entry is added and one `_Avoid_` line's text changes.
+- **Not invalidations, said explicitly so a reader does not think they were missed:** the 197 occurrences of `closing
+  report` meaning the effort-level report across 35 files of this effort's record, on nodes 10, 19, 23, 27, 46, 75,
+  76, 91 and others. The never-delete rule keeps them, the glossary is authoritative over them, and clause 4 above is
+  what makes their staleness visible.
+
+***The manager's note.*** **Two of these are the manager's own work rather than a later node's.** Node 99's flag
+`99.2` is settled and marked, so overturning it is a graph edit; and the map's *"50 term entries and 40 `_Avoid_`
+lines"* count moves when node 137 lands rather than now. **Node 95's clause 5 is the third**, named in the answer
+above rather than here.
+
+## Retrospective — attempt 1
+
+*Pasted as the worker wrote it.*
+
+**What I had to hunt for that the node or the spawn could have told me.** Three things, and one of them decided the
+node.
+
+*Which tree holds what.* The spawn warned me the two trees disagreed and told me to say which one I read a claim from
+— that warning was worth its length and I used it. But the actual state took four greps to establish, and one of them
+lied to me: my first repo-wide `grep | head -60` silently truncated before reaching `.claude/` and `.worktrees/`, and
+I nearly concluded the shipped files were clean when I had simply not seen them. I caught it only because the
+manager's note said four files carried the term and my grep showed none. **A spawn that hands a worker the term's
+occurrence counts per file, per tree, would have removed the whole hunt and the near-miss with it.** That data is one
+command the manager could run once.
+
+*Whether node 95's clause 5 still said what it was quoted as saying.* The spawn flagged this as unverified and
+unasserted, which was exactly right and exactly useful. Verifying it cost one grep and one read. Worth keeping as a
+pattern — a named unverified claim is much cheaper to check than an unnamed assumption is to discover.
+
+*Whether the report is owed when no pick happens.* Nothing told me; I had to read `### Picking the next node` whole.
+This was the load-bearing fact of my first recommendation and **re-reading it is what dissolved two of my three
+objections** — the pick is still made when the start waits. I would have shipped a worse question without it, so the
+hunt earned its cost.
+
+**What I read and did not use.** The map, in the main: I read all 107 lines cold as the contract requires, and used
+the never-delete rule, the glossary-is-authoritative line, the flag-settling bullet, the four writing rules and the
+bar. The landing policy, the dogfood target, the code-slot count, the firstmate fog, the out-of-scope section and
+most of `## Not yet specified` bore on nothing here. That is the map doing its job for other nodes, not waste — but a
+**grilling node about a word** needs perhaps a fifth of it. `decisions.md` I scoped by grep as instructed and used
+two lines of the ten it returned. `/domain-modeling` returned almost nothing I could act on: its whole method is to
+edit `CONTEXT.md` inline and offer ADRs, both of which my hard rules forbid, so I invoked it, found one usable
+instruction ("challenge against the glossary", which I was already doing), and left the rest unrun. `/grilling` gave
+me one genuinely useful idea — the frontier, which is what told me the reservation question gates the name question —
+and its round format and wait-for-the-user loop are overridden by the hard rules, so I ran neither. `/naming` was the
+one that paid: it produced the finding, and it is the skill the map names for terminology and that nobody had run.
+
+**What would have made this node easier.** Four things.
+
+1. **The occurrence counts, per file per tree, in the spawn.** As above. This is the single biggest saving available
+   and it is mechanical.
+2. **Knowing node 103 was about to land.** I priced a recommendation against a gate twice, in a payload that then had
+   to be revised because the gate closed while I composed it. The manager caught it, which is the system working —
+   but a spawn line saying *"node 103 is at its gate and may land at any moment"* would have stopped me leaning on a
+   transient fact at all. **A worker cannot tell which of the facts it is handed are about to expire, and only the
+   manager can.**
+3. **The rules changed under me twice mid-node** — node 117 on multi-question payloads, node 113 on the method-skill
+   lines in my own contract. Both arrived as manager notes, which worked. But I was invoking `/grilling` and
+   `/domain-modeling` under a contract clause that node 113 was in the process of deleting, and I spent tokens on
+   `/domain-modeling` for one usable line. **A worker working the contract that is itself being edited is a hazard
+   specific to this effort**, and it would be cheaper if a spawn said which of the contract's own instructions are in
+   flight.
+4. **Nothing told me `flags.md` was off-limits until my contract did, after I had already seen seven of its lines**
+   in the incidental output of a repo-wide grep. I did not open the file and did not use those lines as sites. But
+   **a worker forbidden to read a file will hit it by grep**, and the ban is stated as "leave it unread" rather than
+   "do not rely on its contents", which is the rule I actually needed.
+
+**What I found stale, wrong, or contradicting something else.** Five things, in descending order of consequence.
+
+1. **`CONTEXT.md`'s `_Avoid_` parenthetical was already false when it was written**, not falsified by node 103 as all
+   three agents at node 103's gate believed. `Closing report` and *"report the pick"* predate the collision. Both
+   checkers described it as *"the reason inside one going stale"* and it never was current.
+2. **`expedition/SKILL.md` will hold two names for one thing until the repair lands** — *"the report accompanying the
+   pick"* at the acceptance-conditions material, along `pick report` eight times. Node 103's diff did not reach it
+   and nobody reported it; I found it only by grepping for periphrases rather than for the term.
+3. **Node 95's clause 5** uses `closing report` for a per-node report, contradicting `CONTEXT.md`'s entry. Reported
+   by node 46's worker as a quote and, as far as I can tell, never checked against the file until now.
+4. **My own count was off by one in a payload the human read.** I told them 6 occurrences of `closing report` would
+   take the `effort` prefix; it is 5, the sixth being the `_Avoid_` line that clause 5 rewrites separately. Corrected
+   in the condition. It did not change the decision, and I record it because a number in front of the human should be
+   right.
+5. **`decisions.md`'s node 10 entry uses the word `completion report`**, which `CONTEXT.md`'s `Closing report` entry
+   explicitly refuses by name. Old prose under never-delete, so not a defect — but it is a live example of why clause
+   4's cue matters: a reader cannot tell a refused word from a current one without the glossary, and after a **flip**
+   they cannot tell a current word from an inverted one either.
+
+***The manager's note on the retrospective, and not the worker's.*** **Its item 4 corrects a number the manager
+relayed.** The manager put *"6 more in the same 3 files"* in front of the human, taken from this worker's own earlier
+payload; the true figure is 5. The worker found and corrected it unprompted. **Its "occurrence counts in the spawn"
+ask is now the third such ask on the record** — node 128's worker and node 133's worker made the same one in the same
+hour, each about a different mechanical fact. **The manager has still not minted a node for it.**
