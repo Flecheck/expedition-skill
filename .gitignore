@@ -2,3 +2,9 @@
 # Inside the repository so the human's review sees them; ignored so they are not
 # committed. See .scratch/graph-workflow/map.md, the landing policy.
 .worktrees/
+
+# The git worktrees the agent harness creates for implementation workers, one per
+# claimed node. Ignored so those worktrees are never committed. The entry above is
+# the path the landing policy used when the manager created worktrees by hand.
+# See .scratch/graph-workflow/map-implementation-rules.md, "How the worktree is made".
+.claude/worktrees/
