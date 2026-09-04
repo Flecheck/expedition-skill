@@ -136,3 +136,107 @@ governs."*
 ***The manager's note beside it, and not the worker's.*** The worker's `SO FAR` addresses the human in the second
 person throughout — *"your map"*, *"your node 52"*, *"your own replies"* — which is the form its contract writes
 questions in. It reaches the human unaltered when the channel frees.
+
+### Attempt 1, answer 1
+
+**The human's word, `verbatim`**, written at the moment they spoke:
+
+> Yes, it's B
+
+**The option it takes, quoted in full and attributed to the worker who wrote it**, not to the manager:
+
+> **(B) inside one node** — one worker puts several of its own independent questions in one relay, numbered. This is
+> literally the skill, and the worker is exactly the party the skill assumes. Node 108's ceiling of one need not move
+> at all: one relay payload in front of you, carrying a numbered round.
+
+**It agrees with the worker's recommendation**, which was *"(B) only"*, so it is not a divergence.
+
+***The manager's note, and not the human's words.*** **What the manager did not read into it.** The reply is to the
+question as asked — which of two things a batch is — and the worker's `ASK` offered `(B)` with one clause attached:
+*"with node 108's ceiling of one left standing over relay payloads"*. The manager reads the ceiling as **untouched**
+on that ground, and marks the reading as the manager's. **What is not settled by this word**, and is the worker's to
+put or not put: how many questions one numbered round may carry, whether a worker must number them even when it has
+one, what happens to a round answered in part, and whether the standing offer to raise the number of nodes that may
+need the human at once — open and unanswered — is affected at all. None of those was asked.
+
+#### The worker's correction of the manager's note above, pasted as it wrote it
+
+***The worker read the manager's note and corrected it. The manager accepts the correction and has struck the clause
+it applies to.***
+
+> **On the clause you flagged as your reading.** I think it is theirs, not yours. The sentence *"with node 108's
+> ceiling of one left standing over relay payloads"* was inside the `(B)` option text they assented to, and that text
+> also said *"one numbered round is one thing awaiting one reply"*. They took the option as written, so the ceiling
+> standing is part of what they endorsed rather than an inference laid on top of it. Record that beside yours.
+
+**The manager's clause it corrects, struck:** ~~*"The manager reads the ceiling as **untouched** on that ground, and
+marks the reading as the manager's."*~~ **The worker is right on the fact.** The `(B)` option text quoted above in
+this node's own record contains *"Node 108's ceiling of one need not move at all: one relay payload in front of you,
+carrying a numbered round"*, and the manager pasted that text into this file before writing the note that called it
+an inference. **The ceiling standing is part of what the human endorsed**, and the manager's caution made their own
+words look weaker than they were.
+
+### Attempt 1, question 2 — written and queued, not yet put to the human
+
+***Recorded by the manager as a queued payload, not as a question the human has been asked.*** Node 107's question
+held the channel when this arrived. **Pasted as the worker wrote it**; the manager authored none of it and has taken
+no view on it.
+
+> **What that does oblige, and it is shipped text rather than a new decision.**
+> `.claude/skills/expedition/SKILL.md:428` now reads *"Exactly one question is in front of the human at a time"*.
+> Under (B) that sentence is false as worded and true as meant — the count is of payloads awaiting a reply, not of
+> questions. The rule is untouched; the word has to change.
+>
+> **And one sentence in that file loses its stated reason.** Lines 442-444 say every relayed question names in one
+> line whatever else is waiting, *"by node name and kind only"*, because *"keeping it to a name and a kind is what
+> keeps a terse reply attributable to exactly one thing."* After (B) a relayed payload holds more than one answerable
+> thing by design, so that justification no longer describes what is true. The rule survives on its other ground — a
+> named-but-unasked item still cannot be answered by accident — but the clause stating why is now wrong.
+>
+> **Settled on my own authority, both reported as flags rather than asked.** No cap on how many questions a round may
+> carry: membership is by independence, which is the skill's own rule and the only one with a reason behind it, and I
+> measured that every grilling node in this effort ran one or two rounds carrying one question each — so a cap would
+> bind on nothing and is machinery for a predicted need, which the map's standing preference refuses. And no number
+> on a lone question: the presence of numbering is itself the signal that the payload holds more than one.
+>
+> **ASK:** When a round carries two questions and the reply is a bare *"ok for recommended"* naming neither — does it
+> endorse **every** recommendation in that round, or is it ambiguous, so the worker re-asks what the reply did not
+> name?
+>
+> **RECOMMENDED:** **It endorses every recommendation in the round, and nothing in the payload that is not a
+> recommendation.** Anything that names a question or an option settles what it names and leaves the rest open, and
+> whatever is left unnamed goes out in the next round rather than being guessed.
+>
+> It rests on what I measured about how this human actually replies: a bare assent to the recommendation is their
+> modal answer to an interview question — *"ok for recommended"* five times, plus *"ok"* and *"yes for
+> recommendation"*. Under the other reading their commonest reply fails against every batched round, so every round
+> ends in a re-ask and (B) spends a round instead of saving one, which is a net loss on the exact cost they asked to
+> reduce. It is also the plain reading: a round offers N recommendations, and *"ok for recommended"* assents to the
+> recommendations. My own contract already fixes this direction for the single case, naming *"ok for recommended"* as
+> an assent to be read as theirs.
+>
+> **And node 16 confirms it rather than refuting it.** That round held one recommendation plus three manager notes
+> that were not recommendations; their *"yes for recommendation"* reached the recommendation and not the offer, which
+> is what the node records as a miss. Under this rule that is the correct outcome — a bare assent reaches
+> recommendations only — and what actually went wrong there was a non-recommendation put in a payload while expecting
+> an answer to it, which this rule forbids by construction.
+>
+> **The risk, stated rather than smoothed.** Someone who meant *"ok for Q1, and I have not thought about Q2"* and
+> wrote *"ok for recommended"* gets Q2 settled unmeant. Two things bound it, both already in force rather than
+> proposed. They already volunteer a scope when they perceive ambiguity — *"for 91, ok"*, *"for 94 ok for
+> recommended"*, *"For 98, ok for recommanded"*, *"for 108, ..."*, four instances — and numbering is what makes the
+> ambiguity visible enough to trigger that reflex. And this effort already writes the option taken back to them in
+> the worker's next message, on every recorded round, so a wrong reading surfaces one turn later at the cost of one
+> turn.
+>
+> **ALTERNATIVES: Ambiguous, so the worker re-asks what the reply did not name** — safest, and it makes their most
+> frequent reply unusable in exactly the mode (B) introduces.
+> **Silence on a question counts as assent to its recommendation** — cheapest, and it is my contract's hard rule 1
+> broken outright: the worker answering for the human.
+> **The worker must ask them to number their reply** — puts the format burden on the scarce resource, and nothing in
+> the record suggests they would keep to it.
+
+***The manager's note beside it, and not the worker's.*** **Two shipped defects are named in this payload and neither
+has a node yet.** `SKILL.md:428`'s *"Exactly one question"* and lines 442-444's stated reason are both consequences of
+this node's own answer, and the worker has not yet handed over, so nothing has been minted. The manager is holding
+them rather than minting from a mid-interview payload.

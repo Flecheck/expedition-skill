@@ -95,3 +95,219 @@ shares no file with nodes 95, 103, 109, 111 or 114."*
 *"One expected movement"*. Node 110's answer makes a checker compare the recorded return against what the command
 returns now; this condition pre-empts the false positive that node 109 landing first would otherwise produce. Whether
 that is a shape other conditions should copy is nobody's node yet.
+
+## Answer
+
+*Node 116's worker's `ANSWER`, pasted as it wrote it. **The node is not resolved by this section**: the work sits
+uncommitted and its check is running.*
+
+> **Node 110's rule is now stated in `.claude/skills/expedition-checker/SKILL.md`, as one new `###` section, `### The
+> enumerator a condition records`.** Before this change the word `scope` appeared in that file zero times; it now
+> appears four, all inside the new section. Nothing else in the file moved: 36 insertions, 0 deletions, one file.
+>
+> **Where it went, and why there.** The section sits inside `## What you hand back`, between `### What you can
+> establish, and what you cannot` and `### PASS`. The condition left the placement to the worker and clause 11
+> required that a new rule *join an existing section rather than sit beside it*, which I read as forbidding a new
+> top-level `##` peer rather than a `###` inside one. Three things fix that position:
+>
+> - `### What every finding carries` is already read by then, so the closing sentence's citation of it points
+>   backwards rather than forwards;
+> - `### What you can establish, and what you cannot` is the file's existing statement of the checker's epistemic
+>   limits, which is exactly what clause 3 adds one more of — the two now read as one movement;
+> - `### PASS` and `### FAIL` come after, so *never on its own a `FAIL`* is read before the `FAIL` shape it
+>   qualifies.
+>
+> The `PASS` and `FAIL` code blocks were deliberately left untouched, clause 9 requiring them to stand exactly as
+> they stand; clause 1's demand that the outcome state the return is carried in the section's prose instead.
+>
+> **One wording call inside clause 3, and it is the only place my text is not the condition's own words.** The
+> condition's ground reads *"it holds no before-state"*. I wrote **"You were given no before-state"**. The bald
+> version would contradict the same file's given 3 — *"The work — the paths that changed, in the working tree holding
+> them. Produce a diff yourself if you want one"* — which presupposes the checker can reach a before-state, and it
+> was falsified in practice an hour before this node was claimed: node 103's checker attempt 2 ran `git grep -ln
+> "closing report" 47703bb` and used the baseline productively. The scoped version is true of the five givens, is the
+> file's own idiom (*"Your blindness is a property of what you were given, not of what you are"*), keeps the
+> condition's ground rather than replacing it, and leaves the baseline move available. Flagged below.
+>
+> **The condition's residual clause returned nothing.** *"A place this work finds stating what a checker establishes
+> about a condition's scope, outside the file above, is reported and not edited."* Searched over every tracked file
+> under `.claude/` plus `CONTEXT.md`, unwrapped into unbroken text, for *checker*/*check* within 80 characters of
+> *scope* in both orders. One hit, `graph-conventions.md`'s *"must be ruled out of scope too"* — the mechanical check
+> on unsatisfiable `Blocked by:` edges, not a statement about a condition's scope. **No place outside the checker
+> contract was found, so nothing was owed here.**
+>
+> **`CONTEXT.md` is unchanged, and no term moved.** *enumerator*, *extent* and *scope* carry no entry there; the new
+> section coins nothing and reuses the file's own `enumerator`, defined one section above as extent rung 1. The
+> `Acceptance condition` and `Checker` entries both stand true after the change.
+>
+> **The condition's own enumerator, re-run before any edit, was exact in all three halves.** `grep -rln "enumerator"
+> --include="*.md" .claude/ CONTEXT.md` → one path, the checker contract. Same command over `extent` → the same one
+> path. `grep -c "scope" .claude/skills/expedition-checker/SKILL.md` → **0**. Node 109 has not landed, so the
+> one-path return stands and the eight-path movement the condition anticipates did not occur.
+>
+> **The bar.** No build, no tests, no formatter, as the map records. `/coding-principles` and `/naming` were invoked;
+> `/writing-for-agents` was read as ground rule 5 requires. The section is second person, states rules rather than
+> explaining them, and its one prohibition (*never quietly narrow the command to the tree*) is paired with the
+> positive that precedes it, per that skill's negation lever. Its name was derived by the naming method from *"the
+> search an acceptance condition records as having produced its scope"*, stripped of what the file and the section
+> already carry.
+
+**The manager's note beside it**, and not the worker's. **This is the first node on this graph whose worker re-ran
+its own condition's enumerator before touching anything**, and it reports the cost as seconds. The rule node 110
+wrote for the checker turns out to be worth something one step earlier, to the worker, as a check that its premise
+holds before it works. Nobody asked for that and no node covers it.
+
+## Index line
+
+*The worker's, pasted.*
+
+> The checker contract gains one section stating that it runs a condition's recorded enumerator, compares against the
+> recorded return, and never `FAIL`s the work on that comparison alone.
+
+## Flags
+
+`116.1` `ASSUMPTION` — **Clause 3's first ground is stated as a limit on what the checker was given, not on what it
+can reach.** The condition's words are *"it holds no before-state"*; I wrote *"You were given no before-state"*. I did
+not raise, because the condition is satisfiable, measurable and coherent, and its demand — that the contract state
+the checker is not asked about scope growth, with those three grounds — is met in full. I settled the wording rather
+than the substance, on two things I could check: the bald sentence would contradict `## What you are given`'s third
+given in the same file, which tells the checker to produce a diff itself and so presupposes a before-state; and node
+103's checker attempt 2 reached one an hour before this node was claimed, re-running the condition's enumerator
+against commit `47703bb`, confirming the recorded four exactly, and correctly diagnosing the 4→3 divergence as the
+work having repaired the fourth file — the single most useful thing either of that node's two checkers did with the
+rule.
+
+**On whether clauses 2 and 3 conflict with that practice, which I was asked to judge: they do not, and one ground
+under clause 3 is weaker than the evidence.** Clause 2 says what to compare against and forbids no further
+diagnostic; attempt 2 compared against the recorded return and satisfied it before doing anything else. Clause 3 says
+the checker is *not asked* — which my text states, and which forbids nothing — and *cannot establish* scope growth.
+That conclusion survives on a ground the condition does not state: the checker does not know which commit the
+condition was written against, that being in the record it is blind to, and a branch's fork point is not necessarily
+that commit. I did not add that ground, an unrequested reason being a repair of the condition rather than a rendering
+of it. **The risk I accepted:** a checker reading *"you cannot establish it"* may take the baseline re-run to be
+outside its remit and hand back a bare mismatch where attempt 2 handed back a diagnosis. That is the new node below.
+
+## Invalidations
+
+*The worker's, pasted.*
+
+> none.
+
+## Gate payload, as the worker handed it back
+
+*The worker's, pasted. Its first line was true when written; the check is now running.*
+
+> No checker has run yet, so nothing was found and nothing was changed in response.
+>
+> *Paths touched, all inside the worktree `/home/mathieu/projects/graph-agent/.worktrees/116-checker-enumerator-duty/`:*
+> - `.claude/skills/expedition-checker/SKILL.md` — 36 insertions, 0 deletions, one new `###` section.
+>
+> `CONTEXT.md` was read and deliberately not changed: no term moved. No file under `.scratch/` was touched. `git
+> status --porcelain` in the worktree shows exactly one modified path and no untracked file.
+>
+> *Diff:* `git -C /home/mathieu/projects/graph-agent/.worktrees/116-checker-enumerator-duty diff`
+>
+> *What the human is being asked to look at, beyond the diff:* one judgement call. The condition's clause 3 mandates
+> the ground *"it holds no before-state"*; I wrote *"you were given no before-state"* instead, because the bald form
+> contradicts the same file's own instruction to the checker to produce a diff itself, and because a real checker
+> reached a before-state an hour ago and used it well. The substance of the clause is unchanged and all three grounds
+> are stated. Everything else in the section is the condition's own words.
+>
+> *Proposed commit message:*
+>
+> ```
+> State the checker's duty to re-run a condition's recorded enumerator
+>
+> An acceptance condition may record the search that produced its scope. Four
+> recorded enumerators exist on this graph and two were false as recorded, with
+> nothing having re-run any of them until node 110 did.
+>
+> The checker contract now states the duty: run the recorded command as written,
+> say in the outcome what it returned and whether that matches the return the
+> condition records, and compare against that recorded return rather than the
+> condition's list of places. A mismatch, or a return reaching an unlisted place,
+> travels alongside the outcome as a finding and is never on its own a FAIL. What
+> stays a FAIL is the work editing a file outside the list, established from the
+> diff. An enumerator whose domain reaches the effort's record is run as written
+> and reported, never quietly narrowed to the tree.
+>
+> The rule holds whoever wrote the enumerator, and the checker is not told.
+>
+> Node: graph-workflow/116
+> ```
+
+## Retrospective
+
+*The worker's, pasted. Handed back as text on this effort only, and never filed by the worker.*
+
+> **What I had to hunt for.** Two things, and both were in the record rather than in my node.
+>
+> The first is the one that decided my only judgement call: **what a checker actually does with a recorded enumerator
+> in practice.** My spawn named node 103's `## The checker` and that pointer was worth more than anything else I was
+> given — but it named the section, not the fact, so I read both attempts end to end to find the four lines that
+> mattered (`git grep -ln "closing report" 47703bb`, and the sentence concluding the divergence was the work
+> repairing the fourth file). The fact I needed was *which commit* the baseline was and *how the checker got it*,
+> because that is what tells you whether clause 3's ground is false or merely narrow. A spawn line reading *"attempt
+> 2 reached a baseline at `47703bb` by its own hand, not by being given one"* would have replaced that read.
+>
+> The second: **whether `## What you are given` presupposes a before-state.** Nothing pointed at it. I found it
+> because I read the target file whole before editing, which was right, but the collision between given 3 (*"Produce
+> a diff yourself if you want one"*) and clause 3 (*"it holds no before-state"*) is the load-bearing fact of this
+> node and it is invisible from either document alone. It is the same shape node 110's worker reported: absence, and
+> now contradiction, does not announce itself.
+>
+> **What I read and did not use.** `map.md` in full, the largest single read of the node: destination, dogfood
+> target, landing policy, the code-slot count, the label vocabulary, out of scope, and eight fog items. Six lines
+> bore on the work — the bar's commands, the review route, ground rules 1-5, standing writing rules 1-4, and the
+> retrospective instruction. `decisions.md` scoped by grep to checker and condition lines, ~20 of 88; I opened three
+> of those nodes and used two. Node 110 in full, of which I used `### The rule`, `### What the comparison is against`
+> and `### Why not a FAIL`; its evidence table, its three flags and its retrospective were confirmation I did not
+> draw on, though its retrospective's third point predicted my own first hunt exactly. Node 94's `## Answer` in full
+> for one thing — the residual clause's exact wording, *"it is reported and not edited"*, which my clause 4 bullet
+> had to be faithful to. Node 103's checker section in full, of which about fifteen lines mattered.
+> `/coding-principles` and `/naming`, invoked as the contract requires and honestly thin on a prose deliverable: the
+> altitude rule shaped the ordering inside the section, the naming method produced the heading, and the rest — silent
+> fail, illegal states, struct naming — has no purchase on markdown. `/writing-for-agents` earned its read on exactly
+> one lever, negation, which changed one sentence.
+>
+> **What would have made this node easier.**
+>
+> First, **the condition's enumerator was the cheapest and most valuable thing in my payload and it is three
+> commands.** Running them was my first act after reading the contract and it took seconds. That is the rule working:
+> I began knowing the premise held rather than assuming it. Nothing to improve — recorded because it is the first
+> node whose worker verified its own condition's enumerator before touching anything, and it cost nothing.
+>
+> Second, and it is the same structural point node 110's and node 94's retrospectives both made, hit a third time:
+> **what I needed from node 103 was an artifact, not a decision.** Its index line in `decisions.md` does not mention
+> enumerators, baselines or checkers re-running anything; the fact I needed lives in a quoted checker outcome inside
+> the node file. My spawn carried the pointer by hand, which is the manager compensating for a graph that indexes
+> decisions and not artifacts. Three workers have now reported this and none of us has a fix. What I can add from my
+> side: **the artifact I needed was a checker's outcome text**, and those are accumulating on node files with no
+> index at all — the graph indexes what was decided and what was flagged, and never what was *run*.
+>
+> Third, my spawn's manager notes were correctly marked as context rather than steer, and the sentence *"Whether
+> those conflict is yours to judge and, if you judge they do, to report rather than resolve silently"* is the reason
+> this handover contains a judgement instead of a raise. It named the choice, named that it was mine, and took no
+> position. The one thing it could not give me, and which I had to derive, was whether the conflict was severe enough
+> to be a raise — that turned on the target file's own text, which the manager had correctly not read.
+>
+> **What I found stale, wrong, or contradicting something else.**
+>
+> - **Clause 3 of my own acceptance condition states a ground that is false of a checker in a git repository**, and
+>   false in a way its own target file already contradicts: `## What you are given`'s third given tells the checker
+>   to produce a diff itself, which requires a before-state. The condition was written before node 103's checker
+>   demonstrated the capability, so this is the condition aging by one hour rather than an error at writing time.
+>   **This is now the third consecutive node whose node file is an instance of its own finding** — node 94's and node
+>   110's retrospectives each recorded one, and mine is that a condition's recorded claim went stale under it, which
+>   is precisely the class the condition exists to make checkable.
+> - **`CONTEXT.md`'s `Code slot` entry is stale against `map.md`.** It reads *"Occupancy is discovered from the
+>   working tree rather than recorded"*; the map now says occupancy *"is discovered by counting the live worktrees
+>   ... rather than by inspecting the working tree for uncommitted changes, so the human's own edits no longer read
+>   as an occupied slot"*, set at node 68. The glossary states the superseded mechanism, and the map's own line names
+>   the reason it was superseded. Outside my condition's scope, so reported and not edited.
+> - **The map's `## Notes` line naming `/grilling` and `/domain-modeling` as skills every session should consult is
+>   still contradicted by practice**, and node 110's retrospective already reported it three-for-three on grilling
+>   nodes. I add the implementation side: `/coding-principles` and `/naming` were invocable and I ran them, and on a
+>   pure-prose deliverable they returned almost nothing usable, while `/writing-for-agents` — which the map reaches
+>   only through ground rule 5, not through that Notes line — was the skill that changed the text. Node 113 exists
+>   for this; recorded as its evidence rather than as a new report.
