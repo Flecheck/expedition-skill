@@ -164,3 +164,9 @@ Non-command half against all five named standards, `CONTEXT.md`'s 40 `_Avoid_` l
 carries no `NOT COVERED:` label. **Its residual is the gap flag `145.3` predicted by name** and accepted in advance:
 between this node landing and [node 151](151-write-the-checker-contracts-how-you-check-section.md) landing, the
 shipped contract states standards it no longer routes to a verdict. Sequencing 151 next closes it.
+
+***The manager's note at the gate.*** **The human invoked `mattpocock-skills:wait-what` on this node** rather than
+answering the gate, asking the manager to re-pitch it with context, in ASD-STE100 Simplified Technical English and in
+this effort's vocabulary. **The manager wrote that re-pitch itself and decided nothing.** It is the manager's own
+text and not this node's record; the gate payload of record is above. This is the third re-pitch the human has asked
+for on this effort, after nodes 132 and 141, and the first on a gate rather than on a question.
