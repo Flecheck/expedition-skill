@@ -102,3 +102,99 @@ node 136's split falls from ~41% to ~31%, and *"that reading also implies the ch
 which is a larger change than this node."* **[Node 140](140-move-the-implementers-and-checkers-material-out-of-the-map.md)
 is blocked on this node for exactly that reason**, its acceptance condition being written in part with the
 destination left out.
+
+## Interview
+
+### Attempt 1, question 1 — delivered
+
+*Pasted as the worker wrote it. The manager authored none of it and has taken no view.*
+
+> **NODE:** Where the rules a checker is held to live, now that it may not go and find them
+>
+> **ABOUT:** Your direction says the checker must not go hunting for the rules it holds work against — they belong in
+> a file, "at the map level", sent by the manager or read by the checker, and used by the implementer too. The
+> direction is in force. This decides which file, and that is the one thing an implementation node already written and
+> waiting cannot start without.
+>
+> **SO FAR:** I read the checker's and implementer's shipped contracts, map.md, the four decisions that bear on this,
+> and the two nodes waiting on me. Three things I found matter, and one of them is happening right now.
+>
+> **1. THE LITERAL READING OF "AT THE MAP LEVEL" DOES NOT ACTUALLY WORK.** The checker is the one worker that never
+> reads map.md — it is kept blind to the record so its check is independent, and its own contract says so in as many
+> words. So if the rules stay inside map.md, the manager must keep hand-copying them into every checker spawn, which
+> is precisely the arrangement your direction is aimed at. It is also the arrangement that just failed: about an hour
+> ago the manager resumed a live checker telling it "no standard moved" when one had, and that checker then went and
+> found and ran mattpocock's code-review skill by exactly the discovery route you barred. The manager has been
+> transcribing a checker's rules by hand for several nodes. A rule in a file is editable; a rule that reaches the
+> agent through a manager's retyping is editable and then mistyped.
+>
+> **2. A SIBLING FILE IS A FILE, AND YOUR OWN SENTENCE CONTEMPLATES ONE.** "or just read by the checker" is a file the
+> checker reads. Your stated ground is changeability, and a sibling next to map.md is exactly as editable as map.md.
+> It also gives you the single source your last clause asks for: one file the implementer reads and the checker
+> reads, instead of today's split where the implementer is sent to /coding-principles and /naming while the standard
+> that actually bites on prose is named only in map.md, which the implementer's contract never points it at. Three
+> retrospectives have reported that defect.
+>
+> **3. A COLLISION THAT IS LIVE AS I WRITE.** You answered "Q1 ok" to moving per-kind material out of map.md into
+> siblings named for their reader. Two implementation nodes came out of that: node 139 for the manager's material,
+> running now, and node 140 for the implementer's and checker's, blocked on this question. Node 139's condition moves
+> the paragraph headed "The review route for this repo" into the MANAGER's file — and that paragraph is the checker's
+> standards list. Written before your direction arrived, it was right then (the manager read it to compose a spawn)
+> and is wrong now (the checker should read it itself). Its worker has not written a byte yet, so this is fixable at
+> no cost if it is decided now, and is a second move later if it is not.
+>
+> **WHAT I SETTLED MYSELF, coming back as assumptions:** that this question is answerable without first settling
+> whether your direction reaches the shipped skill files or binds this effort only (it is — the material moves out of
+> map.md either way, only the reader changes); and that a filename is bookkeeping rather than yours to choose.
+>
+> **ASK:** Where does the implementer's and checker's material go — the bar's commands, the landing and worktree
+> policy, the code-slot count, and the standards list the checker holds work against?
+>
+> **RECOMMENDED:** Into ITS OWN new file beside map.md, separate from the manager's file, holding the standards list,
+> the bar's commands and the landing policy, read directly by the checker and by the implementer, with map.md keeping
+> a one-line pointer. The review-route paragraph moves here rather than into node 139's manager file, and its
+> operative list is separated from its story — the part recording that two earlier checkers burned their biggest cost
+> finding these standards stays with the manager or goes to map-history.
+>
+> It rests on three things rather than on preference. (a) It is the only reading under which nothing is retyped: a
+> file the checker reads is a file you edit once. (b) The separation from the manager's file is forced by a rule this
+> effort already fixed — only standing constraints true of any node's work may reach a blind checker, never an
+> account of what happened on some other node. The manager's file is full of exactly that: the fog, the dogfood
+> target, and the accounts. Share one file and either the checker reads material it is meant to be blind to, or the
+> manager is back to selecting by hand, which is the defect. Two files, and the line between them is a test that
+> already exists and needs no new judgement. (c) It preserves the measured saving in full: the split you approved
+> takes ~41% off the file every worker reads cold on every node, and keeping this material in map.md drops that to
+> ~31%.
+>
+> One consequence I should name rather than bury: the standards list currently points at "this map's standing
+> preferences, ground rules and four standing rules", which sends the checker back into map.md. For the file to stand
+> alone those rules have to live in it, with map.md pointing at them — which is a move, not a copy, so nothing is
+> duplicated and nothing is deleted.
+>
+> **ALTERNATIVES:**
+> — Literally inside map.md, as the words "at the map level" most plainly read: no new file, but the rules stay in
+> the one file the checker may not read, so the manager keeps transcribing them by hand, and the saving you approved
+> falls from ~41% to ~31%.
+> — One shared sibling with the manager's material: cheapest, one file instead of two, and node 139 needs no
+> correction — but the checker then reads the fog, the dogfood target and accounts of what happened elsewhere in the
+> record, or the manager hand-selects again.
+> — Keep the rules in map.md and let the checker read map.md: single source, no new file, and it ends the checker's
+> blindness to the record, which is a far larger change than this node and would cost you the independence the
+> checker exists for.
+> — Change nothing structural and just ban the one skill by name: least work, and it leaves in place the thing you
+> objected to — a rule the checker finds for itself, which nobody can edit.
+
+***The manager's note beside it, and not the worker's.***
+
+**Its point 3 is a raise about another node's acceptance condition, and the manager is carrying it as such rather than
+acting on it.** A condition that is wrong goes to the human; it is not the manager's to amend and not this worker's to
+rewrite. **The manager verified the one fact the timing turns on** rather than taking the worker's word: `git status`
+in `.worktrees/139-map-split` returns nothing and `git diff` is empty, so node 139's worker has written no byte. That
+was true at the moment of writing and is not guaranteed to hold.
+
+**Its point 1 cites the manager's own failure accurately.** The manager recorded that failure on node 133 and named
+it in the spawn as *"one data point about the status quo, not an argument for any option"*. The worker used it as
+one, which is what it was offered as.
+
+**The manager takes no view on the ask or on any alternative**, and has not weighed the two-files-versus-one
+argument.

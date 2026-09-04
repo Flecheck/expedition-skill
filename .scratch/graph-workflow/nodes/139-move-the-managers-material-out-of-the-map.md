@@ -107,3 +107,12 @@ arriving minutes after this node started:
 restructuring the section the bullet would sit in — an edit in the main checkout would collide with this node's work
 at its rebase. **The manager owes that bullet the moment this node lands**, and records the debt here so a later
 reader, or a later manager, finds it. In force from now: nodes 138 and 139 run to their end and nothing else starts.
+
+***Corrected by the human in the next breath, and the debt above is void.*** Their words, `verbatim`:
+
+> Its not a new preference, its just now you should try to finish what is running
+
+**So it is a one-off instruction and not standing steering.** The paragraph above reads it as reversing the *"the
+manager never idles"* preference and records a map bullet as owed at this node's landing; **that reading is wrong and
+no bullet is owed.** The text stays where it is under the never-delete rule. What holds: nothing new starts until
+what is running finishes, and `map.md` gains nothing from it.
