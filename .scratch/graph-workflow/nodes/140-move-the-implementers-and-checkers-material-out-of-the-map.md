@@ -119,3 +119,31 @@ in characters, so a reader comparing the two numbers should hold them in the sam
 146](146-graph-conventions-map-rules-name-two-notes-sections.md)**, which both edit `graph-conventions.md`. Node 142
 is blocked on this node precisely so the shape is corrected once; node 146 is not, and with a code slot of one all
 three serialise.
+
+## The work was cut from a stale base — banked before the correction round
+
+*Filed by the manager. The worker's finished work is complete against the tree it was given and is not in question.*
+
+**What happened, measured.** The harness cut this node's worktree at `c3d50bf`, which is `origin/master`. Local
+`master` was six commits ahead and unpushed. A harness worktree's base is governed by `worktree.baseRef`, whose
+default is `fresh` — *branches from `origin/<default-branch>`* — and this effort pushes nothing, so **every harness
+worktree is cut from the last pushed state rather than from what the manager is standing on.**
+
+**Why it bites this node in particular.** Commit `9c06955` modified the landing policy in place and inserted a new
+paragraph, `**A worktree is created by the harness, never by hand.**`, between two of the four bodies this node
+moves. So on `master`, `map.md` is 33,007 bytes rather than the 31,481 the condition records as the before-state, and
+a rebase of this work conflicts on `map.md`.
+
+**Whose fault, recorded plainly.** The manager's, twice. It edited `map.md` while this node was claimed and its
+subject was `map.md`, which is the two-writers collision [node 115](115-two-writers-edit-the-map-at-once.md) already
+names. And it chose the harness worker-isolation route provisionally without establishing where that route cuts
+from — the thing [node 150](150-which-harness-route-creates-a-worktree.md) was minted to settle and which was
+running unanswered while this node worked.
+
+**What the manager did.** Not a gate and not a checker run: the worker is resumed to bring its worktree to current
+`master` and re-apply its own work, its handover recording every step mechanically. Its first act is to commit what
+it has onto its own branch so nothing is lost before any reset. The worker's own recommendation was the same —
+*"The cheapest route is to re-cut a worktree from current `master` and replay this work"*.
+
+**The worker's handover from the stale base is not discarded**: it is the record of what the work is, and the replay
+is held against it.

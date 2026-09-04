@@ -135,3 +135,31 @@ and E was not named; on this effort the human's two preceding answers took recom
 (*"yes recommended"*, *"recommended ship it"*). So the reply is read as the recommendation, which reaches the shipped
 files. Recorded here rather than left to inference, because the difference between the recommendation and E is
 whether the change reaches the shipped worker contracts at all.
+
+**The human's correction**, `verbatim`, sent immediately after the answer above and while the worker was writing its
+handover:
+
+> wait revert: leave decisions in read-whole - it's small enough
+
+**`DIVERGENCE`.** The recommendation was package A entire, and part (ii) was *"`decisions.md` moves off every
+worker's read-whole list onto that search list"*. The human keeps (i) and (iii) and reverts (ii), so the answer now
+departs from the worker's recommendation on the part carrying its largest measured saving.
+
+***The manager's note.*** **The measurement the reverted part rested on stands in the record and is not withdrawn**,
+so a later reader does not mistake the revert for the measurement being wrong: the worker measured `decisions.md` at
+24,345 bytes (~6,000 tokens), 42% of the two files every worker reads whole, with seven retrospectives reporting that
+no worker used more than about four of its 74 entries and three reporting that searching it instead worked and cost
+almost nothing. The human's stated ground is *"it's small enough"*. The manager put nothing to them about it and
+relayed the correction to the worker unaltered.
+
+**The human's ground for the revert**, `verbatim`, given unprompted after it:
+
+> the rationale for decisions being kept fed is that LLMs will otherwise hardly proactively search for decisions,
+> whereas if it's fed to context, the LLM's engine will take it into account naturally - and it's small enough.
+
+***The manager's note.*** **This meets the worker's measurement rather than overriding it.** The worker's evidence was
+that no worker *used* more than about four of `decisions.md`'s 74 entries; the human's ground is that entries in
+context are taken into account without being cited, so a count of explicit uses does not measure the file's effect.
+It also names the failure the search instruction would cause — that a worker told it may search will mostly not — which
+is a claim about part (i)'s reliability and not only about (ii). The manager relayed it to the worker unaltered and
+put nothing to the human about it.
