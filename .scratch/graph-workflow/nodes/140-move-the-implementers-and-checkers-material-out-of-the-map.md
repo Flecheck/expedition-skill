@@ -255,3 +255,26 @@ clause its own worker had already reported unmet at flag `140.5`, and it names a
 checker found it independently and blind to that node.** And the checker's clause 8 reading is the same reading the
 worker reached at flag `140.2`, arrived at separately by two parties who could not see each other. **Amending a
 condition is not the manager's**, so clause 14 goes to the human at the gate.
+
+### The amendment to clause 14
+
+**Decided by the human at the gate**, `verbatim`:
+
+> 140 -> amend the rule so that path I say can stay can stay, and so that the checker then passes.
+
+The manager records the amendment rather than authoring it; its substance is the human's and its scope is drawn from
+the exception they had already stated at [node 147](147-graph-records-name-absolute-paths-on-a-machine.md),
+`verbatim`: *"the 'Lang' project references can stay for now."*
+
+~~Clause 14: *"Every markdown link in `map.md`, in `map-manager-only.md` and in the new file resolves to a path that
+exists."*~~ is amended to except a link whose target is **a path outside this repository**. Such a link is not
+required to resolve. Every other markdown link in those three files must still resolve to a path that exists.
+
+**This amendment is part of the condition** and travels with it to the checker.
+
+***The manager's note.*** **It reaches one other live condition and the manager has not touched that one.** [Node
+144](144-make-the-rules-file-stand-alone.md)'s clause 6 makes the same demand over the same files and will hit the
+same link; amending it is not the manager's, and [node
+154](154-the-dogfood-link-names-a-path-on-another-machine.md) is the node that holds the general question. **Flag
+`140.5` is not withdrawn**: the worker's judgement to report the clause unmet rather than repair or raise it was
+correct against the condition as it then stood.
