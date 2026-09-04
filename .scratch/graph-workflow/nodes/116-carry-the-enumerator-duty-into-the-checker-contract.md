@@ -1,7 +1,7 @@
 # Carry the checker's enumerator duty into the checker's contract
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 ## Question
 
@@ -166,7 +166,7 @@ holds before it works. Nobody asked for that and no node covers it.
 
 ## Flags
 
-`116.1` `ASSUMPTION` — **Clause 3's first ground is stated as a limit on what the checker was given, not on what it
+`116.1` `ASSUMPTION` **settled** — **Clause 3's first ground is stated as a limit on what the checker was given, not on what it
 can reach.** The condition's words are *"it holds no before-state"*; I wrote *"You were given no before-state"*. I did
 not raise, because the condition is satisfiable, measurable and coherent, and its demand — that the contract state
 the checker is not asked about scope growth, with those three grounds — is met in full. I settled the wording rather
@@ -459,3 +459,25 @@ Every earlier check left parts owed because its condition named the effort's own
 
 **The gate is ready and is queued.** Node 107's question was live when this outcome arrived, and a live question is
 never displaced, so the gate waits behind it rather than in front of it.
+
+## Interview
+
+### The gate — approved
+
+**The human's word, `verbatim`**, written at the moment they spoke:
+
+> approve
+
+**What it settles.** Node 116's one outstanding flag, `116.1`, is settled by this approval.
+
+***The manager's note on what the manager did not read into it.*** The gate payload put the checker's five questions
+in front of them and this word names none. **Two of them asked to be ratified rather than settled**, and the manager
+records them as unanswered rather than as approved:
+
+- the checker's own request that the human ratify the clause-3 departure *"rather than have it stand on my judgement
+  alone"* — the flag is settled, which retires the judgement as revisitable, but no word of theirs addresses the
+  ratification the checker asked for;
+- the question of whether clause 6's record-reaching branch reverses the checker's blindness. **Nothing on the graph
+  covers it**, and the manager has not minted a node from inside a gate.
+
+A settled flag is a judgement no longer open to revisit; it is not an answer to a question asked beside it.

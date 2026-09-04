@@ -350,3 +350,89 @@ deciding.***
 3. **Their reply ends in a question mark.** The manager reads that as inviting a view rather than as issuing a
    decree, and **that view is the worker's to give, not the manager's** — the worker holds the interview. It has been
    put back to the worker with the three facts above and no manager position.
+
+### Attempt 1, question 2 — written and queued, not yet put to the human
+
+***Recorded by the manager as a queued payload.*** Node 116's gate held the channel and node 113's first question was
+already queued ahead of it. **Pasted as the worker wrote it**; the manager authored none of it and has taken no view.
+
+> **ABOUT:** One thing is left: whether an unqualified **closing report** is allowed to change meaning. Your answer
+> renames the pair, which makes the bare form the node-level report where today it is the effort-level one
+> everywhere. That is the last decision in this node; everything else your answer settled or I have.
+>
+> **Your answer is taken, and my recommendation lost.** The pair is **effort closing report** and **node closing
+> report**, sharing a head and disambiguated by prefix. *pick report* disappears — it lived for one commit, so that
+> costs nothing.
+>
+> **How I read the part that offered two candidates**, so you can correct it: your reply floats "closing report or
+> close report" and then concludes *"so we can do effort closing report and node closing report, shortened to closing
+> report"*. I read the conclusion as superseding the list, and `close report` as raw material you set aside — because
+> "shortened to closing report" only parses under the shared head; `close report` does not shorten to `closing
+> report`. So I did not spend a question confirming it. If that reading is wrong, it is the one thing to correct.
+>
+> **The repair, measured on master now that node 103 has landed.** *pick report*: 14 occurrences in 4 files —
+> `expedition/SKILL.md` (8), `graph-conventions.md` (3), `CONTEXT.md` (2), `expedition-precondition/SKILL.md` (1).
+> Effort-level *closing report*: 6 more in the same 3 files, needing the prefix. Plus one entry renamed and one
+> added. About 21 mechanical edits in 4 files, one node, no ambiguity in any of them.
+>
+> **The flip's blast radius, which is the question.** "closing report" appears **197 times across 35 files** in this
+> effort's record — `map.md`, `decisions.md`, `map-history.md` and 32 node files — and every one means the
+> effort-level report. The never-delete rule keeps all 197 unaltered. The map's standing answer covers this: *"Prose
+> written before a word changed still says the old word: that is the never-delete rule rather than drift, and the
+> glossary is authoritative."*
+>
+> **But that rule was written for a rename, and this is a flip**, which is the one distinction I want to put in front
+> of you. After a rename, stale prose says a word that is no longer vocabulary — visibly old, and a reader checks the
+> glossary. After a flip, stale prose says a word that is *current* vocabulary and means the opposite thing —
+> invisibly old, and a reader has no cue to check anything. 197 sites is the largest stale set this effort has
+> created in one decision.
+>
+> **Your reason for the flip holds up on measurement, and I checked it because it is the thing that decides this.**
+> You said the node-level one is used most. That is true of the act, and it is also true of the word in the shipped
+> files: 14 node-level against 6 effort-level. So the short form does go to the commoner term.
+>
+> **Which `CONTEXT.md` entries the repair node needs to own**, since node 113 found that file has a separate stale
+> entry and someone else will be editing it: the `Handover` entry's `_Avoid_` line; the `Closing report` entry,
+> renamed; a new entry for the node-level report under `## Talking to the human`; and the `Flag` and `Raise` entries,
+> which both name these reports in prose. It does **not** touch the `grilling` entry — node 113's "one question at a
+> time" staleness is not mine and my repair should not silently absorb it.
+>
+> **ASK: Q2.** May an unqualified **closing report** mean the node-level one, as you proposed — accepting that 197
+> existing uses meaning the effort-level one become invisibly stale? Or must the shipped files always carry the
+> prefix, so the bare form is never written again and nothing flips?
+>
+> **RECOMMENDED:** Take the flip as you wrote it, and disarm it with one sentence in the glossary: the `Effort
+> closing report` entry states that an unqualified "closing report" means the node-level one, and that prose written
+> before this change means the effort-level one. That puts the cue in the one file the map already declares
+> authoritative and that every worker is required to read before writing anything — which is the exact mechanism this
+> effort already relies on for stale vocabulary, used here for a case it was not written for. Cost: one sentence. It
+> keeps your shortening, keeps the commoner term short, and gives the 197 the cue they would otherwise lack.
+>
+> I am recommending your option rather than mine, and not merely deferring to it: the flip's cost turned out to be
+> one sentence rather than a hazard, and the measurement backs your frequency reason.
+>
+> **ALTERNATIVES:** Mandate the prefix in the shipped files, bare form never written — nothing flips and the 197 stay
+> correct by construction, at the cost of the shortening you asked for and of two three-word terms in files that use
+> them 20 times.
+> Flip it and say nothing — saves one sentence, and leaves the largest invisible stale set this effort has made with
+> no cue anywhere.
+
+***The manager's note beside it, and not the worker's.***
+
+**The indeterminacy the manager flagged is resolved, by the worker and on a textual ground rather than by
+preference.** The manager recorded that the human's reply named two candidates and did not choose. The worker read
+the conclusion as superseding the list, on the ground that *"shortened to closing report" only parses under the
+shared head; `close report` does not shorten to `closing report`* — and marked the reading as its own, correctable in
+one line, rather than spending a question on it. **The manager accepts that this is the worker's reading to make**,
+having put the fact to it without a position.
+
+**The distinction the worker drew is new to this graph and the manager had not seen it.** The map's standing answer
+for stale vocabulary — *"prose written before a word changed still says the old word … and the glossary is
+authoritative"* — was written for a **rename**, where stale prose uses a word that is no longer vocabulary and so
+reads as visibly old. **This is a flip**, where stale prose uses a word that *is* current vocabulary and means the
+opposite. The manager's own note had named the flip as a cost; it had not seen that the effort's existing mitigation
+does not reach it.
+
+**One number the manager records because it bears on more than this node.** *"closing report"* appears **197 times
+across 35 files** in the record. Whatever is decided here, that is the largest population of text this effort has put
+at risk of meaning something else, and nothing on the graph watches for it.

@@ -1,7 +1,7 @@
 # `CONTEXT.md`'s `Destination` entry does not say the destination states whether the effort is expected to end
 
 Type: implementation
-Status: open
+Status: claimed
 
 ## Question
 
