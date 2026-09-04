@@ -1,7 +1,7 @@
 # Whether the workflow ships its own reviewing discipline, now that a checker may not find one
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 

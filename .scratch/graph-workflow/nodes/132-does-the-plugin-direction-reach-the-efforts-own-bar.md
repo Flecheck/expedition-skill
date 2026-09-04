@@ -1,7 +1,7 @@
 # Whether "not depend on mattpockock" reaches this effort's own never-shipped bar
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: 138
 
