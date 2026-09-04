@@ -235,3 +235,69 @@ landed as commit `106380a`.** There is no gate to force a round on and nothing t
 in a new node against landed files. That changes the cost the recommendation is priced against, and it is a cost the
 human was going to be asked to weigh. **The manager corrected the fact to the worker rather than correcting the
 question**, which is the worker's to revise or to stand by.
+
+#### The revised second question, superseding the one above
+
+***The worker was given the fact that node 103 had landed and revised its own payload. The version above is not
+deleted; this one supersedes it.*** The worker's framing of what it did, in its own words: *"Node 103 landing removes
+a price my recommendation partly rested on. That obliges me to re-decide rather than restate, so I have re-run the
+candidates with cost nearly out of the comparison — and one alternative gets stronger, not weaker, when cost falls.
+The recommendation survives, on narrower grounds."*
+
+**Pasted as it wrote it. Only the parts that changed are reproduced; the unchanged parts of the payload above stand.**
+
+> **ABOUT:** Whether *pick report* is the right name for the manager's per-node message, now that it is allowed to
+> keep the word "report". It is decided now because the name was chosen on a worker's own authority at flag `99.2`,
+> `/naming` had never been run on it, and the term is live in four shipped files — so a rename gets cheaper the
+> sooner it happens and dearer every time the term is used again.
+>
+> **My first version of this question was priced against a gate that no longer exists.** Node 103 landed as commit
+> `106380a` while I was writing, so there is no correction round to force and nothing to re-open; a rename would now
+> be one more mechanical edit inside the repair node I am handing back either way. I have re-run the comparison with
+> that cost removed rather than restating the old answer.
+>
+> **And the rename's true footprint is smaller than the raw count suggests** — which cuts against what I am about to
+> recommend, so you should have it. Eleven occurrences sit in four shipped files. `map.md` and `decisions.md` would
+> **not** be touched: the map states that prose written before a word changed keeps the old word and the glossary is
+> authoritative. Node 95's clause 5 needs correcting under either answer and is the manager's act, not this node's.
+> So the rename is four files.
+>
+> **ASK: Q1.** Does the per-node message keep the name **pick report**, or is it renamed — and if renamed, to what?
+>
+> **RECOMMENDED:** Keep **pick report**. With cost nearly out of the comparison the recommendation now rests on one
+> thing only, and I would rather state it that narrowly than dress it up: **no better name exists among the
+> candidates.** `close report` round-trips correctly and sits one letter from `closing report`, where the two would
+> mean per-node and per-effort — the worst kind of collision, between two terms a reader meets in the same glossary.
+> `node report` collides with nothing and says almost nothing in a workflow where everything is a node. The note
+> family — `pick note`, `close note` — is blocked by `Manager note`, already something else.
+>
+> Two lesser things support it. The shipped instruction is already *"Pick it yourself and report the pick"*, so the
+> term shares a root with the act it names, which is what makes it findable. And `CONTEXT.md` has no entry for
+> **pick** either, so the entry the repair adds can define the act and the report together.
+>
+> What I am asking you to accept knowingly, no longer as a price but as a residue: the singular understates a report
+> naming several picks, and the name names the trigger while the duty three nodes have hung on it — flags settling —
+> attaches to the close. The `expedition-precondition` sentence is fixable in place, by having it say the report
+> closes the worker's own node *and* names what the manager started, so "pick" stops reading as the subject.
+>
+> **ALTERNATIVES: Rename `closing report`, then take `close report` for this one.** The only path to a fully clean
+> pair — `close report` per node, and something like *final report* or *effort report* per effort — and the one
+> option that gets *better* now that node 103 has landed, since nothing is mid-flight to disturb. I set it aside
+> rather than recommend it because it reaches beyond what this node asks: `Closing report` is settled vocabulary with
+> its own refusals, and renaming the effort-level report to fix the node-level one is a larger act than the defect
+> warrants. It is here because it is genuinely available and you may want it.
+> `close report` alone — blocked by that same near-collision unless the above is done.
+> `node report` — no collision, near-contentless.
+> `pick note` / `close note` — blocked by `Manager note`.
+
+***The manager's note beside it, and not the worker's.*** **The correction did what a correction should and the
+manager records it as evidence rather than as praise.** Given one stale fact, the worker did not defend its answer:
+it re-ran the comparison with the cost removed, reported that the footprint is **smaller** than it had implied —
+against its own recommendation — and promoted an alternative it had previously not stated at all, on the ground that
+removing the cost makes that alternative *stronger*. The recommendation survived on one narrower ground.
+
+**One small inconsistency between two workers, recorded and not resolved.** This payload numbers its single ask
+`Q1`. Node 117's worker settled on its own authority, in the same hour, that *"no number on a lone question: the
+presence of numbering is itself the signal that the payload holds more than one."* Neither reading has reached the
+human, node 117's second question — what a bare assent means against a numbered round — being the live one. **The
+manager relayed neither convention as a rule and takes no view.**

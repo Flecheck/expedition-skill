@@ -1,7 +1,7 @@
 # Whether the contracts' instruction to invoke a method skill is doing any work
 
 Type: grilling
-Status: open
+Status: claimed
 
 ## Question
 

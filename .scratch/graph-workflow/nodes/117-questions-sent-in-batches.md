@@ -1,7 +1,7 @@
 # Whether the manager sends the human questions in batches
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 ## Question
 
@@ -240,3 +240,298 @@ no view on it.
 has a node yet.** `SKILL.md:428`'s *"Exactly one question"* and lines 442-444's stated reason are both consequences of
 this node's own answer, and the worker has not yet handed over, so nothing has been minted. The manager is holding
 them rather than minting from a mid-interview payload.
+
+### Attempt 1, answer 2
+
+**The human's word, `verbatim`**, written at the moment they spoke:
+
+> ok for recommened says ok for everything but in practice it is unlikely I say it I think, as I will create my
+> message one question at a time, so it will be more Q1 ok Q2 ok Q3 ..
+
+**The option it takes, quoted in full and attributed to the worker who wrote it**, not to the manager:
+
+> **It endorses every recommendation in the round, and nothing in the payload that is not a recommendation.**
+> Anything that names a question or an option settles what it names and leaves the rest open, and whatever is left
+> unnamed goes out in the next round rather than being guessed.
+
+**It agrees with the worker's recommendation**, so it is not a divergence. The first clause is the answer, stated as a
+restatement of it.
+
+***The manager's note, and not the human's words. The second clause is a prediction about their own behaviour, and
+it cuts at the ground the recommendation was built on rather than at the answer.*** The worker's case for that
+recommendation was empirical and it was measured on this record: *"a bare assent to the recommendation is their modal
+answer to an interview question — 'ok for recommended' five times, plus 'ok' and 'yes for recommendation'"*, and
+*"under the other reading their commonest reply fails against every batched round, so every round ends in a re-ask
+and (B) spends a round instead of saving one."* **The human now says that reply form is unlikely to appear under
+batching at all**, because they will compose per question: *"Q1 ok Q2 ok Q3 .."*. If that holds, the failure mode the
+recommendation was chosen to avoid mostly does not arise, and the rule settles the residual case rather than the
+common one. **The answer is unaffected and is theirs.** What is affected is how much work the rule does, and whether
+the risk the worker named — a bare assent settling an unmeant Q2 — is a live risk or a rare one.
+
+**The hedge is theirs and is left in place rather than smoothed away**: *"it is unlikely I say it I think"*. It is a
+prediction, not an undertaking, so nothing on this graph may treat per-question replies as guaranteed. **The manager
+did not decide** whether the worker should now carry their predicted form into what it ships — that being the
+worker's, which holds this node.
+
+## Answer
+
+*Node 117's worker's `ANSWER`, pasted as it wrote it.*
+
+> **Batching is adopted in one form and refused in the other: a worker may batch its own questions, and the manager
+> never batches across nodes.** The human's words, `verbatim`, on being offered the two: *"Yes, it's B"*.
+>
+> ### 1. What a batch is here
+>
+> One worker may put several of its own questions to the human in a single relayed payload. Two questions may share a
+> payload only where neither's answer depends on the other's; one that depends on another in the same payload is held
+> for a later one. **The manager never combines questions from different nodes**, and that half is refused rather
+> than left open.
+>
+> ### 2. Why the inter-node and intra-node cases split, which is the whole of the answer
+>
+> The external skill the instruction named — `mattpocock-skills:grilling`, whose one-question text has been replaced
+> upstream by the batch text of a deleted experiment, `batch-grill-me` — computes its round over a **design tree held
+> by one agent**, and that same agent reads the answers. **A worker is that agent. The manager is not and cannot
+> be**, the map fixing that most of the context lives in the workers and not in the manager.
+>
+> So under this answer **the manager performs no attribution at all**: a payload comes from one worker and its reply
+> goes back to that one worker unaltered. [What the manager works on next, and how the human redirects
+> it](16-human-steering.md) measured a failure of the manager guessing which node a reply belonged to. This never
+> asks it to guess, which is why the thing that killed batching there does not reach the form adopted here.
+>
+> ### 3. What the ceiling counts
+>
+> **One thing awaiting a reply**, which may be a payload carrying more than one question from one worker. [When the
+> human's channel is free](108-when-the-humans-channel-is-free.md) is untouched: its ceiling, its floor and its
+> freeing rule all stand at their existing values.
+>
+> **One nuance, because that node's worker aimed at this one and missed slightly.** Flag `108.1` future-proofed the
+> **number**, writing the rule as a ceiling plus a top-up so a later node could move it. What actually moved is the
+> **unit**. The number is still one.
+>
+> ### 4. What a reply to a payload means
+>
+> - A reply **naming a question or an option** settles what it names.
+> - A reply that **assents to the recommendation without naming any question** — *"ok for recommended"* and the like
+>   — settles **every** question's recommendation in that payload, and settles **nothing in the payload that is not a
+>   recommendation**.
+> - A question the reply **does not name is unanswered**, and goes out in a later payload. The worker never reads
+>   silence as assent and never answers it itself.
+> - **The human deferring stays something they say.** An unnamed question is not a park.
+>
+> **That the bare assent reaches everything is the human's**, `verbatim`: *"ok for recommened says ok for
+> everything"*. The rest is derived from it.
+>
+> **[What the manager works on next](16-human-steering.md) confirms this rather than contradicting it.** Its first
+> round carried one worker recommendation plus three manager notes offering three decisions to pull forward; the
+> reply *"yes for recommendation"* reached the recommendation and not the offer, which that node records as a miss.
+> Under the rule above that is the **correct** outcome, and what went wrong was a non-recommendation placed in a
+> payload while an answer to it was expected. This rule forbids that by construction.
+>
+> ### 5. Numbering
+>
+> More than one question: each is numbered, titled, carries its own recommendation and the alternatives it sets
+> aside, and is separated from the next. Exactly one question: **not numbered** — the presence of numbering is itself
+> the signal that the payload holds more than one.
+>
+> **A question's number is fixed for the life of the attempt.** Numbers are never reused and never renumbered, so a
+> payload re-asking an earlier question uses that question's original number and a new question takes the next unused
+> one. Without that, *"Q1 ok"* means a different question in each round.
+>
+> ### 6. How many a payload may carry
+>
+> **No cap.** Independence is the only membership rule, which is the skill's own and the only one with a reason
+> behind it. Measured on this effort: every grilling node ran one or two rounds carrying one question each, so a cap
+> would bind on nothing, and the map's standing preference refuses machinery built for a predicted need.
+>
+> ### 7. What the human predicted, and why none of it is shipped
+>
+> Their words, `verbatim`: *"in practice it is unlikely I say it I think, as I will create my message one question at
+> a time, so it will be more Q1 ok Q2 ok Q3 .."*.
+>
+> **A prediction, not an undertaking, and it is recorded here and travels no further.** Shipped text says what a
+> reply **means** and never what it will look like: no worker requires a numbered reply, and nothing anywhere assumes
+> one. Numbering the questions is what invites a numbered answer, and putting the format burden on the scarce
+> resource would buy nothing.
+>
+> **What it does change is where §4's weight sits.** The bare assent was this record's modal reply because every
+> payload held one question, so assenting was unambiguous and correct. Under numbering they expect to answer per
+> question, which makes §4's first clause the common case and its bare-assent clause the residual one. **The
+> measurement is re-scoped rather than falsified**, and the residual clause is kept because a rule with no answer for
+> the residual case is where a worker guesses.
+>
+> ### 8. The skill's word for a round's questions may not travel
+>
+> The skill calls them the **frontier**. [CONTEXT.md](../../CONTEXT.md) fixes **Frontier** as *"the nodes that are
+> open, unblocked and unclaimed"*. Same word, two denotations, so the skill's vocabulary cannot be imported as
+> written.
+>
+> ### 9. Where the rule has to live, established rather than assumed
+>
+> **In the contracts' own text, never delegated to the invoked skill.** Flags `102.3`, `94.5` and `91.3` are three
+> consecutive grilling workers running the contract's inline discipline while both named skills were present in
+> session. A batching rule that lived only in the invoked skill would have been picked up by none of them.
+>
+> **And the grilling contract is ambiguous on this today.** Its discipline list is prefaced *"Where they are not
+> present, this is the whole of the discipline"* — so where `/grilling` is present the *"One question at a time"*
+> bullet does not formally bind, while `/grilling` now instructs the opposite and the question shape's `ASK` field
+> still admits one. The file has been contradicting itself since the skill changed upstream, and nothing reported it.
+>
+> ### 10. What this does not decide
+>
+> - **The target of concurrently running nodes that need the human**, and the open offer to raise it. Unaffected:
+>   this changes what one payload carries, not how many payloads exist, and that target governs how many nodes may
+>   produce one.
+> - **Tier membership.** Untouched.
+> - **The manager's own streaming-versus-batching choice**, which stays settled as streaming.
+> - **The name of any term another node may rename.**
+
+## Index line
+
+*The worker's, pasted.*
+
+> Batching is adopted inside a node and refused across them: one worker may put several independent questions in one
+> numbered payload, and the manager never combines two nodes'.
+
+## Flags
+
+`117.1` `ASSUMPTION` — **No cap on how many questions a payload may carry.** Independence is the only membership
+rule. I settled it rather than asking because I measured that every grilling node in this effort ran one or two
+rounds carrying a single question each, so any cap I could name would bind on nothing, and because the map's standing
+preference refuses machinery built for a predicted need. If the frontier of a node's design tree ever turns out wide,
+this is the line to revisit.
+
+`117.2` `ASSUMPTION` — **A lone question is not numbered.** Numbering only where a payload holds more than one, so
+that the presence of numbering is itself the signal that there is more than one thing to answer. The alternative —
+number always, for uniformity — costs the human a signal they get for free, and the human was not asked.
+
+`117.3` `ASSUMPTION` — **A question's number is monotonic across an attempt and never reused.** A payload re-asking
+an earlier question keeps that question's original number. Derived from the partial-reply case rather than from
+anything the human said: renumbering per payload makes *"Q1 ok"* denote a different question in each round, and the
+effort's own id discipline already prefers a sequential id that never changes.
+
+`117.4` `ASSUMPTION` — **A question a reply does not name is unanswered, not parked.** It goes out in a later
+payload, and the human deferring stays something they say. Settled because reading silence as a deferral would infer
+an act they did not perform and would stop the node, where reading it as unanswered costs one payload and keeps the
+node moving.
+
+`117.5` `ASSUMPTION` — **The human's predicted reply form does not reach the shipped text.** They predicted answering
+per question and hedged it themselves. I record it as evidence for where the rule's weight sits and ship none of it:
+no worker requires a numbered reply and nothing assumes one, because a prediction about one human's habits is not a
+property of the workflow.
+
+`117.6` `ASSUMPTION` — **The skill's word `frontier` is forbidden for a payload's questions rather than qualified.**
+The glossary fixes `Frontier` for the open, unblocked, unclaimed nodes. I chose outright refusal over a qualified
+variant because a second sense of a fixed word is what the glossary's refusals exist to stop.
+
+`117.7` `ASSUMPTION` — **`/grilling` was read in full and one of its instructions left unrun; `/domain-modeling` was
+not invoked.** Reading `/grilling` was this node's own work. I ran its design-tree ordering, its
+recommendation-per-question and its rule that finding facts is mine rather than the human's. I left *"Ask the whole
+frontier in one round"* unrun, under the contract's clause that the hard rules govern: the question shape admits one
+question, and batching in order to ask whether to batch would have settled this node's own question on the human's
+behalf. `/domain-modeling` I did not invoke, running the glossary check by hand instead and finding one collision;
+this is the fourth consecutive instance after `102.3`, `94.5` and `91.3`, and I record it as evidence for node 113
+rather than asking for the judgement again.
+
+## Invalidations
+
+*The worker's, pasted.*
+
+> **[What the manager works on next, and how the human redirects it](16-human-steering.md), its `### 1. The attention
+> queue` section.** Two of its sentences no longer hold:
+>
+> - *"**Question batching is dead**"* is reversed for the intra-node form. It is still correct for the inter-node
+>   form, which this node refuses on that node's own ground.
+> - *"Batching is by definition two live questions"* is too narrow as a definition, and being too narrow is what made
+>   the conclusion above look forced. The form adopted here is **one** live payload carrying two questions, which
+>   that definition does not contemplate.
+> - *"keeping it to a name and a kind is what keeps a terse reply attributable to exactly one thing"* is falsified as
+>   a **reason** while the rule it justifies survives on its other ground. Repaired by the second node above.
+>
+> **What that node keeps.** Its refusal of two *live* questions, its two tiers and their order, and its reading that
+> node 08's manager-level choice between streaming and batching has one branch — the manager still streams.
+>
+> **[When the human's channel is free](108-when-the-humans-channel-is-free.md) is not contradicted** and I name it
+> because a reader will look. Its ceiling, floor and freeing rule stand at their existing values. Its flag `108.1`
+> anticipated a node moving the **number**; what this node moved is the **unit**, and the number is still one.
+
+## Retrospective
+
+*The worker's, pasted. Handed back as text on this effort only, and never filed by the worker.*
+
+> **1. What I had to hunt for.**
+>
+> - **The external skill, and decisively its history.** My node file told me to read it and did not say where it is,
+>   and its path is not derivable from the session's skill list. I looked first in `/home/mathieu/.claude/plugins/`,
+>   which holds only marketplaces. `find / -maxdepth 8 -type d -iname '*mattpocock*'` returned **two** nix store
+>   paths, and the second one is what made the node answerable: the older copy holds an `in-progress/batch-grill-me`
+>   experiment plus a `grilling` that says *"Asking multiple questions at once is bewildering"*, and the active copy
+>   has promoted the experiment's text into `grilling` verbatim and deleted the experiment. **Nothing pointed me at
+>   the superseded copy; I found it by listing both.** Working out which was active took cross-referencing the
+>   session's skill list against each path's contents, where `writing-for-agents` against `writing-great-skills` was
+>   the discriminator.
+> - **The token mechanism, which was the instruction's first claim.** [How an agent workflow and its skills reduce
+>   their own token cost](52-token-cost-of-a-workflow.md) has it — a subagent's five-minute cache TTL, and its own
+>   sentence that *"a worker paused for a human answer — the whole interview shape — is liable to come back cold"*,
+>   against a ~19,840-token map read paid uncached. **`decisions.md`'s line for that node does not mention the TTL at
+>   all.** I found it by grepping the node for `TTL|resum`. The single most load-bearing fact for my node was
+>   invisible from the index I was pointed at to judge relevance.
+> - **How this human actually replies.** Nothing collects it. I built it by grepping every node file for recorded
+>   answer blocks and sorting by word count, which produced the *"ok for recommended"* count and — the thing that
+>   decided my first question — the four instances where they volunteer a node number themselves. It decided both of
+>   my questions.
+> - **Round counts, to price a cap.** `grep -c '### Attempt .*round'` matches only recent nodes; older ones head
+>   their rounds `### Attempt 1 — routing key ...`. Two incompatible interview heading formats in one corpus, and the
+>   first count I got was wrong because of it.
+>
+> **2. What I read and did not use.** Node 108 in full, about 320 lines, for its §3 and flag `108.1` — roughly twenty
+> lines; its five annotations and its retrospective I read and did not use. Node 16's §2 through §6 — streams,
+> readiness floor, overrides, reporting — where I used §1 and one interview round. `map.md`'s landing policy,
+> worktree lifecycle, dogfood target, review route, most of the fog and all of out-of-scope, none of which bore on my
+> node and which is most of a 19.8k-token read. The other forty-odd skills in both plugin copies, listed only to
+> identify the active version.
+>
+> **3. What would have made this node easier.**
+>
+> - **A spawn that names an external source should carry its path**, and where that source is versioned on disk
+>   should say so. Both facts that answered this node came from the file layout rather than the file, and one came
+>   from a copy nothing mentions.
+> - **`decisions.md`'s line for node 52 omits the fact that made node 52 relevant to me.** The index is for judging
+>   relevance and it is one sentence by design, and on the question I was sent to answer it is silent about the
+>   mechanism that answers it. That is the cap working as specified and still failing, which is worth more than a
+>   complaint about the cap.
+> - **No collected record of the human's own reply forms.** Every grilling node either re-derives it by hand or, more
+>   likely, proceeds without it. Mine decided two questions and cost two greps.
+> - **The spawn, the node file and the instruction all read as though batching were one thing.** The entire
+>   difficulty was that it is two, and separating them is most of what I did. One line in the node file asking
+>   *whose* questions and held by *whom* would have got me there sooner — though finding that out may simply have
+>   been the node.
+>
+> **4. What was stale, wrong, or contradicted something else.**
+>
+> - **The grilling contract contradicts itself today, and nothing reported it.** Its discipline list is prefaced
+>   *"Where they are not present, this is the whole of the discipline"*, so the *"One question at a time"* bullet does
+>   not bind where `/grilling` is present — and `/grilling` now instructs the opposite, while the `ASK` field still
+>   admits one question. It has been in that state since the skill changed upstream. **This is `map.md`'s fog item
+>   *"Nothing watches a standard that lives outside this repository"* firing a second time**, and the first firing is
+>   recorded on node 47.
+> - **`.claude/skills/expedition/SKILL.md`'s *"Exactly one question is in front of the human at a time"*** is now
+>   false as worded, as is the *"attributable to exactly one thing"* clause below it. Both surfaced as a node rather
+>   than left as observations.
+> - **Node 16's *"Question batching is dead"***, on `INVALIDATIONS`.
+> - **The spawn's characterisation of flags `102.3`, `94.5` and `91.3` is not quite what they say.** It offered them
+>   as evidence that *"this effort has a measured habit of treating per-question overhead as small"*. Each records
+>   that loading a **method skill** was not judged worth its cost, which is the cost of invoking a skill and not the
+>   cost of a relay round-trip. Two different overheads, and the flags are strong evidence for the first and none for
+>   the second. They were still useful, for a different thing: they are what established that a batching rule has to
+>   live in the contract's own text.
+> - **My node file's premise that the record has nothing about the skill's batching** was right, and its
+>   adjacent-node note pointing at node 113 was the most useful line in the file.
+
+***The manager's note on part 4's last bullet, against itself.*** **The correction is accepted and the error is the
+manager's.** The spawn offered flags `102.3`, `94.5` and `91.3` as evidence of a measured habit of treating
+*per-question overhead* as small. They record no such thing: each is a worker judging that loading a **method skill**
+was not worth its cost. The manager conflated the cost of invoking a skill with the cost of a relay round-trip, and
+put that conflation into a spawn as though it were measured. **It is the same failure as flag `103.8`** — a claim
+stated to a worker with more confidence than anything established supports — and this is its second instance in a
+spawn. The worker used the flags correctly for a different thing and said so.

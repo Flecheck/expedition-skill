@@ -311,3 +311,151 @@ outside its remit and hand back a bare mismatch where attempt 2 handed back a di
 >   pure-prose deliverable they returned almost nothing usable, while `/writing-for-agents` — which the map reaches
 >   only through ground rule 5, not through that Notes line — was the skill that changed the text. Node 113 exists
 >   for this; recorded as its evidence rather than as a new report.
+
+## The checker
+
+*One attempt. The manager spawned it; the worker that wrote the code did not.*
+
+### Attempt 1 — `PASS`
+
+*Pasted as the checker wrote it. **The manager authored none of it** and took no view on any of it; its five questions
+travel to the human inside the gate payload.*
+
+> **Settled first: the work moved a file, and that file is my own contract.**
+> `.claude/skills/expedition-checker/SKILL.md` is not among the standards the bar carries here (those are
+> `/coding-principles`, `/naming`, `/writing-for-agents` and `CONTEXT.md`), so the raise ground *a standard the work
+> moved* does not fire. What I hold the work against — the acceptance condition and the bar — is unmoved. I also did
+> not have to choose which version of my contract binds me: the copy I loaded is the pre-change one (the main repo's
+> copy is unmodified; the work is uncommitted in the worktree), and I discharged the added duty anyway by running all
+> three recorded commands, so this check satisfies both versions.
+>
+> **Scope, from the diff.** `git status --porcelain` and `git diff --numstat` in the worktree: exactly one file
+> modified, `.claude/skills/expedition-checker/SKILL.md`, **36 insertions, 0 deletions**, no staged changes, no
+> untracked files. `.gitignore` ignores only `.worktrees/`, and `git status --porcelain --ignored=matching` surfaces
+> nothing further, so git's account is complete. Matches the reported paths exactly. No file outside the condition's
+> list is edited — clause 5's `FAIL` does not fire.
+>
+> **The recorded enumerators, run as written.**
+>
+> | recorded command | condition records | returned | verdict |
+> | --- | --- | --- | --- |
+> | `grep -rln "enumerator" --include="*.md" .claude/ CONTEXT.md` | exactly one path | `.claude/skills/expedition-checker/SKILL.md` — one path | matches |
+> | `grep -rln "extent" --include="*.md" .claude/ CONTEXT.md` | exactly that same one path | same single path | matches |
+> | `grep -c "scope" .claude/skills/expedition-checker/SKILL.md` | **0** | **4** | mismatch, explained below — not a discrepancy |
+>
+> The `scope` mismatch resolves against the condition's own framing, *"run while this condition was written"*. I
+> established the recorded `0` was true pre-work: `git show HEAD:.claude/skills/expedition-checker/SKILL.md | grep -c
+> "scope"` returns **0**, and `git diff | grep -c "^+.*scope"` returns **4** — all four occurrences are inside the
+> added block. The word entered the file only as the work's own new text, which is the word the condition asked the
+> work to use. The purpose the condition gave for recording `0` — *"so this work adds a duty rather than repairing
+> instances of a defect spread across the tree"* — is confirmed rather than contradicted. Per clause 2, a difference
+> whose reason the condition states is not a discrepancy.
+>
+> **Node 109's expected movement has not landed.** The first command returns one path, not eight.
+>
+> **The residual clause has nothing to report.** Searching the whole shipped tree bounded to `.claude/` and
+> `CONTEXT.md`, no file outside the checker contract mentions an enumerator, a recorded search, or a grep, and none
+> states what a checker establishes about a condition's scope. Bounded to the files I hold; I cannot establish it of
+> the effort.
+>
+> **Clauses 1 to 8** are each stated in the new `### The enumerator a condition records` section: the duty to run as
+> written and state the return against the recorded one (1); comparison against the recorded return and never the
+> list of places, with a stated exclusion not a discrepancy (2); the not-asked-and-cannot-establish limit with three
+> grounds (3, see below); alongside-the-outcome and never on its own a `FAIL`, with all three named reasons (4);
+> editing outside the list stays a `FAIL` from the diff (5); the record-reaching domain run as written, reported,
+> never narrowed (6); the duty holding whoever wrote it, not told and not asked (7); and the hand-back carrying the
+> three things `### What every finding carries` requires, cited by heading rather than line number (8).
+>
+> **Clause 9 is established mechanically.** `diff <(git show HEAD:…SKILL.md) <(sed '200,235d' …SKILL.md)` is empty —
+> deleting the inserted block reproduces `HEAD` byte for byte. Every pre-existing line is present, in order,
+> unchanged; the heading list is identical modulo the single insertion; the new content is bulleted, so no numbered
+> list could have been renumbered. Hard rules 1-6, both cited neighbours, the `PASS`/`FAIL`/raise shapes, the
+> `QUESTIONS:` and `NOT COVERED:` routes and all five raise grounds stand untouched. Placement was undictated; a new
+> `###` inside the existing `## What you hand back` joins a section rather than sitting beside it.
+>
+> **Clause 10.** `CONTEXT.md` has no diff. `.scratch/` is **tracked, not ignored** (`git ls-files .scratch` returns
+> files), so a change under it would appear in `git status` — none does, and I established this without reading
+> anything under it. On whether a term genuinely moved: I find none. `enumerator` and `extent` were already in the
+> contract and already absent from the glossary, and `scope` is used in the ordinary sense `CONTEXT.md` itself uses
+> for it (**Labels**: *"so work can be scoped to one area of a large graph"*). The worker's judgement reached me via
+> the spawn as clause 10 requires, rather than being assumed.
+>
+> **Clause 11, the bar.** I established the empty command half rather than assuming it: the entire tracked tree is 11
+> files — nine markdown skill files, `.gitignore`, `CONTEXT.md`. No `package.json`, `Cargo.toml`, `Makefile`,
+> `justfile`, `pyproject`, `go.mod`, no formatter or linter config, no `.github/`. There is nothing to invoke, and
+> that is a complete bar on its command half. On the remaining half: the section addresses the checker as *you*
+> throughout, leads every paragraph with a bolded rule, and pairs each prohibition with its positive target. My
+> hand-check of the refused vocabulary over the added lines found **none** of the distinctive refusals (`reviewer`,
+> `verifier`, `auditor`, `reject`, `task`, `escalate`, `criteria`, `spec`, `definition of done`, `quality bar`, `CI`,
+> `item`); the only hits were `run` and `report` in their ordinary senses, both already the file's established usage.
+>
+> **Clause 3's declared departure — I judge it satisfies clause 3.** Two grounds. First, the condition specifies
+> content, not wording: every clause is framed *"The contract states that…"*, none says *in these words*, and clause 9
+> shows the condition marking off what it leaves to the worker. Clause 1's heading *"copied here in full rather than
+> pointed at"* describes the condition's own drafting — it copied the duty into itself instead of citing a node —
+> rather than imposing transcription. Clause 9's *"changed in meaning"* is scoped to *"Nothing already in the file"*,
+> which I established is untouched. Second, the substance holds: all three grounds are present and the conclusion
+> still follows, carried mainly by the second and third. And the worker's reason is correct on the facts — the bald
+> *"it holds no before-state"* would have contradicted given 3 of the same file, *"Produce a diff yourself if you want
+> one"*. I exercised that given myself: `git show HEAD:` gave me a before-state and I used it to establish the `scope`
+> count. The mandated wording would have shipped a self-contradiction; the scoped form is narrower and true, and still
+> supports *cannot establish it*, since even holding a before-state the checker cannot know the tree as it stood when
+> the condition was written — node 109 is open and may land in between.
+>
+> **The reviewing skill.** `mattpocock-skills:code-review`. I ran its **Standards axis only**, in an agent supplied
+> with every given I hold — the condition's mandated constraints, the paths, the diff command, the standards by name,
+> the house and ground rules, the wrapped-line warning — and bounded away from `.scratch/`, the record, and `git log`.
+> Its **Spec axis I left unrun**: it searches `docs/`, `specs/` and `.scratch/` for a requirements document,
+> `.scratch/` is off limits to me, and the acceptance condition was my only statement of intent. Of the agent's
+> deviations I discarded most as not mine to hand back: the three-reason list, the enumerated finding shape, the
+> record-reaching branch, `residual clause`, `the command's domain` and the `scope` sense are all **dictated by the
+> condition word for word**; adding a row to `### When what you check against is itself the problem` is what clause 9
+> forbids; its "nine subsections" point misreads *"the three"* (`PASS`, `FAIL`, raise, not a subsection count); and
+> its claim that only extent 3 can apply is wrong, since extent 2 fits — the returned paths minus the condition's list
+> is a computable bounding set. Its unrunnable-command gap I also judged not a finding: the section names no tool and
+> defers wholly to what the condition recorded, and clause 1 already makes an error a return to be stated.
+>
+> ```
+> QUESTIONS:
+> - The condition's clause 6 tells the checker, where a recorded command's domain reaches the effort's
+>   record, to "run it as written" and "Never quietly narrow the command to the tree". The same file
+>   states "You do not read it, and you do not go looking for it" and "Where a skill's procedure and
+>   your blindness conflict, blindness wins" — and .claude/skills/expedition/SKILL.md names "it may not
+>   quantify over the record" as one of the two rules binding every condition. So the new branch
+>   handles a condition the workflow declares unwritable, reverses the file's blindness precedent
+>   without saying so, and closes off the one mitigation. The wording is the condition's own and so was
+>   not the worker's to depart from. Does clause 6 want the checker to enter the record here, or should
+>   such a condition route to the raise the file already has for a broken premise?
+> - Clause 8 makes the hand-back a finding carrying instances, form and extent, but every other
+>   hand-back route in that part of the file ships a fenced block and this one gets none — and neither
+>   QUESTIONS: (this is not a question) nor NOT COVERED: (the checker did establish it) fits. A checker
+>   handing an enumerator mismatch back alongside a PASS has no shape to put it in; the PASS block has
+>   no slot for one. The condition never asked for a new block and clause 9 forbade touching the
+>   existing shapes, so the work complied — but the route ships without a shape.
+> - "enumerator" now names two objects in one file. `### What every finding carries` defines it as the
+>   command the *checker* supplies with a finding, "over the part of the work the implementer may
+>   edit"; the new section uses it for the command the *condition's author* ran. Clause 8 makes the
+>   collision load-bearing, requiring a finding *about* an enumerator to carry an extent whose first
+>   option is an enumerator. The term is the condition's own throughout. Should the file distinguish
+>   the two senses, perhaps in `## Words used exactly`?
+> - "the condition's own residual clause" (clause 4's phrase, verbatim) is a coined term used once and
+>   defined in no shipped file, and nothing in the shipped set requires a condition to carry either a
+>   residual clause or a list of places, though both rules dereference them. The name does not
+>   round-trip — a reader cannot tell what shape to look for.
+> - Clause 3's mandated wording "it holds no before-state" would, taken literally, have contradicted
+>   the same file's given 3, "Produce a diff yourself if you want one" — which I exercised myself in
+>   this very check. I judged the worker's scoped substitution to satisfy clause 3, but the departure
+>   is from a condition's dictated text, so the human may want to ratify it rather than have it stand
+>   on my judgement alone.
+> ```
+>
+> My `PASS` covers the whole condition; nothing went back as not covered. Clause 10's *"reported in the handover"* I
+> established from what the spawn relayed rather than from the tree, the handover not being something I hold.
+
+**The manager's note beside it, and not the checker's.** **Nothing came back under `NOT COVERED:`** — the first check
+on this effort to cover a condition whole, and the reason is in the condition rather than in the checker: node 116's
+scope is one file the checker can read, with no place under `.scratch/` and no clause quantifying over the record.
+Every earlier check left parts owed because its condition named the effort's own files.
+
+**The gate is ready and is queued.** Node 107's question was live when this outcome arrived, and a live question is
+never displaced, so the gate waits behind it rather than in front of it.

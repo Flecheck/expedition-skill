@@ -572,3 +572,26 @@ because the manager's read agreed with the worker's recommendation on the substa
 the same text. The manager's read carried two riders — that note 2's limit be written into the answer, and
 that note 4 be raised as its own node — and **neither was separately endorsed**. Both travel to the worker as
 the manager's own notes.
+
+## Annotation: two sentences of `### 1. The attention queue` are reversed or falsified
+
+*Filed by the manager from [Whether the manager sends the human questions in
+batches](117-questions-sent-in-batches.md)'s `INVALIDATIONS`, in that node's own words. **This answer is not
+rewritten** — under the never-delete rule its text stands and this annotation sits beside it.*
+
+> - *"**Question batching is dead**"* is reversed for the intra-node form. It is still correct for the inter-node
+>   form, which this node refuses on that node's own ground.
+> - *"Batching is by definition two live questions"* is too narrow as a definition, and being too narrow is what made
+>   the conclusion above look forced. The form adopted here is **one** live payload carrying two questions, which
+>   that definition does not contemplate.
+> - *"keeping it to a name and a kind is what keeps a terse reply attributable to exactly one thing"* is falsified as
+>   a **reason** while the rule it justifies survives on its other ground.
+>
+> **What that node keeps.** Its refusal of two *live* questions, its two tiers and their order, and its reading that
+> node 08's manager-level choice between streaming and batching has one branch — the manager still streams.
+
+**The manager's note.** The falsified reason is repaired by [node
+127](127-manager-contract-one-payload-several-questions.md), which names it in clause 4 and keeps the rule in clause
+3. **The measured failure this node recorded is what the adopted form is designed around rather than something it
+overrides:** node 117's answer states that the manager performs no attribution at all, a payload coming from one
+worker and its reply going back to that one worker unaltered, so the guess that failed here is never asked for.
