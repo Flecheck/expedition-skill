@@ -137,3 +137,14 @@ than softening it: the `map.md`-size finding was reported three times, read thre
 with the manager's own note beside one of them reading *"That is the manager's to promote and it has not been."*
 **Its point 6 is also about the manager**: the four questions are the manager's rendering of the human's four
 examples, and the broken one is the manager's wording rather than the human's instruction.
+
+**The human's response**, `verbatim`:
+
+> /mattpocock-skills:wait-what 141
+
+***The manager's note.*** **Not an answer, and not treated as one.** The human invoked a skill on this node asking
+the manager to re-pitch the question — with context, in ASD-STE100 Simplified Technical English, and in this effort's
+own vocabulary. The manager wrote that re-pitch itself, marked it as the manager's own text, and decided nothing.
+**The question of record is the worker's, above, unaltered**; the re-pitch listed the same package and the same four
+alternatives. No option was inferred. This is the second time on this effort that the human has asked for a re-pitch
+rather than answering, the first being node 132.
