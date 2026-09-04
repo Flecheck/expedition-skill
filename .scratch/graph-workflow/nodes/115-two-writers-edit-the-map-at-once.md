@@ -1,7 +1,7 @@
 # Two writers edit the map at once when an implementation node's work is a map change
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 ## Question
 
@@ -37,6 +37,90 @@ acceptance condition cannot be established in the tree its checker sees** — an
 regardless, so it could never have established it. That is a second, sharper form of the collision: a condition may
 name a place its own checker is forbidden to look at. Whether an acceptance condition may demand a change to the
 effort's record at all is not something the four routes above settle.
+
+## Answer
+
+*The worker's own text, pasted.*
+
+**The collision is not prevented. It is resolved when the work is integrated.** The human's answer is a `DIVERGENCE`
+against this node's worker's recommendation of prevention.
+
+**The ground is throughput, and it prices the thing this node's worker did not weigh.** The rule that was
+recommended — the manager holding its writes to any file a claimed node's condition names — is a mutex. Its measured
+cost was one deferral in thirty commits, but that measures how often it *fires*, not what it *forecloses*, and what
+it forecloses is parallel implementation. Conflicts are the cheaper of the two.
+
+### 1. What the landing policy now does on a conflict
+
+The sentence that falls is **"A rebase conflict is resolved by nobody in the moment: the manager runs `git rebase
+--abort` and the node takes a correction round with the worker respawned."** It is not deleted — struck in place
+under the never-delete rule and kept for the one case where it was right. What replaces it splits by **what
+conflicted**:
+
+- **Text under the never-delete rule** — `map.md`, its siblings, node files — is resolved by the **manager**, by
+  keeping both sides. Neither side deleted anything, so the union *is* the correct resolution. This does not breach
+  the manager's scribe rule: its own contract names *"ordering pasted pieces, laying runs end to end"* as scribe
+  work, and a union of two appends is exactly that. The manager reports the resolution; the work does not return to
+  the checker or the gate, nothing having been authored.
+- **Everything else, product code included**, is resolved by the **worker whose branch is being rebased** — the one
+  party holding that change's intent, the other side being on `master` and readable. The manager runs the rebase,
+  stops at the conflict, and resumes that worker to edit the conflicted files in place. The worker runs no git
+  command: its contract forbids it to rewrite history, and that rule is untouched. The resolution is new work, so it
+  returns to the checker and to the gate.
+- **Two sides that genuinely contradict** — where keeping both would make the file assert two incompatible things —
+  is not a merge problem and no resolution settles it. `git rebase --abort`, and a correction round. This is the old
+  rule, narrowed to the case it actually described.
+
+### 2. The slot count is a dial the human turns, and its price is stated
+
+The count was already a per-effort setting; what is new is that the trade is offered rather than buried. Raising it
+buys parallel implementation at the price of integration conflicts. The manager does not raise it on its own
+judgement, does not treat the effort's current value as a ceiling it must justify leaving, and states the price when
+the human moves it. This half is scoped to the shipped files by the human's own words — *"the framework should allow
+user to tell the manager to increase parallelization"*.
+
+### 3. What the manager weighs when it picks, and it is decidable rather than intuitive
+
+When more than one code slot is free, the manager prefers candidates whose **acceptance conditions name disjoint sets
+of paths**. A condition is already required to list its paths, so conflict likelihood is readable before either node
+starts, at no cost and with no prediction.
+
+### 4. What this settles that was open
+
+The manager's contract carries, under `## What nothing here settles`, the question **"What does a worker do when a
+file it must read is being changed by whoever holds the code slot?"** **This node answers it, and the answer was
+already shipped without anyone noticing:** every worker reads a consistent snapshot. An implementation worker reads
+its own tree, which its contract already calls *"yours alone for the whole of the node"*; every other worker reads
+the main checkout, which no implementation worker writes. No worker ever reads a file mid-change. Divergence between
+the two snapshots is not a reading problem at all — it is the integration, settled by section 1.
+
+### 5. Two mechanisms measured on this node, recorded so they are not re-derived
+
+- **`git merge --ff-only` refuses outright over a tracked path that is dirty in the main checkout**, reproduced in a
+  scratch repository: `error: Your local changes to the following files would be overwritten by merge: map.md`. This
+  is a *second* failure mode independent of the rebase conflict: an uncommitted graph edit blocks the landing step
+  even when the rebase is clean. It is why the manager's graph state must be committed before a worktree is cut.
+- **The manager's routine bookkeeping barely touches the map.** Across its last thirty `Graph state:` commits the
+  non-node files touched are `flags.md` ×13, `decisions.md` ×5, and `map.md` ×1 — and that single one is commit
+  `9c06955`, the commit that cost node 140 its first pass. **Recorded because it is the number that made prevention
+  look cheap, and it is exactly the number that does not measure what prevention costs.**
+
+### 6. What this does not settle
+
+Whether an acceptance condition may demand facts about files the checker is told it does not read. The checker's
+contract hands it the ground rules as copied text precisely because they live in *"the effort's map, which every
+other worker reads and you do not"* — yet node 140 went to its checker with fourteen clauses about `map.md`.
+
+
+## Flags
+
+*Each entry is the worker's own prose, pasted. The manager added the id and the marker and nothing else.*
+
+`115.1` `ASSUMPTION` — **Who resolves a conflict, which the human's answer did not name.** The human settled that conflicts are resolved at integration and named no resolver. I derived the three-way split in section 1 from rules already fixed rather than inventing one: the implementation contract forbids a worker to rewrite history, so the git operation stays the manager's; the manager's own contract names assembling pasted text as scribe work, which is what a union under the never-delete rule is; and the manager is barred from reading code to produce a note, so it cannot be the party resolving a code conflict. The one case none of those reaches — two sides asserting incompatible things — I left with the existing abort-and-correction-round.
+
+`115.2` `ASSUMPTION` — **The conflict-aware pick heuristic is scoped to this effort, not to the shipped files.** The human's sentence contrasts *"we should limit implementation parallelization, and favor paralellization on nodes that have little chance of conflicting"* against *"but **the framework** should allow user to tell the manager to increase parallelization"*. Only the second names the framework. Under node 93 — a rule reaches a shipped file only where the human says so — I scoped the count-as-a-dial to the shipped files and the pick heuristic to this effort's map. The reading is defensible but it is a reading, and the two halves plainly belong together.
+
+`115.3` `ASSUMPTION` — **A union resolution is reported, and every other resolution returns to the gate.** A conflict is resolved after the human has already approved the work, so the resolution is content nobody reviewed. I split it: a union of two appends authored nothing new and is reported at the next report; a resolution the worker wrote is new work and returns to the checker and to the gate. The alternative — re-gating every resolution — makes the union case cost as much as the thing it was chosen to avoid, and the human bought this rule for throughput.
 
 ## Interview
 
