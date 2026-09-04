@@ -363,3 +363,90 @@ prefer"*, and the reply chooses neither. The manager has **not** picked one and 
 project's `.claude/settings.json` is outside what the manager may write in its sandbox, and having already acted once
 today on its own authority in breach of its contract (flag `140.8`), it is putting the scope and the write to the
 human rather than deciding either.
+
+## The worker reissued its handover, and this is what changed
+
+*Filed by the manager. The answer above is **not** withdrawn and stands where it is under the never-delete rule; the
+sections below supersede the parts they name. The reissue followed the manager relaying the human's question —
+whether the base could be passed as an argument rather than being a setting — together with the fact, taken from the
+two tool definitions, that it cannot. **The worker folded that in and it changed the shape of the base-ref half.**
+Its own text, pasted.*
+
+**The answer's opening gains a third sentence:**
+
+> Because that base is a property of the environment and cannot be passed per call, the manager verifies it at every
+> implementation node's spawn rather than trusting it.
+
+### The base is a property of the environment, not of the spawn
+
+> **It cannot be passed per call on either route.** `EnterWorktree` takes `name` or `path` and nothing else;
+> `Agent`'s `isolation` is an enum of `worktree` and `remote` and carries no base. The only control is the setting
+> `worktree.baseRef`, whose two values are `fresh` — the default, meaning `origin/<default-branch>` — and `head`.
+> Three things follow, and each is a real cost rather than a technicality.
+>
+> **1. It cannot vary per node.** Every implementation node on this effort gets whatever the setting says. No node
+> has a route to a different base, so a node that needed one — rebuilding on a rejected node's branch, say — cannot
+> have it by this route at all; it would need a hand-made worktree and a worker pointed at it, which the standing
+> instruction forbids. **No node needs that today**, and it is recorded as a known limit rather than a problem to
+> solve now.
+>
+> **2. It does not travel, and under ground rule 1 it must not be relied on to.** The workflow is for repositories
+> this machine has never seen, and *nothing shipped may assume this machine or a toolchain*. A value in a config file
+> on one laptop is exactly that assumption. So **the shipped landing policy may not depend on `worktree.baseRef`
+> being `head`.** The rule's own remedy is the answer: *prefer properties that are discovered over commands that are
+> declared.* A line in the starting-an-effort procedure is the wrong instrument — a procedure step can be skipped,
+> and this one would be skipped silently — where a check cannot be. So a fresh repository does not *learn* the
+> setting; the manager **observes the base it actually got** and acts on what it sees.
+>
+> **3. Unset, it fails silently, and today that is exactly how it failed.** Nothing announces a stale base. It
+> surfaced only when a node's work would not rebase, after the work was done. So the landing policy gains one
+> standing step, and it is one observation:
+>
+> ```
+> manager spawns the worker with worktree isolation
+>     → manager immediately reads the base the harness chose:
+>           cat .git/worktrees/<name>/CLAUDE_BASE     (the harness records it there)
+>           — or —  git -C <worktree> rev-parse HEAD
+>     → equal to the manager's HEAD at spawn  → proceed
+>     → not equal                            → TaskStop the worker, remove the worktree,
+>                                              and raise it to the human
+> ```
+>
+> **The repair is to start over, not to fix the tree in place**, and that is the part worth being precise about.
+> Resetting a stale worktree onto the right base moves the branch pointer and leaves the working tree holding the
+> *old* content of every file the worker has not touched. That is not a near-miss: node 140 was moving text verbatim
+> between files, so a late reset would have carried pre-repair text forward and silently undone [node
+> 147](147-graph-records-name-absolute-paths-on-a-machine.md)'s landed work while every check passed. **A wrong base
+> is cheap to discard in the first seconds and expensive to discover at the gate.** Stopping a worker is available to
+> the manager and leaves it resumable, per [What can actually stop a running worker](122-what-can-stop-a-running-worker.md).
+>
+> Whether the setting lives in the human's user settings or in this repository's `.claude/settings.json` is not
+> settled, and nothing here turns on it — no such file exists in this project yet, so it is a creation rather than an
+> edit, and the human has not named a scope. The answer holds under either, **and the check above holds even if
+> neither is written.**
+
+**Its index line changed with it**, from *"and `worktree.baseRef` becomes `head`"* to:
+
+> The isolated-worker route carries the harness-worktree rule: the harness cuts the tree at spawn, the manager owns
+> the path from the completion notification, and verifies the base it got.
+
+**Its map edit gains a fifth item**, in its words: *"(4) **the standing base check joins the lifecycle** as the first
+step after the spawn, with its stop-and-restart repair and its reason"*, and the surfaced map-edit condition gains
+*"that the manager observes the base the worktree actually got before the work proceeds and stops the worker rather
+than repairing the tree when it is not the manager's `HEAD`"*.
+
+**What it now gives node 115**, superseding the earlier sentence: *"It landed `head`, plus a check that the base
+actually is `head`. So a worker's tree is a true snapshot of the manager's `HEAD` at the instant of spawn — and,
+unlike a setting taken on trust, that is now observed rather than assumed."*
+
+***The manager's note.*** **This is operative for the manager immediately, ahead of any map edit.** The next
+implementation node spawned gets the base check as its first step after the spawn, and the manager records that here
+rather than only in the map, the map edit being held behind node 140's landing under [node
+115](115-two-writers-edit-the-map-at-once.md)'s not-yet-settled rule.
+
+`150.5` `ASSUMPTION` — *The worker's own prose, pasted.* **The manager verifies the base at every spawn, and a wrong
+base stops the worker rather than being repaired in place.** The human settled the setting, not the failure
+procedure. I chose verification over trust because the setting cannot be passed per call, does not travel to another
+machine, and announces nothing when absent; and I chose stop-and-restart over resetting the tree because a base
+corrected after a worker has read the tree leaves it holding pre-repair content, which on node 140 would have
+silently reverted node 147's landed work with every check passing.
