@@ -38,7 +38,9 @@ _Avoid_: index, plan, README
 
 **Destination**:
 What reaching the end of an effort looks like. It fixes the scope, which is what makes work beyond it
-out of scope rather than fog.
+out of scope rather than fog. It also says, in one line, whether the effort is expected to reach it.
+Where an effort is not expected to reach it, that line is where a manager reads that a non-empty
+frontier is that effort's steady state rather than a defect.
 _Avoid_: goal, objective, definition of done
 
 **Frontier**:
