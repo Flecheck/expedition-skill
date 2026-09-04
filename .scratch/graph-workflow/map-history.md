@@ -310,3 +310,9 @@ Two lines of [`map.md`](map.md) changed rather than moved when [Move the impleme
 that was run and verified rather than designed.*
 
 - **Resume and recovery** — what happens when the manager's context compacts or its session dies mid-graph. Durable per-attempt state exists, per [relay protocol](nodes/08-relay-protocol.md), so what is unspecified is everything the manager holds that is *not* an interview: the node-name-to-routing-key mapping as a whole, and whatever it knew about why it chose the nodes it chose. What would settle it: a reconciliation procedure a fresh manager runs from disk. Worth reading before deciding, per [dogfood target](nodes/09-dogfood-target.md): Lang's hand-built `handoff.md` is a human's manual answer to this exact problem.
+
+## Notes — the retrospective's four questions, superseded at node 141
+
+*Moved verbatim under the `Change the map` procedure. Questions 2 and 3 are re-rendered; 1 and 4 stand.*
+
+**The four questions, as the spawn puts them:** what did you have to hunt for — the fact, where you found it, where you looked first; what did you read and not use; what would have made this node easier, in the spawn, the node file, or the contract; and what did you read that was stale, wrong, or contradicted something else.
