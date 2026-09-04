@@ -85,3 +85,14 @@ correct, and it is recorded here because it is unusual rather than because it is
 **Clause 7 is a byte threshold, which is a mechanical check the manager could not have written**: [node
 94](94-condition-scope-as-a-predicate.md)'s rungs ask for an enumerator, and a size floor is one that needs no
 domain.
+
+## Attempt 1
+
+**Started.** Worktree `.worktrees/139-map-split/`, branch `node-139-map-split`, off `898895d`.
+
+***Recorded by the manager against itself.*** **The spawn told the worker its worktree existed before it did.** The
+sentence read *"A git worktree has been made for you at…"*; it had not been. The manager created it in the following
+act, seconds later and before the worker could have reached the path, so no worker observed the absence and nothing
+downstream rests on it. **It is recorded anyway**, because the test is what the manager wrote rather than what the
+worker suffered, and because this is the seventh time this session the manager has put into an agent's context
+something that was not so.
