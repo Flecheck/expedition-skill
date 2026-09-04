@@ -303,3 +303,10 @@ Two lines of [`map.md`](map.md) changed rather than moved when [Move the impleme
 *The graph's file count, six before this split and seven after it. The line is superseded in place in `map.md` rather than moved, `six` standing struck beside `seven`, and it is quoted here whole so that the before-state of every line the split changed is in one place:*
 
 > **The graph is six files**, fixed by [Graph file format](nodes/13-graph-file-format.md) and extended by [Restructure `map.md` to what every worker needs](nodes/59-restructure-the-map.md) and by [Move the manager's material out of the map, and give each item a soft size target](nodes/139-move-the-managers-material-out-of-the-map.md): this `map.md`, the append-only index [decisions.md](decisions.md), the append-only [flags.md](flags.md), one file per node at `nodes/NN-<name>.md`, [map-history.md](map-history.md), which holds the append history moved out of this map and is read for the account behind a line rather than to work a node, and `map-manager-only.md`, which holds the part of the map only the manager acts on. A node's identity is its sequential `NN`, permanently; its name is free-form and carries a foreign label when the effort was adopted from somewhere else.
+
+## Not yet specified — superseded at the close of the session that ran nodes 129-163
+
+*Moved verbatim under the `Change the map` procedure. Its replacement records a reconciliation procedure
+that was run and verified rather than designed.*
+
+- **Resume and recovery** — what happens when the manager's context compacts or its session dies mid-graph. Durable per-attempt state exists, per [relay protocol](nodes/08-relay-protocol.md), so what is unspecified is everything the manager holds that is *not* an interview: the node-name-to-routing-key mapping as a whole, and whatever it knew about why it chose the nodes it chose. What would settle it: a reconciliation procedure a fresh manager runs from disk. Worth reading before deciding, per [dogfood target](nodes/09-dogfood-target.md): Lang's hand-built `handoff.md` is a human's manual answer to this exact problem.
