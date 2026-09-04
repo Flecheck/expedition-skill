@@ -1,7 +1,7 @@
 # Ignore the harness's worktree directory
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -42,6 +42,45 @@ acted once today on its own authority in breach of its contract — flag `140.8`
 
 **Flag `68.2` bears on it and stays open**: it recorded that an ignore rule could not be assumed for a repository the
 workflow does not own. This node's condition is scoped to this repository only and asserts nothing about any other.
+
+## Answer
+
+*The worker's own text, pasted.*
+
+`.gitignore` at the repository root gains a second entry, `.claude/worktrees/`, below the existing `.worktrees/`
+entry and separated from it by a blank line, under a four-line comment. The existing three comment lines and
+`.worktrees/` are byte-unaltered; the diff is purely additive.
+
+The new entry sits at `.gitignore:10`, and `git check-ignore -v` confirms it matches every shape the harness
+produces: `.claude/worktrees/`, `.claude/worktrees/agent-ac549d7fb8ff2bf22` (the agent-id form node 150 first
+recorded), and a file nested inside a node-named worktree. `.worktrees/12-x` still resolves to `.gitignore:4`, so the
+older entry keeps working. `.claude/skills/expedition/SKILL.md` is confirmed **not** ignored — the pattern is
+anchored by its embedded slash and reaches nothing outside `.claude/worktrees/`. Nothing under `.claude/worktrees` is
+tracked, so no already-tracked file is orphaned by the rule.
+
+**Two calls a later reader would otherwise re-derive.** *The new block goes below the existing one, and `.worktrees/`
+is not marked superseded* — marking it was not available, the acceptance condition requiring the existing comment
+lines to be *"still present and unaltered"* and a strike-through altering them; the relationship is carried in the
+new comment's third line instead. *Where the condition's `git status --porcelain` clause is satisfied, and where it
+is not yet* — in the worktree it returns exactly ` M .gitignore`; in the main tree it returned `?? .claude/worktrees/`
+until this landed, because that checkout still held the old `.gitignore`.
+
+**Its first reported facts, which the spawn asked for because the manager was verifying a mechanism it could not
+observe:** working directory `/home/ten/Projects/expedition/.claude/worktrees/158-ignore-harness-worktrees`, and
+`HEAD` `6795ca9` — both matching the spawn. **So a worker spawned while the manager is inside a worktree inherits
+it**, which was the last unmeasured step of the worktree route.
+
+***The manager's note.*** **Landed as commit `305d372`**, and the effect is visible rather than argued: `git status
+--porcelain -uall` in the main tree returned `?? .claude/worktrees/158-ignore-harness-worktrees/` before the merge
+and returns nothing after it.
+
+**Removing the worktree afterwards failed inside the sandbox with `Device or resource busy`**, and succeeded on a
+prune outside it. **This contradicts [node 150](150-which-harness-route-creates-a-worktree.md)'s measurement 8**,
+which recorded the `EBUSY` failure as no longer reproducing. The cause is now established rather than guessed: the
+sandbox bind-mounts the worktree's admin directory `.git/worktrees/<name>`, and a mountpoint cannot be removed. Those
+mounts exist only inside the sandbox's own namespace — `/proc/mounts` shows them from inside and not from outside —
+which is why a probe run in a different context did not see them.
+
 
 ## Flags
 
