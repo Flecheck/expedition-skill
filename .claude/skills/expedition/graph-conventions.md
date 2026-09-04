@@ -22,16 +22,21 @@ marked in place and the new text is added around it. Text leaves a file only whe
 human asks for it gone. `map.md` is the one file whose superseded text is also *moved* rather than
 left in place, and it is moved whole: see `## Writing the map` below.
 
-## The five files
+## The six files
 
 ```
 .scratch/<effort>/
   map.md                 The whole effort at low resolution. Read once per session.
   map-history.md         The account behind the map's lines. Read for history, not to work a node.
+  map-manager-only.md    The part of the map only the manager acts on. No worker reads it.
   decisions.md           One capped line per resolved node. Append-only.
   flags.md               One capped line per flag, with its state. Append-only.
   nodes/NN-<name>.md     One file per node. All detail.
 ```
+
+`map-manager-only.md` holds the part of the map that only the manager acts on, so that no worker pays
+to read it; it is part of the map, and a rule written there binds exactly as one written in `map.md`
+does.
 
 `map.md` has five sections, in this order:
 
@@ -90,6 +95,15 @@ paraphrased or shortened — and text already struck through moves struck throug
 rule is satisfied by the move rather than exempted from it: the account is still there in full, in
 the file that exists to hold it. An item carrying no account beyond its current statement moves
 nothing.
+
+**Each item in `## Notes` targets 500 bytes**, counting the item's own prose and not any quotation of
+the human's own words — shortening those is paraphrase, which never-delete forbids. **This is a target
+the writer aims at and never a rule that forces text out.** An item that needs more exceeds it and says
+why; nothing fails, and no check below turns a breach into a defect. What the target buys is a number:
+every worker reads the whole map cold, so an item's size is paid once per node, and the rule above says
+in prose what the target says in bytes — the difference is that a number makes the drift visible while
+it is happening. Bringing an item to the target is the `Change the map` procedure below, a verbatim
+move to `map-history.md`, so an item brought down to it loses nothing.
 
 ## Adding a node
 
@@ -443,3 +457,8 @@ Every one of these is decidable by reading the files.
 8. No node has more than three `## Interview` attempt blocks.
 9. Every item under a `NOT COVERED:` label in a `## Review` opens with `OWED` or with `ESTABLISHED BY`,
    and no `resolved` node still carries one opening with `OWED`.
+10. Every item in the map's `## Notes` over the 500-byte target of `## Writing the map` above, with its
+    size, counting the item's own prose and not any quotation of the human's own words. **This one
+    reports and never fails.** A target is not a threshold: an item over it is a number to look at, and
+    the check exists so that the map's growth is seen rather than caught. It is the one check here whose
+    output is a list rather than a verdict, and an empty list is not what it is for.
