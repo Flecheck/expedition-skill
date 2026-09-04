@@ -42,7 +42,24 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
 - **A correction round resumes the worker** and never re-spawns it with isolation, a second isolated spawn creating a
   second empty tree at a fresh base and stranding the first one's work. Where resume is unavailable the replacement
   is pointed at the surviving path. Flagged at `150.3` as unverified.
-- **Two distinct sandbox restrictions bite this lifecycle, and they were once conflated. Isolated by experiment.**
+- **One sandbox restriction bites this lifecycle, and it took three rounds of experiment to state correctly.** Two
+  earlier accounts of it in this file were wrong and are struck below. **The rule: the sandbox mounts
+  `.claude/skills` read-only in whichever tree the session is standing in — the main checkout, or an entered
+  worktree. Any git operation that must write a file under it fails.** It is not about worktrees, not about the git
+  index, and not about harness-created worktrees being treated differently from hand-made ones.
+  - **What it hits.** `git merge --ff-only` in the main tree, of a branch that changed a file under `.claude/skills/`
+    — `unable to unlink old …`. And `git reset --hard <ref>` inside an *entered* worktree, where the range crosses
+    such a file — `Could not reset index file to revision`. `HEAD` does not move and nothing is lost in either case;
+    both succeed outside the sandbox.
+  - **What it does not hit, established by experiment rather than inferred.** `git add` and `git commit` from inside
+    an entered worktree both succeed. `.git/index` is writable in the main tree and in a worktree's admin directory.
+    `git reset --hard` succeeds inside an entered worktree where the commit range touches no file under
+    `.claude/skills/`. So the operation is irrelevant; **only the paths the operation must write matter.**
+  - **The one asymmetry, and it is a hole rather than a feature.** A worktree operated *from the main tree* with
+    `git -C` escapes the rule entirely, because the deny list names `<repo>/.claude/skills` and a worktree at another
+    path is not that. So the same reset that fails from inside a worktree succeeds when run on it from outside. The
+    protection is on the session's own tree, not on the repository's skills.
+- ~~**Two distinct sandbox restrictions bite this lifecycle, and they were once conflated. Isolated by experiment.**~~
   - **The merge step needs the sandbox off where the node touched a file under `.claude/skills/`.** The **main
     tree's** `.claude/skills` is a read-only bind mount; `touch` on a file there fails with `Read-only file system`.
     So `git merge --ff-only` of a branch that changed one fails with `unable to unlink old …`. `HEAD` does not move
