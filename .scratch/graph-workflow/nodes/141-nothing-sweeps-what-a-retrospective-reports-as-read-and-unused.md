@@ -148,3 +148,27 @@ own vocabulary. The manager wrote that re-pitch itself, marked it as the manager
 **The question of record is the worker's, above, unaltered**; the re-pitch listed the same package and the same four
 alternatives. No option was inferred. This is the second time on this effort that the human has asked for a re-pitch
 rather than answering, the first being node 132.
+
+**The human's correction of the question's premise**, `verbatim`. Not an answer, and not treated as one:
+
+> "useless information?" wasn't so much for read files (although they are included as well if explicitly asked to be
+> read), it's really mostly about whether information was fed to your context that turned out to be useless, e.g. we
+> fed a rules file that had a high portion of information that turned out to be unneeded. As you said, it's hard to
+> tell if unused, but a judgement call reflecting on job done vs initial context should still allow identifying it
+> though it's not as "direct" because that's not exactly the way the LLM thinks, as you mentioned.
+> e.g. if the agent needed to read other nodes of the map to get information, but ended up bloating its context with
+> lots of info from that node file that turned out to be essentially irrelevant, it might be a sign that we can
+> improve structure or grepping capabilities to avoid such bloat, which is what we aim for this retrospective to be
+> able to flag.
+
+***The manager's note.*** **This attacks the ground the recommendation stands on, and the manager put it back to the
+worker rather than reading it as a choice among the five options.** The worker's case for retiring the question is
+that it yields **a citation count** — that a worker reports a file as unused when it did not quote it. The human's
+correction says the question was never about what a worker cited, nor even mostly about files a worker chose to read:
+it is about **information fed into a worker's context** — the spawn's payload and the mandatory reads — that turned
+out not to be needed, and about **bloat inside a read that was itself necessary**. They accept the reading is
+indirect and say a judgement against job-done-versus-initial-context still identifies it.
+
+**If that is right, the defect is in the manager's rendering rather than in the question**, which the worker's own
+point 6 had already suspected — *"the four questions are the manager's wording, not yours"* — and part (i) of its
+package, deleting the question, may be the wrong repair.
