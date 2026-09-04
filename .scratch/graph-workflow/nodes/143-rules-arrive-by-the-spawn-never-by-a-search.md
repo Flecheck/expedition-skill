@@ -208,3 +208,60 @@ commands, the ground rules and the standing over sources through the spawn.
    and links to every node — the record the checker is kept blind to. Under the spawn route a manager chose what to
    name; under this amendment **the contract itself sends every checker into that file, every time.** Node 164 is
    blocked on this node and on node 151, and the manager has not changed those edges.
+
+### Correction round 1 — what the worker changed
+
+*The worker's own text, pasted. The manager ran no checker between the gate and this.*
+
+**The discovery pass is replaced by reading one known file. Nothing is fed.** Both `## The standards …` sections name
+it: `.scratch/<effort>/map-implementation-rules.md`, `<effort>` being the directory holding that effort's `map.md`.
+**The checker's givens list went back to five in the spawn**, with the standards as a sixth thing it reads for
+itself — *"Six things. Five reach you in the spawn; the sixth you read for yourself, from one file this contract
+names."*
+
+**The blindness rule needed an exception, and it is stated rather than left implicit.** *"You do not read it, and you
+do not go looking for it"* now continues: the implementation-rules file is the single exception, and only for the
+standards in it.
+
+**The no-file case is an expected route, not a fault**, and the contract says an effort that has never written one is
+the ordinary case rather than a defect, so a checker does not report its absence as a finding.
+
+**What it reverted from the first round:** the ground rules and the standing over sources are back at the map's
+`## Notes`, verbatim, which makes flag `143.3` false.
+
+### Flags after the correction round
+
+`143.3` **— withdrawn by the worker as false.** *Its words:* *"The human's amendment settles it the other way:
+nothing travels by spawn, and those two come from the file where they are written, which for ground rules is the
+map's `## Notes`. I have restored that paragraph verbatim, so the judgement the flag records no longer exists in the
+tree."* **The manager has not checked its line in `flags.md`**, a withdrawal not being the human's settlement; it
+reaches them at the gate with the rest.
+
+`143.6` `ASSUMPTION` — **How the file is named in the shipped contracts, and that resolving it is not a discovery
+pass.** The human's words name `.scratch/graph-workflow/map-implementation-rules.md`. **I judge the manager's
+ground-rule-1 constraint right and wrote it by role and position**, on the same reasoning that condemned the deleted
+heading *"this repo and this machine"*. The residual judgement is mine: a checker is blind and is not told its
+effort's name, so it resolves `<effort>` by one listing of `.scratch/`. I wrote that bound into the contract — *"a
+single listing of `.scratch/` resolves it, and that listing is the whole of the looking you do"* — because an
+unstated lookup is where a discovery pass grows back. **Where an effort's directory is not the only one under
+`.scratch/`, that listing is ambiguous and the contract does not say how to break the tie.**
+
+`143.7` `ASSUMPTION` — **I made the missing-file case an expected route rather than a defect to report.** I wrote
+that the acceptance condition and the bar are then the whole of what the work is held against, and — the part that is
+mine — that an effort that has never written one is the ordinary case rather than a defect, so its absence is not a
+finding. **Without that sentence the honest reading of a blind checker finding no standards file is that something is
+missing, and a fresh repository would generate a finding on every node.**
+
+`143.8` `ASSUMPTION` — **I carved a named exception into the checker's blindness, which nobody asked me to word.**
+The contract says a checker does not read the record; sending it into a file inside the effort's own directory
+contradicts that unless the exception is stated. I stated it in both places it bites and bounded it to the standards
+in that one file. The alternative was to leave the tension unwritten, which would have had every checker deciding for
+itself how much of that file it may read. **This is the same hole node 164 names, and my wording is a stopgap in the
+shipped file rather than its repair.**
+
+***The manager's note on the numbering.*** **The worker numbered these three `143.5` to `143.7`, which collided.**
+It raised four flags in the first round and could not see that `143.5` was already taken by the manager's own flag —
+the one recording that the manager asserted something false in this node's spawn. Ids are never reused, so the
+manager renumbered them to `143.6`, `143.7` and `143.8`. **Nothing about the judgements changed**, and the collision
+is the manager's to have prevented: a worker cannot see `flags.md`, its contract closing that file to it, so it
+cannot know which ids exist.
