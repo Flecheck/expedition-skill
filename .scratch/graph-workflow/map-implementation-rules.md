@@ -30,6 +30,19 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
   manager learns both from the worker's completion notification. **The node's id is no longer in either**; the commit
   trailer `Node: <effort>/<NN>` is the join key and is the manager's to write.~~ **Superseded by the bullet
   above**: the node's id is in the path and the branch again, and the commit trailer stays the join key regardless.
+- **What the reset costs in practice, settled by the human**, `verbatim`:
+
+  > ok so looks like we can indeed do the EnterWorktree -> reset process - that will work so long as either we aren't
+  > working on skills (otherwise the agent can ask unsandboxed for the reset and it will be fine) - or if the user
+  > already has set baseRef=head in their global config, which will typically be the case.
+
+  So the route stands, and the sandbox restriction above is a cost rather than an obstacle. Three cases, and the
+  manager does not need to decide between them in advance: a node touching no file under `.claude/skills/` resets
+  inside the sandbox; a node that does asks for that one command unsandboxed; and where `worktree.baseRef` is already
+  `head` in the human's global config — **which is the typical case, and is theirs rather than this effort's** — the
+  worktree lands on `HEAD` and no reset happens at all. **The base check still runs in every case**, since what it
+  guards against is landing on the wrong base for any reason, not against one configuration.
+
 - **The manager verifies the base at every spawn.** A harness worktree's base is governed by `worktree.baseRef`,
   whose default `fresh` means `origin/<default-branch>` — frozen forever on an effort that never pushes. The setting
   is `head`, but **the setting is a property of the environment, cannot be passed per call, and does not travel to
