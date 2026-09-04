@@ -47,7 +47,7 @@ workflow does not own. This node's condition is scoped to this repository only a
 
 *Each entry is the worker's own prose, pasted. The manager added the id and the marker and nothing else.*
 
-`158.1` `ASSUMPTION` — **The comment says more than the condition demands.** The condition demands the comment state
+`158.1` **· settled** `ASSUMPTION` — **The comment says more than the condition demands.** The condition demands the comment state
 two things: that the directory holds the harness's worktrees for implementation workers, and that it is ignored so
 they are never committed. Both are stated in the first two lines. I added two more — that `.worktrees/` above is the
 path the landing policy used when the manager made worktrees by hand, and a pointer to
@@ -56,7 +56,7 @@ entries with no stated relationship has to go and derive which is live, and that
 spends four words preventing. The condition does not forbid extra content and nothing added contradicts it, but the
 choice was mine.
 
-`158.2` `ASSUMPTION` — **The stale pointer frozen by my own condition was surfaced as a node rather than raised.**
+`158.2` **· settled** `ASSUMPTION` — **The stale pointer frozen by my own condition was surfaced as a node rather than raised.**
 The existing comment I am required to leave unaltered ends "See `.scratch/graph-workflow/map.md`, the landing
 policy", and the landing policy moved out of `map.md` to `map-implementation-rules.md` at node 140. That pointer is
 therefore stale, and my condition forbids me to fix it. This is arguably raise trigger 1 — a broken thing that is not
@@ -129,3 +129,13 @@ grep, the map's own measured trap being that about a third of the refused words 
 
 ***The manager's note.*** **The run covered the whole condition and named no part it could not reach**, so this entry
 carries no `NOT COVERED:` label.
+
+### Gate — `approve`
+
+**The human's word**, `verbatim`:
+
+> approve 158
+
+The payload carried checker run 1's `PASS`, both of this node's flags, the one path touched, the worktree and the
+command showing its diff, and the proposed commit message. **Approving the gate settles both flags.** No correction
+round was taken.
