@@ -1,7 +1,7 @@
 # Carry the pick-report settling moment into the shipped files and the map
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 
 ## Question
@@ -136,7 +136,7 @@ amended](82-amending-a-condition-whose-scope-was-too-narrow.md)'s guard 2, and t
 > *"passes through no gate, so a flag here waits for the closing report"* is node 102's answer's own, copied rather
 > than composed.
 
-`103.2` `ASSUMPTION` — **three sites repaired that the condition's six places do not name.** The condition's places
+`103.2` `ASSUMPTION` **settled** — **three sites repaired that the condition's six places do not name.** The condition's places
 name particular sections; its second clause is a whole-repository predicate — *"no file in the repository still says
 that a grilling node's flags are settled at that node's last answer."* Three sentences fall under the second and not
 the first: `CONTEXT.md`'s `Raise` entry, which says *"a grilling node's last answer, an implementation node's gate"*
@@ -148,7 +148,7 @@ grilling node, name the last answer. I repaired all three. The competing reading
 reading `CONTEXT.md` would have shipped asserting the old rule two entries below the entry I had just repaired, and
 the file would contradict itself. Nobody was asked.
 
-`103.3` `ASSUMPTION` — **I edited the worktree's copies of `map.md` and `map-history.md`, which are stale.** The spawn
+`103.3` `ASSUMPTION` **settled** — **I edited the worktree's copies of `map.md` and `map-history.md`, which are stale.** The spawn
 directed me to the worktree copies and my contract confines me to that tree, so that is where I worked. But
 `.scratch/` is tracked, the worktree sits on `47703bb`, and the **main checkout holds uncommitted manager edits to
 both files**: `map.md` differs in four places (a `## Destination` paragraph, the one-question bullet, the never-idles
@@ -158,7 +158,7 @@ policy's `git merge --ff-only` will refuse over a dirty tracked path, and re-sav
 working copy would silently drop my edit. I judged reporting this cheaper than a raise, the spawn having already made
 the placement decision and the manager holding the live file. Nobody was asked.
 
-`103.4` `ASSUMPTION` — **I used *close* of a node about eight times.** `CONTEXT.md`'s `Resolve` entry carries
+`103.4` `ASSUMPTION` **settled** — **I used *close* of a node about eight times.** `CONTEXT.md`'s `Resolve` entry carries
 `_Avoid_: close`, and `Closed` reserves the word for an effort. I used it anyway — *"the first human moment its close
 reaches"*, *"the pick report that closes it"*, *"a pick report closing a node that holds flags"* — because the
 acceptance condition, node 99's answer and node 102's answer all phrase the rule that way, and because node 100 had
@@ -166,7 +166,7 @@ already shipped *"rather than at that node's close"* into the same section of th
 *ends*, which is the wording the old false rule used and which would have obscured that the moment moved. Reported as
 a collision, not resolved.
 
-`103.5` `ASSUMPTION` — ***The manager's own flag, not a worker's, and marked as the manager's.*** **The map edits were
+`103.5` `ASSUMPTION` **settled** — ***The manager's own flag, not a worker's, and marked as the manager's.*** **The map edits were
 moved out of the worker's tree and applied to the live copies by the manager, and the worktree's `.scratch/` reverted,
 so the node's commit will carry the four shipped files only.** This is the manager acting on flag `103.3` rather than
 raising it, and the act is the manager's alone: the two files are the graph's own, the manager is their only writer,
@@ -179,7 +179,7 @@ writers edit the map at once when an implementation node's work is a map
 change](115-two-writers-edit-the-map-at-once.md), which the worker surfaced and which this act pre-empts for one node
 only.
 
-`103.6` `ASSUMPTION` — ***The manager's own flag, not a worker's, and marked as the manager's.*** **The condition's
+`103.6` `ASSUMPTION` **settled** — ***The manager's own flag, not a worker's, and marked as the manager's.*** **The condition's
 opening clause quantifies over the repository, which reaches the record, and the manager read that reach as void
 rather than establishing it.** Twenty-seven passages under `.scratch/` contain *last answer*, and every one is an
 archive or a quotation rather than a live rule — but the clause as written demands they not be there. The manager
@@ -526,7 +526,7 @@ side, which is scribe work; neither is re-authored and the manager decides nothi
   proceeding. Attempt 2 established the weaker fact that no `_Avoid_` line was added or removed.
 - **Only attempt 2 named the two residual gate-grounded passages** in `expedition/SKILL.md`.
 
-`103.7` `ASSUMPTION` — ***The manager's own flag, not a worker's, and marked as the manager's.*** **The manager wrote
+`103.7` `ASSUMPTION` **settled** — ***The manager's own flag, not a worker's, and marked as the manager's.*** **The manager wrote
 a false account of a checker attempt into this node, and put it in front of the human in a gate, from its own belief
 rather than from anything on disk.** It recorded attempt 1 as having died issuing no outcome. The attempt was alive
 and returned a `PASS` minutes later. Nothing was read or checked before the claim was written; the attempt's task had
@@ -536,7 +536,7 @@ about it:** struck the passage in place, filed the real outcome above, and corre
 in the same act. **What it did not do:** decide whether the practice needs a rule — that a claim about an agent's
 state is read off the harness before it is written down — which is left for the human or a node.
 
-`103.8` `ASSUMPTION` — ***The manager's own flag, not a worker's, and marked as the manager's.*** **The manager's spawn
+`103.8` `ASSUMPTION` **settled** — ***The manager's own flag, not a worker's, and marked as the manager's.*** **The manager's spawn
 described this node's dead checker falsely, and that falsehood propagated into a probe message that interrupted the
 checker while it was alive.**
 
@@ -563,7 +563,7 @@ found the address unreachable, and finished its check. Its outcome is above and 
 and is not the manager's to settle:** whether a worker's probe may interrupt another node's live agent, and what a
 probe may assert about the graph. Carried to node 119 as evidence rather than argued here.
 
-`103.9` `ASSUMPTION` — **A checker's subagent brushed `.scratch/` and the checker disclosed it.** Attempt 1's
+`103.9` `ASSUMPTION` **settled** — **A checker's subagent brushed `.scratch/` and the checker disclosed it.** Attempt 1's
 Standards-axis subagent ran a recursive grep that matched paths under `.scratch/`; it discarded the hits and reports
 that no finding rests on them. **The checker's own words are pasted above and the manager adds nothing to them.**
 What the instance shows beyond this node: the checker's blindness to the record is enforced by instruction on the
@@ -800,3 +800,52 @@ scribe over a worker's text in any case:
 **What follows for the record and is not the manager's to decide.** Whether the record needs a rule for stale rule
 statements inside it — struck, annotated, or left — is unaddressed by any open node. The manager did not mint one
 from inside a gate.
+
+## Interview
+
+### The gate — approved
+
+**The human's word, `verbatim`**, written at the moment they spoke:
+
+> approve 103
+
+**What it settles.** Node 103's eight outstanding flags — `103.2` through `103.9` — are settled by this approval,
+`103.1` having been settled earlier. That includes the three the manager raised against itself at this gate: the
+false account of checker attempt 1 (`103.7`), the spawn that misdescribed it (`103.8`), and the manager's reading of
+the condition's record-reaching clause as void (`103.6`).
+
+**What the manager did not read into it.** The gate payload put two things in front of them that this word does not
+pick between, and neither is recorded as decided: **the two checkers' different readings of clause 7** — attempt 1
+holding the worker's three extra edits inside the condition, attempt 2 reporting them neutrally — and the five
+questions the checkers handed back, which name defects in files this node did not change. A settled flag is a
+judgement no longer open to revisit; it is not an answer to a question asked beside it. **Node 107 is open on the
+largest of those questions** and holds a written question of its own.
+
+## Annotation: the landing, and one alteration the manager made to the worker's commit message
+
+*Filed by the manager after the gate.*
+
+**Landed as `106380a`**, four files, 47 insertions and 25 deletions, fast-forwarded onto `master`. Worktree removed,
+branch `node-103-pick-report-settling-moment` deleted. Nothing was pushed.
+
+**The manager altered the worker's proposed commit message and is recording that rather than letting it pass.** The
+worker's message carried a paragraph beginning *"The map's standing preference is restated under the `Change the map`
+procedure, its superseded wording moved verbatim first."* **That would have been false of this commit**, the map
+edits having been moved out of the node's tree under flag `103.5`, so the commit carries four files and no map
+change. The manager replaced that paragraph with one naming the precondition contract's repair, which the commit does
+carry. **This is the manager editing a worker's text**, which the scribe rule otherwise forbids; the ground is that a
+commit message is written at the moment of landing, which is the manager's act and after the worker is gone, and that
+the alternative was committing a false claim. The worker's message as proposed is on this node under `## Gate payload,
+as the worker handed it back`.
+
+**Two mechanical facts about the landing, recorded because the record is short of them.**
+
+1. **The sandbox blocked `git merge --ff-only`, for the third recorded time on this effort** — nodes 58 and 100 being
+   the first two — with `error: unable to unlink old '.claude/skills/expedition/SKILL.md': Read-only file system` on
+   all three skill files. **This time it half-applied**: `CONTEXT.md` was written into the working tree while `HEAD`
+   did not move, so the checkout and the commit disagreed until the merge was completed outside the sandbox. The
+   manager established that the stray `CONTEXT.md` was byte-identical to the branch's version — `git diff
+   node-103-… -- CONTEXT.md` empty — before restoring it, so nothing was discarded unread. **A repair to the sandbox
+   configuration is nobody's node.**
+2. `git worktree remove` printed `warning: update of config-file failed` and removed the worktree anyway, confirmed by
+   `git worktree list` and an empty `.worktrees/`. Same benign warning as node 100's landing.

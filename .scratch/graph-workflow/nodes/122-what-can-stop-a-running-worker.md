@@ -309,7 +309,7 @@ and no node covers it.
 
 *The worker's three, pasted as it wrote them, with its own later corrections applied where it directed them.*
 
-`122.1` `ASSUMPTION` — **I settled this node's central fact from the harness's compiled source rather than reporting
+`122.1` `ASSUMPTION` **settled** — **I settled this node's central fact from the harness's compiled source rather than reporting
 it unestablished, and I marked it as inference throughout rather than as measurement.** The case cannot be produced
 from inside a worker, and node 119's worker hit the same wall and reported the equivalent fact as unestablished. I
 judged that the ownership predicate — two lines, `wal(e,t){if(e===void 0)return!0;return e===t}`, with the caller's
@@ -322,7 +322,7 @@ discriminators so the reading is checked rather than trusted.
 points — see `## The manager ran Tests 1 and 2, and both pass` above. One detail of the same reading does not: the
 notification's `status` reads `killed`, not `stopped`.
 
-`122.2` `ASSUMPTION` — **I spawned four throwaway probe agents and left two of them unstoppable, one of which is
+`122.2` `ASSUMPTION` **settled** — **I spawned four throwaway probe agents and left two of them unstoppable, one of which is
 still burning tokens.** My spawn licensed throwaways freely and node 119 established experiment as the route, so I
 did not ask. **Cost, measured:** `Stop probe alpha` ran to term at 400 tool uses and 70,249 tokens; `Message latency
 probe beta` 49 uses and 21,018 tokens; `Long tool call probe epsilon` 1 use and 14,861 tokens; ~~`Unprimed stop probe
@@ -333,7 +333,7 @@ task-notifications from `Stop probe alpha` and `Unprimed stop probe delta`, belo
 only a cost — delta is Test 1's target, and stopping it is the test.**~~ ***Struck by the worker itself:*** Test 1
 spawns its own target.
 
-`122.3` `ASSUMPTION` — **I report "a message does not reliably stop a worker" as established while marking its
+`122.3` `ASSUMPTION` **settled** — **I report "a message does not reliably stop a worker" as established while marking its
 mechanism as inferred.** A delivered message leaves no transcript record, so I could not distinguish delta refusing
 three cancellations from delta never receiving them. I judged the operational claim settled anyway, because from the
 manager's seat the two are indistinguishable and both mean the worker kept running, and because two positive

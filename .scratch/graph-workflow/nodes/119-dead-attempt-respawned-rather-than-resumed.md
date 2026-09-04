@@ -271,7 +271,7 @@ they have given is conditional on a fact this node still owes.
 
 ## Flags
 
-`119.1` `ASSUMPTION` — **I spent agent tokens to establish possibility empirically, and resumed a dead checker on a
+`119.1` `ASSUMPTION` **settled** — **I spent agent tokens to establish possibility empirically, and resumed a dead checker on a
 resolved node to do it.** The node owed a fact nobody had tested, and the human's rule is conditional on it, so I
 judged measurement in scope rather than asking. Four probe agents were spawned; one measurement probe overran to
 ~47.6k tokens because a stop message is queued rather than delivered. **Side effect the manager should expect:** node
@@ -287,17 +287,17 @@ refused the probe's instruction, finished its check, and returned a `PASS` that 
 checker's. So the side effect the worker warned of turned out to be a second independent outcome on live work, and
 the cost the flag reports bought more than it was spent for.
 
-`119.2` `ASSUMPTION` — **I endorsed the manager's reading of *"Whenever it can be resumed, resume I think"* as a
+`119.2` `ASSUMPTION` **settled** — **I endorsed the manager's reading of *"Whenever it can be resumed, resume I think"* as a
 general default**, and read the hedge as leaving the default rebuttable in an unseen case rather than as weakening it
 in the two named ones. Grounds: it quantifies over cases, it followed the two named ones as a widening, and it names
 a test rather than a case.
 
-`119.3` `ASSUMPTION` — **I carved out one exception the human did not name**: a fresh second opinion on a verdict
+`119.3` `ASSUMPTION` **settled** — **I carved out one exception the human did not name**: a fresh second opinion on a verdict
 already delivered is spawned fresh, not resumed. Their words say *whenever*, so this narrows them. Grounds: resuming
 there returns the same judgement by construction, which is the one thing checker independence exists to prevent. No
 such case exists on this effort, so the carve-out costs nothing today.
 
-`119.4` `ASSUMPTION` — **I made node 59's practice a requirement**: a resumed re-check re-runs the bar's command half
+`119.4` `ASSUMPTION` **settled** — **I made node 59's practice a requirement**: a resumed re-check re-runs the bar's command half
 and re-establishes that no standard moved, rather than carrying either over. It was one run's good judgement; I made
 it the price of resuming a checker that holds its own earlier verdict.
 

@@ -1,7 +1,7 @@
 # Carry the checker's enumerator duty into the checker's contract
 
 Type: implementation
-Status: open
+Status: claimed
 
 ## Question
 
