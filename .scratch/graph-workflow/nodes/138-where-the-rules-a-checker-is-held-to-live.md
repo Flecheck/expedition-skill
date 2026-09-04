@@ -1,7 +1,7 @@
 # Where the rules a checker is held to live, now that it may not go and find them
 
 Type: grilling
-Status: open
+Status: resolved
 
 Blocked by: none
 
@@ -427,3 +427,290 @@ worker's later judgement for their word — the failure [node 113](113-whether-t
 worker named when it faced the same shape and refused it. **The manager has therefore filed this against Q2 and put
 the reconciliation back to the worker**, which is the party that changed its mind and the party holding the
 interview. The manager has not decided what the two payloads' difference comes to.
+
+## Answer
+
+*Attempt 1's handover, pasted as its worker wrote it. The manager authored none of it.*
+
+**The rules a checker holds work against and an implementer works to live in one file beside `map.md`, named for
+those two readers, and they arrive by the spawn rather than by a search. And where a standing direction of the
+human's is about a file the workflow ships, silence means it reaches that file.**
+
+### 1. Where the rules live
+
+Their word, `verbatim`: *"138 recommendation taken"*. The recommendation it settles:
+
+> Into its own new file beside `map.md`, separate from the manager's file, holding the standards list, the bar's
+> commands and the landing policy, read directly by the checker and by the implementer, with `map.md` keeping a
+> one-line pointer. The review-route paragraph moves here rather than into node 139's manager file, and its operative
+> list is separated from its story.
+
+*"At the map level"* therefore permits a sibling, and the sibling is **not** the one node 139 built. Two files rather
+than one, and the line between them is a test that already exists rather than a new judgement: [node
+42](42-checker-spawn-carries-ground-rules.md) fixed that only a standing constraint true of any node's work may reach
+a blind checker, never an account of what happened. `map-manager-only.md` is full of accounts by design — the fog,
+the dogfood target, what earlier checkers cost. Sharing one file would mean either a checker reading what it is kept
+blind to, or the manager selecting by hand again, which is the defect the direction is aimed at.
+
+**The narrow reading was rejected on its own ground rather than on cost.** `map.md` is the one file a checker may not
+read, so rules kept there must be retyped into every spawn by the manager — which is not a file you edit, and which
+failed within the hour: a checker was resumed with a statement that was not true and went and ran the plugin skill
+the human had just barred. The saving is secondary and was measured anyway: the narrow reading drops the approved
+split from ~41% to ~31% of the file every worker reads cold on every node.
+
+**Sequencing, decided by the manager and recorded here because it changes where a paragraph sits today.** Node 139
+finished and passed its check with all five bodies moved, `map.md` 43,847 → 31,481 bytes. The review-route paragraph
+is therefore in `map-manager-only.md` right now and takes one further step in [node
+140](140-move-the-implementers-and-checkers-material-out-of-the-map.md). The end state is the one taken above; only
+the route to it has two legs.
+
+### 2. Whether a standing direction reaches the shipped files
+
+Their word, `verbatim`: *"138 yes"*, taking the payload's recommendation: **the default stands, with one exception —
+where the thing a direction is *about* is a file the workflow ships, silence means it reaches that file, and the
+manager may not quietly confine it to the map.**
+
+This **amends [node 93](93-effort-scoped-custom-rules.md)**, which held that where the human says neither, the rule is
+the effort's alone. That default is unchanged for a direction about how this effort is run. It no longer holds for a
+direction whose subject is a shipped file.
+
+Applying it to the three directions on the record:
+
+- **The checker direction** — *"in the checker, it shouldn't try to find the skill/rules"* — is about
+  `expedition-checker/SKILL.md` and `expedition-implementation/SKILL.md` by name. It **reaches both**.
+- **The no-plugin direction** is about the shipped skill files and already binds them, which the shipped corpus
+  already satisfies. What it does *not* settle is whether it also reaches **ground rule 5**, which is this effort's
+  own never-shipped standard rather than a shipped file — the new rule speaks only to shipped files, so it leaves
+  that open. [Node 132](132-does-the-plugin-direction-reach-the-efforts-own-bar.md) keeps its question and **its
+  blocker on this node is discharged**.
+- **The docs-packaging direction** — *"for the doc we should try to put it as a 'plugin' so that the skill can be
+  used without it or the doc by itself"* — is about a deliverable the workflow will ship. It therefore **binds [node
+  130](130-the-docs-discipline-this-workflow-ships.md)'s output** when that output exists.
+
+**Two corrections this node owes the record, both against itself.**
+
+*First.* A payload of this node asserted that the human had **approved** the effort-only default. They had not. Flag
+`93.1` is marked *settled*, which on this graph means it rode their next word rather than that they addressed it, and
+node 93 records no words of theirs on it — verified from that node's own text, `flags.md` being closed to a worker.
+That claim was the load-bearing sentence in a framing which held that *"nothing is broken and nobody overstepped"*,
+and with the claim gone the framing goes with it: their answer is not a reversal of something they had blessed, it is
+them speaking for the first time on a default that had been applied to three of their directions in silence. **The
+framing they answered was the better one, and this node does not prefer its own.**
+
+*Second, and it is about what this node can attest to.* Two payloads of this node are in its own hold — the
+destination question and a later scope question that was never delivered. The payload the human answered *"138 yes"*
+to is not among them and its text is not in this worker's context. The answer is binding and is recorded above from
+the manager's transcript of it; what this node cannot do is claim authorship of the words they read. Recorded because
+a later reader will otherwise assume the node held what it answered for.
+
+### 3. What a checker is given in place of a reviewing skill's procedure
+
+Settled here, because each part follows from the direction or from a resolved node. Only the last part does not, and
+it is reported as a node rather than decided.
+
+- **Discovery goes.** The shipped checker contract's *"Find these before you read the work"* and *"Go and find them;
+  no name for any of them is fixed here"* are the thing the direction names, and under section 2 the direction
+  reaches that file.
+- **The standards arrive by the spawn, on either of two routes** — copied in as text, or named as a path the checker
+  reads. Both are the human's own words: *"sent by the manager or just read by the checker."* The contract permits
+  both and each effort picks; this effort picks the file.
+- **Pointing a checker at a rules file does not unblind it.** Its blindness is to **the record** — the reasoning
+  behind the work — and never to the standards, which it already reads as files today. This is what makes the wide
+  reading safe, and it is why *"just read by the checker"* costs nothing that the narrow reading would have
+  protected.
+- **A reviewing skill may still be run where a spawn names one, never where the checker found one.** The human barred
+  a *generic* skill and barred *discovery*; neither bars a discipline somebody declared. So the contract's rule that
+  no part of such a skill may run in an agent handed less than the checker was is kept and stays in force.
+- **Where a spawn names no standards at all**, the checker holds the work against the acceptance condition and the
+  bar alone and says so in its outcome. Today's contract fills that hole with *"hold the work against whatever rules
+  you did find"*, which discovery is what made possible; something has to stand there or a checker on an unfamiliar
+  repo has no stated behaviour. Flagged.
+- **What is left is a genuine fork and is not settled here.** Removing discovery removes a *procedure* and not only a
+  list: the checker is left with sources and no discipline for reviewing against them. Whether the workflow ships one
+  of its own is reported below as a node, because it mints a deliverable.
+
+### 4. How the implementer receives the same rules
+
+**A pointer, not the text.** Settled from two resolved nodes rather than asked: [node
+12](12-subagent-context-contract.md) established that inbound context travels as file pointers and that the checker
+is the single exception, and [node 136](136-the-map-has-grown-back-what-node-59-saved.md)'s answer states *"Pointer,
+not copy — copying into spawns would move the cost into the manager's context, which is this effort's first-failing
+resource."* The implementer reads files, so *"the rules should also be used by the implementer"* is discharged by
+pointing it at the same file the checker reads. That single source retires a defect three retrospectives have
+reported: the implementation contract sends prose work to `/coding-principles` and `/naming` while the standard that
+actually bites on prose was named only in material the implementer was never pointed at.
+
+### 5. What the standards list still cannot do, and who owns it
+
+The moved review-route paragraph names, as standards, *"this map's standing preferences, ground rules and four
+standing rules"*. For a reader that does not read `map.md` those resolve to nothing, and the repair is not one move
+but two different things:
+
+- **The ground-rules block and the four standing rules of writing can move.** Both are standing constraints true of
+  any node's work, which is node 42's own test for what may reach a blind checker.
+- **The standing preferences cannot.** They are the map's universal content, read by every worker, and several of
+  them are accounts or steers that node 42's test bars from reaching a checker at all. So that reference is not
+  repairable by moving: **it has been wrong as a checker standard since node 42 fixed that test**, and the move
+  exposes it rather than creating it.
+
+**This is not node 140's work.** Node 140 is a move; this is an edit to what a standard says, it changes the shipped
+checker contract's fifth given, and it must wait for the contract rewrite. It is reported below as its own node, and
+node 140's condition holds the paragraph's wording untouched so the two do not contend.
+
+### 6. Where this meets node 130
+
+They are the same question about two bodies of text and they meet at one point rather than overlapping. Node 130 asks
+how a docs discipline is packaged so that **nothing depends on it either way**; this node asks how a body of rules
+reaches an agent **without the agent going to find it**. Both answers are the same shape — a named thing handed over,
+rather than a thing discovered — and both are constrained by ground rule 2, which requires a contract to stand alone
+rather than depend on a skill being invocable. The point where they touch is section 3's last bullet: if the workflow
+ships its own reviewing discipline, that is a second shipped-discipline deliverable beside node 130's and it should
+be packaged the way the human asked node 130's to be. **Node 130 is not answered here and nothing above decides it.**
+
+## Flags this node raised
+
+*Each in the worker's own words. The numbers are the manager's bookkeeping; the worker returned them unnumbered.*
+
+`138.1` — `ASSUMPTION`: **The implementer gets a pointer to the rules file, not its text.** The human's direction
+says the rules *"should also be used by the implementer"* and does not say how they arrive. Settled as a pointer, on
+node 12's finding that inbound context travels as file pointers with the blind checker as the sole exception, and on
+node 136's answer that copying into spawns moves the cost into the manager's context, which this effort measures as
+its first-failing resource. The reading set aside: handing the implementer the text, which would make the same bytes
+uncached in the manager rather than in the worker.
+
+`138.2` — `ASSUMPTION`: **Where a spawn names no standards, a checker holds work against the acceptance condition and
+the bar alone.** Removing discovery removes the contract's current fallback, *"where you find no reviewing skill at
+all, hold the work against whatever rules you did find"*, which only discovery made possible. Settled as the stated
+behaviour because a checker on a repo whose standards nobody has written down must still be able to return an
+outcome, and because inventing standards would break the contract's rule that a property nobody stated is not a
+finding. The alternative set aside: making an unnamed standard set a raise, which would stop a check for a condition
+the work can perfectly well be held to.
+
+`138.3` — `ASSUMPTION`: **A reviewing skill may still be run where a spawn names one.** The human barred a generic
+skill by name and barred the checker going to find one; neither sentence reaches a discipline an effort declares.
+Settled as permitted-when-named so that the delegation-blindness rule, which is about any agent a skill spawns, keeps
+an object rather than being deleted with the discovery apparatus. The reading set aside: deleting the reviewing-skill
+machinery outright, which would also delete a rule nothing else states.
+
+`138.4` — `ASSUMPTION`: **The map's standing preferences are not among the standards work is held against.** The
+review route names them as a standard; node 42's test bars an account of what happened from reaching a blind checker,
+and several standing preferences are exactly that. Settled as: the two blocks that pass node 42's test move into the
+rules file and the wholesale reference to the standing preferences is retired. Decided from node 42's shipped test
+rather than from preference, and reported as a node's work rather than done here.
+
+`138.5` — `ASSUMPTION`: **The docs-packaging direction now binds node 130's output, reversing this node's own earlier
+election.** An undelivered payload of this node proposed leaving it effort-only because the thing it constrains does
+not exist yet. Under the rule the human took, a direction about a thing the workflow ships reaches it, and a
+deliverable that does not exist yet is still a deliverable. Recorded as a flag because it reverses a position this
+node had put in writing, and because node 130 is open and unclaimed and its worker should not have to discover the
+reversal.
+
+`138.6` — `ASSUMPTION`: **The byte floor in node 140's acceptance condition is this node's number.** Node 139's
+condition used a floor 931 bytes below what its move could remove; node 140's four bodies measure 4,376 bytes in the
+post-139 tree, so the same proportional headroom gives 3,900. It is a floor that cannot be reached by trimming, only
+by moving, which is what makes it a check rather than a target.
+
+`138.7` — `ASSUMPTION`: **A worker cannot tell a settled flag from an approved one.** This node asserted in a payload
+that the human had approved a default when the flag recording it was merely *settled* — it rode their next word. The
+distinction is load-bearing and a worker cannot check it, `flags.md` being closed to workers by every contract, so
+the error is reachable by any worker that reasons from a flag's state. Settled as: a worker states what a node's own
+text shows and never that the human approved something unless their words are on the node.
+
+## Nodes this node surfaced
+
+- **1** → [node 143](143-rules-arrive-by-the-spawn-never-by-a-search.md), implementation, eleven clauses.
+- **2** → **not a new node.** The completed acceptance condition for [node
+  140](140-move-the-implementers-and-checkers-material-out-of-the-map.md), filed there as a supersession of the
+  partial text its original author left.
+- **3** → [node 144](144-make-the-rules-file-stand-alone.md), implementation, blocked by 140 and 143.
+- **4** → [node 145](145-whether-the-workflow-ships-its-own-reviewing-discipline.md), grilling.
+- **5** → [node 146](146-graph-conventions-map-rules-name-two-notes-sections.md), implementation, blocked by nothing
+  now that node 139 has landed.
+
+## What this node's work invalidates
+
+*Pasted as the worker wrote it.*
+
+> **[Rules added to one effort's map, and what makes them legitimate](93-effort-scoped-custom-rules.md)** — resolved,
+> and its section 3 holds that *"Where they say neither, the rule is this effort's alone"*, with flag `93.1` settling
+> silence as meaning map-only. The human's answer here carves an exception out of it: where the thing a direction is
+> about is a file the workflow ships, silence means it reaches that file. Node 93's reasoning survives for every
+> direction about how an effort is run, which is the ordinary case it was written for; its unqualified statement of
+> the default does not.
+>
+> **[Subagent context contract](12-subagent-context-contract.md)** — resolved, and its per-type table gives the
+> checker *"the acceptance condition as extracted text, the bar, and the diff. Nothing else"*, with the note that the
+> checker *"is the one worker whose payload cannot be a pointer"*. Both clauses are now false: the checker may be
+> given a path to a rules file and read it. The ground the note rests on is narrower than the note — pointing a
+> checker at the **record** would unblind it, pointing it at a **standard** does not, and it already reads standards
+> as files. Node 42 had already made *"nothing else"* false by adding a fifth given; this is the second time that row
+> has moved.
+>
+> **[The checker's spawn carries the effort's ground rules](42-checker-spawn-carries-ground-rules.md)** — resolved,
+> and its answer states that the ground rules are *"copied into the spawn rather than pointed at"* because *"anything
+> the map holds that bears on your check reaches it only as words in the spawn"*. Once the ground rules live in a
+> file the checker reads, that reason no longer holds and the copy is redundant. **Node 42's test is untouched and is
+> load-bearing throughout this answer** — what is superseded is the delivery mechanism it chose, not the boundary it
+> drew. New node 3 above is where this lands.
+>
+> **[`map.md` has grown back most of what node 59's restructure
+> saved](136-the-map-has-grown-back-what-node-59-saved.md)** — resolved, and its answer classifies the review route as
+> the manager's material on the ground that *"the checker never reads the map at all"*. Under this answer the review
+> route is the checker's own and moves to the file it reads. The classification moves; the measurement behind it, and
+> the admission test it produced, stand.
+
+## Retrospective — attempt 1
+
+*Pasted as the worker wrote it.*
+
+**1. What I had to hunt for.** (a) **The actual state of node 139's worktree.** I was told its worker had written
+nothing and had a table of what remained to move. The tree said otherwise: the split was finished,
+`map-manager-only.md` existed at 14,314 bytes, and the 12,000-byte floor was already met at −12,366. The fact that
+mattered was one `git -C <worktree> status` and I nearly missed it, because my first attempt used `cd` inside a
+compound command, the `cd` silently did not take, and git reported the *main* tree as clean. **Every conclusion I
+drew in that turn was against the wrong directory until I re-ran it with `-C`.** Two protections caught it: the file
+sizes did not add up, and the headings did not match. Neither was a check I was told to run. (b) **The bodies' byte
+sizes**, which nothing records, by `grep | wc -c` against the post-139 tree. (c) **Whether `map-manager-only.md`
+carries its own `## Notes`**, which decides a clause I wrote — one grep, and nothing pointed me at it.
+
+**2. What I read and did not use.** Node 12 in full, 326 lines, for one table row and three sentences — but it was
+the single most load-bearing thing I read, so the cost was right. Node 93 in full, 267 lines, for section 3 and one
+flag's marker. Node 42 in full for one test and one paragraph. `decisions.md` I grepped rather than read on the
+spawn's advice: 13 lines returned, 4 used, and it worked exactly as promised — that instruction saved the most for
+the least. The implementation contract I read whole and used two paragraphs of, though I could not have known which
+two in advance.
+
+**3. What would have made this node easier.** In the spawn: nothing about the node itself, which was well-prepared
+and told me what it held no view on. What cost me most was **being told the state of a sibling node's tree instead of
+being told to look** — three of the four facts I was handed about node 139 were stale or wrong by the time I read
+them (its worker's progress, `map.md` at 43,707 against a measured 43,847, the review-route paragraph at 1,589
+against a measured 1,595), and the one that mattered was wrong in a way that would have made me phrase an amendment
+to a condition that needed none. A single line saying *the tree is authoritative, go measure it* would have replaced
+all of it. **In the graph:** no file records `map.md`'s size over time, which is the number this effort's
+most-prioritised concern turns on — reported by node 136's worker too, and still nobody's.
+
+**4. What was stale, wrong, or contradicting something else.** (a) The report that node 139 had written nothing,
+against a finished and passing worktree. (b) **My own claim that the human had approved the effort-only default**,
+which they had not — I read a flag marked *settled* as a flag they had spoken to, and a worker cannot check that,
+`flags.md` being closed to it. It was the load-bearing sentence in a framing I now think was worse than the one they
+answered. (c) A payload attributed to this node whose text is not in my context and which I cannot attest to
+authoring, recorded in the answer rather than resolved. (d) The checker contract's `Five things, in the spawn:`
+against node 12's `Nothing else`, which node 42 falsified and nothing reconciled. (e) The map still names `/grilling`
+and `/domain-modeling` as skills every session should consult while both are registered under the plugin the shipped
+files must not depend on — reported by nodes 69, 110, 116 and 136's worker before me, and now a fifth time.
+
+***The manager's note on the retrospective, and not the worker's.*** **Its 3 is the sharpest correction of the
+manager on this graph so far, and the manager accepts it whole.** Three of the four facts the manager handed it about
+node 139 were stale by the time it read them, and the one that mattered — that node 139's worker had written nothing
+— was wrong in a way that would have had it phrase an amendment to a condition that needed none. **The manager was
+reporting a sibling node's state instead of telling it the tree was authoritative.** Its own prescription is one
+line, and the manager has none of it written anywhere.
+
+**Its 1(a) names a failure mode the manager has hit twice this session in its own shell** — `cd` inside a compound
+command silently not taking, so a command reports on the wrong directory. The worker caught it by arithmetic that
+did not add up rather than by any check it was told to run.
+
+**Its 4(b) and flag `138.7` are one finding and it is about the graph rather than about this worker.** A flag marked
+`[x]` on this graph means it **rode the human's next word**, not that they addressed it — and `flags.md` is closed to
+every worker by every contract, so no worker can check which. The distinction is load-bearing and unreachable from
+where a worker stands.
