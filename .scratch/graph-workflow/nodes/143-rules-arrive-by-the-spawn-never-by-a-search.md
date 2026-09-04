@@ -115,3 +115,52 @@ decline fork — **survives this node intact**, and the apparatus deleted is a d
 the conclusion the node it dispatches is meant to reach* — occurring rather than theorised: **an unestablished
 inference of the manager's arrived at the worker as settled fact.** The worker's retrospective names the repair:
 quote the source rather than characterise it.
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted. It was spawned by the manager, and was told to work to the main checkout's copy of
+its own contract rather than the one this node edits.*
+
+**Whether a standard moved under the check**, settled first: *"None of them is one of the two changed paths, so
+nothing the bar carries moved and the check stands. My own contract is one of the changed files; I worked to the main
+checkout's copy throughout and did not adopt the new text."*
+
+**All eleven clauses met.** Clause 1 established by unwrapping both files and pulling every sentence containing
+find/look/search/discover: all three named remnants gone, and the one surviving `discover` is the bar's commands,
+which clause 3 itself places outside the standards. Clause 6 established byte-wise — `### Where the work moved one of
+them` is **1482 bytes in both HEAD and the finished file**. Clause 7: all three map pointers gone, the only surviving
+map reference being a file rather than a named section. Clause 8 by grep over both finished files. Clause 10 from
+`git status --porcelain -uall`.
+
+**Clause 5, which the spawn warned it about, and which it did not report as unsatisfiable:**
+
+> I judge the clause satisfiable both ways at once… **What the rule requires is unchanged.** Element by element
+> against HEAD, the only edits inside that subsection are the domain word and two `the standards you found` → `the
+> standards you were given` rewordings that clause 2 forces. **Nothing formerly covered falls out.** The section's
+> new opening makes every reviewing skill one the spawn names, so the old extension is a subset of the new one. **The
+> trailing conjunct has satisfiable content only on this reading.** On the narrow reading, *"applies to any skill a
+> spawn names"* demands what the first half forbids and the clause could not be met at all. **Where one reading
+> leaves the clause checkable and the other leaves it broken, the checkable one is what it demands.**
+
+**The deleted sentence: the condition permits it.** *"no clause names it or requires its retention; clause 6, the
+only clause protecting a section, protects a different one and that one is intact; and the sentence is phrased over
+'Everything you find', the found-standards framing clauses 1 and 2 require removed."*
+
+**Residual, reported and not a finding.** Three places in the finished checker still speak of the bar as carrying
+standards — *"A standard the bar carries can be one of the paths that changed"*, the routing-table row, and *"A
+finding that touches neither the acceptance condition nor the bar is not yours to hand back"* — **with nothing left
+in the file establishing that the bar carries the standards.** It raised no question on it, the spawn having stated
+that node 151 owns the repair.
+
+**The bar: holds.** Command half established by enumeration — *"177 `.md` files and one `.gitignore`; no
+`package.json`, `Cargo.toml`, `pyproject.toml`, `Makefile`, `justfile`, `flake.nix`, `.pre-commit` or `.github/`"*.
+Non-command half against all five named standards, `CONTEXT.md`'s 40 `_Avoid_` lines read by hand.
+
+**No part of the condition left uncovered.**
+
+***The manager's note.*** **The run covered the whole condition and named no part it could not reach**, so this entry
+carries no `NOT COVERED:` label. **Its residual is the gap flag `145.3` predicted by name** and accepted in advance:
+between this node landing and [node 151](151-write-the-checker-contracts-how-you-check-section.md) landing, the
+shipped contract states standards it no longer routes to a verdict. Sequencing 151 next closes it.
