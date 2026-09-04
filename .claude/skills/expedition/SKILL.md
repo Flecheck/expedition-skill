@@ -78,8 +78,9 @@ what you do; that document says what the files look like when you have done it.
   outcome rather than instead of it.
 - **raise** — an agent putting something to the human. Whether it waits is the channel's property
   rather than the word's: a worker's raise stops that worker until the human acts, **a checker's
-  question handed back alongside its outcome does not**, and a flag waits for the human moment that
-  ends its node. A gate is the scheduled form of the waiting kind, on finished work.
+  question handed back alongside its outcome does not**, and a flag waits for the moment that closes
+  its node — a gate, or the pick report. A gate is the scheduled form of the waiting kind, on finished
+  work.
 - **gate** — the one point on the code path where work stops until the human acts. You raise a checked
   change; nothing is committed until they approve.
 - **acceptance condition** — what done means for one implementation node, written before any work on
@@ -375,9 +376,16 @@ effort's index of flags. Both belong to the act of raising it, never to a tidy-u
 **Settling a flag is two writes too**: the node and the index, both. **Where the two disagree, the
 index wins.**
 
-**A node's flags are settled at the human moment that ends that node** — a grilling node's last answer,
-an implementation node's gate — while the work is still in front of everybody and judging a flag is
-cheap. The closing report carries only the flags that never had such a moment.
+**A node's flags are settled at the first human moment its close reaches** — an implementation node's
+**gate** where it has one, and otherwise the **pick report** that closes it. No kind of node is exempt
+and none has a rule of its own. Settling it there is what makes judging a flag cheap — the work is
+still in front of everybody — and it is also the earliest moment that works, a node's flags not
+existing until its worker hands them back.
+
+**The pick report awaits no answer**, so the settlement rides whatever the human says next, whatever
+that next thing is about. **Where the human never speaks again, nothing settles**: those flags stay
+outstanding and reach the closing report by the route for a flag whose moment never came. **You never
+settle a flag on your own judgement or on the passage of time.**
 
 `graph-conventions.md` holds both procedures step by step, and the form of each entry.
 
@@ -435,9 +443,10 @@ infer.
 never restating the other question or its options. It is drawn from context you already hold, and
 keeping it to a name and a kind is what keeps a terse reply attributable to exactly one thing.
 
-**Three things are not claimants at all**: settling a flag, which rides the human moment that already
-ends its node; telling the human an agent died, which awaits no answer; and the closing report, which
-ends an effort rather than taking a turn in it.
+**Three things are not claimants at all**: settling a flag, which rides a moment that already exists —
+an implementation node's gate, or the pick report that closes any other node; telling the human an
+agent died, which awaits no answer; and the closing report, which ends an effort rather than taking a
+turn in it.
 
 **A checker's question is not a claimant either.** It travels inside the gate payload above rather than
 queueing on its own, which is why it needs no place in tier 1 and tier 1 stays at three.
@@ -449,15 +458,22 @@ would occupy the single channel that exists for real work, and a pick is cheap t
 override is one line.
 
 **Then start it.** A node finishing is what triggers the next work: you pick, you spawn its worker, and
-you report the pick as work already under way, naming the node and its kind. Reporting a pick and then
-waiting is the forbidden question in the shape of a statement — a report the human is expected to react
-to and a question are the same thing from where they sit — so the report awaits no answer and takes no
-place in the queue above. Reporting it as you start is what puts a pick they would have made
-differently in front of them at the moment it is made, rather than at that node's close.
+you send the **pick report** — the pick as work already under way, naming the node that just closed and
+the node and kind you started. Reporting a pick and then waiting is the forbidden question in the shape
+of a statement — a report the human is expected to react to and a question are the same thing from
+where they sit — so the report awaits no answer and takes no place in the queue above. Reporting it as
+you start is what puts a pick they would have made differently in front of them at the moment it is
+made, rather than at that node's close.
 
 **Their redirection arrives after the work has started, and that is the ordinary case.** They name a
 different node in one line, and you stop or redirect what you started. Having started it was not a
 mistake, and you were never holding the pick open waiting for permission to begin.
+
+**A pick report closing a node that holds flags carries every one of those flags**, in the fuller form
+under `### A flag in a payload` above — what was decided, why, and the context needed to answer without
+opening a file. The pick report is where those flags settle, so **one it omits is settled silently**.
+The duty bites hardest on a node the human never met: they took part in a grilling node's interview,
+while an AFK node's pick report is the first and only time they see that node at all.
 
 **Two counts bound how much you start**, each a setting of the effort, and a pick that would exceed one
 is not started — it waits, and you say what it is waiting for:

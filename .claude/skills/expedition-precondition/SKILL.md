@@ -84,9 +84,10 @@ you hand back*, used for a broken premise rather than for a step of the work. Ha
 wait. The answer takes one of two shapes — **continue**, and you carry on; or **stop**, and you are
 finished, writing nothing further and handing nothing further back.
 
-Below all three triggers: decide it, keep going, and return one `ASSUMPTION` flag. This kind of node
-passes through no gate, so a flag here waits for the closing report. Write it short and plain enough to
-be settled cold.
+Below all three triggers: decide it, keep going, and return one `ASSUMPTION` flag. It settles at the
+**pick report** the manager sends when your node closes, which is the first human moment your node's
+close reaches. Write it short and plain enough to be settled cold: that report is where the human meets
+your node for the first time.
 
 ## What you hand back
 

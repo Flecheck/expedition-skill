@@ -401,11 +401,15 @@ that created it. Where there is no round at all — a `research` node, an AFK `p
 1. `flags.md`: change that flag's `- [ ]` to `- [x]`.
 2. `nodes/NN-<name>.md`: mark that flag `settled` under `## Flags`.
 
-**The norm is settling a node's flags at the human moment that ends it** — a grilling node's last
-answer, an implementation node's gate — while the work is still there and judging one is cheap. The
-closing report is the exception path rather than the ordinary destination: it carries the flags that
-never had a human moment at all, those raised before this practice existed and those on the kinds of
-node that never end in front of the human, `research` and an AFK `precondition`.
+**The norm is settling a node's flags at the first human moment its close reaches** — an
+implementation node's gate where it has one, and otherwise the **pick report** that closes it — while
+the work is still there and judging one is cheap. No kind of node is exempt. The pick report awaits no
+answer, so the settlement rides whatever the human says next, and the manager never settles a flag on
+its own judgement or on the passage of time.
+
+The closing report is the exception path rather than the ordinary destination, and it carries two
+populations: flags raised before this practice existed, on nodes already resolved; and flags whose
+pick report the human never answered, because they never spoke again.
 
 A flag the human turns into a node is settled the same way; the node itself is created by the ordinary
 add-a-node step.

@@ -165,8 +165,9 @@ _Avoid_: audit, full cascade
 **Flag**:
 A note recording a judgement an agent made on its own and the human may want to revisit — usually a
 worker's, and the manager's where a judgement of its own reached the graph. Raising one blocks nothing.
-It is settled at the human moment that ends its node, and reaches the closing report only where that
-moment never came.
+It is settled at the first human moment its node's close reaches — an implementation node's gate where
+it has one, and otherwise the pick report that closes the node — and reaches the closing report only
+where the human never spoke again.
 _Avoid_: TODO, warning
 
 **Promote**:
@@ -202,8 +203,8 @@ of scope.
 **Raise**:
 An agent putting something to the human. Whether it waits is a property of the channel rather than of the
 word: a worker's raise stops its work until the human acts, a checker's question handed back alongside
-its outcome does not, and a flag waits for the human moment that ends its node — a grilling node's last
-answer, an implementation node's gate. The gate is the scheduled form of the blocking kind, on a finished
+its outcome does not, and a flag waits for the moment that closes its node — an implementation node's
+gate, or the pick report. The gate is the scheduled form of the blocking kind, on a finished
 diff; a worker opens an unscheduled one when its premise is broken — the thing that is wrong is not the
 worker's to change, the decision changes a lot, or the choice is genuinely too hard to make alone. Below
 that line it decides and leaves a flag instead. A blocking raise holds the code slot while it waits, it
