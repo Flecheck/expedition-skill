@@ -395,36 +395,36 @@ worker's, which holds this node.
 
 ## Flags
 
-`117.1` `ASSUMPTION` — **No cap on how many questions a payload may carry.** Independence is the only membership
+`117.1` `ASSUMPTION` **settled** — **No cap on how many questions a payload may carry.** Independence is the only membership
 rule. I settled it rather than asking because I measured that every grilling node in this effort ran one or two
 rounds carrying a single question each, so any cap I could name would bind on nothing, and because the map's standing
 preference refuses machinery built for a predicted need. If the frontier of a node's design tree ever turns out wide,
 this is the line to revisit.
 
-`117.2` `ASSUMPTION` — **A lone question is not numbered.** Numbering only where a payload holds more than one, so
+`117.2` `ASSUMPTION` **settled** — **A lone question is not numbered.** Numbering only where a payload holds more than one, so
 that the presence of numbering is itself the signal that there is more than one thing to answer. The alternative —
 number always, for uniformity — costs the human a signal they get for free, and the human was not asked.
 
-`117.3` `ASSUMPTION` — **A question's number is monotonic across an attempt and never reused.** A payload re-asking
+`117.3` `ASSUMPTION` **settled** — **A question's number is monotonic across an attempt and never reused.** A payload re-asking
 an earlier question keeps that question's original number. Derived from the partial-reply case rather than from
 anything the human said: renumbering per payload makes *"Q1 ok"* denote a different question in each round, and the
 effort's own id discipline already prefers a sequential id that never changes.
 
-`117.4` `ASSUMPTION` — **A question a reply does not name is unanswered, not parked.** It goes out in a later
+`117.4` `ASSUMPTION` **settled** — **A question a reply does not name is unanswered, not parked.** It goes out in a later
 payload, and the human deferring stays something they say. Settled because reading silence as a deferral would infer
 an act they did not perform and would stop the node, where reading it as unanswered costs one payload and keeps the
 node moving.
 
-`117.5` `ASSUMPTION` — **The human's predicted reply form does not reach the shipped text.** They predicted answering
+`117.5` `ASSUMPTION` **settled** — **The human's predicted reply form does not reach the shipped text.** They predicted answering
 per question and hedged it themselves. I record it as evidence for where the rule's weight sits and ship none of it:
 no worker requires a numbered reply and nothing assumes one, because a prediction about one human's habits is not a
 property of the workflow.
 
-`117.6` `ASSUMPTION` — **The skill's word `frontier` is forbidden for a payload's questions rather than qualified.**
+`117.6` `ASSUMPTION` **settled** — **The skill's word `frontier` is forbidden for a payload's questions rather than qualified.**
 The glossary fixes `Frontier` for the open, unblocked, unclaimed nodes. I chose outright refusal over a qualified
 variant because a second sense of a fixed word is what the glossary's refusals exist to stop.
 
-`117.7` `ASSUMPTION` — **`/grilling` was read in full and one of its instructions left unrun; `/domain-modeling` was
+`117.7` `ASSUMPTION` **settled** — **`/grilling` was read in full and one of its instructions left unrun; `/domain-modeling` was
 not invoked.** Reading `/grilling` was this node's own work. I ran its design-tree ordering, its
 recommendation-per-question and its rule that finding facts is mine rather than the human's. I left *"Ask the whole
 frontier in one round"* unrun, under the contract's clause that the hard rules govern: the question shape admits one

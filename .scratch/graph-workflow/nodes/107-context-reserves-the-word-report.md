@@ -301,3 +301,52 @@ removing the cost makes that alternative *stronger*. The recommendation survived
 presence of numbering is itself the signal that the payload holds more than one."* Neither reading has reached the
 human, node 117's second question — what a bare assent means against a numbered round — being the live one. **The
 manager relayed neither convention as a rule and takes no view.**
+
+### Attempt 1, answer 1 to Q1 — a divergence
+
+**The human's word, `verbatim`**, written at the moment they spoke:
+
+> We can rename the closing report to effort closing report and use closing report or close report for the node
+> report. The effort closing report is rarely done in practice compared to the node one, so we can do effort closing
+> report and node closing report, shortened to closing report as it is the one used the most and should be
+> understandable in the context where it is used ?
+
+**`DIVERGENCE`. This does not take the recommendation.** The worker recommended *"Keep **pick report**"* on the
+stated ground that **no better name exists among the candidates**, and it disqualified `close report` specifically
+because it *"sits one letter from `closing report`, where the two would mean per-node and per-effort — the worst kind
+of collision, between two terms a reader meets in the same glossary"*. **The human has taken the alternative the
+worker set aside**, which the worker described as *"the only path to a fully clean pair"* and *"the one option that
+gets better now that node 103 has landed"*, and offered *"because it is genuinely available and you may want it"*.
+
+**The option they took, quoted in full and attributed to the worker who wrote it**, not to the manager:
+
+> **Rename `closing report`, then take `close report` for this one.** The only path to a fully clean pair — `close
+> report` per node, and something like *final report* or *effort report* per effort — and the one option that gets
+> *better* now that node 103 has landed, since nothing is mid-flight to disturb. I set it aside rather than recommend
+> it because it reaches beyond what this node asks: `Closing report` is settled vocabulary with its own refusals, and
+> renaming the effort-level report to fix the node-level one is a larger act than the defect warrants. It is here
+> because it is genuinely available and you may want it.
+
+**But their proposal is not that alternative as written**, and the difference is the whole of what is left to decide.
+The worker's version renames the effort-level report to something *distinct* — *"final report or effort report"* — so
+the two names share no head. **Theirs keeps a shared head and disambiguates by prefix**: `effort closing report` and
+`node closing report`, and then proposes that the node one **shortens to `closing report`** on the ground that it is
+the more frequent and that context will carry it.
+
+***The manager's note, and not the human's words. Three facts the manager holds and is recording rather than
+deciding.***
+
+1. **Their reply is not fully determinate.** It offers *"closing report or close report"* for the node-level term and
+   does not choose, then converges on `node closing report` shortened to `closing report`. Under [node
+   117](117-questions-sent-in-batches.md)'s rule a reply settles what it names, and this names two candidates. The
+   manager has **not** picked between them.
+2. **Their shortening proposal inverts a term already in use rather than introducing a new one.** `closing report`
+   currently denotes the once-per-effort report — in `CONTEXT.md`'s own entry, in the manager's contract, in
+   `graph-conventions.md`, in `map.md`, and in this effort's record. Under their proposal the unqualified form comes
+   to denote the **node-level** one. So every unqualified existing use would either need a prefix or would silently
+   change meaning, and the never-delete rule means the record keeps its old uses unaltered. **That is a cost the
+   worker's version does not have**, and it is the exact hazard the worker was avoiding by refusing a shared head —
+   arrived at from the other direction.
+3. **Their reply ends in a question mark.** The manager reads that as inviting a view rather than as issuing a
+   decree, and **that view is the worker's to give, not the manager's** — the worker holds the interview. It has been
+   put back to the worker with the three facts above and no manager position.
