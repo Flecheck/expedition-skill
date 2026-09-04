@@ -1,7 +1,7 @@
 # Which harness route creates an implementation node's worktree
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 

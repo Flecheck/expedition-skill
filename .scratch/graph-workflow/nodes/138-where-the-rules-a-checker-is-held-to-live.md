@@ -714,3 +714,21 @@ did not add up rather than by any check it was told to run.
 `[x]` on this graph means it **rode the human's next word**, not that they addressed it — and `flags.md` is closed to
 every worker by every contract, so no worker can check which. The distinction is load-bearing and unreachable from
 where a worker stands.
+
+## An annotation filed by the manager after this node resolved
+
+*Not a change to the answer above. Filed from [node
+145](145-whether-the-workflow-ships-its-own-reviewing-discipline.md)'s `INVALIDATIONS`, in that worker's own words.
+**The node format defines no section for an annotation onto a resolved node** — that hole is [node
+79](79-annotation-section-is-undefined.md), and this heading follows the ad-hoc precedent already in this file rather
+than settling it.*
+
+> **[Where the rules a checker is held to live](138-where-the-rules-a-checker-is-held-to-live.md)** — resolved, and
+> its section 6 holds that *"if the workflow ships its own reviewing discipline, that is a second shipped-discipline
+> deliverable beside node 130's and it should be packaged the way the human asked node 130's to be."* The antecedent
+> is now satisfied and the consequent is false: the workflow ships one, and it is a section of a contract that
+> already ships rather than a separately-installable thing, so the packaging direction does not bind it and node
+> 130's count is unchanged. **Everything else in node 138's section 6 stands** — the two questions still meet at one
+> point, both answers are still the same shape (a named thing handed over rather than discovered), and both are still
+> constrained by ground rule 2. This node's own `## The manager's note at filing` carries the same sentence and is
+> falsified with it.
