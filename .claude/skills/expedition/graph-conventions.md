@@ -22,13 +22,14 @@ marked in place and the new text is added around it. Text leaves a file only whe
 human asks for it gone. `map.md` is the one file whose superseded text is also *moved* rather than
 left in place, and it is moved whole: see `## Writing the map` below.
 
-## The six files
+## The seven files
 
 ```
 .scratch/<effort>/
   map.md                 The whole effort at low resolution. Read once per session.
   map-history.md         The account behind the map's lines. Read for history, not to work a node.
   map-manager-only.md    The part of the map only the manager acts on. No worker reads it.
+  map-implementation-rules.md  The rules an implementation node's work is held to.
   decisions.md           One capped line per resolved node. Append-only.
   flags.md               One capped line per flag, with its state. Append-only.
   nodes/NN-<name>.md     One file per node. All detail.
@@ -37,6 +38,11 @@ left in place, and it is moved whole: see `## Writing the map` below.
 `map-manager-only.md` holds the part of the map that only the manager acts on, so that no worker pays
 to read it; it is part of the map, and a rule written there binds exactly as one written in `map.md`
 does.
+
+`map-implementation-rules.md` holds the rules an implementation node's work is held to — the landing
+policy, the bar's commands and the standards work is held against — and is read by that node's worker
+and by its checker rather than by every worker; it too is part of the map, and a rule written there
+binds exactly as one written in `map.md` does.
 
 `map.md` has five sections, in this order:
 
