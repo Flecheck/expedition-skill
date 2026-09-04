@@ -171,3 +171,11 @@ is held against it.
 **Withdrawn by the worker on the replay, recorded because it existed:** a flag about the pointer citing node 140 without a markdown link. *Its words:* *"Its whole ground was a 116-byte margin under clause 9. On the correct tree the landing-policy paragraph is 102 bytes larger, so the margin is 582 rather than 480, and the pointer now carries a proper markdown link... Nothing in the finished tree rests on this flag and it is not carried forward."* No id was allocated and no line was written to `flags.md`.
 
 **Discharged by the manager:** the worker's flag about working against a stale base. The cause is established — a harness worktree branches from `origin/<default-branch>`, `origin/master` is `c3d50bf`, and this effort pushes nothing — and is recorded in this node's `## The work was cut from a stale base` section and put to the human at [node 150](150-which-harness-route-creates-a-worktree.md). No id was allocated.
+`140.9` `ASSUMPTION` — *The manager's own.* This node's **work is the map**, so its checker cannot hold the work
+against the condition without reading the effort's own files, which a checker is otherwise given nothing from. The
+manager spawned it with the same instruction it used at [node
+147](147-graph-records-name-absolute-paths-on-a-machine.md) — read those files as the work under check and derive
+nothing from what their content says about this effort or this node. **This is the recurrence flag `147.3`
+predicted by name** (*"It will recur on every node whose subject is the graph's own files, node 140 next"*), and
+`147.3` was settled at node 147's gate with that sentence in front of the human. It is filed again rather than
+treated as covered, because a settlement on one node is not a standing licence.
