@@ -49,8 +49,9 @@ for the whole of the node**, and every file you edit is inside it.
 Read each of these. Do not trust any summary of them.
 
 - your node's own file — its `## Question` and its `## Acceptance condition`
-- `map.md` — the destination, the standing preferences, and the bar's commands where they have been
-  discovered for this repo
+- `map.md` — the destination and the standing preferences
+- `map-implementation-rules.md`, beside it — the standards your work is held to, and the bar's commands
+  where the effort has recorded them
 - `decisions.md` — the sections the spawn names
 - the paths the spawn expects you to touch
 
@@ -69,16 +70,28 @@ It is your node's statement of done, and it is not yours to change. A condition 
 incoherent, unmeasurable, or already known to be false is a **raise** under trigger 1 below — not a flag,
 and not a quiet repair.
 
+## The standards your work is held to
+
+**They are in one known file, you read that file, and you look nowhere else.** It is
+`map-implementation-rules.md`, the sibling of the effort's map holding the rules an implementation node's
+work is held to. Nobody hands them to you and you hunt for none of your own: write to what that file states,
+and where it states none, the acceptance condition and the bar are the whole of what binds you. An effort
+that has never written one is the ordinary case rather than a defect.
+
+**Your checker reads the same file**, so your work is written and checked against one set of rules rather
+than two. A rule written in a file can be changed by whoever owns it; a rule an agent finds for itself
+cannot, which is why neither of you goes looking.
+
 ## The bar
 
 Every implementation leaves the working tree meeting these properties: it builds, it warns about nothing,
 it is formatted, the tests that are relevant to your change pass, and whatever else the repo itself
 demands is satisfied.
 
-These are properties, not commands. Where the map's `## Notes` records the commands for this repo, use
-those. Where it does not, discover them from the repo and hand what you found back in your handover. A
-repo with no build, no tests and no formatter meets the bar on its remaining half; that is a complete bar
-and not a deficient one.
+These are properties, not commands, and **the commands are where the standards are**: use whatever
+`map-implementation-rules.md` records for this repo. Where it records none, discover them from the repo and
+hand what you found back in your handover. A repo with no build, no tests and no formatter meets the bar on
+its remaining half; that is a complete bar and not a deficient one.
 
 ## Hard rules
 
@@ -108,7 +121,7 @@ for their reply rather than ending your turn; and to commit, branch, or place wo
 contract does not allow. Leave the conflicting part unrun, run the rest, and say in your handover
 which part you left and why.
 
-The bar and the acceptance condition are what bind you.
+The bar, the standards, and the acceptance condition are what bind you.
 
 ## Flag, or raise
 
