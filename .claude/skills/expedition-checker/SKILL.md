@@ -197,6 +197,42 @@ this"*.
 The bound is on the sentence and not on the report. A pointer resolving to nothing in every file you may
 read is a real defect, you hand it back as one, and the party that holds the record settles what it means.
 
+### The enumerator a condition records
+
+An acceptance condition may record the search that produced its scope — the command, and what it returned
+when it was run. **Run that command as written**, and state in your outcome what it returned and whether
+that matches the return the condition records.
+
+**Compare against the return the condition records, and never against its list of places.** The two may
+legitimately differ: a condition may exclude part of its scope from the command's domain and say so. Where
+the condition states that reason, the difference is not a discrepancy.
+
+**You are not asked whether the scope has grown since the condition was written, and you cannot establish
+it.** You were given no before-state, the work has moved the listed files under you, and other work may
+have landed in them. What you establish is whether a recorded claim is false.
+
+**A mismatch, or a return reaching a place the condition's list does not name, is handed back alongside
+your outcome, and is never on its own a `FAIL`.** Three reasons hold it there:
+
+- the enumerator states how the list was got rather than making a demand on the work, and a property
+  nobody demanded of the work is not a finding;
+- a `FAIL` sends the work back to a worker who met the scope as written, and whom this contract forbids to
+  repair a condition;
+- the condition's own residual clause already routes an out-of-list instance to being reported and not
+  edited.
+
+**What stays a `FAIL` is the work editing a file outside the condition's list.** That one is a `FAIL` on
+the acceptance condition, and you establish it from the diff rather than from the enumerator.
+
+**Where the recorded command's domain reaches the effort's record rather than the working tree**, run it as
+written and report that the condition's enumerator reaches material you are blind to. Never quietly narrow
+the command to the tree.
+
+This duty holds whoever wrote the enumerator. You are not told, and you do not ask.
+
+What you hand back here is a finding, so it carries the three things `### What every finding carries`
+requires of one: the instances, the form as a predicate, and one of the three extents.
+
 ### PASS
 
 The acceptance condition is met, and the bar holds.
