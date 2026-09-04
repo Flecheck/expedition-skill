@@ -169,3 +169,52 @@ reported to the human the measurement it already holds, which is evidence rather
   local HEAD."*
 
 Measurement and documentation agree, and both say the default is **not** where the tree already is.
+
+**The worker's second question, pasted as it wrote it.** Same attempt; put after the human questioned the premise of
+the first question's second half, and after the manager asked it to demonstrate rather than assert.
+
+> **You are right, and it is right about `git`.** A plain `git worktree add` with no ref given does exactly what you
+> describe — branches from wherever you are standing. I just ran it: it landed on `80260a3`, which is the tip of
+> `master` this minute. That is almost certainly where the belief comes from, and it is correct.
+>
+> **The harness does not do that.** In the same minute, on the same tree, I spawned a throwaway probe agent with
+> worktree isolation. It reported its own base as `c3d50bf` — `origin/master`, the last thing anyone pushed, **22
+> commits behind** where the manager is standing. I saw the same thing from the main tree in `git worktree list`, and
+> the harness writes its own choice into a file inside the worktree, which also says `c3d50bf`. So: three
+> observations, one conclusion, all from today's tree rather than from the failed node's history.
+>
+> Two worktrees, same repo, same minute:
+>
+>     git worktree add  (by hand)  ->  80260a3   = local master, where you are
+>     harness isolation (a worker) ->  c3d50bf   = origin/master, 22 behind
+>
+> **Why it doesn't self-correct.** This effort never pushes — that is the one git rule from the original landing
+> policy that has survived every revision. So `origin/master` is frozen at whatever was last pushed, and the gap only
+> ever grows: it was 15 commits when I first measured it an hour ago, and 22 now. Every implementation node would
+> start further behind than the last.
+>
+> The harness documents this as a setting with exactly two values — `fresh`, the default, meaning
+> `origin/<default-branch>`, and `head`, meaning where you actually are. The default is the odd one; the setting just
+> asks the harness to behave the way plain `git` already does.
+>
+> **ASK:** Given that — plain `git` does branch from HEAD, but the harness measurably does not and is 22 commits
+> behind today — will you set `worktree.baseRef` to `head`?
+>
+> **RECOMMENDED:** Yes. It is one line, and it makes the harness match the behaviour you already expected it to have.
+> Without it the landing policy's rebase step is doing real work on every single node instead of absorbing your
+> occasional graph commits, which is what it was designed for — and node 140 is what that looks like when it fails.
+>
+> Your global settings or this project's, whichever you prefer. Project-scoped keeps it off your other repos and
+> travels with this one; I have not touched either.
+>
+> **ALTERNATIVES:**
+> - Leave it at `fresh` and change the landing policy to say worktrees are cut from `origin/<default-branch>`.
+>   Honest, but it makes every node's rebase a real merge across a gap that never stops growing, and I would not
+>   recommend it.
+> - Push `master` before each implementation node so `origin/master` keeps up. This works, but it breaks "nothing is
+>   ever pushed", which you have held to since the beginning.
+
+***The manager's note.*** **The worker withdrew nothing and was told it could.** The manager's resume offered it the
+withdrawal explicitly — *"If your probe shows the default does cut from local `HEAD` on this machine today, say that
+plainly and withdraw the request"* — and the probe went the other way. The human's belief is confirmed correct about
+plain `git` and refuted about the harness, both in one observation on today's tree.
