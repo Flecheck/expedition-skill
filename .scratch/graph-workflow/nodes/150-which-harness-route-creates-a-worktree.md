@@ -142,3 +142,30 @@ contradiction noted above:
 the sandbox mounts `.git/config` read-only; they differ on whether the resulting failure is fatal. The manager's
 attempt could not remove the worktree at all until it ran outside the sandbox; this worker's produced a warning and
 succeeded. Neither observation is withdrawn.
+
+**The human's answer**, `verbatim`:
+
+> 150 -> yes to what you said except this: I don't understand the point of "and will you set worktree.baseRef to
+> head" -> doesn't it do that by default when creating a worktree, taking whereever the tree already is?
+
+**The option the first half takes, in the worker's own words** — quoted because the reply is unreadable without it:
+
+> **the isolated-worker route** — the harness makes the worktree when the manager spawns the worker, and the manager
+> points the checker and every later correction round at that same path.
+
+***The manager's note.*** **The reply is half an answer and half a question about the second half's premise.** The
+route is settled: the isolated-worker route, accepted. **The `worktree.baseRef` half is not settled and was not
+treated as settled** — the human questions whether the setting is needed at all, believing the default already cuts
+from where the tree stands. Under the rule that the worker holds the interview and the manager holds the channel, the
+premise question was **put back to the worker** rather than answered by the manager, and the manager separately
+reported to the human the measurement it already holds, which is evidence rather than an answer:
+
+- Node 140's harness worktree was cut at `c3d50bf`. `git rev-parse origin/master` is also `c3d50bf`. Local `master`
+  was six commits ahead at that moment.
+- The consequence was measured on the file itself: node 140's `map.md` was 31,481 bytes where the live one was
+  33,007 — 1,526 bytes stale — and its work did not rebase.
+- Independently, the harness's own documentation of the worktree tool states that the base ref is governed by
+  `worktree.baseRef`, *"`fresh` (default) branches from `origin/<default-branch>`; `head` branches from your current
+  local HEAD."*
+
+Measurement and documentation agree, and both say the default is **not** where the tree already is.
