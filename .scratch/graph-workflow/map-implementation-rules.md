@@ -28,7 +28,8 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
 - ~~The
   harness picks the path, `.claude/worktrees/agent-<agentId>/`, and the branch, `worktree-agent-<agentId>`, and the
   manager learns both from the worker's completion notification. **The node's id is no longer in either**; the commit
-  trailer `Node: <effort>/<NN>` is the join key and is the manager's to write.
+  trailer `Node: <effort>/<NN>` is the join key and is the manager's to write.~~ **Superseded by the bullet
+  above**: the node's id is in the path and the branch again, and the commit trailer stays the join key regardless.
 - **The manager verifies the base at every spawn.** A harness worktree's base is governed by `worktree.baseRef`,
   whose default `fresh` means `origin/<default-branch>` — frozen forever on an effort that never pushes. The setting
   is `head`, but **the setting is a property of the environment, cannot be passed per call, and does not travel to
