@@ -117,3 +117,21 @@ being relayed: this question queues behind node 145's, which was live when it ar
 > says no worker reads, and node 140 is moving more out now. It has already bitten once: a worker on node 132 needed
 > a standard, found it in the manager-only file, and had to decide on its own authority whether it was allowed to
 > read it.
+
+**The human's answer**, `verbatim`:
+
+> yes package A
+
+**The option it takes, in the worker's own words** — quoted because the reply is unreadable without it and the prose
+is the worker's:
+
+> **RECOMMENDED:** Package A, reaching the shipped files.
+
+***The manager's note.*** **Not a divergence**: the answer takes the worker's own recommendation. **The manager
+considered and did not treat the reply as ambiguous.** Alternative E was *"Package A, but this effort's notes only,
+changing no shipped file"* — a Package A variant — so a bare *"package A"* could in principle have meant either. The
+manager's relayed question ended *"package A as recommended, or one of B through E"*, the reply opens with *"yes"*,
+and E was not named; on this effort the human's two preceding answers took recommendations in the same form
+(*"yes recommended"*, *"recommended ship it"*). So the reply is read as the recommendation, which reaches the shipped
+files. Recorded here rather than left to inference, because the difference between the recommendation and E is
+whether the change reaches the shipped worker contracts at all.
