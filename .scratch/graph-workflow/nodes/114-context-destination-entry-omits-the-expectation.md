@@ -1,7 +1,7 @@
 # `CONTEXT.md`'s `Destination` entry does not say the destination states whether the effort is expected to end
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 ## Question
 
@@ -157,7 +157,7 @@ uncommitted and its check is running.*
 
 ## Flags
 
-`114.1` `ASSUMPTION` — **Only the non-expected half of node 91's milestone/surprise pair is in the entry.** Node 91's
+`114.1` `ASSUMPTION` **settled** — **Only the non-expected half of node 91's milestone/surprise pair is in the entry.** Node 91's
 `### What turns on it` settles a symmetric pair: an empty frontier is a **milestone** where the effort is expected to
 end, and a **surprise** where it is not; likewise the closing report is a destination on one and an exception path on
 the other. My clause 2 demands only the not-expected side, so that is what I wrote, and I did not add the milestone
@@ -464,3 +464,15 @@ it**; this is recorded beside it, not merged into it.
 **And it independently confirmed both of the manager's map corrections**, including locating the likely source of the
 `where` error: the word appears inside the *explanatory prose* of the `Raise` entry's `_Avoid_` line rather than in
 its list of refused words.
+
+## Interview
+
+### The gate — approved
+
+**The human's word, `verbatim`**, written at the moment they spoke:
+
+> 114 approve
+
+**What it settles.** Node 114's one outstanding flag, `114.1`, is settled by this approval. **The reply names the
+node**, which is the sixth recorded instance of the human volunteering a scope where a bare assent would have been
+ambiguous — and here it was: node 113's second payload was queued behind this gate when they wrote it.

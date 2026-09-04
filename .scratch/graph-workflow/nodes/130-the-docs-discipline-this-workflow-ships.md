@@ -66,3 +66,23 @@ what this node decides.
 turns on that** — but the human minted this node's subject before either existed, and did not say it waits. **The
 header carries no `Blocked by:` edge**, because adding one is a claim about what this node needs that only its own
 worker or the human can make. It is named here instead.
+
+## A second addition from the human, widening what this node reads
+
+**Their words, `verbatim`:**
+
+> for node 130, for the github link there are also some implementation in the comments and more generally there was a
+> lot of inspiration taken from it on a lot of projects, so it might be interesting to look at what was done more
+> globally
+
+***The manager's note.*** **This widens the node's sources and does not change its question.** What it adds: the
+gist's own comment thread, which they say carries implementations, and the derivative work across other projects.
+**None of it is authoritative** — they said *"it might be interesting"*, which the manager reads as an instruction to
+look rather than a claim about what will be found, and marks that reading as the manager's.
+
+**What it changes about how this node should be worked, and the manager has not decided it.** A survey of what other
+projects did with one idea is **research**, and this is a `grilling` node. Three routes exist and the manager has
+taken none: whoever takes this node dispatches a subagent for the survey, which its contract permits and node 113's
+answer now states in the grilling contract's own discipline; or a `research` node is minted ahead of it and this one
+blocks on it; or the survey is skipped and the node decides from the two sources already named. **The first is the
+cheapest and the node's own worker can choose it without anyone's permission.**

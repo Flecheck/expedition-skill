@@ -1,7 +1,7 @@
 # Whether `qmd` lowers this workflow's token cost, and what it would cost to adopt
 
 Type: research
-Status: open
+Status: claimed
 
 Blocked by: none
 

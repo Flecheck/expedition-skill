@@ -1,7 +1,7 @@
 # Whether the contracts' instruction to invoke a method skill is doing any work
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 ## Question
 
@@ -363,3 +363,182 @@ was judged harmless on the ground that the earlier question was off the queue an
 between two `Q1`s but between two *payloads*, one delivered and one not. Node 117's rule governs a reply to a
 payload; **nothing governs a reply that arrives while a later payload of the same attempt is queued undelivered**,
 and that is the state this node was in. No node covers it.
+
+## The worker's determination of what the assent settled, and its retraction of its own retraction
+
+*Pasted as it wrote it. **The manager put the complication to it without a position and this is its answer**, which
+is the party that wrote both texts.*
+
+> **On what "For 113 ok" settled — my judgement, since I wrote both texts.** Their assent lands on **payload 1 as
+> written, all four clauses, the `## Notes` clause included.** Three grounds. The contract's own rule is that an
+> assent to an option makes that option theirs — and the option in front of them was payload 1. Hard rule 1 forbids
+> me answering on their behalf, and reading their "ok" onto a retraction they never received would substitute my
+> later judgement for their word, which is exactly that failure. And a retraction that was never delivered cannot
+> subtract from what they endorsed.
+>
+> **More than that: my withdrawal was overstated on its own terms, and I retract the retraction.** My stated ground
+> was conditional — *"once node 126 lands the rounds half and node 130 ships the docs discipline"* — and both nodes
+> are open. So the `## Notes` clause is **correct today** and becomes wrong only when two open nodes land. I wrote
+> *"I am not defending that part"*, which is stronger than my own ground supported. What I actually found is an
+> **expiry**, not an error. So nothing is owed back to them on this: the clause is implemented as endorsed, and the
+> expiry becomes a cascade obligation that nothing currently watches.
+>
+> **Payload-2 Q1 is moot, and was my defect.** Payload 1's endorsed text already said what each contract gains —
+> grilling gains two bullets, and the other three have their existing discipline made unconditional. I re-opened a
+> question my own endorsed recommendation had closed. Its answer would have been the same either way. **Payload-2 Q2
+> is not my node's subject** and goes out as a new node. Numbers consumed on this attempt: `Q1` (payload 1,
+> answered); payload 2's `Q1` label is void and its `Q2` is superseded by the new node. Any further question on this
+> node starts at `Q3`.
+
+## Answer
+
+*Node 113's worker's `ANSWER`, pasted as it wrote it.*
+
+> **The instruction was doing almost no work, and the little it did was negative.** The four `Invoke <skill> if it is
+> present` lines and the conditional preface come out of all four contracts that carry them. Each contract's stated
+> discipline becomes the whole of that discipline, unconditionally. The grilling contract gains two bullets carrying
+> what `/grilling` uniquely had. The skills stay named in `map.md`'s `## Notes`. Settled by the human, `verbatim`:
+> *"For 113 ok"*, assenting to the recommendation as offered.
+>
+> **The cost was measured for the first time here, and it was never the objection.** Byte counts exact; tokens
+> derived at node 52's own ratio, which is exactly 4 bytes per token — the rule of thumb rather than a tokenizer
+> count. `/grilling` 1,987 B (~500 tok); `/domain-modeling` 3,331 B (~830); `/coding-principles` 5,089 B (~1,270);
+> `/naming` 7,265 B (~1,820); `/research` 794 B (~200); `/prototype` 2,931 B (~730). The most expensive contract is
+> implementation at ~3,090 tokens, against a `map.md` read of 40,344 B (~10,090) the same worker already pays. **No
+> contract's skills cost more than 31% of that read, and the grilling pair is 13%.** So the ground given in flags
+> `102.3`, `94.5` and `91.3` — that loading them was not worth its cost — does not survive measurement.
+>
+> **The content was the objection.** `/domain-modeling` excludes its own reader in its opening paragraph: *"Merely
+> reading `CONTEXT.md` for vocabulary is not this skill... This skill is for when you're changing the model, not just
+> consuming it."* A grilling worker consumes the glossary and cannot change it, hard rule 3 forbidding any file. Of
+> its six operative instructions two write files and three are written as speech to the human; **one is runnable**,
+> and running it here found two real defects in `CONTEXT.md`. `/grilling` offers **two of seven** instructions the
+> contract's inline list lacked; three conflict with hard rules 2, 3 and 5; one uses **frontier** in the sense this
+> effort's glossary refuses.
+>
+> **Compliance was never the variable, and the node's framing as a compliance record was too coarse.** The record is
+> **five** instances with **three** distinct causes, not one failure repeated. Flag `69.3` is the earliest and is
+> unlike the rest: the bare names did not resolve at all, the skills being registered as `mattpocock-skills:grilling`
+> and `mattpocock-skills:domain-modeling`, and that worker *"did not translate the names."* Flags `102.3`, `94.5` and
+> `91.3` did translate them and declined on cost. Node 117's worker read `/grilling` in full, ran three instructions
+> and refused a fourth on a hard-rules ground. All three of the cost flags read `settled` today, not outstanding.
+>
+> **The decisive evidence came from the contracts where workers did comply.** `/coding-principles` and `/naming` were
+> invoked as required at nodes 74, 103 and 116 and reported adding nothing: *"neither had a part to leave unrun"*,
+> *"honestly thin on a prose deliverable"*, *"near-no-ops on prose"* — and they are the most expensive pair named.
+> Meanwhile `/writing-for-agents`, which **no contract names** and which reaches a worker only through ground rule 5,
+> was invoked at node 103 and made four concrete edits to the deliverable. **The line's naming was anti-correlated
+> with usefulness, and with cost: the effort paid most for the least useful pair.**
+>
+> **Why, stated as the form rather than the instances.** The line named skills **by node kind**. Whether a skill does
+> any work is decided by the worker's permissions — which by hard rule forbid writing files and addressing the human,
+> the two things these skills mostly instruct — and by the deliverable's medium, prose or code. **Neither is
+> predicted by the kind.**
+>
+> **Two facts that bound how far this reaches.** No shipped file names the plugin: `grep -rn "mattpocock"
+> .claude/skills/expedition*/` returns nothing, so the shipped corpus's whole dependency was six bare names in four
+> lines. And **only four of those six are plugin skills** — `/coding-principles` and `/naming` are the human's own,
+> at `/home/mathieu/dotfiles/programs/claude/skills/`, which is why they appear unprefixed in a worker's skill list.
+>
+> **The pattern to follow already ships.** `expedition-checker/SKILL.md` names no skill. It states the shape instead
+> — *"let no part of a reviewing skill run in an agent that would be handed less than you were"* — with an explicit
+> fork between invoking with the givens supplied and declining to invoke and working by hand. It is the only contract
+> naming none, and the only one no worker reported as thin or unrun.
+>
+> **What is deliberately not removed.** Node 48's clause — *"Where a method skill's instructions and this contract's
+> hard rules conflict, the hard rules govern"* — **stays in all four contracts.** `map.md`'s `## Notes` still names
+> the six skills as ones a session should consult, so a worker may still invoke one on its own initiative and the
+> reconciliation rule keeps its subject. Node 48 is therefore not contradicted.
+>
+> **One expiry, recorded because nothing watches it.** The `## Notes` entries for `/grilling` and `/domain-modeling`
+> are correct today and stop being correct when node 126 lands the batching rules into the grilling contract and node
+> 130 ships the docs discipline that replaces `/domain-modeling`. That is a cascade obligation on two open nodes, not
+> a defect in what was decided here.
+
+## Index line
+
+*The worker's, pasted.*
+
+> The four `Invoke <skill> if it is present` lines and the conditional preface go; each contract's stated discipline
+> becomes the whole discipline, and grilling gains two bullets.
+
+## Flags
+
+`113.1` `ASSUMPTION` — **What the human's assent landed on, where its author had retracted a clause in the
+interval.** Their *"For 113 ok"* reached payload 1; payload 2, carrying my withdrawal of the `## Notes` clause, was
+never delivered to them. I read the assent as settling payload 1 as written, all four clauses included, on the
+contract's rule that an assent makes the offered option theirs and on hard rule 1's bar against answering for them. I
+also judged my own withdrawal overstated: its stated ground was conditional on two open nodes, so the clause is right
+today and merely expires. I therefore asked nothing back and implemented the clause as endorsed. The human may want
+the reading back, since it is the one place their word and their worker's later judgement diverged.
+
+`113.2` `ASSUMPTION` — **Both method skills were invoked in full, and the parts left unrun are named.** Reading them
+was this node's own subject, so I invoked rather than declined. From `/grilling` I ran the dependency ordering, the
+recommendation-per-question, and the rule that finding facts is mine; I left unrun its `❓ Q1` round format (the
+contract mandates `ASK:`/`RECOMMENDED:`/`ALTERNATIVES:`), its instruction to wait in-turn for a reply and not act
+until the human confirms (hard rules 2 and 5), and its use of *frontier* (the glossary refuses it). From
+`/domain-modeling` I ran only the glossary challenge, leaving unrun the two instructions that write files and the
+four written as speech to the human.
+
+`113.3` `ASSUMPTION` — **`CONTEXT.md` miscounts the contracts that name a method skill.** Its `## The five kinds of
+node` says *"three of them name a skill the worker invokes"*; four do — grilling, research, prototype and
+implementation — and only `precondition` names none, its contract saying so explicitly. I read this as a stale count
+rather than as counting something I could not see. Found by running `/domain-modeling`'s one usable instruction.
+
+`113.4` `ASSUMPTION` — **`CONTEXT.md`'s grilling entry contradicts node 117 and no node covers it.** It still reads
+*"reached by interviewing them one question at a time"*, which node 117 superseded by adopting several questions in
+one payload. Node 126's acceptance condition names exactly one file,
+`.claude/skills/expedition-grilling/SKILL.md`, so the glossary sits outside its scope. I judged this an uncovered
+cascade miss rather than surviving prose under the never-delete rule, because the glossary is declared authoritative.
+
+`113.5` `ASSUMPTION` — **Payload-2 Q1 was redundant and I treated it as moot rather than asking it.** It asked
+whether research, prototype and implementation owe shipped replacement text; payload 1's endorsed recommendation
+already answered it by making their existing discipline the whole discipline and giving new text to grilling alone. My
+own recommendation on it had been to add nothing, so the reading costs nothing either way.
+
+## Invalidations
+
+*The worker's, pasted.*
+
+> none. Node 48 was checked specifically and is **not** contradicted: its clause stays in all four contracts and
+> keeps its subject, because `map.md`'s `## Notes` still names the six skills and a worker may invoke one on its own
+> initiative.
+
+## Retrospective
+
+*The worker's, pasted. Handed back as text on this effort only, and never filed by the worker.*
+
+> **What I had to hunt for.** *Where the plugin lives* — six calls and three dead ends: `known_marketplaces.json`
+> lists only the official marketplace, the plugin is registered `@inline` with no path, and the home-manager
+> generation holds no reference. I resolved it by matching the `domain-modeling` description text in my own spawn's
+> skill list against two candidate store paths, which also revealed the upstream rewrite. *Node 52's bytes-per-token
+> ratio* — I had to open node 52 to find 79,361 B → 19,840 tokens, i.e. exactly 4.0, the rule of thumb rather than a
+> measurement; worth knowing before another node builds on that figure. *Flag `69.3`*, which nobody offered me and
+> which changed the finding's shape from four instances of one failure to five instances of three. *Whether
+> `/coding-principles` and `/naming` are plugin or user skills* — nowhere in the record, and decisive for how far the
+> human's direction reached.
+>
+> **What I read and did not use.** Both older store paths' full diffs, useful only to establish that the upstream
+> skill was reworded. Node 126's condition items 1–8 in detail, when only clause 9 bore on me. `map.md`'s `## Out of
+> scope` and most of `## Not yet specified`. `CONTEXT.md`'s `Claim`/`Handover`/`Resolve` entries.
+>
+> **What would have made this node easier.** Being told which question numbers I already held — the manager has
+> recorded that omission. Being told node 126 existed: its clause 9 already pre-decided part of my node's answer, and
+> I found it only by an unprompted `ls`. A single line anywhere in the record saying which named skills are plugin and
+> which are the human's own. And a rule for the case that actually bit: a reply arriving to payload 1 while payload 2
+> of the same attempt sits queued and undelivered. Nothing on this graph governs that, and it is the one thing here
+> that could have made me mis-attribute the human's word.
+>
+> **What I found stale, wrong, or contradicting something else.** My node file and my spawn both said flags `102.3`,
+> `94.5` and `91.3` are outstanding; all three read `settled` in their node files. My spawn called the evidence
+> "four-for-four"; it is five instances with three distinct causes. `CONTEXT.md` miscounts the contracts naming a
+> skill, and its grilling entry contradicts node 117. `map.md` is 40,344 bytes against node 59's 26,971. And the
+> three cost flags' shared ground is measurably wrong — the invocation was always a small fraction of a read those
+> workers already paid.
+
+***The manager's note on the retrospective's first and last points, both against the manager.*** **Its spawn said
+the three cost flags were outstanding and called the evidence four-for-four.** Both were the manager's, and both
+were wrong at the moment they were written: the flags had settled with the human's earlier approvals, and the record
+was five instances rather than four. **That is the third and fourth instance this session of the manager stating more
+in a spawn than the record supported**, after flags `103.8` and the per-question-overhead conflation on node 117.
+The worker corrected both from the files.
