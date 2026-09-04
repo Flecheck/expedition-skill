@@ -87,3 +87,45 @@ prose standard by plugin name, while `decisions.md` records [node
 rules file instead. The repair is [node 149](149-state-the-prose-standards-demands-in-the-rules-file.md), which is
 blocked on node 144 and has not landed. **Nothing in either file says a settled decision is not yet carried out**,
 and the worker's point stands: a worker cannot tell a not-yet-landed decision from a broken one.
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted. It was spawned by the manager, not by the worker, and was given the acceptance
+condition as extracted text.*
+
+**Standards found and used** — *"given to me, not discovered — I did not go looking for a reviewing skill, and
+invoked none, so no part of one ran and nothing was delegated to an agent"*: `/coding-principles`, `/naming`,
+`CONTEXT.md`'s `_Avoid_` lines, `graph-conventions.md`, and `/writing-for-agents`. **None of them is a path the work
+touched, so no standard moved under the check.**
+
+**The entry.** `.gitignore` line 10 is `.claude/worktrees/`. `git check-ignore -v` returns that rule for the
+directory and for content beneath it, and **the rule's source is the file under judgement**, not `.git/info/exclude`
+or a global.
+
+**The comment.** Lines 6–9, contiguous with the entry, no blank line between. Both demanded statements present. *"The
+two further lines in the block … are additional content the condition does not forbid."*
+
+**The freeze on existing text, established byte-wise rather than by eye:** *"the `HEAD:.gitignore` blob is an exact
+prefix of the working file (`new.startswith(old)` is `True`), and the added tail is exactly the five new lines. `git
+diff` is a pure-addition hunk with no `-` line."*
+
+**The `git status` clause, and the reading it did not pick silently.** Judged against the tree the work is in, and
+**agreed with rather than merely accepted**: *"the work is uncommitted, so the main checkout necessarily still
+carries the old `.gitignore`, and the clause is not establishable there until the work lands."* It then stated the
+other reading in full and **corroborated the rule against a real directory read-only**, running the main checkout's
+status with the new file supplied as an extra exclude: no `.claude/worktrees` line. *"So the entry does suppress the
+real directory, and the main tree's line goes away when the work lands."*
+
+**Scope, established from the tree rather than from the worker's word:** `HEAD` is `6795ca9…` as stated,
+`git status --porcelain -uall` is ` M .gitignore` alone, `git diff --stat HEAD` is `1 file changed, 6 insertions(+)`,
+`git diff --cached` is empty.
+
+**The bar: holds**, non-command half in full. `CONTEXT.md`'s `_Avoid_` lines were *"checked by hand rather than by
+grep, the map's own measured trap being that about a third of the refused words are ordinary English."* Standing rule
+4 was the live one and passes: the citation is a quoted phrase, *"How the worktree is made"*, which resolves in
+`map-implementation-rules.md`. The never-delete constraint holds — six added lines, no removed line.
+
+***The manager's note.*** **The run covered the whole condition and named no part it could not reach**, so this entry
+carries no `NOT COVERED:` label.
