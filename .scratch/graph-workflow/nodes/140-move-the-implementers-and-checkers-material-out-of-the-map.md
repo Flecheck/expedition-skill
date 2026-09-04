@@ -278,3 +278,49 @@ same link; amending it is not the manager's, and [node
 154](154-the-dogfood-link-names-a-path-on-another-machine.md) is the node that holds the general question. **Flag
 `140.5` is not withdrawn**: the worker's judgement to report the clause unmet rather than repair or raise it was
 correct against the condition as it then stood.
+
+### Checker run 2 — `PASS`
+
+*The same checker, resumed rather than replaced, per this map's standing rule that an agent is resumed wherever it
+can be resumed. Its own text, pasted.*
+
+**What changed since my `FAIL`, and what I redid.** The human amended clause 14 while my check was live. The
+amendment reaches clause 14 and nothing else, so I re-established that clause against the amended words alone and did
+not inherit my earlier conclusion on it. Clauses 1–13, the scope restrictions, and the bar's non-command half stand
+as I established them and were not redone. I confirmed the work itself has not moved under me: `git status
+--porcelain -uall` returns the same five paths, unchanged from my check.
+
+**Clause 14, against the amended text. Met.** I re-ran the enumerator with an added inside/outside-the-repository
+split, resolving each target with `realpath -m` against `git rev-parse --show-toplevel`. It returns exactly one line:
+`UNRESOLVED inside_repo=no map-manager-only.md -> /home/mathieu/projects/Lang`. **118 targets checked, 1 unresolved,
+and that one falls inside the amendment's exception** — an absolute path resolving outside the repository root. **No
+link with `inside_repo=yes` is unresolved**, which is the amended clause's actual demand and is the form the
+enumerator now decides.
+
+> I reached this by running the amended predicate, not by treating the human's *"so that the checker then passes"* as
+> a verdict; had any in-repository link failed to resolve, this would still be a `FAIL`.
+
+**The condition as a whole**, re-stated by the run: scope verified; clause 5's five moved bodies **byte-identical**
+(2497 / 575 / 376 / 1010 / 1588 bytes); clause 9 **−4,043 bytes and −4,029 characters**, clearing 3,900 in both
+units; clause 11's two blocks byte-identical and still in `map.md`; clause 12 eight insertions and one deletion and
+nothing else; clause 13's six skill directories empty of changes.
+
+**Clause 8, and the judgement it flags rather than hides:**
+
+> met on the move-scoped reading, which is the only reading under which clauses 6 and 8 are jointly satisfiable
+> (clause 6 *requires* a line-loss whose text cannot be in the new file). All five bodies byte-identical; the three
+> lines changed rather than moved are each preserved verbatim — two quoted whole in `map-history.md` per
+> `graph-conventions.md`'s `### Change the map`, one quoted in place. **This reading is a judgement I flag rather
+> than hide**; under a literal universal reading of clause 8's second sentence, those three lines fail it.
+
+**The bar: holds.** Command half re-checked and empty, so nothing was run. Non-command half unchanged since run 1.
+
+**Standards found and used**, in its words: *"No reviewing skill was invoked or sought, per the spawn; every standard
+was read directly and applied by hand, and no agent was spawned, so nothing ran with less than I hold. No part left
+unrun."*
+
+**No questions outstanding** — the one it raised at run 1 is answered and routed to [node
+153](153-graph-conventions-notes-bullet-is-false.md).
+
+***The manager's note.*** **The run covered the whole condition and named no part it could not reach**, so this entry
+carries no `NOT COVERED:` label.

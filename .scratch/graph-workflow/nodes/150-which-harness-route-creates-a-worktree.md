@@ -1,7 +1,7 @@
 # Which harness route creates an implementation node's worktree
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -49,6 +49,139 @@ makes `.git/worktrees/<name>` its own mountpoint, so both `git worktree remove` 
 `EBUSY`. The entry stayed in `git worktree list` as `prunable`, and **this effort discovers a code slot's occupancy
 by counting live worktrees**, so a stale entry reads as an occupied slot. It was cleared only by re-running the prune
 outside the sandbox.
+
+## Answer
+
+*The worker's own text, pasted.*
+
+**An implementation node's worktree is created by the harness around the *worker*, at the moment the manager spawns
+it — the worker is spawned with the harness's worktree isolation, and the manager stays in the main tree throughout.
+The harness's base-ref setting `worktree.baseRef` is set to `head`, so the tree is cut from the manager's current
+`HEAD` rather than from the last pushed commit.** The human's words settling the route, `verbatim`: *"150 -> yes to
+what you said except this"*, against the recommendation named below; and settling the base ref, `verbatim`: *"150
+alright good for baseRef to head then of course"*. No divergence on either.
+
+### What the landing policy now does when an implementation node starts
+
+The manager **spawns the worker with worktree isolation and creates nothing itself.** It does not choose the path and
+does not choose the branch name; the harness picks both, and the manager learns them from the worker's completion
+notification, which carries them mechanically. Everything downstream is unchanged from what [Run an implementation
+node's work in a worktree](68-implementation-in-a-worktree.md) fixed: the changes stay uncommitted through the checker
+and the gate, the gate payload names the worktree's path and the command that shows its diff, and on approval the
+manager commits path-limited, rebases onto the branch the manager thread is on, re-runs the bar, `--ff-only` merges,
+then removes the worktree and deletes the branch.
+
+Three clauses of the old policy are replaced by what the harness does instead:
+
+- **The path.** Was `.worktrees/NN-<name>/`. Is now `.claude/worktrees/agent-<agentId>/`, still inside the
+  repository. It is **not** ignored today, which is the node surfaced below.
+- **The branch.** Was a name carrying the node's id. Is now `worktree-agent-<agentId>`. **The join key is
+  unaffected** — [Git and code-landing policy](11-git-and-code-landing.md)'s `Node: <effort>/<NN>` trailer is written
+  by the manager into the commit, not by the branch name — so what is lost is only the legibility of `git worktree
+  list` to a human reading it cold.
+- **The base.** Was `git worktree add … HEAD`. Is now the harness's, governed by `worktree.baseRef`.
+
+**Occupancy still counts.** One live worktree per claimed implementation node, exactly as before. What is no longer
+discoverable from the path is *which* node a given worktree belongs to; the manager holds that from the spawn and
+again from the completion notification.
+
+### The base-ref setting, and the one thing left for the human
+
+`worktree.baseRef` has exactly two values: `fresh`, the default, meaning `origin/<default-branch>`, and `head`,
+meaning the current local `HEAD`. It is set to `head`. **Whether that is written into the human's user settings or
+into this repository's `.claude/settings.json` is not settled and nothing here turns on it** — the answer holds under
+either, and the human's later word fills it. The manager may not write the project file from inside its sandbox, so
+the write itself is theirs or is made with the sandbox off.
+
+**One cheap verification is owed, because the setting was not in force when this was measured.** On the first
+implementation node spawned after the change, the manager reads `.git/worktrees/<name>/CLAUDE_BASE` — the harness
+records its own chosen base there — or runs `git -C <worktree> rev-parse HEAD`, and confirms it equals the manager's
+`HEAD`. One command, once.
+
+### Correction rounds must not re-isolate
+
+**A second spawn with worktree isolation creates a second, empty worktree at a fresh base and strands the first one's
+work.** So a correction round **resumes** the worker, per this map's standing rule that an agent is resumed wherever
+it can be resumed; a resumed worker returns to its own tree. Where resume is unavailable — the manager's session
+having ended — the replacement is spawned with its working directory set to the surviving path rather than with
+isolation. The harness names this route itself, in the refusal quoted below: *"To work in a different directory
+(including a worktree), spawn an Agent with `cwd` set to it."* Flagged, being unverified.
+
+### What was measured, and what it replaces
+
+Everything below was measured on this tree today, with three throwaway probe agents and the live tree of node 140.
+**None of it was taken from the record**, and two things the record asserted did not survive contact.
+
+1. **A harness-isolated worker's tree survives its worker's exit.** Settled twice: a probe agent wrote a file,
+   exited, and its tree remained; and, independently, node 140's own worktree was read *by this worker* — a different
+   agent entirely — from the main checkout, returning exactly its five changed paths, uncommitted. **The span the
+   gate needs is therefore real**: worker finishes → tree persists → a separate agent reads it → the human reviews
+   it.
+2. **The tree unlocks itself at its worker's exit.** While the worker runs, the worktree is `locked` with a reason
+   naming the agent id and pid; afterwards the lock is gone, so nothing blocks the manager's removal.
+3. **A worker that changed nothing has its tree removed automatically**, checkout and admin directory both, from
+   inside the manager's sandbox. This is the one thing the harness route does that the hand route does not, and it is
+   what makes a dead or no-op worker leave no stale slot.
+4. **The completion notification carries the path and the branch** when a tree survives, and carries no such block
+   when the harness swept one — so the manager learns a path exactly when there is a path to learn.
+5. **The base was wrong under the default, and by a growing margin.** A probe spawned with isolation was cut at
+   `c3d50bf`, which is `origin/master`; local `master` was `80260a3`, **22 commits ahead**. The gap was 15 an hour
+   earlier. Since this effort never pushes — the one clause of node 11's git policy that has survived every revision
+   — `origin/master` is frozen and the gap only grows. This is what stranded node 140, whose `map.md` was 1,526 bytes
+   stale and whose work did not rebase.
+6. **The difference is the harness's, not git's.** In the same minute, `git worktree add` with no ref given was cut
+   at `80260a3` — the current `HEAD`, exactly as expected. The human's premise was right about git and wrong only
+   about the harness, which is why the setting is a correction rather than an imposition.
+7. **`git worktree remove --force` succeeds from inside the manager's sandbox**, on both a harness tree and a
+   hand-rolled one. `git branch -D` succeeds with a warning that `.git/config` is read-only, the harness maintaining
+   `extensions.worktreeConfig` there.
+8. **The `EBUSY` failure that produced the human's instruction does not reproduce.** It is recorded as measured fact
+   in two places — node 68's annotation section 2 and this node's own filing note — and today `/proc/mounts` shows
+   `.git/worktrees` mounted but no per-worktree mountpoint, and both removals return 0. **The instruction stands on
+   the human's word and not on this ground**; it is recorded here so no later reader rests an argument on a failure
+   that is no longer observable.
+
+### The three routes not taken
+
+- **The manager enters the worktree.** Refused. It would write the graph — every node file, `decisions.md`,
+  `flags.md` — from inside a branch that is not `master`, and a session can be in one worktree at a time, which would
+  freeze the code-slot count at one permanently rather than leaving it the settable number node 68 made it. Settled
+  by this worker; flagged.
+- **The worker calls `EnterWorktree` itself.** Not available. Measured: the harness refuses a subagent outright —
+  *"EnterWorktree cannot create a worktree from a subagent with a cwd override … it would mutate the parent session's
+  process-wide working directory."*
+- **The manager creates the tree with `EnterWorktree`, steps back out keeping it, and points the worker at it with
+  `cwd`.** A real route, and the only one that would keep the node's id in the path and the branch. Set aside because
+  none of it could be verified from inside a subagent, it needs the same base-ref setting anyway, and the one thing
+  it buys — a readable `git worktree list` — is already served by the gate payload naming the path. **Recorded rather
+  than closed**: it is the remedy available if the agent-id naming turns out to hurt.
+
+### What this changes about what the workflow ships: nothing
+
+No shipped file mentions a worktree at all — `grep -rn worktree .claude/skills/` returns nothing — and the lifecycle
+lives only in `map.md`. Under [Rules added to one effort's map, and what makes them
+legitimate](93-effort-scoped-custom-rules.md) the human declared no shipping scope for the harness-worktree
+instruction, so **it binds this effort's map and no shipped file.**
+
+**One consequence for an open node, stated because it is not obvious.** [Carry the worktree lifecycle into the
+manager's contract](89-carry-worktree-lifecycle-into-managers-contract.md) is blocked on *"whether the lifecycle is a
+rule of the workflow or a practice of one effort"*. This answer does not unblock it and makes it harder in a way
+worth naming: the effort's practice is now **harness-specific**, and ground rule 1 forbids a shipped file assuming a
+harness. So whatever that node ships cannot be what this effort now does, and the divergence is now a fact rather
+than a risk.
+
+
+## Flags
+
+*Each entry is the worker's own prose, pasted. The manager added the id and the marker and nothing else.*
+
+`150.1` `ASSUMPTION` — **The manager entering the worktree was eliminated by this worker rather than put to the human.** Both of its costs are facts rather than preferences: the manager writes the graph to the main tree, so it would be writing every node file, `decisions.md` and `flags.md` from inside a branch that is not `master`; and a session occupies one worktree at a time, so the route would cap the code-slot count at one permanently, undoing the settable count node 68 established. I judged these dispositive and spent the human's one question on the route that remained.
+
+`150.2` `ASSUMPTION` — **`.claude/worktrees/` needs a `.gitignore` entry, and I settled that rather than asking.** Measured: `git status --short` in the main tree shows `?? .claude/worktrees/`, and a repo-wide search traverses it and returns a second copy of every graph file. The manager reports the same pollution reaching its own context — all seven `expedition*` skills surfaced a second time, scoped to the live worktree path. The landing policy already requires worktrees inside the repository to be ignored; the harness moved the directory and the ignore rule did not follow. I treated this as a defect to repair rather than a choice to offer.
+
+`150.3` `ASSUMPTION` — **A correction round after an unresumable worker is spawned with its working directory set to the surviving worktree, not with worktree isolation.** Isolation demonstrably creates a fresh tree at a fresh base, which would strand the work; the harness's own refusal message names the `cwd` route as the alternative. **I could not verify it** — a subagent cannot set a child's working directory — so this rests on the harness's documentation of itself plus the measured behaviour of isolation, and the manager should confirm it the first time it is needed rather than at the moment it is needed.
+
+`150.4` `ASSUMPTION` — **The `head` half of the base-ref setting is documented, not measured.** Every measurement in this answer was taken with the setting at its `fresh` default; I could not change the harness's configuration and did not try. That `head` cuts from local `HEAD` rests on the harness's own statement of the setting and on the two values it exposes. This is why the answer carries a one-command verification duty on the first implementation node spawned after the change.
 
 ## Interview
 

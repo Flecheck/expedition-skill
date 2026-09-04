@@ -1,7 +1,7 @@
 # Nothing sweeps what a retrospective reports as read-and-unused
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 
