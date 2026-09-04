@@ -199,3 +199,78 @@ command, clause 2's statement and worked example, the Question's ellipsis, and t
 because the condition quotes the string it repairs and cannot be satisfied while doing so.
 
 **This amendment is part of the condition** and travels with it to the checker.
+
+`147.2` `ASSUMPTION` — *The worker's own prose, pasted.* Clause 7 demands that every markdown link this node
+rewrote resolve to an existing path. No rewritten occurrence was a markdown link — verified before editing — so the
+clause is vacuously satisfied. But five of the rewritten paths do not resolve from the repository root:
+`.worktrees/103-pick-report-settling-moment` and its `CONTEXT.md` in node 103,
+`.worktrees/114-destination-entry/CONTEXT.md` in node 114, and `.worktrees/116-checker-enumerator-duty` in two forms
+in node 116. I left all five as bare rewritten paths rather than repairing, deleting or annotating them, on the
+judgement that they are historical records of gate payloads naming worktrees the landing policy removed once those
+nodes landed; they did not resolve before this change either, and a record of where work once stood is not a pointer
+anyone is meant to follow. Repairing them would have been a change of meaning, which clause 3 forbids. If the intent
+is that every path in the record resolve, these five need a different treatment and this node did not give them one.
+
+## Retrospective
+
+*Filed by the manager from the worker's handover, this effort's seventh handover part. The worker's own text,
+pasted.*
+
+**What I had to hunt for.** Three things, none of which the spawn or the node file held. **(1) Whether the
+repository is still named `graph-agent`.** Found in `git remote -v`, which returns
+`git@github.com:Flecheck/graph-agent.git`. I looked first in `map.md` and `CONTEXT.md`, both of which use the name
+`graph-agent` freely without saying whether it is still current — so they were evidence of the name's use, not of
+its truth. This mattered: without the remote I would have surfaced a node to repair 25 correct references. **(2)
+Whether any of the 36 sat inside a markdown link target.** Clause 7 demands that rewritten link targets resolve, but
+nothing said whether any rewritten occurrence *was* a link, so I derived it with a regex before editing. Answering
+clause 7 required a measurement the condition assumed had been taken. **(3) Where the shipped files license a path
+in a condition.** Found by grepping `.claude/skills/` for the bullet text; five worker contracts and
+`graph-conventions.md` carry it. I looked first at the manager's `SKILL.md` `## Acceptance conditions` section,
+which defers with *"`graph-conventions.md` states that rule in full"* — a correct pointer that cost one read.
+
+**What I read and did not use.** `decisions.md` in full, 95 lines. Exactly one line bore on the work — node 110's,
+that a checker re-runs a condition's enumerator and reports a mismatch alongside the outcome without failing on it —
+and I used it only to reason about whether the clause 1 conflict would survive to the gate. The other 94 lines were
+about decisions a mechanical prefix removal cannot touch. From `map.md`: the landing policy, the worktree lifecycle,
+the code-slot count, the concurrency and question-queue rules, the token-cost preference, the dogfood and
+heterogeneous-worker paragraphs, the flag-settling rule, the retrospective rule. What I actually used was the bar
+paragraph, the never-delete rule, and the four standing rules for writing. I never needed to open `CONTEXT.md`.
+
+**What would have made this node easier.** **The node file could have reconciled its own enumerator with its own
+existence.** The count was taken at `c3d50bf` and the node file written at `c474ad2`, and writing the node added six
+occurrences of the very string being counted. Nothing reconciled the two, so the first thing I did after reading was
+discover a conflict that stopped the node for a human round-trip. Any condition whose enumerator counts a string the
+condition itself contains has this shape, and it is detectable at authoring time by re-running the enumerator after
+the node file is written rather than before. **The spawn and the condition disagreed, and the spawn could not settle
+it.** The orientation said *"the sixteen files that the clause 1 enumerator names, and nothing else"* — which was
+the right answer — while clause 1 said *"return nothing, whatever the count has become."* Orientation is explicitly
+*not permission*, so I could not use the correct answer sitting in front of me. Had the amendment been in the
+condition, this node would have had no raise at all. **The contract's rule that a wrong condition is a raise and
+never a flag has no gradation.** It is right in substance, and here it was also expensive: the defect was a boundary
+case, I held a recommendation I believed and stated it, and the human agreed with it in four words. Nothing in the
+contract distinguishes a condition wrong in what it demands from one wrong only in its edge, and I would not have
+wanted to decide that boundary myself — but it is where the cost of this node went.
+
+**What I read that was stale, wrong, or contradicted something else.** **Clause 2's premise is false as applied.**
+*"Every one of the 36 carries a path after the prefix, so no occurrence needs a rewritten sentence in order to lose
+it"* is true of the recorded 36 and false of the 42 the enumerator returned at claim time: clause 1's own enumerator
+command carries no path after the prefix at all. **The filing note's count of open nodes is wrong.** It says six of
+the sixteen are open implementation nodes; there are eight — nodes 60 and 61 are both `Type: implementation`,
+`Status: open`, and both carried the prefix in their conditions. The spawn's manager notes repeated the six. Five
+more live-condition occurrences than either believed. **`map.md` says the graph is six files and names them, but the
+directory holds two more things.** `prototypes/` and `recovered/` appear in neither the map's file list nor its
+`## Notes`. I had to edit a file in `recovered/` and no rule told me whether an archived record counts as inside the
+graph. **Nothing in the record says the checkout moved.** The map's bar paragraph still reads *"`graph-agent` has no
+build, no tests..."*, which is accurate about the repository, while the working directory is
+`/home/ten/Projects/expedition` and the git author is a different person from the one every path in the record
+named. That gap between the record and the machine is precisely the defect this node was minted to repair, and the
+record contains no line noting it happened.
+
+`147.3` `ASSUMPTION` — *The manager's own, about its own conduct.* A checker is given nothing from the effort's
+record, so that it cannot be unblinded by what the record says. This node's **work is the record**: its diff is
+sixteen files under `.scratch/graph-workflow/`, and no checker can hold the work against the condition without
+opening them. The manager spawned the checker with an instruction to read those files as the work under check and
+to hold the work against the acceptance condition, the bar and the ground rules alone — deriving nothing from what
+their content says about this effort or this node. That instruction is the manager's own judgement about a
+collision the contracts do not address, made because the alternative was a node that cannot be checked at all. The
+human has not been asked. It will recur on every node whose subject is the graph's own files, node 140 next.
