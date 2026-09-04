@@ -268,3 +268,105 @@ reached by any other means the condition permits.**
 standard node 139 is judged against, which is not the manager's. The question is put back to this node's worker,
 which raised the collision and holds the surrounding decision, so that whatever repair reaches node 139 is phrased by
 an agent rather than by the manager.
+
+### Attempt 1, question 2 — delivered
+
+*Pasted as the worker wrote it. The manager authored none of it and has taken no view.*
+
+> **NODE:** Where the rules a checker is held to live, now that it may not go and find them
+>
+> **ABOUT:** Your last answer settled where the checker's and implementer's rules live. What is still open on this
+> node is whether directions like that one change the workflow's shipped skill files, or only bind this effort —
+> which an agent settled on your behalf once already and flagged for you to revisit.
+>
+> **SO FAR:**
+>
+> **FIRST, THE HOUSEKEEPING YOUR ANSWER TRIGGERED — three lines, then I move on.** I was told your answer had broken
+> the node that is moving material out of the map, because a size floor in it could no longer be met. I measured the
+> tree instead of taking the figures, and it had not: that worker had already finished the move while you were
+> answering, all five bodies including the review route, taking the map from 43,847 to 31,481 bytes and clearing its
+> 12,000-byte floor by 366. So nothing needs amending, nothing needs a new number, and your answer cost that worker
+> nothing. The review-route paragraph is sitting in the manager's file for now and the next node lifts it into the
+> checker's file, which is the end state you approved. I have written that next node's missing clause and will hand
+> it over with the rest. I also found one thing nobody owns — the standards list points at rules that live in the
+> map, which the checker may not read — and that is a new node rather than something I fold in quietly. All of that
+> is the manager's business, not yours.
+>
+> **NOW THE QUESTION.** A while back you fixed how a standing rule of yours travels. Your words: *"Write it in the
+> map first. In efforts in other projects it will be only in the map as there will be no modifying the skills. For
+> this effort, I can say to add a rule to this effort or to create a node depending on if I want it to be for the
+> effort only or to change the skill itself."*
+>
+> You named two acts you can take. You did not say what happens when you take neither, and the worker that wrote that
+> answer settled it for you — silence means the rule binds this effort and never reaches the shipped files — and
+> raised a flag saying so, precisely so you could revisit it. This is me revisiting it.
+>
+> **SINCE THEN, THREE DIRECTIONS OF YOURS HAVE ARRIVED WITH NO SCOPE ATTACHED**, and the manager wrote all three into
+> the map as this effort's alone without asking: that the shipped skill must not depend on the mattpocock plugin;
+> that the checker must not go hunting for its own rules; and that the docs discipline should be packaged so nothing
+> depends on it. Each of those names a shipped file as its subject.
+>
+> **WHY THE DEFAULT MISFIRES ON EXACTLY THESE.** Under it, the shipped checker contract still has a whole section
+> telling every checker to go and find a reviewing skill and hold the work against whatever it found. This effort's
+> map now forbids that. Both are in force, so every single time the manager starts a checker it has to override the
+> contract by hand — and the graph's own rules class that override as something that must be put to you each time,
+> not done quietly. An hour ago it went wrong in exactly that way: a checker was started under time pressure, told
+> something untrue about which standards had moved, and went off and ran the mattpocock code-review skill by the very
+> route you barred. **A shipped contract that has to be contradicted in every spawn is a shipped contract that is
+> wrong.**
+>
+> **WHAT I SETTLED MYSELF, coming back as flags:** that the implementer is pointed at the new rules file rather than
+> handed its text (two resolved decisions already fix that context travels as pointers, and copying it would load the
+> manager instead); and that the review route may pass through the manager's file on its way to the checker's, since
+> you fixed the destination and not the route.
+>
+> **ASK:** When a direction of yours names a shipped file as its subject and you do not say which you meant, should
+> the manager read it as reaching that file — rather than filing it as this effort's alone, as it has now done three
+> times?
+>
+> **RECOMMENDED:** Yes, narrowly: keep your rule exactly as it is, with one exception — where the thing your
+> direction is *about* is a file the workflow ships, silence means it reaches that file, and the manager may not
+> quietly confine it to this effort's map. Everything else stays as you set it: on a project where the skills are
+> never touched, a rule of yours still lives in the map and nowhere else, because there is nothing else for it to
+> reach.
+>
+> It rests on three things. Your stated ground for the checker direction — *"it is easier to change the rule when its
+> in a file than when the checker finds stuff by itself"* — is a fact about checkers, not about this repo, so
+> confining it here throws away the general thing you were saying. The exception only bites on this effort, whose
+> subject is the workflow itself, so it changes nothing about how you work elsewhere. And it fixes the failure mode
+> rather than the instance: the manager has now mis-scoped three of your directions in a row without noticing, and
+> the cost of being wrong is a shipped file that says the opposite of what you asked for.
+>
+> Two consequences, so you are choosing with them in view. The checker's contract loses its "go and find the rules"
+> apparatus and is handed them instead — I will put the replacement to you as my next question rather than deciding
+> it. And the plugin direction's shipped half turns out to be already done, so what is left of it is the separate
+> question of whether it also reaches this effort's own never-shipped writing standard, which stays with the node
+> that owns it and which I am not touching.
+>
+> **ALTERNATIVES:**
+> — Leave your rule untouched and declare each direction as it arrives: safest, nothing changes, but it puts a
+> question in front of you every time you give an instruction, which is the exact cost your rule was written to
+> avoid.
+> — Keep the default as it stands: cheapest for you now, and it leaves the shipped checker contract permanently
+> contradicting this effort's map, with the manager overriding it by hand in every spawn — the thing that already
+> failed once.
+> — Let the manager judge which of your directions are about the workflow and ship those: fastest, and it is the one
+> thing your rule explicitly forbids, on the ground that the manager must never present its own judgement as your
+> instruction.
+> — Reverse the default outright, so silence always ships: wrong everywhere else, since on other projects the skill
+> files are never modified, and it would turn every passing remark into a change to the product.
+
+***The manager's note beside it, and not the worker's.***
+
+**Its housekeeping paragraph corrects the manager, and the correction is accepted.** The manager raised that taking
+this node's answer would make node 139's clause 7 unsatisfiable, and put the phrasing of a repair back to this
+worker. **That was a conditional that was true when written and moot within minutes**: node 139's worker finished
+while the human was answering, moving all five bodies including the review route, and clearing the floor by 366
+bytes. The manager sent a second message retiring the question. **The worker did not rely on either message and
+measured the tree**, which is the right instinct and is recorded as such.
+
+**Its ask reaches a flag the manager filed and never surfaced.** The default it names — silence means effort-only —
+was settled by [node 93](93-effort-scoped-custom-rules.md)'s worker and flagged there for the human to revisit.
+**The manager has since applied that default three times without once naming it to them.**
+
+**The manager takes no view on the ask or on any alternative.**
