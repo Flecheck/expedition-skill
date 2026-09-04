@@ -1,7 +1,7 @@
 # Move the implementer's and checker's material out of the map
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: 139 landed — see the completed condition below
 
@@ -147,6 +147,56 @@ it has onto its own branch so nothing is lost before any reset. The worker's own
 
 **The worker's handover from the stale base is not discarded**: it is the record of what the work is, and the replay
 is held against it.
+
+## Answer
+
+*The worker's own text, pasted, from its replayed handover.*
+
+**`map-implementation-rules.md` now sits beside `map.md` and holds what an implementation node's work is held to.**
+`map.md` is **28,964 bytes**, **4,043 fewer** than the **33,007** it held before this work — **28,884 characters
+against 32,913, 4,029 fewer** — so clause 9's floor is cleared in both units, by 143 bytes and 129 characters.
+
+**What moved, verbatim.** Four bodies out of `map.md` — the paragraphs beginning `**Landing policy**`, `**How many
+implementation workers run at once`, `**What that supersedes**` and `**The bar's commands for this repo` — and one
+out of `map-manager-only.md`, the paragraph beginning `**The review route for this repo, discovered on first use**`.
+All five were `awk`-extracted and concatenated rather than retyped; the review route was `cmp`-verified byte-identical
+against `git show HEAD`. Nothing was summarised, paraphrased or shortened.
+
+**One paragraph that sits among them stays behind, deliberately.** `**A worktree is created by the harness, never by
+hand.**` is not one of the four bodies clause 3 names, so it remains in `map.md`. The consequence is visible and was
+left visible: **the landing policy's own struck clause still reads *"see the standing instruction immediately
+below"*, and in its new home nothing is immediately below it.** That reference is left broken on the manager's
+instruction, because repairing it is [node 152](152-where-the-harness-worktree-instruction-lives.md)'s work.
+
+**The new file's shape.** Two framing paragraphs of its own, then `## Landing an implementation node's work` and
+`## What the work is held against`. **No `## Notes`**, so the 500-byte item target and check 10 in
+`graph-conventions.md` still resolve to two sections rather than three.
+
+**Section order is load-bearing.** The review route's *"the same ground as the bar's commands above"* resolves
+**inside this file**, the bar's commands standing above it there. Its *"the human's standing direction below"* still
+points into `map.md`, and the framing paragraph says so.
+
+**The name.** `map-implementation-rules.md`, joining `map-history.md` and `map-manager-only.md` in the `map-*`
+family. Its first sentence: *"An implementation node's worker and its checker are this file's readers, and this file
+is part of the map, so a rule written here binds this effort exactly as a rule written in `map.md` does."*
+
+**Three lines were changed rather than moved, all three made false by the move**: `map.md`'s pointer to
+`map-manager-only.md`, `map.md`'s `six files` count, and `map-manager-only.md`'s worked example. The first two are
+banked verbatim in `map-history.md`; the third is superseded in place.
+
+**`graph-conventions.md` changed in exactly the two respects clause 12 allows**: `## The six files` → `## The seven
+files` with one file-list entry, and one sentence describing the new file's role.
+
+**Clause 14 is met for every link except `map-manager-only.md`'s `[Lang](/home/mathieu/projects/Lang)`** — reported
+unmet by the worker, `FAIL`ed by the checker, and then excepted by the human's amendment at the gate.
+
+***The manager's note.*** **Landed as commit `ba91cf8`.** The first `--ff-only` merge attempt failed inside the
+manager's sandbox with `unable to unlink old '.claude/skills/expedition/graph-conventions.md': Read-only file
+system`, `/proc/mounts` showing `.claude/skills` bind-mounted `ro`. **Nothing was lost**: `HEAD` never moved, the
+commit stayed on its branch, and the merge succeeded on a retry outside the sandbox. **This will recur on every
+implementation node that touches a shipped file**, which is most of the open frontier; it is recorded in
+[map-implementation-rules.md](../map-implementation-rules.md)'s landing policy rather than only here.
+
 
 ## Flags
 

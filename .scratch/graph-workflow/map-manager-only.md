@@ -32,3 +32,17 @@
 - **Non-Claude-Code harness support** — Codex, Grok, OpenCode. The runtime decision picked one harness deliberately; portability is a different effort. **Still out of scope, and now with an expectation attached:** the human intends to come back for a heterogeneous fleet once v1 works, driven by Claude credit scarcity rather than preference. Under this map's own rule that is a redrawn destination and therefore a fresh effort inheriting v1's contracts, not a resumption of this one. Recorded here rather than graduated — nothing in this section becomes fog.
 - **External channels** — firstmate's Relay (X, Discord). The destination names one human on one channel.
 - **Cost and token accounting**, dashboards, fleet telemetry. **This line contradicts two fog items above, and [How an agent workflow and its skills reduce their own token cost](nodes/52-token-cost-of-a-workflow.md) sharpened the contradiction rather than resolving it.** The Notes above require the dogfood to carry back a **measured spend per node type**, and the fog item on runtime simplicity requires the same. Meanwhile the harness already *prints* what those ask for: `/usage` attributes recent usage to **skills, subagents, plugins and individual MCP servers** as percentages, reports cache read against cache write per model, resets on `/clear`, and raises **behavior flags** *"such as long context or cache misses, flagged when one accounts for 10% or more of recent usage"*; `/context` shows what consumes space; a statusline reading `current_usage` shows creation against read live; OpenTelemetry exports per-session cache counts. That worker's own framing, reported rather than decided: **reading numbers the harness already prints is not building accounting**, and as written this line reads as forbidding the measurement the fog demands. Not resolved here, because narrowing an out-of-scope line is a scoping act and this section's own rule is that nothing in it becomes fog without the destination being redrawn. It is one line for the human, and it is [What the token findings change in the workflow and its skills](nodes/53-what-token-findings-change.md)'s if they would rather it be decided with the rest.
+
+- **When `qmd` is worth reconsidering.** Refused for now at [What to do about the record's token cost, given what
+  `qmd` turns out to be](nodes/129-what-to-do-about-the-records-token-cost.md), on the ground that its saving over
+  plain search is unmeasured and the free alternative it would replace had never been instructed. **The trigger is a
+  worker reporting that it could not find a fact because it did not know the fact's wording** — the one thing `qmd`
+  does that lexical search cannot. What would settle it: such a report, after the search-the-record instruction has
+  landed. Held by nothing but this line and the manager reading it.
+- **When `decisions.md` stops being small enough.** The human kept it on every worker's read-whole list, `verbatim`:
+  *"it's small enough"*, on the ground that a fed context is used where a search is not. That ground has two halves
+  and only one expires: the mechanism does not, but the size claim is about a file that grows by one capped line per
+  resolved node and never shrinks. **The anchor is this effort's own precedent — `map.md` was judged to need
+  splitting at 43,847 bytes** — and it is node 129's worker's number rather than the human's, flagged at `129.4`.
+  What would settle it: `decisions.md` approaching that size, at which point part (ii) of node 129's package is
+  re-offered.

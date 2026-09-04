@@ -12,6 +12,34 @@
 
 **What that supersedes**: this map used to say *"No branch is ever created or switched, nothing is ever pushed, and history is never rewritten"*, and two of those three clauses no longer hold — the workflow branches per node, and a rebase rewrites history. *Nothing is ever pushed* is the one that stands untouched. The sentence in full is in [map-history.md](map-history.md).
 
+**How the worktree is made, settled at [Which harness route creates an implementation node's
+worktree](nodes/150-which-harness-route-creates-a-worktree.md).** Added beside the landing policy above rather than
+rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instruction-lives.md) and [node
+144](nodes/144-make-the-rules-file-stand-alone.md) hold conditions quoting that paragraph's exact phrases.
+
+- **The manager creates nothing.** It spawns the implementation worker with the harness's worktree isolation. The
+  harness picks the path, `.claude/worktrees/agent-<agentId>/`, and the branch, `worktree-agent-<agentId>`, and the
+  manager learns both from the worker's completion notification. **The node's id is no longer in either**; the commit
+  trailer `Node: <effort>/<NN>` is the join key and is the manager's to write.
+- **The manager verifies the base at every spawn.** A harness worktree's base is governed by `worktree.baseRef`,
+  whose default `fresh` means `origin/<default-branch>` — frozen forever on an effort that never pushes. The setting
+  is `head`, but **the setting is a property of the environment, cannot be passed per call, and does not travel to
+  another machine**, so under ground rule 1 it is observed rather than trusted. Immediately after the spawn the
+  manager reads `.git/worktrees/<name>/CLAUDE_BASE`, or runs `git -C <worktree> rev-parse HEAD`, and compares it to
+  its own `HEAD`. **Not equal: stop the worker, remove the worktree, and raise it** — never reset the tree in place,
+  which leaves it holding pre-repair content for every file the worker has not touched. Node 140 was moving text
+  verbatim between files, so a late reset there would have silently reverted [node
+  147](nodes/147-graph-records-name-absolute-paths-on-a-machine.md)'s landed work with every check passing.
+- **A correction round resumes the worker** and never re-spawns it with isolation, a second isolated spawn creating a
+  second empty tree at a fresh base and stranding the first one's work. Where resume is unavailable the replacement
+  is pointed at the surviving path. Flagged at `150.3` as unverified.
+- **The merge step needs the sandbox off where the node touched a shipped file.** Measured at node 140: `git merge
+  --ff-only` failed with `unable to unlink old '.claude/skills/expedition/graph-conventions.md': Read-only file
+  system`, `/proc/mounts` showing `.claude/skills` bind-mounted `ro` inside the manager's sandbox. **`HEAD` does not
+  move and nothing is lost** — the commit stays on its branch and the merge succeeds on a retry outside the sandbox —
+  but the manager must expect it rather than discover it, since most of the open frontier touches `.claude/skills/`.
+
+
 ## What the work is held against
 
 **The bar's commands for this repo, discovered on first use** and recorded here so no later node re-derives them, per [Done-ness and termination](nodes/10-done-ness.md). `graph-agent` has **no build, no tests, no formatter and no CI** — no manifest, no task runner, nothing to invoke; the one ignore file, `.gitignore`, ignores `.worktrees/` and invokes nothing. Corrected at node 114's check, having claimed no ignore file after one was added by the landing policy; the superseded wording is in [map-history.md](map-history.md). So the bar here is entirely its non-command half: the project criteria (the human's global coding principles and `/naming`), this map's own standing preferences, `CONTEXT.md`'s `_Avoid_` lines, and the node's acceptance condition. Under the *"if relevant"* clause that is a **complete** bar rather than a deficient one — the same shape the dogfood target has, one step thinner. First discovered and used by [Write the graph conventions document](nodes/21-conventions-document.md).
