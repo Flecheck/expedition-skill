@@ -211,3 +211,44 @@ established the possibility the rule was conditional on. The human's quoted inst
 replacement, and the replacement points at the node rather than restating it.*
 
 > - **An agent is resumed wherever it can be resumed, a checker and a dead attempt included.** Two standing instructions of the human's, given together, `verbatim`: *"The checkers should be resumed, it is expensive to figure out things multiple times. For the dead attempts it should be changed to resume also"*, and then, widening it: *"Whenever it can be resumed, resume I think"*. So the manager's default is **resume**, and respawning is what it does when resuming is not available. **It reverses two things the shipped files say** — the glossary's *"a dead worker is replaced"*, and the practice of a fresh checker per run — and the human's ground is neither of the ones the manager had in mind: it is that **rediscovering the same facts costs more than the independence it buys**, which this map already evidences, two checker runs having spent their largest single cost finding the review route. **In force on this effort from now**, under [Rules added to one effort's map, and what makes them legitimate](nodes/93-effort-scoped-custom-rules.md). **Two things it does not settle**, left to [Whether a dead attempt is resumed from its transcript rather than replaced](nodes/119-dead-attempt-respawned-rather-than-resumed.md): what a resumed checker may re-use — its findings about the repo, yes; its own verdict on the work, unresolved — and what establishes that a dead attempt's state is sound enough to continue from.
+
+## Superseded from `## Notes`, at node 114's check — three corrections
+
+*Moved verbatim by the manager before the map was changed, under the map's own change procedure. All three were
+found by [`CONTEXT.md`'s `Destination` entry does not say the destination states whether the effort is expected to
+end](nodes/114-context-destination-entry-omits-the-expectation.md)'s worker in its retrospective, and all three were
+re-verified by the manager before this edit rather than taken from the report. **One of the three the worker stated
+more strongly than the facts support**, and the replacement is narrower than what it asked for; the difference is
+recorded in the note beside each.*
+
+**1. The bar line claimed the repository has no ignore file.**
+
+> `graph-agent` has **no build, no tests, no formatter and no CI** — no ignore file, no manifest, no task runner,
+> nothing to invoke.
+
+*Verified false: `ls .gitignore` and `git ls-files .gitignore` both return it, 223 bytes, tracked, added by the
+worktree landing policy to ignore `.worktrees/`. The bar's conclusion is untouched — a `.gitignore` is nothing to
+invoke — and two checkers have already established the empty command half independently while reading this false
+parenthetical.*
+
+**2. The review route listed `where` among `CONTEXT.md`'s ordinary-English refusals.**
+
+> about a third being ordinary English refused only for one concept — `report`, `run`, `session`, `index`, `plan`,
+> `item`, `question`, `where` — so a scan for them returns false positives and the distinctive refusals are checked
+> by hand instead.
+
+*Verified false: no `_Avoid_` line in `CONTEXT.md` refuses `where`. Exactly one `_Avoid_` line contains the word,
+the `Raise` entry's, and there it is a conjunction inside the gloss on `ask` rather than a refused term. The map
+presented the list as **measured**, so a checker taking it literally would grep for a non-refusal in a file where
+the word appears throughout. The other seven are genuine.*
+
+**3. The retrospective item called the retrospective a sixth handover part.**
+
+> - **Every worker returns a retrospective as a sixth handover part, on this effort only.**
+
+*The worker reported this as the map being **off by one**. It is not, and the correction is narrower than the
+report. Verified: `expedition-grilling/SKILL.md` says *"Five parts, every time"* and
+`expedition-implementation/SKILL.md` says *"Six parts, every time"*, the sixth being the gate payload. So the
+retrospective is the **sixth** part on the four kinds whose handover has five, and the **seventh** on an
+implementation node. The map's wording was right for four of the five kinds and wrong only for implementation;
+the worker read the implementation contract, which is the one case where its claim held.*

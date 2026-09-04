@@ -163,3 +163,39 @@ says *"one question at a time"*, superseded by node 117, and [node
 covers it. The manager filed that condition and did not notice. **The manager has not amended it** — widening a
 condition to a new file is a new demand, outside [node 82](82-amending-a-condition-whose-scope-was-too-narrow.md)'s
 permission — and the gap is recorded here and named in this node's own flags by its worker.
+
+### A direction of the human's, arriving while Q1 was live and not naming it
+
+**Their words, `verbatim`**, written at the moment they spoke. The message carried three separate things and this is
+the third; the other two became [node 128](128-whether-qmd-lowers-this-workflows-token-cost.md), [node
+129](129-what-to-do-about-the-records-token-cost.md) and [node 130](130-the-docs-discipline-this-workflow-ships.md):
+
+> I also would want the skill to not depend on mattpockock, I don't know what is the status of this. Add grilling
+> directly on the skill and for the docs part we should make something. Inspired by "/domain-modeling" and
+> https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+
+***The manager's note, and not their words. This is recorded as a direction beside Q1 rather than as an answer to
+it, and the reading is the manager's.***
+
+**Under [node 117](117-questions-sent-in-batches.md)'s rule a reply settles what it names, and this names neither Q1
+nor any of its options.** So **Q1 is still live and unanswered.** Whether their direction nonetheless answers it is
+the worker's to judge, not the manager's, and it has been put to the worker as their words.
+
+**What the direction does and does not overlap.** Q1 asks what happens to the *"Invoke <skill> if it is present"*
+line in four contracts. Their direction is wider in one way and narrower in another:
+
+- **Wider:** it asks that the skill *not depend on mattpockock* **at all**, which reaches the map's `## Notes` line
+  naming `/grilling`, `/domain-modeling`, `/naming`, `/coding-principles` and `/prototype` — and the worker's own
+  recommendation would have **kept** the skills named there. It also reaches ground rule 5, which locates
+  `/writing-for-agents` in that plugin by name and which every prose deliverable on this effort is held against.
+- **Narrower, or at least different:** it asks that the grilling discipline be added **directly** to the skill,
+  where the worker's recommendation added two bullets carrying what `/grilling` uniquely had. Whether *"add grilling
+  directly"* means those two bullets or the whole of that skill's method is not settled by these words.
+- **New:** *"for the docs part we should make something"* is a deliverable that does not exist and that no node
+  reached. It is [node 130](130-the-docs-discipline-this-workflow-ships.md), minted from this message and not folded
+  into this node.
+
+**One fact the manager holds and states, since they said they did not know the status.** This node **is** the status:
+it is claimed, running, and its first question — what happens to that line — has been in front of them since before
+this message. Its worker measured the invocation cost, which nobody had, and found the line's naming anti-correlated
+with usefulness.
