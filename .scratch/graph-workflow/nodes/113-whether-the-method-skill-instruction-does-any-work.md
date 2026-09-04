@@ -199,3 +199,167 @@ line in four contracts. Their direction is wider in one way and narrower in anot
 it is claimed, running, and its first question — what happens to that line — has been in front of them since before
 this message. Its worker measured the invocation cost, which nobody had, and found the line's naming anti-correlated
 with usefulness.
+
+### Attempt 1, second payload — two questions, and the first use of node 117's batching rule
+
+***Pasted as the worker wrote it.*** The manager authored none of it and has taken no view on either question.
+
+**Two facts it established before answering, and both change the shape of the node.**
+
+> **No shipped file names the plugin at all.** `grep -rn "mattpocock" .claude/skills/expedition*/` returns nothing
+> across all six shipped contracts. The shipped corpus's entire dependency on the plugin is the six bare names in
+> the four `Invoke` lines. And **of those six, only four are plugin skills** — `/grilling`, `/domain-modeling`,
+> `/research`, `/prototype`. `/coding-principles` and `/naming` are the human's own, at
+> `/home/mathieu/dotfiles/programs/claude/skills/`, which is why they appear unprefixed in a worker's skill list
+> while every plugin skill carries `mattpocock-skills:`. Their direction reaches four of the six literally.
+>
+> **The shipped corpus already contains the pattern their direction asks for.** `expedition-checker/SKILL.md` names
+> *no* skill. It describes the shape instead — *"let no part of a reviewing skill run in an agent that would be
+> handed less than you were"* — and offers a fork: *"Invoke it with the givens supplied"* or *"Decline to invoke it,
+> and hold the work against the standards you found by hand instead."* The map supplies which skill. It is the only
+> contract that names none, and the only one no worker reported as thin or unrun.
+
+**What the human's direction did to its own earlier answer, in its words:**
+
+> **Does the direction change my recommendation? Yes, in two ways, and it settles a third.**
+>
+> **It settles Q1's disposition half.** Each of my three alternatives — repair the naming, soften the verb, enforce
+> as-is — keeps a plugin skill named inside a shipped contract. Their standing preference now forbids that, so only
+> deletion survives. That is a consequence of their words rather than my pick, and I mark the reading as mine: if
+> they meant only that the workflow must not *break* without the plugin, the alternatives return.
+>
+> **It withdraws part of my recommendation.** I had the skills resting in `map.md`'s `## Notes`. I withdraw that for
+> `/grilling` and `/domain-modeling`: once node 126 lands the rounds half and node 130 ships the docs discipline,
+> those two entries point at a dependency that has been replaced. I am not defending that part.
+>
+> **It does not change the two bullets, and the ambiguity the manager flagged mostly dissolves as a matter of fact.**
+> "Add grilling directly on the skill" cannot mean the whole method, because the whole method is not addable. Of
+> `/grilling`'s seven instructions: node 126 is already landing the rounds/numbering/independence half directly into
+> the contract's own text; three cannot be added at all, conflicting with hard rules 2, 3 and 5; one uses
+> **frontier** in the sense the glossary refuses. That leaves exactly the two I proposed. **Node 126 plus two
+> bullets *is* `/grilling` added directly** — there is no third reading with more of it in.
+
+**Its `ASK`, both questions, as numbered by the worker:**
+
+> **Q1 — Which contracts owe shipped replacement text.** With the four `Invoke` lines deleted, the grilling contract
+> is covered: node 126 lands the rounds half and two new bullets carry the rest. Research, prototype and
+> implementation are not. Their inline disciplines are three, five and the bar's properties respectively. Do those
+> three get shipped method text of their own now, or do they stand on the text they already have?
+>
+> **Recommended: add nothing to those three; their inline disciplines stand.** No node in the record shows
+> `/research` or `/prototype` ever being invoked — I found no instance either way, so I have no evidence they add
+> anything. `/coding-principles` and `/naming` were invoked three times and reported near-no-ops on prose, which is
+> the only medium this effort produces. Where a shipped discipline is genuinely owed, this effort mints a node for
+> it, as it just did with node 130. Ground rule 4 prefers short prose over machinery for predicted needs, and the
+> first worker to find an inline discipline actually short can surface a node then.
+>
+> Set aside: ship a method file per kind now, so the workflow is self-contained in one pass rather than four; ship
+> one shared method file the contracts point at — which runs against node 50, where shared blocks were settled to
+> stay duplicated; keep `/coding-principles` and `/naming` named on the ground that they are the human's own skills
+> and outside the direction's reach, accepting that a shipped contract then assumes this machine's dotfiles, which
+> ground rule 1 forbids.
+>
+> **Q2 — Whether "not depend on mattpockock" reaches this effort's own bar.** Ground rule 5 holds every prose
+> deliverable on this effort, including this node's, against `/writing-for-agents` — a plugin skill, named as such.
+> The map's review route names `mattpocock-skills:code-review` too. Both live in `map.md` and neither ships. Does the
+> direction reach them?
+>
+> **Recommended: no — it binds what the workflow ships, and ground rule 5 stands unchanged.** Ground rule 5 already
+> anticipates this in its own text: the standard *"is specific to this repo, is never shipped, and is located by name
+> in the `mattpocock-skills` plugin rather than by path."* It was written as a deliberate, marked exception. The
+> constraint that matters is the map's own — that the workflow run on repositories this machine has never seen — and
+> a never-shipped house style travels nowhere to violate it. After Q1's deletion the shipped corpus names no plugin
+> skill, which is the whole of what "the skill should not depend on mattpockock" asks. The other reading is expensive
+> for nothing: `/writing-for-agents` is the one skill my measurement found actually changed a deliverable, and
+> replacing it would mint a third shipped-discipline deliverable on top of node 130's, improving the shipped workflow
+> not at all.
+>
+> Set aside: it does reach them, so the effort's own bar and its recorded review route need a vendored prose
+> standard, widening node 130; it reaches the review route only, the checker being a shipped mechanism even though
+> the route naming its skill is not; keep ground rule 5 but require it to name the standard by its content rather
+> than by plugin name, so a missing plugin degrades the bar instead of removing it.
+>
+> **One risk I am not asking about, because it is theirs to know rather than to decide.** Under my recommendation,
+> ground rule 5 and the review route both remain single points of failure in the same plugin: if it goes away, this
+> effort loses its only prose standard and its recorded review route, and the map's own fog already records an
+> external standard moving under a resolved node within the hour. That is an effort-continuity risk, not a defect in
+> what ships.
+
+## Annotation: node 117's numbering clause was broken on its first application
+
+*Filed by the manager against the payload above. **The payload is not altered by this annotation**, and the worker's
+numbering stands as it wrote it.*
+
+**What node 117 settled, resolved less than two hours before this payload:** *"A question's number is fixed for the
+life of the attempt. Numbers are never reused and never renumbered: a payload re-asking a question asked earlier in
+the same attempt uses that question's original number, and a question asked for the first time takes the next number
+not yet used in that attempt."* Its worker derived that clause from the partial-reply case, on the ground that
+*"renumbering per payload makes 'Q1 ok' denote a different question in each round."* It is flag `117.3`, settled.
+
+**What happened.** This attempt's first payload asked *"What happens to the 'Invoke <skill> if it is present' line in
+the four contracts that carry it"* and labelled it **Q1**. This second payload labels a different question **Q1** —
+*"Which contracts owe shipped replacement text"* — and takes **Q2** for a second new one. **So `Q1` denotes two
+different questions within one attempt, which is exactly what the clause forbids and exactly the failure it names.**
+
+**The manager's part in it, stated first.** The manager relayed that clause to this worker in the spawn, in its own
+words: *"Your Q1 keeps its number; numbers are fixed for the attempt and never reused"* — that instruction went to
+node 107's worker. **The spawn that started this node carried the rule in general terms and did not say that its
+earlier question already held `Q1`.** So the worker was told the rule and not the state it applied to.
+
+**Why the payload was relayed rather than sent back.** The content is sound and the substance is unaffected; only the
+labels collide. Sending it back would have held finished work out of the human's channel to fix a label, and node
+108's floor says a written question waiting with a free channel is owed to them at once. **The manager relayed it
+with the collision named in its own words**, and stated to the human that a reply naming a number will be recorded
+against these two questions and not the earlier one — which removes the ambiguity for the human without altering the
+worker's text. The earlier `Q1` is not in front of them: the worker's own reading is that their standing direction
+settled its disposition, and that reading is marked as the worker's.
+
+**What is not settled and is nobody's node.** Whether the manager owes a worker its own outstanding question numbers
+in a spawn or resume, which is the state this worker was missing. It is a duty of the manager's that node 117's
+answer does not mention.
+
+### Attempt 1, answer to the first payload
+
+**The human's word, `verbatim`**, written at the moment they spoke. It arrived inside a message carrying four things;
+this is the third:
+
+> For 113 ok
+
+***The manager's determination of what it reaches, and it is narrower than a bare assent would normally be.***
+
+**It answers the FIRST payload and cannot reach the second.** Under [node 117](117-questions-sent-in-batches.md)'s
+rule a bare assent to the recommendation *"settles every question's recommendation in that payload"* — but **the
+second payload was never delivered.** It was recorded here and queued behind node 114's gate under the tier order,
+and the manager's last words to the human named the first payload's question as the live one. **The human cannot
+assent to a payload they have not seen**, so the second payload's `Q1` and `Q2` remain **unanswered and still
+owed to them**.
+
+**The option it does take, quoted in full and attributed to the worker who wrote it**, not to the manager:
+
+> Delete it, along with the "Where they are not present, this is the whole of the discipline" preface, from all
+> four. Each contract's stated discipline becomes the whole discipline, unconditionally; the grilling contract gains
+> two bullets carrying what `/grilling` uniquely had (work decisions in dependency order; dispatch a sub-agent for
+> facts rather than asking, and do not block on it); the skills stay named in `map.md`'s `## Notes`, which already
+> lists all six and is how `/writing-for-agents` reaches a worker today anyway.
+
+**And here is the complication the manager will not resolve.** **The worker has already withdrawn part of that
+recommendation**, in the second payload, before the human's assent arrived. Its words: *"It withdraws part of my
+recommendation. I had the skills resting in `map.md`'s `## Notes`. I withdraw that for `/grilling` and
+`/domain-modeling`: once node 126 lands the rounds half and node 130 ships the docs discipline, those two entries
+point at a dependency that has been replaced. I am not defending that part."*
+
+So the human has assented to a recommendation **whose author retracted one clause of it in the interval**, and the
+retraction is on this node but was never in front of them. **The manager has not decided which text their assent
+lands on.** It is put back to the worker, which is the party that wrote both the recommendation and the withdrawal.
+
+**What the manager does read as settled**, and marks as the manager's reading: the **disposition** — the four
+`Invoke` lines and the conditional preface go, and each contract's stated discipline becomes the whole discipline
+unconditionally. That clause of the recommendation is untouched by the withdrawal, and it is also what the worker
+independently concluded their standing direction had already forced: *"only deletion survives."*
+
+**One thing this instance is evidence for, recorded against the manager.** The renumbering collision annotated above
+was judged harmless on the ground that the earlier question was off the queue and a reply would be unambiguous.
+**That judgement was wrong in a way the annotation did not anticipate**: the ambiguity that actually arrived was not
+between two `Q1`s but between two *payloads*, one delivered and one not. Node 117's rule governs a reply to a
+payload; **nothing governs a reply that arrives while a later payload of the same attempt is queued undelivered**,
+and that is the state this node was in. No node covers it.

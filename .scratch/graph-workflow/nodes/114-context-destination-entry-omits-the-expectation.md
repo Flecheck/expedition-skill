@@ -346,3 +346,121 @@ is the one case where its claim held.** The map now states both, and the superse
 policy name the effort string for the commit trailer and point at the message style, so no implementation worker
 re-derives it from `git log`. That is a map edit the manager can make and **has not made**, and it is recorded here
 rather than performed, because it is a change to the landing policy rather than a correction of a false statement.
+
+## The checker
+
+*One attempt, killed mid-run by the harness's session limit and **resumed rather than replaced**, under the rule
+standing in the map. The manager spawned it; the worker that wrote the code did not.*
+
+### Attempt 1 — killed at 35 records, resumed, returned `PASS`
+
+**The death, read from the transcript rather than from the harness's summary line**, as node 119's answer requires:
+**35 records, 124,667 bytes**, last record *"You've hit your session limit · resets 2:20pm (Europe/Paris)"*, and its
+`.meta.json` carries no `stoppedByUser` key — so it was the harness's kill and not the human's, and resumable. Its
+own last line before stopping was *"Paragraph-level unwrapped diff shows exactly one paragraph moved. Now the
+standards, and clause 6's scope."*
+
+**What the resume carried, and what it was required to re-run.** The manager told it what had changed under it while
+it was stopped — the two map corrections — and required, under flag `119.4`, that it **re-run the bar's command half
+rather than carry it over** and **re-establish that no standard moved**, `CONTEXT.md` being both the file under
+change and the source of the `_Avoid_` lines. It did both. **This is the first resumed check on this effort under
+that rule.**
+
+*Pasted as the checker wrote it. **The manager authored none of it.***
+
+> ## PASS
+>
+> **Acceptance condition — every clause established.** Method note: the diff over lines is misleading here, so I
+> unwrapped both sides into unbroken paragraphs (`perl` split on blank lines, whitespace collapsed) and compared
+> those. The file has 62 paragraphs; exactly one differs.
+>
+> | # | Clause | How established |
+> |---|---|---|
+> | 1 | Entry states the destination says, in one line, whether the effort is expected to reach it | Added sentence 1 is verbatim that. `"in one line"` grammatically modifies what *the destination* says, not the entry — clause 2's back-reference `"that line"` confirms it. Met. |
+> | 2 | States that where not expected to reach it, this is where a manager reads a non-empty frontier is the steady state rather than a defect | Added sentence 2, verbatim bar `"that line is where"` for `"this is where"` — which pins it to clause 1's line rather than loosening it. Met. |
+> | 3 | Existing two sentences kept, addition an extension not a replacement, `_Avoid_` unchanged | **Worker's declaration one confirmed.** Prefix test: `index(wt_body, base_body) == 0` → pure append. `_Avoid_: goal, objective, definition of done` byte-identical. Only the wrap grew. Met. |
+> | 4 | Nothing, in any wording, about how often efforts end or fail to end | Scanned added text against 17 frequency terms (`most, many, often, rarely, usually, always, never, typically, majority, …`) → zero hits. Met. |
+> | 5 | No other entry changes; **Closed**, **Closing report**, **Flag**, **Handover** untouched | Whole-file unwrapped paragraph diff: 62/62, one changed. Those four compared individually and byte-identical (254 / 182 / 482 / 293 bytes). Met. |
+> | 6 | Nothing under `.claude/skills/` or `.scratch/` changes | `git status --porcelain -uall --ignored=matching -- .claude .scratch` → empty. 133 tracked files under `.scratch`, 9 under `.claude`; `.gitignore` ignores only `.worktrees/`, so an added file there would surface as `??`. **Established from git metadata alone — I read nothing under `.scratch/`.** Met. |
+> | 7 | Working tree meets the bar | Below. Met. |
+>
+> Scope: `git diff --name-only` → `CONTEXT.md`, nothing staged. No file outside the condition's list was edited.
+>
+> **The recorded enumerator, re-run as written — both match.** `grep -rn "Destination" CONTEXT.md` → the single line
+> `CONTEXT.md:39:**Destination**:`; `grep -rln "Destination" .claude/skills` → the single file
+> `.claude/skills/expedition/graph-conventions.md`. No discrepancy to hand back. The corrected returns hold, and note
+> enum 1 still returns line 39 post-change because the append landed below the heading and added no new occurrence.
+>
+> Discharging the residual clause, I swept case-insensitively over `.claude` and `CONTEXT.md` (bounded away from
+> `.scratch/`). Exactly one place outside `CONTEXT.md` states what the destination *holds*: `graph-conventions.md`,
+> the line `` `## Destination` — what reaching the end of the effort looks like. `` under `## The five files` — the
+> line the condition names, unedited. The other twelve hits name the destination without stating its content (six
+> instances of `` `map.md` — the destination, the standing preferences, the fog ``, and four `"beyond the
+> destination"` out-of-scope uses). **Reported, not edited.**
+>
+> **The bar.** Command half established empty rather than assumed: the tracked tree is 143 `.md` files plus
+> `.gitignore` and nothing else — no manifest (probed `package.json`, `Cargo.toml`, `pyproject.toml`, `Makefile`,
+> `justfile`, `flake.nix`, `CMakeLists.txt`, `build.zig`, and 12 more), no CI config, no formatter config, no
+> extensionless file. Nothing to invoke. Hygiene: no CRLF, no tabs, no trailing whitespace, final newline present;
+> added lines are 100/96/60 chars against a file median of 60 and max of 107, so the ~100-col wrap convention holds.
+>
+> Standards found and used: `/coding-principles` and `/naming` (`~/dotfiles/programs/claude/skills/`),
+> `mattpocock-skills:writing-for-agents`, and `CONTEXT.md`'s own `_Avoid_` lines. No `CODING_STANDARDS.md` or
+> `CONTRIBUTING.md` exists. I extracted all 107 refused tokens from all 41 `_Avoid_` lines programmatically and
+> scanned the added text: **zero hits**, then hand-checked the distinctive refusals (`report, run, session, index,
+> plan, item, question`) — none present. I independently confirmed both map corrections: `.gitignore` is tracked at
+> 223 bytes, and **`where` is refused by no `_Avoid_` line** (it appears only inside the *explanatory prose* of the
+> `Raise` entry's `_Avoid_`, which is the likely source of the map's error).
+>
+> **`mattpocock-skills:code-review` — which parts ran.** Standards axis: **run**, in a sub-agent handed the diff, the
+> unwrapped before/after, all four standards, the smell baseline pasted in full, the ground rules and the four
+> writing rules, and a hard prohibition on reading `.scratch/` or seeking the change's origin — so it held strictly
+> less than nothing I hold, and more than a bare spawn would. Spec axis: **left unrun**, per my contract (a reviewing
+> skill is for standards, never intent) and because its step-2 search targets `docs/`, `specs/`, `.scratch/`. Its
+> `docs/agents/issue-tracker.md` step likewise unrun. The acceptance condition was my only statement of intent.
+>
+> **I did not adopt either of the axis's two claimed hard violations.** Both fail on inspection:
+>
+> 1. *Duplication with the **Closed** entry.* It argued `"never closed"` ≡ `"frontier never empties"`. The file's own
+>    entries refute that: **Closing report** is what the manager hands over *"once the frontier empties"*, while
+>    **Closed** is *"the human's declaration that an effort is over."* An empty frontier triggers the report; the
+>    human then declares or does not — which is precisely why *"most efforts are never closed"* can be true. Distinct
+>    facts. Clause 4 was the condition's own anti-duplication guard and the work is on the right side of it. The
+>    shared token `steady state` is repetition of a *token*, which `writing-for-agents` explicitly endorses — the
+>    axis conceded this in its own non-findings, contradicting its finding.
+> 2. *Writing rule 1, "no shape / near no-op".* Sentence 2 does carry a shape: which line a manager reads a specific
+>    meaning from. It beats the default, since the default reading of a non-empty frontier is unfinished work. And
+>    decisively — it is verbatim what clause 2 dictates, so it was never the worker's to depart from; even had I
+>    judged it a defect, the route would be a question, never a `FAIL`.
+>
+> **On the worker's declaration two, the half-written pair — I judge clause 2 met and raise no question.** Clause 2
+> demands only the not-expected side, and the restraint was right for a stronger reason than the worker gave: the
+> milestone side's mechanism is *already in the file*, under the entry that owns it — **Closing report**, keyed on
+> the frontier emptying. Writing it under **Destination** too would have created the duplication claim 1 wrongly
+> alleged. Only the not-expected side lacked a home, and that is the half written.
+>
+> No `QUESTIONS:` and no `NOT COVERED:` — every clause was establishable from the working tree and the standards.
+>
+> One observation that is *not* a finding (it touches neither the condition nor the bar, and is pre-existing text
+> this node did not touch): `graph-conventions.md` uses "destination" in a plain-English sense in *"The closing
+> report is the exception path rather than the ordinary destination"*, colliding with the defined term. Possibly of
+> interest since node 111 is editing that file; discard if not.
+
+**The manager's note beside it, and not the checker's. Three things worth the record.**
+
+**It is the second consecutive check to cover a condition whole** — no `QUESTIONS:`, no `NOT COVERED:` — and the
+second whose condition names one readable file with no clause reaching `.scratch/`. Node 116's was the first. That is
+now a pattern in conditions rather than in checkers.
+
+**It rejected its own sub-agent's two hard findings and showed its work on both**, one of them by catching the
+sub-agent contradicting itself between its findings and its non-findings.
+
+**It reached the same conclusion as node 114's worker on the half-written pair, on a different and better ground.**
+The worker's ground was that the milestone side is procedure rather than vocabulary. The checker's is that the
+milestone side's mechanism **is already in the file**, under `Closing report`, keyed on the frontier emptying — so
+writing it under `Destination` too would have created real duplication. **Flag `114.1` stands as the worker wrote
+it**; this is recorded beside it, not merged into it.
+
+**And it independently confirmed both of the manager's map corrections**, including locating the likely source of the
+`where` error: the word appears inside the *explanatory prose* of the `Raise` entry's `_Avoid_` line rather than in
+its list of refused words.

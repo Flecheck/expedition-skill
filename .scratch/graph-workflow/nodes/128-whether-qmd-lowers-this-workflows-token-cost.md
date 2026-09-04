@@ -46,3 +46,19 @@ has**, and whether `qmd` touches it is exactly what is unestablished.
 
 **The manager has not looked at the URL.** Reading it is this node's work, and a manager's note is capped at context
 it already holds.
+
+## What the human added after this node was minted
+
+**Their words, `verbatim`:**
+
+> (qmd is a local seach engine)
+
+***The manager's note.*** This is the only description of the tool anywhere on the graph, and it is **theirs rather
+than the repository's** — clause 1 above still asks that what `qmd` is be established from its own repository, and
+this line is now the expectation that establishing it should either confirm or correct. **If the repository says
+something other than a local search engine, that is a finding rather than a discrepancy to smooth over.**
+
+**What it does to clause 4.** Their alternative — *"make the nodes easier to grep, traverse"* — reads differently
+against a search engine than against a compression tool: a search engine and a more greppable record are two ways of
+doing the same thing rather than two different problems. **The manager has not concluded that**, and clause 4's
+comparison is still what node 129 decides on; the reading is offered as the human's description and not as a result.
