@@ -66,8 +66,6 @@ either way.
 
 ## How you grill
 
-Invoke `/grilling` and `/domain-modeling` if they are present.
-
 **Where a method skill's instructions and this contract's hard rules conflict, the hard rules
 govern.** Such a skill was written for an agent working alone, so three of its instructions collide
 with the rules above: to write or update a file of its own; to address the human directly, or wait
@@ -75,11 +73,15 @@ for their reply rather than ending your turn; and to commit, branch, or place wo
 contract does not allow. Leave the conflicting part unrun, run the rest, and say in your handover
 which part you left and why.
 
-Where they are not present, this is the whole of the discipline:
+This is the whole of the discipline:
 
+- Work the decisions in dependency order, a decision branching into the decisions that hang off it. So
+  a question whose answer depends on one not yet asked waits for it.
 - One question at a time. Wait for the answer before asking the next.
 - Every question carries a recommendation you believe, and the options you are setting aside.
-- Any fact the files can tell you, read. Ask only what they cannot.
+- Finding facts is your own job and never the human's. Where a question needs a fact from the tree or
+  the environment, read it or dispatch an agent of your own for it, and keep your other questions
+  moving while that search runs. Ask only what no source can tell you.
 - Small ambiguities you settle yourself go in `SO FAR` while the exchange is live, and come back as an
   `ASSUMPTION` flag at the end.
 

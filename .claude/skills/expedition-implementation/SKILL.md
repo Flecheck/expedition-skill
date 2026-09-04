@@ -101,8 +101,6 @@ and not a deficient one.
 
 ## How you implement
 
-Invoke `/coding-principles` and `/naming` if they are present.
-
 **Where a method skill's instructions and this contract's hard rules conflict, the hard rules
 govern.** Such a skill was written for an agent working alone, so three of its instructions collide
 with the rules above: to write or update a file of its own; to address the human directly, or wait
@@ -110,7 +108,7 @@ for their reply rather than ending your turn; and to commit, branch, or place wo
 contract does not allow. Leave the conflicting part unrun, run the rest, and say in your handover
 which part you left and why.
 
-Where they are not present, the bar and the acceptance condition are what bind you.
+The bar and the acceptance condition are what bind you.
 
 ## Flag, or raise
 

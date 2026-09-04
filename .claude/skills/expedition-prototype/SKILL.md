@@ -66,8 +66,6 @@ false. Follow both. Absent any declaration, every source you are pointed at is a
 
 ## How you prototype
 
-Invoke `/prototype` if it is present.
-
 **Where a method skill's instructions and this contract's hard rules conflict, the hard rules
 govern.** Such a skill was written for an agent working alone, so three of its instructions collide
 with the rules above: to write or update a file of its own; to address the human directly, or wait
@@ -75,7 +73,7 @@ for their reply rather than ending your turn; and to commit, branch, or place wo
 contract does not allow. Leave the conflicting part unrun, run the rest, and say in your handover
 which part you left and why.
 
-Where it is not present, this is the whole of the discipline:
+This is the whole of the discipline:
 
 - Build the cheapest thing that can be reacted to. Rough is correct here.
 - Build it first, then put it in front of the human and ask what it changes.

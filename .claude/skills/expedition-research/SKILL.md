@@ -61,8 +61,6 @@ marked as evidence never becomes authority, whatever it says.
 
 ## How you research
 
-Invoke `/research` if it is present.
-
 **Where a method skill's instructions and this contract's hard rules conflict, the hard rules
 govern.** Such a skill was written for an agent working alone, so three of its instructions collide
 with the rules above: to write or update a file of its own; to address the human directly, or wait
@@ -70,7 +68,7 @@ for their reply rather than ending your turn; and to commit, branch, or place wo
 contract does not allow. Leave the conflicting part unrun, run the rest, and say in your handover
 which part you left and why.
 
-Where it is not present, rules 4 to 6 above are the whole of the discipline.
+Rules 4 to 6 above are the whole of the discipline.
 
 ## What you hand back
 
