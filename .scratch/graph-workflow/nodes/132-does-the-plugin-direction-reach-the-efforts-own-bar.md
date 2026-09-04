@@ -68,3 +68,61 @@ this node applies it to ground rule 5. **Running both at once would put two work
 this one waits.
 
 **The surfacing worker's recommendation still stands unread by the human** and is not disturbed by any of the above.
+
+## Interview
+
+### Attempt 1
+
+*The attempt's routing key is held in the manager's session and does not survive it. Banked at hand-back, before
+being relayed: this question queued behind node 147's raise.*
+
+**The worker's question, pasted as it wrote it.**
+
+> **ASK:** Does *"the skill should not depend on mattpockock"* bind this effort's own never-shipped standards too
+> — ground rule 5, and the consult-these-skills line — or only what the workflow ships?
+>
+> **RECOMMENDED:** **Only what ships. Ground rule 5 and the skills line stay** — with one repair made on a
+> different ground: ground rule 5 stops locating its standard *by plugin name*. It states what the standard
+> demands, with the plugin skill as one route to it, and those demands are copied once into the rules file the
+> checker and implementer are about to be pointed at.
+>
+> *(a) The scope answer follows from your own rule.* Node 138 amended it so that silence reaches a **shipped
+> file**. Ground rule 5 is not one — it is this effort's scratch, and its own text already says so: *"specific to
+> this repo, never shipped."* And you spoke on this class of item yourself when you approved node 113 with the
+> `## Notes` clause in it.
+>
+> *(b) The repair is not your direction's business, but the fragility is measured rather than feared.* 7 of 13,
+> above, including the exact standard this effort once reviewed everything against.
+>
+> *(c) The repair mints nothing.* The earlier worker's objection to reaching ground rule 5 was that replacing
+> `/writing-for-agents` *"would mint a third shipped-discipline deliverable"* beside nodes 130 and 145. Copying
+> its demands into this effort's own rules file mints no deliverable at all — that file is working notes, not
+> product, and it is thrown away when the effort ends.
+>
+> *(d) The timing is free exactly now and not later.* Two unstarted nodes are about to rewrite those same
+> paragraphs — one moving the standards list into the rules file, one moving the ground-rules block in after it.
+> Deciding this now costs one clause in work already scheduled; deciding it later is a third edit to the same
+> lines.
+>
+> **ALTERNATIVES:**
+> — **Ground rule 5 stands exactly as written, plugin name and all** — the recommendation the surfacing worker
+> made, which you have never seen. Cheapest, changes nothing, and leaves this effort's only prose standard
+> resolving by a name that has already been renamed once under a resolved node.
+> — **Yes, it reaches: drop `/writing-for-agents` and give this effort a prose standard of its own.** Honest and
+> tidy, and it widens node 130 or node 145 into a third discipline to build, for a benefit that is entirely local
+> to this repo.
+> — **Yes, and strip the consult-these-skills line too**, so no line anywhere names the plugin. But it reverses
+> the clause you assented to at node 113, and two of the five skills on that line (`/naming`,
+> `/coding-principles`) are your own, not the plugin's.
+> — **Leave the repair to the fog.** The map already records *"nothing watches a standard that lives outside
+> this repository"* as unspecified. Cheapest today; the standard stays unpinned until someone decides a watching
+> mechanism, which nobody owns and which is a larger question than this one.
+
+**The worker's own measurement, carried with the question because the recommendation rests on it**, pasted as it
+wrote it:
+
+> Of the 13 mattpocock skills your own usage record on this machine shows you have actually invoked, **7 no
+> longer resolve under those names**. One of them is `writing-great-skills` — the standard this effort reviewed
+> its entire shipped corpus against, and which is in the title of the node that did it. The plugin is registered
+> with no path, so nothing here can pin a version. (Limit of the inference: a usage log cannot tell a rename from
+> a removal. Either way the name stops resolving, which is the failure that matters here.)
