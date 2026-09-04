@@ -96,3 +96,14 @@ act, seconds later and before the worker could have reached the path, so no work
 downstream rests on it. **It is recorded anyway**, because the test is what the manager wrote rather than what the
 worker suffered, and because this is the seventh time this session the manager has put into an agent's context
 something that was not so.
+
+***A standing instruction from the human, recorded here rather than in the map, and why.*** Their words, `verbatim`,
+arriving minutes after this node started:
+
+> Can let the current things finish and not start new nodes
+
+**It reverses the map's *"the manager never idles"* preference for as long as it stands**, so it belongs in `map.md`'s
+`## Notes` beside that preference. **The manager has not written it there, because this node holds `map.md`** and is
+restructuring the section the bullet would sit in — an edit in the main checkout would collide with this node's work
+at its rebase. **The manager owes that bullet the moment this node lands**, and records the debt here so a later
+reader, or a later manager, finds it. In force from now: nodes 138 and 139 run to their end and nothing else starts.
