@@ -35,7 +35,12 @@ three views of one count, and the manager has not weighed whether they should be
 
 ## Interview
 
-### Attempt 1
+### Attempt 1 — **dead**
+
+*The attempt died. Discovered by a resume that failed with `No transcript found`, which is the only way a
+death is discoverable: a running agent's transcript cannot be read and a dead one cannot be inspected, so attempting
+the resume is the detector. It died **after** the human's answer below had been written onto this node, so nothing
+the human said was lost. The claim stays with the node, which keeps its number and its file.*
 
 *The attempt's routing key is held in the manager's session and does not survive it. Banked at hand-back, before
 being relayed: this question queues behind node 147's raise and node 132's question.*
@@ -124,3 +129,25 @@ superseded one.*
 > skill at all. **A method in a file has outperformed a found skill by roughly twenty to one here.** And two
 > checkers spent their single largest cost on the discovery step, and one died having produced nothing but that
 > step.
+
+**The human's answer**, `verbatim`:
+
+> recommended ship it
+
+**The option it takes, in the worker's own words** — quoted here because the reply is unreadable without it and the
+prose is the worker's rather than the human's:
+
+> **Ship it, as a section of the checker's contract**, roughly fifteen lines, with an effort's own rules file free to
+> add method specific to that effort on top — which yours already does. Concretely: read the acceptance condition and
+> split it into its parts before you read the work, because your `PASS` owes one line per part; keep the three axes
+> separate and never merge or rerank them — the condition, the bar, and the standards, which report under the bar —
+> so passing one cannot mask failing another; establish each part by a search you can name and hand back rather than
+> by reading through; say plainly what you did not check. Nothing is taken from the barred skill.
+
+***The manager's note.*** **Not a divergence**: the answer takes the worker's own recommendation. The reply reached
+the payload as the worker wrote it, this node's question having been relayed unaltered.
+
+### Attempt 2
+
+*A fresh worker, given this node plus everything the human has already said on it, replayed in full and marked
+settled. The human is not asked anything twice.*
