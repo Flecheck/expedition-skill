@@ -1,7 +1,7 @@
 # The graph's records name absolute paths on a machine that no longer exists
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -99,6 +99,56 @@ regardless.
 
 **Nothing recurs-proofs this.** What stops the next condition being written with an absolute path is unwritten; that
 is a node rather than something this one carries, and it is not yet minted.
+
+## Answer
+
+*The worker's own text, pasted.*
+
+Thirty-six paths across sixteen files under `.scratch/graph-workflow/` named this repository as
+`/home/mathieu/projects/graph-agent/…`, a directory that does not exist on this machine. All thirty-six are now
+written relative to the repository root. The change is a literal deletion of the prefix
+`/home/mathieu/projects/graph-agent/` and nothing else: 36 insertions against 36 deletions across 16 files, and every
+changed line is byte-identical to its predecessor with that prefix removed. No sentence was reworded, no line
+reflowed, no struck-through text unstruck, no clause renumbered.
+
+**Eight open implementation nodes were repaired, not six.** The filing note named 134, 140, 142, 143, 144 and 146.
+Nodes **60** and **61** are also `Type: implementation`, `Status: open`, and their conditions carried the prefix too
+— five further occurrences in live conditions than the count this node was minted against. The remaining files
+split as: seven resolved nodes (103, 114, 116, 139, 59, 64, 75) holding 14 occurrences, and one occurrence in
+`recovered/46-scan-nodes-01-60.md`.
+
+**The condition's clause 1 was amended mid-node, on a raise.** As written it demanded the enumerator return nothing,
+which by the time the node was claimed was unsatisfiable: the node's own file carried six occurrences that came into
+being at `c474ad2`, the commit that minted it, after the count was taken at `c3d50bf`. Four sit inside the acceptance
+condition itself — clause 1's own enumerator command, clause 2's statement of the prefix, and both halves of
+clause 2's worked example — and two in the Question, one of them inside the human's `verbatim` direction. Three of
+the six carry no path after the prefix at all, so clause 2's transformation does not reach them, which also falsifies
+clause 2's own premise that *"Every one of the 36 carries a path after the prefix"* — true of the recorded 36,
+false of the 42 the enumerator returned at claim time. The human's answer, `verbatim`: *"all stay rewritten except
+147"*. Asked separately whether the exception should widen to every resolved node, they chose that nothing is
+reverted. Clause 1 now excepts this node's own file; within it the string stands wherever it appears.
+
+**Clause 7 is vacuously satisfied, and that was established rather than assumed.** Not one of the 36 sat inside a
+markdown link target — checked before editing, with `git grep -n -E '\]\([^)]*/home/mathieu/projects/graph-agent'`,
+which returned nothing. Five of the rewritten paths do not resolve
+(`.worktrees/103-pick-report-settling-moment`, that path's `CONTEXT.md`, `.worktrees/114-destination-entry/CONTEXT.md`,
+and two forms of `.worktrees/116-checker-enumerator-duty`), but they are historical records of worktrees the landing
+policy removed after their nodes landed, they did not resolve before this change either, and none is a link. See flag
+`147.2`.
+
+**The two exclusions hold exactly.** `/home/mathieu/projects/Lang` still returns its recorded 4 occurrences across 4
+files, and `/home/mathieu/(\.claude|\.nix-profile|dotfiles)` still returns its recorded 8 across 6 files. No file
+outside `.scratch/graph-workflow/` is modified.
+
+**The repository is still named `graph-agent`, and the bare-name references to it are correct.** `git remote -v` gives
+`git@github.com:Flecheck/graph-agent.git`. What moved is the checkout, now at `/home/ten/Projects/expedition`. So the
+25 bare-name `graph-agent` occurrences across 13 files — `map.md`'s bar paragraph and `CONTEXT.md`'s `_Avoid_`
+line among them — name the repository accurately and need no repair. The defect was only ever the absolute prefix.
+
+***The manager's note.*** **Landed as commit `5881e47`** after the gate's `approve`, by one path-limited commit of the
+sixteen paths, rebased onto `master` and merged `--ff-only`. The bar's command half is empty for this repository, so
+the post-rebase re-run was the condition's three enumerators, which held.
+
 
 ## Flags
 
