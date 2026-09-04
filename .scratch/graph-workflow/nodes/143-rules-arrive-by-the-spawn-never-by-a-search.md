@@ -95,7 +95,7 @@ machinery rather than deleting it.
 
 *The four below are the worker's own prose, pasted. The fifth is the manager's own.*
 
-`143.1` `ASSUMPTION` — **I broadened the delegation rule's subject from a reviewing skill to any skill the spawn
+`143.1` **· settled** `ASSUMPTION` — **I broadened the delegation rule's subject from a reviewing skill to any skill the spawn
 names.** Clause 5 asks two things of that rule at once: that it be *"kept, unchanged in what it requires"* and that
 it *"applies to any skill a spawn names"*. Those pull against each other, because widening a rule's subject is a
 change in what it requires of the cases newly inside it. I read the clause's second half as the operative
@@ -103,28 +103,28 @@ instruction and the first as protecting the requirement rather than the scope. O
 is identical; what is new is that a spawn-named skill of any other kind is now covered too. The narrow reading was
 available and I did not take it.
 
-`143.2` `ASSUMPTION` — **I kept `map.md` in the implementation worker's read list, with the standing preferences
+`143.2` **· settled** `ASSUMPTION` — **I kept `map.md` in the implementation worker's read list, with the standing preferences
 named.** Clause 7 forbids any sentence sending that worker to a named section of the effort's map for the rules and
 standards its work is held to. This effort's review route lists *"this map's standing preferences"* among the
 standards, so a strict reading makes the surviving `map.md` bullet one of those sentences. I judged it is not: the
 bullet describes the map's place in the workflow rather than telling a worker to go there for the rules it is graded
 on, and `map.md` states in its own first line that every worker reads it whole once per node.
 
-`143.3` `ASSUMPTION` — **I routed the implementation contract's ground rules and standing over sources through the
+`143.3` **· settled** `ASSUMPTION` — **I routed the implementation contract's ground rules and standing over sources through the
 spawn as well.** The contract said the map's `## Notes` may declare them; that is a named section of the effort's
 map, and this effort's review route counts ground rules among the standards, so clause 7 reaches them. On this effort
 nothing is lost, since the spawn names `map.md` and the block is in it. **On an effort whose manager copies nothing
 and names no such file, the worker now has no place the contract tells it to look — where before it did.** The
 narrower repair was available.
 
-`143.4` `ASSUMPTION` — **I did not load `/coding-principles` or `/naming`, and applied `/writing-for-agents` in
+`143.4` **· settled** `ASSUMPTION` — **I did not load `/coding-principles` or `/naming`, and applied `/writing-for-agents` in
 full.** All three are standards on this effort's review route. Node 113 removed the instruction to invoke a method
 skill from this contract, and it measured the first two as near-no-ops on prose across three reports. I applied them
 by hand instead. `/writing-for-agents` I did load, it being the one standard measured to change a prose deliverable,
 and it changed two things: it collapsed a duplicated statement of the two routes into one home, and it made me pair
 every prohibition with the positive it defends.
 
-`143.5` `ASSUMPTION` — *The manager's own, about its own conduct.* **The manager asserted something false in this
+`143.5` **· settled** `ASSUMPTION` — *The manager's own, about its own conduct.* **The manager asserted something false in this
 node's spawn, as settled fact, and the worker had to spend a full read of the longest node file it touched to
 disprove it.** The spawn said node 113 *"praised the checker's contract as 'the pattern to follow' for stating a
 shape instead of naming a skill, and the shape it praised is the apparatus you are deleting."* The second half does
@@ -250,13 +250,13 @@ the ordinary case rather than a defect, so a checker does not report its absence
 
 ### Flags after the correction round
 
-`143.3` **— withdrawn by the worker as false.** *Its words:* *"The human's amendment settles it the other way:
+`143.3` **· settled** **— withdrawn by the worker as false.** *Its words:* *"The human's amendment settles it the other way:
 nothing travels by spawn, and those two come from the file where they are written, which for ground rules is the
 map's `## Notes`. I have restored that paragraph verbatim, so the judgement the flag records no longer exists in the
 tree."* **The manager has not checked its line in `flags.md`**, a withdrawal not being the human's settlement; it
 reaches them at the gate with the rest.
 
-`143.6` `ASSUMPTION` — **How the file is named in the shipped contracts, and that resolving it is not a discovery
+`143.6` **· settled** `ASSUMPTION` — **How the file is named in the shipped contracts, and that resolving it is not a discovery
 pass.** The human's words name `.scratch/graph-workflow/map-implementation-rules.md`. **I judge the manager's
 ground-rule-1 constraint right and wrote it by role and position**, on the same reasoning that condemned the deleted
 heading *"this repo and this machine"*. The residual judgement is mine: a checker is blind and is not told its
@@ -265,13 +265,13 @@ single listing of `.scratch/` resolves it, and that listing is the whole of the 
 unstated lookup is where a discovery pass grows back. **Where an effort's directory is not the only one under
 `.scratch/`, that listing is ambiguous and the contract does not say how to break the tie.**
 
-`143.7` `ASSUMPTION` — **I made the missing-file case an expected route rather than a defect to report.** I wrote
+`143.7` **· settled** `ASSUMPTION` — **I made the missing-file case an expected route rather than a defect to report.** I wrote
 that the acceptance condition and the bar are then the whole of what the work is held against, and — the part that is
 mine — that an effort that has never written one is the ordinary case rather than a defect, so its absence is not a
 finding. **Without that sentence the honest reading of a blind checker finding no standards file is that something is
 missing, and a fresh repository would generate a finding on every node.**
 
-`143.8` `ASSUMPTION` — **I carved a named exception into the checker's blindness, which nobody asked me to word.**
+`143.8` **· settled** `ASSUMPTION` — **I carved a named exception into the checker's blindness, which nobody asked me to word.**
 The contract says a checker does not read the record; sending it into a file inside the effort's own directory
 contradicts that unless the exception is stated. I stated it in both places it bites and bounded it to the standards
 in that one file. The alternative was to leave the tension unwritten, which would have had every checker deciding for
@@ -335,3 +335,28 @@ correction moves the work from *compatible-with* `graph-conventions.md` to **ali
 handed back are the manager's failures rather than the work's: the unmarked condition, now repaired above at the
 checker's prompting; and clause 5 left out of the amendment the manager relayed, which the checker had to resolve by
 reading for coherence. **Both travel to the human with the gate.**
+
+### Gate — `approve`
+
+**The human's word**, `verbatim`:
+
+> 143 approve
+
+The payload carried checker run 1's `PASS`, the human's own gate `correct` and the amendment it made, the correction
+round, checker run 2's `PASS` on the amended condition, all eight flags, the two paths, the worktree and the command
+showing its diff, and the proposed commit message. **Approving the gate settles all eight flags**, `143.3` included,
+which its worker had withdrawn as false — a withdrawal is not a settlement, so it reached the human with the rest.
+
+***The manager's note.*** **The checker's two questions were put in the payload and the human answered neither.**
+That is their choice and not an omission, and the manager records what it leaves standing rather than reading
+approval as an answer to them:
+
+1. **Clause 5's reading is the checker's and is unconfirmed.** Under the amendment, *"a skill its spawn names"*
+   denotes nothing; the checker read it as *the route the amended condition establishes* because the literal reading
+   makes the condition self-contradicting, and asked the human to confirm the scope. They did not. **The work is
+   approved either way** — on the literal reading clause 5 is unmet, and the human has approved the work in front of
+   them knowing that, the checker having said so in the payload.
+2. **The bar's-commands asymmetry is unresolved and is now a node.** The implementer reads the commands from
+   `map-implementation-rules.md`; the checker still discovers them or is given them, so the two can drift. The
+   checker named it as a consequence of the amendment's scope rather than of the worker's choice. Minted as [node
+   167](167-the-checkers-bar-commands-route.md).
