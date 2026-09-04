@@ -109,3 +109,36 @@ context**: the harness surfaced all seven `expedition*` skills a second time, sc
 `.claude/worktrees/agent-ac549d7fb8ff2bf22/`, in the manager's own skill list. The manager has changed nothing —
 `.gitignore` is a tracked file outside the graph, and having already acted once today on its own authority in breach
 of its contract (flag `140.8`), it is not doing so again.
+
+**The human's answer**, `verbatim`:
+
+> 115 -> Don't prevent writes, resolving merge conflicts when integrating the implementor's worktree is fine. This
+> ultimately allows parallelizing implementations as well, and that and resolving potential merge conflicts will
+> still lead to faster implementations than what's basically a mutex. Ultimately to minimize merge conflicts we
+> should limit implementation parallelization, and favor paralellization on nodes that have little chance of
+> conflicting with one another - but the framework should allow user to tell the manager to increase
+> parallelization, at the expanse of odds of having to resolve merge conflicts.
+
+**`DIVERGENCE`.** The recommendation was to prevent the collision — *"while an implementation node is claimed, the
+manager writes none of the files that node's acceptance condition names"*. The human refuses prevention and takes
+recovery, on a ground the worker did not weigh: that the rule is **a mutex**, and that a mutex costs more throughput
+than conflicts cost to resolve.
+
+***The manager's note.*** **The answer reaches further than the question did, and the manager records what it reaches
+rather than deciding any of it.** Three things follow that the worker must now carry:
+
+1. **It reverses a landing-policy rule.** That policy says *"A rebase conflict is resolved by nobody in the moment:
+   the manager runs `git rebase --abort` and the node takes a correction round with the worker respawned."* If
+   resolving conflicts on integration is fine, that rule no longer holds and **somebody has to be named** as the
+   party who resolves one.
+2. **It makes the code-slot count a control the human turns**, rather than a fixed setting: *"the framework should
+   allow user to tell the manager to increase parallelization, at the expanse of odds of having to resolve merge
+   conflicts."* The count already is a per-effort setting; what is new is that raising it is offered to the human as
+   a trade with a named cost.
+3. **It puts a scheduling heuristic on the manager's pick** — *"favor paralellization on nodes that have little
+   chance of conflicting with one another"* — which is a new consideration in choosing what to start, and one nothing
+   in the workflow currently states.
+
+**The manager has run the refused rule by hand twice**, holding node 129's fog items and node 150's landing-policy
+edit behind node 140, and both landings rebased clean. That is evidence the rule works, not that it was the right
+trade, and the human has now priced the trade differently.
