@@ -1,7 +1,7 @@
 # Move the manager's material out of the map, and give each item a soft size target
 
 Type: implementation
-Status: open
+Status: resolved
 
 Blocked by: none
 
@@ -399,3 +399,51 @@ The second is a defect in text this node shipped rather than in text it left alo
 
 **No part of the condition was uncovered.** The checker reported none, and it established clause 12 by a path-limited
 `git status --porcelain` over all six `expedition-*` directories returning nothing.
+
+## The gate, and the landing
+
+**Approved.** The human's word, `verbatim`, written at the moment they spoke:
+
+> approve
+
+**Flags `139.1`, `139.2` and `139.3` settle at the gate** under [node
+102](102-do-afk-nodes-flags-settle-at-the-pick-report.md). **The checker's question is not a recommendation and is
+not settled by the assent**: it asked whether the human wants a follow-up node for the conventions document or
+whether the generic five-section shape stands as a per-effort variation. [Node
+142](142-bring-graph-conventions-map-shape-into-line.md) answers the first half by existing; the `## Notes`
+ambiguity the checker found is owned by nothing.
+
+**Commit `4e38c11`**, fast-forwarded onto `master`. Path-limited to the four paths; **not pushed**. The worker's
+proposed commit message was used unaltered. Worktree removed, branch `node-139-map-split` deleted, `.worktrees/`
+empty.
+
+**The bar was re-run after the rebase**, and every mechanical clause re-established on the rebased tree: clause 5 with
+the worker's own whitespace-collapsed substring method, 0 lost lines missing; clause 6, exactly `## Destination`, `##
+Notes`, `## Decisions so far`; clause 7 clearing the floor; clause 8, ground-rules block identical; clause 13, 107 of
+107 paths resolving.
+
+***One measurement discrepancy, resolved and recorded because it has been quietly wrong twice.*** The manager's
+re-run reported `map.md` as **43,707 → 31,393, −12,314**, where the worker and the checker both reported **43,847 →
+31,481, −12,366**. **Neither is wrong: the manager counted characters and they counted bytes**, the file carrying
+multi-byte punctuation throughout. The manager's earlier raise on this node — that dropping the review route from
+clause 3 would leave 11,342 against a 12,000 floor — was in characters too. **The conclusion is unchanged in either
+unit**, but the manager stated a byte figure it had measured in characters, and this effort's own token arithmetic
+runs on bytes.
+
+**Two procedural facts about the landing.** `git merge --ff-only` failed in the sandbox on
+`.claude/skills/expedition/graph-conventions.md` for the fifth time on this effort, and this time it **half-applied**:
+git wrote all three `.scratch/` files and left `HEAD` unmoved. The manager verified all three byte-identical to the
+branch before touching them, restored the two tracked ones and removed the untracked sibling, then completed the
+merge outside the sandbox. **This is the second half-application on this effort and the first where an untracked file
+was among the residue** — `git checkout --` does not reach one, so it had to be named and removed by hand.
+
+## What the manager carried out of this node's invalidations
+
+**[Graph file format](13-graph-file-format.md)'s count.** `decisions.md`'s entry read *"~~four files~~ **five
+files**"*; the sibling makes it **six**, and node 140 would make it seven. The manager has amended that line, which
+the node's condition forbade its worker to touch.
+
+**[Restructure `map.md` to what every worker needs](59-restructure-the-map.md)'s file shape.** Its condition required
+five `##` headings; `map.md` holds three. **Node 59's answer is not falsified** — it is discharged and measured — and
+what is superseded is the shape that answer landed, on node 59's own stated ground that the split *"is settled by
+measurement rather than argument"*. Annotated there rather than here.

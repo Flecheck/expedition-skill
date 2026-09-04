@@ -526,3 +526,23 @@ checker's own words — *"if the strict one does, it is the condition that needs
 the approval settles the flag by adopting the reading the worker and the checker reached independently: **clause 9
 governs the pointers `map.md` and `map-history.md` offer, not a paragraph they preserve verbatim.** The one
 inherited `line 75` citation stands, marked as quoted rather than endorsed.
+
+## Superseded in one respect by node 139: the file shape, not the answer
+
+*Reported by [`map.md` has grown back most of what node 59's restructure
+saved](136-the-map-has-grown-back-what-node-59-saved.md)'s worker and again by [Move the manager's material out of
+the map](139-move-the-managers-material-out-of-the-map.md)'s, and filed by the manager. Nothing above is changed.*
+
+This node's acceptance condition required `map.md` to hold **exactly five `##` headings, in this order**: `##
+Destination`, `## Notes`, `## Decisions so far`, `## Not yet specified`, `## Out of scope`. **It holds three.** The
+fog and out-of-scope moved to `map-manager-only.md` at node 139, landed as commit `4e38c11`.
+
+**This node's answer is not falsified**, and both workers said so unprompted. In node 139's worker's words:
+
+> This does not falsify node 59's answer, which is discharged and measured; it supersedes the file shape that answer
+> landed, on node 59's own stated ground that the split *"is settled by measurement rather than argument"*.
+
+**The measurement this node named node 60 to gather never came from node 60**, which is still `open` and unbuilt.
+It came from the retrospective's second question — *what did you read and did not use* — which nineteen
+retrospectives have now answered and thirteen of which name map sections. That instrument was built for another
+purpose and nothing sweeps it: [node 141](141-nothing-sweeps-what-a-retrospective-reports-as-read-and-unused.md).
