@@ -86,3 +86,31 @@ taken none: whoever takes this node dispatches a subagent for the survey, which 
 answer now states in the grilling contract's own discipline; or a `research` node is minted ahead of it and this one
 blocks on it; or the survey is skipped and the node decides from the two sources already named. **The first is the
 cheapest and the node's own worker can choose it without anyone's permission.**
+
+## A third addition from the human, and it is about packaging rather than content
+
+**Their words, `verbatim`:**
+
+> for the doc we should try to put it as a "plugin" so that the skill can be used without it or the doc by itself.
+
+***The manager's note.*** **This is a shape constraint on whatever this node produces, and it is the first one this
+node has.** The two earlier additions widened what this node reads; this one says what the result must be able to do:
+**the expedition skill works without the docs discipline, and the docs discipline works without the expedition
+skill.** Their word `plugin` is in quotation marks in their own message, so it names the property — separately
+installable, separately usable — rather than necessarily the Claude Code plugin mechanism.
+
+**How it sits against the standing preference already in the map.** That preference says the shipped files must not
+depend on the `mattpocock-skills` plugin. **This is not in tension with it**: what they refuse is *depending on
+somebody else's plugin*, and what they ask for here is *shipping this effort's own docs discipline so that nothing
+depends on it either way*. Both are the same property — no shipped file requires a second thing to be present.
+
+**What it reaches that the manager can name, and has decided none of it.** Ground rule 1 (nothing shipped may assume
+this repo, this machine, or a toolchain) already bears on anything installable. [Node
+128](128-whether-qmd-lowers-this-workflows-token-cost.md) established that a Claude Code plugin can carry skills and
+an MCP server, and that a plugin is a **harder** dependency than a skill where it needs a binary — which is evidence
+about what a plugin costs, gathered for a different question. And [node
+138](138-where-the-rules-a-checker-is-held-to-live.md) is deciding where a rule set lives and who is handed it, which
+is the same shape of question about a different body of text.
+
+**One thing this does not settle and node 138 now owns for every direction of theirs:** whether it binds the shipped
+files or this effort only. The manager has again recorded a direction of theirs without putting that to them.

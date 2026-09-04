@@ -1,7 +1,7 @@
 # Carry the method-skill deletion into the four worker contracts
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -324,3 +324,51 @@ support**, and the first where the false statement was about a rule the human ha
 the check began, the standards the skill's axis was run against were supplied by hand rather than discovered, and the
 checker triaged the skill's findings itself. Whether that is enough is the human's call at the gate below, and the
 manager states the fact rather than the verdict.
+
+## The gate
+
+**Approved.** The human's word, `verbatim`, written at the moment they spoke:
+
+> For 133 approve
+
+**A bare assent on a gate.** Under [node 117](117-questions-sent-in-batches.md)'s rule it settles every
+recommendation in the payload and nothing that is not one, and under [node
+102](102-do-afk-nodes-flags-settle-at-the-pick-report.md) the gate is where this node's flags settle. **Flags
+`133.1`, `133.2`, `133.3` and `133.4` are settled** by it.
+
+**What it does not settle, said plainly rather than assumed.** The manager put one question beside the approval —
+whether the `PASS` stands, given that the checker ran `mattpocock-skills:code-review` after the human's direction
+barring it had arrived and after the manager had wrongly told it no standard had moved. **They did not address it,
+and an unnamed question is unanswered rather than parked** under node 117's rule. The manager reads the approval as
+reaching the work rather than as a ruling on the check, lands the work on their word, and **leaves the question
+standing**. Where it goes next is [node 138](138-where-the-rules-a-checker-is-held-to-live.md), which owns what a
+checker is held to.
+
+**The five questions the checker handed back alongside its `PASS` are unaffected by the approval**, since none of
+them is a recommendation. Two are already owned by [node 134](134-repair-two-context-defects-node-113-found.md); the
+other three are unowned and the manager has minted nothing for them.
+
+## Landed
+
+**Commit `4000830`**, fast-forwarded onto `master`. Path-limited to the four `SKILL.md` files; **not pushed**. The
+worker's proposed commit message was used unaltered. The worktree at `.worktrees/133-method-skill-deletion` is
+removed and the branch `node-133-method-skill-deletion` is deleted.
+
+**The bar was re-run after the rebase**, per the resumed-work practice: the invoke-line scan, the conditional-preface
+scan and the node-48 paragraph all re-established on the rebased tree. The command half is vacuous for this
+repository.
+
+**One thing the re-run got wrong on its first pass, recorded because it is about the procedure rather than the
+work.** The manager's first scan for the node-48 paragraph used `grep` for the sentence and returned **zero hits in
+all four files**, which would have read as clause 4 failing. The sentence is **line-wrapped**, and `grep` is
+line-based; unwrapping first returned it intact in all four. This is the effort's fourth standing writing rule —
+*"cite a file by heading or by a quoted phrase, never by line number"* — biting from an unexpected direction: a
+**quoted phrase is also unreliable against a wrapped file**, and the checker had already worked unwrapped
+throughout, which is why it saw what the manager's first pass did not.
+
+**Two procedural facts about the landing itself.** `git merge --ff-only` failed inside the sandbox with `Read-only
+file system` on all four paths, which is the fourth time this has happened on this effort and always on
+`.claude/skills/`; it left `HEAD` unmoved and nothing half-applied, verified before the command was re-run outside
+the sandbox. And `git worktree remove` warned `could not write config file .git/config: Device or resource busy`
+while still removing the worktree; `git worktree list`, `git worktree prune` and the config file itself were checked
+afterwards and hold no stale entry.
