@@ -68,3 +68,37 @@ the file the implementation and checker spawns point at. **That sibling is the o
 it is, this node and node 136 are describing one file from two directions. The manager has told node 136's worker to
 state how its split stands against this direction and to say where it needs the human's word rather than resolving
 it.
+
+## The same node, framed independently by node 136's worker
+
+[Node 136](136-the-map-has-grown-back-what-node-59-saved.md)'s worker surfaced this node from the same standing
+direction, not knowing it had been minted, and framed it as its own **B**. **Pasted as it wrote it**, because it
+names one thing the framing above does not.
+
+> **Where the bar's rules live, and what the checker is held to**
+> Kind: grilling
+> Blockers: none.
+> Question: A standing direction of the human's, `verbatim`: *"in the checker, it shouldn't try to find the
+> skill/rules, they should be at the map level and sent by the manager or just read by the checker. I don't know if
+> it is still the case but we shouldn't use matt pockock skills code review skill as it is too generic. (it is easier
+> to change the rule when its in a file than when the checker finds stuff by itself. The rules should also be used by
+> the implementer"*. Three things are open in it. Does *at the map level* permit a sibling file the implementation
+> and checker spawns point at, or does it mean literally inside `map.md`? What replaces
+> `mattpocock-skills:code-review`, given that ground rule 5 holds every prose deliverable of this effort against
+> `/writing-for-agents`, which is named by the same plugin? And does the direction reach the shipped contracts or
+> bind this effort only — which under the map's own rule is the human's to declare and nobody else's.
+
+***The manager's note.*** **Its third question is new and the manager had not asked it.** Whether a standing
+direction reaches the **shipped files** or binds **this effort only** is settled by [node
+93](93-effort-scoped-custom-rules.md) as the human's to declare, and the manager wrote this direction into the map as
+an effort-scoped preference without putting that to them. The same is true of the earlier no-plugin direction. **This
+node inherits the question for both.**
+
+**What node 136's answer already establishes about the wide reading, and does not decide.** Its worker found that the
+review route sits in `map.md`, *"which the checker cannot read, so the manager must transcribe it by hand"* — so a
+sibling read by both the implementer and the checker is *"the single-source shape the direction asks for"*, retiring
+a defect three retrospectives have reported. Under the narrow reading — literally inside `map.md` — the saving from
+node 136's split falls from ~41% to ~31%, and *"that reading also implies the checker stops being blind to the map,
+which is a larger change than this node."* **[Node 140](140-move-the-implementers-and-checkers-material-out-of-the-map.md)
+is blocked on this node for exactly that reason**, its acceptance condition being written in part with the
+destination left out.
