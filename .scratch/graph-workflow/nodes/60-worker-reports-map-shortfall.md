@@ -31,7 +31,7 @@ since after node 59 lands a worker can still follow the map's pointer to the mat
 
 ## Acceptance condition
 
-The work is these five files: `/home/mathieu/projects/graph-agent/.claude/skills/expedition-research/SKILL.md`,
+The work is these five files: `.claude/skills/expedition-research/SKILL.md`,
 `.../expedition-grilling/SKILL.md`, `.../expedition-prototype/SKILL.md`, `.../expedition-precondition/SKILL.md`,
 `.../expedition-implementation/SKILL.md`.
 
@@ -49,6 +49,6 @@ Done means every one of the following is true of the finished tree.
 5. Where a file already describes a route for something a worker cannot go on without, it says that this part is
    **not** that route.
 6. `MISSING FROM MAP` appears in those five files and in **no other file** under
-   `/home/mathieu/projects/graph-agent/.claude/`.
+   `.claude/`.
 7. No hard rule in any of the five files is reworded, nothing else in them changes, and no file outside them
    changes.

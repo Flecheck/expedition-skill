@@ -19,7 +19,7 @@ work](113-whether-the-method-skill-instruction-does-any-work.md)'s worker, and p
 
 *Written by node 113's worker. Pasted as it wrote it, and not the manager's.*
 
-> `/home/mathieu/projects/graph-agent/CONTEXT.md` is changed, and no other file.
+> `CONTEXT.md` is changed, and no other file.
 >
 > 1. Its `## The five kinds of node` section no longer asserts that three of the five kinds name a skill the worker
 >    invokes. Whatever replaces that clause is true of the shipped contracts as they stand when this work is done.

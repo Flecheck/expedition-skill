@@ -290,7 +290,7 @@ attempts below.*
 > **Where the work is, and the command that shows its diff:**
 >
 > ```
-> git -C /home/mathieu/projects/graph-agent/.worktrees/103-pick-report-settling-moment diff
+> git -C .worktrees/103-pick-report-settling-moment diff
 > ```
 >
 > Branch `node-103-pick-report-settling-moment`, off `47703bb`, uncommitted. 60 insertions, 26 deletions across the
@@ -375,7 +375,7 @@ work, and they are laid out below in the order they were assigned rather than th
 > documented standards are the four I was pointed at by name:
 > `/home/mathieu/.claude/skills/coding-principles/SKILL.md`, `/home/mathieu/.claude/skills/naming/SKILL.md`,
 > `/nix/store/w0svxj9j5zwmzicaj5lj900iaj2ryy71-claude-code-mattpocock-skills-patched/skills/productivity/writing-for-agents/SKILL.md`,
-> and `/home/mathieu/projects/graph-agent/.worktrees/103-pick-report-settling-moment/CONTEXT.md`'s `_Avoid_` lines.
+> and `.worktrees/103-pick-report-settling-moment/CONTEXT.md`'s `_Avoid_` lines.
 > Reviewing skill found: `mattpocock-skills:code-review`.
 >
 > **A standard moved under the check, settled first.** `CONTEXT.md` is one of the changed files. I compared its
@@ -589,7 +589,7 @@ questions travel to the human inside the gate payload rather than being decided 
 > **Standards I found and used.** Reviewing skill: `mattpocock-skills:code-review` (the only one; nothing in-repo
 > does that job). Coding principles and naming:
 > `/home/mathieu/dotfiles/programs/claude/skills/coding-principles/SKILL.md` and `.../naming/SKILL.md`. Repo's own
-> standard: `/home/mathieu/projects/graph-agent/CONTEXT.md`'s `_Avoid_` lines. Prose standard: `writing-for-agents`,
+> standard: `CONTEXT.md`'s `_Avoid_` lines. Prose standard: `writing-for-agents`,
 > located by name at
 > `/nix/store/w0svxj9j5zwmzicaj5lj900iaj2ryy71-claude-code-mattpocock-skills-patched/skills/productivity/writing-for-agents/SKILL.md`.
 >

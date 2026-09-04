@@ -199,13 +199,13 @@ outside its remit and hand back a bare mismatch where attempt 2 handed back a di
 
 > No checker has run yet, so nothing was found and nothing was changed in response.
 >
-> *Paths touched, all inside the worktree `/home/mathieu/projects/graph-agent/.worktrees/116-checker-enumerator-duty/`:*
+> *Paths touched, all inside the worktree `.worktrees/116-checker-enumerator-duty/`:*
 > - `.claude/skills/expedition-checker/SKILL.md` — 36 insertions, 0 deletions, one new `###` section.
 >
 > `CONTEXT.md` was read and deliberately not changed: no term moved. No file under `.scratch/` was touched. `git
 > status --porcelain` in the worktree shows exactly one modified path and no untracked file.
 >
-> *Diff:* `git -C /home/mathieu/projects/graph-agent/.worktrees/116-checker-enumerator-duty diff`
+> *Diff:* `git -C .worktrees/116-checker-enumerator-duty diff`
 >
 > *What the human is being asked to look at, beyond the diff:* one judgement call. The condition's clause 3 mandates
 > the ground *"it holds no before-state"*; I wrote *"you were given no before-state"* instead, because the bald form

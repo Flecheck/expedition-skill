@@ -26,7 +26,7 @@ slot with any other node editing that file.
 
 *Written by node 59's worker.*
 
-The file being changed is `/home/mathieu/projects/graph-agent/.claude/skills/expedition/graph-conventions.md`, and
+The file being changed is `.claude/skills/expedition/graph-conventions.md`, and
 it is the only file this node modifies. Before this change it holds a section headed `## The five files` listing
 five paths with a one-line description of each; a sentence reading ``map.md` has four sections, in this order:`
 followed by a four-item bulleted list; and a paragraph headed `**No edit deletes.**`. Done means every one of the

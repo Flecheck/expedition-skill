@@ -20,7 +20,7 @@ token cost. Whether an effort may hold recovered material at all is nobody's dec
 *The scanning agent's own text, pasted. The manager added the headings above and nothing below.*
 
 I read all 60 node files (01–60). Below is the exhaustive enumeration. Files are at
-`/home/mathieu/projects/graph-agent/.scratch/graph-workflow/nodes/`.
+`.scratch/graph-workflow/nodes/`.
 
 ## 01 — `# Destination of this effort`
 **No duty found.** Nothing about what the manager puts in front of the human.

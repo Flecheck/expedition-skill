@@ -18,7 +18,7 @@ and pasted as it wrote it.*
 
 *Written by node 138's worker. Pasted as it wrote it, and not the manager's.*
 
-> The work is `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/`. The worker may edit `map.md` and the
+> The work is `.scratch/graph-workflow/`. The worker may edit `map.md` and the
 > sibling file holding the implementer's and checker's rules, and no other file; it may not mark this node, resolve
 > it, or write a line in `decisions.md` or `flags.md`.
 >
@@ -39,7 +39,7 @@ and pasted as it wrote it.*
 >    of work by a reader blind to the record.
 > 5. No other paragraph of the rules file changes, and no heading named `## Notes` is added to it.
 > 6. Every markdown link in `map.md` and in the rules file resolves to a path that exists.
-> 7. No file outside `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/` is modified.
+> 7. No file outside `.scratch/graph-workflow/` is modified.
 
 ## The manager's note at filing
 

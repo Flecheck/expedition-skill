@@ -22,13 +22,13 @@ and pasted as it wrote it.*
 
 *Written by node 139's worker. Pasted as it wrote it, and not the manager's.*
 
-> The work is the file `/home/mathieu/projects/graph-agent/.claude/skills/expedition/graph-conventions.md`. It is
-> written against whatever `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/` holds at claim time, because
+> The work is the file `.claude/skills/expedition/graph-conventions.md`. It is
+> written against whatever `.scratch/graph-workflow/` holds at claim time, because
 > which sections have moved out of `map.md` is not fixed until node 140 lands. Done means every one of the following
 > is true of the finished tree.
 >
 > 1. The sentence in `graph-conventions.md` beginning `` `map.md` has ``, and the bulleted list under it, name every
->    `##` heading that `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/map.md` actually holds, and name no
+>    `##` heading that `.scratch/graph-workflow/map.md` actually holds, and name no
 >    heading it does not hold. The count stated in that sentence equals the number of bullets under it.
 > 2. Every `##` heading that has moved out of `map.md` into another file in that directory is described in
 >    `graph-conventions.md` under that other file rather than under `map.md`, and its one-line description says the
@@ -38,10 +38,10 @@ and pasted as it wrote it.*
 > 4. The `### Rule out of scope` procedure's step that appends the out-of-scope line names the file that actually
 >    holds `## Out of scope`.
 > 5. The heading that opens the graph's file list states the number of entries the list holds, and the list holds one
->    entry for each file present in `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/` plus one entry
+>    entry for each file present in `.scratch/graph-workflow/` plus one entry
 >    standing for the per-node files under `nodes/`.
-> 6. No file under `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/` is modified, and no file under any of
->    `/home/mathieu/projects/graph-agent/.claude/skills/expedition-checker/`, `.../expedition-grilling/`,
+> 6. No file under `.scratch/graph-workflow/` is modified, and no file under any of
+>    `.claude/skills/expedition-checker/`, `.../expedition-grilling/`,
 >    `.../expedition-implementation/`, `.../expedition-precondition/`, `.../expedition-prototype/`,
 >    `.../expedition-research/` is modified.
 > 7. `graph-conventions.md` changes in no respect other than clauses 1 to 5.

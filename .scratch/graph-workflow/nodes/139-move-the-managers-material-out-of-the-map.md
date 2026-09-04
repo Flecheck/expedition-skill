@@ -22,8 +22,8 @@ worker contract, so it contends with no other node for the code slot on those fi
 
 *Written by node 136's worker. Pasted as it wrote it, and not the manager's.*
 
-> The work is the directory `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/` and the file
-> `/home/mathieu/projects/graph-agent/.claude/skills/expedition/graph-conventions.md`. Editing `map.md` is what this
+> The work is the directory `.scratch/graph-workflow/` and the file
+> `.claude/skills/expedition/graph-conventions.md`. Editing `map.md` is what this
 > node is for: its subject is the map itself rather than a report of progress on other work. The worker may edit the
 > files named here; it may not mark this node, resolve it, or write a line in `decisions.md` or `flags.md`.
 >
@@ -62,7 +62,7 @@ worker contract, so it contends with no other node for the code slot on those fi
 >     map's `## Notes` exceeding that target, and that check's own text says it reports and never fails.
 > 11. `graph-conventions.md` names the correct number of files where it lists the graph's files, and describes the
 >     new file's role in one sentence. It changes in no respect other than clauses 9, 10 and this one.
-> 12. No file under any of `/home/mathieu/projects/graph-agent/.claude/skills/expedition-checker/`,
+> 12. No file under any of `.claude/skills/expedition-checker/`,
 >     `.../expedition-grilling/`, `.../expedition-implementation/`, `.../expedition-precondition/`,
 >     `.../expedition-prototype/`, `.../expedition-research/` is modified.
 > 13. Every markdown link in `map.md` and in the new file resolves to a path that exists.

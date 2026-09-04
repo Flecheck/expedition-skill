@@ -27,12 +27,12 @@ was itself about a contract is theirs to read.
 
 ## Acceptance condition
 
-The work is these six files: `/home/mathieu/projects/graph-agent/.claude/skills/expedition-research/SKILL.md`,
+The work is these six files: `.claude/skills/expedition-research/SKILL.md`,
 `.../expedition-grilling/SKILL.md`, `.../expedition-prototype/SKILL.md`, `.../expedition-precondition/SKILL.md`,
-`.../expedition-implementation/SKILL.md`, and `/home/mathieu/projects/graph-agent/CONTEXT.md`.
+`.../expedition-implementation/SKILL.md`, and `CONTEXT.md`.
 
 Measured before this change, so none of it need be taken on trust: `scribe` appears **exactly once** anywhere
-under `/home/mathieu/projects/graph-agent/.claude/skills/`, at `expedition/graph-conventions.md` line 10 — a file
+under `.claude/skills/`, at `expedition/graph-conventions.md` line 10 — a file
 no worker contract points at — and appears **nowhere** in `CONTEXT.md`. The idea it names is that the manager
 copies an agent's text onto the graph unaltered, authors nothing of its own onto it, and answers nothing itself.
 That idea is spelled out as a sentence at **ten** places across the five worker contracts: the opening paragraph

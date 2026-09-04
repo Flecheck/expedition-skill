@@ -22,9 +22,9 @@ and pasted as it wrote it.*
 
 *Written by node 138's worker. Pasted as it wrote it, and not the manager's.*
 
-> The work is `/home/mathieu/projects/graph-agent/.claude/skills/expedition-checker/SKILL.md` and
-> `/home/mathieu/projects/graph-agent/.claude/skills/expedition-implementation/SKILL.md`. The worker may edit those
-> two files and no other, and may not write any file under `/home/mathieu/projects/graph-agent/.scratch/`.
+> The work is `.claude/skills/expedition-checker/SKILL.md` and
+> `.claude/skills/expedition-implementation/SKILL.md`. The worker may edit those
+> two files and no other, and may not write any file under `.scratch/`.
 >
 > Done means every one of the following is true of the finished tree.
 >

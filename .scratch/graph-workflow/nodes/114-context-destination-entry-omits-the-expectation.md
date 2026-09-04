@@ -205,7 +205,7 @@ shipped file.
 
 > *What the checker found, and what I changed:* none — no checker run has reached me.
 >
-> *Paths I touched:* `/home/mathieu/projects/graph-agent/.worktrees/114-destination-entry/CONTEXT.md`, and nothing
+> *Paths I touched:* `.worktrees/114-destination-entry/CONTEXT.md`, and nothing
 > else. `git status --porcelain` in the worktree returns exactly ` M CONTEXT.md`. Nothing under `.claude/skills/` or
 > `.scratch/` changed (`git diff --name-only -- .claude/skills .scratch` returns zero paths), and no other entry's
 > `**Term**:` heading or body appears in the diff.

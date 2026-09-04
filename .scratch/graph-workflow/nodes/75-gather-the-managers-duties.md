@@ -45,7 +45,7 @@ consulted. It is work that must happen before the skill can be specified.
 *Written by the manager, which minted this node, under [A worker's handover carries no acceptance condition for the
 node it mints](35-handover-mints-no-condition.md)'s permission and marked as the manager's own.*
 
-The work is `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/`. Done means all of the following.
+The work is `.scratch/graph-workflow/`. Done means all of the following.
 
 1. This node's `## Answer` holds **one enumerated list of every duty, rule and constraint the manager is under**,
    each item stating the duty in its own words and citing by markdown link the node that produced it. A duty that

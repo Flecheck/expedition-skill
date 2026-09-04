@@ -38,7 +38,7 @@ contracts](58-qualify-the-graph-file-ban.md), and **this node must not touch any
 
 ## Acceptance condition
 
-The work is `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/`, and the file being changed is
+The work is `.scratch/graph-workflow/`, and the file being changed is
 `map.md` in that directory. Editing that file is what this node is for: its subject is the map itself rather
 than a report of progress on other work.
 
@@ -74,10 +74,10 @@ Done means every one of the following is true of the finished tree.
    never the named shapes; and that it does not reach `map.md`.
 9. Neither `map.md` nor the new file cites a place inside any file by line number. Where either points inside a
    file it points by heading or by a quoted phrase.
-10. `/home/mathieu/projects/graph-agent/.claude/skills/expedition/graph-conventions.md` currently says the graph
+10. `.claude/skills/expedition/graph-conventions.md` currently says the graph
     is four files. In the one place it lists those files it names the correct number after this change and
     describes the new file's role in one sentence. It changes in no other respect.
-11. No file under any of `/home/mathieu/projects/graph-agent/.claude/skills/expedition-checker/`,
+11. No file under any of `.claude/skills/expedition-checker/`,
     `.../expedition-grilling/`, `.../expedition-implementation/`, `.../expedition-precondition/`,
     `.../expedition-prototype/`, `.../expedition-research/` is modified.
 12. Every markdown link in `map.md` and in the new file resolves to a path that exists.
