@@ -370,3 +370,60 @@ was settled by [node 93](93-effort-scoped-custom-rules.md)'s worker and flagged 
 **The manager has since applied that default three times without once naming it to them.**
 
 **The manager takes no view on the ask or on any alternative.**
+
+### Attempt 1, a third payload — written, superseding Q2's framing, and never delivered
+
+*Pasted as the worker wrote it. It arrived while Q2 sat in front of the human, unanswered.*
+
+**Its ask:** *"Do these standing directions of yours reach the shipped skill files, or do they bind this effort
+only?"*
+
+**Its recommendation:** *"The checker direction ships — change the shipped checker contract. The plugin direction
+needs no election here, being already a statement about what ships; its remaining half stays with the node that owns
+it. The third direction, about packaging a docs discipline as a "plugin", stays effort-only for now because the thing
+it constrains does not exist yet."*
+
+**Where it reverses Q2, in its own words:** *"Where you say neither, an agent settled it as effort-only and you
+approved that. So nothing is broken and nobody overstepped. **This is an invitation to elect, not a repair.**"* Q2 had
+said the opposite — that *"the manager has now mis-scoped three of your directions in a row without noticing"* and
+that the default *"misfires"* — and recommended changing the default rule rather than electing under it.
+
+**Its alternatives:** effort-only for all three, which is today's default; ship both explicitly, *"honest and tidy, but
+the plugin half buys a sentence rather than a change"*; ship the checker direction as a **permission** rather than a
+prohibition, a checker discovering standards only where its spawn names none — *"keeps discovery for a repo that wants
+it, but leaves the failure you objected to as the default behaviour"*; or defer until the workflow has run on a second
+repo.
+
+**What it settled itself, unchanged from Q2:** that the implementer is *pointed at* the new rules file rather than
+handed its text, and that the first answer is unaffected by this one — *"the file gets built either way, only its
+reader changes."*
+
+***The manager's note.*** **This payload was never delivered and the manager did not deliver it.** Q2 was already in
+front of the human, and nothing displaces a live question. **One claim in it the manager could not verify and does
+not carry:** that the human *"approved"* the effort-only default. Flag `93.1` is marked settled, which under this
+graph's rule means it rode the human's next word rather than that they addressed it; the manager finds no words of
+theirs on it. That is a difference between *settled* and *approved* and the manager states it rather than resolving
+it.
+
+### Attempt 1, answer to Q2
+
+**The human's word, `verbatim`**, written at the moment they spoke:
+
+> 138 yes
+
+**It reaches the delivered payload, Q2, and takes its recommendation** — quoted in full and attributed to this node's
+worker:
+
+> Yes, narrowly: keep your rule exactly as it is, with one exception — where the thing your direction is *about* is a
+> file the workflow ships, silence means it reaches that file, and the manager may not quietly confine it to this
+> effort's map. Everything else stays as you set it: on a project where the skills are never touched, a rule of yours
+> still lives in the map and nowhere else, because there is nothing else for it to reach.
+
+**No divergence.**
+
+***The manager's note, and not the human's words.*** **Their word lands on the payload they were given.** The third
+payload above supersedes Q2's framing and they never saw it, so reading their assent onto it would substitute the
+worker's later judgement for their word — the failure [node 113](113-whether-the-method-skill-instruction-does-any-work.md)'s
+worker named when it faced the same shape and refused it. **The manager has therefore filed this against Q2 and put
+the reconciliation back to the worker**, which is the party that changed its mind and the party holding the
+interview. The manager has not decided what the two payloads' difference comes to.
