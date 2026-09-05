@@ -59,22 +59,9 @@ later like any other map item, by the `Change the map` procedure.
 
 **This `## Notes` section also carries two optional blocks for whatever effort is being run**, fixed by [Subagent context contract](nodes/12-subagent-context-contract.md): the effort's **ground rules**, and a **standing over sources** declared by path and glob marking which sources are authoritative, which are evidence only, and which hold statements known to be false. Absent a declaration, every source a worker is pointed at is authoritative. They live here because this file is already a pointer every worker receives. **This effort declares a ground-rules block and no source hierarchy**, its sources all being authoritative — settled at [What keeps the shipped files consistent when a decision changes a term](nodes/29-shipped-file-consistency.md). The manager copies the block below as text into every checker spawn and adds nothing of its own, and where a check needs a constraint the block does not hold, that is a **raise** under [Whether a spawn may override a shipped worker contract](nodes/28-spawn-overriding-a-contract.md)'s rule rather than the manager's judgement.
 
-**Ground rules for this effort.**
+**Ground rules for this effort, now in [map-implementation-rules.md](map-implementation-rules.md)**: five numbered rules of scope, and the test a rule passes to join them — moved there by [node 144](nodes/144-make-the-rules-file-stand-alone.md) so that file stands alone for a reader who does not read this map.
 
-1. Nothing in the shipped files may assume this repo, this machine, or a toolchain. Prefer properties that are discovered over commands that are declared.
-2. Each shipped worker contract stands alone as a file, rather than depending on any skill being invocable.
-3. The human talks only to the manager. No agent the workflow spawns addresses the human directly, and nothing in the files may tell one to.
-4. Prefer short, simple prose that can be changed later over machinery built for predicted needs. Reserve heavy design for the hard-to-reverse core.
-5. Prose deliverables are held against the `/writing-for-agents` standard, which is specific to this repo, is never shipped, and is located by name in the `mattpocock-skills` plugin rather than by path.
-
-Every rule above is drawn from a standing preference, and every one passes the test [The checker's spawn carries the effort's ground rules](nodes/42-checker-spawn-carries-ground-rules.md) shipped for what may travel to a blind checker: **a standing constraint true of any node's work, rather than an account of what happened.** That test is what keeps the rest of this file out of the block, and the block is appended to like any other part of this map.
-
-**Four standing rules for writing anything in this effort**, fixed by [What the token findings change in the workflow and its skills](nodes/53-what-token-findings-change.md) and held against every prose deliverable. They are rules of writing, where the ground rules above are rules of scope.
-
-1. **Compress the prose that explains why; never compress the shapes.**
-2. **An item states its current form and cites the nodes that shaped it; it does not restate what they hold.**
-3. **A long answer is navigable by heading**, so a reader following a link for one fact reads one section.
-4. **Cite a file by heading or by a quoted phrase, never by line number.** Append-in-place shifts every line below the append, so a line number decays without anything reporting it.
+**The four standing rules for writing anything in this effort are in [map-implementation-rules.md](map-implementation-rules.md)** too, held against every prose deliverable and fixed by [node 53](nodes/53-what-token-findings-change.md) — moved by [node 144](nodes/144-make-the-rules-file-stand-alone.md).
 
 ## Decisions so far
 
