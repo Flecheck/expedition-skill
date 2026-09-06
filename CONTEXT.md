@@ -111,7 +111,8 @@ the gate
 Each names what its worker does, and three of them name a skill the worker invokes.
 
 **grilling**:
-A decision only the human can make, reached by interviewing them one question at a time.
+A decision only the human can make, reached by interviewing them. Its worker may put several of its
+questions in one payload, independence being what decides which of them share one.
 _Avoid_: decision, question, interview
 
 **research**:
@@ -197,8 +198,10 @@ _Avoid_: write lock, code lock — there is no lock
 ## Talking to the human
 
 **Relay**:
-The channel and the payload carrying a worker's question to the human and the answer back. The
-manager passes both along unaltered and answers nothing itself.
+The channel and the payload carrying a worker's questions to the human and the answers back. One
+payload holds one of that worker's questions or several of them, and either way it is one thing in
+front of the human; it never carries a second worker's. The manager passes both along unaltered and
+answers nothing itself.
 _Note_: firstmate's Relay means external channels like X and Discord, which this workflow rules out
 of scope.
 
