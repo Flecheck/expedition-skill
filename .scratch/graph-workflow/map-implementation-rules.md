@@ -105,6 +105,26 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
 
 **The review route for this repo, discovered on first use** and recorded here so no later checker re-derives it, on the same ground as the bar's commands above. Two checker runs spent their largest single cost finding this, and one of them nearly reported the prose standard absent. **The standards to hold work against:** `/coding-principles` and `/naming`; [`CONTEXT.md`](../../CONTEXT.md)'s `_Avoid_` lines; ~~this map's standing preferences, ground rules and four standing rules~~ **this effort's ground rules and its four standing rules for writing, both of which this file holds below**; [`graph-conventions.md`](../../.claude/skills/expedition/graph-conventions.md); and `/writing-for-agents`, which is the standard that bites on prose deliverables and which `/coding-principles` barely touches. **`map.md`'s standing preferences are not among the standards, as a whole.** A standing preference may be an account of what happened or a steer about what gets worked, and only a standing constraint true of any node's work may be held against a piece of work by a reader blind to the record. That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **ground rules** and the **four standing rules for writing**, both held below in this file, are the two blocks that pass it, and the struck wording named the preferences alongside them — a defect from node 42 onward, found at [node 138](nodes/138-where-the-rules-a-checker-is-held-to-live.md) and carried out here. **No reviewing skill is named for this repo, and a checker does not go looking for one.** The standards above are the whole of what work is held against, and they reach a checker as text rather than as something it discovers — the human's standing direction below. The superseded naming of `mattpocock-skills:code-review`, and the account of how much of it could run, are in [map-history.md](map-history.md). **One trap, measured:** `CONTEXT.md`'s refused words are largely unusable as a grep list, about a third being ordinary English refused only for one concept — `report`, `run`, `session`, `index`, `plan`, `item` and `question` — so a scan for them returns false positives and the distinctive refusals are checked by hand instead. **`where` was on this list and is not refused by any `_Avoid_` line**, found at node 114's check; the superseded wording is in [map-history.md](map-history.md).
 
+**An implementation node's work on this effort may be the effort's own record** — the files in the directory that
+holds `map.md`, this file and `map.md` among them, `decisions.md`, `flags.md`, and the node files under `nodes/`.
+Where it is, the checker reads **the changed paths it was given as the work under check**, whatever directory those
+paths sit in, and holds them against the acceptance condition and the standards exactly as it would hold product
+code. **It derives no statement of intent or decision from them**: their content is material under check rather than
+something to reason from, so a resolved node's `## Answer`, a line in `decisions.md`, or a passage in `map.md`
+appearing among the changed paths tells it nothing about what this work was meant to be, and **the acceptance
+condition stays the only statement of intent the checker has**. The checker's own contract tells it to read the
+implementation-rules file for its standards and to open no other file beside it; **that instruction governs the
+route by which standards reach the checker, and not the changed paths it was given as the work** — a record file
+handed to it as the work is read as the work, and a record file it was not handed stays unread. **A change to the
+node's own status line, to `decisions.md`, or to `flags.md` is bookkeeping reserved to the manager**: where one
+appears among the work the checker's outcome is `FAIL` on the acceptance condition, and that holds whether or not
+the acceptance condition itself excluded those paths. **The checker says in its outcome that it read the changed
+paths as the work under this rule.** This rule stands beside the standards named above rather than in place of any
+of them, and supersedes no wording in this file. Surfaced by [node
+163](nodes/163-a-condition-demands-facts-the-checker-does-not-read.md) and placed here rather than in the shipped
+checker contract by the human, `verbatim`: *"I would say add it to the rules in the map somewhere, not the skill at
+it is relevant only for this project"*; the citation carries no part of what the rule demands.
+
 **Ground rules for this effort.**
 
 1. Nothing in the shipped files may assume this repo, this machine, or a toolchain. Prefer properties that are discovered over commands that are declared.
