@@ -1,7 +1,7 @@
 # The manager's own uncommitted record edits collide with a landing branch
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -113,3 +113,56 @@ first use.
 ***The manager's note.*** **Not a divergence** — the reply names the re-asked recommendation and takes neither
 alternative. **Both questions of this payload are now settled**, `Q1` at the first relay and `Q2` at the second, and
 the worker reversed its own `Q2` recommendation between them because the human's question falsified its premise.
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+> ### The rule
+>
+> When the human approves an implementation node at its gate, the landing sequence gains one step before every step it already had: **the manager commits its own outstanding edits to the effort's record**, path-limited to the record directory, with no diff put in front of the human first and the commit reported afterwards. Only then does the manager rebase the node's branch, re-run the bar, and `git merge --ff-only`.
+>
+> The human assented to that sequence as recommended, taking none of the five alternatives offered. It does not breach the shipped contract's *"approval before any commit"* — the record commit happens after the gate approves.
+>
+> ### Why that moment, and not the one the record currently names
+>
+> Three facts, measured in a scratch repository rather than reasoned about:
+>
+> - `git merge --ff-only` refuses **only** where a file the manager has left dirty is one the branch also changes. Unrelated dirty files merge without complaint.
+> - Committing the record and then merging **without** rebasing fails outright — `fatal: Not possible to fast-forward`. So the record commit must come **before the rebase**, never between the rebase and the merge.
+> - After that commit the rebase can conflict on the record files, both sides having appended. Node 115 already makes that conflict the manager's own to resolve by keeping both sides.
+>
+> **The moment the record currently names is the wrong one.** Node 115's answer says the manager's graph state *"must be committed before a worktree is cut"*. A worktree is cut when a node is claimed, and the manager writes the record continuously for the whole of that node's life. At node 144 the two colliding edits were written minutes before the landing; they landed as `9a252c9`, whose two paths are the same two paths as node 144's own commit `37a3d28`. Committing at the cut is still worth doing, because it keeps the worker's base current — it does not prevent this failure.
+>
+> ### A read-only trial runs before anything is touched
+>
+> `git merge-tree --write-tree` says in advance whether the rebase will conflict on the record files. It writes nothing, costs one call, and turns the union case from a surprise into a plan.
+>
+> ### The rule stays in this effort's map, and nothing ships
+>
+> The human's word, `verbatim`: *"stays in the map"*.
+>
+> The collision fires only where an implementation node's work **is** the effort's own record. On an ordinary effort the two sets never intersect — disjointness that is already guaranteed rather than hoped for, a worker touching `decisions.md`, `flags.md` or its node's status line being a checker `FAIL`. Measured: of the **17 node landings since the worktree-and-fast-forward policy came in, 7 changed files in the effort's own record and 4 of those changed nothing else.** Large, and large for the one reason that does not generalise.
+>
+> **The shipped contract already answers the general form of this hazard, and answers it the other way.** Node 11's rule is that where the tree holds uncommitted work the node did not write, the manager *"stops and says so rather than committing someone else's work under a node's name."* A shipped sentence saying *commit it* would put two contradictory dispositions in one file, for a case a regular effort never reaches.
+>
+> ### This is not node 115's question
+>
+> Node 115 is a **worker's** record edits meeting the manager's, resolved by unioning at integration. This is the **manager's own** edits meeting the merge step, and no union resolves it, because there is nothing to merge — the edits sit in no commit anywhere.
+>
+> ### What the map has to be made to say
+>
+> 1. The sentence *"The graph's own files are **not** committed per node; they are committed periodically by the human"* is struck. Node 160's clause 7 already demands exactly this.
+> 2. New text beside it states the sequence and gives the moment as **before the rebase, at landing**. Node 160's clause 7 says *"before a worktree is cut"*, which this node establishes to be insufficient — so that clause wants a second half rather than a replacement.
+
+## Flags
+
+*All four are the worker's own text, pasted.*
+
+`176.1` `ASSUMPTION` — **The commit's scope and its message, which the human's assent did not reach.** My question said "path-limited to the effort's record directory" and said nothing about the message or a trailer. I settled both: the commit takes the record directory as a whole rather than the paths the branch happens to intersect, because computing that intersection is fiddly at the tensest moment of the sequence; and it carries **no** `Node: <effort>/<NN>` trailer, because node 11 fixes that trailer as the join key for a node's *code* commit and record bookkeeping is not that node's work.
+
+`176.2` `ASSUMPTION` — **The human's own hand-edits in the record directory are committed by step one rather than stopping the landing.** Node 11 tells the manager to stop where the tree holds uncommitted work the node did not write, and step one now sweeps whatever sits in the record directory. I settled that it commits rather than stops: node 11's ground is *attribution* — "committing someone else's work under a node's name" — and the record commit names no node; the record is append-only under the never-delete rule; and nothing is ever pushed.
+
+`176.3` `ASSUMPTION` — **The read-only trial merge is part of the rule.** `git merge-tree --write-tree` appeared in my payload's `SO FAR` as a measured fact but not in the question the human answered, so their assent does not reach it. I put it in the answer on my own authority.
+
+`176.4` `ASSUMPTION` — **I did not invoke the `/grilling` method skill.** The map names it among the skills every session should consult; my contract states that its own discipline and shapes are "the whole of what binds you, and they bind whether or not any such skill is invoked". I worked from the contract alone.

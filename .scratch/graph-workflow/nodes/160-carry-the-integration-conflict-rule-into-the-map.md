@@ -57,7 +57,50 @@ section and will merely conflict, which this node's own answer says is acceptabl
 >    through in place with `~~`, its text otherwise unchanged, with its full text appended to `map-history.md` as in
 >    clause 2, and new text beside it stating that the manager commits the graph's own files itself, before a
 >    worktree is cut, so that the tree a worker is given equals the tree the manager is standing on.
+>
+>    **Amended, and the amendment is the manager's, made with the human's approval.** *The clause above stands
+>    unchanged and this is added to it, both moments being wanted.* The new text also states that when the human
+>    approves a node at its gate, the manager commits its own outstanding record edits, path-limited to the record
+>    directory, as the **first step of landing and before the rebase** — because `git merge --ff-only` is refused
+>    where a dirty file is one the branch also changes, and because a record commit made after the rebase leaves the
+>    branch unable to fast-forward. Committing at the cut keeps the worker's base current; committing before the
+>    rebase is what unblocks the merge, and neither substitutes for the other.
 > 8. No heading named `## Notes` is added to any file this node edits.
 > 9. Every markdown link in the files this node edits resolves to a path that exists, except any link to a path
 >    outside this repository, which is out of scope.
 > 10. No file outside `.scratch/graph-workflow/` is modified.
+
+## Annotation: why clause 7 was amended, and by whom
+
+*Filed by the manager.*
+
+**The defect and its wording are [node 176](176-the-managers-record-edits-collide-with-a-landing.md)'s worker's, not
+the manager's.** It established, by running git in a scratch repository rather than reasoning about it, that
+committing the record *before a worktree is cut* does not prevent the collision the clause exists to prevent: the cut
+happens when a node is claimed, the manager writes the record continuously for that node's whole life, and node 144's
+colliding edits were written minutes before its landing. It said in as many words that *"amending a live condition is
+the manager's act with the human, not a worker's"*, and supplied the text the amendment needed to demand.
+
+**The manager put it to the human rather than amending on its own authority**, under the rule that rewriting an
+acceptance condition is never the manager's. Their word, `verbatim`:
+
+> ok
+
+**What was done and what was not.** The original clause is left standing and unchanged; the amendment is added
+beneath it, because the finding is that the clause is *insufficient* rather than wrong. This node is open and
+unclaimed, so no worker was mid-flight when it changed.
+
+## Annotation: this node's clause 7 inherited an error from a resolved node
+
+*Filed by the manager from node 176's handover, and pasted as that worker wrote it.*
+
+> **Node 115 (resolved) — its section 5 states a remedy that does not fix the failure it names.** Its words: *"an
+> uncommitted graph edit blocks the landing step even when the rebase is clean. It is why the manager's graph state
+> must be committed before a worktree is cut."* **The *"It is why"* does not follow.** The block occurs at the merge,
+> at the end of the node; committing at the cut, at the start, leaves every edit the manager makes in between — which
+> is several commits' worth, and was the whole of node 144's collision.
+
+***The manager's note.*** **Node 115 is resolved and its section 5 is uncorrected there.** The manager has recorded
+the finding here, on the node that inherited it, rather than editing a resolved node's answer. Whether an annotation
+onto an already-resolved node has a home in the graph's format at all is one of the manager contract's own declared
+unsettled questions.

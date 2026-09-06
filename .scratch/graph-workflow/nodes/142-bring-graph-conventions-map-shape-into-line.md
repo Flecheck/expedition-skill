@@ -1,7 +1,7 @@
 # Bring `graph-conventions.md`'s map shape into line with the split map
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: 140
 

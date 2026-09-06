@@ -96,6 +96,8 @@ The manager records the question rather than reading approval as an answer to it
 
 *No correction round; run 1's `PASS` is the only run. All three flags are settled by the approval.*
 
+**Landed as `31ad6fa`.** **This is the first landing under [node 176](176-the-managers-record-edits-collide-with-a-landing.md)'s `Q1` rule**, settled at that node's interview: the manager committed the effort's record path-limited as **step one** (`dfa2c22`), then ran the read-only `git merge-tree --write-tree` trial, which reported clean, then the node's own commit, the rebase and the fast-forward. **The sequence worked and the merge still failed on its first attempt** — `unable to unlink old 'CONTEXT.md': Read-only file system`, this node's path being at the repository root and the root being outside the manager's writable set. `HEAD` did not move and nothing was lost; the same command succeeded with the sandbox off. **The trial merge and the sandbox are answering different questions**, and a clean trial says nothing about whether the command may run.
+
 ## Answer
 
 *Pasted as the worker wrote it.*
