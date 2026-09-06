@@ -1,7 +1,7 @@
 # The manager's own uncommitted record edits collide with a landing branch
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 
@@ -47,3 +47,69 @@ committed on its branch and not merged, and the manager put the sequence to the 
 **Not started, and the reason is a count rather than a judgement.** This effort runs two nodes needing the human at
 once, and both places are held by [node 165](165-measure-whether-a-fed-file-earns-its-place.md) and [node
 50](50-shared-blocks-stay-duplicated.md), each holding a banked question.
+
+## Interview
+
+### Attempt 1
+
+*The attempt's routing key does not survive the manager's session, so it is not recorded here.*
+
+**The worker's payload carried two questions**, numbered `Q1` and `Q2` under the batching rule [node
+126](126-carry-question-batching-into-the-grilling-contract.md) landed as `8cc9b79`. This is the first payload on this
+effort to use it.
+
+**The human's reply, `verbatim`.**
+
+> Q1 ok Q2 does it happen only because the change do change the map whereas in a regular effort it shouldn't be the case so it isn't nessesary ?
+
+**What `Q1 ok` takes**, quoted from the worker's own text and attributed to the worker:
+
+> **Q1 ASK:** The moment you approve a node's work, should the manager commit its own outstanding record edits as
+> **step one** of the landing sequence — path-limited to the effort's record directory, with the message reported to
+> you afterwards but **no diff put in front of you first** — and only then rebase, re-run the bar, and fast-forward?
+>
+> **RECOMMENDED:** Yes.
+
+***The manager's note on Q1.*** **Settled, and not a divergence** — the reply names `Q1` and assents to its
+recommendation. It takes none of Q1's five alternatives. **It narrows a standing habit of the human's** and the
+worker said so in as many words when it recommended it, so the narrowing is on the record as deliberate rather than
+inferred: the manager commits the effort's record, path-limited, as step one of a landing, after approval and without
+a diff being put in front of them first.
+
+***The manager's note on Q2.*** **This is a question back, not an answer**, and it went to the worker rather than
+being read as taking any option. The manager has not treated it as a `no`, nor as the `map only` alternative, nor as
+assent. **Q2 stays unsettled and its number is fixed** — a re-ask uses `Q2` again, per the rule the same node landed.
+
+***The manager's note on the reply's form.*** **It is `Q1 ok Q2 …`, which is exactly the shape [flag
+`126.2`](126-carry-question-batching-into-the-grilling-contract.md) chose the glyphs for** — its worker took `Q1.`
+over a markdown heading on the stated ground that the human's own predicted reply form was *"Q1 ok Q2 ok Q3 .."* and
+that the number they type should be the number the payload shows. The manager records that the prediction held on its
+first use.
+
+**The worker's re-ask of `Q2`, pasted as it wrote it. Its number is unchanged, per the rule node 126 landed.**
+
+> **Your premise holds, and I went and measured it rather than reasoning about it.**
+>
+> **Why a regular effort does not meet this.** Git refuses the merge only where a file the manager left dirty is one the branch *also* changes. The manager's only uncommitted files are the effort's record; a branch only touches the record if that node's work *is* the record. On an ordinary effort — implementation nodes editing product code — the two sets never intersect, and the merge is never blocked. The disjointness is not luck: this effort's own rules already forbid a worker to touch `decisions.md`, `flags.md` or its node's status line, and the checker `FAIL`s if one appears in the work.
+>
+> **How much of this effort is the exception.** Of the **17 node landings since the worktree-and-fast-forward policy came in, 7 changed files in the effort's own record, and 4 of those changed nothing else.** That is a large fraction, and it is large for exactly the reason you name: this effort's subject *is* the workflow, so restructuring the map is implementation work here and would be nothing on a normal effort.
+>
+> **The one thing I found that cuts against shipping harder than your question did.** The general form of this hazard — foreign uncommitted work sitting in the tree at landing time — is *already* settled in the shipped design, and settled differently. Node 11's rule: where the tree holds uncommitted work the node did not write, *"the manager stops and says so rather than committing someone else's work under a node's name."* So a new shipped sentence would not fill a gap; it would add a **second, contradictory** disposition — commit it — for a case a regular effort never reaches, and sit next to a rule that says stop.
+>
+> **Q2 ASK:** Given that the collision only fires when an implementation node's work is the effort's own record, does anything reach the shipped manager contract, or does this stay in this effort's map alone?
+>
+> **RECOMMENDED:** **Nothing ships — map only.** This reverses what I recommended last time, and your question is why. I had argued a regular effort meets this hazard; it does not, and the shipped contract already answers the general form of it with the opposite instruction.
+>
+> **ALTERNATIVES:** One sentence anyway, on the ground that the workflow is meant to be dogfooded and every future effort that improves the workflow itself meets this — set aside because that is a known special case, and the map is where a special case belongs until a second effort actually hits it. Hand it to node 162 — set aside, different step.
+
+**The human's reply, `verbatim`.**
+
+> stays in the map
+
+**The option it takes**, quoted from the worker's own re-asked `Q2` and attributed to the worker:
+
+> **RECOMMENDED:** **Nothing ships — map only.**
+
+***The manager's note.*** **Not a divergence** — the reply names the re-asked recommendation and takes neither
+alternative. **Both questions of this payload are now settled**, `Q1` at the first relay and `Q2` at the second, and
+the worker reversed its own `Q2` recommendation between them because the human's question falsified its premise.

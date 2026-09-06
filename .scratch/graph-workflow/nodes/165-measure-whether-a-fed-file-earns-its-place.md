@@ -220,3 +220,58 @@ Node 141 §5 and node 129 §3a, both reported on `INVALIDATIONS` above, and my o
 **Node 129 §6's projection is stale rather than wrong**: it computed *"near 42,000"* from 70 open nodes. There are 80 open now, so the same arithmetic gives ~47,000.
 
 **One small inconsistency between my contract and my spawn**, which the record already resolves: `expedition-grilling/SKILL.md` says the handover has *"Five parts, every time"*, while the spawn and `map.md` require six on this effort. The contract file carries no note that an effort may add a part, so a worker working from the file alone would drop the retrospective. The spawn covered it, so it cost me nothing.
+
+## Annotation: shadow pair 1, and its readout
+
+*Filed by the manager. Package A's parts (ii)-(iv) are the manager's duties; this is the first of the three pairs.*
+
+**The pair.** Node 179, a grilling node, run twice: the **fed** arm with the ordinary spawn, the **unfed** arm with an
+identical spawn minus the `decisions.md` pointer. Both stopped at their first question. **The unfed arm was never
+resumed and never reached the human**, and its output did not steer node 179, per flag `165.5`.
+
+**The readout, run by a read-only agent against the two questions fixed before the pair ran. Pasted as it wrote it.**
+
+> **Question 1 — Does UNFED contradict, or propose re-deciding, something `decisions.md` records? No.** I checked every UNFED claim that touches an indexed decision. All of them either agree with the index or concern something the index does not record… The instrument swap (`/proc/mounts` → `test -w`) is the one thing UNFED proposes changing, and **the index records no instrument**… So UNFED is deciding what its own node was minted to decide, not re-opening a resolved one.
+>
+> **Question 2 — Does UNFED's `SO FAR` show it missing a fact the index carries that FED used? No** — and the single asymmetric item runs in the opposite direction, which I have to state plainly rather than score as a point for the index.
+>
+> FED used exactly one thing traceable only to `decisions.md`: *"the harness cuts an implementation worker's worktree at the spawn itself, so the manager cannot probe that tree beforehand."* That is line 102 (and line 100, unstruck) of the index. **That line is superseded in the live record.** `map-implementation-rules.md` strikes the isolated-worker bullet and replaces it with the human's own route… Under the live route the manager creates the tree itself and **can** probe it before the worker reads it.
+>
+> So: the index did not supply UNFED-missing knowledge; **it supplied FED a stale premise, and that premise is load-bearing** — it is FED's ground (2), one of the three "measured facts" behind its recommendation. UNFED carried the same decision in its live form, quoting the rules file.
+>
+> **Noise (not answers to either question):** the two arms recommend opposite things — neither is caused by an index fact. The instrument disagreement. Where each arm settled the map-vs-contract sub-question — both reached the same answer on the same ground. Length, structure, alternative counts, tone, confidence.
+>
+> **Observation — did UNFED read `decisions.md` unprompted? No sign that it did, and one piece of evidence against.** Its `SO FAR` enumerates its reads and the index is not among them… The evidence against: the node-150 harness-cuts-at-spawn claim is, as of now, **index-only** as a live statement, and UNFED does not carry it — it carries the rules file's live version instead.
+
+***The manager's note on what this licenses, which is the part the protocol fixed in advance.*** **Both questions
+answered `no`, so under part (iv) this pair licenses nothing on its own.** The manager has not read the arms'
+opposite recommendations as a divergence — the readout classified that as noise, which is what fixing the readout
+beforehand was for.
+
+**What the readout found that neither question asked, and the manager is recording rather than scoring:** the index
+did not merely fail to help the fed arm, it **fed it a stale premise that carried one of its three grounds.** That is
+outside part (iv)'s two outcomes, and the manager has not invented a third.
+
+**The staleness itself was already on the record independently**, in [node
+175](175-what-the-worktree-cycle-does-to-the-sandbox.md)'s retrospective, before this pair existed — *"`decisions.md`
+still describes node 150's answer as … while `map-implementation-rules.md` records that route as superseded … and the
+index is the one a later worker greps."* **The manager has struck both stale lines in `decisions.md` on that
+independent ground**, not on the shadow's, so that no repair traces to the shadow's output.
+
+## Annotation: shadow pair 2 spawned
+
+*Filed by the manager. The second of Package A's three pairs.*
+
+**The pair.** [Node 176](176-the-managers-record-edits-collide-with-a-landing.md), a grilling node, run twice: the
+**fed** arm with a `decisions.md` pointer **scoped to six named entries** — nodes 11, 20, 68, 115, 175 and 179 — and
+the **unfed** arm with an identical spawn minus that pointer. Both stopped at their first question. The unfed arm was
+never resumed and never reached the human.
+
+***The manager's note on a change it made to the fed arm without asking.*** **This pair's fed arm was given a
+*scoped* pointer, where pair 1's was given the file flat.** The manager changed its own spawn practice between the two
+pairs, acting on [node 185](185-a-spawn-does-not-scope-the-decisions-index.md). **So pairs 1 and 2 do not test the
+same thing**: pair 1 measured a flat pointer against nothing, pair 2 measures six named entries against nothing. The
+manager records the confound rather than concealing it, and has not adjusted the protocol to hide it — Package A's
+part (ii) says the next three grilling nodes, and this was the next one.
+
+*The readout for this pair is fixed as before, and its result is filed when it returns.*

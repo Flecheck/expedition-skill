@@ -1,7 +1,7 @@
 # Whether the five contracts' shared blocks stay duplicated
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: 54
 
@@ -197,3 +197,62 @@ skill-less runner can follow one.
 worker offered as the price of keeping the duplication rather than as a separate option. The manager has not read the
 reply as settling it and has not decided it; it is the worker's to put back or to treat as carried, and the manager
 has said so in resuming it.
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+> ## The blocks stay duplicated, and nothing ships
+>
+> The human's words, `verbatim`: *"keep them duplicated"*. Taking the worker's `RECOMMENDED` and none of the four alternatives; not a divergence.
+>
+> **No shipped file changes, and no node is minted to change one.** The record of the standard being consciously declined is this node. A reader asking what this decision altered in the tree is answered: nothing.
+>
+> ### What the decision was taken on, re-measured rather than inherited
+>
+> The figures this node carried were stale, and its annotation's *"Do not re-derive these"* would have carried them into this answer. Measured on disk at resolution:
+>
+> - The shipped corpus is **9 files, 2,726 lines, 27,735 words**, where this node said 8 files, 1,804 lines, 17,067 words.
+> - The two sections are **identical in content across five contracts**, verified by md5 over both ranges. **54 lines and 684 words per contract; 216 lines and 2,736 words in four redundant copies.** The claim of byte-identity stands.
+> - **The share has fallen, not grown: 7.9% by line and 9.9% by word**, against the 12.0% and 16.4% this node recorded. The duplication did not move; the corpus grew about 62% by word around it.
+> - **The checker contract carries neither block.** This is a five-file matter, not six.
+>
+> ### The three grounds
+>
+> **The token price is measured and does not clear the bar.** ~1,015 tokens per worker spawn, about 5% of that worker's opening read against `map.md`'s ~19,840. `map.md`'s own rule refuses *"prioritising one whose size has not been measured"*; this one is measured, and it is small.
+>
+> **The sprawl charge does not land on the duplication.** No worker reads more than one contract, so the 216-line figure is a corpus statistic no reader experiences. And the file that is genuinely oversized, the checker contract at 405 lines, shares neither block: deduplication would not shorten it by a line.
+>
+> **The blocks are duties performed at handover time, not reference.** A worker reads the implementation-node section at the moment it writes a condition. A pointer inserted there is a variance lever on exactly the artifact this graph has already opened nodes to repair. The contract's own sentence is *"what you write loosely here is paid for there."*
+>
+> ### Why no divergence check was added, which was the other half of the recommendation
+>
+> **Its proposed home was wrong.** All ten mechanical checks in `graph-conventions.md` are checks on **an effort's graph**. A check that the workflow's own shipped source files agree with each other is not a graph check. It is live on this dogfood effort and dead on every other, and shipping it puts a permanently inapplicable check into every effort, against ground rule 1.
+>
+> **And the human has already refused it.** Node 29's part 3, assented to `verbatim` as *"ok for 29"*, is *"nothing is added to the mechanical checks, and nothing to any acceptance condition."*
+>
+> **The protection it was meant to buy already exists.** Node 94's extent rule requires every condition addressing a defect with instances to carry an enumerator or a bounding set. Applied to any edit of these blocks, that rule *is* the divergence check: an author who must enumerate the instances cannot silently miss four of five.
+>
+> ### One caution, from running the proposed check
+>
+> The worker ran the hash comparison it had recommended. **Its first run reported a divergence in the research contract that was not there** — an artifact of that section being last in the file, so the extraction captured no trailing blank line. The content is identical. Recorded because it is evidence about the remedy that was declined: **even the exact, decidable version of this check has an edge case, and its first run produced a false positive.**
+
+**What the worker reported its work invalidates, pasted as it wrote it.**
+
+> **Node 54's finding A is now substantially false, and node 54 is resolved.** It found that *"a quarter of the shipped corpus is read by nobody"* — **454 lines and 4,057 words** — resting on the verified fact that *"`.claude/skills/expedition/` holds no `SKILL.md` at all."*
+>
+> Node 76 shipped `.claude/skills/expedition/SKILL.md`. Verified today: it points at `graph-conventions.md` **five times**. So the whole set node 54 priced as unreachable is now reachable from a model-invoked skill by a two-hop chain.
+>
+> **What survives, narrowed:** no *worker contract* points at any of the three. The reachability runs through the manager's skill alone, so the files are reachable by the manager and unreachable by every worker. That is a real and much smaller finding than the one on record, and it bears on node 61, whose case rests on `scribe` living in the file nothing points at.
+>
+> **Also stale, in this node's own text:** its statement that `graph-conventions.md` *"is reached by no pointer from anywhere today"*, and both corpus figures under its second annotation, which the annotation instructs its reader not to re-derive.
+
+## Flags
+
+*All three are the worker's own text, pasted. The ids and links are the manager's bookkeeping and nothing else.*
+
+`50.1` `ASSUMPTION` — **Dropped the divergence check rather than putting it back to the human as a second question.** The worker offered the check as the price of keeping the duplication; the human's *"keep them duplicated"* reaches it either way. It judged the half unsettled, then found two facts that settle it without spending the human: the proposed home is a per-effort graph-check list, so a check over the workflow's own source would be dead on every effort but this one and would breach ground rule 1; and node 29's part 3, assented to as *"ok for 29"*, already says nothing is added to the mechanical checks. It also found that node 94's extent rule supplies the same protection node-by-node. Its contract says to find facts rather than ask for them, so it dropped the check and recorded this instead of relaying.
+
+`50.2` `ASSUMPTION` — **Scoped the checker contract out of the decision.** The node and its annotations discuss "the five contracts" while the shipped set has six worker contracts. The worker measured rather than assumed: the checker contract contains neither duplicated section. So the decision governs five files and the checker's size, which is the corpus's real outlier at 405 lines, is untouched by it.
+
+`50.3` `ASSUMPTION` — **Read the corpus-share percentage as a maintenance statistic rather than a cost any reader pays.** This is the analytical move the recommendation rested on: because no worker reads more than one contract, the 216 redundant lines are never in one reader's context, so the duplication cannot be charged with sprawl, whose whole content is spent attention. The human assented to the recommendation this produced rather than to the reasoning itself.
