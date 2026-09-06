@@ -316,3 +316,23 @@ that was run and verified rather than designed.*
 *Moved verbatim under the `Change the map` procedure. Questions 2 and 3 are re-rendered; 1 and 4 stand.*
 
 **The four questions, as the spawn puts them:** what did you have to hunt for — the fact, where you found it, where you looked first; what did you read and not use; what would have made this node easier, in the spawn, the node file, or the contract; and what did you read that was stale, wrong, or contradicted something else.
+
+## Notes — the grilling-node target, before the human raised it to three
+
+*Moved verbatim at the human's instruction raising the count. The clause as it stood, inside the standing preference
+on one question at a time:*
+
+> and **the target for concurrently running nodes that need the human is two for this effort**, settable by them, with the manager starting whatever it takes to return to that target the moment a node finishes.
+
+## Notes — the grilling-node target at three, before the human set it to two alongside a second code slot
+
+*Moved verbatim under the `Change the map` procedure. The clause as it stood:*
+
+> and **the target for concurrently running nodes that need the human is three for this effort**, settable by them, with the manager starting whatever it takes to return to that target the moment a node finishes. **It was two and the human raised it**, `verbatim`: *"you can start a 3rd grilling"*. The manager read that as setting the count rather than as permission for one extra start, on the ground that the sentence above makes the amount a number the human sets — *"2 by default by the user can ask for more"* — and it tops up to three from now.
+
+## Superseded from `map-implementation-rules.md` — the code-slot count at one
+
+*Moved under the `Change the map` procedure when the human set two implementation workers alongside two grilling
+nodes. The sentence is also struck in place in the rules file, that file's own idiom. As it stood:*
+
+> **How many implementation workers run at once is a setting of the effort, and for this effort it is one.**

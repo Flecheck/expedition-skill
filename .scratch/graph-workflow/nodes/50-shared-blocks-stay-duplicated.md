@@ -1,7 +1,7 @@
 # Whether the five contracts' shared blocks stay duplicated
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: 54
 
@@ -130,3 +130,70 @@ here.
 requires the file to stand alone, so a rule may not simply become a pointer wherever one exists. What made any
 remedy possible is the gap **this node identified first**: a plain-file pointer is not skill invocation, and a
 skill-less runner can follow one.
+
+## Interview
+
+### Attempt 1
+
+*The attempt's routing key does not survive the manager's session, so it is not recorded here.*
+
+*Banked at hand-back: this question queued behind [node 144](144-make-the-rules-file-stand-alone.md)'s gate, [node
+165](165-measure-whether-a-fed-file-earns-its-place.md)'s question, and [node
+171](171-carry-the-record-node-reading-rule-into-the-rules-file.md)'s gate. Relayed once all three cleared.*
+
+**The worker's question, pasted as it wrote it.**
+
+> I have what I need. Node 54 (my blocker) is resolved, and I've re-measured the corpus — several of my node file's figures have moved.
+>
+> NODE:          Whether the five contracts' shared blocks stay duplicated
+>
+> ABOUT:         Two sections — `## When you raise a flag` and `## When a node you report is an implementation node` — are byte-for-byte identical in five of the six worker contract files. This node decides whether they stay that way or move to one file the five point at. It's being decided now because a large part of the open implementation backlog edits exactly those files, and several edit exactly those blocks, so the answer changes how that backlog is worked.
+>
+> SO FAR:        I read the node, the map, the decisions index, node 54's re-review (my blocker), and I re-measured the shipped files today rather than trusting the node's stored numbers. Four things I found:
+>
+> **1. The duplication is real and unchanged, but the node's arithmetic is stale.** Both sections are still md5-identical across grilling, implementation, precondition, prototype and research — 54 lines / 700 words per contract, so 216 lines / 2,800 words are redundant copies. But the corpus has grown from 8 files / 17,067 words to **9 files / 2,665 lines / 27,104 words** since that was measured. So the duplication's share has **fallen from 16.4% to 10.3% by word** (8.1% by line). It didn't grow; everything around it did.
+>
+> **2. The sprawl charge doesn't actually land on it.** No worker ever reads more than one contract — each reads its own 54 lines once. The 216-line figure is a corpus statistic no reader experiences. And the file that *is* oversized — the checker contract, 405 lines, the one node 54 priced at 5× the standard's own skill — shares **zero** duplicated lines with the other five. Deduplication would not shorten it by one line.
+>
+> **3. Two things I found that the node file doesn't know.** First, there is **more** duplication than the 216 lines: another ~165 line-instances / ~1,700 words of shared boilerplate (the glossary block, `## What you read`, the resume template, the handback template). In the grilling and prototype contracts, **93 of 225 lines — 41% — sit in some block shared with 3+ siblings.** Second, the node says `graph-conventions.md` is "reached by no pointer from anywhere" — that is **no longer true**: the manager's contract, shipped since, points at it five times, including *"beside this file. Read it before you touch an effort's files."*
+>
+> **4. The constraint the node treats as the blocker has already been relaxed, by you.** Node 22's condition 9 said everything binding on a worker must be *in* its file. But node 143 landed four commits ago and sends an implementation worker to `map-implementation-rules.md` for the standards it is held against. So a contract already points out of itself for binding material. Ground rule 2 as the map states it today only forbids depending on *a skill being invocable* — a plain-file pointer isn't that. **The remedy is available; the question is whether it's worth taking.**
+>
+> Settled on my own authority (returning as assumptions): the checker contract is out of scope here, since it shares no duplicated line; and I read the corpus-share percentage as a maintenance statistic rather than a cost any reader pays.
+>
+> The measured token price stands from node 52: ~1,015 tokens per worker spawn, about **5% of that worker's opening read** against `map.md`'s ~19,840.
+>
+> ASK:           Do the five worker contracts keep their shared blocks duplicated, or do those blocks move into one file that all five point at?
+>
+> RECOMMENDED:   **Keep them duplicated — and pay for that with a mechanical divergence check** (a tenth check in `graph-conventions.md`: the two sections' hashes match across the five contracts).
+>
+> What this rests on, in order of weight:
+>
+> - **The map's own rule points here.** It prioritises token-use work but explicitly refuses "prioritising one whose size has not been measured." This one *is* measured, and it's 5% of one worker's opening read. It doesn't clear the bar.
+> - **The charge against it fails on measurement.** Sprawl is about attention, and no reader's attention is spent on the duplication — each reads one copy. The share is falling on its own as the corpus grows.
+> - **These blocks are duties performed at handover time, not reference.** A worker reads `## When a node you report is an implementation node` at the moment it writes a condition. A pointer inserted there is a coin-flip on whether it gets followed — and badly-written conditions are a defect this graph has already had to open nodes to repair (148, 163). The contract's own line is *"what you write loosely here is paid for there."*
+> - **The one cost genuinely being paid is silent divergence** — five files, nothing checking they agree. Node 109's acceptance condition is literally written as a five-way edit with a "correct the count in all five" rider, and it's blocked because "claiming this before both land would put three workers in one file." A hash check answers that directly, costs no worker any context, and touches no ground rule.
+>
+> The strongest argument *against* my recommendation, which I'll state rather than hide: a check catches divergence but does not reduce the labour, and nine-plus open nodes still each have to make the same edit five times — soon seven, once the cascade worker's contract exists.
+>
+> ALTERNATIVES:
+>
+> - **Move both blocks to one new plain shipped file the five contracts point at.** Cuts grilling and prototype by ~24% each, and the extra boilerplate would take them to ~45%. Costs one line per contract, no always-loaded context, and now has precedent (node 143). Against it: the material is no longer in front of its reader at the point of use, and `graph-conventions.md` would then hold a third statement of the same rules in a third voice — the division node 76 just drew.
+> - **Move them into a model-invoked all-reference skill the contracts invoke.** Same benefit, plus ~80 bytes of always-loaded description, but reachable only by invocation — which is precisely what the map's insurance for a future non-Claude harness was written against. I set this aside as strictly worse than the plain file for this effort.
+> - **Keep it with no check at all, and record the standard as consciously declined.** Cheapest possible answer; leaves the one real cost silent, which is the cost that is actually being paid.
+> - **Deduplicate the wider boilerplate too** (the glossary block, `## What you read`, the templates) rather than just the two named sections. Larger saving, larger blast radius; I'd treat it as a separate decision if you want the first one.
+
+**The human's reply, `verbatim`.**
+
+> keep them duplicated
+
+**The option it takes**, quoted from the worker's own `RECOMMENDED` and attributed to the worker:
+
+> **Keep them duplicated — and pay for that with a mechanical divergence check** (a tenth check in
+> `graph-conventions.md`: the two sections' hashes match across the five contracts).
+
+***The manager's note.*** **Not a divergence**: the reply takes the `RECOMMENDED` and none of the four alternatives.
+**What it does not say either way is the second half of that recommendation** — the divergence check — which the
+worker offered as the price of keeping the duplication rather than as a separate option. The manager has not read the
+reply as settling it and has not decided it; it is the worker's to put back or to treat as carried, and the manager
+has said so in resuming it.

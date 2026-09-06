@@ -39,10 +39,28 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
   So the route stands, and the sandbox restriction above is a cost rather than an obstacle. Three cases, and the
   manager does not need to decide between them in advance: a node touching no file under `.claude/skills/` resets
   inside the sandbox; a node that does asks for that one command unsandboxed; and where `worktree.baseRef` is already
-  `head` in the human's global config — **which is the typical case, and is theirs rather than this effort's** — the
+  `head` in the human's global config — ~~**which is the typical case, and is theirs rather than this effort's**~~
+  **which is measured at [node 175](nodes/175-what-the-worktree-cycle-does-to-the-sandbox.md) not to hold on this
+  machine: the setting is absent, so the default `fresh` applies, every harness worktree lands on `origin/master`, and
+  the base is always stale. Three worktrees created during that node all recorded `CLAUDE_BASE` = `origin/master`
+  while `master` was ahead. The three-case account still stands; the case it called typical is the one that never
+  happens here, and the reset always runs.** — the
   worktree lands on `HEAD` and no reset happens at all. **The base check still runs in every case**, since what it
   guards against is landing on the wrong base for any reason, not against one configuration.
 
+- **The manager needs `EnterWorktree` for neither the base check nor the reset**, measured at [node
+  175](nodes/175-what-the-worktree-cycle-does-to-the-sandbox.md): `cat .git/worktrees/<name>/CLAUDE_BASE` and
+  `git -C <worktree> rev-parse HEAD` both answer the base check read-only from the main tree, and
+  `git -C <worktree> reset --hard <ref>` succeeded there **inside the sandbox even across a `.claude/skills` file**.
+  So **the manager's own session never has to leave the main tree**, and the cycle that migrated its writable region
+  was avoidable. **The sandbox half of that does not generalise, and the manager corrected it within the hour**: on
+  node 169's worktree the same command failed with `unable to unlink old
+  '.claude/skills/expedition-grilling/SKILL.md': Read-only file system` and needed the sandbox off. Node 175's test
+  worktree carried no `ro` overlay on its own `.claude/skills` and node 169's did — which is exactly [node
+  180](nodes/180-which-trees-get-the-read-only-skills-overlay.md)'s question. **What stands is the base check and the
+  route; what does not is any prediction that the reset stays inside the sandbox.** Read it as: run it sandboxed, and
+  expect to need the override when the range crosses a shipped file. Where the instruction to use `EnterWorktree` now stands is [node
+  152](nodes/152-where-the-harness-worktree-instruction-lives.md)'s.
 - **The manager verifies the base at every spawn.** A harness worktree's base is governed by `worktree.baseRef`,
   whose default `fresh` means `origin/<default-branch>` — frozen forever on an effort that never pushes. The setting
   is `head`, but **the setting is a property of the environment, cannot be passed per call, and does not travel to
@@ -63,9 +81,17 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
   second empty tree at a fresh base and stranding the first one's work. Where resume is unavailable the replacement
   is pointed at the surviving path. Flagged at `150.3` as unverified.
 - **One sandbox restriction bites this lifecycle, and it took three rounds of experiment to state correctly.** Two
-  earlier accounts of it in this file were wrong and are struck below. **The rule: the sandbox mounts
+  earlier accounts of it in this file were wrong and are struck below. ~~**The rule: the sandbox mounts
   `.claude/skills` read-only in whichever tree the session is standing in — the main checkout, or an entered
-  worktree. Any git operation that must write a file under it fails.** It is not about worktrees, not about the git
+  worktree. Any git operation that must write a file under it fails.**~~ **Incomplete rather than false, and
+  superseded at [node 175](nodes/175-what-the-worktree-cycle-does-to-the-sandbox.md).** The `ro` overlay was observed
+  on trees the session was *not* standing in, and the `ro` deny is **not** the constraint that bites when the region
+  has migrated: **the allow-set is, and it is far smaller than "everything but skills".** The operative rule, measured:
+  the sandbox is a set of bind mounts **recomputed for every command**, and a command succeeds only where every path it
+  writes lies inside a `rw` mount and outside a `ro` one. **The manager reads its own region with**
+  `grep " <repo>" /proc/mounts | awk '{split($4,a,","); print a[1]" "$2}' | sort -u` — read-only, one call. Whether it
+  is told to, and when, is [node 179](nodes/179-the-manager-sees-its-own-writable-region.md); what triggers the overlay
+  on one tree and not another is [node 180](nodes/180-which-trees-get-the-read-only-skills-overlay.md). It is not about worktrees, not about the git
   index, and not about harness-created worktrees being treated differently from hand-made ones.
   - **What it hits.** `git merge --ff-only` in the main tree, of a branch that changed a file under `.claude/skills/`
     — `unable to unlink old …`. And `git reset --hard <ref>` inside an *entered* worktree, where the range crosses
@@ -75,10 +101,17 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
     an entered worktree both succeed. `.git/index` is writable in the main tree and in a worktree's admin directory.
     `git reset --hard` succeeds inside an entered worktree where the commit range touches no file under
     `.claude/skills/`. So the operation is irrelevant; **only the paths the operation must write matter.**
-  - **The one asymmetry, and it is a hole rather than a feature.** A worktree operated *from the main tree* with
+  - ~~**The one asymmetry, and it is a hole rather than a feature.** A worktree operated *from the main tree* with
     `git -C` escapes the rule entirely, because the deny list names `<repo>/.claude/skills` and a worktree at another
     path is not that. So the same reset that fails from inside a worktree succeeds when run on it from outside. The
-    protection is on the session's own tree, not on the repository's skills.
+    protection is on the session's own tree, not on the repository's skills.~~ **Superseded at [node
+    175](nodes/175-what-the-worktree-cycle-does-to-the-sandbox.md): the conclusion holds only conditionally and the
+    stated reason is wrong.** Measured there: from a session whose region did *not* contain the worktree path,
+    `git -C <harness worktree> reset --hard` failed on plain `.scratch/` files with `Read-only file system`, no skills
+    file involved; from a session whose region *did* contain it, the same command succeeded across a `.claude/skills`
+    file. **What decides is whether the target path is inside the writing session's writable region**, not which tree
+    the command is issued from — and harness worktrees do sometimes carry their own `<wt>/.claude/skills` `ro` mount,
+    so *"a worktree at another path is not that"* is not reliably true.
 - ~~**Two distinct sandbox restrictions bite this lifecycle, and they were once conflated. Isolated by experiment.**~~
   - **The merge step needs the sandbox off where the node touched a file under `.claude/skills/`.** The **main
     tree's** `.claude/skills` is a read-only bind mount; `touch` on a file there fails with `Read-only file system`.

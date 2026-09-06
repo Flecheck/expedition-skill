@@ -12,6 +12,33 @@
 
 **The dogfood target is [Lang](/home/mathieu/projects/Lang)**, decided in [Dogfood target](nodes/09-dogfood-target.md): **179 distinct gap labels across 188 inventory rows in 13 families, 43 settled decisions and 48 consistency rows** — counted by [Graph file format](nodes/13-graph-file-format.md) — a compiler that is only a lexer and parser and expects to be rebuilt, and an existing tracker doc at `Lang/docs/agents/issue-tracker.md` whose conventions this graph already borrows. **The dogfood's code lands in Lang's repository and not in this one**, per [Git and code-landing policy](nodes/11-git-and-code-landing.md), so that is the repo the landing policy has to work in. When a choice is close, prefer the one that survives that repo.
 
+**The order the manager works the frontier in, approved by the human.** They asked for the frontier grouped and for a
+proposed order, and answered `verbatim`: *"otherwise ok for how you priorize"* — the *otherwise* being their own two
+overrides in the same breath, the counts and question batching, both recorded where they belong. So this is **standing
+steering** and binds until they change it, and the manager reports it back in every pick it constrains. It sits under
+[What the manager works on next, and how the human redirects it](nodes/16-human-steering.md)'s rule rather than
+replacing that node's answer: the alternation between a design stream and a delivery stream stands, as does the
+standing preference ranking token-cost work first within each stream. The order, as the manager proposed it and they
+approved it:
+
+1. **Statements in the record that are now false**, chiefly the consequences of the map split at [node
+   139](nodes/139-move-the-managers-material-out-of-the-map.md), [node
+   140](nodes/140-move-the-implementers-and-checkers-material-out-of-the-map.md) and [node
+   144](nodes/144-make-the-rules-file-stand-alone.md) — cheapest on the graph, and each one misleads every worker
+   that reads it.
+2. **The files the workflow has not written yet**, continuously — starting an effort, the adoption procedure, the
+   cascade contract, the checker's `## How you check` section, an `expedition-stop` skill. **The only group that
+   moves toward the destination.**
+3. **The shipping backlog** — the open implementation nodes carrying an already-settled decision into a shipped
+   file — one per delivery slot in the background.
+4. **The open design questions** only where they block the above, or where the human names one.
+5. **The glossary repairs** last.
+
+**The manager's own statement accompanying it, which the human did not contradict and which is not part of the
+order:** this effort mints nodes faster than it closes them, the open design questions grow fastest, and this map
+says the effort is **expected to end** — so ending it is a scoping act on those questions rather than an outcome
+reachable by working them.
+
 **Label vocabulary for this effort: none declared.** `Labels:` is an optional per-node field holding the *family* a node belongs to, and it exists so the human can scope work to one area of a large graph. A node may only use a label declared here, so that `EFF` / `effect` / `effects` cannot drift into three labels. At 20 nodes this effort has no reader for them; an adopted effort declares its own vocabulary here — Lang's would be its 13 gap families.
 
 ## Not yet specified
