@@ -19,8 +19,18 @@ below.
 
 **No edit deletes.** When any graph file changes, text that no longer holds is struck through or
 marked in place and the new text is added around it. Text leaves a file only when it is wrong or the
-human asks for it gone. `map.md` is the one file whose superseded text is also *moved* rather than
-left in place, and it is moved whole: see `## Writing the map` below.
+human asks for it gone. **The rule reaches the graph's own files — those listed below — and nothing
+outside them.** The product the effort changes, and every file the effort ships, are edited plainly:
+superseded wording is removed, and nothing is moved to a history file.
+
+**Inside the graph's files the rule cuts by what a piece of text is, not by which file holds it.**
+Text that records what happened — a node's `## Answer`, a line in `decisions.md`, an entry in
+`flags.md` — is marked superseded in place and never removed. Text whose job is to state a rule that
+currently binds is **replaced** by its current form, its superseded text appended verbatim to
+`map-history.md`, which holds superseded text only and is itself never rewritten. So a reader of a
+working file never meets a rule that no longer binds, and the account survives whole. `map.md` is
+written this way, and so is every sibling of it that states rules that currently bind: see
+`## Writing the map` below.
 
 ## The seven files
 
@@ -90,12 +100,17 @@ may contain others.
 
 ## Writing the map
 
+**This section covers `map.md` and every sibling of it that states rules that currently bind**, so a
+file the map later splits into is covered the day it is written. The graph's remaining files record
+what happened and their superseded text stays where it is: `decisions.md`, `flags.md`, the node
+files, and `map-history.md`, which holds superseded text only.
+
 Every note, standing preference and fog item in `map.md` is a **current statement**: what holds now,
 citing by markdown link the nodes that shaped it and never restating what those nodes hold. The
 **account** behind it — how it came to say that, what was measured, what it used to say — belongs in
-`map-history.md`, under a heading mirroring the map section it came from. So the map is rewritten as
-it changes rather than grown by appending: the superseded text moves out, and what replaces it stands
-alone. Every worker reads the whole map cold, so its size is a cost paid once per node.
+`map-history.md`, under a heading mirroring the map section it came from. So a map file is rewritten
+as it changes rather than grown by appending: the superseded text moves out, and what replaces it
+stands alone. Every worker reads `map.md` whole and cold, so its size is a cost paid once per node.
 
 **This deletes nothing.** Text moved to `map-history.md` is moved **verbatim** — never summarised,
 paraphrased or shortened — and text already struck through moves struck through. The never-delete
@@ -437,16 +452,17 @@ add-a-node step.
 
 ### Change the map
 
-Use when a note, a standing preference or a fog item in `map.md` no longer says what holds. A new
-item is written straight into `map.md` and changes nothing else.
+Use when a note, a standing preference or a fog item in `map.md` no longer says what holds, or when a
+rule in a sibling of it that states rules that currently bind no longer holds. A new item is written
+straight into that file and changes nothing else.
 
 1. `map-history.md`: append that item's existing text, verbatim, under the heading mirroring the map
    section it came from. Struck-through text stays struck through.
-2. `map.md`: replace it with the item's new current statement, citing by markdown link the nodes that
-   shaped it.
+2. `map.md`, or the sibling the item came from: replace it with the item's new current statement,
+   citing by markdown link the nodes that shaped it.
 
-The account is written before the map is changed, so a run that dies leaves it banked rather than
-lost. See `## Writing the map` above for why the map carries the statement and not the account.
+The account is written before the item is changed, so a run that dies leaves it banked rather than
+lost. See `## Writing the map` above for why a map file carries the statement and not the account.
 
 ## Mechanical checks
 
