@@ -2,6 +2,17 @@
 
 **An implementation node's worker and its checker are this file's readers, and this file is part of the map, so a rule written here binds this effort exactly as a rule written in [`map.md`](map.md) does.** `map.md` is read whole, cold, once per node by every worker, so it holds only what *every* worker can act on; what an implementation node's work is held to is here, where no other worker pays to read it. Moved verbatim by [Move the implementer's and checker's material out of the map](nodes/140-move-the-implementers-and-checkers-material-out-of-the-map.md), carrying out [Where the rules a checker is held to live, now that it may not go and find them](nodes/138-where-the-rules-a-checker-is-held-to-live.md), which is where the ground for moving them is.
 
+**How a rule in this file is superseded, and it is not struck in place.** A rule here that no longer holds is
+**replaced** by its current form, and its existing text is appended **verbatim** to [map-history.md](map-history.md)
+under the heading mirroring the section it came from, struck-through text staying struck through. That is the
+`Change the map` procedure, and it deletes nothing: the superseded text is there in full, in the file that exists to
+hold it, and a reader of this file never meets a rule that no longer binds. **The other case keeps the never-delete
+rule's strike-in-place**: text whose job is to record what happened is marked superseded where it stands and never
+removed. Which case a piece of text is in follows the text's own job and not the file it sits in. Settled at [Where
+the never-delete rule stops](nodes/189-where-the-never-delete-rule-stops.md), and stated here because this file is
+read by workers who do not read [`map.md`](map.md), where the same rule stands as a standing preference. **The
+struck rule statements below predate this and are not licence to add another.**
+
 **Nothing below was reworded on the way here**, so a paragraph that says *above* or *below* may be pointing at something in `map.md` rather than at something in this file. The review route's *"the human's standing direction below"* points at a standing preference in `map.md`; its *"the same ground as the bar's commands above"* resolves here, the bar's commands standing above it in this file. The account behind a line here is in [map-history.md](map-history.md), as it is for a line in `map.md`.
 
 ## Landing an implementation node's work

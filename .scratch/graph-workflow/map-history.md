@@ -336,3 +336,12 @@ on one question at a time:*
 nodes. The sentence is also struck in place in the rules file, that file's own idiom. As it stood:*
 
 > **How many implementation workers run at once is a setting of the effort, and for this effort it is one.**
+
+## Notes — the standing preference on never-delete, before its two boundaries were written into it
+
+*Moved verbatim under the `Change the map` procedure, carrying [Where the never-delete rule
+stops](nodes/189-where-the-never-delete-rule-stops.md)'s answer into the preference itself. It said nothing about the
+rule stopping at a rule statement, and its illustration `— a node or this map —` was twice read as an exhaustive
+list of the files it reached. The bullet as it stood among `map.md`'s standing preferences:*
+
+> **An in-place update never deletes.** When any file in the graph is edited — a node or this map — superseded text is marked as superseded and left where it is, and new text is added around it. Information leaves a file only when it is clearly wrong or the human asks for it gone. Quiet deletion is most damaging and least visible in the map itself.
