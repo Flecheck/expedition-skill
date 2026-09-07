@@ -1,7 +1,7 @@
 # Pruning a long-running effort's map
 
 Type: grilling
-Status: open
+Status: claimed
 
 ## Question
 

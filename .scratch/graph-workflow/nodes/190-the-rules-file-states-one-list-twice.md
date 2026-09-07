@@ -36,8 +36,21 @@ Blocked by: 184
 >    this repo has no build, no tests, no formatter and no CI, and that the node's acceptance condition binds too; for
 >    the review route, that no reviewing skill is named for this repo and that `CONTEXT.md`'s refused words return
 >    false positives when used as a grep list.
-> 3. Nothing is deleted: every superseded enumeration remains in the file, marked struck, and the replacement is added
->    around it.
+> 3. ~~Nothing is deleted: every superseded enumeration remains in the file, marked struck, and the replacement is
+>    added around it.~~
+>
+>    **Amended, and the amendment is the manager's, carrying a decision the human settled after this clause was
+>    written. It is replaced rather than supplemented.** The superseded enumerations are **removed** from this file
+>    and appended **verbatim** to `map-history.md` under the heading mirroring the section they came from,
+>    struck-through text staying struck through; the file is left stating the current enumeration only. This is the
+>    rule [node 189](189-where-the-never-delete-rule-stops.md) settled at the human's word — an enumeration of the
+>    standards work is held against **is** a rule statement, and a superseded rule statement is replaced rather than
+>    struck. Their words, `verbatim`: *"I don't think there should a be a never delete rule on the rules. They can
+>    change."*
+>
+>    **Two strikes already standing in the bar paragraph are within this clause's reach**, node 158's on the ignore
+>    file and node 169's on the standing preferences. Node 184's correction round was scoped away from them by the
+>    manager and left them in place; under this amended clause they move.
 > 4. No numbered rule in the file's two blocks — the five ground rules, and the four standing rules for writing — is
 >    reworded, renumbered or reordered.
 > 5. Every markdown link in the file resolves to a path that exists.

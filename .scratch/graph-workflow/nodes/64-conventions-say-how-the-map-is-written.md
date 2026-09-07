@@ -237,3 +237,20 @@ failure rather than a lost decision, and the manager records it as the former.
 end. **A flag is not a line item on the payload; it is a decision the approval consumes.** The two that were
 dropped were the two the checker had already blessed — which is precisely why they read as bookkeeping and precisely
 why that reading is wrong.
+
+## Annotation: one sentence this node landed is now false
+
+*Filed by the manager from [node 189](189-where-the-never-delete-rule-stops.md)'s handover, and pasted as that
+worker wrote it. This node is resolved; the annotation records the finding here rather than editing its answer.*
+
+> **Node 64** — one sentence of what it landed is now false. Its `## Writing the map` section produced the shipped
+> claim that `map.md` *"is the one file whose superseded text is also moved rather than left in place"*, written
+> when the graph had five files and `map.md` had no sibling holding rules. It now has two, and their superseded rule
+> statements move the same way. **The rest of node 64 stands** — the current-statement/account split, the
+> verbatim-move property, and the `### Change the map` procedure are all what this answer builds on rather than
+> displaces.
+
+***The manager's note.*** **The repair is [node 194](194-ship-where-the-never-delete-rule-stops.md)'s clause 3**, so
+this annotation carries no work of its own. Whether an annotation onto an already-resolved node has a home in the
+graph's format is one of the manager contract's own declared unsettled questions, and this is the second time this
+session it has been needed.

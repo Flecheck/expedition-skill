@@ -83,3 +83,40 @@ what was added since.
 
 **Node 149 is open on the same file** and states the prose standard's demands in it; whether that node's worker
 meets this material is not settled here.
+
+## Interview
+
+### Attempt 1
+
+**The worker's payload carried one question**, having collapsed the node's five open items into a single `ASK` after
+the historical reading turned up what it called a decisive fact: that [node
+138](138-where-the-rules-a-checker-is-held-to-live.md) foresaw exactly this and said the review route's operative
+list should be *"separated from its story"*, and that [node
+140](140-move-the-implementers-and-checkers-material-out-of-the-map.md)'s condition then required the paragraph to
+move *"unchanged in wording"*, so the story rode along. **Nobody chose to keep it; a condition kept it.**
+
+**The human's reply, `verbatim`.**
+
+> 191 ok, I think it should be in graph conventions also
+
+**The option `ok` takes**, quoted from the worker's own payload and attributed to the worker:
+
+> **RECOMMENDED:** Give the file the test its title implies, as two sentences in its opening:
+>
+> > **What this file holds.** A line belongs here only where an implementation worker or its checker would do
+> > something differently for having read it while working a node. How a rule was learned is not that — attempt
+> > counts, what a run cost, who was wrong and for how long, what the file said before, when the manager corrected
+> > itself — and it goes to `map-history.md`, the citation the line already carries standing in its place.
+>
+> Plus one clause that decides the hard case: **a trigger is part of a rule and stays; a history is not.**
+
+***The manager's note.*** **Not a divergence, and it takes none of the five alternatives.** The worker also named
+**two consequences it would carry *"unless you say otherwise"*** — that material failing the test is **moved** to
+`map-history.md`, and that the test is applied by whichever worker is already editing that paragraph and **never as
+a sweep**. The human said nothing otherwise, so both stand as the worker wrote them.
+
+***The manager's note on the second half of the reply.*** **It is an addition rather than an answer, and it reaches
+past what the worker asked.** The payload put no question about shipping at all; the human's own words extend the
+test to the shipped `graph-conventions.md`. **The manager has not read it as settling how much ships or in what
+form** — that went back to the worker, which holds the interview — and records only that the direction is theirs
+and that its subject was not in front of them when they gave it.

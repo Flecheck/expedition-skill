@@ -1,7 +1,7 @@
 # Where the never-delete rule stops
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -119,3 +119,113 @@ work as the one piece not following the rule. **That turns out not to bite, and 
 before the answer arrived**: everything node 184's correction round removed was text that work had itself written
 in an unlanded, uncommitted state, and *"nothing that ever landed was deleted, so there was nothing to bank in
 `map-history.md`."*
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+> The never-delete rule stops in two places, and the two cuts compose rather than compete. The first is about
+> **where a file sits**; the second, settled here for the first time, is about **what a piece of text is**.
+>
+> **First cut — the rule reaches the graph's own files and nothing else.** It governs `map.md` and its siblings,
+> `decisions.md`, `flags.md`, and the files under `nodes/`. It has never reached a file the workflow ships, and it
+> does not reach product code. **This was already true and already the human's, in three places, none of which is
+> where a worker looks**, which is why two workers re-derived it from commits instead:
+>
+> - the preference's own words in `map.md` say *"when any file **in the graph** is edited"*, and the phrase that
+>   follows it — *"a node or this map"* — is an illustration that has twice been read as an exhaustive list;
+> - the shipped `graph-conventions.md` already states it correctly and flatly: *"**No edit deletes.** When any
+>   **graph file** changes…"*;
+> - at [node 42](42-checker-spawn-carries-ground-rules.md) a sixth ground rule saying in as many words that the
+>   shipped skill files are not the map and may be modified was **struck as redundant**, on the recorded ground that
+>   the preference is already scoped to files in the graph.
+>
+> So the three landed commits that delete plainly from shipped files — node 133's `4000830`, node 126's `8cc9b79`,
+> and node 177's work — were all correct, and **flag `177.3`'s inference is confirmed rather than overturned.** This
+> half was settled from the record and never put to the human.
+>
+> **Second cut — inside the graph's files, the rule reaches what records what happened and not what states a rule.**
+> The human's words, `verbatim`, said while reading [`map-implementation-rules.md`](../map-implementation-rules.md)
+> at node 184's gate:
+>
+> > I don't think there should a be a never delete rule on the rules. They can change.
+>
+> - **Text that records what happened is struck in place and never removed.** A node's `## Answer`, a line in
+>   `decisions.md`, an entry in `flags.md`, an `## Interview` attempt, a `## Review` round. This is the rule exactly
+>   as it always was.
+> - **Text whose job is to state a rule that currently binds is replaced by its current form.** The ground rules,
+>   the four standing rules for writing, `map.md`'s standing preferences, the landing policy's operative
+>   instructions. **It is replaced and not struck**, so a reader of a working file never meets a rule that no longer
+>   binds — which is the whole of what *"They can change"* protects.
+> - **Nothing is lost when it is replaced.** The superseded text is appended **verbatim** to `map-history.md` under
+>   the heading mirroring the section it came from, struck-through text staying struck through. This is the existing
+>   `### Change the map` procedure and needs no new machinery: **`map.md` has always worked this way.**
+>   `map-implementation-rules.md` differs only because [node
+>   140](140-move-the-implementers-and-checkers-material-out-of-the-map.md) bulk-moved it out of `map.md` in one
+>   piece and the strike-in-place habit rode along with the text.
+>
+> **The carve-out follows the text, not the file.** A file-scoped exemption would break the moment a rule statement
+> moved file, which has happened four times on this effort (nodes 59, 139, 140, 144). It is also the cut [node
+> 42](42-checker-spawn-carries-ground-rules.md) already owns — *"a standing constraint true of any node's work,
+> rather than an account of what happened"* — so this reuses a test the human has already accepted rather than
+> inventing one.
+>
+> **The boundary ships.** It goes into `graph-conventions.md`, which is the file that states *"no edit deletes"* for
+> every effort and which already carries the map-to-history move as shipped mechanism. This departs from `map.md`'s
+> standing default that a rule reaches a shipped file only where the human says so — they were asked, and they said
+> so. The ground: a workflow that ships the flat rule without its boundary reproduces, on every future effort, the
+> defect this node exists to close.
+>
+> **Two boundaries this answer does not cross.** `map-history.md`'s own contents are outside it — that file is the
+> record, its text is never replaced, and what may be pruned from it is [node 70](70-pruning-a-long-running-map.md)'s.
+> And whether relocating an *account* out of a working file is a worker's judgement or needs declaring is [node
+> 191](191-the-rules-file-carries-accounts-rather-than-rules.md)'s remaining mechanism question, which this answer
+> supplies the rule for and does not perform.
+
+**What the worker reported its work invalidates**, pasted as it wrote it:
+
+> **[Node 64](64-conventions-say-how-the-map-is-written.md)** — one sentence of what it landed is now false. Its
+> `## Writing the map` section produced the shipped claim that `map.md` *"is the one file whose superseded text is
+> also moved rather than left in place"*, written when the graph had five files and `map.md` had no sibling holding
+> rules. It now has two, and their superseded rule statements move the same way. **The rest of node 64 stands** —
+> the current-statement/account split, the verbatim-move property, and the `### Change the map` procedure are all
+> what this answer builds on rather than displaces.
+>
+> **Not invalidated, and worth saying so.** Flag `177.3` is **confirmed**: its inference that the rule stops at
+> shipped files was correct, and this answer supplies from the record the statement it had to build from two
+> commits. And node 184's amendment, which took plain deletion where this answer says move, turns out not to
+> diverge — its checker established that everything that round removed was text the same unlanded work had itself
+> written, so nothing that ever landed was deleted and there was nothing to bank.
+
+## Flags
+
+*All three are the worker's own text, pasted. The ids and links are the manager's bookkeeping and nothing else.*
+
+`189.1` **· settled** `ASSUMPTION` — **I settled the question this node was minted for rather than asking it.** The
+node holds that the rule's scope is the human's to state and not the manager's. I judged that they had already
+stated it: `map.md`'s preference is scoped by its own words to files *in the graph*, the shipped conventions file
+says *"any graph file"* outright, and at node 42 a proposed ground rule saying the shipped files may be modified was
+struck as **redundant** — a decline on the ground that it was already true, not that it was false. So reporting it
+is a finding and not a substitution of my judgement for theirs, and their time went to the part the record could not
+answer. The one thing I could not pin: the attribution of node 42's quoted sentence is ambiguous in
+`map-history.md` between the manager offering and the human declining, so I rested this on the **decline and its
+recorded ground** rather than on the quote.
+
+`189.2` **· settled** `ASSUMPTION` — **I read the human's words as narrowing the rule rather than invoking its
+escape clause, and did not ask which.** The preference already says *"Information leaves a file only when it is
+clearly wrong or the human asks for it gone."* Ground for reading it as a narrowing: if *superseded* counted as
+*clearly wrong*, every strike-through in this record would qualify and the rule would be empty; and an ask under the
+escape clause names specific information, where theirs names a class of text and gives a reason of principle. It was
+offered to them as an explicit alternative under Q1 — *one-off, settling node 184 and writing nothing standing* —
+and they took the recommendation instead, so the reading stood without being overturned rather than being confirmed
+in as many words.
+
+`189.3` **· settled** `ASSUMPTION` — **I placed `map-history.md` on the record side of the cut and kept this answer
+off it.** A worker reading *"text that states a rule is replaced"* could start replacing rule text inside
+`map-history.md`, which would destroy the destination the same answer sends text to. So the cut is drawn by a text's
+**job in the file it sits in**: `map-history.md` holds only superseded text by construction, so nothing in it states
+a rule that currently binds and nothing in it is ever replaced. What may leave that file at all is node 70's,
+untouched here.
+
+***The manager's note.*** **All three are settled by the human's answer at this node's own interview**, that being
+the first human moment this node's close reached.
