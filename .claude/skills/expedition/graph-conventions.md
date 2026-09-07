@@ -37,14 +37,18 @@ left in place, and it is moved whole: see `## Writing the map` below.
 
 `map-manager-only.md` holds the part of the map that only the manager acts on, so that no worker pays
 to read it; it is part of the map, and a rule written there binds exactly as one written in `map.md`
-does.
+does. Two of the map's sections are among what it holds:
+
+- `## Not yet specified` — the fog.
+- `## Out of scope` — one line per node ruled beyond the destination, and per area consciously ruled
+  out.
 
 `map-implementation-rules.md` holds the rules an implementation node's work is held to — the landing
 policy, the bar's commands and the standards work is held against — and is read by that node's worker
 and by its checker rather than by every worker; it too is part of the map, and a rule written there
 binds exactly as one written in `map.md` does.
 
-`map.md` has five sections, in this order:
+`map.md` has three sections, in this order:
 
 - `## Destination` — what reaching the end of the effort looks like.
 - `## Notes` — the domain, the skills every session consults, and standing preferences for this
@@ -56,9 +60,6 @@ binds exactly as one written in `map.md` does.
   Both live here because the map is a pointer every worker already receives.
 - `## Decisions so far` — a pointer to `decisions.md`. No decision is written here; the section
   exists so that a reader of the map is told where the index is.
-- `## Not yet specified` — the fog.
-- `## Out of scope` — one line per node ruled beyond the destination, and per area consciously ruled
-  out.
 
 `decisions.md` holds one line per resolved node: one sentence, about 25 words. Enough to judge
 relevance, never a restatement. Grouped under the declared labels where a vocabulary exists, flat
@@ -360,8 +361,8 @@ Save before any work starts. An `implementation` node may not be claimed until i
 3. `decisions.md`: append one capped line, under the node's label group where a vocabulary exists.
 4. `map-history.md`: where the answer has made a fog item specifiable, so that it now exists as its
    own node instead, append that item's text there verbatim.
-5. `map.md`: remove that item from `## Not yet specified`. The text moves rather than being struck in
-   place, step 4 having already appended it verbatim.
+5. `map-manager-only.md`: remove that item from `## Not yet specified`. The text moves rather than
+   being struck in place, step 4 having already appended it verbatim.
 
 The answer is written before the status changes.
 
@@ -383,8 +384,8 @@ The replacements exist before the old node is marked `superseded`.
 ### Rule out of scope
 
 1. `nodes/NN-<name>.md`: set `Status: out-of-scope`.
-2. `map.md`: append one line to `## Out of scope` — the gist, why it is out of scope, and a link to
-   the node.
+2. `map-manager-only.md`: append one line to `## Out of scope` — the gist, why it is out of scope, and
+   a link to the node.
 
 Nothing is written to `decisions.md`.
 
