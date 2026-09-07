@@ -123,3 +123,34 @@ skill finds part of the graph that is considered 'done'"*, and *"In this idea th
 **It also asserts something about what the record is for**, which no question put to them: *"The main source of
 truth at this point would be the code and documentation instead of using the map."* `Q2` stays unsettled and its
 number is fixed.
+
+**The worker's second re-ask carried `Q2` and a new `Q4`.** `Q2` kept its number per the rule node 126 landed. Its
+`SO FAR` established that the human had already invented the unit their reframing needs — the `Labels:` field they
+proposed unprompted at [node 13](13-graph-file-format.md), *"so that it is then possible to label all nodes that
+are about a specific part of the problem"* — and that it is applied to **1 node out of 193**. It also measured that
+**no severable region exists on this effort**: of 102 resolved nodes, exactly 3 are cited by neither a live rule
+file nor an open node, and those 3 carry 1, 44 and 20 inbound links from nodes that would remain.
+
+**The human's third reply, `verbatim`.**
+
+> Q2. I don't plan on using it here, for the label, I think it is a way of doing it, I don't know if it will be always the case, for example, I don't think there are a lot of labels right now. So I expect it to be a bit more free-hand Q4. do cleanup flags
+
+**What `Q4` takes**, quoted from the worker's own payload and attributed to the worker:
+
+> **RECOMMENDED:** It carries it, as a second operation named separately in the skill. … It is the only cleanup I
+> measured that has a real reader — `flags.md` is the one file your close-out sweep must read whole, and its own
+> header says the report *is* the unchecked lines, so 68% of it contributes nothing to the only job it has.
+
+***The manager's note on `Q4`.*** **Not a divergence**, and it takes none of the three alternatives — not a separate
+skill, not a move to a sibling file, and not leaving `flags.md` alone. **It carries a reversal of [node
+27](27-does-flags-file-survive.md), which the worker named before the human's standing direction on reversals had
+arrived**, and which that direction now makes ordinary rather than exceptional.
+
+***The manager's note on `Q2`.*** **It confirms the second half of the recommendation and does not take the first
+half as written.** *"I don't plan on using it here"* settles that the skill does not run on this effort, which is
+what the worker recommended. On the unit, their words are a direction rather than a selection: the label is *"a way
+of doing it"* rather than the way, they are unsure *"if it will be always the case"*, they note there are few
+labels today, and they expect it *"a bit more free-hand"*. **The manager has not read that as taking the first
+alternative** — *you name the region free-hand each time and the skill does not try to find it* — because *"a bit
+more free-hand"* is not the same as abandoning the finding half, and picking between them is the worker's. It went
+back to the worker with that stated.

@@ -1,7 +1,7 @@
 # Give `map-implementation-rules.md` its admission test
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 

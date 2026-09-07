@@ -1,7 +1,7 @@
 # Ship where the never-delete rule stops, in the conventions document
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: 142
 
@@ -137,3 +137,66 @@ was claimed. The worker reached the same boundary without being told where it wa
 clause, no finding. It is also the first to verify the *set* of a standard's demands rather than its text, which is
 what let it clear the circularity in one step: the standard's requirements on this work were identical before and
 after, so which state it read was immaterial.
+
+### Gate — `approve`
+
+**The human's word, `verbatim`.**
+
+> approve
+
+*One checker run, `PASS`, with no questions and nothing uncovered. No correction round. Both flags are settled by
+the approval.*
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+> The shipped `graph-conventions.md` now carries both boundaries of the never-delete rule and no longer claims
+> `map.md` is the only file whose superseded text moves. Three passages changed and nothing else.
+>
+> **The `**No edit deletes.**` paragraph gained the location boundary.** After the existing strike-in-place sentence
+> it now says the rule reaches the graph's own files — *those listed below*, pointing at `## The seven files` rather
+> than at a count that decays — and nothing outside them, and that the product the effort changes and every file the
+> effort ships are edited plainly, superseded wording removed and nothing moved to a history file. It is phrased as
+> the positive act on the outside files rather than as a bare prohibition, so a reader learns what to *do* to a
+> shipped file.
+>
+> **An adjacent paragraph, in the same preamble, carries the text boundary.** It states that inside the graph's
+> files the rule cuts by what a piece of text is and not by which file holds it: text that records what happened — a
+> node's `## Answer`, a line in `decisions.md`, an entry in `flags.md` — is marked superseded in place and never
+> removed; text whose job is to state a rule that currently binds is replaced by its current form, its superseded
+> text appended verbatim to `map-history.md`. It closes by naming `map.md` **and every sibling of it that states
+> rules that currently bind** as written that way, which is where the old *"one file"* claim stood.
+>
+> **`map-history.md` is protected inside that same sentence** — *"which holds superseded text only and is itself
+> never rewritten"*. Without it a worker reading *"text that states a rule is replaced"* can start replacing rule
+> text inside the destination the rule sends text to. It sits in the sentence that names the destination rather than
+> in its own paragraph, so the protection travels with the instruction that creates the hazard.
+>
+> **The sibling scope is written as a test, never as a list.** *"Every sibling of it that states rules that
+> currently bind"* stays true the day the map splits again; an enumeration of today's siblings would be false on the
+> next split. The same phrase is used in all three passages so the reader meets one concept rather than three
+> wordings.
+>
+> **`## Writing the map` opens with its own scope.** A new first paragraph says the section covers `map.md` and
+> every sibling that states rules that currently bind, so a file the map later splits into is covered the day it is
+> written, and names the files written the other way — `decisions.md`, `flags.md`, the node files, and
+> `map-history.md` — as recording what happened, with their superseded text staying where it is. Two sentences
+> inside the section were made precise rather than generalised: *"So **a map file** is rewritten as it changes"*, and
+> *"Every worker reads **`map.md`** whole and cold"* — the second because the sibling holding the manager's material
+> is read by no worker at all, so a widened *"the whole map"* would have been false.
+>
+> **`### Change the map` now has two triggers.** A note, standing preference or fog item in `map.md` that no longer
+> says what holds, **or** a rule in a sibling that states rules that currently bind and no longer holds. Step 2's
+> target became *"`map.md`, or the sibling the item came from"*, keeping the procedure's promise that each step names
+> the file that changes, and the two closing sentences shifted from *"the map"* to *"the item"* and *"a map file"*.
+>
+> **Two things were deliberately left alone.** The enumerations *"a note, a standing preference or a fog item in
+> `map.md`"* keep placing fog items in `map.md`, which stopped being true when the fog moved to the manager's
+> sibling — that is a separate open node's defect, it predates this work, and widening the file scope around it
+> without touching it leaves it exactly as live as it was. And the `500-byte` paragraph keeps its `map.md`-only
+> scope and its *"the whole map"*, both correct there and both referenced by a mechanical check.
+
+**What the worker reported its work invalidates:** `none`. In its words: *"it **lands** the invalidation node 189
+already reported against node 64, whose `## Writing the map` produced the *"one file whose superseded text is also
+moved"* claim. The rest of node 64 stands and this work builds on it."*
