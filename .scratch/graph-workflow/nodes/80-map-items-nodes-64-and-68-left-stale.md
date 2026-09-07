@@ -72,3 +72,35 @@ to the change. This repository has no build, no tests and no formatter, which is
 half and not a deficient one — so what remains is `/coding-principles` and `/naming`, the `_Avoid_` lines of the
 glossary the shipped files declare authoritative, and `map.md`'s own standing preferences, ground rules and four
 standing rules of writing.
+
+## Annotation: this node's condition went stale while nothing pointed at it
+
+*Filed by the manager from [node 193](193-state-where-the-never-delete-rule-stops-in-the-map.md)'s handover, and
+pasted as that worker wrote it. This node is open and unclaimed; the annotation records the finding rather than
+amending the condition.*
+
+> **Node 80 — an open implementation node whose clause 1 is this exact preference, and my work discharges it in
+> substance while falsifying it in form.** Nothing links node 80 to nodes 189, 193 or 194; I found it by grepping
+> the old wording. Three things, and none of them mine to fix:
+>
+> - **Its clause 1 is now stale in its quotation and superseded in its framing.** It says *"It currently reads:"*
+>   and quotes the text I replaced, so that quotation is no longer of anything in the tree. It then demands the
+>   rewritten preference *"states that a node file's superseded text is marked in place, and that `map.md`'s moves
+>   verbatim to `map-history.md`"* — a **file-based** cut, which node 189 superseded with a **text-job** cut. Its
+>   last demand, *"It no longer tells its reader that `map.md`'s superseded text stays where it is"*, is satisfied.
+> - **Its clauses 2 and 3 are unworkable as written, for a reason predating me.** Both name fog items and its
+>   condition permits editing only `map.md` and `map-history.md`; node 139 moved the fog to `map-manager-only.md`,
+>   where I verified both items still stand with the quoted sentences intact. This is not caused by my work and is
+>   worth the manager's attention with it.
+
+***The manager's note.*** **The manager has amended nothing here.** Node 193's work is at its gate and not landed,
+so clause 1's quotation is still true of the tree until it lands; amending a condition before the change that
+falsifies it has landed would be the manager guessing at a gate's outcome. **What is owed once node 193 lands** is
+that this node be looked at rather than picked up as written — its clause 1 discharged in substance, and its
+clauses 2 and 3 broken since node 139 by a scope that no longer contains the files they name.
+
+**Why nothing caught it.** Three nodes — 189, 193 and 194 — went past this preference without anyone noticing an
+open node held a condition quoting it. **What found it was a `grep` for the old wording, run by a worker on its own
+initiative because nothing told it to.** Its retrospective says the fix is an edge: *"An open node whose clause 1 is
+the item another node was minted to rewrite should carry an edge to it."* The manager records that as a finding
+against its own bookkeeping and not against any worker.

@@ -1,7 +1,7 @@
 # `map-implementation-rules.md` carries accounts of what happened, not only the rules its title names
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -120,3 +120,130 @@ past what the worker asked.** The payload put no question about shipping at all;
 test to the shipped `graph-conventions.md`. **The manager has not read it as settling how much ships or in what
 form** — that went back to the worker, which holds the interview — and records only that the direction is theirs
 and that its subject was not in front of them when they gave it.
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+> **The file gets an admission test of its own, and it is a reader test rather than a ban on narrative.** The
+> human's answer, `verbatim`: *"191 ok, I think it should be in graph conventions also"* — taking the recommendation
+> put to them and none of the five alternatives offered beside it.
+>
+> **The test, as it goes into the file's opening:**
+>
+> > **What this file holds.** A line belongs here only where an implementation worker or its checker would do
+> > something differently for having read it while working a node. How a rule was learned is not that — attempt
+> > counts, what a run cost, who was wrong and for how long, what the file said before, when the manager corrected
+> > itself — and it goes to `map-history.md`, the citation the line already carries standing in its place.
+>
+> **And the clause that decides whether an account is ever load-bearing — open question 3, and the part everything
+> else hung on:** *a trigger is part of a rule and stays; a history is not.* An error string, a symptom, or the
+> condition under which a rule fires is how its reader knows the rule applies, so it is the rule rather than an
+> account of it. Worked on the two cases that made the question hard:
+>
+> - The landing section's rebase paragraph **keeps** *"`git rebase` reported only `could not detach HEAD`; the
+>   underlying `git checkout --detach` reports the real cause"* and **loses** *"after four failed attempts and two
+>   wrong diagnoses"*. The operative instruction a manager acts on — *"read `git checkout --detach <target>` rather
+>   than the rebase's summary when it fails again"* — was never at risk, and the wholesale-rejection test that would
+>   have taken it is refused.
+> - The line the human selected **loses** *"Two checker runs spent their largest single cost finding this, and one
+>   of them nearly reported the prose standard absent"*, and the rule beside it does not change.
+>
+> **Two mechanisms came with the recommendation as consequences, were not contradicted, and stand.** Material that
+> fails the test is **moved** to `map-history.md` — whether it may instead be removed plainly is [node
+> 189](189-where-the-never-delete-rule-stops.md)'s and is settled there, not here. And the test is applied by
+> **whichever worker is already editing that paragraph, never as a sweep**: it binds every write from now, and no
+> node exists or is wanted to walk the file repairing paragraphs nobody is otherwise touching. That is the reading
+> of the human's *"Let's stop doing wrong things now"* — a standard that stops the accumulation, with the clean-up
+> riding work already queued.
+>
+> **The mechanism reaches both cases the human pointed at, which is checkable rather than hoped for.** The
+> review-route story sits in a paragraph [node 190](190-the-rules-file-states-one-list-twice.md) rewrites by its own
+> clause 2; the landing section's rebase and *"measured at"* narratives sit in the section [node
+> 188](188-move-the-landing-section-out-of-the-workers-file.md) moves. Neither needs a sweep, and the six nodes
+> queued on this file are how the file converges.
+>
+> **Why this was a hole and not a slip, established rather than argued.** [Node
+> 138](138-where-the-rules-a-checker-is-held-to-live.md), which decided this file should exist, said in as many
+> words that the review route's operative list should be *"separated from its story — the part recording that two
+> earlier checkers burned their biggest cost finding these standards"*, and that the story should go to the manager
+> or to `map-history.md`. That is the exact sentence the human selected. [Node
+> 140](140-move-the-implementers-and-checkers-material-out-of-the-map.md) then carried the move out under an
+> acceptance condition demanding that paragraph move *"unchanged in wording"*. **Nobody chose to keep the story; a
+> condition kept it** — the same pathology as the chain 144 → 169 → 184, one link earlier and on content rather
+> than on scope.
+>
+> **The test is not new; its scope was.** Node 42's test — *"a standing constraint true of any node's work, rather
+> than an account of what happened"* — already stands in this file, and the file says in its own words that it
+> bounds one block and not the file: *"That test is what keeps the rest of this file out of the block."* This node
+> **does not** widen node 42's test, which was authored for what may travel to a blind checker and would evict the
+> manager's landing instructions with it. It states a second test, over the file's two declared readers, in the
+> shape [node 136](136-the-map-has-grown-back-what-node-59-saved.md) gave `map.md`.
+>
+> **It ships, by the human's own unasked addition**, `verbatim`: *"I think it should be in graph conventions also"*.
+> No question about shipping was in front of them, so the direction is theirs and its form is this node's. **What
+> ships is the discipline's shape and not this effort's wording.** `graph-conventions.md`'s `## Writing the map`
+> already says a map file's items are current statements citing the nodes that shaped them, and that the account
+> belongs in `map-history.md`; what it does not say is **what a map file admits at all**, nor does it distinguish a
+> trigger from a history. Those two are what ship, stated over **the reader each map file declares** rather than
+> over `map.md` alone — which is where the sentence attaches to [node
+> 194](194-ship-where-the-never-delete-rule-stops.md)'s clause 3, that node already widening `## Writing the map`
+> and `### Change the map` from `map.md` to its siblings that state current rules. So the shipped node runs after
+> 194 and is blocked on it.
+>
+> **Open question 4 — whether the test reaches the other siblings — is answered by the shipped form and not by this
+> node editing them.** Once the shipped discipline is stated over the reader a map file declares,
+> `map-manager-only.md` is reached by it without being named, and so is any later sibling. So this is neither one
+> file's repair nor a five-file sweep: the general form ships once and each sibling inherits it.
+> `map-manager-only.md` is not edited by any node this answer mints.
+>
+> **Open question 5 is not node 70's question.** [Node 70](70-pruning-a-long-running-map.md) prunes
+> `map-history.md`, the destination, and asks what may leave the record entirely; this asks what may enter the
+> working file. Different file, different act, different actor. No edge between them.
+
+**What the worker reported its work invalidates:** `none`, with two near-misses it recorded because each looks like
+one. In its words: *"**Node 138 is fulfilled rather than contradicted.** Its recommendation that the review route's
+story be separated from its operative list was never carried out — node 140's condition overrode it — and this
+answer restores it."* And: *"**Node 42's test is untouched.** This answer states a second test rather than widening
+node 42's."*
+
+## Flags
+
+*All four are the worker's own text, pasted. The ids are the manager's bookkeeping and nothing else.*
+
+`191.1` **· settled** `ASSUMPTION` — **On the node 70 boundary.** I settled open question 5 myself rather than
+spending a human question on it: node 70 governs what leaves `map-history.md` and this node governs what enters
+`map-implementation-rules.md`, so they touch one preference from opposite sides without overlapping in file, act or
+actor. I minted no edge between them and reported none. If they are one question, the two conditions below are
+written against the wrong boundary.
+
+`191.2` **· settled** `ASSUMPTION` — **On the siblings.** I settled open question 4 myself, and only because the
+human's shipping addition made a general answer available: rather than write a test into `map-manager-only.md`, the
+shipped discipline is stated over the reader each map file declares, so every sibling inherits it from one
+sentence. The human named `graph-conventions.md` and named no sibling, so the reach across siblings is mine. The
+consequence is that `map-manager-only.md` gets no admission test until the shipped node lands, and no node edits
+it.
+
+`191.3` **· settled** `ASSUMPTION` — **On what *"in graph conventions also"* reaches.** No shipping question was in
+front of the human, so I read their addition on two judgements of my own. First, that what ships is the
+discipline's **shape** and not this effort's wording — a shipped file names no effort and no node, so the sentence
+had to be rewritten over "the reader a map file declares" rather than over an implementation worker and its
+checker. Second, that it belongs in `## Writing the map` and not in the `## The seven files` gloss for
+`map-implementation-rules.md`; stating it in both is the duplication defect node 190 exists to repair, so the
+shipped condition below forbids it.
+
+`191.4` **· settled** `ASSUMPTION` — **On not amending node 194's condition.** The manager offered folding the
+shipped half into node 194's open condition instead of minting beside it. I minted beside it. The two subjects
+differ — 194 settles how superseded text leaves a map file, this settles what enters one — and node 194's condition
+was written by node 189's worker, so adding a demand its author never weighed is the same failure my own finding
+names, a condition carrying more than its worker was briefed for. The cost I accepted is a fifth node queued
+serially on a congested 26.6 KB file. **This is cheap for the manager to overrule**: if it folds the shipped node's
+clauses into 194 instead, nothing in this answer changes.
+
+***The manager's note on `191.4`.*** **The manager has not overruled it.** It offered the fold and the worker
+declined it with a reason that names the manager's own recurring failure mode — a condition carrying more than its
+author weighed — so the offer is withdrawn rather than pressed. The fifth node is [node
+197](197-ship-what-a-file-of-the-map-admits.md).
+
+***The manager's note.*** **All four flags are settled by the human's answer at this node's own interview**, that
+being the first human moment this node's close reached.

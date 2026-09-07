@@ -1,7 +1,7 @@
 # Which statement of the bar's commands wins where a recorded copy and the repo's own instructions disagree
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 

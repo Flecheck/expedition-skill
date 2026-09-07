@@ -71,3 +71,55 @@ much larger node.
 The human's own instruction, unprompted, alongside [Run an implementation node's work in a
 worktree](68-implementation-in-a-worktree.md) and [Whether the workflow ships explicit subagent
 definitions](69-explicit-subagent-definitions.md).
+
+## Interview
+
+### Attempt 1
+
+**The worker's first payload carried two questions**, `Q1` and `Q2`, under the batching rule node 126 landed. Its
+`SO FAR` reported measurements against this node's own premise, which the manager relayed in full.
+
+**The human's first reply, `verbatim`.**
+
+> I wasn't the one making the no delete rule, it was done by you but it's not a bad idea, which is why I approved it. It seems to be causing some issues ? With line count ? What do you think about it. For the action of doing the cleanup I would see like the stop skill, a cleanup skill. For the cleanup skill, it is designed to delete things so it should be fine.
+
+***The manager's note.*** **Not an answer to either question**, and the manager did not read *"it's not a bad
+idea"* as taking `Q1`. It carried three things: a **correction of attribution** — the never-delete rule is the
+workflow's own and not the human's, recorded as an annotation on [node
+189](189-where-the-never-delete-rule-stops.md); **a question back** to the manager about line count, which the
+manager answered from measurements already in the record; and **a mechanism neither question offered**, cleanup as
+an invoked skill on the model of [node 166](166-ship-an-expedition-stop-skill.md)'s stop skill.
+
+**The worker withdrew `Q1` rather than re-asking it**, in its words: *"I put Q1 to you as 'your oldest standing
+rule'. That was wrong and you were right to say so. I have now checked it myself: twelve of the standing
+preferences in `map.md` carry your words marked `verbatim`, and the never-delete bullet carries none and cites no
+node. It is the workflow's own rule. I withdraw Q1 — not because you refused it, but because it was built on that
+premise."*
+
+**It answered the human's question back with a measurement**, in its words: *"**No, and the number is not close.**
+I measured every struck-through passage in the entire record: **6,252 bytes out of 3,600,256 — 0.17%.** In `map.md`
+itself it is 1.13%. Across all 193 node files, 0.07%."*
+
+**The human's second reply, `verbatim`.**
+
+> Q3 ok. Q2. I see the cleanup more as a logical cleanup than just a text cleanup. In the idea, either the user choose or the skill finds part of the graph that is considered "done" and then if the effort needs to work on it again it is like the work that was already done was already shipped. For example in Lang, if after a while, the parser is considered done, we can remove the completed issues regarding the parser and if we later need to modify the parser we look at the code instead of looking at all the previous issues. The main source of truth at this point would be the code and documentation instead of using the map. In this idea then all files can be cleanup.
+
+**What `Q3 ok` takes**, quoted from the worker's own re-asked payload and attributed to the worker:
+
+> **RECOMMENDED:** It ships. *"Without it, every future effort's cleanup skill contradicts the rule stated two files
+> away, and the manager or a worker re-derives the exemption each time. That is the identical defect node 189 was
+> minted for."*
+
+***The manager's note on `Q3`.*** **Not a divergence**, and it takes neither alternative — neither *stays in this
+effort's map only*, nor *ships written as a property of the cleanup skill rather than as an exemption to the
+never-delete rule*. **It is the second time in this session the human has shipped a boundary against the map's own
+standing default** that a rule reaches a shipped file only where they say so, the first being node 189's `Q3`.
+
+***The manager's note on `Q2`.*** **A reframing, not a choice among the three offered**, and it went back to the
+worker rather than being read as taking any of them. **All three of the worker's candidates were classes of
+text** — struck-through passages, spent fog, settled flag entries. **The human's unit is a subject area of the work
+whose output has shipped**, and it cuts across every file at once: their words, *"either the user choose or the
+skill finds part of the graph that is considered 'done'"*, and *"In this idea then all files can be cleanup."*
+**It also asserts something about what the record is for**, which no question put to them: *"The main source of
+truth at this point would be the code and documentation instead of using the map."* `Q2` stays unsettled and its
+number is fixed.

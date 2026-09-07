@@ -229,3 +229,31 @@ untouched here.
 
 ***The manager's note.*** **All three are settled by the human's answer at this node's own interview**, that being
 the first human moment this node's close reached.
+
+## Annotation: this node misattributed the rule, and the human corrected it
+
+*Filed by the manager against itself, after this node resolved.*
+
+**The human's words, `verbatim`:**
+
+> I wasn't the one making the no delete rule, it was done by you but it's not a bad idea, which is why I approved it.
+
+**What this node said, and it is the manager's own text:** *"The never-delete rule is a standing preference of
+theirs, and its scope is theirs to state; the manager writing `graph files, not shipped files` into the map would
+be settling a question about the human's own rule on its own judgement."* **That premise is wrong.** The rule is
+the workflow's own, approved by the human rather than authored by them.
+
+**The map's text is the evidence and the manager should have read it before asserting.** Every other standing
+preference in [`map.md`](../map.md)'s list carries the human's words marked `verbatim`; the bullet beginning
+`**An in-place update never deletes.**` carries none and cites no node. The one place
+[`map-history.md`](../map-history.md) records them speaking near it is a **sixth ground rule offered by the manager
+and declined by them** — a decision about the rule's *scope*, which is what made it look like the rule's origin.
+
+**What survives the correction and what does not.** The node's *finding* stands untouched: the rule's location
+boundary was already stated in three places, and the text-job boundary is what the human settled here. What does
+not stand is the ground this node gave for asking them at all. **Asking was still right** — they approve and
+overturn this workflow's rules, and they did both here — but the reason recorded was the wrong one.
+
+**Where else it propagated.** [Node 70](70-pruning-a-long-running-map.md)'s payload put it to them as *"your oldest
+standing rule on this effort"*, and the manager relayed that wording without catching it. That worker is live and
+has been told.
