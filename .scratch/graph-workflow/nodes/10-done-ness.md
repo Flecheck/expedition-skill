@@ -266,3 +266,31 @@ is changed.*
 
 **Its replacement**, from node 102's answer: the closing report is left with flags raised before the settle-at-close
 practice existed, and flags whose pick report the human never answered. Neither is a node kind.
+
+## Annotation: the bar's commands are not written once into the map's `## Notes`
+
+*Filed by the manager from [Which statement of the bar's commands wins where a recorded copy and the repo's own
+instructions disagree](174-which-statement-of-the-bars-commands-wins.md)'s `INVALIDATIONS`, in that node's own
+words. Nothing above is changed.*
+
+> **[Node 10](10-done-ness.md) — *Done-ness and termination* — is contradicted in one clause of its `## Answer`, and
+> it is the clause the rules file's bar paragraph cites.** Node 10 wrote: *"the properties are fixed and shipped,
+> the commands are discovered per repo on first use, and then **written once into the map's Notes** — so the next
+> node does not re-derive them, and so the human can see and edit what is actually being run."* Three parts, and
+> they do not fare alike:
+>
+> - ***"discovered per repo on first use"*** — stands, and is the ground this node's answer rests on.
+> - ***"written once into the map's Notes"*** — already false on location, node 140 having moved the record to
+>   `map-implementation-rules.md`; and now false on standing, *once* having become *once, and confirmed against the
+>   repo on each use*.
+> - ***"so the next node does not re-derive them"*** — **narrowed rather than reversed.** No later agent re-derives
+>   the commands from scratch. But where the repo states its own commands the later agent uses the repo's statement
+>   and the record is only confirmed against it. Where the repo states nothing — this effort's case — node 10's
+>   clause holds exactly as written.
+> - ***"so the human can see and edit what is actually being run"*** — stands, and is now the record's main job.
+
+**Its replacement**, in node 174's own index line: the repo's own statement of its commands wins; the rules file's
+record is confirmed against it before use, the repo wins on a difference, and a difference never fails the work.
+
+**Four bullets, and only one of them is a reversal.** The manager files the whole set rather than the reversal alone,
+because two of the three surviving clauses are what node 174's answer rests on.
