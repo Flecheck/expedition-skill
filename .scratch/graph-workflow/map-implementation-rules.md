@@ -2,6 +2,16 @@
 
 **An implementation node's worker and its checker are this file's readers, and this file is part of the map, so a rule written here binds this effort exactly as a rule written in [`map.md`](map.md) does.** `map.md` is read whole, cold, once per node by every worker, so it holds only what *every* worker can act on; what an implementation node's work is held to is here, where no other worker pays to read it. Moved verbatim by [Move the implementer's and checker's material out of the map](nodes/140-move-the-implementers-and-checkers-material-out-of-the-map.md), carrying out [Where the rules a checker is held to live, now that it may not go and find them](nodes/138-where-the-rules-a-checker-is-held-to-live.md), which is where the ground for moving them is.
 
+**What this file admits.** A line belongs here only where an implementation node's worker or its checker would do
+something differently for having read it while working a node. How a rule was learned is not that — how many
+attempts it took, what one cost, who was wrong, what this file said before, a manager correcting itself — and it
+belongs in [map-history.md](map-history.md), the markdown link the line already carries to the node that shaped it
+standing in its place. **The hard case turns on trigger against history**: a **trigger** is part of a rule and
+stays — an error string, a symptom, or the condition under which the rule fires, which is how the rule's reader
+knows it applies — while a **history** is not. **Whoever is already editing a passage applies this to that
+passage**, and no sweep of the file is owed or licensed by it. Settled at [node
+191](nodes/191-the-rules-file-carries-accounts-rather-than-rules.md).
+
 **How a rule in this file is superseded, and it is not struck in place.** A rule here that no longer holds is
 **replaced** by its current form, and its existing text is appended **verbatim** to [map-history.md](map-history.md)
 under the heading mirroring the section it came from, struck-through text staying struck through. That is the
