@@ -331,3 +331,30 @@ site, distinct from the one the annotation above corrects.** Nothing above is ch
 quoted this node against itself — *"its value was never the state column"*. The one figure that is stale: this node
 says *twenty flags are outstanding*. The manager counted `flags.md` at node 102's filing and found **50 outstanding,
 110 settled, 160 in total**.
+
+## Annotation: half of this node's answer is reversed, at the human's word
+
+*Filed by the manager from [node 70](70-pruning-a-long-running-map.md)'s handover, and pasted as that worker wrote
+it. This node is resolved; the annotation records the reversal here rather than editing its answer.*
+
+> **Node 27** — *"Whether flags.md survives the settle-at-close practice"*. It settled that `flags.md` *"stays: not
+> a queue but the capped index of every agent judgement"*. The settled-flag cleanup reverses the permanent-index
+> half: 230 of 333 entries become removable. The queue reading it rejected is what the file becomes. The human took
+> this knowingly, under their own standing direction that discovery may make an earlier decision wrong. **What
+> survives**: its other half, that the flag index is the counterpart to the decisions index, and that check 6
+> compares both states — that comparison is amended rather than dropped.
+
+***The manager's note.*** **The human's word that reversed it**, `verbatim`: *"do cleanup flags"*. **The
+measurement that earned the reversal**, from the same worker: 230 of `flags.md`'s 333 entries are settled —
+**73,994 bytes, 68% of the file** — in the one file a close-out sweep must read whole, and its own header says the
+report *is* the unchecked lines. Nothing is lost because the human ordered the duplicate themselves at [node
+22](22-human-code-review.md)'s gate.
+
+**The carriers are [node 201](201-ship-the-cleanup-exemption-and-the-flag-check.md)**, which amends the mechanical
+check, **and [node 202](202-ship-an-expedition-cleanup-skill.md)**, which ships the operation. This annotation
+carries no work of its own.
+
+**`flags.md`'s own header is now false and no node yet owns it** — it reads *"**Append-only.** A settled flag is
+checked, never removed."* Under node 189's boundary that is a rule statement in a graph file, so it is replaced and
+its old text banked to `map-history.md`. The manager records the gap rather than filling it, the file being one it
+writes itself.

@@ -1,7 +1,7 @@
 # Ship what a file of the map admits, in the conventions document
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: 194
 

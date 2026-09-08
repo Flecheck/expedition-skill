@@ -1,7 +1,7 @@
 # Nothing measures the record about itself
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 
