@@ -56,7 +56,7 @@ does. Two of the map's sections are among what it holds:
 `map-implementation-rules.md` holds the rules an implementation node's work is held to — the landing
 policy, the bar's commands and the standards work is held against — and is read by that node's worker
 and by its checker rather than by every worker; it too is part of the map, and a rule written there
-binds exactly as one written in `map.md` does.
+binds exactly as one written in `map.md` does; what it admits is under `## Writing the map` below.
 
 `map.md` has three sections, in this order:
 
@@ -104,6 +104,15 @@ may contain others.
 file the map later splits into is covered the day it is written. The graph's remaining files record
 what happened and their superseded text stays where it is: `decisions.md`, `flags.md`, the node
 files, and `map-history.md`, which holds superseded text only.
+
+**What a file of the map admits.** Each file of the map declares who reads it, and a line belongs in
+that file only where the reader it declares — one kind of worker, or the manager alone — would do
+something differently for having read it while working a node. **How a rule was learned is not that**:
+how many attempts it took and what they cost, who was wrong, what the file said before. That material
+goes to `map-history.md`, the markdown link to the node that shaped the line standing in its place.
+**A trigger is part of a rule and stays; a history is not** — an error string, a symptom, or the
+condition under which a rule fires is how the rule's reader knows it applies. Whoever is already
+editing a passage applies the test to that passage: no sweep of a file is owed or licensed by it.
 
 Every note, standing preference and fog item in `map.md` is a **current statement**: what holds now,
 citing by markdown link the nodes that shaped it and never restating what those nodes hold. The
