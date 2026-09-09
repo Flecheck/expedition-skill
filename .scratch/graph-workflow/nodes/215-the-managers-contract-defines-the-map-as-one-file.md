@@ -1,7 +1,7 @@
 # The manager's contract defines the map as one file, where the workflow ships four map files
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: 204
 

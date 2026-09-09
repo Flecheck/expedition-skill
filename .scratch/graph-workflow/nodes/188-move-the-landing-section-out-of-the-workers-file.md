@@ -1,7 +1,7 @@
 # Move the landing section out of the file an implementation worker reads
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
