@@ -365,3 +365,16 @@ triggers the ten mechanical checks](nodes/213-nothing-triggers-the-ten-mechanica
 which node 183's own answer states its remedy does not reach. The item as it stood:*
 
 - **Extraction of a graph tool.** Specified in everything but the trigger: the mechanical invariants a `check` would enforce are listed in [graph file format](nodes/13-graph-file-format.md), and the cost of not having one is measured rather than predicted — **twelve false results from hand-written scans across seven sessions**, plus one hand re-derivation of those scans per session. What would settle it: the trigger to write it. Shaped by [write the graph conventions document](nodes/21-conventions-document.md), [friction from running this map by hand](nodes/24-self-hosted-friction.md) and [what the checker contract owes to having been run](nodes/31-checker-contract-owes.md); the rules such a tool must not get wrong are being moved next to the checks by [co-locate the scan rules with the mechanical checks](nodes/49-colocate-scan-rules.md).
+
+## Superseded from `map-implementation-rules.md`'s opening — the second statement that an account belongs here
+
+*Moved verbatim under the `Change the map` procedure at [Collapse the rules file's two statements that accounts live
+in `map-history.md`](nodes/200-collapse-the-rules-files-two-map-history-statements.md). It stood in the text before
+that file's first `##` heading, trailing the paragraph beginning "Nothing below was reworded on the way here", whose
+subject is the verbatim move rather than where an account lives. The admission test added at [node
+196](nodes/196-give-the-rules-file-its-admission-test.md) states the same thing as a consequence of the test, where a
+reader needs it, so this stood as a second statement of it and under a lead-in it did not belong to. **It stated a
+rule rather than recorded what happened, so it took this route rather than strike-in-place**, on [Where the
+never-delete rule stops](nodes/189-where-the-never-delete-rule-stops.md)'s test. The sentence as it stood:*
+
+> The account behind a line here is in [map-history.md](map-history.md), as it is for a line in `map.md`.

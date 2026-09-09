@@ -23,7 +23,7 @@ the never-delete rule stops](nodes/189-where-the-never-delete-rule-stops.md), an
 read by workers who do not read [`map.md`](map.md), where the same rule stands as a standing preference. **The
 struck rule statements below predate this and are not licence to add another.**
 
-**Nothing below was reworded on the way here**, so a paragraph that says *above* or *below* may be pointing at something in `map.md` rather than at something in this file. The review route's *"the human's standing direction below"* points at a standing preference in `map.md`; its *"the same ground as the bar's commands above"* resolves here, the bar's commands standing above it in this file. The account behind a line here is in [map-history.md](map-history.md), as it is for a line in `map.md`.
+**Nothing below was reworded on the way here**, so a paragraph that says *above* or *below* may be pointing at something in `map.md` rather than at something in this file. The review route's *"the human's standing direction below"* points at a standing preference in `map.md`; its *"the same ground as the bar's commands above"* resolves here, the bar's commands standing above it in this file. Shaped by [node 200](nodes/200-collapse-the-rules-files-two-map-history-statements.md).
 
 ## Landing an implementation node's work
 
