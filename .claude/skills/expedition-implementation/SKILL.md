@@ -88,10 +88,15 @@ Every implementation leaves the working tree meeting these properties: it builds
 it is formatted, the tests that are relevant to your change pass, and whatever else the repo itself
 demands is satisfied.
 
-These are properties, not commands, and **the commands are where the standards are**: use whatever
-`map-implementation-rules.md` records for this repo. Where it records none, discover them from the repo and
-hand what you found back in your handover. A repo with no build, no tests and no formatter meets the bar on
-its remaining half; that is a complete bar and not a deficient one.
+These are properties, not commands, and **a repo's own live statement of its build, test and format
+commands is authoritative**: discover them from the repo, and hand what you found back in your handover.
+Where the effort's implementation-rules file records those commands, that record is a copy of an earlier
+discovery — you confirm it against what the repo itself says before using it, rather than trusting it.
+Where the two differ the repo's statement wins, you run the repo's commands, and you report the difference
+so the record can be repaired; the difference is never a reason to judge the work defective. Where the repo
+states no commands of its own, the record is the only statement there is and stands as it is, unconfirmed.
+A repo with no build, no tests and no formatter meets the bar on its remaining half; that is a complete bar
+and not a deficient one.
 
 ## Hard rules
 
