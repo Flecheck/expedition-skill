@@ -391,3 +391,16 @@ first pass. **The manager writes both fog items once node 140 lands**, and recor
 lost if it does not: the `qmd` trigger, *a worker reports it could not find a fact because it did not know the fact's
 wording*; and the part (ii) trigger, *`decisions.md` stops being small enough*, anchored by the worker at ~43,847
 bytes and flagged at `129.4` as its number rather than the human's.
+
+## Annotation: this node's growth projection is stale a second time, and is not to be recomputed
+
+*Filed by the manager from [Nothing measures the record about itself](183-nothing-measures-the-record-about-itself.md)'s `INVALIDATIONS`, in that node's own
+words. Nothing above is changed.*
+
+> **Node 129's projection** — its growth projection for `decisions.md` was computed from 70 open nodes. The frontier
+> is 100. It was already recorded as stale at 80; this is the second time it has been found stale without being
+> recomputed, and under this node's answer it should not be recomputed but derived when wanted.
+
+**What survives untouched, in node 183's words:** *"Node 129's search-before-read property is confirmed and extended
+to the frontier"*, and its settlement that tooling is permitted in the record while barred from the shipped files is
+what let node 183 place the derivations where it did.

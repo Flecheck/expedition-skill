@@ -345,3 +345,23 @@ rule stopping at a rule statement, and its illustration `— a node or this map 
 list of the files it reached. The bullet as it stood among `map.md`'s standing preferences:*
 
 > **An in-place update never deletes.** When any file in the graph is edited — a node or this map — superseded text is marked as superseded and left where it is, and new text is added around it. Information leaves a file only when it is clearly wrong or the human asks for it gone. Quiet deletion is most damaging and least visible in the map itself.
+
+## Notes — the token-use preference, before the human corrected the manager's gloss on predicted saving
+
+*Superseded at [node 183](nodes/183-nothing-measures-the-record-about-itself.md)'s interview. The clause carried the
+human's `verbatim` instruction and then a sentence of the manager's own that read a prohibition into it; their
+correction, `verbatim`: "I don't think I said something about forbiding saving by prediced savings ? having real
+number is better fo cource but guessing can help." Banked verbatim, and the replacement stands in `map.md`.*
+
+- **Token-use improvement is prioritised above the rest of the frontier.** The human's standing instruction, `verbatim`: *"We should also bump the priority for improvement to token use"*. It is a **redirection** of [What the manager works on next, and how the human redirects it](nodes/16-human-steering.md)'s default rather than an exception to it: the alternation between a design stream and a delivery stream stands, and within each stream a node that reduces the workflow's own token cost outranks one that does not. What it does **not** license: prioritising a saving over a correctness finding, or prioritising one whose size has not been measured — **a ranking by predicted saving is the *token maxing* failure in reverse.**
+
+## Not yet specified — extraction of a graph tool, which node 183 made specifiable
+
+*Moved verbatim under the `Resolve` procedure's steps 4 and 5 at [Nothing measures the record about
+itself](nodes/183-nothing-measures-the-record-about-itself.md), whose answer supplied the trigger this item was
+waiting for and split it into two nodes: [write the
+derivations](nodes/210-write-the-derivations-this-effort-derives-by-hand.md) for the measuring half, and [nothing
+triggers the ten mechanical checks](nodes/213-nothing-triggers-the-ten-mechanical-checks.md) for the verdict half,
+which node 183's own answer states its remedy does not reach. The item as it stood:*
+
+- **Extraction of a graph tool.** Specified in everything but the trigger: the mechanical invariants a `check` would enforce are listed in [graph file format](nodes/13-graph-file-format.md), and the cost of not having one is measured rather than predicted — **twelve false results from hand-written scans across seven sessions**, plus one hand re-derivation of those scans per session. What would settle it: the trigger to write it. Shaped by [write the graph conventions document](nodes/21-conventions-document.md), [friction from running this map by hand](nodes/24-self-hosted-friction.md) and [what the checker contract owes to having been run](nodes/31-checker-contract-owes.md); the rules such a tool must not get wrong are being moved next to the checks by [co-locate the scan rules with the mechanical checks](nodes/49-colocate-scan-rules.md).

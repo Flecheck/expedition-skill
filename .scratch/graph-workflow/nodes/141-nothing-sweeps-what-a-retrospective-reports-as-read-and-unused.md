@@ -286,3 +286,16 @@ indirect and say a judgement against job-done-versus-initial-context still ident
 **If that is right, the defect is in the manager's rendering rather than in the question**, which the worker's own
 point 6 had already suspected — *"the four questions are the manager's wording, not yours"* — and part (i) of its
 package, deleting the question, may be the wrong repair.
+
+## Annotation: flag `141.3`'s own falsifier has been met
+
+*Filed by the manager from [Nothing measures the record about itself](183-nothing-measures-the-record-about-itself.md)'s `INVALIDATIONS`, in that node's own
+words. Nothing above is changed.*
+
+> **Flag `141.3`, unchecked** — it states the mint-on-second-report rule *"depends on the manager recognising a
+> repeat, which is the faculty that failed three times"* and names the evidence that would defeat it. That evidence
+> now exists three times over. The flag is not merely open; its own condition for being wrong has been met.
+
+**Where it goes.** [Node 212](212-the-mint-on-second-report-rule-is-defeated.md) is minted on it and claimed, and
+settling flag `141.3` is part of what that node reaches. **The flag is left unchecked here rather than checked**:
+the manager does not settle a flag by agreeing with the node that defeated it.

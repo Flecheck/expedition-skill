@@ -319,3 +319,17 @@ sequencing differently.
 ***The manager's note.*** **All five are settled by the human's answers at this node's own interview**, that being
 the first human moment this node's close reached. **Four of the five are the worker declining to spend a human
 question**, three of them on grounds it measured rather than argued.
+
+## Annotation: this node's retrospective claim is refined, and its own number has moved
+
+*Filed by the manager from [Nothing measures the record about itself](183-nothing-measures-the-record-about-itself.md)'s `INVALIDATIONS`, in that node's own
+words. Nothing above is changed.*
+
+> **Node 70's retrospective claim, refined rather than contradicted** — its words were *"had the effort recorded file
+> sizes and node counts over time, this node would have been a third of the work."* The saving it identified is real
+> and is this node's strongest evidence, but the cause it assigned is wrong: recorded numbers would have been stale
+> for most of what it did, and what would have saved it is the derivations it wrote fifteen of. Its answer's
+> *"`map.md` … is 29,782 today"* now reads 32,699, which is that same point demonstrated on its own text.
+
+**Nothing this node decided changes.** The cleanup skill, its two operations, and the 0.17% measurement all stand;
+what moves is the cause its retrospective assigned to the cost it measured.

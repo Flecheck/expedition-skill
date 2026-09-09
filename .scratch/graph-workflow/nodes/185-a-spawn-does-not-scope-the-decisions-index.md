@@ -38,3 +38,18 @@ subject is whether a fed `decisions.md` earns its place. **Node 169's worker off
 words: *"an implementation worker on a record-file node is a cheaper case to measure, and this node is a clean
 negative data point."* The manager records the offer and has not folded it into node 165's protocol, whose three
 pairs are fixed to grilling nodes and whose readout was fixed before the first pair ran.
+
+## Annotation: this node's provenance miscounts its own item
+
+*Filed by the manager from [The rule that mints a node on a repeated retrospective
+item](212-the-mint-on-second-report-rule-is-defeated.md)'s worker, in that worker's own words. Nothing above is
+changed, the count being the manager's error and not this node's subject.*
+
+> Node 185's provenance reads "Minted by the manager under the map's rule that a standing retrospective item
+> reported a second time becomes a node." The item it names — a spawn pointing at `decisions.md` without saying
+> which sections bear on the node — is at roughly seventeen prior reports. So the single prompt application of the
+> rule miscounted by an order of magnitude, and that wrong count is now the node's recorded provenance.
+
+**The two reports named above are real and are not withdrawn**; what is wrong is *"a second time"*, and it is the
+manager's sentence. **This node's subject and its urgency both go up rather than down**: an item at roughly
+seventeen reports is the most-reported item on the effort after `map.md`'s whole-file read.
