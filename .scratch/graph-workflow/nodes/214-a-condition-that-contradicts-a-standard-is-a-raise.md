@@ -56,3 +56,24 @@ raised, on the same understanding of its own authority.
 **The manager's own conduct is in scope.** Both agents' payloads reached the manager before the gate, and the
 manager filed the flag and relayed the question without treating either as a raise. If the rule this node writes
 puts a duty on the party that receives such a report, the manager is that party.
+
+## What node 200's checker added, unasked
+
+*Pasted as it wrote it, alongside its run-2 `PASS`. It is the sharpest statement of this node's question that any
+party has produced, and it comes from the one party that cannot see the record.*
+
+> On the standing instruction that a collision both parties knew should have drawn a raise: I cannot establish what
+> the worker knew, being blind to the record, so I can speak only for myself. My contract on disk routes this to a
+> question rather than a raise, because a raise hands back no outcome and stops the check, and I can check this
+> condition — passing that up would withhold an outcome I am able to give on work that meets the condition on the
+> only reading under which any work could. I note that the spawn's gloss that "a raise from you does not wait on
+> anything" differs from the contract's raise, which explicitly stops the check and issues no outcome; the file on
+> disk won. If the human wants a collision of this shape to stop a check that could otherwise conclude, that is a
+> change to the shipped checker contract's raise grounds rather than something I can reach by departing from the
+> file.
+
+**Two things this node now has that it did not.** First, **the cost of a checker's raise is stated**: it withholds
+an outcome the checker is able to give, so a rule that makes a collision raisable has to be worth losing that
+outcome. Second, **the manager's gloss in that spawn was wrong** and is flagged at `200.3`: a checker's raise does
+stop the check, and only a question handed back alongside an outcome does not. **Whoever writes this node's rule
+should assume the manager's summary of the raise mechanics cannot be trusted and read the two contracts.**
