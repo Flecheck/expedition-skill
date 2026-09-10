@@ -27,12 +27,15 @@ fires — pointing at the map for everything else.
 and read back against the two rules that bind every condition: it is self-contained text, and it quantifies over no
 part of the record — every demand below names a file, a heading or a string.*
 
-> The work is one new file at the repository root, `CLAUDE.md`, and no other file may be edited. The worker may not
-> mark this node, resolve it, or write a line in `decisions.md` or `flags.md`.
+> ~~The work is one new file at the repository root, `CLAUDE.md`, and no other file may be edited.~~ **The work is
+> one new file, `.claude/rules/expedition-triggers.md`, and no other file may be edited** — amended by the manager
+> on the human's answer, below. The worker may not mark this node, resolve it, or write a line in `decisions.md` or
+> `flags.md`.
 >
 > Done means every one of the following is true of the finished tree.
 >
-> 1. `CLAUDE.md` exists at the repository root and is **at most 2,000 bytes**.
+> 1. ~~`CLAUDE.md` exists at the repository root and~~ **`.claude/rules/expedition-triggers.md` exists and** is **at
+>    most 2,000 bytes**.
 > 2. It states each of the following as a trigger — the moment, then the duty — and nothing else as a duty:
 >    (a) a node resolves, so its retrospective is filed in the same edit that writes its answer;
 >    (b) a node finishes, so the frontier is looked at and a replacement is started before anything else continues;
@@ -46,7 +49,10 @@ part of the record — every demand below names a file, a heading or a string.*
 >    checker something about a particular piece of work fails this clause.
 > 5. It states that it is one harness's mechanism and this effort's own practice, and that nothing the workflow
 >    ships may assume it exists.
-> 6. No file under `.claude/` and no file under `.scratch/` is modified, and no hook is configured anywhere.
+> 6. ~~No file under `.claude/` and no file under `.scratch/` is modified, and no hook is configured anywhere.~~
+>    **No file under `.claude/` other than the one named above is created or modified**, no file under `.scratch/` is
+>    modified, and **no hook is configured** — amended by the manager on the human's answer, below, which put the
+>    file inside `.claude/` and parked the hook rather than refusing it.
 > 7. The working tree meets the bar.
 
 ## The manager's note at filing
@@ -112,3 +118,51 @@ rules* has two live referents in this effort's own recent exchanges:
 **Which matters, because the two readings pull this node's condition in opposite directions**, and both clauses they
 reach are the manager's own: clause 1 names `CLAUDE.md` **at the repository root**, and clause 6 forbids modifying
 **any file under `.claude/`** — which `.claude/rules/` is. The manager has amended neither and asked which.
+
+### The answer, and what it amended
+
+**Their reply, `verbatim`.**
+
+> .claude/rules , we postpone PreCompact if the rules don't work
+
+**Which reading it took: the first.** *The rules* is `.claude/rules/`, the directory, and not the map's rules. It
+also settles the second half without being asked: `PreCompact` is **deferred against a condition** rather than
+dropped — it comes back if the directory mechanism does not hold the instructions across a compaction.
+
+**A vocabulary note, and it is the manager's rather than a correction of theirs.** `CONTEXT.md` refuses *postpone*
+by name; this effort's word for a deferral is **park**. Their word is recorded above as they wrote it, and the
+record uses `park` beside it.
+
+**What the manager amended, both clauses being its own and no worker holding this node.** Marked in place above
+rather than rewritten silently, on [node 160](160-carry-the-integration-conflict-rule-into-the-map.md)'s precedent
+for an amended clause.
+
+- **The scope line and clause 1**: the file moves from `CLAUDE.md` at the repository root to
+  `.claude/rules/expedition-triggers.md`. The 2,000-byte cap is unchanged.
+- **Clause 6**: it forbade modifying any file under `.claude/`, which is now where the work goes. It now forbids
+  every file under `.claude/` **other than the one the scope line names**, keeps `.scratch/` closed, and keeps the
+  hook out — but as a park rather than a refusal.
+
+**Three clauses the amendment does not touch, and one of them matters more now than it did.** Clauses 2, 3 and 5
+stand as written. **Clause 4 matters more**: it demands the file be safe for every agent in this repository to read,
+a checker included, and a file under `.claude/rules/` is loaded into an agent's context by the harness rather than
+by a spawn the manager controls — so the manager cannot choose who sees it. The clause was written for that risk at
+a root `CLAUDE.md` and it reaches this destination unchanged.
+
+**What the manager will observe rather than assert.** Whether the directory mechanism holds is checkable from the
+manager's own context after the next compaction: if the file's text is present without anything having read it
+aloud, the mechanism works. **The manager reports what it sees rather than judging it**, and the human's condition —
+*"if the rules don't work"* — is what decides whether `PreCompact` comes back. No node is minted for the fallback
+yet, the observation not having happened.
+
+## The hold is lifted
+
+*Filed by the manager. **This node may be claimed.***
+
+The hold said `do not claim until clause 6's ground is settled`. It is settled by the human's own direction rather
+than by establishing the `PreCompact` fact: the route is now `.claude/rules/`, which needs no hook, so **clause 6 no
+longer rests on the contested finding at all.** The `PreCompact` question stays open and unowned — parked against
+the condition the human set — and nothing in this node turns on it.
+
+**It is not claimed yet for a different reason: both code slots are full**, held by nodes 223 and 224, each at its
+gate with a live worktree. This node is on the frontier and takes the first slot that frees.
