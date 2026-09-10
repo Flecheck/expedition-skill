@@ -64,18 +64,13 @@ condition is inconvenient; the trigger is a contradiction the agent can name bet
 the work is measured against. **In force on this effort from now**, and its carriage into the shipped contracts is
 [node 214](nodes/214-a-condition-that-contradicts-a-standard-is-a-raise.md).
 
-- **A checker that hits the contract's moved-standard branch carries on and discloses, until the branch is
-repaired.** The human's answer at [node 178](nodes/178-whether-adding-a-standard-is-a-moved-standard.md), `verbatim`:
-*"Q1 ok Q2 ok"*, taking that node's worker's recommendation in its own words — *"Carry on and disclose. […] The
-disclosure is the safeguard: it reaches you at the node's gate either way, without a stopped check."* **What it
-licenses**, precisely: where the work under check has edited a document that holds a standard, the checker issues
-its outcome and says in that outcome that it settled the branch and on what reading, instead of raising and handing
-back no outcome. **What it does not license:** anything else in the checker's contract, and no departure by a worker
-of any other kind. **Its ground is measured** — 37 of 161 commits touched such a document, and four checkers had
-already improvised past the branch in the same direction with none having authority to. **It expires when the branch
-is repaired**, which is `Q1.`'s answer: the branch stops a check only where a rule *this* work must be judged by has
-itself changed and no unchanged statement of it survives. **The manager carries this in a checker's spawn** for as
-long as it stands, marked as the human's and not as the manager's.
+- **The moved-standard licence is spent.** It let a checker that hit the contract's moved-standard branch carry on
+and disclose rather than stop, and it said in its own text that it **expires when the branch is repaired**. The
+branch is repaired: [node 223](nodes/223-narrow-the-checkers-moved-standard-raise.md) narrowed it at all three
+sites to fire only where an element this work must be held against moved and no unmoved statement of it survives.
+**So the manager no longer carries it in a checker's spawn.** Its full text, with the human's words and the measured
+ground it rested on, is in [map-history.md](map-history.md). What replaced it is not a licence but the shipped rule,
+whose carriage into the implementer's side is [node 214](nodes/214-a-condition-that-contradicts-a-standard-is-a-raise.md).
 
 **A worktree is created by the harness, never by hand.** The human's standing instruction, `verbatim`, after the manager hand-rolled one and then could not remove it: *"when you use worktrees, you should use the EnterWorktree skill instead of creating worktrees by hand - that way you don't have all these worktree management issues afterwards"*. **What went wrong is measured rather than argued:** the sandbox bind-mounts `.git/config` read-only and makes `.git/worktrees/<name>` its own mountpoint, so `git worktree remove` and `git worktree prune` both return `EBUSY` and the stale entry stays in `git worktree list` — which on this effort reads as an **occupied code slot**, the slot's occupancy being discovered by counting live worktrees. **In force on this effort from now**, under [Rules added to one effort's map, and what makes them legitimate](nodes/93-effort-scoped-custom-rules.md). **One point of fit it does not settle, and the manager has decided none of it:** `EnterWorktree` switches *the calling session* into the worktree, and the manager must stay in the main tree to own the graph, while the party that needs to be in the worktree is the worker and then the checker — so which of the harness's two routes carries this (the manager entering, or an isolated worker) is open and is [Which harness route creates an implementation node's worktree](nodes/150-which-harness-route-creates-a-worktree.md).
 

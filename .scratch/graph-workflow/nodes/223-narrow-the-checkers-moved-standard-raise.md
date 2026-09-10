@@ -1,7 +1,7 @@
 # Narrow the checker's moved-standard raise to where nothing unmoved survives
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -117,10 +117,10 @@ blocking edge**, since neither node needs what the other produces.
 
 ## Flags
 
-*The worker's own text, pasted. The id is the manager's bookkeeping and nothing else. Outstanding — this node has
-not reached its gate.*
+*The worker's own text, pasted. The id is the manager's bookkeeping and nothing else. **Settled by the approval**,
+the flag having been the substance of what the gate put in front of the human.*
 
-`223.1` `ASSUMPTION` — **Two edits outside the three enumerated sites, in the `NOT COVERED:` route the narrower rule
+`223.1` **· settled** `ASSUMPTION` — **Two edits outside the three enumerated sites, in the `NOT COVERED:` route the narrower rule
 sends work to.** Part (c) of my acceptance condition routes a partially-reaching moved standard to *"the file's
 existing `NOT COVERED:` route"*. That route's own section states its cause as the checker's blindness alone —
 *"something observable that is not observable **by you**"*, *"anything outside the paths you were given"* — and its
@@ -186,3 +186,171 @@ no `NOT COVERED`**.*
 *No `NOT COVERED`, and no question. The manager's note: this is the first checker on this effort to reach the
 moved-standard branch and settle it on the ground that a shipped contract is not among the enumerated standards —
 three readings, one outcome, all disclosed.*
+
+### Gate — `approve`
+
+**The human's word, `verbatim`.**
+
+> approve
+
+**What it decided.** The gate offered `approve`, `correct` or `reject` on a `PASS`ing tree whose checker asked
+nothing. `approve` lands the work as it stands — including flag `223.1`'s two edits outside the three sites the
+condition enumerated, which the payload named as the one thing the worker decided rather than raised. **That flag is
+settled by the approval.**
+
+**What it also does, and the manager states it because it is a consequence rather than a choice.** `map.md`'s
+moved-standard licence said in its own text that it **expires when the branch is repaired**. This is that repair, so
+the licence is spent by its own terms. The manager has banked the item verbatim in `map-history.md` and replaced it,
+and **no longer carries the licence in a checker's spawn.** Nothing about that was the human's to decide again.
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+The shipped checker contract's moved-standard branch now fires only where nothing unmoved is left to hold the work
+against. All three sites the acceptance condition enumerates state the narrower rule, and the old rule survives at
+no site. The only file created, edited or deleted is `.claude/skills/expedition-checker/SKILL.md`.
+
+**Site 1 — `### Where the work moved one of them`.** The one bullet reading *"An element was added, removed or
+altered … Raise it."* is replaced by three, and the section's opening prose is rewritten around them.
+
+- Part (a) is now the section's first move rather than something a reader must infer from the comparison method:
+  *"A standard is not the file that holds it"*, an edit reaching a standard only where it changes what that standard
+  requires or refuses. This is stated up front because three independent readers described the trigger as *a file
+  that is also a standard*, which is wider than the text ever said.
+- Part (d) is carried by naming the question the section turns on, in the paragraph that keeps the
+  operative-content-versus-rationale split: *"is anything unmoved left to hold this work against?"*, followed by the
+  statement that this question decides between raising and carrying on and *did the file change* never does. The
+  negative is paired with the positive deliberately.
+- The bullets are now four, one per case: identical sets (unchanged, original wording); **an element was added** (it
+  is work, every pre-existing element is unmoved, hold it against the acceptance condition, and a purely additive
+  edit is never on its own a reason to raise); **an element was removed or altered** (asked of that element alone —
+  does it reach this work, and does an unmoved statement of it survive elsewhere in that standard or in another
+  standard read); and the raise case, **an element this work must be held against moved and no unmoved statement
+  survives**, which raises where it is the whole of what must be established and routes to `NOT COVERED:` where it
+  reaches only part. A one-line lead-in before the bullets carries part (c)'s element-at-a-time discipline: *"every
+  element that did not move still binds, and the work is held against it."*
+- Everything the condition's third property protects is intact: the element-by-element set comparison over
+  operative content, the operative-content-versus-rationale distinction, the identical-sets case (kept in its
+  original words), and the instruction to unwrap both sides first.
+
+**Site 2 — the table under `### When what you check against is itself the problem`.** The row `the work moved the
+operative content of a standard the bar carries | a raise, and no outcome` becomes two rows: the whole-of-it case
+routing to a raise, and *"the same, reaching only part of what you must establish"* routing to the
+outcome-plus-not-covered cell the table already used one row above. One sentence follows the table stating that an
+element the work itself added is in none of the rows, and pointing at site 1 as carrying the whole of it.
+
+**Site 3 — the paragraph in `### raise — nothing left to check against`.** Now *"A standard the work moved, where
+nothing unmoved survives."* It states the removed-or-altered trigger, the survival test, and then enumerates
+positively the three edits that are **not** this ground — a rationale reworded, an element this work added, an
+element that moved but is not one this work is held against — followed by the partial case routing to not-covered.
+It points at site 1 too.
+
+**The call a later reader would otherwise re-derive: two edits outside the three enumerated sites, in `### A part
+you could not establish, alongside a PASS or a FAIL`.** Part (c) sends a partially-reaching moved standard to *"the
+file's existing `NOT COVERED:` route"*, but that route stated its cause exclusively as the checker's own blindness —
+*"not observable **by you**"*, *"anything outside the paths you were given"* — and its template line asked for *"why
+establishing it is outside what you were given"*. A checker arriving from part (c) has a case that is observable and
+whose cause is that the yardstick moved, so the route as written did not admit it and the file would have pointed at
+a section that denied the case. I added one short paragraph naming that second cause, saying it is not blindness,
+pointing back at site 1, and stating that everything below applies to it unchanged; and I widened the template
+placeholder to *"why you could not establish it: outside what you were given, or nothing unmoved left to hold it
+against"*. Nothing the section already demanded was removed or weakened. This is flag `223.1` above.
+
+**One fact for whoever writes node 214's acceptance condition.** `### raise — nothing left to check against` opens
+*"Two things do that"* and then names the acceptance condition and the moved standard; the *"fifth ground beside
+those four"* inside it counts ways a **condition** can be uncheckable, not raise grounds, so the two counts are
+consistent as they stand. Node 214 adds a raise ground to that section, so its work makes *"Two things"* read three.
+I left it, the count being correct today and the sentence not one of my three sites.
+
+**The bar, discovered from the repo rather than taken from the record.** `graph-agent` has no manifest, no task
+runner, no CI directory and no formatter config: no `package.json`, `Cargo.toml`, `pyproject.toml`, `Makefile`,
+`justfile`, `flake.nix`, `.pre-commit-config.yaml`, no `.github/`. The one ignore file, `.gitignore`, ignores
+`.worktrees/` and `.claude/worktrees/` and invokes nothing. So there is no build, no test and no format command to
+run, and the bar holds on its non-command half alone. **This matches the record's copy in
+`map-implementation-rules.md` exactly** — no difference to report and nothing to repair there. Held against the
+non-command half: the effort's five ground rules, the four standing rules for writing, `CONTEXT.md`'s `_Avoid_`
+lines (no refused word is introduced), `/writing-for-agents`, `/coding-principles` and `/naming`, and the acceptance
+condition. `graph-conventions.md` is a standard the bar names but it governs the effort's seven record files and the
+node file format, so it bears on nothing in a shipped skill file.
+
+**No superseded-text history file was appended to**, the old text being replaced in place as the condition requires
+for a file the workflow ships. `map.md` was not touched.
+
+**What the worker reported its work invalidates**, pasted as it wrote it:
+
+- **Node 31's `## Answer`** holds the rule this work replaces — the added-removed-or-altered threshold its checker
+  guessed at mid-check — and is contradicted on that point alone by the file as it now stands. Its method survives
+  untouched. **This was already reported by node 178's worker** and is recorded in node 178's answer, so it is named
+  here for completeness rather than as a fresh finding; the manager should not double-file it.
+- **`map.md`'s licence item is not contradicted, it is triggered.** The item states in the human's own terms that
+  the licence *"expires when the branch is repaired"*. This work is that repair, so landing it satisfies the item's
+  own stated expiry rather than falsifying it. Its retirement is the manager's to write.
+
+*The manager did not double-file node 31, on the worker's own instruction. It performed the licence retirement at
+this landing, as the worker said was the manager's.*
+
+## Retrospective
+
+*Filed by the manager in the same edit that resolves the node, the duty the human settled at [node
+212](212-the-mint-on-second-report-rule-is-defeated.md). Pasted as the worker wrote it.*
+
+**(1) What I had to hunt for.** Almost nothing, and that is unusual for this effort. The one fact I went and got
+myself was the bar's commands, which my contract requires me to confirm against the repo rather than trust — one
+`ls` over manifests, task runners and `.github/`, plus `.gitignore`. I also grepped the repo for the moved-standard
+branch to confirm my node file's author's claim that it appears in no file but the checker contract; that claim held
+exactly, and the grep cost one command. The one thing I reached for that was not pointed at was
+`/writing-for-agents`, located by `find` over the nix store because ground rule 5 names it by plugin name rather
+than by path — a deliberate property of that rule, but it is a search every implementation worker on this effort
+pays for again. A path in the rules file beside the name would end it, at the cost of the rule's stated
+repo-independence.
+
+**(2) What arrived that this node did not need.** Judged backwards from the finished work:
+
+- **`map.md`, read whole for four items.** This is the effort's largest standing item, reported at least
+  twenty-seven times before mine. Of roughly thirty standing items I used four: the never-delete rule's boundary
+  (which my condition already restated), the retrospective's four questions, the licence item on my own branch, and
+  the node-files-are-for-agents preference. The worktree material, `EnterWorktree`, the concurrency counts, the
+  resume rule, the token-priority rule, the one-question-at-a-time rule and the manager's-report rule bore on
+  nothing a worker does. The arrangement that would have avoided it is the one the map already applied twice — a
+  sibling file holding what only an implementation worker acts on — but `map.md` is read whole *by contract*, so no
+  heading inside it can help. What would help is my contract naming which of the map's blocks bind a worker.
+- **`map-implementation-rules.md`, read whole for two sections.** I needed `## What the work is held against` and
+  the two rule blocks. The file's first 30 lines are its own admission policy and supersession procedure, addressed
+  to whoever edits it; the record-node reading rule is addressed to a checker. Roughly a third of the file bore on
+  nothing I did.
+- **My spawn's pointer to four decisions entries.** Nodes 178 and 46 were useful — 178 as the source of my
+  condition, 46 only as the index line naming the several-sites item. Nodes 31 and 214 resolved to nothing usable in
+  `decisions.md`: node 31's line is one sentence naming five things the contract gained, which told me nothing about
+  the threshold, and **node 214 has no entry in `decisions.md` at all**, being unresolved, so a worker pointed at it
+  there finds nothing and does not know whether it looked wrong.
+- **Node 178's file, 275 lines, read whole for its part-(a)-to-(c) reasoning.** Nearly all of it is the arrival
+  count, its four wrong statements, and the manager's corrections of itself — history I did not need, since my
+  condition carries the rule in substance. I read it because the manager named it and because I wanted the author's
+  reading of the `NOT COVERED:` sentence. That single sentence, at line 196, is what I went for. It is also the one
+  place the record states what I most needed, so I do not regret the read; a link from my node file to node 178's
+  *answer section* rather than to the node would have halved it.
+- **My node file states the ground for the three-site requirement twice, verbatim**, at lines 19 and 59, the second
+  under a heading announcing it is pasted because it looks redundant. Reading the same paragraph twice cost little
+  but made me check whether the two differed.
+
+**(3) What would have made this node easier.** In the node file: nothing on the substance — this is the
+best-specified condition I could ask for, and the enumeration of three sites with their exact current text meant I
+never had to establish the scope myself. Two smaller things: the duplicated ground paragraph, and a link to node
+178's `## Answer` rather than to the whole node. In the record: something stating that `### A part you could not
+establish` is the route two different causes now reach, which is the one judgement my condition left me to make; my
+condition's part (c) named the route as existing but nobody had checked that the route's own section admitted the
+case. In the contract: nothing. In the spawn: the note pointing at exactly that `NOT COVERED:` question, with *"I
+have no view on the answer"*, was the highest-value line I received — it named the one real decision in the node
+before I had read the file, and it did so without pre-deciding it.
+
+**(4) What I read that was stale, wrong, or contradicted something else.** Nothing stale on the substance, and two
+things worth naming. First, the record's copy of the bar's commands in `map-implementation-rules.md` **matched the
+repo exactly**, which is the outcome that rule wants and is worth recording as a non-finding, since the demotion of
+that copy at node 204 exists to catch the other case. Second, my node file says the implementation-rules file *"was
+cut by 56.7% an hour ago and everything left in it binds you"* — the file as I read it is 74 lines and still carries
+its own editing policy, its supersession procedure, a *"Nothing below was reworded on the way here"* note about
+stale *above*/*below* references, and a record-node rule addressed to a checker, none of which is held against a
+worker's work. The claim that everything remaining binds a worker is the file's own first paragraph and it is not
+quite true of the file's own first thirty lines. That is the same class of defect as the *above*/*below* note it
+already carries about itself.

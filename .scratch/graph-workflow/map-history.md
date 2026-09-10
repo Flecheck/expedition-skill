@@ -378,3 +378,22 @@ rule rather than recorded what happened, so it took this route rather than strik
 never-delete rule stops](nodes/189-where-the-never-delete-rule-stops.md)'s test. The sentence as it stood:*
 
 > The account behind a line here is in [map-history.md](map-history.md), as it is for a line in `map.md`.
+
+## Notes — the moved-standard licence, retired when the branch was repaired at node 223
+
+*Banked verbatim by the manager at node 223's landing, before the item was replaced. The licence's own
+text says it expires when the branch is repaired; node 223 is that repair, so the expiry is the item's own
+rather than a decision of the manager's.*
+
+- **A checker that hits the contract's moved-standard branch carries on and discloses, until the branch is
+repaired.** The human's answer at [node 178](nodes/178-whether-adding-a-standard-is-a-moved-standard.md), `verbatim`:
+*"Q1 ok Q2 ok"*, taking that node's worker's recommendation in its own words — *"Carry on and disclose. […] The
+disclosure is the safeguard: it reaches you at the node's gate either way, without a stopped check."* **What it
+licenses**, precisely: where the work under check has edited a document that holds a standard, the checker issues
+its outcome and says in that outcome that it settled the branch and on what reading, instead of raising and handing
+back no outcome. **What it does not license:** anything else in the checker's contract, and no departure by a worker
+of any other kind. **Its ground is measured** — 37 of 161 commits touched such a document, and four checkers had
+already improvised past the branch in the same direction with none having authority to. **It expires when the branch
+is repaired**, which is `Q1.`'s answer: the branch stops a check only where a rule *this* work must be judged by has
+itself changed and no unchanged statement of it survives. **The manager carries this in a checker's spawn** for as
+long as it stands, marked as the human's and not as the manager's.
