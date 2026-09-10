@@ -32,8 +32,10 @@ _Avoid_: issue, ticket, card, item (each names something in a hosted tracker, an
 real ones), gap, task
 
 **Map**:
-The whole effort at low resolution, read once per session: the destination, the standing notes, the
-fog, and what is out of scope. It indexes decisions and never restates one.
+The whole effort at low resolution: the destination, the standing notes, the fog, and what is out of
+scope. It is more than one file and no reader reads all of it — the part every worker reads cold once
+per node holds what every worker can act on, and material only one kind of reader acts on sits in a
+sibling of that part. It indexes decisions and never restates one.
 _Avoid_: index, plan, README
 
 **Destination**:
