@@ -1,7 +1,7 @@
 # Narrow the checker's moved-standard raise to where nothing unmoved survives
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 

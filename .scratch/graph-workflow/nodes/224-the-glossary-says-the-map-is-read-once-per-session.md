@@ -1,7 +1,7 @@
 # The glossary's `Map` entry says the map is read once per session, where one of its files is read by no worker
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 

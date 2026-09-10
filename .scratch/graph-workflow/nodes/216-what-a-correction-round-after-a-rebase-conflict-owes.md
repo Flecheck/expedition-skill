@@ -1,7 +1,7 @@
 # What a correction round after a rebase conflict owes — a re-check, a second gate, or neither
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 

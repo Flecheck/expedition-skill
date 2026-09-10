@@ -1,7 +1,7 @@
 # Whether `map-manager-only.md` gets an admission test, now that it holds the landing section's history
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: 188
 
