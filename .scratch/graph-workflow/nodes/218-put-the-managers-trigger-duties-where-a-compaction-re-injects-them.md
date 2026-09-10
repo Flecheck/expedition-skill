@@ -82,3 +82,33 @@ and that a `SessionStart` injection is lost to the next compaction. **The human 
 **If `PreCompact` can inject text that reaches the rebuilt context, clause 6 is wrong and this condition is the
 manager's to revise before the node is worked** — it is the manager's own condition, so revising it costs nothing
 but must happen before a worker holds it, not after.
+
+## Interview
+
+### Attempt 0 — the manager's own question, and the human's reply
+
+*No worker has held this node. The question was the manager's, on the hold above, and the reply is written here at
+the moment they spoke.*
+
+**The manager asked** whether to settle `PreCompact` by observation — configuring a hook that echoes one marker, so
+the next compaction answers it — or to drop the question and take node 217's established route, a file on disk
+re-read every time context is rebuilt, revising clause 6 to permit a hook without requiring one.
+
+**Their reply, `verbatim`.**
+
+> We can try with the rules
+
+**Recorded as ambiguous by the manager, and not resolved by it.** It takes neither option as offered, and *the
+rules* has two live referents in this effort's own recent exchanges:
+
+- **`.claude/rules/`**, the directory node 217's answer names alongside a root `CLAUDE.md` as what
+  `InstructionsLoaded`'s `compact` matcher fires on — a mechanism that reloads without a hook being configured, and
+  which **this repository does not have**. On that reading the reply changes this node's destination file and drops
+  the hook.
+- **the map's rules**, their own phrase from the exchange that produced node 217 — *"is there a way of adding a hook
+  to keep the map instructions ?"* — where *the rules* means the three duties this node is about. On that reading
+  the reply takes the experiment.
+
+**Which matters, because the two readings pull this node's condition in opposite directions**, and both clauses they
+reach are the manager's own: clause 1 names `CLAUDE.md` **at the repository root**, and clause 6 forbids modifying
+**any file under `.claude/`** — which `.claude/rules/` is. The manager has amended neither and asked which.

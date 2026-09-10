@@ -38,3 +38,25 @@ must say depends on which reading survives that.**
 worker reads `map.md` whole and cold"* is correct and needs nothing, while *"every worker reads the whole map
 cold"* is the false one. **The difference is one filename**, and it is exactly the difference node 215's entry now
 draws between the map and a part of it.
+
+## Annotation: a second stale statement in the same section, from node 224's checker
+
+*Filed by the manager from [node 224](224-the-glossary-says-the-map-is-read-once-per-session.md)'s checker, in its
+own words. Nothing above is changed, and **this node's condition is not amended.** Node 224 has passed its check and
+is at its gate; this arrived as that checker's question and lands here because this node already holds
+`graph-conventions.md`'s account of how the map is read.*
+
+> A file beside the one the condition names still carries the wording the condition removed, and the worker could
+> not touch it: `.claude/skills/expedition/graph-conventions.md`, under `## The seven files`, describes `map.md` as
+> *"The whole effort at low resolution. Read once per session."* — the glossary's superseded phrasing, in a shipped
+> standard whose own opening says *"Terms are used exactly as the glossary (`CONTEXT.md`) defines them."* It is not
+> false of `map.md`, but the two documents now differ in vocabulary for the same read (`per session` there, `per
+> node` in the revised entry and in the implementation-rules file's *"read whole, cold, once per node by every
+> worker"*), and `session` is a word `CONTEXT.md` refuses on both its **Effort** and **Attempt** entries. Condition
+> 8 confined the work to `CONTEXT.md`, so this was the condition's own scope and not the worker's to depart from;
+> whether the shipped conventions document should follow is for the human.
+
+**So this node now has two statements in one section rather than one**: the whole-map read its own question names,
+and *"Read once per session"* on the `map.md` line. Both are in `## The seven files`, and the second is refused
+vocabulary rather than merely imprecise. **Whoever claims this node should establish whether its condition reaches
+the second**; the manager has not widened it.
