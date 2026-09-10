@@ -104,3 +104,19 @@ unclaimed, so no worker was mid-flight when it changed.
 the finding here, on the node that inherited it, rather than editing a resolved node's answer. Whether an annotation
 onto an already-resolved node has a home in the graph's format at all is one of the manager contract's own declared
 unsettled questions.
+
+## Annotation: node 188 has landed, and two of this condition's file names are now wrong
+
+*Filed by the manager from [node 188](188-move-the-landing-section-out-of-the-workers-file.md)'s worker, in its own
+words. Nothing above is changed, and **the condition is not amended.***
+
+> **Node 160** (*Carry the integration-conflict rule into the map*) — **satisfiable after a smaller repair.** Its
+> clause 1 names *"In `map-implementation-rules.md`, inside the paragraph beginning `**Landing policy**`"* and its
+> clause 7 names *"The sentence in `map-implementation-rules.md` reading `The graph's own files are *not* committed
+> per node…`"*. Both sentences are now in `map-manager-only.md` — which that node's file list already permits, its
+> clause 6 making a demand of it. Only the two file names in clauses 1 and 7 are wrong.
+
+**Why the manager has not repaired it even though it looks like bookkeeping.** The file this condition would now
+name is already in its own permitted list, so the fix is two words — but rewriting a condition is not the manager's,
+and *"only the two file names are wrong"* is itself a judgement of the worker's that whoever claims this node should
+confirm against the tree rather than inherit.

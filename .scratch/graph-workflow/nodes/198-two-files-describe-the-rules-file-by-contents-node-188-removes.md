@@ -86,3 +86,30 @@ rules file — four files, two instances, and the other two (`expedition-checker
 `expedition-implementation/SKILL.md`) cite by path and role only, naming no relocated content. **That set is
 provably complete outside the record**; citations from inside `.scratch/graph-workflow/` were not swept, the
 checker being blind to the record, and whoever holds the record settles whether more exist there.
+
+## Annotation: node 188 has landed — the destination clause 2 could not name, and two more sites
+
+*Filed by the manager from [node 188](188-move-the-landing-section-out-of-the-workers-file.md)'s worker, in its own
+words. Nothing above is changed, and **the condition is not amended**; this node is unclaimed, so whoever claims it
+holds the condition as written and this annotation beside it.*
+
+> **Already held, and now unblocked.** **Node 198** exists for the two stale descriptions and is blocked by this
+> node. Its author could not name the destination and left clause 2 without one; it is **`map-manager-only.md`**.
+> Its two targets are confirmed still stale: `map.md` line 7 glosses the rules file as holding *"the landing policy,
+> the code-slot count, the bar's commands and the standards work is held against"*, and `graph-conventions.md`'s
+> `## The seven files` says *"the landing policy, the bar's commands and the standards work is held against"*. **Two
+> sites its clause 1 may not literally reach**, worth adding when it is claimed: `map.md` line 36 states that the
+> code-slot count *"lives in [map-implementation-rules.md](map-implementation-rules.md)"*, which is now false and is
+> buried mid-sentence in a long `## Notes` bullet about question batching; and `map.md` line 5 describes
+> `map-manager-only.md` as holding *"the dogfood target, the label vocabulary, the fog, and what is out of scope"*,
+> which is now incomplete. Clause 1 speaks of *"naming a section that file no longer holds"*, and the code-slot
+> count is a paragraph rather than a section.
+
+**So this node now has four sites in front of it and its clause 1 reaches two.** Its two named targets, plus
+`map.md`'s two — the code-slot count's home, which is a paragraph and not a section, and `map-manager-only.md`'s own
+description, which is incomplete rather than false. Beside those sits `.gitignore`'s decayed quoted phrase from the
+annotation above, which no clause of this condition reaches at all. **The manager has amended nothing**; whoever
+claims this node either works clause 1 as written and leaves three sites standing, or the condition goes to the
+human first.
+
+**Node 188 is resolved, so this node's `Blocked by: 188` edge is satisfied and it is on the frontier.**

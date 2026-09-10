@@ -75,3 +75,17 @@ human's or a fresh writer's.
 
 **The manager has stopped carrying the instruction in spawns** until the condition is repaired, which is a change to
 what the manager does rather than to anything on disk.
+
+## Annotation: node 188 has landed, and this condition's anchor no longer exists
+
+*Filed by the manager from [node 188](188-move-the-landing-section-out-of-the-workers-file.md)'s worker, in its own
+words. Nothing above is changed, and **the condition is not amended** — it was already unrepaired for the reason the
+annotation above records, and this adds a second defect rather than replacing the first.*
+
+> **Node 186** (*An implementation worker tests its worktree*) — **its anchor is gone, not its destination.** It
+> requires a bullet in `map-implementation-rules.md` *"placed in the same list that already holds that file's
+> sandbox material"*, and that *"No file other than `.scratch/graph-workflow/map-implementation-rules.md`
+> changes."* After the move there is **no sandbox material left in that file at all** (`grep -in 'sandbox'
+> map-implementation-rules.md` returns only the `.worktrees/` mention inside the bar paragraph). The destination is
+> still right — node 186's bullet instructs the *worker*, so the admission test puts it in the rules file — but it
+> now has no list to join and needs a new anchor.

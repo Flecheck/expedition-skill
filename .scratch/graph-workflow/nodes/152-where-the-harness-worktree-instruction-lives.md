@@ -43,3 +43,22 @@ while node 140 was claimed and its subject was `map.md`. That is the two-writers
 
 **Its condition's last clause already excepts the out-of-repository link** that defeats node 140's clause 14 and node
 144's clause 6 — see [node 154](154-the-dogfood-link-names-a-path-on-another-machine.md).
+
+## Annotation: node 188 has landed, and this condition is unsatisfiable as written
+
+*Filed by the manager from [node 188](188-move-the-landing-section-out-of-the-workers-file.md)'s worker, in its own
+words. Nothing above is changed, and **the condition is not amended** — a condition is not the manager's to rewrite,
+and this node is unclaimed, so the repair is the human's or a fresh writer's.*
+
+> **Node 152** (*Where the harness worktree instruction lives*) — **unsatisfiable as written.** It requires the
+> `**A worktree is created by the harness, never by hand.**` paragraph to land in `map-implementation-rules.md` *"in
+> the section holding the paragraph beginning `**Landing policy**`, and immediately after it"*, and it permits
+> editing only `map.md` and `map-implementation-rules.md`. That section is now in a third file its worker may not
+> touch. Its clause that *"the landing policy's own phrase `see the standing instruction immediately below` resolves
+> to that paragraph's new position"* names a phrase that also moved. The natural repair points the whole node at
+> `map-manager-only.md`, which is a change of place rather than an addition, so it likely exceeds node 82's
+> manager-amendment authority.
+
+**The manager agrees it exceeds that authority and has not exercised it.** Node 82 lets the manager widen a
+condition's scope where the scope was too narrow for the work it names; this is a different file being named as the
+destination, which changes what the node does rather than how much of the tree it may touch.
