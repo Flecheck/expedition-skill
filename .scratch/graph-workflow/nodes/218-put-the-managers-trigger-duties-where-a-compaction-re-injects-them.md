@@ -1,7 +1,7 @@
 # Put the manager's trigger-duties where a compaction re-injects them
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
