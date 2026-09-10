@@ -204,3 +204,155 @@ effort adopts the mechanism at all, is [node
 **Ground rule 1 is untouched by any of this.** A hook and an instruction file are both one harness's mechanisms, so
 nothing here may reach a shipped file; the shipped repair for a missed duty has to be a rule that needs no harness
 at all, which is what [node 212](212-the-mint-on-second-report-rule-is-defeated.md)'s `Q3.` answer is.
+
+## Annotation: the human contradicts this node's finding on `PreCompact`
+
+*Filed by the manager at the moment they spoke, before anything was checked. Nothing above is changed, and this
+node's status is left `resolved` until the fact is established either way.*
+
+**Their words, `verbatim`.**
+
+> It seems that PreCompact works for the hook
+
+**What it contradicts.** This node's answer says of `PreCompact` and `PostCompact`: *"The documentation does not
+state what these hooks can inject. The event is used for blocking compaction (exit code 2) or async reaction, not
+for context injection."* It then reasons from that to the conclusion that a hook is the weaker mechanism and an
+instruction file the stronger one. **If `PreCompact` can inject text that survives into the rebuilt context, that
+conclusion is wrong in the part that matters**, because a `PreCompact` injection would land *before* the summary is
+made rather than once after it.
+
+**What the manager did rather than decide.** The node's own worker is resumed to establish `PreCompact`
+specifically against the documentation, and told plainly that a human observation contradicts what it filed. **The
+manager settles no fact by preferring one party**: the human's observation is evidence and the worker's reading was
+sourced, and whichever survives the check is what the record will say.
+
+**What is held pending.** [Node 218](218-put-the-managers-trigger-duties-where-a-compaction-re-injects-them.md)'s
+clause 6 refuses to configure any hook, on this answer's ground. That clause is now resting on a finding under
+challenge, and the node is open and unclaimed, so nothing is at risk — but it must not be claimed until this is
+settled.
+
+### The worker's correction, pasted as it wrote it
+
+*Resumed rather than replaced, and told that the human's observation contradicted what it filed. It did not defend
+its answer and did not adopt the human's reading either.*
+
+> **My filed answer was INCOMPLETE.** […] My filed answer said: *"The documentation does not state what these hooks
+> can inject."* That statement is accurate. My further conclusion — that PreCompact and PostCompact cannot inject
+> context — was an **inference from silence**, not a documented finding. The documentation's silence on the matter
+> is a fact; the conclusion that they cannot do something is not.
+
+> If PreCompact can inject content that reaches the rebuilt context, it would work **before** summarization (unlike
+> SessionStart's post-compaction injection), potentially allowing the summarizer to preserve it. However, the
+> available documentation does not enumerate PreCompact output fields, so I cannot confirm this is possible. **The
+> mechanism the human is describing — injecting before compaction so the summary carries it forward — is
+> mechanically plausible, but I have not found documentation that explicitly states PreCompact supports it.**
+
+**What it did establish this round.** The documentation's enumeration of events supporting `additionalContext`
+names `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `UserPromptSubmit`, `UserPromptExpansion`, `Stop`,
+`SubagentStop` and `PostToolBatch` — **and not `PreCompact`**. It could not retrieve `PreCompact`'s own output
+schema across several attempts, and says so rather than inferring from the absence.
+
+**Where this leaves the node.** Its `## Answer` above stands on everything except the `PreCompact` conclusion,
+which is withdrawn as an inference and replaced by *"not established either way"*. **The manager settles no fact
+by preferring a party**, so the node keeps that shape until one of two things arrives: the human's own evidence for
+what they saw, or a source neither pass reached.
+
+**The third route, which is being tried now**: the harness's own installed code rather than its documentation. This
+effort's own rule is that the file on disk wins over anything said about it, and the manager had the worker read
+documentation twice without once reading the implementation.
+
+### The third route is closed, and the worker said so rather than guessing
+
+*Pasted as it wrote it.*
+
+> **I cannot read the implementation.** The Claude Code installation on this machine is a compiled ELF binary
+> distributed via nix package at `/nix/store/…-claude-code-2.1.238/bin/claude`. It contains no readable source
+> files, no schema definitions, and no documentation files. […] I checked: the nix package directory (only contains
+> compiled binaries), npm and pnpm global roots (not available on this machine), installed documentation or schema
+> files (none found), help output and CLI subcommands (general help only, no hook schema exposed).
+
+> My filed answer stated that *"the documentation does not state what these hooks can inject"* for PreCompact and
+> PostCompact. That statement is verified. My further inference — that they cannot inject — cannot be verified from
+> the code because the code is not readable. However, the concrete finding that `additionalContext` is not listed
+> for PreCompact/PostCompact remains solid.
+
+**The three nearest mechanisms it named, in its words**, for what the human may have seen: the `systemMessage`
+field, *"universally available but documentation says it is 'discarded on many events' without enumerating which.
+PreCompact might preserve it, but this is not verified"*; **exit code 0 with stdout**, which *"some events treat as
+plain text to add to context, but PreCompact is not listed among them (only SessionStart, UserPromptSubmit,
+UserPromptExpansion, PostModelSwitch)"*; or *"a mechanism the documentation does not explain"*.
+
+**Where this node now stands, and it is stuck rather than answered.** Three routes were tried — the documentation
+twice, the implementation once — and the third is closed on this machine because the harness ships as a compiled
+binary. **The only route left is the human's own evidence for what they saw**, which is a fact they hold rather
+than a decision, and it is queued behind what is already in front of them.
+
+**One fact worth keeping.** On this machine the harness is a nix-packaged compiled binary, so *"the file on disk
+wins"* has a boundary: for the harness itself there is no readable file on disk, and a claim about harness behaviour
+here can be established only from documentation or from observation.
+
+### The human's evidence, which the manager could not reach on its own
+
+*Filed at the moment they spoke, before anything was checked.*
+
+**Their words, `verbatim`.**
+
+> There is an example for the PreCompact: https://github.com/mvara-ai/precompact-hook/blob/main/pre-compact.sh ,
+> it seems that the output of the script is added after compaction.
+
+**This is the route none of the three attempts had.** The documentation was read twice and does not enumerate
+`PreCompact`'s output schema; the implementation is a compiled binary on this machine and cannot be read. **A
+working example is a fourth kind of source** — weaker than either on authority, since it shows what somebody
+believes works rather than what the harness guarantees, and stronger than both here, since it is the only one that
+speaks to the question at all.
+
+**The node's worker is resumed to read it**, and told to distinguish what the example *demonstrates* from what it
+*assumes*: a script that emits text on `PreCompact` proves the harness runs the hook, and whether the emitted text
+reaches the rebuilt context is the claim under test.
+
+### What the example established, pasted as the worker wrote it
+
+*The fourth route, read. The manager states plainly that it does not establish what the human took it to establish,
+and takes no view beyond what the worker read.*
+
+> **DEMONSTRATES:** A PreCompact hook can be registered and executed (the install.sh registers it on the PreCompact
+> event); the script produces output to stdout in the form of a UUID.
+>
+> **ASSUMES, does not demonstrate:** That the UUID output reaches Claude's context after compaction.
+
+> The script's actual payload — the "awareness summary" that should survive compaction — is **stored to Genesis
+> Ocean** (an MCP-based persistent storage system) rather than injected directly into context. The script directs
+> the spawned Claude subagent to "preserve the summary using MCP tools" and return only the UUID. This is a
+> **file-write mechanism**: the hook writes data to storage via MCP, returns an identifier, and something else (not
+> shown in the script) would retrieve it later.
+
+> **Whether the example uses `additionalContext` on PreCompact: No.** The script does not use `additionalContext`
+> at all. It outputs plain text stdout. This does **not contradict** the documentation's finding […] because the
+> script uses neither additionalContext nor the mechanisms the documentation claims PreCompact should support.
+
+> **What the example does NOT show:** Verification of survival […] the documentation *assumes* this will work
+> ("becomes available to the agent post-compaction") but does not show the mechanism. **Working status:** No
+> indication whether this has ever actually worked, on which Claude Code version, or whether the author verified
+> the summary text survived a real compaction. The repository treats it as a design concept. **The retrieval
+> mechanism:** How does the post-compaction agent access the Genesis Ocean storage? […] The script does not show
+> this.
+
+**Its one-line conclusion, in its words:** *"`PreCompact` can be registered and can execute code that outputs text
+or stores data, but whether that output reaches Claude's context after compaction is
+**plausible-but-unverified**."*
+
+**Where the node stands after four routes.** The documentation does not enumerate `PreCompact`'s output schema; the
+implementation is unreadable on this machine; and the one working example uses a **different mechanism** —
+write-to-store-and-return-an-id — whose retrieval half it does not show. **The finding is stable and the question
+is not closed**: nothing has refuted the human's reading, and nothing has established it.
+
+**The only route left is observation**, and it is not the manager's to take: it means configuring a hook in this
+repository and putting a compaction through it. [Node
+218](218-put-the-managers-trigger-duties-where-a-compaction-re-injects-them.md)'s clause 6 forbids exactly that, and
+that clause is the manager's own, so **the human decides whether the test happens** rather than the manager
+deciding it is worth doing.
+
+**What is worth keeping regardless of the answer.** The example's shape — **write the material somewhere durable
+and carry only a pointer through the boundary** — is a mechanism this effort already uses without naming it that
+way: the record on disk is the store, and a spawn carries the pointer. That is why the instruction-file route works
+at all, and it does not depend on any hook.

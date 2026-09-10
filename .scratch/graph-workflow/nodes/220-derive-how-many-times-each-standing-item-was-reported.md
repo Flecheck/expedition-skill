@@ -67,3 +67,26 @@ whose author noted the amendment is one line if the human would rather have it.
 
 **Its clause 2 exists because its own author was caught by what the clause forbids.** Scanning for one heading form
 miscounted twice; the entry must name every form it matches or *"it reproduces the bug it exists to fix"*.
+
+## Held: this condition's own clause 2 undercounts the thing it exists to protect
+
+*Filed by the manager from [node 178](178-whether-adding-a-standard-is-a-moved-standard.md)'s worker, in its own
+words. **Do not claim this node until the human has amended clause 2.***
+
+> **Node 220's acceptance condition is itself wrong on the number it exists to protect.** Node 220 is open and its
+> condition names **five** retrospective heading forms "as of 2026-09-09", written expressly so its worker would not
+> undercount by searching one form. There are **six**: it misses node 70's `## Annotation: this node's retrospective
+> claim is refined, and its own number has moved`, which landed in commit `8bb5d02` *before* node 212 resolved in
+> `54d03b3` the same day. So the clause written to prevent an undercount is an undercount, and a worker following it
+> will reproduce the bug the node exists to fix. Node 212's answer carries the same five. **This should be amended
+> before node 220 is claimed**, and amending a condition is not mine — I report it.
+
+**Why the manager has not amended it.** The condition is node 212's worker's, not the manager's, and rewriting one
+is never the manager's — a condition that is wrong goes to the human. **Clause 2 already anticipates this in part**:
+it says the five are stated *"as of that date, not authoritative, and not to be relied on"* and that *"the worker
+derives the current set itself and the entry covers what it finds"*, so a worker obeying the whole clause would
+find six. **What is wrong is the enumeration inside a clause that also tells its reader to distrust it**, which is
+the same shape as every stale number this effort has recorded.
+
+**The manager's own count was five too**, taken from node 212's answer and repeated in a spawn, so this is a third
+carrier of the stale figure rather than a defect of node 212's worker alone.

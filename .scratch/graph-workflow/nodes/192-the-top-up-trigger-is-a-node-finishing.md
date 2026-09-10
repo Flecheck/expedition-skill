@@ -66,3 +66,18 @@ land, and this node is about the record rather than about the manager's conduct 
 **The manager's own account of how it failed, filed because the human asked for the rule and not for the excuse.**
 It treated a returned payload as a node finishing on one reading and as not finishing on another, and it waited for
 a lull instead of topping up in the moment. Both grilling slots sat at target only because the human asked twice.
+
+## Flag `192.1` — the manager's own, against itself
+
+*Filed by the manager. Outstanding, and not about this node's subject except that this node exists to make the rule
+permanent.*
+
+**The manager ran one grilling node against a recorded target of two, for most of a session.** The map states the
+target and the rule that maintains it in the human's own words — *"by default 2 grilling nodes at once, and the rule
+is that when a node finishes, you start a new one (or new ones) to get back to the current amount"* — and adds
+explicitly that **a live question does not block a start**. The manager nevertheless ran a single grilling node at a
+time, treating the one-question rule as though it capped the number of running nodes, which the same bullet
+forbids.
+
+**Caught by the human**, `verbatim`: *"only one grilling slot ?"*. **This is the third top-up failure of this
+effort**, after the one that minted this node and one during the shipping backlog.

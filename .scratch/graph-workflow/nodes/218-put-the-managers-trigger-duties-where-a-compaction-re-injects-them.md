@@ -69,3 +69,16 @@ later node may add one; this one does not.
 lacks — a file in front of it does not make it act. [Node 212](212-the-mint-on-second-report-rule-is-defeated.md)'s
 `Q3.` answer repairs the retrospective by removing the separate later act altogether, which is the stronger shape,
 and this node is the weaker mechanism applied to the two duties that have no such shape yet.
+
+## Held: clause 6 rests on a finding now under challenge
+
+*Filed by the manager. **Do not claim this node until this is lifted.***
+
+Clause 6 refuses to configure any hook, and its ground is [node
+217](217-whether-a-hook-can-hold-the-managers-standing-duties.md)'s finding that `PreCompact` cannot inject context
+and that a `SessionStart` injection is lost to the next compaction. **The human has contradicted the first half**,
+`verbatim`: *"It seems that PreCompact works for the hook"*. Node 217's worker is resumed to establish it.
+
+**If `PreCompact` can inject text that reaches the rebuilt context, clause 6 is wrong and this condition is the
+manager's to revise before the node is worked** — it is the manager's own condition, so revising it costs nothing
+but must happen before a worker holds it, not after.

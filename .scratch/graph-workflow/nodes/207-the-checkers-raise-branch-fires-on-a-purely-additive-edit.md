@@ -1,7 +1,8 @@
 # The checker's raise branch fires on a purely additive edit to a shipped standard
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 178
 
 Blocked by: none
 
@@ -43,3 +44,23 @@ of the manager's on which reading is right.
 
 **Every node whose work adds to a shipped file the rules file also names as a standard is in this class**, which
 includes the shipped half of most of this effort's own remaining work.
+
+## Superseded by [node 178](178-whether-adding-a-standard-is-a-moved-standard.md)
+
+*Filed by the manager. **The replacement pre-existed this node** — node 178 has held this question since before the
+session that minted this one, so this is a duplicate the manager created rather than a node that turned out wrong.*
+
+**What node 178 asks, in its own worker's words:** *"Does a pure addition, which leaves every pre-existing element
+unmoved, fall under that bullet, or does the bullet reach only a standard rewritten in place? If it reaches
+additions, every node that extends this file deadlocks its own check."* That is this node's question with nothing
+missing.
+
+**The manager minted this node anyway**, at node 197's gate, on the ground that the arrival count had passed a
+threshold — **and did not look at the frontier for a node already holding the subject.** Node 178 records that two
+checkers had already improvised past that bullet before today, and that **the human saw the question at node 144's
+gate and approved without answering it**. So the count was four before this node existed, not three.
+
+**What this node contributes, and what has been carried into node 178 rather than left here:** the two arrivals of
+this session — node 197's checker, which said the literal reading makes the class of work *"permanently
+uncheckable"*, and node 204's checker, which settled a reading and disclosed that *"under the other reading, the
+work would FAIL clause 6"*. **Nothing is blocked on this node**, so retiring it satisfies no edge and breaks none.

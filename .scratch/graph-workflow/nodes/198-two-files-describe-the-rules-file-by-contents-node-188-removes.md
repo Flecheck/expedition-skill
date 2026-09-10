@@ -62,3 +62,27 @@ reaches these two descriptions itself, this node is discharged and the manager r
 fences it out — which is the pathology this effort has now recorded four times — this node runs after it with
 clause 2's destination finally knowable. **Either way the defect is held by something**, which is what its author
 said this node was for.
+
+## Annotation: a third site, and a bounding set that is provably complete outside the record
+
+*Filed by the manager from [node 188](188-move-the-landing-section-out-of-the-workers-file.md)'s checker, in its own
+words. Nothing above is changed. Node 188's own worker separately confirmed this node's two targets are still stale
+and named `map-manager-only.md` as the destination its clause 2 could not name.*
+
+> `.claude/skills/expedition/graph-conventions.md` — itself named among the standards — states that
+> `map-implementation-rules.md` "holds the rules an implementation node's work is held to — the landing policy, the
+> bar's commands and the standards work is held against"; the landing policy is no longer there. And `.gitignore`'s
+> comment reads "See .scratch/graph-workflow/map-implementation-rules.md, \"How the worktree is made\"" — a
+> citation in exactly the by-quoted-phrase form standing rule 4 prescribes, whose phrase now resolves to nothing in
+> the file it names and appears once in `map-manager-only.md`.
+
+**`.gitignore` is a third site this node did not know about**, and the shape is worth keeping: the effort's own
+standing rule 4 says to cite by quoted phrase rather than by line number **because a line number decays silently** —
+and here the quoted phrase decayed instead, silently, when the passage changed file rather than moved within one.
+
+**Its extent is a bounding set rather than an enumerator, and the checker said why:** no enumerator over the
+implementer's editable region can reach these, so it swept every tracked file outside `.scratch/` that cites the
+rules file — four files, two instances, and the other two (`expedition-checker/SKILL.md` and
+`expedition-implementation/SKILL.md`) cite by path and role only, naming no relocated content. **That set is
+provably complete outside the record**; citations from inside `.scratch/graph-workflow/` were not swept, the
+checker being blind to the record, and whoever holds the record settles whether more exist there.
