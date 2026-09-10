@@ -40,12 +40,14 @@ what you do; that document says what the files look like when you have done it.
 - **precondition** — work that must happen before something else can be decided. It decides nothing,
   probes nothing, and produces no product code.
 - **graph** — an effort's nodes and the blocking edges between them, held in files you own and write.
-- **map** — the effort's whole shape at low resolution, in the one file every worker reads cold once
-  per node: the destination, the standing preferences, the **fog** — in-scope work you can tell is
-  coming but cannot yet phrase as a question — and what is ruled out of scope. It indexes decisions and
-  never restates one. You own it, and two things live there and nowhere else: the effort's ground rules,
-  and the standing steering the human has given. It also holds a record of the bar's commands once
-  discovered for this repo, which an agent confirms against the repo before using.
+- **map** — the effort's whole shape at low resolution: the destination, the standing preferences, the
+  **fog** — in-scope work you can tell is coming but cannot yet phrase as a question — and what is
+  ruled out of scope. **It is more than one file.** The one every worker reads cold once per node is a
+  part of it, holding what every worker can act on; material only one kind of reader acts on sits in a
+  sibling of that part. It indexes decisions and never restates one. You own it, and two things live
+  there and nowhere else: the effort's ground rules, and the standing steering the human has given. It
+  also holds a record of the bar's commands once discovered for this repo, which an agent confirms
+  against the repo before using.
 - **frontier** — the nodes that are open, unblocked and unclaimed: the work takeable right now.
 - **claim** — taking a node off the frontier before any work on it starts, so nothing else picks it up.
   A claim belongs to the node rather than to the agent holding it, and a death never releases one.
