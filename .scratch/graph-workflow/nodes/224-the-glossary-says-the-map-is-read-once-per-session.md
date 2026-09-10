@@ -1,7 +1,7 @@
 # The glossary's `Map` entry says the map is read once per session, where one of its files is read by no worker
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -54,10 +54,10 @@ repaired; `CONTEXT.md`, this node; and the conventions document, node 222.
 
 ## Flags
 
-*The worker's own text, pasted. The id is the manager's bookkeeping and nothing else. Outstanding — this node has
-not reached its gate.*
+*The worker's own text, pasted. The id is the manager's bookkeeping and nothing else. **Settled by the approval**,
+the flag having been named in the payload the human answered.*
 
-`224.1` `ASSUMPTION` — The condition's clause 1 left the unit of the once-read open — it forbids saying the map is
+`224.1` **· settled** `ASSUMPTION` — The condition's clause 1 left the unit of the once-read open — it forbids saying the map is
 read once per session, and where the entry keeps saying what *is* read that way it requires only that the thing read
 be a part rather than the whole. I wrote *"read cold once per node"* rather than keeping *"once per session"* scoped
 to a part. Ground: node 215's landed wording in the manager's contract says *"reads cold once per node"* for the
@@ -115,3 +115,130 @@ that phrase absent, so it is flagged rather than left silent.
 *No `NOT COVERED`. One question, and it lands on [node
 222](222-the-conventions-file-says-a-worker-reads-the-whole-map.md), which already holds
 `graph-conventions.md`'s statement that a worker reads the whole map — the manager has filed it there.*
+
+### Gate — `approve`
+
+**The human's word, `verbatim`.**
+
+> approve
+
+**What it decided.** `approve` on a `PASS`ing tree lands the work as it stands, including flag `224.1`'s choice of
+*once per node* over the condition's permitted *once per session scoped to a part*. **The flag is settled by the
+approval.**
+
+**What travelled with the payload and is not decided by a word about the work.** The checker's one question — that
+`graph-conventions.md` still describes `map.md` as *"Read once per session"* in a shipped standard whose own opening
+says terms are used exactly as this glossary defines them — is filed on [node
+222](222-the-conventions-file-says-a-worker-reads-the-whole-map.md), which already holds that file's account of how
+the map is read. It needed no answer to land this work.
+
+**One thing the manager repaired in the record at this landing, on this node's worker's finding rather than its
+work.** `map.md` stated that `CONTEXT.md` holds *"50 term entries and 40 `_Avoid_` lines"*, measured at node 29. The
+true figures are **51 and 41**, established twice here — by this node's worker and independently by its checker —
+and **wrong before this node's own edit**, which added neither an entry nor an `_Avoid_` line. Struck in place with
+the corrected figures, dated, and marked non-authoritative under node 183's rule. The worker's own observation on
+why its condition could not catch this is in its retrospective: the wrong count was one file away, in `map.md`, and
+outside every clause it was given.
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+`CONTEXT.md`'s entry for **Map** no longer attaches a whole-map read to the term. The clause *"read once per
+session"* is gone from the entry's opening sentence, and in its place the entry states that the map is more than one
+file, that no reader reads all of it, and that what is read cold once per node is *the part every worker reads* —
+leaving the sibling holding one kind of reader's material outside that read. The entry keeps, unchanged in
+substance, its statement of what the map is (the whole effort at low resolution: the destination, the standing
+notes, the fog, and what is out of scope) and its statement that it indexes decisions and never restates one. Its
+`_Avoid_` line is untouched, character for character.
+
+The entry's new wording is:
+
+> The whole effort at low resolution: the destination, the standing notes, the fog, and what is out of scope. It is
+> more than one file and no reader reads all of it — the part every worker reads cold once per node holds what every
+> worker can act on, and material only one kind of reader acts on sits in a sibling of that part. It indexes
+> decisions and never restates one.
+
+Three calls inside it a later reader would otherwise re-derive.
+
+1. **"once per node", not "once per session".** The condition's clause 1 permits the entry to keep saying what is
+   read once per session so long as what is said to be read that way is a part rather than the whole. It was
+   sharpened instead to *once per node*, on three grounds: node 215's landed repair of the manager's contract's
+   `map` entry says *"The one every worker reads cold once per node is a part of it"*, and this entry is the same
+   claim in the glossary; the glossary's own **Node** entry already fixes a node as *"sized to one agent session"*,
+   so *per node* is the file's own unit and *per session* is the looser paraphrase of it; and *session* is the
+   reading under which the original claim was false in the first place, the manager's session spanning many nodes
+   and taking in the sibling no worker reads. This is the `ASSUMPTION` flag above.
+2. **Position by role, never by filename.** Clause 3 forbids naming a file, so the entry locates material as *"the
+   part every worker reads cold once per node"* and *"a sibling of that part"* — the same two role-and-position
+   phrases node 215 used, which keeps the glossary and the manager's contract saying one thing in one vocabulary.
+3. **No node citation was added inside the entry.** The four standing rules for writing ask an item to cite the
+   nodes that shaped it, but no entry in this glossary cites one: the file's own header states that *"the reasoning
+   behind each one lives in the node that settled it"*, and a citation would be a link to a filename, which clause 3
+   forbids. The rule is satisfied at the file's level rather than the entry's, and this is deliberate rather than an
+   omission.
+
+Clause 6 raised no collision with clause 5. The only count `CONTEXT.md` states of its own contents is the heading
+`## The five kinds of node`, and five kind entries sit under it in the finished file. The file states no count of
+its term entries or of its `_Avoid_` lines, so nothing outside the **Map** entry needed rewording to keep an
+arithmetic claim true, and nothing outside it was touched. Measured for the record: the finished file holds **51
+term entries and 41 `_Avoid_` lines** — `map.md` says 50 and 40, a stale record outside this node's scope and
+reported below.
+
+The bar's non-command half was confirmed against the repo rather than trusted from the record: no manifest, no task
+runner, no CI directory, no formatter config, and the one ignore file, `.gitignore`, holds exactly the two entries
+the record describes (`.worktrees/` and `.claude/worktrees/`) and invokes nothing. The record and the repo agree;
+there is no difference to repair.
+
+**What the worker reported its work invalidates:** `none`.
+
+**What the worker surfaced as new nodes:** `none`.
+
+## Retrospective
+
+*Filed by the manager in the same edit that resolves the node, the duty the human settled at [node
+212](212-the-mint-on-second-report-rule-is-defeated.md). Pasted as the worker wrote it.*
+
+1. **What I had to hunt for.** Node 215's landed wording — the thing this node most needed, since its whole job is
+   to say in the glossary what 215 already said in the manager's contract. Nothing pointed at it. The node file and
+   the spawn both cite node 215 as the *author* of my condition and as having *removed the same defect*, but neither
+   quotes the replacement text, so I grepped `.claude/skills/` for `once per node` and found it at `SKILL.md`'s
+   `map` entry. I looked first at `decisions.md`'s line for 215, which says the shape of the repair (*"the cold-read
+   file becomes a part of it, named by role and never by filename"*) but not the sentences, so it cost a read
+   without answering. Second, the bar's commands: `map-implementation-rules.md` records them, and the contract
+   requires confirming the record against the repo, which took one directory listing plus the ignore file — cheap
+   and correctly placed. Nothing else was hunted.
+
+2. **What arrived in my context that this node did not need.** `map.md`, read whole and cold, is where the weight
+   is. This node is a four-line prose edit to one glossary entry, and of that file's ~45 standing preferences and
+   notes exactly two bore on the work: the note that `CONTEXT.md` is the glossary whose `_Avoid_` lines bind, and
+   the retrospective rule that produced this section. The long items on resumption, on flag settlement, on the
+   one-question-at-a-time rule, on the human being the scarce resource, on token priority, on the manager never
+   idling, and the whole `Notes` account of what the manager must carry are addressed to the manager and reach no
+   worker's decision — they are the same class of material as the manager-only sibling that node 139 already moved
+   out, and the honest arrangement would be a second cut of `map.md` along the same line 139 used: what a *worker*
+   acts on against what the *manager* acts on. One heading would have saved most of it.
+   `map-implementation-rules.md`, by contrast, was almost entirely load-bearing after its 56.7% cut; the one part I
+   did not need was the checker-facing rule on reading changed paths as the work, which binds the checker and not
+   me. From my spawn, the pointer to decisions 142 and 204 fed nothing: 142 is `graph-conventions.md`'s map shape
+   (node 222's file, which I must not touch) and 204 is the bar-commands demotion, which my contract already states
+   in full. And I went to `decisions.md` for four lines and took the file.
+
+3. **What would have made this node easier.** Two things, both small. The node file quotes the defective sentence in
+   full — which is why I never had to guess what I was repairing — and it should have quoted the *repaired* sibling
+   sentence beside it, since the condition demands consistency with a wording it does not contain. One line in the
+   spawn (`node 215 landed: "It is more than one file. The one every worker reads cold once per node is a part of
+   it…"`) would have removed the only hunt this node had. Second, the condition's clause 1 mixes a prohibition with
+   a conditional permission about the same phrase, and the flag above exists only because of that seam: had it said
+   *"the entry may say that a part is read once per node or once per session, and must not say the map is"*, there
+   would be nothing to flag.
+
+4. **What I read that was stale, wrong, or contradicted something else.** One item, and it names the record.
+   `map.md` states that *"`CONTEXT.md` holds 50 term entries and 40 `_Avoid_` lines"*, measured at node 29. The file
+   holds **51 and 41** — and held those before my change, which added no entry and no `_Avoid_` line. This is the
+   standing item `nothing indexes counted lists` landing for at least the third time on this effort, node 204's
+   worker and this node's author having both paid for it by hand; under the map's own rule that the second report of
+   the same standing item mints a node, it is past due. Note also the pleasing near-miss: my condition's clause 6
+   was written narrowly, to counts a file states *of its own contents*, and it caught nothing, because the wrong
+   count about `CONTEXT.md` is not in `CONTEXT.md` — it is in `map.md`, one file away and outside every clause I was
+   given. The cheap half is cheap because it checks the file that rarely lies about itself.
