@@ -116,22 +116,40 @@ you read inside one: a rule stated across a line break is invisible to a search 
 ### Where the work moved one of them
 
 A standard the bar carries can be one of the paths that changed, and the standard has then moved under the
-check. That is not on its own a reason to stop. Split the standard in two: its **operative content**, what
-it requires or refuses, and its **rationale**, the wording that says why. A check survives one of those
-moving and not the other — **moving a rationale leaves the check intact; moving operative content destroys
-it**, because there is then nothing unmoved left to hold the rest of the work against.
+check. That is not on its own a reason to stop. **A standard is not the file that holds it**: an edit reaches
+a standard only where it changes what that standard itself requires or refuses, and an edit elsewhere in the
+same file leaves the standard untouched however large that edit is.
 
-So settle which one moved before you check anything else, and settle it on the operative content alone:
-take the set of things the standard requires or refuses on each side of the change, element by element, and
-compare the sets rather than the prose around them. Unwrap both sides first — a standard rewritten in place
-is usually rewrapped too, and the diff will show you lines that did not move.
+Split the standard in two: its **operative content**, what it requires or refuses, and its **rationale**, the
+wording that says why. **Moving a rationale leaves the check intact; moving operative content can take away
+what you would have held the work against** — and whether it did is the one question this section turns on:
+**is anything unmoved left to hold this work against?** That question decides between raising and carrying
+on, and *did the file change* never does.
+
+So settle what moved before you check anything else, and settle it on the operative content alone: take the
+set of things the standard requires or refuses on each side of the change, element by element, and compare
+the sets rather than the prose around them. Unwrap both sides first — a standard rewritten in place is
+usually rewrapped too, and the diff will show you lines that did not move.
+
+Then take the elements one at a time: every element that did not move still binds, and the work is held
+against it.
 
 - **The sets are identical**, and only the wording explaining them changed. The standard still stands, and
   it does not matter which side you read it from — which is what leaves a check possible at all. Hold the
   work against it as you would have anyway, and say in your outcome that you settled this first.
-- **An element was added, removed or altered.** The operative standard has itself moved, you have nothing
-  unmoved left to hold the rest of the work against, and no reading of the work can produce an outcome.
-  Raise it.
+- **An element was added.** This work added it, so it is part of the work rather than a standard the work is
+  held against — and every pre-existing element of that standard is unmoved, so a check remains possible.
+  Hold the added element against the acceptance condition, as work, like any other changed text, and hold
+  the work against no element that same work introduced. **A purely additive edit is never on its own a
+  reason to raise.**
+- **An element was removed or altered.** Ask of that element alone whether it is one *this* work must be
+  held against. Where it is not, your check stands untouched. Where it is, ask whether an unmoved statement
+  of it survives — elsewhere in the same standard, or in another standard you read — and hold the work
+  against that statement where one does.
+- **An element this work must be held against moved, and no unmoved statement of it survives.** You have
+  nothing left to hold that part of the work against. Where that part is the whole of what you must
+  establish, raise it. Where it reaches only part and the rest stands, check the rest and hand that part
+  back under `NOT COVERED:` below.
 
 ### Running a reviewing skill
 
@@ -285,7 +303,12 @@ establish:
 | you can check it, the work complies, and complying is what produces the defect | your outcome, and a question |
 | you cannot establish one part of it, and the rest stands without that part | your outcome on the rest, with that part named as not covered |
 | you cannot check the condition at all | a raise, and no outcome |
-| the work moved the operative content of a standard the bar carries | a raise, and no outcome |
+| the work moved an element of a standard this work must be held against, no unmoved statement of it survives, and that is the whole of what you must establish | a raise, and no outcome |
+| the same, reaching only part of what you must establish | your outcome on the rest, with that part named as not covered |
+
+**An element the work itself added is in none of these rows.** The work is not held against a standard it
+introduced, so a purely additive edit leaves every pre-existing element standing and the check possible.
+`### Where the work moved one of them` above carries the whole of this.
 
 ### Questions, alongside a `PASS` or a `FAIL`
 
@@ -321,6 +344,11 @@ as though it named something in the working tree would be checking the work agai
 condition, which you may not do; failing the work would be failing it for what the condition asked of
 somebody else.
 
+**A second cause reaches this same route, and it is not blindness.** The part is observable, and what you
+have lost is the thing you would have held it against: an element of a standard this work must be held
+against moved, and no unmoved statement of it survives. `### Where the work moved one of them` above routes
+that here whenever the rest of the condition still stands. Everything below applies to it unchanged.
+
 This is not the same route as a question, and the difference is what your outcome then means: a question
 leaves your outcome covering the whole condition, and this narrows what it covers.
 
@@ -329,7 +357,8 @@ on it, and name the part your outcome does not cover:
 
 ```
 NOT COVERED:
-- <the part, quoted, and why establishing it is outside what you were given>
+- <the part, quoted, and why you could not establish it: outside what you were given, or nothing unmoved
+  left to hold it against>
 ```
 
 Your `PASS` then means the parts you established and no more, so say that plainly. Whoever holds the
@@ -353,8 +382,13 @@ unmeasurable, and what it names can be observed perfectly well by whoever holds 
 the four fits, and it is still a condition you cannot check. Raise it where it reaches the whole condition.
 Where it is confined to one part and the rest stands, hand that part back as not covered instead, as above.
 
-**A standard the work moved.** Where the work changed the operative content of a standard the bar carries,
-you have nothing unmoved to hold the rest of the work against, as above.
+**A standard the work moved, where nothing unmoved survives.** Where the work removed or altered an element
+of a standard this work must be held against, and no unmoved statement of that element survives anywhere you
+read, you have nothing left to hold the work against. An edit that leaves the operative content standing
+takes nothing from you and is not this ground: a rationale reworded, an element this work added, or an
+element that moved but is not one this work is held against. Where it reaches only part of what you must
+establish and the rest stands, hand that part back as not covered instead, as above. `### Where the work
+moved one of them` carries the whole of this.
 
 ```
 NODE:          <the name you were given>
