@@ -22,6 +22,14 @@ section and will merely conflict, which this node's own answer says is acceptabl
 
 *Written by node 115's worker. Pasted as it wrote it, and not the manager's.*
 
+**Two clauses of this condition have been amended, and clause 7 is not marked where it stands.** The amendments are
+held in the two `## Annotation` sections at the end of this file. **Read those before holding any work against this
+condition.** *Pointer added by the manager as a safety repair; it changes no clause's text. [Node
+199](199-is-an-acceptance-condition-a-rule-or-a-record.md)'s worker established that a condition amended elsewhere,
+with nothing pointing at it from the condition block, is read as live by a checker handed the node cold — the
+failure node 143's checker caught. **Which form an amendment should take is node 199's open question, and the
+manager has not pre-empted it.***
+
 > The work is `.scratch/graph-workflow/`. The worker may edit `map-implementation-rules.md`, `map-manager-only.md`
 > and `map-history.md`, and no other file; it may not mark this node, resolve it, or write a line in `decisions.md`
 > or `flags.md`.
