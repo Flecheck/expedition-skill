@@ -47,16 +47,19 @@ written this way, and so is every sibling of it that states rules that currently
 
 `map-manager-only.md` holds the part of the map that only the manager acts on, so that no worker pays
 to read it; it is part of the map, and a rule written there binds exactly as one written in `map.md`
-does. Two of the map's sections are among what it holds:
+does. Three of the map's sections are among what it holds:
 
 - `## Not yet specified` — the fog.
 - `## Out of scope` — one line per node ruled beyond the destination, and per area consciously ruled
   out.
+- `## Landing an implementation node's work` — the landing policy: where a node's worker works, and
+  what happens to that work between the gate and the repository. Landing is the manager's, not a
+  worker's or a checker's, so neither the worker nor its checker reads it.
 
-`map-implementation-rules.md` holds the rules an implementation node's work is held to — the landing
-policy, the bar's commands and the standards work is held against — and is read by that node's worker
-and by its checker rather than by every worker; it too is part of the map, and a rule written there
-binds exactly as one written in `map.md` does; what it admits is under `## Writing the map` below.
+`map-implementation-rules.md` holds the rules an implementation node's work is held to — the bar's
+commands and the standards work is held against — and is read by that node's worker and by its
+checker rather than by every worker; it too is part of the map, and a rule written there binds
+exactly as one written in `map.md` does; what it admits is under `## Writing the map` below.
 
 `map.md` has three sections, in this order:
 
