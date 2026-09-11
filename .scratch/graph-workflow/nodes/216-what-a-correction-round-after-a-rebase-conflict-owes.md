@@ -213,3 +213,33 @@ and is not the manager's: node 115's answer has never been carried into the map,
 160, is open and blocked on node 144. **The node's subject survives** — node 115 states no destination for the
 genuine-contradiction case, and node 68 contradicts node 115 for a post-rebase bar failure — but its premise that the
 record was silent is wrong, and it was the manager's premise rather than a worker's.
+
+## Annotation: a measured fact the record did not have, arriving during node 198's landing
+
+*Filed by the manager from its own landing of [node
+198](198-two-files-describe-the-rules-file-by-contents-node-188-removes.md). It bears on this node's `Q3.`, which
+is still unanswered, and it is recorded here rather than acted on.*
+
+**What the record says about a sandboxed merge failure**, in `map-manager-only.md`'s landing section: *"`HEAD` does
+not move and nothing is lost — the commit stays on its branch and the merge succeeds on a retry outside the
+sandbox."* **Both halves of that are true and the sentence is still incomplete.**
+
+**What was measured at node 198's landing.** `git merge --ff-only` inside the sandbox printed `Updating
+8eaa7fa..b4595b3` and then `error: unable to unlink old '.claude/skills/expedition/graph-conventions.md':
+Read-only file system`. `HEAD` did not move, as recorded. **But the merge had already written the other file**: the
+main tree was left with `.scratch/graph-workflow/map.md` modified, and the retry outside the sandbox then refused
+with *"Your local changes to the following files would be overwritten by merge"*. So the documented retry **does not
+work on its own** where the branch touches more than one file and only one of them is under a read-only mount.
+
+**What made it safe to repair rather than a loss.** The manager established that the dirt was **byte-identical to
+what the branch carried** — `git diff <branch> -- .scratch/graph-workflow/map.md` returned nothing — so discarding
+it with `git checkout --` lost nothing that the merge would not immediately restore, which it then did, verified by
+the same diff returning nothing afterwards. **Had the diff been non-empty the repair would not have been the
+manager's to make**, and that is the branch this node's `Q3.` is about.
+
+**Why this is evidence for `Q3.` rather than a new question.** `Q3.` asks whether a failure that produces no
+conflict sits outside the correction-round rule as plumbing the manager repairs. This is a second instance of that
+shape — an environment refusal, no content in dispute, a total undo available — **and it is the first one where the
+undo required the manager to verify content-identity before acting.** The worker's own caveat on recommending
+`Q3.` was exactly that: *"this route is only as safe as the repair being exactly the prescribed one."* **Here the
+prescribed repair did not cover the case**, and the manager improvised one it could verify.

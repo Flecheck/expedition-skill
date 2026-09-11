@@ -1,7 +1,7 @@
 # Whether `map-manager-only.md` gets an admission test, now that it holds the landing section's history
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: 188
 
@@ -182,3 +182,147 @@ and the manager will say so in whatever node carries the work.
 
 *No divergence: the human took both recommendations as written. Neither answer contradicts anything the worker
 advised.*
+
+## Flags
+
+*The worker's own text, pasted. The ids are the manager's bookkeeping and nothing else. **Outstanding** — this is a
+grilling node, so its flags reach the human at the pick report that closes it rather than at a gate.*
+
+`225.1` `ASSUMPTION` — **On the one live clause inside a struck bullet.** The bullet the sweep node deletes is
+struck in full, but the unstruck sentence after it says *"the commit trailer stays the join key regardless"* — so
+the commit trailer `Node: <effort>/<NN>` being the join key is a live fact whose only statement anywhere in the
+section sits inside struck text. I decided it survives, and wrote the one-sentence replacement into the acceptance
+condition myself rather than leaving the worker to judge it. If the trailer is stated elsewhere in the record, that
+replacement is a duplication; if it is not live at all, the sweep node preserves something dead.
+
+`225.2` `ASSUMPTION` — **On the account I kept.** The sentence explaining that the landing policy was added beside
+rather than rewritten, *"because node 152 and node 144 hold conditions quoting that paragraph's exact phrases"*, is
+an account of how the file came to be arranged and fails the shipped test by its letter. I excluded it from the
+removal list because node 152 is open and its condition still quotes that paragraph, so the sentence is what stops a
+future editor breaking it. If node 152 is re-conditioned off those phrases, this sentence becomes bankable and
+nothing will notice.
+
+`225.3` `ASSUMPTION` — **On the two sub-bullets left byte-identical.** The `**What it hits.**` and `**What it does
+not hit, established by experiment rather than inferred.**` sub-bullets carry error strings and measured behaviour
+that are the rule, so I left them out of the removal list — but *"established by experiment rather than inferred"*
+is history by the test's letter. I traded a few bytes for a bounded edit list with no judgement calls left in it.
+
+`225.4` `ASSUMPTION` — **On where the pointer sentence goes.** I fixed its position in the condition — second
+paragraph of the opening, directly below the one declaring the file's reader and necessarily above *"Nothing below
+was reworded on the way here"*, which claims a property of everything after it that a new paragraph would falsify.
+That is node 196's own placement argument, applied to a different file by me rather than by the human.
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+**Both halves are settled, and they came apart once the tree was read rather than reasoned about.** The human's
+answer, `verbatim`: *"Q1 ok Q2 ok"*, taking both recommendations and neither of the alternatives beside them.
+
+**The first half was already answered by a node that had landed, which is why it is a pointer and not a test.**
+`map-manager-only.md` does **not** state an admission test of its own. It does not need one: [node
+197](197-ship-what-a-file-of-the-map-admits.md) has landed, and `graph-conventions.md`'s `## Writing the map` now
+states the test over *"Each file of the map declares who reads it, and a line belongs in that file only where the
+reader it declares — **one kind of worker, or the manager alone** — would do something differently for having read
+it while working a node"*, with the trigger-against-history clause and the no-sweep clause beside it.
+`map-manager-only.md`'s own first sentence declares its reader, and the manager's contract says to read
+`graph-conventions.md` before touching an effort's files, so the test attaches with no word added. That was [node
+191](191-the-rules-file-carries-accounts-rather-than-rules.md)'s design, recorded at flag `191.2`: the shipped
+general form **instead of** a test written into this file, with the consequence stated there that the file *"gets no
+admission test until the shipped node lands"*. It has landed, so the consequence is discharged rather than
+outstanding.
+
+**What is added is one pointer sentence and nothing more.** The file opens declaring its reader and says nothing
+about what it admits, while its sibling `map-implementation-rules.md` opens with a test in its own words — and a
+reader comparing the two reads that silence as *this file is under no test*, which is the misreading the human's
+original question came from. A pointer removes the asymmetry and restates nothing. The full restatement was refused
+on measured ground rather than on taste: [node 196](196-give-the-rules-file-its-admission-test.md) wrote the test
+locally into the rules file, its own worker reported the duplication that created, and [node
+200](200-collapse-the-rules-files-two-map-history-statements.md) was then spent collapsing it. A third statement of
+one discipline buys that defect a second time.
+
+**The second half is one bounded exception, and node 191's refusal of a sweep stands unchanged.** The human
+licensed a single node running node 189's supersession route over `## Landing an implementation node's work` in
+`map-manager-only.md` and over nothing else. That is an **exception** to node 191's *"no sweep of a file is owed or
+licensed by it"*, not a change to it: node 191's rule binds every other passage of every other file exactly as
+before, and nothing here widens it to the rest of this file or to any sibling.
+
+**The exception has a specific ground, and it is a claim of node 191's that stopped being true.** Node 191 refused
+the sweep on something checkable: *"the six nodes queued on this file are how the file converges."* For
+`map-implementation-rules.md` that held. For this section it does not. Of the open nodes standing on it, node 152
+touches one paragraph and is itself unsatisfiable as written since node 188 moved the section out from under it,
+node 160 adds a rule, and node 180 will rewrite the sandbox bullets — and the passages carrying the largest
+accounts, the four-failed-rebases narrative the human was reading among them, are touched by **none** of them. So
+this is the rule's own convergence mechanism failing to reach one section, not the human overriding a rule that is
+working.
+
+**Measured, at this node's filing.** The landing section is **16,569 bytes over 128 lines — 49% of the 34,160-byte
+file**. It holds **9 struck-through regions totalling 1,535 bytes**, and **only 2 of the 9 exist anywhere else**.
+**The other 7 are struck in place with no copy anywhere**, so removing any of them without banking it first would be
+a deletion. Paragraphs that are wholly or mostly account come to **~7,010 bytes, 42% of the section**; the fourteen
+edits specified come to less than that, because every trigger node 191 protects is kept and one account is kept
+deliberately.
+
+**What is kept, and it is the half of node 191's clause that does the work.** Every error string stays — `could not
+detach HEAD`, `Could not reset index file`, `unable to unlink old …`, `Read-only file system` — as does the
+`git checkout --detach` instruction, the `/proc/mounts` command, every `verbatim` quotation of the human, and every
+rule that currently binds. A trigger is part of a rule and stays.
+
+**One account is kept although the test's letter would evict it**, and the reason is a live dependency rather than
+sentiment: the sentence *"Added beside the landing policy above rather than rewritten into it, because [node 152]
+and [node 144] hold conditions quoting that paragraph's exact phrases"* is how a future editor knows not to reword
+that paragraph, and node 152 is still open and still quotes it. **It is a trigger wearing a history's clothes.**
+
+**Two nodes come out of this, and they are sequenced rather than parallel**, both writing `map-manager-only.md`: the
+exception node first, the pointer node blocked on it.
+
+**What the worker reported its work invalidates:** `none`, with three near-misses it recorded because each looks like
+one — **node 191 is excepted, not contradicted**; **node 191's flag `191.2` is discharged, not falsified**, the
+shipped node it waited for having landed; and **node 188 is fulfilled rather than contradicted**, its condition
+having demanded a byte-identical move and so being unable to touch the material.
+
+## Retrospective
+
+*Filed by the manager in the same edit that resolves the node. Pasted as the worker wrote it.*
+
+**1. What I had to hunt for.** Three facts, and the expensive one was *whether node 197 had landed*. My node file,
+my spawn and the manager's notes all described node 197's shipped statement as a future or as a rule of node 191's —
+none said it was live text in `graph-conventions.md` today. I found it by reading node 197's file to the bottom and
+then grepping the shipped file to verify the wording rather than trust the node's `## Answer`. **That single fact
+inverted Q1**: without it I would have recommended writing a test into the file, which is the option the human would
+then have been choosing between under a false premise. Second, *which struck regions are already banked* — nothing
+records that, so I diffed the nine against `map-history.md` by substring and found 2 of 9. Third, *whether open
+nodes converge on this section* — I had to read node 152 in full and check statuses one by one to establish that
+node 191's convergence claim fails here, which is the whole ground the human's Q2 answer rests on. I looked first in
+the node file and the spawn for all three; none of them was there.
+
+**2. What arrived in my context that this node did not need.** `map.md` in full, read cold, is the largest item and
+about a fifth of it bore. The fourteen other standing preferences bore on nothing I decided. That is the mandatory
+read working as designed, so it is not a complaint about `map.md`; it is an argument that **a grilling node whose
+subject is one file's contents could be spawned with a named subset**. Second, and this one is avoidable: I read
+`map-implementation-rules.md` whole, 12,370 bytes, to learn one thing — the exact wording of the admission test in
+its opening. A spawn line quoting that paragraph would have saved the read entirely, and my spawn already quoted
+node 188's byte counts, so the shape was there. Third, `decisions.md` I never opened whole; I grepped six node ids
+out of it, which is the right access pattern for a 38 KB index and cost almost nothing. Worth saying because the map
+lists it as a read-whole file on the human's *"it's small enough"*: **for this node it was not read whole and
+nothing was lost.**
+
+**3. What would have made this node easier.** Two things, both in the record rather than in the contract. **The
+record does not state which nodes are open on a given passage.** Establishing that node 191's convergence claim
+fails for this section — the single load-bearing fact of Q2 — took reading one node in full and statusing thirteen
+others. Node files say what they are blocked by; nothing says what they will touch. A one-line `Touches:` on an
+implementation node would have answered it in one grep, and it is the same fact a manager needs to sequence two
+writers over one file, which this effort's own code-slot bullet already requires it to compute by hand. **And a
+shipped node's answer does not say that it shipped.** Node 197 is `Status: resolved` with an approved gate, but
+knowing whether its text is *in the shipped file right now* meant opening the shipped file. On an effort whose
+subject is the shipped files, that gap is structural: every node that reasons about what the workflow currently says
+has to re-verify it the way I did.
+
+**4. What I read that was stale, wrong, or contradicted something else.** One thing, and it is in my own node file:
+its `## Question` says `map-manager-only.md` *"has never had one applied"* and lists the two open halves as though
+both were live. **The first half was substantially closed by node 197 landing, which happened before this node was
+filed.** The node file was pasted from node 188's worker, who wrote it before checking, and the manager's note at
+filing repeated the framing rather than testing it. Nothing was wrong to write; it was true when node 191 resolved
+and stopped being true when node 197 landed, with no mechanism noticing. That is the same failure mode
+`map-manager-only.md`'s own fog item names — *nothing watches a standard that lives outside this repository* — one
+step inward, where **the thing unwatched is this effort's own shipped file**.
