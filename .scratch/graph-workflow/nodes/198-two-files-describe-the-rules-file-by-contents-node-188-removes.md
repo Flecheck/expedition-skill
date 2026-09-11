@@ -113,3 +113,42 @@ claims this node either works clause 1 as written and leaves three sites standin
 human first.
 
 **Node 188 is resolved, so this node's `Blocked by: 188` edge is satisfied and it is on the frontier.**
+
+## Flags
+
+*The worker's own text, pasted. The ids are the manager's bookkeeping and nothing else. Outstanding — this node has
+not reached its gate.*
+
+`198.1` `ASSUMPTION` — **`map.md` was corrected by strike-in-place rather than by the `Change the map` procedure.**
+That procedure requires the superseded text be appended verbatim to `map-history.md`, and the condition's opening
+permits exactly two files, of which that is not one. I judged the two stale phrases to be facts rather than rule
+statements — the never-delete bullet cuts by a text's job — and followed the strike-in-place precedent already in
+the base commit at `**The graph is ~~six~~ seven files**` and at node 224's glossary counts. I did not raise this,
+because a reading exists that honours both clauses at once; had the phrases been rule statements, the condition
+would have been unsatisfiable and that would have been a raise.
+
+`198.2` `ASSUMPTION` — **I widened past clause 1 to `map.md`'s statement that the code-slot count lives in the rules
+file.** Clause 1's predicate names a *section*, and the count is a paragraph, so the clause may not literally reach
+it; the manager amended nothing. I corrected it anyway: it is false, it sits inside a file the condition puts in
+scope, the fix is one link, and leaving a known-false pointer in a passage I was already editing is worse than the
+widening.
+
+`198.3` `ASSUMPTION` — **`graph-conventions.md`, not `map.md`, was made the file that describes where the landing
+policy lives, and `map.md`'s list of what `map-manager-only.md` holds was left without a landing item.** Clause 2
+allows exactly one describer, and the shipped file cannot be the linking one — it carries no markdown link outside a
+fenced block, and any link into one effort's record would break clause 3 for every other effort. So `map.md`
+reaches the landing policy only by link, which also keeps it to what every worker acts on.
+
+### The manager's note beside these flags
+
+*Not a change to any of them.*
+
+**Flag `198.2` is the widening the manager declined to make and said so.** The spawn told this worker that whether
+clause 1 reaches the code-slot pointer was its to establish and that the manager had not widened it. It established
+that the clause probably does not reach it, corrected it anyway, and flagged the departure — which is the shape the
+contract asks for rather than a breach of it.
+
+**Flag `198.3` rests on a measurement nobody had made.** That `graph-conventions.md` carries **no markdown link
+outside a fenced block** is what forces clause 2's assignment, and the worker had to script it to find out. Its own
+retrospective names that as the expensive shape: *"a condition turned on a property of a file that nobody had
+measured."*

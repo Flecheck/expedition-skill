@@ -1,0 +1,59 @@
+# `graph-conventions.md` says `map.md`'s `## Notes` holds three things this effort's map keeps elsewhere
+
+Type: implementation
+Status: open
+
+Blocked by: none
+
+## Question
+
+*Surfaced by [node 198](198-two-files-describe-the-rules-file-by-contents-node-188-removes.md)'s worker, and pasted
+as it wrote it.*
+
+> Under `## The seven files`, the `map.md` gloss says `## Notes` carries *"the two things the manager maintains
+> here: the **declared label vocabulary**, and the bar's commands once they have been discovered for this repo"*,
+> and that the ground rules and a standing over sources are optional blocks that *"live here"*. On this effort the
+> label vocabulary is in `map-manager-only.md`, the bar's commands are in `map-implementation-rules.md`, and the
+> ground rules moved there too at node 144; `## Labels` further says *"A node may only use a label declared in the
+> map's `## Notes`"*. Found by node 198's worker while editing the paragraph above it. Unlike node 198's two targets
+> this is not simply stale text: the shipped file is generic, and an effort that never splits its map keeps all of
+> it in `## Notes`, so the question is whether these clauses should say *the map* — a sibling being part of the map
+> — rather than `map.md`'s `## Notes`, and that is a judgement rather than a repair, which is why node 198 did not
+> make it.
+
+**Blockers, in the worker's words:** *"none."*
+
+## Acceptance condition
+
+*Written by node 198's worker. Pasted as it wrote it, and not the manager's.*
+
+> The work is `.claude/skills/expedition/graph-conventions.md` and no other file may be edited. It is a shipped
+> file, so it is edited plainly: superseded wording is removed and nothing is struck in place or moved to a history
+> file. The worker may not mark this node, resolve it, or write a line in `decisions.md` or `flags.md`.
+>
+> Done means all of the following are true of the finished tree.
+>
+> 1. No statement in the file requires a named item — the declared label vocabulary, the bar's commands, an effort's
+>    ground rules, or a standing over sources — to sit in `map.md`'s `## Notes` specifically, where an effort may
+>    instead hold it in a sibling file of the map. Each such statement either names the map as a whole or says
+>    plainly that the item lives in `## Notes` unless the effort has moved it to a sibling.
+> 2. The rule under `## Labels` that a node may only use a declared label is preserved, and states where that
+>    declaration may live in terms consistent with clause 1.
+> 3. The file names no file outside the seven it lists under `## The seven files`.
+> 4. Every markdown link in the file outside a fenced code block resolves to a path that exists.
+> 5. No file other than `.claude/skills/expedition/graph-conventions.md` is modified.
+> 6. The working tree meets the bar.
+
+## The manager's note at filing
+
+*Not a change to anything above.*
+
+**Its author drew a distinction the manager would not have drawn, and it is why this is a node rather than a
+correction inside node 198.** Node 198's two targets were stale text in a file that had fallen behind a move. This
+is not: the shipped file is **generic**, so its statement is correct for any effort that never splits its map, and
+wrong only for one that has. The repair is therefore a judgement about what the shipped file should assume, not a
+repointing — and its author said so and declined to make it under a condition scoped to repointing.
+
+**Two files must not hold `graph-conventions.md` at once.** This node and [node
+222](222-the-conventions-file-says-a-worker-reads-the-whole-map.md) both edit it, as did node 198. **The manager
+holds that sequencing and has written no blocking edge**, neither node needing what the other produces.
