@@ -1,7 +1,7 @@
 # What a correction round after a rebase conflict owes — a re-check, a second gate, or neither
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -288,3 +288,106 @@ command that shows its diff"*, given after a gate reached them with neither. It 
 `map.md` and carried into the two files that state it by [node
 231](231-a-gate-payload-stops-carrying-a-diff-command.md). **The worktree's path survives; the command goes.** The
 manager has already stopped emitting it.
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+### The rule: one test, applied once, at the approval
+
+After the human approves an implementation node at its gate, everything between that approval and the merge is
+governed by a single test: **did anybody author content after the approval?**
+
+- **Nothing authored** — the approval stands. The manager re-runs the bar on the rebased result and merges. No
+  re-check, no return to the human. What reaches them is the landing report, which awaits no answer.
+- **Something authored** — the work returns to the **checker**, which re-runs the bar in full and re-checks the
+  acceptance condition only where the worker reports that its change touched something the condition names — the
+  existing shipped test, unchanged — and then to the **human** for another approval.
+
+The human's word, `verbatim`: *"Q1 ok"*, taking the recommendation as written.
+
+### What the test decides, case by case
+
+| what happened after the approval | authored? | where it goes |
+| --- | --- | --- |
+| a conflict in text held under the never-delete rule, the manager keeping both sides | no | the manager lands it — node 115's first branch, unchanged |
+| the same hunks re-applying at a different offset — node 200's case | no | the manager lands it |
+| a conflict anywhere else, product code included, the branch's own worker resolving it | yes | the checker, then the gate — node 115's second branch, unchanged |
+| two sides that genuinely contradict: `git rebase --abort`, correction round | yes | the checker, then the gate — **node 115 left this destination unstated, and this is what fills it** |
+| a post-rebase bar failure | yes | the checker, then the gate |
+| a rebase that fails without conflicting | not in this vocabulary at all — see below | the manager repairs, retries, lands |
+
+### Why the manager cannot be the return address for authored content
+
+The record's general rule is that **a round returns to whoever raised it**: a checker `FAIL` goes back to the
+checker, a gate `correct` goes back to the gate and not the checker. That rule holds because the raiser can judge
+the fix. An integration failure is raised by the **manager**, which can judge neither — it is barred from reading
+code to produce a note, which is the ground node 115's own worker gave for refusing to make the manager the
+resolver of a code conflict. So the general rule does not reach this case, and the authored test governs instead.
+
+### What this supersedes
+
+Node 68's *"**A post-rebase bar failure takes a correction round** — no new status, no new gate outcome"* is
+superseded in its second clause only. A bar failure is fixed by somebody authoring something, and content that did
+not exist when the human approved is not covered by that approval. **"No new status" stands**: the node does not
+change state, and it is the same node throughout.
+
+The landing policy's *"A post-rebase bar failure likewise takes a correction round, and the work does not land"* is
+incomplete rather than wrong: the work does land, after the round, the re-check and a second approval.
+
+### What an approval covers, stated because this node's question assumed otherwise
+
+This node offered a route resting on *"the human's word being about the content"*. **It is not.** The recorded
+scopes of an approval are three: it is the only thing that permits a code commit; it settles that node's flags; and
+it covers the payload it answers. The test above therefore does not rest on approval attaching to bytes — it rests
+on the opposite. Approval covers what was in front of them, and content authored afterwards was not.
+
+### The price, measured rather than assumed
+
+Coming back to the human is **not a second gate**. Nothing shipped says a node has one gate *raise*: the manager
+contract mandates re-raising uncapped, nodes 143 and 200 each ran two raises with two checker runs, and node 22
+calls six of them *"six rounds at one gate"*. Node 108 settles that a gate *"re-enters the queue when it is next
+raised"* and that a live re-check occupies the human's channel not at all. **So the cost of the authored branch is a
+held code slot, not the human's attention** — which is what makes it affordable, and it is cheaper than this node's
+own question assumed.
+
+### The manager shows no diff, and the landing report carries no proof
+
+**`DIVERGENCE`.** The recommendation was that the manager prove, with a command, that what landed equals what was
+approved. The human refused it, `verbatim`: *"don't give the diff, If I want the diff, I can get it."*
+
+So at a landing on an approval already given, the manager owes what the test above requires and nothing more: it
+says what happened and that the work landed. It does not prove the content unchanged, and node 71's duty to disclose
+a skipped re-check **does not extend past the approval**.
+
+**What the refusal does not reach is the manager's own verification.** The question was about *showing*, not about
+*doing*, and the test above cannot be applied without it: deciding whether anything was authored is a fact the
+manager must establish before it chooses a branch. It establishes it and does not display it.
+
+**This answer assumes no diff command anywhere.** The same reply removes the gate payload's diff command as standing
+steering — their words, `verbatim`: *"the current diff command is not useful, I am using vscode, not looking at the
+diff in the terminal, it can be removed"* — carried by a separate node. The worktree's path survives; the command
+does not. Nothing above depends on one.
+
+### A rebase that fails without conflicting is not a correction round at all
+
+Their word, `verbatim`: *"Q3 ok"*. A rebase failure that produces **no conflict** — a sandbox refusal, an
+environment error, a dirty tree left behind by a previous failed attempt — sits outside the correction-round rule
+entirely. The manager repairs, retries and reports. No round, no re-check, no return to the human. Nothing was
+authored and the worker has nothing to correct; reading *"the rebase failed"* as the trigger would spend a whole
+worker on a filesystem mount.
+
+**The licence is narrower than that sentence sounds, and the boundary is the repair.** It covers a failure whose
+repair the record already prescribes — node 143's single pass of `reset --hard` to the branch's own commit, `clean`
+the record directory, then rebase. **Where the manager must improvise a repair, the failure is outside the
+prescribed set**, because an improvisation is the manager deciding on its own how to restore work the human approved
+and which has not landed — the shape of judgement this node exists to take away from it. Such a case is **named in
+the landing report as an improvisation** and **minted as a node**, so the prescribed set grows rather than the
+improvisation repeating silently. It is not proof and it is not a diff; it is one line saying the record did not
+cover this.
+
+This boundary was tested for real while this node was being answered, and the licence's limit is therefore measured
+rather than predicted: landing node 198, a sandboxed `git merge --ff-only` printed `Updating <a>..<b>`, failed on a
+read-only mount **having already written one of the changed files**, and left the tree partially updated so that the
+documented retry outside the sandbox refused with *"Your local changes would be overwritten by merge"*. The manager
+improvised, and the human's `ok` was given without that case in front of them.
