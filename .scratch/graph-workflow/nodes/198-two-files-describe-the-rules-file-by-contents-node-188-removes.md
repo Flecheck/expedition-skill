@@ -1,7 +1,7 @@
 # Two files describe `map-implementation-rules.md` by contents that node 188 removes
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: 188
 
@@ -116,10 +116,10 @@ human first.
 
 ## Flags
 
-*The worker's own text, pasted. The ids are the manager's bookkeeping and nothing else. Outstanding — this node has
-not reached its gate.*
+*The worker's own text, pasted. The ids are the manager's bookkeeping and nothing else. **All three settled by the
+approval**, the payload having named each one.*
 
-`198.1` `ASSUMPTION` — **`map.md` was corrected by strike-in-place rather than by the `Change the map` procedure.**
+`198.1` **· settled** `ASSUMPTION` — **`map.md` was corrected by strike-in-place rather than by the `Change the map` procedure.**
 That procedure requires the superseded text be appended verbatim to `map-history.md`, and the condition's opening
 permits exactly two files, of which that is not one. I judged the two stale phrases to be facts rather than rule
 statements — the never-delete bullet cuts by a text's job — and followed the strike-in-place precedent already in
@@ -127,13 +127,13 @@ the base commit at `**The graph is ~~six~~ seven files**` and at node 224's glos
 because a reading exists that honours both clauses at once; had the phrases been rule statements, the condition
 would have been unsatisfiable and that would have been a raise.
 
-`198.2` `ASSUMPTION` — **I widened past clause 1 to `map.md`'s statement that the code-slot count lives in the rules
+`198.2` **· settled** `ASSUMPTION` — **I widened past clause 1 to `map.md`'s statement that the code-slot count lives in the rules
 file.** Clause 1's predicate names a *section*, and the count is a paragraph, so the clause may not literally reach
 it; the manager amended nothing. I corrected it anyway: it is false, it sits inside a file the condition puts in
 scope, the fix is one link, and leaving a known-false pointer in a passage I was already editing is worse than the
 widening.
 
-`198.3` `ASSUMPTION` — **`graph-conventions.md`, not `map.md`, was made the file that describes where the landing
+`198.3` **· settled** `ASSUMPTION` — **`graph-conventions.md`, not `map.md`, was made the file that describes where the landing
 policy lives, and `map.md`'s list of what `map-manager-only.md` holds was left without a landing item.** Clause 2
 allows exactly one describer, and the shipped file cannot be the linking one — it carries no markdown link outside a
 fenced block, and any link into one effort's record would break clause 3 for every other effort. So `map.md`
@@ -257,3 +257,122 @@ are `# Map: the rules an implementation node's work is held to` and `## What the
 **Established.**
 
 *So no part of this condition is still owed.*
+
+### Gate — `approve`
+
+**The human's word, `verbatim`.**
+
+> approve
+
+**What it decided.** `approve` on a `PASS`ing tree lands the work as it stands, with all three flags settled — the
+strike-in-place route, the widening past clause 1 to the code-slot pointer, and the forced assignment of which file
+describes and which links. **The payload named each one, and flag `198.2` was named as a departure the manager had
+explicitly declined to authorise in advance.**
+
+**What travelled with the payload and is held elsewhere rather than answered here.** The checker's two questions:
+the collision between a condition that scopes edits by file and a supersession rule requiring a third file, which
+is the same shape flag `198.1` records; and `.gitignore`, now [node
+227](227-gitignore-cites-a-quoted-phrase-that-resolves-to-nothing.md).
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+Both stale descriptions are repointed, and the two files now split the job of saying where the landing policy is:
+`graph-conventions.md` describes its location, `map.md` reaches it by a link and names no destination.
+
+What the rules file actually holds was established by reading it, not from either description: one preamble and one
+section, `## What the work is held against`, holding the bar's commands, the review route, the
+record-as-work-under-check rule, five ground rules, and four standing rules for writing. It holds no landing policy
+— its own three-line pointer at *"How an implementation node's work is landed is in map-manager-only.md"* replaced
+it — and it holds no code-slot count either; that count rode along inside the moved section and is now in
+`map-manager-only.md`, in the paragraph beginning *"How many implementation workers run at once is a setting of the
+effort"*.
+
+**The shipped file, edited plainly.** In `## The seven files`, `map-manager-only.md`'s gloss gains a third bullet
+naming `## Landing an implementation node's work`, and the `map-implementation-rules.md` gloss loses *"the landing
+policy"*, leaving *"the bar's commands and the standards work is held against"*, which is true of the file as it
+stands.
+
+**Which of the two describes the location was not a free choice, and this is the call a later reader would
+otherwise re-derive.** Clause 2 gives one file the description and requires the other to reach it by a link.
+`graph-conventions.md` is shipped and generic: it carries **no markdown link outside a fenced block at all**
+(measured — its one bracketed path is the `flags.md` line-form placeholder inside a fence, which the file's own rule
+2 under `## Reading the graph` says to skip), and any link it grew would have to point into one effort's `.scratch/`
+directory, which does not exist for the efforts it ships to and would fail clause 3. So it cannot be the linking
+file, and the assignment is forced: `graph-conventions.md` describes, `map.md` links. `map.md` reaches the landing
+policy by two existing links — `[map-manager-only.md]`, characterised there by role as *"what only the manager acts
+on"*, and `[node 188]` in the passage I corrected — and restates none of the policy.
+
+**The consequence, which is deliberate rather than an omission:** `map.md`'s enumeration of what
+`map-manager-only.md` holds — *"the dogfood target, the label vocabulary, the fog, and what is out of scope"* — was
+**not** given a landing item. Clause 2 forbids it, and independently it is right for that file: `map.md` holds only
+what every worker can act on, and no worker acts on landing. Its one genuine gap is the frontier order, which it
+also omits and which is outside every clause here.
+
+**`map.md` was corrected by strike-in-place, and that was the only route the condition leaves.** The stale phrases
+are struck and the current text stands beside them, at the preamble pointer (`~~the landing policy, the code-slot
+count,~~`) and in the `## Notes` question-batching item, where the code-slot count's home moves from
+`map-implementation-rules.md` to `map-manager-only.md`. The `Change the map` procedure — replace the text and append
+the old verbatim to `map-history.md` — was unavailable: the condition's opening allows exactly two files, and
+`map-history.md` is a third. Strike-in-place satisfies never-delete without a third file and is this file's own
+practice for a stale fact, with precedent in the base commit itself: `**The graph is ~~six~~ seven files**`, and node
+224's `~~50 term entries and 40 _Avoid_ lines~~ 51 term entries and 41 _Avoid_ lines`. The test in the never-delete
+bullet cuts by a text's job, and a pointer saying what a file contains records a fact rather than states a binding
+rule.
+
+**Sites reached and left.** Reached: the two named targets, plus `map.md`'s code-slot pointer, which clause 1 may
+not literally reach (a paragraph, not a section) but which is false, sits in a file I was already editing, and cost
+one link. Left: `.gitignore`'s decayed quoted phrase, outside clause 4 and reported below; and a fifth site nobody
+had named — `graph-conventions.md`'s own description of `map.md`'s `## Notes`, reported as a node.
+
+**What the worker reported its work invalidates:** `none`. *Its words:* *"Node 188 moved the landing section and
+node 140 moved the rules-file material; this work states where they left things and contradicts neither. Node 142
+brought `graph-conventions.md`'s map shape into line with the split map and left the `## Notes` clauses new node 2
+names — that is an incompleteness in what it reached, not a decision this work contradicts."*
+
+## Retrospective
+
+*Filed by the manager in the same edit that resolves the node. Pasted as the worker wrote it.*
+
+1. **What I had to hunt for.** Three things. *Whether the rules file still holds the code-slot count* — I read the
+   file whole, then grepped it for `code slot` and got nothing, then found the count in `map-manager-only.md`'s
+   landing section; the spawn told me the landing section moved but not that the count was inside it, and the node
+   file's second annotation is what named it. *The repo's bar commands* — re-derived in one `git ls-files`, cheap,
+   and I would rather re-derive than trust. *Whether `graph-conventions.md` contains any markdown link at all* —
+   nothing in the spawn, the node file or the record says so, I had to script it, and it is the fact that decided
+   clause 2's assignment. That last one is the expensive shape: **a condition turned on a property of a file that
+   nobody had measured.**
+
+2. **What arrived that this node did not need.** `map.md` is a mandatory cold read and I acted on perhaps a fifth of
+   it — the two preamble pointers, the never-delete bullet, the question-batching bullet, the seven-files line, the
+   retrospective bullet — while the bullets on token priority, resumption, the mattpocock plugin, the
+   one-line-per-report rule and the human-is-scarce preference bore on nothing here. I could not have known which
+   fifth without reading it, and two of the lines I needed (`~~six~~ seven files`, the glossary counts) I needed
+   only as *precedent*, which no heading would have led me to. The arrangement that would have paid: **the
+   supersession practice is stated three times, in `map.md`'s never-delete bullet, in
+   `map-implementation-rules.md`'s *"How a rule in this file is superseded"*, and in `graph-conventions.md`'s
+   *"Inside the graph's files the rule cuts by what a piece of text is"***. My central judgement turned on it, so I
+   read all three to check they agreed. One statement and two pointers would have cost one read instead of three,
+   and the three-way spread is itself a standing risk — they agree today. By contrast, `decisions.md` cost almost
+   nothing because the spawn named which four entries bore on me; I grepped for four numbers and read five lines.
+   That pattern is worth keeping.
+
+3. **What would have made this node easier.** The condition's clause 2 — *"exactly one of the two files above
+   describes its location, and the other reaches it by a link"* — spent my judgement on a question it could have
+   settled for free. Its author could not name the destination, which is fair, but it could have named **which of
+   the two files describes**, and the fact that forces the answer (the shipped file carries no links and cannot grow
+   one that resolves) was true and measurable when the condition was written. A clause of the form *one of these
+   two, and the other links* should name which, or say what to decide it on. The node file's two annotations, by
+   contrast, were the most valuable thing I was given: four sites, and a statement of which the condition reaches.
+   The record gap I would close: **nothing tells a worker which passages of `map.md` are *rule statements* and which
+   are *facts*, yet the never-delete rule cuts exactly there** and the answer decides whether a third file must be
+   edited.
+
+4. **What I read that was stale, wrong, or contradicted something else.** `graph-conventions.md`'s description of
+   `map.md`'s `## Notes` is stale in three ways and its `## Labels` rule with it — reported as a node, and nothing
+   else held it. `.gitignore`'s quoted-phrase citation is decayed, already known, and outside my scope. `map.md`'s
+   enumeration of `map-manager-only.md`'s contents omits the frontier order. And the condition's *"no other file may
+   be edited"* stands in tension with `map.md`'s own `Change the map` procedure, which requires a `map-history.md`
+   append — resolvable here, flagged, and **a shape this effort will meet again every time a condition scopes an
+   edit to the record by file.**
