@@ -1,7 +1,7 @@
 # Whether an acceptance condition is a rule statement or a record, under the never-delete cut
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 

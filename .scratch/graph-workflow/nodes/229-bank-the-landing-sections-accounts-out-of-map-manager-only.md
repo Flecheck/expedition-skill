@@ -1,7 +1,7 @@
 # Bank the landing section's accounts out of `map-manager-only.md`
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
