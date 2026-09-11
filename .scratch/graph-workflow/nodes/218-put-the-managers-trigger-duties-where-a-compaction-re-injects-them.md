@@ -305,3 +305,165 @@ wrote itself.**
 **Where the work goes.** Back to its worker for a correction round, then to a fresh check — **the condition itself
 changed**, so the shipped rule that the acceptance condition is re-checked only where the correction touches it is
 satisfied trivially: it touches it everywhere. Then back to this gate.
+
+### The correction round — what changed, and what the worker read to establish clause 8
+
+*Pasted as the worker wrote it. The manager's own words are marked where they appear.*
+
+**The mechanism, established from two independent sources that agree**, and this is the worker's account of clause
+8:
+
+> The first source is **the harness's own binary**. It is a 339 MB compiled executable, and it embeds its own
+> strings: `grep -a` reads them, and `grep -a -b -o` gives byte offsets that `tail -c +N | head -c M` turns into
+> readable regions. Three findings, each quoted from the binary:
+>
+> - its own guidance text states *"a `.claude/rules/*.md` file with `paths` frontmatter (or a nested-directory
+>   CLAUDE.md) loads only when Claude works with matching files, while LOCAL files are always in context"* — the
+>   property clause 8 demands, named as a `paths` frontmatter field;
+> - the rules loader filters a directory of rules files with `h.push(...x.filter((I)=>o?I.globs:!I.globs))` under a
+>   parameter it calls `conditionalRule`, so a rules file either carries globs and is conditional, or carries none
+>   and loads unconditionally. **That is the mechanism in the implementation rather than in prose**, and it is why
+>   the constraint is a property of the file itself and needs no hook and no settings change;
+> - the load-reason enumeration is `session_start`, `nested_traversal`, `path_glob_match`, `include`, `compact` —
+>   `path_glob_match` being the reason a glob-scoped file loads, and `compact` being the reason it loads when a
+>   context is rebuilt.
+>
+> The second source is **the official documentation**, read to confirm the YAML shape rather than the mechanism:
+> the field is `paths`, its value is a YAML list of glob strings, every documented example is repository-relative,
+> no frontmatter field is required alongside it, and *"rules with `paths:` frontmatter reload as Claude reads files
+> they apply to"*.
+
+**The glob and why it is that glob:**
+
+> **The glob is `.scratch/**`, and it is the effort record's location rather than any effort's name.** `CONTEXT.md`'s
+> **Effort** entry states that an effort's files live in `.scratch/<effort>/`, so `.scratch/**` is exactly "an
+> effort's record", covers every effort this repo hosts, and names none — which is what lets clause 8 and clause 4's
+> surviving half both hold. Clause 8's own sharp question resolves here rather than colliding: the constraint is
+> expressible one directory level above the segment clause 4 forbids.
+
+**The finding that matters most, and it is the worker contradicting the manager's own framing of the amendment:**
+
+> **Clause 8 narrows the exposure and does not close it, which is why clause 4's surviving half is still
+> load-bearing.** `map-implementation-rules.md` establishes that an implementation node's work on this effort may be
+> the effort's own record, and that where it is, the checker reads the changed paths it was given as the work. Such
+> a checker is working under `.scratch/` and the glob will load this file into it. So the class of agent that
+> reaches this file is narrowed from every agent in the repository to agents touching a record, and a blind checker
+> remains inside that class whenever the work under check is a record file. The file therefore still carries no
+> account of anything.
+
+***The manager's note.*** **The manager told this worker that clause 8 "removes the pressure that produced clause 4
+and flag `218.2`". That was wrong, and the worker established why.** A checker whose work under check *is* a record
+file sits inside `.scratch/**` and still receives this file — which is not a rare case on this effort but the
+ordinary one, three of today's four checks having been on record files. Clause 4's surviving half and the scoping
+sentence are both still doing work, and the manager kept clause 4 for a weaker reason than the real one.
+
+**What changed in the file:** the `## What this file is` section removed in full under struck clause 5; the YAML
+frontmatter block added under clause 8. *"Nothing else changed. The title, the framing sentence, the four triggers
+and the `## Where every other rule lives` section are byte-identical to the version that passed its check."* Size
+**1,057 → 812 bytes**, against a cap of 2,000.
+
+## Flags — after the correction round
+
+*The worker's own text, pasted. `218.1` and `218.2` were raised in the first round and are restated here by the
+worker; **`218.2`'s ground has changed** and the new ground is recorded rather than the old one being overwritten.
+`218.3` is new to this round.*
+
+`218.3` `ASSUMPTION` — **The path constraint is `paths: [".scratch/**"]` and was shipped without the load being
+observed.** Clause 8 asks for a property and sends the worker to the harness for the mechanism; the mechanism was
+established from the harness binary's own embedded loader and guidance text and confirmed against the official
+memory documentation, but no compaction or spawn was put through the finished file to watch it load or decline to
+load. Settled on two sources agreeing rather than on observation, because observing it means a fresh agent working
+outside `.scratch/`, which is not something this node can arrange from inside its own worktree. The check that would
+settle it is the one that already produced evidence for the unconstrained case: a checker working on paths outside
+`.scratch/` should no longer find this file in its context.
+
+**`218.2`'s new ground, in the worker's words** — the flag itself is unchanged, the sentence is still kept, and only
+what justifies it has moved: *"Its original ground — clause 4's demand that the file be safe for every agent — is
+struck. It is kept on a narrower one: a checker or an implementation worker whose work under check is a record file
+is inside the `.scratch/**` glob, so trigger (c) still reaches an agent that must not act on it, and ground rule 3
+forbids anything in the files from telling an agent to address the human."*
+
+**`218.1` is restated unchanged**, and the worker adds that the frontmatter glob *"had to be written one level above
+the same segment for the same reason"* — so the same collision between clause 3 and clause 4 was resolved twice, by
+the same `CONTEXT.md` entry, in two different places in the file.
+
+### Checker run 2 — `PASS` on clauses 1–7 and the declaration half of clause 8
+
+*A second, independent checker, spawned fresh against the amended condition and told that the first run's outcome is
+not evidence for it. Pasted as it wrote it. Its own closing line: **"My PASS covers clauses 1-7 and the declaration
+half of clause 8, and no more."***
+
+> **Scope — one new file and nothing else.** `git status --ignored --untracked-files=all --porcelain` in the worktree returns exactly `?? .claude/rules/expedition-triggers.md`; `git diff HEAD --name-status` is empty. `find .claude -type f` returns that file plus the nine pre-existing `expedition*` skill files, untouched. Nothing in `decisions.md` or `flags.md` moved, and no node file moved — the worktree's whole `.scratch/` tree is tracked and clean.
+>
+> 1. Exists, and is 812 bytes (`wc -c`) against a 2,000-byte ceiling.
+> 2. Four bullets, each written moment-then-duty, matching (a)-(d) one for one. Nothing else in the file is shaped as a trigger. One judgement I am naming rather than burying: the opening line "Every duty here is a manager's own, and a worker reading them acts on none of them" is an attribution of those four duties and not a fifth, so I read it as within "nothing else as a duty".
+> 3. "Every other rule an effort works under is in its map — `.scratch/<effort>/map.md` and the files beside it" names the map by path; "This file holds triggers only, and overrides nothing there" is the second half, stated in as many words.
+> 4. No account. A grep over the file unwrapped into one line for node references, flag ids, digits, attempt counts, failure words and effort names returns nothing; `<effort>` is a placeholder, not a name. Every line is a standing constraint true of any node's work.
+> 5. Nothing in the finished file states what it is — no statement of harness mechanism, of the effort's own practice, or of what the workflow may assume, under any heading or in the frontmatter. I read clause 5 as forbidding statements of the struck kind rather than as contradicting clause 3; under the other reading the condition would be self-contradicting, and my contract forbids me to check work against my own repair of one.
+> 6. No other file under `.claude/` and no file under `.scratch/` is created or modified, per the status and diff above. No hook is configured: a search for `settings*.json` over the worktree returns nothing, and the repo has no `.claude/settings.json` at all. The one hook on this machine is in the human's own home directory — a `PreToolUse` Bash gate whose command is a `/nix/store` path, with zero occurrences of `expedition-triggers`. It predates this work and is not configured by it.
+> 7. The bar holds, and I discovered its commands from the repo rather than taking the record's copy: the worktree's whole contents are `.claude`, `.gitignore`, `.scratch`, `CONTEXT.md`. A recursive hunt for `package.json`, `Cargo.toml`, `pyproject.toml`, `Makefile`, `justfile`, `*.toml`, `*.yml`, `*.yaml`, `*.cfg`, `flake.nix` returns nothing, and there is no `.github`. No build, no tests, no formatter, no CI — the bar's command half is empty, which is a complete bar and not a deficient one, and it agrees with what the implementation-rules file records. Its non-command half holds:
+>    - `CONTEXT.md`'s `_Avoid_` lines, checked by hand rather than by grep, per the measured trap. Two near-misses, both clean. "payload" is refused under **Handover** and the file writes "hands something back" where the condition's own paraphrase said payload. "finished" is refused under **Closed**, for an effort being over; the file writes "A node finishes", and `_Avoid_` under **Resolve** does not list it while `CONTEXT.md` itself writes "when it has finished" of a worker. "landing" is refused only as the compound "landing commit". Every other term — node, resolve, frontier, manager, worker, agent, effort, map, trigger — is used as the glossary and `graph-conventions.md` fix it.
+>    - Ground rule 1: the body assumes no repo, machine or toolchain. Ground rule 3: the one trigger that mentions the human makes it a manager's duty to put something in front of them, and tells no spawned agent to address them. Ground rule 4: 812 bytes of plain prose.
+>    - The four standing rules for writing: no why-prose to compress and the four shapes stated whole; one heading for the one section beyond the list; no line-number citation, the map cited by path. Standing rule 2's "cites the nodes that shaped it" binds an item of the map, and this is not a map file — the never-delete rule in `graph-conventions.md` draws that same line at the graph's own files — so it does not collide with clause 4's ban on node numbers. I considered handing that back as a question and judged there is no collision to report.
+>    - `/writing-for-agents`: no sprawl, no duplication, no no-op line, and the one prohibition is paired with its positive.
+> 8. Established in part, and the rest is under `NOT COVERED:` below. What I established: the file's frontmatter is a well-formed YAML block, `paths:` carrying a one-element list `".scratch/**"`, and `paths` is the key the harness itself documents for exactly this property. I read the harness's own memory documentation directly, under "Organize rules with `.claude/rules/`": *"Rules without `paths` frontmatter are loaded at launch with the same priority as `.claude/CLAUDE.md`"*, and under "Path-specific rules": *"Rules can be scoped to specific files using YAML frontmatter with the `paths` field. These conditional rules only apply when Claude is working with files matching the specified patterns"*, and *"Path-scoped rules trigger when Claude reads files matching the pattern, not on every tool use."* The harness on this machine is above every version caveat that page attaches to `paths`. The glob's domain is right: `graph-conventions.md`'s "The seven files" puts every file of an effort's record under `.scratch/<effort>/`, so `.scratch/**` is the record and nothing else. So the declaration is correctly formed, uses the mechanism the harness provides rather than an approximation, and is not a file written somewhere the harness does not load.
+>
+>    One observation, not a finding, since no stated property is breached: the docs' own table gives `src/**/*` for "all files under a directory" and never shows a bare trailing `**`. **If `.scratch/**` matches more narrowly than intended under whatever glob library the harness uses, the rule loads less often rather than more**, which still satisfies what clause 8 demands.
+>
+>    The observation the spawn invited: **this file is not in my context. That is not evidence about the gate.** The main repo has no `.claude/rules/` directory at all, my cwd is the main repo rather than the worktree, and I reached the file with `Read` against an absolute worktree path. Its absence is explained by location, so I can draw nothing from it either way.
+>
+> ```
+> NOT COVERED:
+> - "The file declares a constraint that keeps the harness from loading it into an agent whose work does not
+>   touch an effort's record." I establish the declaration and not the behaviour. Observing that the harness
+>   withholds this file would mean launching harness sessions against the worktree with and without a
+>   `.scratch/` read and inspecting what loaded, which is neither read-only nor something I can do from
+>   where I stand. What I hold is the harness's documentation of `paths`, the file's conformance to it, and
+>   a running version above every caveat that documentation attaches. Whoever can run the harness against
+>   the tree, or read `/context` in a session launched there, is the party that can settle the rest.
+> - "The worker establishes what the mechanism is and states in its handover what it read to establish it."
+>   The handover is outside the paths I was given, and I was given nothing from the effort's record. I
+>   cannot establish what the worker read or what it stated. The manager holds the handover and is the only
+>   party that can settle this.
+>
+> QUESTIONS:
+> - A disclosure rather than a question, and it needs no answer. I spawned one helper agent to establish the
+>   harness's rules-loading mechanism. It went beyond the documentation and cited the effort's own record by
+>   node number. I discarded every record-derived part of what it returned, re-established the mechanism
+>   myself by reading the harness documentation directly, and every fact in clause 8 above rests on that
+>   direct read. Flagging it because a spawn of mine touched material I am kept blind to, which the manager
+>   should know happened even though nothing from it reached my outcome.
+> ```
+
+### The two `NOT COVERED` parts — one settled, one still owed
+
+*The checker named for each who could settle it.*
+
+**Settled: what the worker read to establish the mechanism.** The manager holds the handover and it does state it,
+at length and with sources: the harness's own compiled binary, read with `grep -a` for its embedded strings, giving
+the guidance text naming `paths` frontmatter, the loader's own `conditionalRule` filter, and the load-reason
+enumeration including `path_glob_match` and `compact`; and the official memory documentation, read to confirm the
+YAML shape rather than the mechanism. **Two independent sources, and the checker reached the second of them by
+itself and agrees with it.**
+
+**Still owed: that the harness actually withholds the file.** Nobody has observed it. The checker is right that it
+cannot, and right about who can — *"whoever can run the harness against the tree, or read `/context` in a session
+launched there"*. **That is the manager, and only after this work lands**, since the file exists solely in an
+uncommitted worktree today. **The manager's session works under `.scratch/` continuously, so it is inside the glob
+rather than outside it** — what it can observe is the positive case, and the negative one needs an agent working
+outside `.scratch/`. This is also exactly what the human's own condition on the mechanism —
+*"if the rules don't work"* — leaves to observation, and flag `218.3` is the worker's own disclosure of the same
+gap.
+
+### Flag `218.4` — the checker's own disclosure, filed by the manager
+
+*The checker offered it as needing no answer. The manager files it as a flag because it is a judgement an agent made
+on its own, and because its subject is the checker contract rather than this work.*
+
+`218.4` `ASSUMPTION` — **A checker's helper agent reached the effort's record, which the checker is kept blind to.**
+In the checker's own words: *"I spawned one helper agent to establish the harness's rules-loading mechanism. It went
+beyond the documentation and cited the effort's own record by node number. I discarded every record-derived part of
+what it returned, re-established the mechanism myself by reading the harness documentation directly, and every fact
+in clause 8 above rests on that direct read."* **The blindness held because the checker noticed and repaired it**,
+not because anything stopped the helper. The checker disclosed it unprompted and its outcome rests on its own
+direct read.

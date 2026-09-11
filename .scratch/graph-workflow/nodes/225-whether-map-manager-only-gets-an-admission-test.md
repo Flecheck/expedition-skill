@@ -146,3 +146,39 @@ size and with no bound on it.
 Fold it into node 152, which needs a fresh acceptance condition anyway and touches the same section — one node
 cheaper, but it makes that node's condition carry a demand its subject never weighed, which is the exact failure
 flag `191.4` names.
+
+### The human's answer to attempt 1
+
+**Their words, `verbatim`.**
+
+> Q1 ok Q2 ok
+
+**Both take the worker's recommendation**, and each recommendation is quoted here as **the worker wrote it**, not as
+the manager renders it.
+
+**Q1 — the worker's recommendation, taken:**
+
+> **(b), one pointer sentence, ~130 bytes.** It rests on three things. The asymmetry in (a) is a real cost, not a
+> cosmetic one: a reader comparing the two siblings sees one declaring a test and one declaring none, and reads the
+> silence as *this file is not under a test* — which is the misreading your original question came from. (c) is the
+> option I would refuse: node 196 wrote the test locally into the rules file, its own worker reported the
+> duplication that created, and node 200 then spent a whole node collapsing it — a third statement of one discipline
+> in this effort's record buys the same defect again. And the pointer is the form this effort has already
+> sanctioned: node 197's own condition allowed the conventions document's gloss *"at most one clause pointing at
+> `## Writing the map`"* and nothing else, and your standing rule 2 for writing is exactly this — an item states its
+> current form and cites what shaped it rather than restating it.
+
+**Q2 — the worker's recommendation, taken:**
+
+> **Yes, run it once, scoped to that one section.** The node would bank the 7 unbanked struck regions and the
+> account-only paragraphs **verbatim** into `map-history.md` under a heading naming the section, keep every trigger
+> and every operative instruction, and change **no rule that currently binds**.
+
+**What Q2's answer is, stated plainly because it is unusual.** It is a **licence from the human for a bounded
+exception to a rule they have already approved**: [node 191](191-the-rules-file-carries-accounts-rather-than-rules.md)
+settled that no sweep of a map file is owed and none is licensed, and this permits exactly one, over
+`## Landing an implementation node's work` in `map-manager-only.md` and nothing else. **It does not widen node 191**,
+and the manager will say so in whatever node carries the work.
+
+*No divergence: the human took both recommendations as written. Neither answer contradicts anything the worker
+advised.*

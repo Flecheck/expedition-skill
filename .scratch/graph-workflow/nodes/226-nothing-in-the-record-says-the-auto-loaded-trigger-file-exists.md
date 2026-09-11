@@ -32,9 +32,10 @@ pasted as it wrote it.*
 > Done means every one of the following is true of the finished tree.
 >
 > 1. Exactly one file under `.scratch/graph-workflow/` names the path `.claude/rules/expedition-triggers.md`, and it
->    states three things about it: that the harness loads it into every agent in this repository without any spawn
->    or hook, that it holds the trigger form of duties stated elsewhere in the map, and that it overrides nothing in
->    the map.
+>    states three things about it: ~~that the harness loads it into every agent in this repository without any spawn
+>    or hook~~ **that the harness loads it, without any spawn or hook, into an agent whose work touches an effort's
+>    record and not into any other**, that it holds the trigger form of duties stated elsewhere in the map, and that
+>    it overrides nothing in the map.
 > 2. That same statement says that whoever edits the map's statement of one of those duties edits that file in the
 >    same edit, or says plainly why not.
 > 3. The statement contains no account of what happened — no count of missed duties and no story of a failure — and
@@ -61,3 +62,28 @@ learned afterwards. It is the worker's own wording, not the manager's.
 loaded by the harness rather than by anything the effort controls, so the record cannot discover it by reading a
 spawn or a contract. That is the same property flag `218.2` turns on, and it is the cost side of the mechanism —
 recorded here so the trade is visible rather than only its benefit.
+
+## Annotation: clause 1 corrected, on its own author's report
+
+*Filed by the manager. **The correction is the author's, not the manager's** — node 218's worker wrote this
+condition, and in its next handover it reported that its own clause had been falsified by the clause the human
+added to node 218. The manager has struck the false wording in place and written the author's own replacement.*
+
+**What the author said, `verbatim`:**
+
+> The node minted from the previous round — the one whose condition requires the record to say that the harness
+> loads this file — carries, in the condition I wrote for it and which the manager has adopted, the clause *"the
+> harness loads it into every agent in this repository without any spawn or hook"*. **Clause 8 has made that
+> false.** The harness now loads it only into an agent working under `.scratch/**`. That node's condition needs the
+> clause corrected before it is claimed, and the correction is the manager's: the record should say the file loads
+> for work touching an effort's record, not for every agent.
+
+**One thing the manager corrects in that, about whose the correction is.** A condition is not the manager's to
+rewrite, and this one is not the manager's — the worker's own last sentence assigns to the manager something the
+contract keeps away from it. **What the manager did instead is transcribe**: the replacement wording says what the
+author said it should say, and nothing more. Had the author named no substance, this would have gone to the human.
+
+**Why the clause was false rather than merely imprecise.** Node 218's own worker established that the narrowing is
+real but partial: *"a checker or an implementation worker whose work under check is a record file is inside the
+`.scratch/**` glob"*. So the record must not say *every agent*, and must not say *only the manager* either. The
+replacement says **an agent whose work touches an effort's record**, which is what the glob actually does.
