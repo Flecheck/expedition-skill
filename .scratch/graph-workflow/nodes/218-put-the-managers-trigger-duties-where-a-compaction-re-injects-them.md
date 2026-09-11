@@ -199,3 +199,54 @@ not think of as a source of notation — already fixes how this repo writes an e
 real and the repo had already solved it.** Its retrospective says the fact *"arrived by accident"*, reached only
 because `CONTEXT.md` was on its vocabulary list, and that nothing anywhere points a worker at it for a path
 convention.
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*Pasted as the checker wrote it. Every sentence is the checker's. It handed back **no `NOT COVERED` and no
+question**. Its first attempt died on a session limit before establishing anything and was resumed rather than
+replaced; this is that run's outcome.*
+
+> **How I established each part of the amended condition.**
+>
+> - *Scope preamble — one new file, no other file edited; no marking, resolving, or line in `decisions.md`/`flags.md`.* `git status --untracked-files=all --ignored --porcelain` in the worktree returns exactly one line, `?? .claude/rules/expedition-triggers.md`, and nothing ignored. `git diff --stat HEAD` is empty, so no tracked file is modified. Decisively: `find . -path ./.git -prune -o -type f -print` differenced against `git ls-files` yields exactly one path, the work itself. `.scratch/` is tracked here (232 of the 243 tracked files sit under it), so `decisions.md`, `flags.md` and the node files are all inside git's view and none moved.
+> - *1 — exists, at most 2,000 bytes.* `wc -c` gives **1057**.
+> - *2 — the four triggers, moment then duty, and nothing else as a duty.* (a), (b) and (d) appear as the condition's own words. (c) appears as "An agent hands something back for the human, so it goes in front of them as soon as nothing else is" — the same moment and the same duty, with *payload* replaced. That replacement keeps the work inside `CONTEXT.md`, whose **Handover** entry refuses `report, return, payload, deliverable` for precisely the thing a worker hands back; clause 2 asks the trigger to be *stated*, not quoted, so the paraphrase satisfies it and avoids the collision. For *nothing else as a duty* I took every remaining sentence one at a time: the heading, "Four moments, each with the one duty it fires", the two sentences under `## Where every other rule lives` (both demanded by clause 3), and the two under `## What this file is` (demanded by clause 5). None states a moment with a duty. The one borderline sentence is "a worker reading them acts on none of them" — I read it as the negative scope of the four already stated rather than a fifth, and it is load-bearing for ground rule 3: without it a worker reading "so it goes in front of them" could take that duty as its own, which ground rule 3 forbids.
+> - *3 — names the map by path, triggers only, overrides nothing.* "Every other rule an effort works under is in its map — `.scratch/<effort>/map.md` and the files beside it. **This file holds triggers only, and overrides nothing there.**" The `<effort>` placeholder is the notation `graph-conventions.md` uses for the same layout, and it is what clause 4's ban on naming an effort forces. "The files beside it" is accurate: the implementation-rules file states that it is itself part of the map.
+> - *4 — safe for every agent, checker included.* A grep over the **unwrapped** text for `node[ -][0-9]+`, `flag [0-9]`, `graph-workflow`, `attempt`, `expedition` and `[0-9]+` returns nothing at all — the file contains no digit. No effort is named, no failure narrated. I can attest to the clause directly rather than only by search: **the harness injected this file into my own context partway through this check, and it told me nothing whatever about the work under check.** On the clause's first sentence ("every line is a standing constraint") I applied the clause's own gloss — "a line that would tell a checker something about a particular piece of work fails this clause" — because reading the first sentence literally would forbid the mechanism line that clause 5 demands, making the condition self-contradicting.
+> - *5 — one harness's mechanism and this effort's own practice.* "That is **one harness's mechanism, and this effort's own practice**: nothing the workflow ships may assume this file exists."
+> - *6 — nothing else under `.claude/`, nothing under `.scratch/`, no hook.* Same evidence as the preamble. For the hook: `.claude/` in this tree holds only `rules/` and `skills/`; `.claude/hooks`, `.claude/settings.json`, `.claude/settings.local.json` and `.claude/settings.json.d` all do not exist, and since the tree holds no untracked file besides the work, none was created and then ignored.
+> - *7 — the bar.* Below.
+>
+> **The bar, discovered from the repo rather than taken on trust.** The 243 tracked files are 242 `.md` files plus `.gitignore` — no manifest, no task runner, no CI directory, no formatter config, nothing to invoke. So there is no build, no test suite and no formatter to run, and the bar here is entirely its non-command half. That matches what the implementation-rules file records, so record and repo agree.
+>
+> **Standards I read, and which bore on the work.** I resolved the implementation-rules file by one listing of `.scratch/` and took the standards from it; I derived no statement of intent about this node from it, and the work under check is not a record file, so its record-as-work rule did not fire. Which bore:
+>
+> - **`/writing-for-agents`** — the one that bites hardest, since this file is always-loaded and so "earns even harder pruning than the body". Three headings, one section each, the four triggers first. No sprawl, no no-ops. On **negation**: three negatives, two of them the condition's own dictated content ((d) and clause 5); the worker's own negative is paired with its positive ahead of it ("Every duty here is a manager's own", *then* "a worker acts on none of them"), which is exactly the pairing the standard prescribes.
+> - **`CONTEXT.md`'s `_Avoid_` lines** — checked by hand, not by grep, per the measured trap. The distinctive refusals are all absent. `question` appears, in "A landing is not a question", but it is refused only as a name for the **grilling** node kind; the file uses it in the ordinary sense `CONTEXT.md` itself uses under **Park** and **Raise**. Read positively as well as negatively, the file uses `resolve`, `frontier`, `manager`, `worker`, `effort`, `map` and `landing` in their fixed senses.
+> - **`graph-conventions.md`** — its never-delete and map-writing rules reach the graph's seven files only, and it says so ("every file the effort ships [is] edited plainly"); the work is neither, so those rules do not bind it. Its `<effort>` path notation matches the file's.
+> - **Ground rules** — 1 holds: the file assumes a harness in one sentence and *declares* that assumption in the next, placing itself outside what the workflow ships. 3 holds, and the added scope sentence is what makes it hold. 4 and 5 hold. 2 is about worker contracts and does not reach this file.
+> - **The four standing rules for writing** — 1, 3 and 4 hold plainly. On **rule 2**, its second half ("cites the nodes that shaped it") and clause 4's ban on node numbers cannot both be satisfied here. I did not treat that as a defect: clause 4 states its own reason for overriding the citation half for this one file (it is read by a blind checker, and a node number is exactly what would leak), and the file satisfies rule 2's first half in full. No defect results from complying, so this is not a question under my contract — I record it so the manager knows I met it and how I read it.
+> - **`/coding-principles`** — altitude only: the four triggers, the file's whole point, come first; scoping and mechanism follow. One subject per file.
+> - **`/naming`** — "Triggers a manager acts on" and `expedition-triggers.md` both round-trip to what the file holds, and claim no property it lacks.
+>
+> **Reviewing skill.** The standards state that none is named for this repo and that a checker does not go looking for one, so I ran none and delegated nothing.
+>
+> **Enumerator.** The condition records no search command, so there was none to re-run.
+>
+> No `NOT COVERED:` parts and no `QUESTIONS:`.
+
+### The manager's note beside this run
+
+*Not a change to anything the checker wrote.*
+
+**One sentence in it is evidence rather than a check, and it is the first direct observation this effort has of the
+mechanism the human chose:** *"the harness injected this file into my own context partway through this check."* The
+checker was not looking for that and had no reason to say it. **It establishes that the harness loads
+`.claude/rules/*.md` into an agent without any spawn or hook carrying it** — which is what node 217's answer could
+only infer from the `InstructionsLoaded` event's documented trigger.
+
+**It does not establish the thing the human's condition turns on.** *"If the rules don't work"* is about surviving a
+**compaction**, and no compaction happened during that check. That observation is still owed and is the manager's to
+make from its own context.
