@@ -467,3 +467,21 @@ what it returned, re-established the mechanism myself by reading the harness doc
 in clause 8 above rests on that direct read."* **The blindness held because the checker noticed and repaired it**,
 not because anything stopped the helper. The checker disclosed it unprompted and its outcome rests on its own
 direct read.
+
+### Gate — `approve`, at the second raise
+
+**The human's word, `verbatim`.**
+
+> approve the gate
+
+**What it decided.** `approve` on a tree that passed its second check lands the work as it stands: the 812-byte
+file, the `paths: [".scratch/**"]` frontmatter, `## What this file is` gone, and the scoping sentence kept. **All
+four flags are settled by the approval** — `218.1` the placeholder path, `218.2` the scoping sentence,
+`218.3` the constraint shipped without the load being observed, and `218.4` the checker's own disclosure that its
+helper agent reached the record.
+
+**What the approval does not settle, and the manager is not treating as settled.** **Nobody has observed the harness
+withholding this file.** Both the worker and the checker said so; the checker named who could — *"whoever can run
+the harness against the tree, or read `/context` in a session launched there"* — and that is the manager, once this
+is on `master`. The human's own condition on the mechanism, `verbatim` from node 218's interview — *"we postpone
+PreCompact if the rules don't work"* — is what that observation decides.

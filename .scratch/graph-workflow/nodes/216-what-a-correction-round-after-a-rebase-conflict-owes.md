@@ -243,3 +243,48 @@ shape — an environment refusal, no content in dispute, a total undo available 
 undo required the manager to verify content-identity before acting.** The worker's own caveat on recommending
 `Q3.` was exactly that: *"this route is only as safe as the repair being exactly the prescribed one."* **Here the
 prescribed repair did not cover the case**, and the manager improvised one it could verify.
+
+### The human's answer to attempt 1
+
+**Their words, `verbatim`.**
+
+> 216: Q1 ok Q2 don't give the diff, If I want the diff, I can get it. On another notes, the current diff command is not useful, I am using vscode, not looking at the diff in the terminal, it can be removed. Q3 ok
+
+**Q1 — `ok`, taking the worker's recommendation**, quoted as the worker wrote it:
+
+> Yes. It generalises the split already recorded at node 115 rather than inventing one, and it supplies the one
+> thing "a round returns to whoever raised it" cannot: an integration failure is raised by the *manager*, and the
+> manager cannot be the return address for authored content, being barred from reading code to produce a note.
+
+**Q2 — `don't give the diff`. This is a DIVERGENCE from the worker's recommendation**, and is marked as one so that
+the worker does not read a bare answer as agreement. **The worker recommended the opposite**, in its own words:
+
+> Yes, extend it, and with the command rather than the claim; the report awaits no answer. A bare *"I verified it"*
+> is exactly the unfalsifiable manager judgement this node exists to remove.
+
+**The human's ground, `verbatim`:** *"If I want the diff, I can get it."* So the duty the worker proposed —
+that the manager show the evidence as a runnable command when it lands on an approval already given — **is
+refused**, and what remains owed at a landing is whatever Q1's answer requires and no diff.
+
+**Q3 — `ok`, taking the worker's recommendation**, quoted as the worker wrote it:
+
+> Yes, outside it. An environment refusal changes no byte of anybody's work, both `--abort` and the prescribed
+> repair are total undos, and node 143 established that repair as a measured single pass after four failed
+> attempts.
+
+*The worker's caveat on Q3 travelled with that recommendation and the answer does not address it:* **"that repair
+runs `reset --hard` and `clean` over a branch holding approved-but-unmerged work, so this route is only as safe as
+the repair being exactly the prescribed one."** The manager hit exactly that limit at node 198's landing, recorded
+in the annotation above, where the prescribed repair did not cover the case and the manager improvised one it could
+verify. **That is unanswered and the manager has not treated Q3's `ok` as covering it.**
+
+### The steering that arrived alongside, and which is not an answer to this node
+
+**Their words, `verbatim`:** *"On another notes, the current diff command is not useful, I am using vscode, not
+looking at the diff in the terminal, it can be removed."*
+
+**This reverses a rule of their own** — the landing policy's *"the gate payload names the worktree's path and the
+command that shows its diff"*, given after a gate reached them with neither. It is recorded as standing steering in
+`map.md` and carried into the two files that state it by [node
+231](231-a-gate-payload-stops-carrying-a-diff-command.md). **The worktree's path survives; the command goes.** The
+manager has already stopped emitting it.

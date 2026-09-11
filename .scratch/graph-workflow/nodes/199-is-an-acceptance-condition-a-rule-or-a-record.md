@@ -193,3 +193,30 @@ place and are safe; **node 160 does not**, its clause 7 standing unmarked with t
 than exposure. **The manager added a pointer at the top of node 160's condition and changed no clause's text**,
 which is the worker's own *"minimum that closes the unsafe case"* alternative, taken as a safety repair rather than
 as an answer to Q4.
+
+### The human's answer to attempt 1
+
+**Their words, `verbatim`.**
+
+> Node 199: Q1 ok Q2 ok Q3 ok Q4 I am not sure I understand the question
+
+**Q1, Q2 and Q3 — `ok`, each taking the worker's recommendation.** Quoted as the worker wrote them:
+
+- **Q1:** *"Struck in place — the record treatment — but ratified on a ground the practice never had. […] So the
+  right statement is not "a condition is a record" but **"a node file is its own history file"**, which is why the
+  banking half has nothing to add."*
+- **Q2:** *"State the general test. […] text is rule-stating if an agent could act differently because of it today;
+  it is record-stating if it only tells you what was already decided or done."*
+- **Q3:** *"It ships, on node 189's own recorded ground: a workflow that ships the flat rule without its boundary
+  reproduces the defect on every future effort."*
+
+**Q4 — not an answer.** *"I am not sure I understand the question"* is the question failing rather than the human
+declining it, so **it goes back to the worker to be asked again**, which is the route the manager's contract sets
+for a reframing: the worker holds the interview, the manager holds the channel. **The manager has not rephrased it
+and has not answered it.**
+
+*The manager's note on why Q4 may have landed badly, offered to the worker rather than to the human and marked as
+the manager's:* Q4 asked whether an amendment gets "one stated form", which names a property of markup rather than
+anything the human acts on, and it arrived fourth behind three questions about a rule's substance. Its real content
+is a defect — **that one of the five shapes leaves a superseded clause readable as live** — and that defect is
+stated inside the recommendation rather than in the ask.
