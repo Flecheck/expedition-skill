@@ -356,3 +356,31 @@ deciding it is worth doing.
 and carry only a pointer through the boundary** — is a mechanism this effort already uses without naming it that
 way: the record on disk is the store, and a spawn carries the pointer. That is why the instruction-file route works
 at all, and it does not depend on any hook.
+
+## Annotation: two statements in this node are overtaken by node 218's work
+
+*Filed by the manager from [node 218](218-put-the-managers-trigger-duties-where-a-compaction-re-injects-them.md)'s
+worker, in its own words. **Nothing this node concluded is contradicted** — both are observations at a moment rather
+than decisions, and this node's status stays `resolved`.*
+
+> Node 217's `## The manager's note at resolution` states, as a fact about the tree, that *"This repository has no
+> instruction file at all"* and *"there is no `.claude/rules/` directory"*. Both are now false of the working tree,
+> this node having created the directory and the file. It is an observation at a moment rather than a decision, so
+> nothing it concluded is contradicted — the note's point, that the mechanism the answer names *"is not in play here
+> today"*, is what this node's work changes.
+
+**A second finding of that worker's, about this node's answer rather than its note.** Pasted as it wrote it:
+
+> **Node 217's answer overstates its own conclusion in the part this node used.** It presents `CLAUDE.md` as *"the
+> built-in mechanism that works"* and treats `InstructionsLoaded` as something that *"only observes that loading has
+> happened"* — while quoting the event's own trigger, *"when a CLAUDE.md or `.claude/rules/*.md` file is loaded into
+> context"*, with a `compact` matcher. The documented trigger is evidence that the harness loads and reloads the
+> second path too, and the answer's own recommendation section never draws it. The route this node was given rests
+> on a fact its source node had in hand and did not state.
+
+**The manager's note.** That is the second time this node's answer has been found to under-state what its own
+sources support — the first was its `PreCompact` conclusion, withdrawn by its own worker as *"an inference from
+silence"*. **The manager has marked neither finding as a correction to the answer**, both being about what the
+answer did not draw rather than about what it got wrong, and a resolved node's answer is not the manager's to
+rewrite. Whether `.claude/rules/` in fact reloads across a compaction is what the human's own condition —
+*"if the rules don't work"* — leaves to observation.

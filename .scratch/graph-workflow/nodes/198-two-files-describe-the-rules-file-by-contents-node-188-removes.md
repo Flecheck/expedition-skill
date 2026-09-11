@@ -1,7 +1,7 @@
 # Two files describe `map-implementation-rules.md` by contents that node 188 removes
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: 188
 

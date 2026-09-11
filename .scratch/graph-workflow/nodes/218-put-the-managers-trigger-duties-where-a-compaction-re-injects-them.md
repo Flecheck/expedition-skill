@@ -166,3 +166,36 @@ the condition the human set — and nothing in this node turns on it.
 
 **It is not claimed yet for a different reason: both code slots are full**, held by nodes 223 and 224, each at its
 gate with a live worktree. This node is on the frontier and takes the first slot that frees.
+
+## Flags
+
+*The worker's own text, pasted. The ids are the manager's bookkeeping and nothing else. Outstanding — this node has
+not reached its gate.*
+
+`218.1` `ASSUMPTION` — **The effort's map is named by path as `.scratch/<effort>/map.md` rather than by this
+effort's literal path.** Clause 3 requires the map named by path and clause 4 forbids naming any effort; an effort's
+name is its own directory's, so the literal path cannot satisfy both. Settled on `CONTEXT.md`'s **Effort** entry,
+which states that an effort's files live in `.scratch/<effort>/` — so the placeholder is this repo's authoritative
+notation for an effort path and not a workaround — and on the fact that a checker already reads `CONTEXT.md` among
+its standards, so this form discloses nothing new to it while the literal path would hand every checker the
+record's location. Not raised because neither clause is left unsatisfied: the departure is from a strict reading of
+"by path" that the glossary itself does not use.
+
+`218.2` `ASSUMPTION` — **One sentence was added that the acceptance condition did not ask for**, scoping the four
+duties to a manager: *"Every duty here is a manager's own, and a worker reading them acts on none of them."* The
+file is loaded by the harness into every agent in this repository, so the trigger about something going in front of
+the human, read cold by a worker, is an instruction to address the human — which ground rule 3 forbids anything in
+the files from giving. Settled on that ground rule, and on the reading that naming whose the duties are scopes them
+rather than adding another, so the condition's "nothing else as a duty" is not breached.
+
+### The manager's note beside these flags
+
+*Not a change to either.*
+
+**Flag `218.1` is the collision the manager warned this node's worker about, and the manager was wrong about who
+could resolve it.** The spawn said that if clause 3 and clause 4 could not both be satisfied it was the manager's to
+repair and the worker should raise. The worker did not need to: it found that `CONTEXT.md` — a file the manager did
+not think of as a source of notation — already fixes how this repo writes an effort's path. **The collision was
+real and the repo had already solved it.** Its retrospective says the fact *"arrived by accident"*, reached only
+because `CONTEXT.md` was on its vocabulary list, and that nothing anywhere points a worker at it for a path
+convention.
