@@ -43,17 +43,31 @@ part of the record — every demand below names a file, a heading or a string.*
 >    (d) a landing is not a question, so it never occupies the one channel the human has.
 > 3. It names the effort's map by path as where every other rule lives, and states that this file holds triggers
 >    only and overrides nothing there.
-> 4. **It is written to be safe for every agent in this repository to read, a checker included.** It contains no
->    account of what happened — no node number, no flag id, no count of attempts, no story of a failure, no name of
->    any effort — and every line in it is a standing constraint true of any node's work. A line that would tell a
->    checker something about a particular piece of work fails this clause.
-> 5. It states that it is one harness's mechanism and this effort's own practice, and that nothing the workflow
->    ships may assume it exists.
+> 4. ~~**It is written to be safe for every agent in this repository to read, a checker included.**~~ **Narrowed on
+>    the human's answer: clause 8 below is what keeps the file away from other agents, and this clause now stands on
+>    its own second half alone.** It contains no account of what happened — no node number, no flag id, no count of
+>    attempts, no story of a failure, no name of any effort — and every line in it is a standing constraint true of
+>    any node's work. A line that would tell a checker something about a particular piece of work fails this clause.
+>    **This clause holds whether or not clause 8 proves possible.**
+> 5. ~~It states that it is one harness's mechanism and this effort's own practice, and that nothing the workflow
+>    ships may assume it exists.~~ **Struck on the human's answer**, `verbatim`: *"I don't think the "What this file
+>    is" should be here"*. A manager reading that statement acts no differently for having read it, so it is a
+>    history in a file of triggers. **The statement is owed by the record instead**, where [node
+>    226](226-nothing-in-the-record-says-the-auto-loaded-trigger-file-exists.md)'s clause 1 already demands it. **The
+>    finished file states nothing about what it is** — no section of that kind, under any heading.
 > 6. ~~No file under `.claude/` and no file under `.scratch/` is modified, and no hook is configured anywhere.~~
 >    **No file under `.claude/` other than the one named above is created or modified**, no file under `.scratch/` is
 >    modified, and **no hook is configured** — amended by the manager on the human's answer, below, which put the
 >    file inside `.claude/` and parked the hook rather than refusing it.
 > 7. The working tree meets the bar.
+> 8. **Added on the human's answer**, `verbatim`: *"shouldn't we add a path constraint on the manager map, so that
+>    the rules are only loaded by the manager when running an expedition ?"* — **The file declares a constraint that
+>    keeps the harness from loading it into an agent whose work does not touch an effort's record.** The property is
+>    what this clause demands; the mechanism is whatever the harness provides, discovered from the harness rather
+>    than assumed, per ground rule 1. The worker establishes what the mechanism is and states in its handover what
+>    it read to establish it. **If the harness provides no such mechanism, that is a raise and not a workaround** —
+>    do not approximate the constraint by writing the file somewhere the harness does not load, and do not configure
+>    a hook, which clause 6 still forbids.
 
 ## The manager's note at filing
 
@@ -250,3 +264,44 @@ only infer from the `InstructionsLoaded` event's documented trigger.
 **It does not establish the thing the human's condition turns on.** *"If the rules don't work"* is about surviving a
 **compaction**, and no compaction happened during that check. That observation is still owed and is the manager's to
 make from its own context.
+
+### Gate — `correct`, on two points
+
+**The human's words, `verbatim`.**
+
+> shouldn't we add a path constraint on the manager map, so that the rules are only loaded by the manager when running an expedition ? Also I don't think the "What this file is" should be here ?
+
+**Recorded at the moment they spoke, before anything was changed.** Neither point is a `reject` and neither asks
+for different triggers; both are about the file's reach and its contents, and **both land on clauses the manager
+wrote itself.**
+
+**How the manager reads each, stated so a wrong reading is visible rather than silent.**
+
+- **The path constraint.** The file today is loaded by the harness into **every agent in this repository** — this
+  node's own checker observed it arriving in its context mid-check. The human asks whether it can instead be
+  constrained to load only for the manager, while an expedition is being run. That is a **new demand**, and it
+  removes the pressure that produced clause 4 and flag `218.2`: if a worker and a checker never see the file, the
+  file need not be written for them.
+- **`## What this file is`.** That section exists because **clause 5 demanded it** — *"It states that it is one
+  harness's mechanism and this effort's own practice, and that nothing the workflow ships may assume it exists."*
+  The manager reads the objection as the effort's own admission test applied to the manager's own clause: **a
+  manager reading that sentence acts no differently for having read it**, so it is a history rather than a trigger,
+  and the file the human chose is a file of triggers. The statement is still true and still worth recording — in the
+  record, where [node 226](226-nothing-in-the-record-says-the-auto-loaded-trigger-file-exists.md) already demands
+  it — rather than in the file.
+
+**What the manager has amended, both clauses being its own.** Marked in place in the condition above.
+
+- **Clause 5 is struck**, and its content is not lost: node 226's clause 1 already requires the record to state that
+  the harness loads this file, and node 226's condition is its author's rather than the manager's.
+- **A new clause 8 demands the path constraint**, stated as a property rather than as a mechanism — ground rule 1
+  prefers what is discovered over what is declared, and the manager has not established what the harness offers.
+- **Clause 4 is narrowed rather than dropped.** If clause 8 holds, no checker ever reads the file, so the clause's
+  reason is gone — but the manager is keeping its ban on accounts of what happened, because the reason for *that*
+  half is the manager's own context rather than a checker's blindness, and because clause 8's mechanism is not yet
+  established. **If clause 8 turns out to be impossible, clause 4 is the only thing standing between a blind checker
+  and this file.**
+
+**Where the work goes.** Back to its worker for a correction round, then to a fresh check — **the condition itself
+changed**, so the shipped rule that the acceptance condition is re-checked only where the correction touches it is
+satisfied trivially: it touches it everywhere. Then back to this gate.
