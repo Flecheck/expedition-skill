@@ -1,7 +1,7 @@
 # Put the manager's trigger-duties where a compaction re-injects them
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -186,7 +186,7 @@ gate with a live worktree. This node is on the frontier and takes the first slot
 *The worker's own text, pasted. The ids are the manager's bookkeeping and nothing else. Outstanding — this node has
 not reached its gate.*
 
-`218.1` `ASSUMPTION` — **The effort's map is named by path as `.scratch/<effort>/map.md` rather than by this
+`218.1` **· settled** `ASSUMPTION` — **The effort's map is named by path as `.scratch/<effort>/map.md` rather than by this
 effort's literal path.** Clause 3 requires the map named by path and clause 4 forbids naming any effort; an effort's
 name is its own directory's, so the literal path cannot satisfy both. Settled on `CONTEXT.md`'s **Effort** entry,
 which states that an effort's files live in `.scratch/<effort>/` — so the placeholder is this repo's authoritative
@@ -195,7 +195,7 @@ its standards, so this form discloses nothing new to it while the literal path w
 record's location. Not raised because neither clause is left unsatisfied: the departure is from a strict reading of
 "by path" that the glossary itself does not use.
 
-`218.2` `ASSUMPTION` — **One sentence was added that the acceptance condition did not ask for**, scoping the four
+`218.2` **· settled** `ASSUMPTION` — **One sentence was added that the acceptance condition did not ask for**, scoping the four
 duties to a manager: *"Every duty here is a manager's own, and a worker reading them acts on none of them."* The
 file is loaded by the harness into every agent in this repository, so the trigger about something going in front of
 the human, read cold by a worker, is an instruction to address the human — which ground rule 3 forbids anything in
@@ -368,7 +368,7 @@ and the `## Where every other rule lives` section are byte-identical to the vers
 worker; **`218.2`'s ground has changed** and the new ground is recorded rather than the old one being overwritten.
 `218.3` is new to this round.*
 
-`218.3` `ASSUMPTION` — **The path constraint is `paths: [".scratch/**"]` and was shipped without the load being
+`218.3` **· settled** `ASSUMPTION` — **The path constraint is `paths: [".scratch/**"]` and was shipped without the load being
 observed.** Clause 8 asks for a property and sends the worker to the harness for the mechanism; the mechanism was
 established from the harness binary's own embedded loader and guidance text and confirmed against the official
 memory documentation, but no compaction or spawn was put through the finished file to watch it load or decline to
@@ -460,7 +460,7 @@ gap.
 *The checker offered it as needing no answer. The manager files it as a flag because it is a judgement an agent made
 on its own, and because its subject is the checker contract rather than this work.*
 
-`218.4` `ASSUMPTION` — **A checker's helper agent reached the effort's record, which the checker is kept blind to.**
+`218.4` **· settled** `ASSUMPTION` — **A checker's helper agent reached the effort's record, which the checker is kept blind to.**
 In the checker's own words: *"I spawned one helper agent to establish the harness's rules-loading mechanism. It went
 beyond the documentation and cited the effort's own record by node number. I discarded every record-derived part of
 what it returned, re-established the mechanism myself by reading the harness documentation directly, and every fact
