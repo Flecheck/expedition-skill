@@ -220,3 +220,27 @@ the manager's:* Q4 asked whether an amendment gets "one stated form", which name
 anything the human acts on, and it arrived fourth behind three questions about a rule's substance. Its real content
 is a defect — **that one of the five shapes leaves a superseded clause readable as live** — and that defect is
 stated inside the recommendation rather than in the ask.
+
+### The human's answer to the re-asked Q4
+
+**Their words, `verbatim`.**
+
+> 199 Q4 ok
+
+**`ok` takes the worker's recommendation**, quoted as the worker wrote it:
+
+> **It must be marked where it stands.** The reader this protects is the checker, which receives the condition as
+> text and never reads the node, so anything recorded elsewhere in the file is invisible to it. A pointer at the top
+> of the block — the repair just applied to node 160 — tells that reader something changed but not which clause,
+> leaving it to reconcile two sections and get it right; node 143's checker had to do that reconciliation and
+> flagged how close it came to failing the work. Marking the clause itself removes the reconciliation instead of
+> asking for it, and it is what six of the nine amendments already do, so this ratifies the majority practice rather
+> than inventing one. It costs the manager nothing: it is the same edit, made in a different place.
+
+**All four questions are now answered and none diverged.** Q1 `ok`, Q2 `ok`, Q3 `ok`, Q4 `ok` at its second asking
+— the first asking having failed, which the worker named as its own defect rather than the human's.
+
+**What this makes owed of the manager immediately, before any node lands.** Node 160's clause 7 still stands
+unmarked; the manager's pointer at the top of its condition was the weaker alternative this answer has now declined.
+**The manager will mark that clause where it stands**, which is bookkeeping on an amendment already made rather
+than a change to what the clause requires.
