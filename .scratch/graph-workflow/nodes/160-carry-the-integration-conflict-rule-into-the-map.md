@@ -22,13 +22,29 @@ section and will merely conflict, which this node's own answer says is acceptabl
 
 *Written by node 115's worker. Pasted as it wrote it, and not the manager's.*
 
-**Two clauses of this condition have been amended, and clause 7 is not marked where it stands.** The amendments are
+~~**Two clauses of this condition have been amended, and clause 7 is not marked where it stands.** The amendments are
 held in the two `## Annotation` sections at the end of this file. **Read those before holding any work against this
 condition.** *Pointer added by the manager as a safety repair; it changes no clause's text. [Node
 199](199-is-an-acceptance-condition-a-rule-or-a-record.md)'s worker established that a condition amended elsewhere,
 with nothing pointing at it from the condition block, is read as live by a checker handed the node cold — the
 failure node 143's checker caught. **Which form an amendment should take is node 199's open question, and the
-manager has not pre-empted it.***
+manager has not pre-empted it.***~~
+
+**Struck by the manager, on the same day it was written, because its central claim is false.** Clause 7 **is**
+marked where it stands: the paragraph beginning `**Amended, and the amendment is the manager's, made with the
+human's approval.**` sits **inside the condition block**, as a continuation of clause 7 itself, so a checker
+handed this condition as text sees the clause and sees that it has been added to, in the same reading. **This
+node was never in the unsafe shape**, and the pointer above was added on a false premise.
+
+**Where the false premise came from, and it is the manager's to own.** [Node
+199](199-is-an-acceptance-condition-a-rule-or-a-record.md)'s worker classified this node with nodes 200 and 140 as
+*"the clause untouched with the amendment in a following paragraph plus a separate annotation section"*. The
+second half of that is right — there is a separate annotation section — and the first half is wrong. **The manager
+did not check the clause before repeating the claim**, put it to the human as established, and wrote the pointer
+on it. Flag `160.2` records it.
+
+**What this node's shape actually is, under the rule the human approved at node 199's `Q4.`**: the amendment is
+adjacent to the clause and inside the block, which is what that rule demands. **Nothing here needs repairing.**
 
 > The work is `.scratch/graph-workflow/`. The worker may edit `map-implementation-rules.md`, `map-manager-only.md`
 > and `map-history.md`, and no other file; it may not mark this node, resolve it, or write a line in `decisions.md`
@@ -128,3 +144,14 @@ words. Nothing above is changed, and **the condition is not amended.***
 name is already in its own permitted list, so the fix is two words — but rewriting a condition is not the manager's,
 and *"only the two file names are wrong"* is itself a judgement of the worker's that whoever claims this node should
 confirm against the tree rather than inherit.
+
+## Flags
+
+`160.2` `MANAGER-WRONG` — **The manager reported this node to the human as carrying an unsafe amendment shape, and
+it does not.** Node 199's worker classified node 160 alongside nodes 200 and 140 as a condition whose amendment sits
+only in a separate section. **The manager repeated that without opening the clause**, told the human that node 160
+was *"open and unclaimed, and its clause 7 sits unmarked"*, and added a pointer at the top of the condition as a
+safety repair. Clause 7 carries its amendment inside the condition block, immediately beneath it. **The pointer was
+unnecessary and its premise was false**; it is struck above rather than deleted, and no clause of this condition was
+ever changed by it. **The cost was a false statement to the human and a paragraph of noise at the head of a
+condition a worker will read cold.**

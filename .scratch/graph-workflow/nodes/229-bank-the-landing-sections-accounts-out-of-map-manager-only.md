@@ -1,7 +1,7 @@
 # Bank the landing section's accounts out of `map-manager-only.md`
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -242,3 +242,96 @@ which region maps to which edit, and the manager is the party that withheld the 
 place. **A second pair of eyes was available and was not used** — the enumerated edits could have gone to a third
 agent that had never seen the work. The manager judged the reconciliation mechanical enough to state; whether that
 judgement is right is the human's to weigh at the gate.
+
+### Gate — `approve`
+
+**The human's word, `verbatim`.**
+
+> approve
+
+**What it decided.** `approve` on a `PASS`ing tree lands the work as it stands. **Flag `229.1` is settled** — the
+reading of clause (b) that treats *byte-identical* as forbidding rewording rather than demanding one physical line,
+which the checker reached independently and by a different route.
+
+**What the payload disclosed, and which the approval therefore covers.** That the `NOT COVERED` part was settled
+**by the manager alone**, on its own mapping of thirteen diff regions to fourteen edits, and that the manager is the
+party that withheld the enumerated edits from the checker in the first place. The payload said in as many words that
+a third agent could have been given the spans and was not, and that the judgement was the human's to weigh.
+
+## Flags
+
+*The worker's own text, pasted. **Settled by the approval.***
+
+`229.1` **· settled** `ASSUMPTION` — Clause (b) demands thirteen strings appear "byte-identical" in the finished
+section. One of them, `could not detach HEAD`, does not appear as contiguous bytes and did not before this work
+began — the file wraps it as `` `could not\n  detach HEAD` `` — and it cannot be made contiguous, because it sits
+inside the one bullet the condition says nothing else in changes, and outside the fourteen spans, where
+byte-identity is demanded. I read "byte-identical" as the condition's own quotations read it, *not reworded*, with a
+markdown soft line break immaterial; on the raw-byte reading the clause would already have been false of an unedited
+file. Four independent demonstrations back that reading: the condition's quoted end markers for edits 7, 8 and 13
+all fail to match the file's bytes and all fail only by line wrapping, as does clause (c)'s own quoted sentence.
+Where the wrapping was mine, I honoured the stricter reading anyway and kept `grep " <repo>" /proc/mounts` and the
+`unable to unlink old …: Read-only file system` string each contiguous on one line.
+
+*The manager's note: **the checker refused to take this on the worker's word and got there by its own route**, its
+contract independently mandating an unwrapped search. It then tested the worker's factual claim and confirmed the
+string was already non-contiguous before any work started. Two parties, two routes, one conclusion.*
+
+## Answer
+
+*Pasted as the worker wrote it, in its own words.*
+
+The fourteen edits landed in `map-manager-only.md`'s `## Landing an implementation node's work`, and every passage
+they removed is banked verbatim in `map-history.md` under one new final `##` section.
+
+**Every span was located mechanically, never by eye.** A Python pass read the pre-work bytes, located each span by
+its quoted start and end markers as exact byte strings, asserted each marker occurred **exactly once inside the
+section**, asserted the fourteen spans did not overlap, and rebuilt the file by copying the untouched runs verbatim
+and substituting only inside the spans. **Byte-identity outside the fourteen spans is therefore a property of the
+construction rather than something checked afterwards.**
+
+**Three of the condition's quoted markers do not match the file byte-for-byte, and all three differ only in line
+wrapping** — the condition quotes this file with markdown soft line breaks normalised to spaces. Each was located by
+the file's own bytes instead, and each is still unique inside the section.
+
+**What the section lost is history and what it kept is every trigger.** Gone: how many attempts a measurement took,
+which earlier account was wrong, the node-140 illustration, and nine struck regions of which seven existed nowhere
+else. Kept: every error string, every verbatim human quotation, and the condition under which each rule fires. **No
+rule that binds changed in what it requires.**
+
+**Byte counts.** `map-manager-only.md` 34,160 → 28,733. The section 16,619 → 11,192. `map-history.md` 117,473 →
+129,021, the whole growth being the appended section, its prefix byte-identical.
+
+**What the worker reported its work invalidates:** `none`. *Its words:* *"Node 191's rule — that no sweep of a map
+file is owed or licensed — is unchanged and is restated as unchanged in the banked section's own lead-in; this work
+is the single bounded exception the human licensed at node 225, over one section of one file."*
+
+## Retrospective
+
+*Filed by the manager in the same edit that resolves the node. Pasted as the worker wrote it.*
+
+**1. What I had to hunt for.** Three of the condition's quoted span markers, because they do not exist in the file
+as quoted — the whitespace differs. **The gap is that nothing told me the condition's quotations are
+whitespace-normalised**, and I had to infer it from three failures. The other hunt was the effort name for the
+commit trailer, which I got from `git log | grep 'Node:'`. **Neither my spawn nor my node file nor the map states
+it, and every implementation node needs it for exactly one line.**
+
+**2. What arrived that this node did not need.** `map.md` is a mandatory read and is ~50 KB; of it, **one** line
+bore on this node. Where I went to a file for one fact and took the whole file: `map-history.md`, 117 KB, opened to
+learn the house format of a banked section — I windowed it and paid little, **but only because I guessed to window
+it.** The arrangement that would have avoided the `map.md` cost is a heading: this effort's own
+`map-implementation-rules.md` opens by saying `map.md` holds only what *every* worker can act on, **and that claim
+is not true for a worker whose product is a map file.**
+
+**3. What would have made this node easier.** In the **node file**: one sentence saying the condition's quotations
+are normalised to single spaces and that the file's own line wrapping is the authority. **Three of the fourteen
+spans and one property clause turn on that, and the node's own worker plainly knew it.** In the **spawn**: the
+effort name. **The single largest thing that made this node easy was the condition quoting its spans instead of
+describing them**, which made a mechanical `assert count == 1` possible; a condition that had said "the struck
+sentence about the manager creating the worktree" would have put the transcription risk back.
+
+**4. What I read that was stale, wrong, or contradicted something else.** (i) The node's `## Question` states the
+section at **16,569 bytes**; it measures **16,619**. (ii) `map-implementation-rules.md`'s opening says `map.md` is
+read *"whole, cold, once per node by every worker, so it holds only what every worker can act on"* — for this node
+one line of it qualified. (iii) The two live contradictions I found inside the section and left, both reported as
+new nodes: the reset's sandbox cost stated two ways, and the worktree path stated two ways.

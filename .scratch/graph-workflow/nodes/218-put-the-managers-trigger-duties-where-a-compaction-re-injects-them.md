@@ -485,3 +485,35 @@ withholding this file.** Both the worker and the checker said so; the checker na
 the harness against the tree, or read `/context` in a session launched there"* — and that is the manager, once this
 is on `master`. The human's own condition on the mechanism, `verbatim` from node 218's interview — *"we postpone
 PreCompact if the rules don't work"* — is what that observation decides.
+
+## Annotation: the mechanism observed, and the human's own narrowing of the glob
+
+*Filed by the manager. Nothing above is changed and this node stays `resolved`.*
+
+**The observation this node owed has arrived, and it arrived by accident.** Flag `218.3` and both checkers recorded
+that nobody had watched the harness load or withhold this file, and that the manager was the party who could once
+the work landed. **It loaded.** Reading `.scratch/graph-workflow/flags.md` — a plain record file, with no hook
+configured and nothing in any spawn naming this path — put the whole of `expedition-triggers.md` into the manager's
+context, unasked. **That is `path_glob_match` firing on the `paths` frontmatter**, which is the mechanism node 218's
+worker established from the harness's own compiled loader and could not observe.
+
+**What it does not establish, stated because the distinction is the whole of flag `218.3`:** the *negative* case.
+Nobody has yet watched an agent working outside the glob **fail** to receive it. What is observed is that the file
+reaches a reader inside the glob.
+
+**The human then narrowed the glob themselves, editing the landed file directly.** `paths` went from `".scratch/**"`
+to `".scratch/**/map-manager-only.md"`. **This is theirs rather than the manager's**, made in the working tree after
+the node landed, and the manager has neither reverted it nor committed it — a path-limited record commit leaves it
+untouched, and committing a human's own working-tree edit for them is not the manager's.
+
+**What it changes.** Under `".scratch/**"` the file reached any agent touching any record file, which node 218's
+worker had established still included a checker whose work under check *is* a record file — the residual exposure
+that kept clause 4's surviving half and the scoping sentence load-bearing. Under
+`".scratch/**/map-manager-only.md"` it reaches an agent working on **the manager's own file and no other**, which is
+much closer to the instruction that produced clause 8 in the first place, `verbatim`: *"so that the rules are only
+loaded by the manager when running an expedition"*.
+
+**Two things the manager is recording rather than acting on.** The observation above was made under the **old**
+glob, so it is evidence for the mechanism and not for the narrowed pattern. And the narrowed pattern is untested:
+whether a trailing-filename glob matches the way a directory glob does is exactly the uncertainty node 229's checker
+raised about `.scratch/**` and did not resolve. **Neither is a reason to touch their edit.**
