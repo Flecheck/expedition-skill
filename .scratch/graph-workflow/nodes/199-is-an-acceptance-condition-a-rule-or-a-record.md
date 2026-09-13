@@ -1,7 +1,7 @@
 # Whether an acceptance condition is a rule statement or a record, under the never-delete cut
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -244,3 +244,172 @@ stated inside the recommendation rather than in the ask.
 unmarked; the manager's pointer at the top of its condition was the weaker alternative this answer has now declined.
 **The manager will mark that clause where it stands**, which is bookkeeping on an amendment already made rather
 than a change to what the clause requires.
+
+## Flags
+
+*The worker's own text, pasted. The ids are the manager's bookkeeping. **Outstanding** — this is a grilling node, so
+its flags reach the human at the pick report that closes it rather than at a gate.*
+
+`199.1` `ASSUMPTION` — **I wrote the answer as two tests in sequence, and that structure is mine rather than the
+human's.** They approved the rule-vs-record test's wording at Q2 and the *"a node file is its own history file"*
+ground at Q1, as two separate answers. Joining them into *what is this text?* then *does its file archive its own
+subject?* is my reading of how the two fit, and it is what makes Q1 and Q2 stop looking contradictory. Ground: node
+189 collapsed "is a rule" into "is replaced and banked" because every case it held answered both the same way, and a
+condition is the first case where they come apart. Whoever carries this into `graph-conventions.md` writes that
+structure, so it is worth their eye before it ships.
+
+`199.2` `ASSUMPTION` — **I decided what happens to the nine existing amendments, and it was not asked.** The human
+settled the standing form at Q4 and said nothing about the instances already written in the unsafe shape. I derived
+the sweep: repair open and claimed nodes, leave resolved ones, on the ground that a condition is only ever handed to
+a worker or a checker while its node is live, so a resolved node's shape can no longer cause the failure the rule
+exists to stop.
+
+`199.3` `ASSUMPTION` — **The approved test reaches flag `198.1`'s two passages and I did not re-adjudicate them.**
+Node 198's worker judged two stale pointers in `map.md` to be facts rather than rule statements, reasoning that *"a
+pointer saying what a file contains records a fact rather than states a binding rule"*, and struck them in place.
+Under the test the human has now approved, a pointer telling an agent which file holds the rules is something an
+agent **could act differently because of today**, so the test appears to reach it. I left that flag settled and node
+198 landed: nothing is broken today, node 198's work is done, and re-opening a settled judgement of another node's
+worker is not mine. Recorded so it is not discovered later as an oversight.
+
+### The manager's note beside these flags
+
+*Not a change to any of them.*
+
+**Flag `199.2`'s derived sweep has one instance the worker believed was repaired and was not.** Its answer states
+that *"node 160 was live and unsafe, and the manager has marked its clause 7 where it stands."* **Node 160 was never
+unsafe** — its clause 7 carries its amendment inside the condition block — and the manager established that after
+this worker had handed back. The error began with this worker's own classification and the manager repeated it
+without checking. **Flag `160.2` records it against the manager**, and node 160's annotation carries the
+correction. Nothing in this node's answer turns on it: the sweep it derives is *repair the live, leave the
+resolved*, and with node 160 removed there was nothing live to repair.
+
+## Answer
+
+*Pasted as the worker wrote it.*
+
+An acceptance condition is **rule-stating**, and its superseded clauses are nonetheless **marked in place** and
+never banked. Those two facts only look contradictory because node 189 joined them. This answer separates them into
+two questions asked in order.
+
+**First question — what is this text?** The test, in the human's approved wording:
+
+> **Text is rule-stating if an agent could act differently because of it today; it is record-stating if it only
+> tells you what was already decided or done.**
+
+An acceptance condition passes it while its node is live: a worker and a checker both act on it, and the effort's
+own `map-implementation-rules.md` already lists it in the bar's non-command half beside the ground rules and
+`graph-conventions.md`, while naming a node's `## Answer` and a line in `decisions.md` — two of node 189's
+record-side examples — as things that state no intent at all. **What this first question settles is one thing only:
+a superseded rule statement must never be left readable as though it still binds.** It settles nothing about where
+the old text goes.
+
+**Second question — does this text's file already archive its own subject?** This is what picks the destination, and
+node 189 never asked it because every case it had in hand answered the same way.
+
+- **A node file does.** It has one subject and already holds every superseded thing about it — prior `## Interview`
+  attempts, superseded `## Answer` text, earlier `## Review` rounds. Nothing is lost by leaving superseded text in
+  it, and it is the only place anyone looks for that node's history. **A node file is its own history file.**
+- **`map.md` and every sibling of it that states rules that currently bind do not.** They have no per-file archive
+  and must read clean, which is why their superseded text goes to `map-history.md`.
+- **`map-history.md` is the archive**, holds superseded text only, and is never rewritten. Untouched here.
+
+**So: a superseded clause of an acceptance condition is marked superseded in place, inside its node file, and is
+never removed from it and never appended to `map-history.md`.** The practice that nine amendments already followed
+is correct, and this is the ground it never had. Node 143's condition had already written that ground down — *"The
+clauses are left standing here under the never-delete rule"* — and only because a checker forced it.
+
+**How far the node-file ground reaches.** It is a claim about one class of file and not a retreat from node 189's
+text-not-file cut, which stands. It says the *destination* is chosen by the archive property, and today exactly one
+class of file has that property. An acceptance condition is the only rule-stating text a node file holds, so in
+practice the reach is conditions — but stated as a property of the file it stays right if a node file ever holds
+another.
+
+**The form, which is where the correctness cost sits.** Because a condition is rule-stating, marking it dead is not
+cosmetic:
+
+> **A superseded clause is marked where the clause itself stands**, so that a reader of the condition alone sees
+> which clauses bind. Recording the amendment only elsewhere in the node file does not satisfy this.
+
+The reader this protects is the **checker**, which is handed the condition as text and does not read the node. Six
+of the nine amendments already do this. Node 143's checker named the failure exactly: *"A later checker handed this
+node cold would read the file and fail work that meets the condition in force."*
+
+**This is the asymmetry between the two sides of the cut.** A struck `## Answer` needs no marking discipline beyond
+the strike, because nothing acts on it. A struck condition clause does, because something acts on it.
+
+**What happens to the nine existing amendments.** The form binds from now, and existing instances are repaired where
+they can still bite and left alone where they cannot. **Exposure exists only while a node is open or claimed**,
+since only then is a condition handed to a worker or a checker. Nodes 218 and 226 are live and already safe. Nodes
+200 and 140 are resolved and landed: they are precedent rather than exposure, they are swept by nothing, and under
+the never-delete rule their text stays as it is.
+
+**It ships.** Both tests, the archive property, and the marking rule go into `graph-conventions.md`, on node 189's
+own recorded ground: a workflow that ships the flat rule without its boundary reproduces the defect on every future
+effort. That ground is stronger here than it was there, because the shipped file does not merely stay silent — it
+says the cut follows the text and then sorts the node files onto the record side by being node files. A future
+reader meets a contradiction rather than a gap, and the shipping node disposes of it.
+
+## Retrospective
+
+*Filed by the manager in the same edit that resolves the node. Pasted as the worker wrote it.*
+
+**1. What I had to hunt for.** The single most load-bearing fact for Q1 was that `map-implementation-rules.md` lists
+*"the node's acceptance condition"* inside the bar's non-command half, beside the ground rules and
+`graph-conventions.md` — every other member of which is squarely rule-stating — and in the same file says the
+condition is *"the only statement of intent the checker has"* while naming a node's `## Answer` and a
+`decisions.md` line as things that state no intent. **That is the record arguing against my own recommendation**,
+and I found it by grepping that file for `condition` on a hunch. Nothing pointed me there.
+
+The second hunt was the **set** of amended conditions. Node 199's file named two, the spawn named five more, and
+neither was complete: there are nine. I had to dispatch a search to know the set was closed, and the count mattered
+— *"nine amendments, zero banked"* is what made the practice's unanimity an argument rather than an anecdote.
+
+**2. What arrived and was not needed.** Node 194 read whole, 202 lines, for its acceptance condition and its
+answer's account of the shipped wording; its `## Review` section bore on nothing. **This is the
+went-for-one-fact-took-the-whole-file case.** The `decisions.md` grep the spawn directed me to was cheap and mostly
+idle, though the grep-don't-read instruction was right. Node 189 read whole was justified.
+
+**3. What would have made this easier.** **The record has no index of amended acceptance conditions, and this
+node's whole subject was how they are amended.** `flags.md` nearly has one — the `CONDITION-WRONG` marker carries
+184.3, 190.1 and 160.1 — but four of the nine amendments carry no flag at all, **so the marker looks like an index
+and is not one.** One command would have replaced a full search.
+
+**The spawn was unusually good and I should say which part.** Handing me three same-day instances the node file
+could not know about, and flagging node 198's case as *"the question is not only about acceptance conditions"*, is
+what produced Q2 — the question with the widest reach in the payload. The manager also wrote that its own behaviour
+should be read as evidence about what the rule fails to say rather than as precedent, which is the sentence that let
+me recommend against the practice's implied ground while ratifying its outcome.
+
+**One cost that was mine.** Q4 needed asking twice. I named a property of markup and buried the thing that matters
+— that one shape makes a checker fail correct work — inside the recommendation where the human had no reason to read
+it. Moving the defect into the ask got a one-word answer. **The lesson generalises: a question whose subject is a
+rule's form has to lead with the failure, or it reads as tidiness.** That round cost a full payload and the human's
+turn, which is the scarce thing.
+
+**4. What I read that was stale, wrong, or contradictory.**
+- `graph-conventions.md` contradicts itself on exactly this node's subject. Disposed of by the second new node.
+- **Flag `190.1`'s index sentence says the manager *"replaced"* clause 3; the node file shows it struck in place.**
+  The index and the artifact disagree about which treatment was applied, **in the one flag whose subject is which
+  treatment applies.**
+- **Node 199's own file says *"Three amendments to live acceptance conditions have now been made this session"*.**
+  The real figure was nine by the time I held it. Correct under never-delete and correctly not edited — but it is
+  the first scale figure a worker meets. This is the shape `map.md` already warns about at node 183: a figure in the
+  record about the record, dated and non-authoritative, to be re-derived rather than trusted.
+
+## Annotation: what this invalidates in node 189
+
+*Filed by the manager from this node's worker, in its own words.*
+
+> **Node 189** — one sentence of its answer is now too broad. It says, without exception, that *"Text whose job is
+> to state a rule that currently binds is replaced by its current form"* and that *"The superseded text is appended
+> verbatim to `map-history.md`"*. An acceptance condition is rule-stating under the test the human approved here,
+> and is **not** appended to `map-history.md`. Node 189 joined "is a rule" to "is replaced and banked" because every
+> case it held answered both the same way; a condition is the first case where they come apart. **The rest of node
+> 189 stands** — the location boundary, the text-not-file cut, and the protection of `map-history.md` at flag
+> `189.3` are all what this answer builds on. This is the same shape as node 189's own invalidation of node 64.
+>
+> **Not invalidated, and worth saying so.** **Node 194** landed the shipped text that carries the contradiction, and
+> what it landed is not false: its `## Writing the map` paragraph puts the node files on the record side, which is
+> the right outcome for an acceptance condition by the wrong route. It is incomplete rather than wrong, and the
+> second node above completes it rather than reversing it.

@@ -226,3 +226,24 @@ rather than deciding any of it.** Three things follow that the worker must now c
 **The manager has run the refused rule by hand twice**, holding node 129's fog items and node 150's landing-policy
 edit behind node 140, and both landings rebased clean. That is evidence the rule works, not that it was the right
 trade, and the human has now priced the trade differently.
+
+## Annotation: this answer's third branch now has a destination
+
+*Filed by the manager from [node 216](216-what-a-correction-round-after-a-rebase-conflict-owes.md)'s worker, in its
+own words. **Nothing here is contradicted** — this completes a branch that stated none.*
+
+> **Node 115** is extended and not contradicted. Its first two branches are unchanged. Its third — *"`git rebase
+> --abort`, and a correction round"* — stated no destination, and this answer supplies one. Record it as a
+> completion rather than a reversal.
+
+**The destination**: the checker, then the human for another approval, because a correction round after an abort is
+somebody authoring content that did not exist when the human approved.
+
+**A second thing this node's worker could not have known, and the manager owes it here.** Node 216 was minted by the
+manager on the premise that the landing policy was silent about where a correction round returns to. **It was not
+silent — this node had answered it**, and the manager decided by its own judgement at node 200's landing without
+knowing that. Flag `216.1` records it against the manager. **What made this node invisible at the place it governs
+is structural rather than anyone's carelessness**: node 115's answer has never been carried into the map, the node
+that carries it — [node 160](160-carry-the-integration-conflict-rule-into-the-map.md) — is open and blocked on node
+144, and so the landing policy still states the sentence this node replaced, with nothing marking it. Node 216's
+retrospective names that window as the whole cost of that node.

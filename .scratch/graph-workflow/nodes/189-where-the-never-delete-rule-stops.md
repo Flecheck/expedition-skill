@@ -257,3 +257,26 @@ overturn this workflow's rules, and they did both here — but the reason record
 **Where else it propagated.** [Node 70](70-pruning-a-long-running-map.md)'s payload put it to them as *"your oldest
 standing rule on this effort"*, and the manager relayed that wording without catching it. That worker is live and
 has been told.
+
+## Annotation: one sentence of this answer is now too broad
+
+*Filed by the manager from [node 199](199-is-an-acceptance-condition-a-rule-or-a-record.md)'s worker, in its own
+words, after the human answered all four of that node's questions. **This node stays `resolved`** — what follows
+narrows one sentence and leaves the rest standing.*
+
+> **Node 189** — one sentence of its answer is now too broad. It says, without exception, that *"Text whose job is
+> to state a rule that currently binds is replaced by its current form"* and that *"The superseded text is appended
+> verbatim to `map-history.md`"*. An acceptance condition is rule-stating under the test the human approved here,
+> and is **not** appended to `map-history.md`. Node 189 joined "is a rule" to "is replaced and banked" because every
+> case it held answered both the same way; **a condition is the first case where they come apart.** The rest of node
+> 189 stands — the location boundary, the text-not-file cut, and the protection of `map-history.md` at flag `189.3`
+> are all what this answer builds on. **This is the same shape as node 189's own invalidation of node 64.**
+
+**What replaced the joined rule**, in node 199's approved answer: two questions asked in order. First *what is this
+text?* — rule-stating if an agent could act differently because of it today. That settles only that a superseded
+version must never be left readable as though it still binds. Second *does its file already archive its own
+subject?* — which is what picks the destination, and which node 189 never asked because every case it held answered
+the same way. **A node file does archive its own subject; `map.md` and its rule-stating siblings do not.**
+
+**Carried into the map by [node 232](232-state-the-two-never-delete-tests-in-the-map.md) and into the shipped
+conventions document by [node 233](233-ship-the-two-never-delete-tests-into-the-conventions-document.md).**

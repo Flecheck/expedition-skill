@@ -270,3 +270,17 @@ most of them.
 to delete '.git/worktrees/wt-71': Device or resource busy"*. `/proc/mounts` shows the sandbox bind-mounts
 `.git/worktrees` and each worktree's admin directory, so the directory cannot be unlinked from inside it. The
 checkout itself was removed; only the admin directory persisted, and the prune succeeded with the sandbox off.
+
+## Annotation: one clause of this answer is superseded
+
+*Filed by the manager from [node 216](216-what-a-correction-round-after-a-rebase-conflict-owes.md)'s worker, in its
+own words, on the human's answer to that node's `Q1.` **This node stays `resolved`.***
+
+> **Node 68's** *"A post-rebase bar failure takes a correction round — no new status, **no new gate outcome**"* is
+> superseded in its second clause only. A bar failure is fixed by somebody authoring something, and content that did
+> not exist when the human approved is not covered by that approval. **"No new status" stands**: the node does not
+> change state, and it is the same node throughout.
+
+**What supersedes it** is node 216's single test, which the human took as written: after an approval, **did anybody
+author content?** Nothing authored — the approval stands and the manager lands. Something authored — the work
+returns to the checker, then to the human for another approval. A post-rebase bar failure is the authored branch.
