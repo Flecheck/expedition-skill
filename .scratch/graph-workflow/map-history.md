@@ -397,3 +397,161 @@ already improvised past the branch in the same direction with none having author
 is repaired**, which is `Q1.`'s answer: the branch stops a check only where a rule *this* work must be judged by has
 itself changed and no unchanged statement of it survives. **The manager carries this in a checker's spawn** for as
 long as it stands, marked as the human's and not as the manager's.
+
+## Superseded from `map-manager-only.md` — the landing section's accounts
+
+*Banked verbatim under the `Change the map` procedure at [Bank the landing section's accounts out of
+`map-manager-only.md`](nodes/229-bank-the-landing-sections-accounts-out-of-map-manager-only.md). It is the one
+bounded exception the human licensed to [node
+191](nodes/191-the-rules-file-carries-accounts-rather-than-rules.md)'s rule that no sweep of a map file is owed
+or licensed: the route runs over `## Landing an implementation node's work` and over nothing else, and node
+191's rule is unchanged for every other section, file and sibling. The ground, settled at [node
+225](nodes/225-whether-map-manager-only-gets-an-admission-test.md), is that node 191's refusal rested on the
+nodes queued on that file being how it converges, which was measured false for this section: the passages
+carrying the largest accounts are touched by no open node. **What left the section is history** — how a rule was
+learned, how many attempts it took, what one cost, who was wrong, and what the file said before. **What stayed
+is every trigger**: the error strings, the human's verbatim words, and the condition under which each rule
+fires. Each passage below is reproduced byte-identical to the text it had in that section, struck-through text
+staying struck through, under the number of the edit that removed it. Edit 11 appended rather than removed, so
+it has no passage here.*
+
+### Edit 1 — the manager creating the worktree by hand
+
+*From the landing policy paragraph. Deleted, and it stood as:*
+
+~~the manager creates for that node with `git worktree add` off the current `HEAD`~~ 
+
+### Edit 2 — the code-slot count at one
+
+*From the code-slot paragraph. Deleted, and it stood as:*
+
+~~**How many implementation workers run at once is a setting of the effort, and for this effort it is one.**~~ 
+
+### Edit 3 — what the branch-per-node policy superseded
+
+*From the landing section, after the code-slot paragraph. Deleted, and it stood as:*
+
+**What that supersedes**: this map used to say *"No branch is ever created or switched, nothing is ever pushed, and history is never rewritten"*, and two of those three clauses no longer hold — the workflow branches per node, and a rebase rewrites history. *Nothing is ever pushed* is the one that stands untouched. The sentence in full is in [map-history.md](map-history.md).
+
+### Edit 4 — the manager creating nothing
+
+*From the first bullet under *How the worktree is made*. Replaced, and it stood as:*
+
+~~**The manager creates nothing.** It spawns the implementation worker with the harness's worktree isolation.~~
+  **Superseded by the human's own route**
+
+### Edit 5 — the harness picking the path and the branch
+
+*From the second bullet under *How the worktree is made*. Replaced, and it stood as:*
+
+- ~~The
+  harness picks the path, `.claude/worktrees/agent-<agentId>/`, and the branch, `worktree-agent-<agentId>`, and the
+  manager learns both from the worker's completion notification. **The node's id is no longer in either**; the commit
+  trailer `Node: <effort>/<NN>` is the join key and is the manager's to write.~~ **Superseded by the bullet
+  above**: the node's id is in the path and the branch again, and the commit trailer stays the join key regardless.
+
+### Edit 6 — `worktree.baseRef` = `head` as the typical case
+
+*From the bullet on what the reset costs in practice. Replaced, and it stood as:*
+
+— ~~**which is the typical case, and is theirs rather than this effort's**~~
+  **which is measured at [node 175](nodes/175-what-the-worktree-cycle-does-to-the-sandbox.md) not to hold on this
+  machine: the setting is absent, so the default `fresh` applies, every harness worktree lands on `origin/master`, and
+  the base is always stale. Three worktrees created during that node all recorded `CLAUDE_BASE` = `origin/master`
+  while `master` was ahead. The three-case account still stands; the case it called typical is the one that never
+  happens here, and the reset always runs.** — the
+  worktree lands on `HEAD` and no reset happens at all.
+
+### Edit 7 — the reset measured as inside the sandbox, and its correction
+
+*From the bullet on `EnterWorktree` being needed for neither step. Replaced, and it stood as:*
+
+- **The manager needs `EnterWorktree` for neither the base check nor the reset**, measured at [node
+  175](nodes/175-what-the-worktree-cycle-does-to-the-sandbox.md): `cat .git/worktrees/<name>/CLAUDE_BASE` and
+  `git -C <worktree> rev-parse HEAD` both answer the base check read-only from the main tree, and
+  `git -C <worktree> reset --hard <ref>` succeeded there **inside the sandbox even across a `.claude/skills` file**.
+  So **the manager's own session never has to leave the main tree**, and the cycle that migrated its writable region
+  was avoidable. **The sandbox half of that does not generalise, and the manager corrected it within the hour**: on
+  node 169's worktree the same command failed with `unable to unlink old
+  '.claude/skills/expedition-grilling/SKILL.md': Read-only file system` and needed the sandbox off. Node 175's test
+  worktree carried no `ro` overlay on its own `.claude/skills` and node 169's did — which is exactly [node
+  180](nodes/180-which-trees-get-the-read-only-skills-overlay.md)'s question. **What stands is the base check and the
+  route; what does not is any prediction that the reset stays inside the sandbox.** Read it as: run it sandboxed, and
+  expect to need the override when the range crosses a shipped file. Where the instruction to use `EnterWorktree` now stands is [node
+  152](nodes/152-where-the-harness-worktree-instruction-lives.md)'s.
+
+### Edit 8 — what a late reset would have done to node 140
+
+*From the bullet on verifying the base at every spawn. Deleted, and it stood as:*
+
+ Node 140 was moving text
+  verbatim between files, so a late reset there would have silently reverted [node
+  147](nodes/147-graph-records-name-absolute-paths-on-a-machine.md)'s landed work with every check passing.
+
+### Edit 9 — how node 143's measurement was reached
+
+*From the bullet on a failed rebase leaving its partial checkout behind. Replaced, and it stood as:*
+
+Measured at node 143, after four failed attempts and two wrong diagnoses.
+
+### Edit 10 — the three rounds of experiment, and the read-only-skills rule they replaced
+
+*From the bullet on the sandbox restriction that bites this lifecycle. Replaced, and it stood as:*
+
+- **One sandbox restriction bites this lifecycle, and it took three rounds of experiment to state correctly.** Two
+  earlier accounts of it in this file were wrong and are struck below. ~~**The rule: the sandbox mounts
+  `.claude/skills` read-only in whichever tree the session is standing in — the main checkout, or an entered
+  worktree. Any git operation that must write a file under it fails.**~~ **Incomplete rather than false, and
+  superseded at [node 175](nodes/175-what-the-worktree-cycle-does-to-the-sandbox.md).** The `ro` overlay was observed
+  on trees the session was *not* standing in, and the `ro` deny is **not** the constraint that bites when the region
+  has migrated: **the allow-set is, and it is far smaller than "everything but skills".** The operative rule, measured:
+  the sandbox is a set of bind mounts **recomputed for every command**, and a command succeeds only where every path it
+  writes lies inside a `rw` mount and outside a `ro` one. **The manager reads its own region with**
+  `grep " <repo>" /proc/mounts | awk '{split($4,a,","); print a[1]" "$2}' | sort -u` — read-only, one call. Whether it
+  is told to, and when, is [node 179](nodes/179-the-manager-sees-its-own-writable-region.md); what triggers the overlay
+  on one tree and not another is [node 180](nodes/180-which-trees-get-the-read-only-skills-overlay.md). It is not about worktrees, not about the git
+  index, and not about harness-created worktrees being treated differently from hand-made ones.
+
+### Edit 12 — the `git -C` asymmetry
+
+*From the sub-bullet on the `git -C` asymmetry. Replaced, and it stood as:*
+
+  - ~~**The one asymmetry, and it is a hole rather than a feature.** A worktree operated *from the main tree* with
+    `git -C` escapes the rule entirely, because the deny list names `<repo>/.claude/skills` and a worktree at another
+    path is not that. So the same reset that fails from inside a worktree succeeds when run on it from outside. The
+    protection is on the session's own tree, not on the repository's skills.~~ **Superseded at [node
+    175](nodes/175-what-the-worktree-cycle-does-to-the-sandbox.md): the conclusion holds only conditionally and the
+    stated reason is wrong.** Measured there: from a session whose region did *not* contain the worktree path,
+    `git -C <harness worktree> reset --hard` failed on plain `.scratch/` files with `Read-only file system`, no skills
+    file involved; from a session whose region *did* contain it, the same command succeeded across a `.claude/skills`
+    file. **What decides is whether the target path is inside the writing session's writable region**, not which tree
+    the command is issued from — and harness worktrees do sometimes carry their own `<wt>/.claude/skills` `ro` mount,
+    so *"a worktree at another path is not that"* is not reliably true.
+
+### Edit 13 — two distinct sandbox restrictions
+
+*From the bullet on two distinct sandbox restrictions. Deleted, and it stood as:*
+
+- ~~**Two distinct sandbox restrictions bite this lifecycle, and they were once conflated. Isolated by experiment.**~~
+  - **The merge step needs the sandbox off where the node touched a file under `.claude/skills/`.** The **main
+    tree's** `.claude/skills` is a read-only bind mount; `touch` on a file there fails with `Read-only file system`.
+    So `git merge --ff-only` of a branch that changed one fails with `unable to unlink old …`. `HEAD` does not move
+    and nothing is lost; the merge succeeds outside the sandbox.
+  - **The reset step needs the sandbox off only for a *harness-created* worktree.** Measured both ways on one tree: a
+    worktree made by `git worktree add` resets across the same commits **inside** the sandbox without error, while
+    one made by `EnterWorktree` fails with `Could not reset index file to revision`. The difference visible in
+    `/proc/mounts` is that the sandbox places read-only bind mounts inside a harness worktree's admin directory —
+    `.git/worktrees/<name>/config.worktree` and `.../commondir` — and places none at all on a hand-made one.
+    **Correlation established both ways; the exact write that fails is not isolated.** Writing `.git` is not the
+    problem in general: `git add` and `git commit` both succeed inside the sandbox in a harness worktree, as does a
+    plain write to that worktree's own `.claude/skills/`.
+
+### Edit 14 — the merge step needing the sandbox off
+
+*From the bullet on the merge step needing the sandbox off. Deleted, and it stood as:*
+
+- ~~**The merge step needs the sandbox off where the node touched a shipped file.**~~ Measured at node 140: `git merge
+  --ff-only` failed with `unable to unlink old '.claude/skills/expedition/graph-conventions.md': Read-only file
+  system`, `/proc/mounts` showing `.claude/skills` bind-mounted `ro` inside the manager's sandbox. **`HEAD` does not
+  move and nothing is lost** — the commit stays on its branch and the merge succeeds on a retry outside the sandbox —
+  but the manager must expect it rather than discover it, since most of the open frontier touches `.claude/skills/`.
