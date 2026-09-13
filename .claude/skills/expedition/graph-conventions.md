@@ -287,7 +287,8 @@ rest of the condition is what it covered.
 The part is still owed, and **establishing it is recorded on that same item**: who established it, and
 what they read or ran. Usually that is the manager, which holds the handover the checker does not; it may
 instead be the human at the gate reading it themselves, or a later run of the check. It happens by the
-gate at the latest, the node resolving there with nothing after it to establish anything.
+gate at the latest, the gate being the last point at which the human can act on it rather than the
+point at which the node resolves.
 
 **Every item opens with its state**, and establishing a part rewrites that opening and nothing else:
 
