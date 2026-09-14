@@ -555,3 +555,17 @@ Measured at node 143, after four failed attempts and two wrong diagnoses.
   system`, `/proc/mounts` showing `.claude/skills` bind-mounted `ro` inside the manager's sandbox. **`HEAD` does not
   move and nothing is lost** — the commit stays on its branch and the merge succeeds on a retry outside the sandbox —
   but the manager must expect it rather than discover it, since most of the open frontier touches `.claude/skills/`.
+
+## Superseded from `map.md`'s `## Notes` at node 244 — the harness-worktree rule's closing sentence, which said the route question was open
+
+*Moved verbatim under the `Change the map` procedure. It closed the standing preference beginning "A worktree is
+created by the harness, never by hand." and was wrong three times over: it called the route question open when
+[Which harness route creates an implementation node's worktree](nodes/150-which-harness-route-creates-a-worktree.md)
+had resolved; it offered two candidate routes, the manager entering or an isolated worker, when the route in force is
+the human's own third and the isolated-worker route it pointed at is the superseded one; and its constraint that the
+manager must stay in the main tree is contradicted by the landed practice, in which the manager enters the worktree
+transiently to create it and returns. It stated a rule that currently binds, so it took this route rather than
+strike-in-place, on [Where the never-delete rule stops](nodes/189-where-the-never-delete-rule-stops.md)'s test. The
+sentence as it stood:*
+
+> **One point of fit it does not settle, and the manager has decided none of it:** `EnterWorktree` switches *the calling session* into the worktree, and the manager must stay in the main tree to own the graph, while the party that needs to be in the worktree is the worker and then the checker — so which of the harness's two routes carries this (the manager entering, or an isolated worker) is open and is [Which harness route creates an implementation node's worktree](nodes/150-which-harness-route-creates-a-worktree.md).
