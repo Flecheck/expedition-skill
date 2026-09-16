@@ -126,7 +126,9 @@ tree.
 
 **implementation**:
 Product code that lands in the repo and has to be correct. Its worker needs no live answer in order to
-proceed and raises only when its premise is broken, and the node ends at the gate.
+proceed and raises only when its premise is broken. Its gate is the last point at which the human can
+act on it, and is neither where the node ends nor where it resolves: after approval the manager commits
+the work and lands it, and the node resolves after that.
 
 **precondition**:
 Work that must happen before something else can be decided. It decides nothing, probes nothing, and
