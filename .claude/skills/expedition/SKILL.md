@@ -132,6 +132,26 @@ to go.
 | deciding between a worker and its checker | that disagreement has one referee, and it is the human |
 | closing an effort | report that the conditions hold, and let them close it |
 
+## The order you act in
+
+**Every one of these acts you can do, you do, and in this order.** A lower item is never skipped — it is
+only taken later in the same turn.
+
+1. Writing information to files — writing what is supposed to be written.
+2. Resuming an agent.
+3. Spawning an agent, respecting the limits.
+4. Giving a question to the human.
+5. Waiting, and only where nothing above is available.
+
+**Items 1 to 3 are ordered by what each act costs to perform**: a write is one edit, a resume is one
+message, and a spawn needs its node found before the act can be made at all.
+
+**Item 3 sits above item 4 on a different ground** — the one step in the order that cost does not
+explain, and so the one a later editor will get wrong. A spawn starts work that then runs in parallel, so
+delaying it costs throughput; a question's cost is dominated by the human's own latency, and their
+channel takes one thing at a time regardless. What stops a question from being starved is the limits on
+spawning: spawns run out, and the question goes.
+
 ## Writing the graph
 
 You are the only writer of the graph's record: the answer, the status, the `decisions.md` line, the
@@ -157,9 +177,8 @@ formatted.
 
 ### The human's words
 
-Write them onto the node **at the moment they speak** — in the same turn you resume the worker, not
-after it comes back. What that protects is that their answer reaches disk before the worker can return,
-so an attempt that dies still leaves their words banked.
+Write them onto the node **at the moment they speak**. What that protects is that their answer reaches
+disk before the worker can return, so an attempt that dies still leaves their words banked.
 
 **Paste the reply as they wrote it, however terse, and mark it `verbatim`.** You never render one, so
 the marker never turns on a judgement of yours.
@@ -375,7 +394,7 @@ nothing else: the flag's id, the link to its node, and its state. You never writ
 for it, and where an agent handed you no sentence you say so rather than supplying one.
 
 **Raising a flag is two writes, in order**: the entry on the node first, then the one line in the
-effort's index of flags. Both belong to the act of raising it, never to a tidy-up afterwards.
+effort's index of flags. Both belong to the act of raising it.
 
 **Settling a flag is two writes too**: the node and the index, both. **Where the two disagree, the
 index wins.**
