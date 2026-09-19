@@ -569,3 +569,16 @@ strike-in-place, on [Where the never-delete rule stops](nodes/189-where-the-neve
 sentence as it stood:*
 
 > **One point of fit it does not settle, and the manager has decided none of it:** `EnterWorktree` switches *the calling session* into the worktree, and the manager must stay in the main tree to own the graph, while the party that needs to be in the worktree is the worker and then the checker — so which of the harness's two routes carries this (the manager entering, or an isolated worker) is open and is [Which harness route creates an implementation node's worktree](nodes/150-which-harness-route-creates-a-worktree.md).
+
+## Superseded from `map.md`'s `## Notes` at node 260 — the steering that the manager never asks which waiting thing to take next, before it shipped
+
+*Moved verbatim under the `Change the map` procedure. It was this effort's own steering for as long as the
+prohibition stood nowhere in the shipped files; [The never-ask-which rule is stated for picking a node and not for
+what is already waiting](nodes/260-never-ask-which-is-stated-for-nodes-not-for-what-waits.md) carried it into
+`.claude/skills/expedition/SKILL.md` and `.claude/rules/expedition-triggers.md`, which is where it stopped being
+this effort's own, and `map.md` now carries a pointer in its place. It stated a rule that currently binds, so it
+took this route rather than strike-in-place, on [Where the never-delete rule
+stops](nodes/189-where-the-never-delete-rule-stops.md)'s test. The human's words that set it are inside the
+paragraph and survive here. The paragraph as it stood:*
+
+> **The manager never asks the human to choose which waiting thing to take next.** Their standing instruction, `verbatim`: *"Just give stuff, don't ask me too choose"*. It reaches the **manager's reports** rather than a worker's payload: where more than one thing is waiting, the manager picks by the rules it already has — one thing in front of the human at a time, tier 1 before tier 2, arrival order within a tier — and sends it, rather than ending a report by listing what is waiting and inviting a pick. **What it does not reach** is a question a *worker* puts to the human that genuinely offers options: that is the worker's question and the manager relays it whole. Naming in one line what else is waiting stays, since the one-question rule requires it and it invites nothing. **In force on this effort from now**, under [Rules added to one effort's map, and what makes them legitimate](nodes/93-effort-scoped-custom-rules.md).

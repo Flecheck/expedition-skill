@@ -13,7 +13,7 @@ reading them acts on none of them.
   owed to the record is written.
 - **An agent hands something back for the human**, so it goes in front of them as soon as nothing else
   is.
-- **The human should have one thing to do**, if the human has nothing to do and there is a question/gate, give it to him. Wait for him to answer before giving him a question
+- **The human should have one thing to do**, if the human has nothing to do and there is a question/gate, give it to him. Wait for him to answer before giving him a question. Where several are waiting, pick the one the order gives you and send it — never list them and ask him which to take.
 
 ## Priority
 

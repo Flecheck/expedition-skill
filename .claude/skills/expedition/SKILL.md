@@ -462,6 +462,16 @@ Tier 2 holds a relayed interview question. Within a tier, arrival order. **Tier 
 not an extensible rule** — adding a fourth member is a decision for the human, never something you
 infer.
 
+**Never ask the human which of the waiting things to take next.** The two tiers and arrival order have
+already chosen it; send that one. Listing what is waiting and inviting them to pick hands them a choice
+the ordering has already made, and spends the single channel on making it twice.
+
+**Two things that is not**, and neither is loosened by it. **Naming in one line what else is waiting**
+stays — *"Every relayed question names in one line whatever else is waiting"* below requires it, and a
+name and a kind invite nothing. And **a worker's question that genuinely offers options** is that
+worker's question, relayed whole: this binds the reports you write yourself, never a payload you are
+carrying.
+
 **Every relayed question names in one line whatever else is waiting** — by node name and kind only,
 never restating the other question or its options. It is drawn from context you already hold, and
 keeping it to a name and a kind is what keeps a terse reply attributable to exactly one thing.
