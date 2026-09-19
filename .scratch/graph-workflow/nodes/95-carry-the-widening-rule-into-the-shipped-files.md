@@ -87,3 +87,23 @@ amended](82-amending-a-condition-whose-scope-was-too-narrow.md)'s guard 2, and t
 
 **Why nobody reported it earlier**, in node 94's words: *"its scope came from a worker's `INVALIDATIONS` rather than
 from a search, which is the exact case rung 3 exists to expose."*
+
+## Annotation: this node's acceptance condition is now short a second way
+
+*Filed by the manager on 2026-09-19, carrying [node
+252](252-may-an-unclaimed-nodes-acceptance-condition-be-amended.md)'s worker's words rather than the manager's.
+**The condition is not amended here.***
+
+> Its clauses 1 and 2 state node 82's permission and node 82's three limits as the whole of who may change a
+> condition after it is written, which node 252 falsifies: clause 1's three-party split now needs a fourth party, the
+> amendment's author under the fallback limb, and clause 2's three limits now need exclusion 2's qualification.
+> **Node 95 already carries a second, separate shortfall** its own annotation records — node 94's finding that its
+> scope names two files while the sentence it must repair sits verbatim in five worker contracts. Both are amendable
+> under node 252 and neither has been amended. Whether node 252 rides node 95 or gets a carrier of its own is the
+> manager's, exactly as node 82's worker left the same choice.
+
+***The manager's own note, beside that text.*** **Both shortfalls are amendable under node 252 and the manager has
+amended neither.** The pen here is the manager's, node 252's and node 94's workers having both finished. It is not
+being exercised silently: whether this node carries node 252's rule or a fresh node does is a judgement about scope,
+and it is named for the human in node 252's pick report. **This node is also the standing evidence in node 252's own
+answer** that a permission can be granted and never exercised.

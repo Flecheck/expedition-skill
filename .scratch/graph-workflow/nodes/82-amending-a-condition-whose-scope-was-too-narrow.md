@@ -248,3 +248,18 @@ files](94-condition-scope-as-a-predicate.md), in that node's own words. Nothing 
 produced that list', and in 42 of 43 cases that search exists nowhere — so the manager reconstructs a search it never
 saw, from a list. That is precisely how node 103's miss survives a re-derivation."* Node 94 strengthens guard 1 by
 giving it something real to re-run and removes nothing from this node's permission, test or guards.
+
+## Annotation: extended by node 252, with one exclusion qualified
+
+*Filed by the manager on 2026-09-19, carrying [node
+252](252-may-an-unclaimed-nodes-acceptance-condition-be-amended.md)'s worker's words rather than the manager's. **No
+text above is struck**, nothing here being withdrawn.*
+
+> Extended along its own ground, with one exclusion qualified and nothing withdrawn. Its stated test, *"the
+> amendment adds places, never demands"*, is no longer the whole of what may be amended without the human: a clause
+> may now be changed where every word of the replacement is already fixed and cited. Of its three exclusions, 1 and
+> 3 are untouched, and **exclusion 2 is qualified** — sharpening an ambiguous demand is still authoring the standard
+> while the ambiguity is open, and is not where a resolved node has since settled it. Node 82's guards are both
+> unchanged. Its closing table, *"The four instances, and what each would have cost under this answer"*, is stale
+> twice over: node 94's annotation already corrected it to five, and node 252 is a sixth case its test does not
+> reach.

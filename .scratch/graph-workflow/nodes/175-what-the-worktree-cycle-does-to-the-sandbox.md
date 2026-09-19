@@ -145,3 +145,19 @@ characterised.*
 ***The manager's note.*** **The manager adopted the withdrawn vocabulary and repeated it to the human several
 times**, calling its own session *broken* and *healthy*. Node 179's answer is that the record should stop using those
 words for a region. The manager records the correction against itself here rather than editing what it already said.
+
+## Annotation: two blanket statements about a worker and `EnterWorktree` are withdrawn
+
+*Filed by the manager from [node 243](243-a-worker-cannot-enter-its-worktree-by-the-route-the-spawn-names.md)'s
+`INVALIDATIONS`, in that worker's own words. This node's answer is not changed and nothing above is struck. **No
+measurement of this node is withdrawn** — only the blanket statements drawn from them.*
+
+> **[Node 175](175-what-the-worktree-cycle-does-to-the-sandbox.md), answer items 1 and 4**: *"Both tools hard-refuse
+> from a subagent"* and *"A subagent cannot enter or exit a worktree at all"*. The **enter** half is false, per the
+> measurement above. The **exit** half stands — `ExitWorktree` was refused today for the reason node 175 records.
+> Node 175's own item 1 already contains the counter-example, reporting `EnterWorktree {path: <sibling worktree>}`
+> succeeding from a worktree-isolated worker, so the file contradicts itself; what is withdrawn is the blanket
+> statement and not any measurement.
+>
+> **[Node 175](175-what-the-worktree-cycle-does-to-the-sandbox.md), flag `175.1`**: *"`EnterWorktree`/`ExitWorktree`,
+> which refuse to run from any subagent"*. Same correction as 2.

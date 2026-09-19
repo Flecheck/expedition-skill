@@ -262,3 +262,14 @@ So: **this node's design stands and its guarantee is strengthened rather than we
 for is now positively marked instead of being read off an absence, which is what made it uncheckable. Every
 sentence in this node's `## Answer` describing an unestablished part as *an absence* or an establisher as
 *beside* the part is superseded by node 45's form, and is left in place under the never-delete rule.
+
+## Annotation: the reason this answer gave for its own addition no longer stands
+
+*Filed by the manager from [node 235](235-graph-conventions-says-a-node-resolves-at-its-gate.md)'s
+`INVALIDATIONS`, in that worker's own words. This node's answer is not changed and nothing above is struck.*
+
+> [Record a checker's not-covered part on `## Review`](nodes/38-recording-a-not-covered-part.md), resolved. Its
+> `## Answer` reads: *"One addition no clause asked for, flagged below: the establishing happens **by the gate at
+> the latest**, the node resolving there with nothing after it to establish anything."* The addition stands; the
+> reason given for it does not, and the shipped file no longer carries it. The contradiction is with the answer's
+> stated ground, not with its demand.

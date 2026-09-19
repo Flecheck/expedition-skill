@@ -269,3 +269,22 @@ tracker doc rather than rewriting it by *"Every ticket already written under tha
 the property that makes a 179-node migration thinkable at all."* Lang's tracker doc specifies an `issues/` directory
 and **that directory has never been created — zero tickets exist under it.** The property is vacuous for this
 target. **The conclusion stands, on the other grounds this node gave rather than on that one.**
+
+## Annotation: this node's own wording of mechanical check 5 is superseded
+
+*Filed by the manager from [node 241](241-two-record-defects-needing-a-decision-before-repair.md)'s
+`INVALIDATIONS`, in that worker's own words. This node's answer is not changed and nothing above is struck.*
+
+> **[Graph file format](13-graph-file-format.md), on the wording of mechanical check 5.** That node's own file
+> states check 5 as *"Every `resolved` node has an `## Answer` and exactly one line in `decisions.md`"*. Node 241's
+> answer makes that too weak in one direction and impossible in another: too weak, because it is satisfied by a node
+> whose one line is struck through and states nothing that holds; impossible, because no node whose earlier line was
+> struck and replaced can have exactly one line at all. The repair to the **shipped** statement of the check, at
+> `.claude/skills/expedition/graph-conventions.md:487`, is already owned — it is clause 4 of node 238's acceptance
+> condition, written before this node ran and unaffected by it. **What nothing owns is node 13's own copy of the
+> wording**, which is record text rather than a shipped rule and therefore struck in place rather than replaced. I
+> am reporting it rather than minting a third node, the manager being the party that decides whether a node file's
+> superseded clause is annotated here or left to node 238's landing to make visible.
+
+**The manager's disposal of it, and not the worker's text:** annotated here rather than minted as a node. Node 238
+owns the shipped statement, and this annotation is what makes the node-13 copy visible to anyone who reads it.

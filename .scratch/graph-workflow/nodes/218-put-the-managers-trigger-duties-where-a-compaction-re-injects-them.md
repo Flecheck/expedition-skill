@@ -517,3 +517,24 @@ loaded by the manager when running an expedition"*.
 glob, so it is evidence for the mechanism and not for the narrowed pattern. And the narrowed pattern is untested:
 whether a trailing-filename glob matches the way a directory glob does is exactly the uncertainty node 229's checker
 raised about `.scratch/**` and did not resolve. **Neither is a reason to touch their edit.**
+
+## Annotation: three of the things this node fixed no longer hold
+
+*Filed by the manager from [node 248](248-review-the-priority-list-and-decide-how-much-ships.md)'s
+`INVALIDATIONS`, in that worker's own words. This node's answer is not changed and nothing above is struck.*
+
+> **Node 218, *Put the manager's trigger-duties where a compaction re-injects them*.** Its answer fixed the shape of
+> `.claude/rules/expedition-triggers.md` as **four triggers, moment then duty, and nothing else as a duty**, and its
+> closing clause — *"This file holds triggers only, and overrides nothing there"* — was written to that condition
+> deliberately. Three of those things no longer hold. Two of the four triggers are gone: the human's `70ac77c`
+> deleted *"A node resolves, so its retrospective is filed in the same edit that writes its answer"*, and their
+> `a70fb82` replaced *"A landing is not a question, so it never occupies the one channel the human has"* with a
+> different bullet. The file now also carries a `## Priority` section, which is not a trigger, so *"holds triggers
+> only"* is false as it stands — and this node's answer widens that charter rather than restoring it. Node 218 also
+> fixed the frontmatter, which `a70fb82` narrowed from `.scratch/**` to `.scratch/**/map-manager-only.md` and
+> `**/expedition/SKILL.md`; this node did not review that narrowing and makes no claim about it.
+
+**The manager's own note beside it:** the changes named are the **human's own**, made directly to that file in two
+commits, rather than drift. [Node 255](255-ship-the-priority-list-into-the-managers-contract.md) repairs the charter
+clause and the title. **The frontmatter narrowing is repaired by nothing and reviewed by nobody**, and the manager
+has not minted a node for it — it cannot tell whether the narrowing was deliberate. Named for the human.

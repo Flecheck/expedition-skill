@@ -62,3 +62,19 @@ and this node is unclaimed, so the repair is the human's or a fresh writer's.*
 **The manager agrees it exceeds that authority and has not exercised it.** Node 82 lets the manager widen a
 condition's scope where the scope was too narrow for the work it names; this is a different file being named as the
 destination, which changes what the node does rather than how much of the tree it may touch.
+
+## Annotation: the manager's position above is now false in its first limb
+
+*Filed by the manager on 2026-09-19, carrying [node
+252](252-may-an-unclaimed-nodes-acceptance-condition-be-amended.md)'s worker's words rather than the manager's.*
+
+> It records the manager's position that *"a condition is not the manager's to rewrite, and this node is unclaimed,
+> so the repair is the human's or a fresh writer's."* Under node 252 the repair is the manager's, the falsifying
+> party — node 188's worker — having finished. The annotation is the manager's own text on an open node.
+
+***The manager's own note, beside that text.*** The struck-through limb is **not** struck above, because the never-
+delete rule marks record text where it stands and this annotation is that mark. **The repair itself is not made
+here.** This node's condition is also the one [node
+250](250-state-how-an-implementation-worker-reaches-its-worktree.md) was told to preserve the exact phrases of, and
+node 250's work is uncommitted at a gate; whoever amends this condition must quote the section's form **after** that
+gate settles, not before.

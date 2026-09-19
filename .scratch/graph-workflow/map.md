@@ -107,6 +107,8 @@ whose carriage into the implementer's side is [node 214](nodes/214-a-condition-t
 
 **The four standing rules for writing anything in this effort are in [map-implementation-rules.md](map-implementation-rules.md)** too, held against every prose deliverable and fixed by [node 53](nodes/53-what-token-findings-change.md) — moved by [node 144](nodes/144-make-the-rules-file-stand-alone.md).
 
+**The manager never asks the human to choose which waiting thing to take next.** Their standing instruction, `verbatim`: *"Just give stuff, don't ask me too choose"*. It reaches the **manager's reports** rather than a worker's payload: where more than one thing is waiting, the manager picks by the rules it already has — one thing in front of the human at a time, tier 1 before tier 2, arrival order within a tier — and sends it, rather than ending a report by listing what is waiting and inviting a pick. **What it does not reach** is a question a *worker* puts to the human that genuinely offers options: that is the worker's question and the manager relays it whole. Naming in one line what else is waiting stays, since the one-question rule requires it and it invites nothing. **In force on this effort from now**, under [Rules added to one effort's map, and what makes them legitimate](nodes/93-effort-scoped-custom-rules.md).
+
 ## Decisions so far
 
 **Moved to [decisions.md](decisions.md)** by [Graph file format](nodes/13-graph-file-format.md). All ten entries are there verbatim — moved, not shortened, per the standing never-delete rule. New entries are capped at one line.

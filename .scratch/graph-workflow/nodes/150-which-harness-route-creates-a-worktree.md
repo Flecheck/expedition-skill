@@ -495,3 +495,16 @@ about the manager **working** from one; entering transiently to create and reset
 manager did exactly it here and returned. `150.4`'s and `150.5`'s subject — the `worktree.baseRef` setting — is no
 longer load-bearing under this route; the base check survives, because a reset that does not happen is a stale base
 either way. **None is withdrawn**: they were correct about the route this node answered on.
+
+## Annotation: this node's "the worker calls `EnterWorktree` itself" is false as a general statement
+
+*Filed by the manager from [node 243](243-a-worker-cannot-enter-its-worktree-by-the-route-the-spawn-names.md)'s
+`INVALIDATIONS`, in that worker's own words. This node's answer is not changed and nothing above is struck.*
+
+> **[Node 150](150-which-harness-route-creates-a-worktree.md), `### The three routes not taken`**: *"**The worker
+> calls `EnterWorktree` itself.** Not available. Measured: the harness refuses a subagent outright."* False as a
+> general statement. A worker cannot **create** a worktree by `name` — the refusal node 150 quotes is that one and
+> it stands — but a worker **can enter an existing one by `path`**, measured today from a plain, non-isolated
+> worker. This is the sentence most likely to have produced the belief that the worker's route was impossible, and
+> it is repeated as *"The worker calls `EnterWorktree` itself. Measured and impossible."* in the same node's
+> `## Interview`.

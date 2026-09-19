@@ -1,7 +1,7 @@
 # `.gitignore` cites the rules file by a quoted phrase that resolves to nothing
 
 Type: implementation
-Status: open
+Status: resolved
 
 Blocked by: none
 
@@ -50,3 +50,33 @@ prescribed remedy have the same weakness against a move between files.
 `map.md` for the landing policy, which has not been true since node 139 split the map. So the file carries two
 decayed citations rather than one, and clause 2 of its condition reaches both by being written as a property rather
 than as a list of sites.
+
+## Answer
+
+***Written by the manager.*** No worker was spawned for this node and none was needed: **its acceptance condition
+is a property over the finished tree, and [node 249](249-gitignores-two-comments-point-at-files-that-moved.md)'s
+landing satisfies every clause of it.** This follows the route taken at [node 240](240-an-annotation-went-to-a-file-that-is-not-a-node.md),
+where a repair was already performed before its node could be worked.
+
+**Established against the tree at commit `19df459`, not inferred from node 249's handover:**
+
+1. **Every file path named in a `.gitignore` comment exists.** Both comments name
+   `.scratch/graph-workflow/map-manager-only.md`, which exists.
+2. **Every phrase a comment quotes and attributes to a named file appears in that file.** `"Landing an
+   implementation node's work"` and `"How the worktree is made"` each occur exactly once in
+   `map-manager-only.md` — established by node 249's checker by reading that file, independently of its worker, and
+   confirmed against the main checkout as well as the worktree.
+3. **Both ignore entries are present and unchanged.** `.worktrees/` and `.claude/worktrees/` are unchanged context
+   lines in node 249's diff.
+4. **No file other than `.gitignore` was modified** by that commit.
+5. **The bar is met**, established by node 249's checker from the repository itself.
+
+**The string this node was raised against no longer exists**: `grep -c` for
+`map-implementation-rules.md, "How the worktree is made"` over `.gitignore` returns `0`.
+
+**What this node contributed rather than lost.** Its condition was written as a **property** rather than as a list
+of sites, which is why it reaches both decayed citations and why it can be discharged by another node's work at all.
+Its manager note's observation stands and is the part worth keeping: standing rule 4 prescribes citing by quoted
+phrase *because a line number decays silently*, and here **the quoted phrase decayed instead**, the passage having
+changed file rather than moved within one. The rule's stated failure mode and its prescribed remedy share the same
+weakness against a move between files. Nothing in the record carries that observation apart from this node.

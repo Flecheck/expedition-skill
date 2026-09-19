@@ -441,3 +441,13 @@ surviving half, the human having amended the frequency away at [node 76](76-writ
 > floor stands and the conclusion stands. **The ground does not:** the duties come from at least thirty-one nodes and
 > four shipped files, not three nodes, and they fall on nine distinct manager→human forms rather than on one report.
 > The duty's own citation — this node — is where the corrected count now lives.
+
+## Annotation: duty 61 restates a reason that no longer stands
+
+*Filed by the manager from [node 235](235-graph-conventions-says-a-node-resolves-at-its-gate.md)'s
+`INVALIDATIONS`, in that worker's own words. This node's answer is not changed and nothing above is struck.*
+
+> [Gather the manager's accumulated duties into one enumerated list](nodes/75-gather-the-managers-duties.md),
+> resolved. Its duty 61 restates the clause verbatim: *"**It happens by the gate at the latest**, the node resolving
+> there with nothing after it to establish anything."* That list is a source for shipped contracts, so the false
+> reason would be re-shipped from it unless the item is marked. No shipped file carries it today.
