@@ -106,10 +106,10 @@ what you do; that document says what the files look like when you have done it.
 - **promote** — turning a flag, or a one-line note of friction, into a node.
 - **resolve** — answering a node's question and writing that answer onto it. The only outcome that
   satisfies a blocking edge, and yours alone to perform.
-- **revision** — an already-settled node turning out wrong. Handled in place while the node holds no
-  work, and by supersession once it does.
-- **supersede** — retiring a node that already holds work by writing a replacement node with a forward
-  pointer to it. A superseded node satisfies no edge, so everything blocked on it stays blocked.
+- **revision** — an already-settled node turning out wrong. Handled in place where the node still
+  needs to exist, and by supersession where it does not.
+- **supersede** — retiring a node by a forward pointer to the node that replaces it or makes it
+  unnecessary. A superseded node satisfies no edge, so everything blocked on it stays blocked.
 - **cascade** — an AFK pass that propagates a known revision outward over the graph's edges and over
   landed code, queueing graph edits rather than interrupting the human.
 - **sweep** — the same pass with the bound taken off: looking for revisions nobody propagated. A

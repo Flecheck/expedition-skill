@@ -151,13 +151,13 @@ Answering a node's question and writing that answer onto it. The only outcome th
 _Avoid_: close, done, complete
 
 **Supersede**:
-Retiring a node that already holds work by writing a replacement node with a forward pointer to it. A
+Retiring a node by a forward pointer to the node that replaces it or makes it unnecessary. A
 superseded node does not satisfy an edge, so everything blocked on it stays blocked.
 _Avoid_: revise, obsolete, rewrite
 
 **Revision**:
-An already-settled node turning out wrong. Handled in place while the node is unstarted, and by
-supersession once it holds work.
+An already-settled node turning out wrong. Handled in place where the node still needs to exist, and
+by supersession where it does not.
 _Avoid_: correction (a correction round is a different thing), change request
 
 **Cascade**:

@@ -377,7 +377,7 @@ At most three attempt blocks per node.
 - `claimed` — a worker holds it. The claim belongs to the node, not to the worker: a worker that dies
   does not release it. A node whose code is under check is `claimed`.
 - `resolved` — carries an `## Answer`. **The only status that satisfies a `Blocked by:` edge.**
-- `superseded` — replaced by other nodes. Does not satisfy an edge.
+- `superseded` — replaced **or made unnecessary** by other nodes. Does not satisfy an edge.
 - `out-of-scope` — ruled beyond the destination. Does not satisfy an edge. Carries no `## Answer`.
 
 There is no status for a parked node, a node under check, or a node carrying flags. A **parked** node
@@ -389,8 +389,9 @@ Three kinds, and `Blocked by:` is the only ordering truth.
 
 - `Blocked by: NN, NN` on the dependent. Satisfied only by `resolved`.
 - `Superseded by: NN, NN` on the old node. Mandatory the moment it becomes `superseded`.
-- `Supersedes: NN` on the replacement — one number. Where a node is superseded by several, each
-  replacement carries the same `Supersedes: NN`.
+- `Supersedes: NN[, NN]` on the replacement — the number of every node it supersedes. Where one node
+  is superseded by several replacements, each carries that node's number; where one replacement
+  retires several nodes, it carries all of theirs.
 
 No edge is inferred from anything else, and no field records which code a node touches.
 
@@ -440,18 +441,23 @@ The answer is written before the status changes.
 
 ### Supersede
 
-Use when the node holds work — an answer, an interview, or landed code. A node that is `open`,
-unclaimed and holds none of those is updated in place instead, with the old wording marked.
+Use when the node is no longer the place its work happens — because another node replaces it, or
+because another node's answer or landing means it no longer needs doing. A node whose question merely
+changed, and which is `open`, unclaimed and holds no work, still needs to exist and is updated in
+place instead, with the old wording marked.
 
-1. `nodes/MM-<name>.md`: create the replacement node or nodes, each carrying `Supersedes: NN`.
+1. `nodes/MM-<name>.md`: the replacement node or nodes — created now, or an existing node named as
+   the replacement — each carrying `NN` in its `Supersedes:`.
 2. `nodes/NN-<name>.md`: mark the superseded text in place.
 3. `nodes/NN-<name>.md`: add `Superseded by: MM[, MM]`, then set `Status: superseded`.
 4. Every node listing `NN` in `Blocked by:`: replace `NN` with the replacement's number. Where there
    are several replacements, list all of them.
-5. `decisions.md`: strike through the old node's line in place. Each replacement gets its own line
-   when it resolves.
+5. `decisions.md`: strike through the old node's line in place. A node that never resolved has no
+   line there to strike, and nothing is written there for it. Each replacement gets its own line when
+   it resolves.
 
-The replacements exist before the old node is marked `superseded`.
+The replacements exist before the old node is marked `superseded`: what must exist is the replacement
+**node**, and its own work need not have landed.
 
 ### Rule out of scope
 
