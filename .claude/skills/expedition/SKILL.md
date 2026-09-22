@@ -446,6 +446,57 @@ Write the part you can, say plainly what is missing and why, and never leave it 
 you could not write is what goes to the human. **The node is not claimed until the condition is
 complete.**
 
+### Changing one after it is written
+
+**Everything here reaches a node nobody holds yet.** Where a worker already holds the node, its
+condition goes over as written, and a worker that judges it wrong raises — which the human answers, and
+they may amend a condition of their own accord at any time.
+
+**Where a node resolves, or work lands, and a clause of an unclaimed node's condition is wrong as a
+result**, the party that established that fact writes the replacement as text on its handover and **you
+file it** — your ordinary scribe act, and not an act of authorship. **File it only where both provisos
+hold**: every word of the replacement is already fixed by a resolved node, by work landed in the tree,
+by the glossary or by the shipped files, and the amendment names which. **Where no such party exists**
+— landed code falsified the clause, or somebody noticed later — writing it under those same two
+provisos is yours. **Where any part of it needs a judgement nobody has made, it goes to the human.**
+
+**Separately, you may extend a condition's scope** to further instances of a defect the condition
+already describes, provided the amendment writes no requirement that was not already fixed.
+
+**Three things neither pen reaches**, each with somewhere else for it to go:
+
+- a **new demand at any place** — a requirement nobody has fixed does not become fixed by being written
+  into a condition;
+- an **ambiguous demand at a place the condition already lists** — while the ambiguity is open it is
+  the worker's to decide and flag or to raise, and sharpening it yourself is authoring the standard;
+  once a resolved node has settled it, the sharpening is that node's and the clause is amendable;
+- a **defect the condition does not describe** — that is a new node, whatever file it lives in.
+
+**Amending is never authoring**, and nothing here moves what is never yours: a condition for a node an
+agent minted is still that agent's to author, and you file it. An amendment whose every word is fixed
+elsewhere transcribes a standard somebody else set.
+
+**Re-derive an enumerated scope before the node is claimed.** Where a condition's scope is a list of
+files, re-run the search that produced that list rather than reading the list. Where the list has
+grown, widen it **before the node is claimed**, rather than after a worker has read the short version.
+
+**Five things accompany every amendment**, whoever wrote it:
+
+1. it is recorded on the node, **beside the search or the fact that justified it**;
+2. it is marked as its author's own — **as yours where you wrote it**;
+3. it is kept distinct from the minting author's text, never merged into it;
+4. it is carried as a **flag**;
+5. it is named in the report accompanying the pick — or, where the amendment is made after the node is
+   claimed, in that node's closing report instead.
+
+**Before a fact is handed back, somebody looks.** The party that established it searches the open
+nodes' `## Acceptance condition` sections for the **handles its own work fixes** — a word it refuses, a
+path it changes or moves something out of, a phrase it supersedes — and reads only what matches; it
+names on its handover which handles it searched, and you file that naming with the rest. **Where no
+such party exists, the search is yours.** It reaches **every open node's condition, claimed or not** —
+a worker being judged right now against a standard known to be wrong is the worst case rather than an
+excluded one — while what to do about a claimed node stays yours, under the raise above.
+
 ## What is in front of the human, and when
 
 **Exactly one question is in front of the human at a time, and nothing ever displaces a live one.**

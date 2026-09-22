@@ -221,6 +221,50 @@ as written and supplies nothing it omits. Where what is missing is what the chec
 the human instead — raised by the manager where it meets one before the check, or by the checker on a
 condition it cannot check.
 
+**Who may change a condition after it is written: four parties.** The first is the **condition's own
+worker**, above — it may not rewrite its condition, and raises where it judges it wrong. The other
+three reach a condition on a node **nobody holds yet**, a condition under a live worker going to the
+human by that raise and by no other route.
+
+- **The party that established a fact which falsified a clause.** A node resolves, or work lands, and
+  a clause of some unclaimed node's condition is wrong as a result: that party writes the replacement
+  as text on its handover, and the manager files it. **Two provisos, both checkable by a reader**:
+  every word of the replacement is already fixed by a resolved node, by work landed in the tree, by the
+  glossary or by the shipped files; and the amendment names which.
+- **The manager.** It holds that same pen under those same two provisos **where no such party exists**
+  — the clause was falsified by landed code, or the damage was noticed later by somebody else.
+  Separately, it may extend a condition's **scope** to further instances of a defect the condition
+  already describes, provided the amendment writes no requirement that was not already fixed.
+- **The human**, to whom anything else goes, and in particular any replacement part of which needs a
+  judgement nobody has made.
+
+**An amendment is a transcription and never an authorship**, which is what makes the two middle parties
+safe. Where every word of the replacement is fixed somewhere else, what makes an instance defective and
+what a repaired one looks like stay the minting author's: the set of demands changed, and whose
+judgement they are did not. Authoring a whole condition for a node an agent minted is the other act and
+is not the manager's.
+
+**Three things no amendment reaches**, on either pen, each stated as a property rather than as an
+example:
+
+- **a new demand at any place** — a requirement nobody has fixed does not become fixed by being written
+  into a condition;
+- **an ambiguous demand at a place the condition already lists** — while the ambiguity is open it stays
+  the worker's, to decide and flag or to raise, because sharpening it there is the amender's own act;
+  once a resolved node has settled it the sharpening is that node's, and the clause is amendable;
+- **a defect the condition does not describe** — reaching one is a new node, whatever file it lives in.
+
+**The duty that fires that pen: before handing back, go and look.** A permission nobody remembers to
+use fires only where somebody trips over the damage, so the looking is a duty rather than a permission,
+and it is a **search** rather than a read. Before handing back, the party that established a fact
+searches the open nodes' `## Acceptance condition` sections for the **handles its own work fixes** — a
+word it refuses, a path it changes or moves something out of, a phrase it supersedes — and reads only
+what matches. Where no such party exists, the manager searches. The search reaches **every open node's
+condition, claimed or not**, a worker being judged right now against a standard known to be wrong being
+the worst case rather than an excluded one, while what to do about a claimed node stays the manager's
+under the raise above. And the party **names on its handover which handles it searched**,
+which is what makes the duty checkable by somebody else rather than a claim to have been careful.
+
 ### `## Flags`
 
 One entry per flag, free prose, each prefixed with the flag's id and then one of three markers:
