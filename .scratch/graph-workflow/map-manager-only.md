@@ -65,13 +65,33 @@ banked whole in [map-history.md](map-history.md).**
   is performed** and **no `worktree.baseRef` setting is relied on**: it is git's own semantics rather than a
   configuration, so it holds on a machine nobody has configured. Settled at [node
   265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
-- **No step of the route needs a harness tool call or a sandbox override**, by the manager or by the worker. Settled
-  at [node 265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+- **Creating the worktree, putting it on its base, and writing it need no harness tool call and no sandbox
+  override**, by the manager or by the worker. **The removal is the exception, and the *Remove* bullet states it.**
+  Settled at [node 265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md) and narrowed to those
+  three steps at [node
+  277](nodes/277-the-removal-step-of-the-worktree-route-does-not-work-as-written.md).
 - **The worker writes its worktree by absolute path.** It calls no tool to reach it, enters and leaves nothing, and
   owes no cleanup — there is no first act to get wrong and no refusal to handle. Settled at [node
   265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
-- **Remove**: `git worktree remove --force <path>`, then `git branch -D worktree-<NN>-<name>`. Settled at [node
-  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+- **Remove, and the removal runs with the sandbox off**: `git worktree remove --force <path>`, then `git branch -D
+  worktree-<NN>-<name>`. **Attempted inside the sandbox the removal can fail**, on `.git/worktrees/<name>` with
+  `error: failed to delete '.git/worktrees/<name>': Device or resource busy`, and **what it leaves is not a clean
+  tree**: the working directory goes, the admin directory under `.git/worktrees/` stays, the entry turns
+  `prunable`, `git worktree list` keeps reporting a tree that no longer exists, and the branch will not delete —
+  *"cannot delete branch … used by worktree at …"*. **The recovery, for an entry already left stale**, is `git
+  worktree prune` with the sandbox off, after which `git branch -D` succeeds. **What fails is the unlink of a mount
+  point**: the sandbox places two bind mounts on some worktrees — `.git/worktrees/<name>` read-write and its
+  `commondir` read-only — and a mount point cannot be unlinked. **Which worktrees carry them is a fit over seven
+  observations rather than a demonstrated mechanism**: every worktree removed by the session that created it
+  carried neither mount and came away clean, while the one removal that failed and the only other tree found
+  carrying them had each outlived the session that created it. **So the trigger is a worktree outliving the session
+  that made it** — and why that is what does it is unestablished, nobody having shown how the mounts come to be
+  there. **The trigger is stated so that a reader knows the rule is not paranoia, and not as a condition on when to
+  obey it**: a live tree shows no mount to inspect beforehand, the manager cannot always tell which case it is in,
+  the override costs one call, and the failure costs a stale entry in the very thing a code slot's occupancy is
+  counted from. The two commands are [node
+  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md)'s; the rest is settled at [node
+  277](nodes/277-the-removal-step-of-the-worktree-route-does-not-work-as-written.md).
 - **The commit trailer `Node: <effort>/<NN>` is the join key, and it is the manager's to write.**
 - **The route's one failure mode, and the read-only command that catches it.** The route works because
   `.scratch/graph-workflow` is inside the manager's sandbox writable region, and **that has not always been so** —

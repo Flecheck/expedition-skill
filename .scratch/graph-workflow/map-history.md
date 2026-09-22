@@ -692,3 +692,27 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
 - **A correction round resumes the worker** and never re-spawns it with isolation, a second isolated spawn creating a
   second empty tree at a fresh base and stranding the first one's work. Where resume is unavailable the replacement
   is pointed at the surviving path. Flagged at `150.3` as unverified.
+
+## Superseded from `map-manager-only.md` at node 277 — the removal step, and the claim that no step of the route needs an override
+
+*Moved verbatim under the `Change the map` procedure at [The removal step of the worktree route does not work as
+written](nodes/277-the-removal-step-of-the-worktree-route-does-not-work-as-written.md). Both passages stated a rule
+that currently bound, so each took this route rather than strike-in-place, on [Where the never-delete rule
+stops](nodes/189-where-the-never-delete-rule-stops.md)'s test, and each is reproduced byte-identical to the text it
+had under *How the worktree is made*. What replaces them is the same route with the removal stated as running with
+the sandbox off, carrying its symptom, its trigger and its recovery; the creation, base and writing statements the
+first passage over-reached are unchanged and keep their claim that they need no override.*
+
+### From *How the worktree is made* — no step of the route needing a tool call or an override
+
+*Replaced, and it stood as:*
+
+- **No step of the route needs a harness tool call or a sandbox override**, by the manager or by the worker. Settled
+  at [node 265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+
+### From *How the worktree is made* — the removal bullet
+
+*Replaced, and it stood as:*
+
+- **Remove**: `git worktree remove --force <path>`, then `git branch -D worktree-<NN>-<name>`. Settled at [node
+  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
