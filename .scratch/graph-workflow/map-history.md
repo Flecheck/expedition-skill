@@ -582,3 +582,113 @@ stops](nodes/189-where-the-never-delete-rule-stops.md)'s test. The human's words
 paragraph and survive here. The paragraph as it stood:*
 
 > **The manager never asks the human to choose which waiting thing to take next.** Their standing instruction, `verbatim`: *"Just give stuff, don't ask me too choose"*. It reaches the **manager's reports** rather than a worker's payload: where more than one thing is waiting, the manager picks by the rules it already has — one thing in front of the human at a time, tier 1 before tier 2, arrival order within a tier — and sends it, rather than ending a report by listing what is waiting and inviting a pick. **What it does not reach** is a question a *worker* puts to the human that genuinely offers options: that is the worker's question and the manager relays it whole. Naming in one line what else is waiting stays, since the one-question rule requires it and it invites nothing. **In force on this effort from now**, under [Rules added to one effort's map, and what makes them legitimate](nodes/93-effort-scoped-custom-rules.md).
+
+## Superseded from `map.md`'s `## Notes` at node 268 — the standing instruction that a worktree is created by the harness and never by hand
+
+*Moved verbatim under the `Change the map` procedure at [Carry the plain-git worktree route into the
+map](nodes/268-carry-the-plain-git-worktree-route-into-the-map.md), carrying out [Should the worktree route drop
+`EnterWorktree` for plain git, behind a
+script](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md). It held two things the human reversed on
+their own word: the standing instruction that a worktree is created by the harness and never by hand, and [node
+150](nodes/150-which-harness-route-creates-a-worktree.md)'s `EnterWorktree`-then-reset route. What replaces it in
+`map.md` is the worker-facing half of the plain-git route, with the whole of it in
+[map-manager-only.md](map-manager-only.md) under *How the worktree is made*. It stated a rule that currently binds, so
+it took this route rather than strike-in-place, on [Where the never-delete rule
+stops](nodes/189-where-the-never-delete-rule-stops.md)'s test. The human's words that set it, and the `EBUSY`
+measurement behind them, are inside the paragraph and survive here. The paragraph as it stood:*
+
+> **A worktree is created by the harness, never by hand.** The human's standing instruction, `verbatim`, after the manager hand-rolled one and then could not remove it: *"when you use worktrees, you should use the EnterWorktree skill instead of creating worktrees by hand - that way you don't have all these worktree management issues afterwards"*. **What went wrong is measured rather than argued:** the sandbox bind-mounts `.git/config` read-only and makes `.git/worktrees/<name>` its own mountpoint, so `git worktree remove` and `git worktree prune` both return `EBUSY` and the stale entry stays in `git worktree list` — which on this effort reads as an **occupied code slot**, the slot's occupancy being discovered by counting live worktrees. **In force on this effort from now**, under [Rules added to one effort's map, and what makes them legitimate](nodes/93-effort-scoped-custom-rules.md). **The route is settled, and it is the human's own:** the manager calls `EnterWorktree` with a name tied to the node, checks the base the worktree landed on, and `git reset --hard`es it to the manager's own `HEAD` before any worker reads the tree. The manager works from the main tree, and enters the worktree only to create it and bring it to that base. The route is stated in full in [map-manager-only.md](map-manager-only.md), and was settled at [Which harness route creates an implementation node's worktree](nodes/150-which-harness-route-creates-a-worktree.md).
+
+## Superseded from `map-manager-only.md` at node 268 — the `EnterWorktree`-then-reset route
+
+*Moved verbatim under the `Change the map` procedure at [Carry the plain-git worktree route into the
+map](nodes/268-carry-the-plain-git-worktree-route-into-the-map.md), carrying out [Should the worktree route drop
+`EnterWorktree` for plain git, behind a
+script](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md). What replaces every passage below is the
+plain-git route now stated under *How the worktree is made* in that file. Each passage stated a rule that currently
+bound, so it took this route rather than strike-in-place, on [Where the never-delete rule
+stops](nodes/189-where-the-never-delete-rule-stops.md)'s test, and each is reproduced byte-identical to the text it
+had there, under a heading naming where it came from. **The section's measurements were not displaced**: the sandbox
+bullet and its three sub-bullets stayed where they are and are marked there, their job being to record what was
+measured rather than to state a rule.*
+
+### From the landing policy — who makes the worktree, and where it sits
+
+*A clause of the first sentence. Replaced, and it stood as:*
+
+**created by the harness rather than by hand — see the standing instruction immediately below**, on a branch whose name carries the node's id, placed at `.worktrees/NN-<name>/` **inside** the repository and ignored there.
+
+### From *How the worktree is made* — the section's opening
+
+*Replaced, and it stood as:*
+
+**How the worktree is made, settled at [Which harness route creates an implementation node's
+worktree](nodes/150-which-harness-route-creates-a-worktree.md).** Added beside the landing policy above rather than
+rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instruction-lives.md) and [node
+144](nodes/144-make-the-rules-file-stand-alone.md) hold conditions quoting that paragraph's exact phrases.
+
+### From *How the worktree is made* — the route bullet
+
+*Replaced, and it stood as:*
+
+- **The route is the human's own**, `verbatim`: *"It calls EnterWorktree specifying a name tied to the node
+  and vaguely describing the node's title"*, then *"If it didn't land on HEAD … it does `git reset` itself to reach
+  the proper base"*. **The manager calls `EnterWorktree` with a node-tied name**, checks the base it landed on, and
+  `git reset --hard`es to its own `HEAD` **before any worker reads the tree** — which is why this needs no
+  `worktree.baseRef` setting and assumes no machine. Measured: `EnterWorktree` lands on `origin/master` under the
+  default, and the reset **requires the sandbox off**, failing inside it with `Could not reset index file`. The path
+  is `.claude/worktrees/<name>/` and the branch `worktree-<name>`, so **the node's id is back in both**.
+
+### From *How the worktree is made* — what the reset costs in practice
+
+*Replaced, and it stood as:*
+
+- **What the reset costs in practice, settled by the human**, `verbatim`:
+
+  > ok so looks like we can indeed do the EnterWorktree -> reset process - that will work so long as either we aren't
+  > working on skills (otherwise the agent can ask unsandboxed for the reset and it will be fine) - or if the user
+  > already has set baseRef=head in their global config, which will typically be the case.
+
+  So the route stands, and the sandbox restriction above is a cost rather than an obstacle. Three cases, and the
+  manager does not need to decide between them in advance: a node touching no file under `.claude/skills/` resets
+  inside the sandbox; a node that does asks for that one command unsandboxed; and where `worktree.baseRef` is already
+  `head` in the human's global config the worktree lands on `HEAD` and no reset happens at all. **That third case does not occur on this
+  machine**: the setting is absent, so the default `fresh` applies, every harness worktree lands on
+  `origin/master`, the base is always stale, and the reset always runs — measured at [node
+  175](nodes/175-what-the-worktree-cycle-does-to-the-sandbox.md). **The base check still runs in every case**, since what it
+  guards against is landing on the wrong base for any reason, not against one configuration.
+
+### From *How the worktree is made* — the manager needing `EnterWorktree` for neither the base check nor the reset
+
+*Replaced, and it stood as:*
+
+- **The manager needs `EnterWorktree` for neither the base check nor the reset.** `cat
+  .git/worktrees/<name>/CLAUDE_BASE` and `git -C <worktree> rev-parse HEAD` both answer the base check
+  read-only from the main tree, and `git -C <worktree> reset --hard <ref>` runs there too — so **the manager's
+  own session never has to leave the main tree**. **The reset is not reliably inside the sandbox**: on one
+  worktree it succeeded across a `.claude/skills` file, and on another the same command failed with
+  `unable to unlink old '.claude/skills/expedition-grilling/SKILL.md': Read-only file system` and needed the
+  sandbox off. Run it sandboxed, and expect to need the override when the range crosses a shipped file. What
+  triggers the overlay on one tree and not another is [node
+  180](nodes/180-which-trees-get-the-read-only-skills-overlay.md). Where the instruction to use `EnterWorktree`
+  now stands is [node 152](nodes/152-where-the-harness-worktree-instruction-lives.md)'s.
+
+### From *How the worktree is made* — the manager verifying the base at every spawn
+
+*Replaced, and it stood as:*
+
+- **The manager verifies the base at every spawn.** A harness worktree's base is governed by `worktree.baseRef`,
+  whose default `fresh` means `origin/<default-branch>` — frozen forever on an effort that never pushes. The setting
+  is `head`, but **the setting is a property of the environment, cannot be passed per call, and does not travel to
+  another machine**, so under ground rule 1 it is observed rather than trusted. Immediately after the spawn the
+  manager reads `.git/worktrees/<name>/CLAUDE_BASE`, or runs `git -C <worktree> rev-parse HEAD`, and compares it to
+  its own `HEAD`. **Not equal: stop the worker, remove the worktree, and raise it** — never reset the tree in place,
+  which leaves it holding pre-repair content for every file the worker has not touched.
+
+### From *How the worktree is made* — the ground for never re-spawning a correction round with isolation
+
+*Replaced, and it stood as:*
+
+- **A correction round resumes the worker** and never re-spawns it with isolation, a second isolated spawn creating a
+  second empty tree at a fresh base and stranding the first one's work. Where resume is unavailable the replacement
+  is pointed at the surviving path. Flagged at `150.3` as unverified.

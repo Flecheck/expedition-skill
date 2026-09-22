@@ -45,55 +45,41 @@ reachable by working them.
 
 ## Landing an implementation node's work
 
-**Landing policy**, which binds this map too, since this map carries execution. An implementation node's worker works in a **git worktree** **created by the harness rather than by hand — see the standing instruction immediately below**, on a branch whose name carries the node's id, placed at `.worktrees/NN-<name>/` **inside** the repository and ignored there. **The human's instruction**, `verbatim`, after a worktree outside the repository made a gate's diff invisible to them: *"For the worktree, I think it might be needed as otherwise it is too anoying for the review"*. It requires an ignore rule, which is exactly what flag `68.2` refused to assume for a repository the workflow does not own — so this is the effort's own practice and **not** a change to what the workflow ships; the flag stands open. The changes stay **uncommitted** through the checker and through the human's gate. On approval the manager makes one path-limited commit of that node's paths, rebases the branch onto the branch the manager thread is on, re-runs the bar's commands on the rebased result, merges with `git merge --ff-only`, then removes the worktree and deletes the branch. **A rebase conflict is resolved by nobody in the moment**: the manager runs `git rebase --abort` and the node takes a correction round with the worker respawned. A post-rebase bar failure likewise takes a correction round, and the work does not land. On reject the worktree is removed and its branch deleted; where the human asks for the work to be kept, the manager commits it onto that branch before removing the directory. **Nothing is ever pushed.** **The gate payload names the worktree's path and the command that shows its diff**, because an implementation node's work is uncommitted in a checkout outside the repository and `git diff` where the human is standing does not show it — their words on being handed a gate without it: *"what are the changes ? I don't see them in git ?"*. One of the human's two interfaces is the diff, so a gate that describes one and points at nothing has not been presented. The graph's own files are *not* committed per node; they are committed periodically by the human, which is safe only because node files are append-only. Fixed by [Git and code-landing policy](nodes/11-git-and-code-landing.md) and reshaped by [Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md).
+**Landing policy**, which binds this map too, since this map carries execution. An implementation node's worker works in a **git worktree** **the manager creates with plain git — see *How the worktree is made* below**, on a branch whose name carries the node's id, placed at `.scratch/graph-workflow/worktrees/<NN>-<name>` **inside** the repository and ignored there. **The human's instruction**, `verbatim`, after a worktree outside the repository made a gate's diff invisible to them: *"For the worktree, I think it might be needed as otherwise it is too anoying for the review"*. It requires an ignore rule, which is exactly what flag `68.2` refused to assume for a repository the workflow does not own — so this is the effort's own practice and **not** a change to what the workflow ships; the flag stands open. The changes stay **uncommitted** through the checker and through the human's gate. On approval the manager makes one path-limited commit of that node's paths, rebases the branch onto the branch the manager thread is on, re-runs the bar's commands on the rebased result, merges with `git merge --ff-only`, then removes the worktree and deletes the branch. **A rebase conflict is resolved by nobody in the moment**: the manager runs `git rebase --abort` and the node takes a correction round with the worker respawned. A post-rebase bar failure likewise takes a correction round, and the work does not land. On reject the worktree is removed and its branch deleted; where the human asks for the work to be kept, the manager commits it onto that branch before removing the directory. **Nothing is ever pushed.** **The gate payload names the worktree's path and the command that shows its diff**, because an implementation node's work is uncommitted in a checkout outside the repository and `git diff` where the human is standing does not show it — their words on being handed a gate without it: *"what are the changes ? I don't see them in git ?"*. One of the human's two interfaces is the diff, so a gate that describes one and points at nothing has not been presented. The graph's own files are *not* committed per node; they are committed periodically by the human, which is safe only because node files are append-only. Fixed by [Git and code-landing policy](nodes/11-git-and-code-landing.md) and reshaped by [Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md).
 
 **How many implementation workers run at once is a setting of the effort, and for this effort it is two**, raised from one by the human while directing the manager at the shipping backlog, `verbatim`: *"should we do 2 implementer and 2 grilling to go through the shipping backlog ?"*. **What the manager carries with the second slot** is that two implementation workers may hold two worktrees over the same shipped file, so it picks nodes whose paths are disjoint; the integration-conflict question that raises is [node 115](nodes/115-two-writers-edit-the-map-at-once.md)'s, still open at [node 160](nodes/160-carry-the-integration-conflict-rule-into-the-map.md) and [node 162](nodes/162-how-much-of-the-integration-rule-ships.md). The superseded sentence is also in [map-history.md](map-history.md). A code slot is therefore a count rather than a property, and raising the count changes a number and no part of the lifecycle above. **A slot's occupancy is discovered by counting the live worktrees** — one per claimed implementation node — rather than by inspecting the working tree for uncommitted changes, so the human's own edits no longer read as an occupied slot. Set at [Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md).
 
-**How the worktree is made, settled at [Which harness route creates an implementation node's
-worktree](nodes/150-which-harness-route-creates-a-worktree.md).** Added beside the landing policy above rather than
-rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instruction-lives.md) and [node
-144](nodes/144-make-the-rules-file-stand-alone.md) hold conditions quoting that paragraph's exact phrases.
+**How the worktree is made, settled at [Should the worktree route drop `EnterWorktree` for plain git, behind a
+script](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).** Stated beside the landing policy above
+rather than rewritten into it, because two pointers in the repository's `.gitignore` cite this section by the quoted
+phrase *How the worktree is made*, and [node
+152](nodes/152-where-the-harness-worktree-instruction-lives.md) and [node
+144](nodes/144-make-the-rules-file-stand-alone.md) hold conditions quoting its phrases. **The route this replaces is
+banked whole in [map-history.md](map-history.md).**
 
-- **The route is the human's own**, `verbatim`: *"It calls EnterWorktree specifying a name tied to the node
-  and vaguely describing the node's title"*, then *"If it didn't land on HEAD … it does `git reset` itself to reach
-  the proper base"*. **The manager calls `EnterWorktree` with a node-tied name**, checks the base it landed on, and
-  `git reset --hard`es to its own `HEAD` **before any worker reads the tree** — which is why this needs no
-  `worktree.baseRef` setting and assumes no machine. Measured: `EnterWorktree` lands on `origin/master` under the
-  default, and the reset **requires the sandbox off**, failing inside it with `Could not reset index file`. The path
-  is `.claude/worktrees/<name>/` and the branch `worktree-<name>`, so **the node's id is back in both**.
+- **Create.** The manager makes each implementation node's worktree from the main tree with one plain git command:
+  `git worktree add -b worktree-<NN>-<name> .scratch/graph-workflow/worktrees/<NN>-<name>`, where `<NN>` is the
+  node's id — so the id is in the path and in the branch. Settled at [node
+  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+- **Base.** That command lands the worktree on the manager's current `HEAD` by git's own default, so **no base reset
+  is performed** and **no `worktree.baseRef` setting is relied on**: it is git's own semantics rather than a
+  configuration, so it holds on a machine nobody has configured. Settled at [node
+  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+- **No step of the route needs a harness tool call or a sandbox override**, by the manager or by the worker. Settled
+  at [node 265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+- **The worker writes its worktree by absolute path.** It calls no tool to reach it, enters and leaves nothing, and
+  owes no cleanup — there is no first act to get wrong and no refusal to handle. Settled at [node
+  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+- **Remove**: `git worktree remove --force <path>`, then `git branch -D worktree-<NN>-<name>`. Settled at [node
+  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
 - **The commit trailer `Node: <effort>/<NN>` is the join key, and it is the manager's to write.**
-- **What the reset costs in practice, settled by the human**, `verbatim`:
-
-  > ok so looks like we can indeed do the EnterWorktree -> reset process - that will work so long as either we aren't
-  > working on skills (otherwise the agent can ask unsandboxed for the reset and it will be fine) - or if the user
-  > already has set baseRef=head in their global config, which will typically be the case.
-
-  So the route stands, and the sandbox restriction above is a cost rather than an obstacle. Three cases, and the
-  manager does not need to decide between them in advance: a node touching no file under `.claude/skills/` resets
-  inside the sandbox; a node that does asks for that one command unsandboxed; and where `worktree.baseRef` is already
-  `head` in the human's global config the worktree lands on `HEAD` and no reset happens at all. **That third case does not occur on this
-  machine**: the setting is absent, so the default `fresh` applies, every harness worktree lands on
-  `origin/master`, the base is always stale, and the reset always runs — measured at [node
-  175](nodes/175-what-the-worktree-cycle-does-to-the-sandbox.md). **The base check still runs in every case**, since what it
-  guards against is landing on the wrong base for any reason, not against one configuration.
-
-- **The manager needs `EnterWorktree` for neither the base check nor the reset.** `cat
-  .git/worktrees/<name>/CLAUDE_BASE` and `git -C <worktree> rev-parse HEAD` both answer the base check
-  read-only from the main tree, and `git -C <worktree> reset --hard <ref>` runs there too — so **the manager's
-  own session never has to leave the main tree**. **The reset is not reliably inside the sandbox**: on one
-  worktree it succeeded across a `.claude/skills` file, and on another the same command failed with
-  `unable to unlink old '.claude/skills/expedition-grilling/SKILL.md': Read-only file system` and needed the
-  sandbox off. Run it sandboxed, and expect to need the override when the range crosses a shipped file. What
-  triggers the overlay on one tree and not another is [node
-  180](nodes/180-which-trees-get-the-read-only-skills-overlay.md). Where the instruction to use `EnterWorktree`
-  now stands is [node 152](nodes/152-where-the-harness-worktree-instruction-lives.md)'s.
-- **The manager verifies the base at every spawn.** A harness worktree's base is governed by `worktree.baseRef`,
-  whose default `fresh` means `origin/<default-branch>` — frozen forever on an effort that never pushes. The setting
-  is `head`, but **the setting is a property of the environment, cannot be passed per call, and does not travel to
-  another machine**, so under ground rule 1 it is observed rather than trusted. Immediately after the spawn the
-  manager reads `.git/worktrees/<name>/CLAUDE_BASE`, or runs `git -C <worktree> rev-parse HEAD`, and compares it to
-  its own `HEAD`. **Not equal: stop the worker, remove the worktree, and raise it** — never reset the tree in place,
-  which leaves it holding pre-repair content for every file the worker has not touched.
+- **The route's one failure mode, and the read-only command that catches it.** The route works because
+  `.scratch/graph-workflow` is inside the manager's sandbox writable region, and **that has not always been so** —
+  in one session the manager's own shell could not append to `flags.md` in that directory while it could write the
+  node files one level below. **So the manager runs `test -w .scratch/graph-workflow` before creating a worktree.**
+  Where that check fails the worktree can be **neither created nor written** and there is no fallback, no tool call
+  being able to widen the region for that path, so it is **raised to the human** rather than worked around. Settled
+  at [node 265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
 - **A failed rebase leaves its partial checkout behind, and every retry then meets the dirt its predecessor made.**
   Measured at node 143. `git rebase` reported only `could not
   detach HEAD`; the underlying `git checkout --detach` reports the real cause, which was local changes and untracked
@@ -101,9 +87,9 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
   converge.** The repair is one pass: `reset --hard` to the branch's own commit, `clean` the record directory, then
   rebase — and read `git checkout --detach <target>` rather than the rebase's summary when it fails again.
 
-- **A correction round resumes the worker** and never re-spawns it with isolation, a second isolated spawn creating a
-  second empty tree at a fresh base and stranding the first one's work. Where resume is unavailable the replacement
-  is pointed at the surviving path. Flagged at `150.3` as unverified.
+- **A correction round resumes the worker**, and where resume is unavailable the replacement is spawned without
+  isolation and pointed at the worktree's absolute path. **The worktree is the manager's and outlives every worker
+  in it**, so no respawn can strand work already written there. Flagged at `150.3` as unverified.
 - **One sandbox restriction bites this lifecycle.** The operative rule, measured: the sandbox is a set of
   bind mounts **recomputed for every command**, and a command succeeds only where every path it writes lies
   inside a `rw` mount and outside a `ro` one. **The manager reads its own region with**
@@ -111,6 +97,11 @@ rewritten into it, because [node 152](nodes/152-where-the-harness-worktree-instr
   Whether it is told to, and when, is [node 179](nodes/179-the-manager-sees-its-own-writable-region.md); what
   triggers the overlay on one tree and not another is [node
   180](nodes/180-which-trees-get-the-read-only-skills-overlay.md).
+  **The three sub-bullets below are measurements, and two of the operations they name — a reset, and an *entered*
+  worktree — are steps of no route any longer**, [node
+  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md) having removed both. They are marked here
+  rather than removed; the merge step they also name is still in the landing policy above, and what bites it is
+  unchanged.
   - **What it hits.** `git merge --ff-only` in the main tree, of a branch that changed a file under `.claude/skills/`
     — `unable to unlink old …`. And `git reset --hard <ref>` inside an *entered* worktree, where the range crosses
     such a file — `Could not reset index file to revision`. `HEAD` does not move and nothing is lost in either case;
