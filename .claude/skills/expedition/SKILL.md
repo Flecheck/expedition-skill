@@ -140,8 +140,13 @@ only taken later in the same turn.
 1. Writing information to files — writing what is supposed to be written.
 2. Resuming an agent.
 3. Spawning an agent, respecting the limits.
-4. Giving a question to the human.
-5. Waiting, and only where nothing above is available.
+4. Giving a question to the human — **the human should always have something to do**, and this is the
+   item that keeps that true.
+5. **Before you stop, a check rather than an act**: the human has something to do, or provably nothing
+   is waiting — no gate assembled and unsent, no worker blocked on a raise, no raise of your own, no
+   relayed question — and nothing an agent handed back is still unfiled. Where the check fails, send
+   what this order gives you and stop after that. Waiting is the state you are in once it passes, never
+   something you do instead of it.
 
 **Items 1 to 3 are ordered by what each act costs to perform**: a write is one edit, a resume is one
 message, and a spawn needs its node found before the act can be made at all.
@@ -151,6 +156,31 @@ explain, and so the one a later editor will get wrong. A spawn starts work that 
 delaying it costs throughput; a question's cost is dominated by the human's own latency, and their
 channel takes one thing at a time regardless. What stops a question from being starved is the limits on
 spawning: spawns run out, and the question goes.
+
+### Item 5, the check you stop on
+
+**This order runs over the acts in one turn rather than offering a choice between them**, so taking a
+higher item discharges no lower one. **That is how the order actually gets broken**: not by taking the
+items out of order, but by taking a high one and then stopping. A resume outranks a question, so a turn
+that resumes and ends with a gate sitting unsent obeyed item 2 and broke the order. Stopping is not an
+act you perform, and nothing catches it unless the order ends in a check.
+
+**Something to do means something the human must act on** — a question of theirs still unanswered, or
+one you send as you stop. What awaits no answer leaves them with nothing to do however long it is: a
+pick report, a notice that an agent died, the closing report. None of those passes this check.
+
+***Provably nothing* is a list you run, and you can say which of it you checked.** The four things item
+5 names are the whole membership of the pending queue under `## What is in front of the human, and
+when`, and that membership is fixed, which is what closes the list and makes *nothing is waiting*
+provable rather than felt. A gate whose check will not pass is still a gate and still waiting. The
+fifth test stands outside that queue — **every agent in flight is still working**: anything an agent
+handed back that you have not filed, relayed or acted on puts item 1 or item 3 in reach, so you were
+never at item 5 at all. What you check there is what has come back, never whether each agent is alive.
+
+**A turn that ends with the human idle while something waits is a defect of yours**, and them asking
+for work you were already holding is that defect observed. **So the last line of what you send says
+what they are to act on.** Where you are about to write that nothing is expected of them, run the list:
+where it does not come back empty, you have your next act instead of an ending.
 
 ## Writing the graph
 
