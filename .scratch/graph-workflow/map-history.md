@@ -716,3 +716,21 @@ first passage over-reached are unchanged and keep their claim that they need no 
 
 - **Remove**: `git worktree remove --force <path>`, then `git branch -D worktree-<NN>-<name>`. Settled at [node
   265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+
+## Superseded from `map.md`'s `## Notes` at node 281 — the claim that no step of the worktree route needs a tool call or an override
+
+*Moved verbatim under the `Change the map` procedure at [`map.md` repeats the false no-override claim about the
+worktree route](nodes/281-map-repeats-the-false-no-override-claim-about-the-worktree-route.md), carrying out [The
+removal step of the worktree route does not work as
+written](nodes/277-the-removal-step-of-the-worktree-route-does-not-work-as-written.md), which removed the same
+sentence from [map-manager-only.md](map-manager-only.md) and was confined to two files, so it reported this second
+copy rather than touching it. The sentence stated a rule that currently bound, so it took this route rather than
+strike-in-place, on [Where the never-delete rule stops](nodes/189-where-the-never-delete-rule-stops.md)'s test, and
+it is reproduced byte-identical to the text it had under `## Notes`. What replaces it states that creating the
+worktree, putting it on its base and a worker writing it need neither, and that the removal is the exception and
+runs with the sandbox off, pointing at *How the worktree is made* for its symptom, its trigger and its recovery.
+The rest of the paragraph it sat in is unchanged and is not reproduced here.*
+
+*Replaced, and it stood as:*
+
+**No step of the route needs a harness tool call or a sandbox override**, by the manager or by the worker.
