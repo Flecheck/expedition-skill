@@ -41,3 +41,11 @@ it.*
 **This session is the evidence the substance is settled.** Node 243's attempt stopped on a harness error, the
 manager attempted the resume, the harness allowed it, and the same attempt carried on and answered its node. The
 record of it is on that node, corrected from an earlier entry that called the attempt dead.
+
+## Amendment, 2026-09-24 (from node 296)
+
+*Written by [node 296](296-rewrite-the-manager-contract-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `6745f37`. Every word of the replacement is fixed by that commit or by `CONTEXT.md`. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 296's worker's search handles are on node 296 under its `#### Re-pointing search` and correction rounds.*
+
+- **Clause 1.** Its target, "the vocabulary entry for `attempt`" in `SKILL.md`, no longer exists. Replacement: "**1.** In `.claude/skills/expedition/SKILL.md`, the `## Words used exactly` section, which today states *"A worker is resumed in place rather than replaced."*, states instead that a dead attempt is resumed where the harness allows and replaced only where it does not, and that a replacement is a new attempt recorded after the one it replaces." Clauses 2 and 3 are unchanged. Clause 2 is now where most of the fix lands, because `SKILL.md` takes its `attempt` definition from `CONTEXT.md`.
+
+`258.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 296](296-rewrite-the-manager-contract-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6745f37` or by `CONTEXT.md`.

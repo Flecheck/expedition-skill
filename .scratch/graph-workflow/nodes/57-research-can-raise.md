@@ -70,3 +70,15 @@ file the other moved. Neither blocks the other.
 token use for now"*. It is recorded and deliberately **not started**. It is also not urgent in the way it looks:
 both workers that hit the blocker resolved it themselves and reported it, so the channel's absence has cost two
 flags and no wrong result.
+
+## Amendment, 2026-09-24
+
+*Written by [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s worker and filed by the manager, after that node's work landed as commit `4068519`. Every word of each replacement is fixed by that commit: it quotes the research contract's after-text. The minting author's condition above is left as it was, and these replacements take the place of the clauses they name.*
+
+Node 290's worker searched every open node's `## Acceptance condition` for quoted spans of the research contract's before-text, for mentions of the file, and for each piece of wording its rewrite removed or replaced. The full list of handles is on node 290 under `### Re-pointing duty` and `### Correction round 1`.
+
+- **Clause 2.** Replace "which today reads *"You have no way to reach the human, and nothing you hand back waits on them"*" with "which today reads *"Do your work without the human. You have no way to reach the human, and nothing you hand back waits on them."*". The rest of the clause is unchanged.
+
+## Flags
+
+`57.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.

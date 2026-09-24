@@ -1,7 +1,8 @@
 # Node 155's condition preserves a contradiction it also creates
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 252
 
 Blocked by: none
 

@@ -73,3 +73,13 @@ than pick stands: a worker that reads clause 3 differently should still raise.
 defects in it from behind the blindfold — the `## Notes` bullet's claim about where the bar's commands live, and the
 `## Labels` sentence pointing at the map's `## Notes` for the label vocabulary. The manager sequences these rather
 than running them together.
+
+## Amendment, 2026-09-24
+
+*Written by [node 299](299-rewrite-graph-conventions-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `0d406b7`. Every word of the replacement is fixed by that commit: it quotes `graph-conventions.md`'s after-text. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 299's worker searched every open node's `## Acceptance condition` for quoted spans of its before-range, matched literally and normalised with each condition joined into one string, and for each phrase its rewrite removed or replaced. The full list of handles is on node 299 under `### Re-pointing duty` and correction rounds 1 to 3.*
+
+- **Clause 3.** Replace "The sentence beginning `No edit deletes` and ending `see `## Writing the map` below.`" with "The two paragraphs running from the one beginning `No edit deletes` to the sentence `` `## Writing the map` below describes how. ``". The rest is unchanged. Clause 1's "Every note, standing preference and fog item" still opens its sentence.
+
+## Flags
+
+`195.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.

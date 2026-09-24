@@ -104,3 +104,13 @@ open node held a condition quoting it. **What found it was a `grep` for the old 
 initiative because nothing told it to.** Its retrospective says the fix is an edge: *"An open node whose clause 1 is
 the item another node was minted to rewrite should carry an edge to it."* The manager records that as a finding
 against its own bookkeeping and not against any worker.
+
+## Amendment, 2026-09-24
+
+*Written by [node 299](299-rewrite-graph-conventions-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `0d406b7`. Every word of the replacement is fixed by that commit: it quotes `graph-conventions.md`'s after-text. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 299's worker searched every open node's `## Acceptance condition` for quoted spans of its before-range, matched literally and normalised with each condition joined into one string, and for each phrase its rewrite removed or replaced. The full list of handles is on node 299 under `### Re-pointing duty` and correction rounds 1 to 3.*
+
+- **Item 1.** Replace the first quote with *"So a map file is rewritten as it changes, rather than grown by appending. The text that replaces an item stands alone."*. That quote had already stopped matching the before-text, which said "So a map file", not "So the map". Replace the second with *"Moving the superseded text out deletes nothing. Text moved to `map-history.md` is moved verbatim, without summarising, paraphrasing or shortening it. Text already struck through moves struck through."*
+
+## Flags
+
+`80.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.

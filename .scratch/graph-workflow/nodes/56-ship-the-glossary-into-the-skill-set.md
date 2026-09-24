@@ -97,3 +97,9 @@ whether both uses become *"the worker holding the code"* and the word leaves the
 up by this node, which is already moving that file. **This is not an addition to this node's acceptance condition**
 — it is one more entry-level question for whoever claims it, to raise or to carry as its own node, and the manager
 has not decided which.
+
+## The human's direction, 2026-09-24
+
+`verbatim`, at node 296's gate: *"approve, we will fix the glossary issuea after, I think we need to rename the file in node 56"*. The manager had put it to them, `verbatim`: *"Node 56: keep its `CONTEXT.md` name inside the skill folder, or amend it to a distinct name such as `glossary.md`?"*. The reason given was that a host repository's own root `CONTEXT.md` can be confused with ours.
+
+*The manager's note:* the direction is to rename, and the new name is not yet chosen. This node's condition names `.claude/skills/expedition/CONTEXT.md` throughout, so it is amended by the human before it is claimed. Since node 296 landed (`6745f37`), `.claude/skills/expedition/SKILL.md` also points at `CONTEXT.md` by name, beside `graph-conventions.md`, so the rename re-points both.

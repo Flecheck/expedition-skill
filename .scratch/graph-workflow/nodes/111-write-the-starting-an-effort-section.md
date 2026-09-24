@@ -93,3 +93,17 @@ its clauses are items 4, 6, 9 and 10 above. Neither node gets an implementation 
 
 **It queues against the same file as four others** — nodes 95, 96, 101, 103 and now 109 — and the effort runs one
 code slot, so they land one at a time and each rebases onto the last.
+
+## Amendment, 2026-09-24
+
+*Written by [node 299](299-rewrite-graph-conventions-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `0d406b7`. Every word of the replacement is fixed by that commit: it quotes `graph-conventions.md`'s after-text. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 299's worker searched every open node's `## Acceptance condition` for quoted spans of its before-range, matched literally and normalised with each condition joined into one string, and for each phrase its rewrite removed or replaced. The full list of handles is on node 299 under `### Re-pointing duty` and correction rounds 1 to 3.*
+
+- **Clause 4.** It asks for "its standing over sources where it has one", a label `graph-conventions.md` no longer defines. Replace with: "and its declaration of which sources are authoritative, which are evidence only, and which hold statements known to be false, where it has one".
+
+## Flags
+
+`111.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
+
+## The manager's note, 2026-09-24
+
+*The manager's own note.* Two workers in the plain-English pass reported stale facts in this node's condition. Node 299's worker: "Node 111's clause 10 cites `## The five files`, but the heading is `## The seven files`." Node 296's worker: "Node 111's recorded count of fourteen `## ` headings was already wrong before this work: there are 15." Both need re-deriving before this node is claimed.

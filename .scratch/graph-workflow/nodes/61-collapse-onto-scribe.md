@@ -60,3 +60,17 @@ completeness](56-ship-the-glossary-into-the-skill-set.md) moves it and rewrites 
 node the cannot-proceed raise](57-research-can-raise.md) changes its `research` entry. None of the three blocks
 another; **none of the three is concurrently claimable with another**, and whichever lands last inherits the file
 the others left. Node 56 is the one that moves it, so landing that first costs the other two nothing.
+
+## The manager's note, 2026-09-24
+
+*The manager's own note.* [Node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s worker reported in its retrospective: "Node 61's premise is false for this file: the research contract's opening never spelled out the scribe idea."
+
+## Amendment, 2026-09-24
+
+*Written by [node 299](299-rewrite-graph-conventions-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `0d406b7`. Every word of the replacement is fixed by that commit: it quotes `graph-conventions.md`'s after-text. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 299's worker searched every open node's `## Acceptance condition` for quoted spans of its before-range, matched literally and normalised with each condition joined into one string, and for each phrase its rewrite removed or replaced. The full list of handles is on node 299 under `### Re-pointing duty` and correction rounds 1 to 3.*
+
+- **Preamble.** It cites "`expedition/graph-conventions.md` line 10". Proposed wording: "in `expedition/graph-conventions.md`'s sentence *"It writes as a scribe."*, under its opening". The same preamble's claims were already false before this work. `scribe` appears "exactly once", but `expedition/SKILL.md` uses it about ten times. It appears "nowhere in `CONTEXT.md`", but `CONTEXT.md` now has a `Scribe` entry. Whether node 61 still needs doing is for the manager.
+
+## Flags
+
+`61.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.

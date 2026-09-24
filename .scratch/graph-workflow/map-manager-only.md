@@ -41,6 +41,15 @@ order:** this effort mints nodes faster than it closes them, the open design que
 says the effort is **expected to end** — so ending it is a scoping act on those questions rather than an outcome
 reachable by working them.
 
+**The plain-English pass runs before the backlog, one file at a time.** Settled at [node 289](nodes/289-a-plain-english-and-compaction-pass-over-the-shipped-files.md), whose Q4 the human answered `verbatim`: *"4. ok"*, taking the recommendation *"Before, one file at a time. While a file's rewrite is in progress, no other implementation node on that file starts."* So:
+- no other implementation node that names a shipped file is claimed until the rewrite of that file has landed;
+- once it has landed, an open node that names the file is claimed only after its condition has been re-pointed at the new text or the node has been superseded;
+- the manager files each rewrite's re-pointed conditions and stand-downs once that rewrite lands.
+
+**Two rulings the human gave at the pilot's gate bind every rewrite in the pass**, `verbatim`: *"A ok B like the pilot C you can update"*, recorded on [node 290](nodes/290-rewrite-the-research-contract-as-the-pilot.md). B: a name a shipped file defines that `CONTEXT.md` does not is said in plain words and the label is dropped, as the pilot did. This also resolves [node 305](nodes/305-whether-standing-over-sources-becomes-a-glossary-term.md). C: rewrite freely, and update the open conditions that quote the old text. Every rewrite spawn carries both. A, asked again and answered `verbatim`: *"A. we can do 2 if it make sense in the file"*: a rewrite may cut deeper by changing rules where that makes sense in the file, each change listed at its gate for approval. The human then amended the pass's open conditions to carry A and B, `verbatim`: *"ok"*: a checker lists every rule change it finds rather than failing it, a term `CONTEXT.md` does not define may be dropped where its meaning stays in plain words, and each gate shows the worker's list of rule changes beside the checker's. The amendment is filed on nodes 291 to 302.
+
+Nodes whose work touches no shipped file are unaffected. The pilot, [node 290](nodes/290-rewrite-the-research-contract-as-the-pilot.md), is worked alone, and nothing else in the pass is claimed until its gate has set the style.
+
 **Label vocabulary for this effort: none declared.** `Labels:` is an optional per-node field holding the *family* a node belongs to, and it exists so the human can scope work to one area of a large graph. A node may only use a label declared here, so that `EFF` / `effect` / `effects` cannot drift into three labels. At 20 nodes this effort has no reader for them; an adopted effort declares its own vocabulary here — Lang's would be its 13 gap families.
 
 ## Landing an implementation node's work

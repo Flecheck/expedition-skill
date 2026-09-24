@@ -72,3 +72,13 @@ edge is written, neither node needing what the other produces.
 **Its clause 7 is the unusual one and its author knew it**: it freezes the `### Change the map` procedure and the
 mechanical-checks list, then permits exactly one new check. That is a condition anticipating that its own subject
 might want a check without letting the worker decide to add several.
+
+## Amendment, 2026-09-24
+
+*Written by [node 299](299-rewrite-graph-conventions-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `0d406b7`. Every word of the replacement is fixed by that commit: it quotes `graph-conventions.md`'s after-text. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 299's worker searched every open node's `## Acceptance condition` for quoted spans of its before-range, matched literally and normalised with each condition joined into one string, and for each phrase its rewrite removed or replaced. The full list of handles is on node 299 under `### Re-pointing duty` and correction rounds 1 to 3.*
+
+- **Scope paragraph.** Replace "Under its `**No edit deletes.**` heading: *"**Inside the graph's files the rule cuts by what a piece of text is, not by which file holds it.**"*" with "In the paragraph after the one opening `No edit deletes.`: *"Inside the graph's files, what happens to superseded text depends on the text's job, whichever file holds it."*". Replace its second quote, "Under `## Writing the map`: *"The graph's remaining files record … which holds superseded text only."*", with: "Under `## Writing the map`: *"The graph's other files record what happened: `decisions.md`, `flags.md`, the node files, and `map-history.md`, which holds superseded text only. Superseded text in those files stays where it is."*". Its "The second sorts by file …" sentence and clause 5 still hold.
+
+## Flags
+
+`233.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.

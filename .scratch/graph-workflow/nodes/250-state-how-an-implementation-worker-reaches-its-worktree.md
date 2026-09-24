@@ -1,7 +1,8 @@
 # State how an implementation worker reaches its worktree
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 268
 
 *Parked by the human at its gate on 2026-09-19. The work is committed to the branch
 `worktree-250-worker-reaches-its-worktree` and is not on `master`. The claim is released and the code slot is free.*

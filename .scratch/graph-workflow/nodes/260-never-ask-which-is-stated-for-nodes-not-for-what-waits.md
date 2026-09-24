@@ -1,7 +1,7 @@
 # The never-ask-which rule is stated for picking a node and not for what is already waiting
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -340,5 +340,150 @@ measurements rather than readings.*
   brings the pointer into the same position. **The text is banked before it is discarded**, which is the `Change the
   map` procedure's own order, and the two halves happen to sit in two trees only because of the defect [node
   266](266-a-worker-cannot-see-the-record-the-manager-has-not-committed.md) names.
-- **The checker's observation that `map-history.md`'s preamble asserts something false of its own tree stands** and
-  is not dismissed: it is true of the landed state and false of the branch in isolation. Nothing is changed for it.
+- ~~**The checker's observation that `map-history.md`'s preamble asserts something false of its own tree stands** and
+  is not dismissed: it is true of the landed state and false of the branch in isolation. Nothing is changed for it.~~
+  **Superseded by the repair below: it is now true of the branch too.**
+
+### The human's route out, taken at the gate
+
+**Their words**, `verbatim`, on 2026-09-19, having read `map-history.md` in this node's worktree:
+
+> I am confused, it is saying that something is superceded but nothing was removed in map.md , is it you thing
+> because it wasn't merged. If so maybe commit it and ask for a rebase ?
+
+**Their diagnosis is right and their fix is better than the manager's.** The manager's plan was to discard the
+uncommitted hunk at landing, which reaches the same file contents but leaves **no commit in which the paragraph is
+removed** — so `map-history.md`'s claim that text was superseded would never have a counterpart in the history, and
+a later reader diffing for the removal would find nothing. **This is not a merge artifact**: the paragraph had never
+been committed at all, so no tree the worker could be given contained it.
+
+**What the manager did, on their direction.**
+
+1. **Committed the effort's record state to `master`**, path-limited to `.scratch/graph-workflow` — 44 files, 18
+   modified and 26 untracked, and **nothing outside that directory**, verified before committing. Commit `0402ab1`.
+   That commit contains `map.md` **with** the steering paragraph, which is what gives the removal something to be a
+   removal from.
+2. **Rebased this node's branch onto `0402ab1`.** The worker's work was uncommitted, so it was stashed across the
+   rebase and reapplied; `map.md` conflicted **exactly one paragraph against one paragraph** — upstream's steering
+   text against the worker's pointer — which is the replacement stated as a conflict. Resolved to the worker's side.
+   **No text was authored by the manager in resolving it**: both sides already existed and the resolution chose
+   between them.
+3. **The tree now shows what the condition asked for.** `git diff --cached` on `map.md` is one deletion and one
+   insertion: the steering paragraph out, the pointer in. The other three files are unchanged by the rebase.
+
+**Two of the checker's own open items close as a by-product**, and neither needed the manager's judgement:
+
+- Its `NOT COVERED` on *"is **replaced** by a pointer"* and on *"appended **verbatim**"* — both were unestablishable
+  only because the source text was absent from the tree. **It is present now**, so both are establishable by a
+  checker rather than settled by the party holding the record.
+- Its finding that two markdown links dangled — the node file is tracked as of `0402ab1` and **resolves in the
+  worktree**, `ls` confirming it there.
+
+**A second check was spawned on the rebased tree**, so the outcome rests on a blind reading rather than on the
+manager's account of its own repair.
+
+### Run 2 — `PASS`, all five clauses, nothing left uncovered
+
+*A second checker's own text, pasted. Spawned fresh on the rebased tree, given the same payload as run 1. It was
+told only that a previous run passed but could not establish two sub-parts of clause 4 because the tree lacked the
+text, that the tree had since been rebased onto a base that holds it, and **that it should not assume the earlier
+run was right about anything, including the clauses it passed.***
+
+> **PASS**
+>
+> **Route.** Entered the tree with `EnterWorktree` (accepted — my working directory was the nodes directory, not the
+> repo root). All reads and commands ran inside it. Sandbox left on; nothing written, nothing committed.
+>
+> **Record-file rule.** Two of the four changed paths are the effort's own record. I read the changed paths I was
+> given as the work under check, held them against the acceptance condition and the standards exactly as product
+> code, and derived no statement of intent from them. `git diff --cached --name-only` and `git diff --name-only` both
+> list exactly the four given paths, and `git status --untracked-files=all` shows no untracked files, so the
+> bookkeeping-reserved-to-the-manager clause does not fire.
+>
+> **Standards read.** `map-implementation-rules.md`, resolved by a single listing of `.scratch/`. It states
+> `map.md`'s standing preferences are **not** among the standards, and that no reviewing skill is named for this
+> repo — so I ran none and went looking for none. Those that bore on this work: `/writing-for-agents`,
+> `graph-conventions.md`'s `## Writing the map` and `### Change the map`, `CONTEXT.md`'s `_Avoid_` lines, the four
+> standing rules, and ground rules 1, 3 and 4. `/coding-principles` and `/naming` were read and do not bite: the work
+> changes no code and introduces no identifier. **No standard moved under the check** — none of the four changed
+> paths holds one.
+>
+> **Clause 1 — MET.** `SKILL.md` gains a paragraph inside `## What is in front of the human, and when` and before
+> `### Picking the next node`: *"**Never ask the human which of the waiting things to take next.** The two tiers and
+> arrival order have already chosen it; send that one. Listing what is waiting and inviting them to pick hands them a
+> choice the ordering has already made, and spends the single channel on making it twice."* It is its own wording,
+> not the map paragraph's. It sits immediately after the two-tier / arrival-order rules, which are the ordering it
+> names, and immediately before the one-line-naming rule — so it is placed with the queue rules it follows from.
+> Established by reading the section whole and by heading offsets.
+>
+> **Clause 2 — MET, both parts, in the same breath**, in the paragraph directly under clause 1's: *"**Two things that
+> is not**, and neither is loosened by it. **Naming in one line what else is waiting** stays — "Every relayed question
+> names in one line whatever else is waiting" below requires it, and a name and a kind invite nothing. And **a
+> worker's question that genuinely offers options** is that worker's question, relayed whole: this binds the reports
+> you write yourself, never a payload you are carrying."* The quoted phrase matches the rule below it exactly, so the
+> citation resolves. Both carve-outs are worded as non-reaches rather than as new permissions. I also checked over
+> unwrapped text that nothing elsewhere in `SKILL.md` invites the human to choose among waiting things.
+>
+> **Clause 3 — MET.** The third bullet gains one clause: *"Where several are waiting, pick the one the order gives
+> you and send it — never list them and ask him which to take."* It carries the prohibition and the positive
+> instruction in one clause, and matches the bullet's register. `git diff --cached` shows a single changed line in
+> that file; I also read the whole file to confirm no other text differs from the base.
+>
+> **Clause 4 — MET, both halves, established against the base commit `0402ab1`.**
+>
+> - *Replacement*: the paragraph beginning *"**The manager never asks the human to choose which waiting thing to take
+>   next.**"* occurs **once** in `0402ab1:map.md` and **zero times** in the tree's `map.md`. What stands in its place
+>   is a pointer to the shipped statement, naming `SKILL.md`'s section and the third trigger, citing node 260 by
+>   markdown link and pointing at `map-history.md` for the human's words.
+> - *Verbatim append*: compared **byte for byte rather than by eye**. `git show 0402ab1:…map.md | grep -F
+>   <paragraph>` against the `map-history.md` block with its blockquote prefix stripped — `diff` reports no
+>   difference, both sides are **937 bytes**, and both md5 to `9bba22685d38517f6e59c437ce2168da`. The append is the
+>   whole paragraph, not only its opening sentence.
+> - *Heading*: mirrors the section it came from and matches the file's established shape (cf. the node-244 heading).
+>   `map-history.md` held no copy of this paragraph in the base, so the block is new.
+> - *The human's words*: `"Just give stuff, don't ask me too choose"` survives inside the archived block.
+>
+> **Clause 5 — MET.** Exactly four files changed, all four on the condition's list; `decisions.md` and `flags.md`
+> untouched. **Every markdown link in the four changed files resolves**, checked over unwrapped text so links whose
+> text wraps a line are not missed — including the two in `map-history.md` and the two in `map.md`, both of which
+> wrap. One absolute path flagged by my own enumerator is pre-existing text this work did not touch and exists on
+> disk.
+>
+> **The bar — HOLDS.** Commands discovered from the repo itself: the tree's top level is `.claude`, `CONTEXT.md`,
+> `.gitignore`, `.scratch` and nothing else; a `find` for `package.json`, `Makefile`, `justfile`, `*.toml`,
+> `*.cabal`, `go.mod` and `*.nix` returns nothing; there is no `.github`. No build, no tests, no formatter, no CI —
+> a complete bar rather than a deficient one. On the non-command half: `/writing-for-agents`'s negation lever is
+> satisfied, the prohibition pairing with its positive target in the same breath; the `Change the map` procedure was
+> followed **in its stated order**, account banked first and the item replaced second; the new `## Notes` item is 596
+> bytes against a 500-byte target the convention itself calls *"a target the writer aims at and never a rule that
+> forces text out"*, so not a finding; `CONTEXT.md`'s refusals checked by hand per the measured trap, and *report*,
+> *payload*, *queue* and *steering* all clear; ground rules 1, 3 and 4 hold; and every citation added is by heading
+> or quoted phrase, none by line number.
+>
+> **Reviewing skill:** none run, and none delegated to an agent, because the standards name none for this repo and
+> say a checker does not go looking for one. **Nothing I ran was handed less than I was.**
+
+**The manager's disposal of run 2.** *Not the checker's text.*
+
+- **Everything run 1 could not establish is now established, by a blind reader rather than by the manager.** The
+  byte-for-byte comparison — 937 bytes, matching md5 — is the check the manager performed on its own repair and
+  should not have been the only one to perform.
+- **Run 2 was told not to trust run 1 on the clauses it passed**, and re-established all five independently.
+- ~~**The gate is assembled and queued**, [node 263](263-nothing-tells-the-falsifying-party-to-go-and-look.md)'s
+  question being live in front of the human.~~ Raised once node 263's question was answered.
+
+### Gate — `approve`
+
+**The human's answer**, `verbatim`: *"approve"*
+
+No divergence: the payload carried two `PASS`es and no recommendation against landing.
+
+**Landed under the effort's landing policy.** One path-limited commit of the four files in the node's worktree;
+**no rebase needed at landing**, the worktree having already been rebased onto `0402ab1` at the human's direction
+before run 2; the bar's command half empty, so nothing to re-run; `git merge --ff-only` onto `master`, which needed
+the sandbox off for the range crossing `.claude/skills/` and was the only command run that way. Worktree removed,
+branch deleted. **Commit `db81330`**, carrying the trailer `Node: graph-workflow/260`.
+
+**This is the last worktree this effort will make under the old route.** It sat at
+`.claude/worktrees/260-never-ask-which-waits`; [node 269](269-ignore-the-new-worktree-path.md)'s, created while this
+one was at its gate, is the first under the plain-git route at `.scratch/graph-workflow/worktrees/`.

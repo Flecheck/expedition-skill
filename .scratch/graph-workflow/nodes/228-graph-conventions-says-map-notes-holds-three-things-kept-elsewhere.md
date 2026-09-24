@@ -57,3 +57,13 @@ repointing — and its author said so and declined to make it under a condition 
 **Two files must not hold `graph-conventions.md` at once.** This node and [node
 222](222-the-conventions-file-says-a-worker-reads-the-whole-map.md) both edit it, as did node 198. **The manager
 holds that sequencing and has written no blocking edge**, neither node needing what the other produces.
+
+## Amendment, 2026-09-24
+
+*Written by [node 299](299-rewrite-graph-conventions-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `0d406b7`. Every word of the replacement is fixed by that commit: it quotes `graph-conventions.md`'s after-text. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 299's worker searched every open node's `## Acceptance condition` for quoted spans of its before-range, matched literally and normalised with each condition joined into one string, and for each phrase its rewrite removed or replaced. The full list of handles is on node 299 under `### Re-pointing duty` and correction rounds 1 to 3.*
+
+- **Clause 1.** Replace "or a standing over sources" with "or the declaration of which sources are authoritative, which are evidence only, and which hold statements known to be false". The file no longer names that item by label. The rest is unchanged.
+
+## Flags
+
+`228.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.

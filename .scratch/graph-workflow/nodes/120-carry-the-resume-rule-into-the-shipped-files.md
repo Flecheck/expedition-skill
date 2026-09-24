@@ -109,3 +109,11 @@ all stand, node 122 having confirmed rather than contradicted them.
 **One overlap the whoever-claims-this must know:** [Give the manager's contract a procedure for stopping a running
 worker](124-a-procedure-for-stopping-a-running-worker.md) edits the same section of the same file and is sequenced
 after this node on its own author's instruction.
+
+## Amendment, 2026-09-24 (from node 296)
+
+*Written by [node 296](296-rewrite-the-manager-contract-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `6745f37`. Every word of the replacement is fixed by that commit or by `CONTEXT.md`. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 296's worker's search handles are on node 296 under its `#### Re-pointing search` and correction rounds.*
+
+- **Clause 4.** It quotes the `CONTEXT.md` `attempt` entry as "…a new attempt recorded after it." That wording was only `SKILL.md`'s, and this work removes it. Replacement for the quoted sentence: "`CONTEXT.md`: the `attempt` entry reads "A node outlives its attempts: a dead worker is replaced, and the replacement is a new attempt."" The rest of clause 4 is unchanged.
+
+`120.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 296](296-rewrite-the-manager-contract-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6745f37` or by `CONTEXT.md`.

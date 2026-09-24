@@ -105,7 +105,7 @@ whose carriage into the implementer's side is [node 214](nodes/214-a-condition-t
 
 **Ground rules for this effort, now in [map-implementation-rules.md](map-implementation-rules.md)**: five numbered rules of scope, and the test a rule passes to join them — moved there by [node 144](nodes/144-make-the-rules-file-stand-alone.md) so that file stands alone for a reader who does not read this map.
 
-**The four standing rules for writing anything in this effort are in [map-implementation-rules.md](map-implementation-rules.md)** too, held against every prose deliverable and fixed by [node 53](nodes/53-what-token-findings-change.md) — moved by [node 144](nodes/144-make-the-rules-file-stand-alone.md).
+**The five standing rules for writing anything in this effort are in [map-implementation-rules.md](map-implementation-rules.md)** too, held against every prose deliverable and fixed by [node 53](nodes/53-what-token-findings-change.md) and, for the fifth, [node 289](nodes/289-a-plain-english-and-compaction-pass-over-the-shipped-files.md) — moved by [node 144](nodes/144-make-the-rules-file-stand-alone.md).
 
 **The steering that the manager never asks the human which waiting thing to take next is now in the shipped files**: `.claude/skills/expedition/SKILL.md`, under `## What is in front of the human, and when`, and the third trigger in `.claude/rules/expedition-triggers.md` — carried there by [The never-ask-which rule is stated for picking a node and not for what is already waiting](nodes/260-never-ask-which-is-stated-for-nodes-not-for-what-waits.md), which is where it stopped being this effort's own. The steering as the human gave it, in their words, is in [map-history.md](map-history.md).
 

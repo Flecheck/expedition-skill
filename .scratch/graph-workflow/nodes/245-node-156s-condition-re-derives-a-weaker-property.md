@@ -1,7 +1,8 @@
 # Node 156's condition re-derives a property weaker than the rule node 241 sets
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 252
 
 Blocked by: none
 

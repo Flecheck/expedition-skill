@@ -71,3 +71,7 @@ that produced two of the three links in the first place.
 149](149-state-the-prose-standards-demands-in-the-rules-file.md) and [node
 160](160-carry-the-integration-conflict-rule-into-the-map.md). **Node 188 moves the section this one does not touch**,
 so the two are disjoint in fact though not by any written edge. The manager holds that ordering.
+
+## The manager's note, 2026-09-23
+
+*The manager's own note, not an amendment.* This node's `## Acceptance condition` quotes the words "four standing rules for writing". Since [node 289](289-a-plain-english-and-compaction-pass-over-the-shipped-files.md), `map-implementation-rules.md` holds five standing rules for writing and says "five" where it said "four". Found by the manager's search of the open conditions for "four standing rules". The clause must be re-pointed before this node is claimed.

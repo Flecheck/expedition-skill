@@ -2,6 +2,7 @@
 
 Type: grilling
 Status: resolved
+Supersedes: 203, 245
 
 Blocked by: none
 

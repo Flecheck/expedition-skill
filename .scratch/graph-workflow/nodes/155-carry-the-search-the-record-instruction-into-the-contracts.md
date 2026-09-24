@@ -69,3 +69,15 @@ the point — it was the cheap half of the package, and it is the half that surv
 **Clause 3 is where the human's revert lands.** It requires the index-of-decisions bullet to stay byte-identical and
 the index to stay read whole, which is the opposite of what this node's parent originally recommended. The
 `DIVERGENCE` and the human's ground for it are on [node 129](129-what-to-do-about-the-records-token-cost.md).
+
+## Amendment, 2026-09-24
+
+*Written by [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s worker and filed by the manager, after that node's work landed as commit `4068519`. Every word of each replacement is fixed by that commit: it quotes the research contract's after-text. The minting author's condition above is left as it was, and these replacements take the place of the clauses they name.*
+
+Node 290's worker searched every open node's `## Acceptance condition` for quoted spans of the research contract's before-text, for mentions of the file, and for each piece of wording its rewrite removed or replaced. The full list of handles is on node 290 under `### Re-pointing duty` and `### Correction round 1`.
+
+- **The sentence before its clauses.** Replace it with: "Each carries a `## What you read` section opening `Read each of these. Do not trust any summary of them.`, or, in `.claude/skills/expedition-research/SKILL.md`, `Read each of the following. Do not trust any summary of them.`, followed by a bulleted list of pointers and then a line stating that `flags.md` is not the worker's." Between the list and the `flags.md` line, the research file also holds "You may read outside the working directory." The before-text had the same shape. Clauses 1, 3 and 4 still hold as written. The decisions bullet and the `flags.md` statement are still there.
+
+## Flags
+
+`155.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.

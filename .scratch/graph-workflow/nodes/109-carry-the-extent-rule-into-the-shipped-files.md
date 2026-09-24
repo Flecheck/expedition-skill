@@ -85,3 +85,16 @@ written under its own node's rule, and it carries its enumerator accordingly.*
 > remaining half rather than a deficient one — so what remains is `/coding-principles`, `/naming`, and each file's
 > own form: it addresses its reader as *you*, states rules rather than explaining them, and a new rule joins an
 > existing section rather than sitting beside it.
+
+## Amendment, 2026-09-24
+
+*Written by [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s worker and filed by the manager, after that node's work landed as commit `4068519`. Every word of each replacement is fixed by that commit: it quotes the research contract's after-text. The minting author's condition above is left as it was, and these replacements take the place of the clauses they name.*
+
+Node 290's worker searched every open node's `## Acceptance condition` for quoted spans of the research contract's before-text, for mentions of the file, and for each piece of wording its rewrite removed or replaced. The full list of handles is on node 290 under `### Re-pointing duty` and `### Correction round 1`.
+
+- **The enumerator paragraph.** Replace it with: "Each of the five worker contracts additionally contains the read-back sentence, which reads *"against those four"* in a contract not yet rewritten and *"against the four points above"* in `.claude/skills/expedition-research/SKILL.md`. It is confirmed by `grep -rlnE "against (those four|the four points above)" --include="*.md" .claude/` returning those five paths and no others."
+- **Clause 6.** Replace "each contract today says the author reads what it wrote back *"against those four"*" with "each contract's read-back sentence (*"against those four"*, or in the research contract *"check what you wrote against the four points above"*)". The rest of the clause is unchanged. After nodes 291 to 294 land, only the second form remains.
+
+## Flags
+
+`109.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.

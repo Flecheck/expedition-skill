@@ -1,9 +1,10 @@
 # `graph-conventions.md` says every worker reads the whole map, and contradicts its own file table
 
 Type: implementation
-Status: open
+Status: superseded
 
 Blocked by: 215
+Superseded by: 299
 
 ## Question
 
@@ -60,3 +61,7 @@ is at its gate; this arrived as that checker's question and lands here because t
 and *"Read once per session"* on the `map.md` line. Both are in `## The seven files`, and the second is refused
 vocabulary rather than merely imprecise. **Whoever claims this node should establish whether its condition reaches
 the second**; the manager has not widened it.
+
+## Superseded, 2026-09-24
+
+*The manager's note.* Made unnecessary by [node 299](299-rewrite-graph-conventions-part-1.md)'s landing as `0d406b7`: the rewrite cut the sentence this node's question is about, "every worker reads the whole map cold, so an item's size is paid once per node", as an explanation. What stays is "Every worker reads all of `map.md` once per node", which this node itself says needs nothing. Proposed by node 299's worker (its flag `299.5`), which the human approved with the node.

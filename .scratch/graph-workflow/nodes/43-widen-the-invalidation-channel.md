@@ -56,3 +56,13 @@ Six files change, and no other file in the repository changes:
    and must not gain one.
 6. No file under `.scratch/` changes.
 7. The tree meets the bar.
+
+## Amendment, 2026-09-24
+
+*Written by [node 299](299-rewrite-graph-conventions-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `0d406b7`. Every word of the replacement is fixed by that commit: it quotes `graph-conventions.md`'s after-text. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 299's worker searched every open node's `## Acceptance condition` for quoted spans of its before-range, matched literally and normalised with each condition joined into one string, and for each phrase its rewrite removed or replaced. The full list of handles is on node 299 under `### Re-pointing duty` and correction rounds 1 to 3.*
+
+- **Clause 3.** Replace the quoted "current text" with: `` Every worker returns `INVALIDATIONS` on its handover instead, naming which resolved node its work contradicts and how. `` It is one sentence again, so "That sentence is reworded" stays as the condition has it. Clause 4 still holds: the file says "A demand about the record as a whole belongs on the handover and in no condition, whatever its wording."
+
+## Flags
+
+`43.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.

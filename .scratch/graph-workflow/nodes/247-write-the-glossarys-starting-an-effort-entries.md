@@ -55,3 +55,13 @@ rule that resolves whichever of the two has happened."*
 **Three open nodes now edit the glossary** — this one, [node 242](242-the-glossary-says-an-implementation-node-ends-at-the-gate.md) and [node 56](56-ship-the-glossary-into-the-skill-set.md), which moves it. **Two workers must not hold that file at once.** The manager holds the sequencing and has written no blocking edge, none of the three needing what another produces. Node 112's worker measured the wider contention at **34** non-resolved nodes mentioning the glossary, nine of them titled about it — that measurement and the correction of its own earlier estimate are flag `112.3`.
 
 **What node 111 needs, reported by node 112's worker and not done by anyone.** Node 111 is open and unclaimed, and item 2 of its acceptance condition demands its new section *"names both: **charting** … and **adoption**"* — a word node 112's answer refuses. That amendment is **not** this node's work and is not in the condition above. Whether it is anyone's to make is the same open question [node 245](245-node-156s-condition-re-derives-a-weaker-property.md) carries, now with two instances.
+
+## Amendment, 2026-09-24
+
+*Written by [node 299](299-rewrite-graph-conventions-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `0d406b7`. Every word of the replacement is fixed by that commit: it quotes `graph-conventions.md`'s after-text. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 299's worker searched every open node's `## Acceptance condition` for quoted spans of its before-range, matched literally and normalised with each condition joined into one string, and for each phrase its rewrite removed or replaced. The full list of handles is on node 299 under `### Re-pointing duty` and correction rounds 1 to 3.*
+
+- **Scope paragraph.** Replace "`graph-conventions.md:147`" with "`graph-conventions.md`, under `## Adding a node`". Citing by heading keeps the citation valid through node 300's rewrite, under standing writing rule 4.
+
+## Flags
+
+`247.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.

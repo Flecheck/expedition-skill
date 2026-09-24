@@ -1,7 +1,8 @@
 # Three statements name a different "first act" for a worker
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 268
 
 Blocked by: none
 

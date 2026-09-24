@@ -462,8 +462,15 @@ repair**, and the worker was resumed in the same turn to write the answer and ha
 
 ## Nodes surfaced
 
-*Three, with the worker's own questions and conditions. **The manager has minted node files for none of them yet**
-and is holding the text here so nothing is lost; that is transcription and is owed.*
+*Three, with the worker's own questions and conditions.* ~~**The manager has minted node files for none of them yet**
+and is holding the text here so nothing is lost; that is transcription and is owed.~~
+
+***Annotated by the manager on 2026-09-20.*** **All three were minted within the hour and this sentence was stale
+almost immediately: node 1 is [node 268](268-carry-the-plain-git-worktree-route-into-the-map.md), node 2 is [node
+269](269-ignore-the-new-worktree-path.md), node 3 is [node 270](270-whether-the-worktree-lifecycle-is-worth-a-script.md).**
+Node 264's worker came here to learn what became of them, was told the opposite of the truth, and had to list the
+directory and read seven node headers to find node 268 — **the largest single hunt in that node**, and the manager's
+fault rather than the record's shape.
 
 ### 1 — Carry the plain-git worktree route into the map — `implementation`
 

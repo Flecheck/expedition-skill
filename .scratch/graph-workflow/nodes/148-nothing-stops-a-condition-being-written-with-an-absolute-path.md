@@ -64,3 +64,27 @@ into the condition.**
 **It is the recurrence guard for a defect the manager itself introduced twice on node 147** — once by writing an
 absolute path into that node's condition and once by writing an enumerator that counted a string the condition
 itself contained.
+
+## Amendment, 2026-09-24
+
+*Written by [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s worker and filed by the manager, after that node's work landed as commit `4068519`. Every word of each replacement is fixed by that commit: it quotes the research contract's after-text. The minting author's condition above is left as it was, and these replacements take the place of the clauses they name.*
+
+Node 290's worker searched every open node's `## Acceptance condition` for quoted spans of the research contract's before-text, for mentions of the file, and for each piece of wording its rewrite removed or replaced. The full list of handles is on node 290 under `### Re-pointing duty` and `### Correction round 1`.
+
+- **Clause 1.** It points at "the bullet beginning `a **path** may say where`". Replacement: "the bullet beginning `A path may say where, because the checker has the repo` in `.claude/skills/expedition-research/SKILL.md`, and in any of the five not yet rewritten, the bullet beginning `a **path** may say where`". Once nodes 291 to 294 land, all five start with the after-text form.
+
+## Flags
+
+`148.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
+
+## The manager's note, 2026-09-24
+
+*The manager's own note.* [Node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s worker reported in its retrospective: "Node 148's clause 7 still counts the map's standing preferences as part of the bar, which nodes 169 and 184 struck."
+
+## Amendment, 2026-09-24 (second)
+
+*Written by [node 299](299-rewrite-graph-conventions-part-1.md)'s worker and filed by the manager, after that node's work landed as commit `0d406b7`. Every word of the replacement is fixed by that commit: it quotes `graph-conventions.md`'s after-text. The minting author's condition above is left as it was. The replacement takes the place of the clause it names. Node 299's worker searched every open node's `## Acceptance condition` for quoted spans of its before-range, matched literally and normalised with each condition joined into one string, and for each phrase its rewrite removed or replaced. The full list of handles is on node 299 under `### Re-pointing duty` and correction rounds 1 to 3.*
+
+- **Clause 2.** Replace "the sentence beginning `A **path** may say where`" with "the sentence beginning `A path may say where:`". The reason "because the checker has the repo" is now cut. Node 148's own demand, adding the relative-path rule and its reason, is unaffected.
+
+`148.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.

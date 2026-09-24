@@ -1,7 +1,8 @@
 # A worker can land at the repository root, where `EnterWorktree` is refused
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 268
 
 Blocked by: none
 
