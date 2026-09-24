@@ -1,36 +1,34 @@
 # Graph conventions
 
-How an effort's graph is written and changed. Read this before touching any of an effort's files.
+This document says how an effort's graph is written and changed. Read it before touching any of an
+effort's files.
 
 Terms are used exactly as the glossary (`CONTEXT.md`) defines them.
 
-A repo whose tracker doc already documents a different local-markdown scheme: see
+If a repo's tracker doc already documents a different local-markdown scheme, see
 `wayfinder-divergences.md`.
 
-**The manager is the only writer of the graph's record, and it writes as a scribe.** A worker
-returns text; the manager pastes each part of it under the right heading and never re-authors,
-shortens, re-orders or re-renders it. What the manager has of its own goes in beside that text as
-its own marked note. No procedure below is ever performed by a worker.
+The manager is the only writer of the graph's record. It writes as a scribe. A worker returns text. The
+manager pastes each part of it under the right heading without re-authoring, shortening, re-ordering or
+re-rendering it. Anything of the manager's own goes beside that text as its own marked note.
 
-**That is about recording, not about files.** Where a node's own work **is** a change to a graph
-file, that worker makes the change itself, as it would any other work. What stays the manager's is
-the recording — the answer, the status, the `decisions.md` line, the flags, and every procedure
-below.
+A worker whose node's own work is a change to a graph file makes that change itself, as it would any
+other work. The recording stays the manager's: the answer, the status, the `decisions.md` line, the
+flags, and every procedure below.
 
-**No edit deletes.** When any graph file changes, text that no longer holds is struck through or
-marked in place and the new text is added around it. Text leaves a file only when it is wrong or the
-human asks for it gone. **The rule reaches the graph's own files — those listed below — and nothing
-outside them.** The product the effort changes, and every file the effort ships, are edited plainly:
-superseded wording is removed, and nothing is moved to a history file.
+No edit deletes. When a graph file changes, strike through or mark in place the text that no longer
+holds, and add the new text around it. Remove text from a file only when it is wrong or the human asks
+for it gone. The never-delete rule covers only the graph's own files, listed under `## The seven files`
+below. Edit the product the effort changes, and every file the effort ships, plainly: remove superseded
+wording, and move nothing to a history file.
 
-**Inside the graph's files the rule cuts by what a piece of text is, not by which file holds it.**
-Text that records what happened — a node's `## Answer`, a line in `decisions.md`, an entry in
-`flags.md` — is marked superseded in place and never removed. Text whose job is to state a rule that
-currently binds is **replaced** by its current form, its superseded text appended verbatim to
-`map-history.md`, which holds superseded text only and is itself never rewritten. So a reader of a
-working file never meets a rule that no longer binds, and the account survives whole. `map.md` is
-written this way, and so is every sibling of it that states rules that currently bind: see
-`## Writing the map` below.
+Inside the graph's files, what happens to superseded text depends on the text's job, whichever file
+holds it. Text that records what happened, such as a node's `## Answer`, a line in `decisions.md` or an
+entry in `flags.md`, is marked superseded in place and never removed. Text that states a rule that
+currently binds is replaced by its current form, with its superseded text appended verbatim to
+`map-history.md`. `map-history.md` holds superseded text only, and is never rewritten. `map.md` is
+written this way, and so is every sibling of it that states rules that currently bind.
+`## Writing the map` below describes how.
 
 ## The seven files
 
@@ -45,118 +43,106 @@ written this way, and so is every sibling of it that states rules that currently
   nodes/NN-<name>.md     One file per node. All detail.
 ```
 
-`map-manager-only.md` holds the part of the map that only the manager acts on, so that no worker pays
-to read it; it is part of the map, and a rule written there binds exactly as one written in `map.md`
-does. Three of the map's sections are among what it holds:
+`map-manager-only.md` and `map-implementation-rules.md` are part of the map. A rule written in either
+binds exactly as one written in `map.md` does.
+
+Among what `map-manager-only.md` holds are three of the map's sections:
 
 - `## Not yet specified` — the fog.
-- `## Out of scope` — one line per node ruled beyond the destination, and per area consciously ruled
+- `## Out of scope` — one line per node ruled beyond the destination, and one per area consciously ruled
   out.
-- `## Landing an implementation node's work` — the landing policy: where a node's worker works, and
-  what happens to that work between the gate and the repository. Landing is the manager's, not a
-  worker's or a checker's, so neither the worker nor its checker reads it.
+- `## Landing an implementation node's work` — the landing policy: where a node's worker works, and what
+  happens to that work between the gate and the repository. Landing is the manager's, so neither a
+  worker nor its checker reads this section.
 
-`map-implementation-rules.md` holds the rules an implementation node's work is held to — the bar's
-commands and the standards work is held against — and is read by that node's worker and by its
-checker rather than by every worker; it too is part of the map, and a rule written there binds
-exactly as one written in `map.md` does; what it admits is under `## Writing the map` below.
+`map-implementation-rules.md` holds the bar's commands and the standards an implementation node's work
+is held against. Its readers are that node's worker and its checker, rather than every worker. What the
+file admits is under `## Writing the map` below.
 
 `map.md` has three sections, in this order:
 
 - `## Destination` — what reaching the end of the effort looks like.
-- `## Notes` — the domain, the skills every session consults, and standing preferences for this
-  effort. Also the two things the manager maintains here: the **declared label vocabulary**, and the
-  bar's commands once they have been discovered for this repo. Two further blocks are optional prose,
-  written where the effort has them: its **ground rules**, and a **standing over sources** declared by
-  path and glob — which sources are authoritative, which are evidence only, and which hold statements
-  known to be false. Absent any declaration, every source a worker is pointed at is authoritative.
-  Both live here because the map is a pointer every worker already receives.
-- `## Decisions so far` — a pointer to `decisions.md`. No decision is written here; the section
-  exists so that a reader of the map is told where the index is.
+- `## Notes` — the domain, the skills every session consults, and the standing preferences for this
+  effort. The manager also maintains two things here: the declared label vocabulary, and the bar's
+  commands once they have been discovered for this repo. Two further blocks are optional prose, written
+  where the effort has them. The first is the effort's ground rules. The second declares, by path and
+  glob, which sources are authoritative, which are evidence only, and which hold statements known to be
+  false. Absent any declaration, every source a worker is pointed at is authoritative.
+- `## Decisions so far` — a pointer to `decisions.md`. The section holds no decision.
 
-`decisions.md` holds one line per resolved node: one sentence, about 25 words. Enough to judge
-relevance, never a restatement. Grouped under the declared labels where a vocabulary exists, flat
-where it does not.
+`decisions.md` holds one line per resolved node: one sentence of about 25 words, enough to judge
+relevance and never a restatement. The lines are grouped under the declared labels where a vocabulary
+exists, and flat where it does not.
 
-`flags.md` is the graph's **capped index of every judgement an agent made on its own** — the flag
-counterpart to `decisions.md`, standing to a node's `## Flags` as `decisions.md` stands to its
-`## Answer`. One line per flag, one sentence, written report-shaped at raise time by whoever holds the
-context and never reconstructed later. The closing report's outstanding flags are this file's unchecked
-lines, and they are readable only because each was written to be read.
-
-The form:
+`flags.md` is the graph's capped index of every judgement an agent made on its own. It holds one line
+per flag, one sentence long. Whoever holds the context writes that line as a report when the flag is
+raised. Nobody reconstructs it later. The closing report's outstanding flags are the unchecked lines of
+`flags.md`. The line's form:
 
 ```
 - [ ] NN.k ASSUMPTION · [<node name>](nodes/NN-<name>.md) — <one line>
 ```
 
-Every flag carries an **id**, `NN.k` — its node's number, then a sequence within that node, allocated
-in write order and never reused. It sits between the checkbox and the marker here, and in front of the
-marker on the node's `## Flags` entry. Without it a flag can only be pointed at by its position in a
-list.
+Every flag carries an id, `NN.k`, made of its node's number and then a sequence number within that node,
+allocated in write order and never reused. In `flags.md` the id sits between the checkbox and the
+marker. On the node's `## Flags` entry it sits in front of the marker.
 
-`- [ ]` is outstanding; `- [x]` is the human having dealt with the flag, which is not the same as
-having agreed with it. The same state is on the node, where a settled flag is marked `settled`, so the
-two can genuinely disagree. **Where they disagree `flags.md` wins, because the sweep and the closing
-report are built from it.** The flag's node is the **first** link on the line; the text after the dash
-may contain others.
+`- [ ]` means outstanding. `- [x]` means the human has dealt with the flag, which does not mean they
+agreed with it. The node holds the same state, marking a settled flag `settled`, so the node and
+`flags.md` can disagree. Where they disagree, `flags.md` wins, because the sweep and the closing report
+are built from it. The flag's node is the first link on the line. The text after the dash may contain
+other links.
 
 ## Writing the map
 
-**This section covers `map.md` and every sibling of it that states rules that currently bind**, so a
-file the map later splits into is covered the day it is written. The graph's remaining files record
-what happened and their superseded text stays where it is: `decisions.md`, `flags.md`, the node
-files, and `map-history.md`, which holds superseded text only.
+This section covers `map.md` and every sibling of it that states rules that currently bind, including a
+file the map later splits into, from the day it is written. The graph's other files record what
+happened: `decisions.md`, `flags.md`, the node files, and `map-history.md`, which holds superseded text
+only. Superseded text in those files stays where it is.
 
-**What a file of the map admits.** Each file of the map declares who reads it, and a line belongs in
-that file only where the reader it declares — one kind of worker, or the manager alone — would do
-something differently for having read it while working a node. **How a rule was learned is not that**:
-how many attempts it took and what they cost, who was wrong, what the file said before. That material
-goes to `map-history.md`, the markdown link to the node that shaped the line standing in its place.
-**A trigger is part of a rule and stays; a history is not** — an error string, a symptom, or the
-condition under which a rule fires is how the rule's reader knows it applies. Whoever is already
-editing a passage applies the test to that passage: no sweep of a file is owed or licensed by it.
+Each file of the map declares its reader: one kind of worker, or the manager alone. The file admits a
+line only where that reader would do something differently for having read it while working a node.
+Whoever is already editing a passage applies that test to that passage. The test requires no sweep of a
+file, and permits none. How a rule was learned fails the test: how many attempts it took and what they
+cost, who was wrong, and what the file said before. Move that material to `map-history.md`, and leave in
+its place the markdown link to the node that shaped the line. A trigger is part of a rule and stays. A
+trigger is an error string, a symptom, or the condition under which a rule fires.
 
-Every note, standing preference and fog item in `map.md` is a **current statement**: what holds now,
-citing by markdown link the nodes that shaped it and never restating what those nodes hold. The
-**account** behind it — how it came to say that, what was measured, what it used to say — belongs in
-`map-history.md`, under a heading mirroring the map section it came from. So a map file is rewritten
-as it changes rather than grown by appending: the superseded text moves out, and what replaces it
-stands alone. Every worker reads `map.md` whole and cold, so its size is a cost paid once per node.
+Every note, standing preference and fog item in `map.md` is a current statement: it says what holds now.
+It cites by markdown link the nodes that shaped it, without restating what those nodes hold. The account
+behind an item is how it came to say what it says, what was measured, and what it used to say. That
+account belongs in `map-history.md`, under a heading mirroring the map section the item came from. So a
+map file is rewritten as it changes, rather than grown by appending. The text that replaces an item
+stands alone. Every worker reads all of `map.md` once per node, so its size is a cost paid once per
+node.
 
-**This deletes nothing.** Text moved to `map-history.md` is moved **verbatim** — never summarised,
-paraphrased or shortened — and text already struck through moves struck through. The never-delete
-rule is satisfied by the move rather than exempted from it: the account is still there in full, in
-the file that exists to hold it. An item carrying no account beyond its current statement moves
-nothing.
+Moving the superseded text out deletes nothing. Text moved to `map-history.md` is moved verbatim,
+without summarising, paraphrasing or shortening it. Text already struck through moves struck through. An
+item carrying no account beyond its current statement moves nothing.
 
-**Each item in `## Notes` targets 500 bytes**, counting the item's own prose and not any quotation of
-the human's own words — shortening those is paraphrase, which never-delete forbids. **This is a target
-the writer aims at and never a rule that forces text out.** An item that needs more exceeds it and says
-why; nothing fails, and no check below turns a breach into a defect. What the target buys is a number:
-every worker reads the whole map cold, so an item's size is paid once per node, and the rule above says
-in prose what the target says in bytes — the difference is that a number makes the drift visible while
-it is happening. Bringing an item to the target is the `Change the map` procedure below, a verbatim
-move to `map-history.md`, so an item brought down to it loses nothing.
+Each item in `## Notes` targets 500 bytes, counting the item's own prose and not any quotation of the
+human's own words. The target never forces text out: an item that needs more exceeds it and says why. No
+check below treats a breach as a defect. To bring an item down to the target, use the `Change the map`
+procedure below.
 
 ## Adding a node
 
-Allocate the next unused `NN`. Numbers are never reused, and a node keeps its number forever.
+Allocate the next unused `NN`. A node keeps its number forever. A number is never reused.
 
-`NN` is the node's identity. The name is free-form, and carries a foreign label when the effort was
-adopted from a tracker that had one: a node imported as `AUTH-2` is named
-`nodes/24-auth-2-token-refresh.md`, and the foreign label resolves to the node by glob.
+`NN` is the node's identity. The name is free-form. It carries a foreign label when the effort was
+adopted from a tracker that had one. For example, a node imported as `AUTH-2` is named
+`nodes/24-auth-2-token-refresh.md`. The foreign label resolves to the node by glob.
 
-Create the file with its mandatory fields and its `## Question`. When several nodes are created at
-once, write every file first and wire `Blocked by:` in a second pass.
+Create the file with its mandatory fields and its `## Question`. When you create several nodes at once,
+write every file first, then fill in `Blocked by:` in a second pass.
 
 ## The node file
 
-Fields are bare `Key: value` lines. **Fields live in the header block — everything above the first
-`##` heading — and nowhere else.**
+Fields are bare `Key: value` lines. They live only in the header block, which is everything above the
+first `##` heading.
 
-Mandatory: the name, `Type:`, `Status:`. Every other field appears only when it has a value. Write the
-fields in the order shown below.
+The name, `Type:` and `Status:` are mandatory. Every other field appears only when it has a value. Write
+the fields in the order shown below.
 
 ```markdown
 # <free-form name — carries a foreign label when one exists>
@@ -176,94 +162,70 @@ Superseded by: 88
 ## Interview
 ```
 
-Sections appear in that order and only when they have content.
+Sections appear in the order shown, and only when they have content.
 
 ### `## Acceptance condition`
 
-What done means for this implementation node. Written by the node that spawned it, before any work
-starts, and its worker may not rewrite it. A worker that judges the condition wrong **raises** rather
-than shipping quietly past it, because a broken condition is not the worker's to fix. The
-`CONDITION-WRONG` flag is the manager's to file afterwards, and only where the human's answer was
-*carry on, ship it anyway*.
+The condition states what done means for this implementation node. It is written by the node that
+spawned this node, before any work starts. Its worker may not rewrite it. A worker that judges the
+condition wrong raises it.
 
-**A condition is self-contained text.** Everything needed to judge whether the work is done is in the
-condition, and its reader never goes anywhere else to find out what it demands. That reader is the
-**checker**: it is handed the condition as text and has not read the node, so a condition pointing at
-something it was not given cannot be checked at all — and the manager, supplying what the condition
-left out, becomes the author of the standard the work is judged against.
+A condition is self-contained text. Everything needed to judge whether the work is done is in the
+condition, so its reader never goes anywhere else to find out what it demands. That reader is the
+checker, which is handed the condition as text and has not read the node.
 
-So the condition states **what must be true** in its own words. A **path** may say where — the work must
-touch that file, produce it, or leave it in a stated state — because the checker has the repo. What may
-never sit outside the text is the demand itself: *as decided at node NN*, *the section agreed in the
-interview*, *the wording the human chose* — each sends its reader away to learn what is being required
-of them. Where a condition genuinely depends on material held elsewhere, whoever writes one **copies
-that material into it**. The bar is the one thing it need not copy, and only because that reaches the
-checker by its own route.
+So the condition states what must be true, in its own words. A path may say where: the work must touch
+that file, produce it, or leave it in a stated state. The demand itself stays in the text, and never
+behind a pointer such as *as decided at node NN*. Where a condition depends on material held elsewhere,
+whoever writes the condition copies that material into it. The bar is the one thing a condition need not
+copy, and only because the bar reaches the checker by its own route.
 
-**One demand no copy repairs: the record as a whole.** A condition may not hold the work against every
-decision the effort has recorded — that the work contradicts none of them, or that everything in it
-traces back to one. Copying reaches a demand that **names** material held elsewhere; it cannot reach one
-that **quantifies over the record**, where there is no bounded material to bring inside the text and
-what there is grows every time a node resolves. Any wording of that shape is the same demand — *no
-decision on any resolved node changes*, *every rule here traces to a resolved node*, *the work is
-consistent with every decision so far* — and each leaves its reader no standard to hold the work
-against. A demand about **what changed in the tree** is a different thing and stays permitted: *no file
-under `.scratch/` changes* is answerable from the diff, whatever those files decided.
+A demand about the record as a whole belongs on the handover and in no condition, whatever its wording.
+Such a demand holds the work against every decision the effort has recorded: that the work contradicts
+none of them, or that everything in it traces back to one. Every worker returns `INVALIDATIONS` on its
+handover instead, naming which resolved node its work contradicts and how. A demand about what changed
+in the tree, such as *no file under `.scratch/` changes*, is permitted.
 
-**The duty behind it is real, and it is owed on the handover instead.** Every worker returns
-`INVALIDATIONS` — which resolved node its work contradicts, and how — answered by the party that built
-the work and may read the record to see what it touches. The checker is in neither position: it holds
-the condition as text, has not read the node, and does not read the record at all. So the demand belongs
-on the handover and in no condition.
+The manager hands a condition that points anyway to the checker as written, and supplies nothing it
+omits. Where the missing part is what the check depends on, the condition goes to the human instead. The
+manager raises such a condition where it meets one before the check. The checker raises one it cannot
+check.
 
-**A condition that points anyway is not repaired on the way to the checker.** The manager hands it over
-as written and supplies nothing it omits. Where what is missing is what the check turns on, it goes to
-the human instead — raised by the manager where it meets one before the check, or by the checker on a
-condition it cannot check.
+Four parties may change a condition after it is written:
 
-**Who may change a condition after it is written: four parties.** The first is the **condition's own
-worker**, above — it may not rewrite its condition, and raises where it judges it wrong. The other
-three reach a condition on a node **nobody holds yet**, a condition under a live worker going to the
-human by that raise and by no other route.
+- The condition's own worker, which may not rewrite it and raises instead, as above.
+- The party that established a fact which falsified a clause of an unclaimed node's condition, because a
+  node resolved or work landed. That party writes the replacement as text on its handover. The manager
+  files it. Two provisos apply. Every word of the replacement is already fixed by a resolved node, by
+  work landed in the tree, by the glossary or by the shipped files. The amendment names which of these
+  fixed it.
+- The manager, under the same two provisos, where no such party exists. Separately, the manager may
+  extend a condition's scope to further instances of a defect the condition already describes, provided
+  the amendment writes no requirement that was not already fixed.
+- The human, who receives everything else.
 
-- **The party that established a fact which falsified a clause.** A node resolves, or work lands, and
-  a clause of some unclaimed node's condition is wrong as a result: that party writes the replacement
-  as text on its handover, and the manager files it. **Two provisos, both checkable by a reader**:
-  every word of the replacement is already fixed by a resolved node, by work landed in the tree, by the
-  glossary or by the shipped files; and the amendment names which.
-- **The manager.** It holds that same pen under those same two provisos **where no such party exists**
-  — the clause was falsified by landed code, or the damage was noticed later by somebody else.
-  Separately, it may extend a condition's **scope** to further instances of a defect the condition
-  already describes, provided the amendment writes no requirement that was not already fixed.
-- **The human**, to whom anything else goes, and in particular any replacement part of which needs a
-  judgement nobody has made.
+The last three change only a condition on a node nobody holds yet. A condition under a live worker
+reaches the human by that worker's raise, and by no other route.
 
-**An amendment is a transcription and never an authorship**, which is what makes the two middle parties
-safe. Where every word of the replacement is fixed somewhere else, what makes an instance defective and
-what a repaired one looks like stay the minting author's: the set of demands changed, and whose
-judgement they are did not. Authoring a whole condition for a node an agent minted is the other act and
-is not the manager's.
+An amendment only transcribes words already fixed elsewhere. Writing a whole condition for a node that
+an agent created is a different act. That act is not the manager's.
 
-**Three things no amendment reaches**, on either pen, each stated as a property rather than as an
-example:
+An amendment by the party that established the fact, or by the manager, can reach none of the following
+three things:
 
-- **a new demand at any place** — a requirement nobody has fixed does not become fixed by being written
-  into a condition;
-- **an ambiguous demand at a place the condition already lists** — while the ambiguity is open it stays
-  the worker's, to decide and flag or to raise, because sharpening it there is the amender's own act;
-  once a resolved node has settled it the sharpening is that node's, and the clause is amendable;
-- **a defect the condition does not describe** — reaching one is a new node, whatever file it lives in.
+- A new demand at any place.
+- An ambiguous demand at a place the condition already lists. While the ambiguity is open, the worker
+  decides it and flags it, or raises it. Once a resolved node has settled the ambiguity, the clause can
+  be amended to that node's reading.
+- A defect the condition does not describe. Reaching one takes a new node, whatever file the defect
+  lives in.
 
-**The duty that fires that pen: before handing back, go and look.** A permission nobody remembers to
-use fires only where somebody trips over the damage, so the looking is a duty rather than a permission,
-and it is a **search** rather than a read. Before handing back, the party that established a fact
-searches the open nodes' `## Acceptance condition` sections for the **handles its own work fixes** — a
-word it refuses, a path it changes or moves something out of, a phrase it supersedes — and reads only
-what matches. Where no such party exists, the manager searches. The search reaches **every open node's
-condition, claimed or not**, a worker being judged right now against a standard known to be wrong being
-the worst case rather than an excluded one, while what to do about a claimed node stays the manager's
-under the raise above. And the party **names on its handover which handles it searched**,
-which is what makes the duty checkable by somebody else rather than a claim to have been careful.
+Before handing back, the party that established a fact must search for the conditions that fact
+falsifies. It searches the open nodes' `## Acceptance condition` sections for what its own work fixes:
+each word it refuses, each path it changes or moves something out of, and each phrase it supersedes. It
+reads only what matches. Where no such party exists, the manager searches. The search covers every open
+node's condition, claimed or not. What to do about a claimed node stays the manager's, under the raise
+above. The party names on its handover what it searched for.
 
 ### `## Flags`
 
