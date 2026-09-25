@@ -37,7 +37,7 @@ is built.
 Read each of the following. Do not trust any summary of them.
 
 - your node's own file — its `## Question` first
-- `map.md` — the destination, the standing preferences, the fog
+- `map.md` — the destination and the standing preferences
 - `decisions.md` — the sections the spawn names
 - `prototypes/NN-<name>/`, where anything you build goes
 

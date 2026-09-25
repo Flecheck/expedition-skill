@@ -28,7 +28,7 @@ research node never involves the human.
 Read each of the following. Do not trust any summary of them.
 
 - your node's own file — its `## Question` first
-- `map.md` — the destination, the standing preferences, the fog
+- `map.md` — the destination and the standing preferences
 - `decisions.md` — the sections the spawn names
 - the sources the spawn names, and anything they lead you to
 

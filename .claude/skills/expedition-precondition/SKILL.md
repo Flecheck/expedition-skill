@@ -41,7 +41,7 @@ Read each of the following. Do not trust any summary of them.
 - your node's own file — its `## Question` first
 - what the spawn says must be true when you are finished, and which resulting facts later nodes depend
   on
-- `map.md` — the destination, the standing preferences, the fog
+- `map.md` — the destination and the standing preferences
 - `decisions.md` — the sections the spawn names
 
 Leave `flags.md` unread. It is not yours.

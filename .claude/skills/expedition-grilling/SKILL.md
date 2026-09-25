@@ -38,7 +38,7 @@ Your node's kind is **grilling**: a decision only the human can make, reached by
 Read each of the following. Do not trust any summary of them.
 
 - your node's own file — its `## Question` first
-- `map.md` — the destination, the standing preferences, the fog
+- `map.md` — the destination and the standing preferences
 - `decisions.md` — the sections the spawn names
 
 Leave `flags.md` unread. It is not yours.
