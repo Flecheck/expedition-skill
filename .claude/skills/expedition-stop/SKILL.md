@@ -5,65 +5,65 @@ description: Close a management session in an expedition's manager thread — st
 
 # Closing a management session
 
-You are the **manager** of an **expedition**, and this session — your own thread's life, not the
-effort — is ending. The effort is not being closed: only the human closes one, and nothing here does
-that.
+You are the manager of an expedition, and this session is ending. A session is the life of your own
+thread. Leave the effort open, because only the human closes an effort.
 
-Three things happen, in order. You start nothing new, you finish what is already in flight, and you
+Three things happen, in this order: new work stops, the work already under way is finished, and you
 report.
 
-## Start no new node
+## New work stops
 
-From here you **claim nothing, and spawn no worker for a node that is not already under way**. A node
-finishing normally has you top up to the effort's counts; now it does not, and a slot a finishing node
-leaves empty stays empty. The frontier is left exactly where it is.
+From now on, claim no node, and spawn a worker only for a node already under way. Leave the frontier
+exactly as it is. When a node finishes, leave the effort's counts below their numbers rather than
+starting work to bring them back up.
 
-## Finish the work in flight
+## Finish the work already under way
 
-Two cases, split on whether the human is needed.
+The work already under way falls into two cases.
 
-**Work you can carry through alone, you carry through**: a handover that has arrived is filed, the node
-it answers is resolved on it, finished work gets its checker spawned, and work the human has already
-approved is landed.
+Carry through the work that does not need the human. File a handover that has arrived, and resolve the
+node it answers. Spawn a checker for finished work. Land work the human has already approved.
 
-**Work that cannot move without the human goes in front of them before the session ends**, rather than
-being left standing: every node waiting at a gate, and every worker holding a question they have not
-answered. Both are already tier 1 claimants in your contract's `What is in front of the human, and
-when`; that section, `What is never yours` and `Three outcomes, and no fourth` govern how they travel
-and what an answer does, unchanged. All a session ending adds is that none of them is left over.
+Put the work that needs the human in front of them before the session ends: every node waiting at a
+gate, and every worker holding a question the human has not answered. Your contract's
+`## What is in front of the human, and when`, `## What is never yours` and
+`### Three outcomes, and no fourth` govern how each is put to the human and what an answer does, as
+they always do.
 
-The session ends once they are answered and whatever they unblock is carried through under the first
-case above. **What is still unanswered when the human stops answering is left where it stands** —
-recorded, and named in the closing report below.
+The session ends once the human has answered everything put in front of them, and you have carried
+through, as in the first case, whatever the answers unblock. When the human stops answering, leave
+what is still unanswered as the record holds it, and name it in the session's closing report.
 
-## Write no handoff document
+## What the next manager starts from
 
-The record already carries what a fresh manager needs, so a handoff document would only copy it. The
-three states that read as an ordinary node are each derivable from the node's own file:
+Write no handoff document. Leave the next manager the record, which already holds everything a fresh
+manager needs.
 
-- **waiting at a gate** — `claimed`, with a checker's outcome recorded and no gate outcome under it;
-- **a worker holding an unanswered question** — `claimed`, with a question recorded and no answer under
-  it;
-- **parked** — `open`, with a non-empty interview.
+Three states look like an ordinary `claimed` or `open` node, and each can be worked out from the node's
+own file:
 
-A live worktree is discovered from the version control system rather than recorded, so it needs no
-handoff either.
+- Waiting at a gate: `claimed`, with a checker's outcome recorded and no gate outcome under it.
+- A worker holding an unanswered question: `claimed`, with a question recorded and no answer under it.
+- Parked: `open`, with a non-empty interview.
 
-## What does not survive, and why it costs nothing
+A live worktree is found through the version control system rather than the record, so it needs no
+handoff document either.
 
-Whatever routes you to your running agents dies with this session, so every attempt still running is
-unresumable to the next manager. **That costs nothing**: it is the ordinary replacement case rather
-than a loss, and a fresh manager replaces such an attempt by the ordinary route of your contract's
-`When an agent dies or is stopped` — everything the human has already said on that node replayed and
-marked settled, so they are never asked twice.
+## Agents still running when the session ends
+
+What lets you resume your running agents ends with this session, so the next manager cannot resume an
+attempt still running. Nothing is lost. The next manager replaces each such attempt in the ordinary way,
+under your contract's `## When an agent dies or is stopped`. The new attempt is given everything the
+human has already said on the node, marked settled, so the human is never asked the same thing twice.
 
 ## The session's closing report
 
-The last thing you write — this session's, not the effort's. It carries:
+Write the session's closing report last. It covers this session only, and it carries:
 
-- **what landed**;
-- **what resolved**;
-- **what is in flight**, each named with which of the two cases above it sits in;
-- **what is outstanding for the human** — every gate, every unanswered question, every unsettled flag.
+- what landed
+- what resolved
+- what is still under way, each piece named with the case under `## Finish the work already under way`
+  that it is in
+- what is outstanding for the human: every gate, every unanswered question, and every unsettled flag
 
 Then stop.

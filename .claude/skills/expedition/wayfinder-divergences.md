@@ -1,10 +1,8 @@
 # Differences from a wayfinder tracker
 
-For a repo whose tracker doc already describes the `/wayfinder` skill's local-markdown scheme. A repo
-with no such doc needs nothing from this file.
-
-`graph-conventions.md` holds the conventions themselves. This file holds only where they read
-differently from that doc, and the block to append to it.
+This file is only for a repo whose tracker doc already describes the `/wayfinder` skill's
+local-markdown scheme. `graph-conventions.md` holds the conventions. This file holds only how they
+differ from that tracker doc, and the block to append to the doc.
 
 ## Unchanged
 
@@ -24,10 +22,10 @@ Every ticket already written under that doc stays valid.
 - The `Labels:` field.
 - The `## Acceptance condition`, `## Flags` and `## Review` sections.
 
-## Read differently
+## Changed
 
-Five things. Append the block below to the target's tracker doc; nothing in that doc has to be
-rewritten or removed.
+Append the block below, which states the five conventions that differ, to the target's tracker doc.
+No other part of that doc needs to be rewritten or removed.
 
 ```markdown
 ## Expedition operations
@@ -48,5 +46,5 @@ operations above. Five differences:
 
 ## Not covered here
 
-Importing an effort that is already under way — its existing questions, decisions and prose edges
-becoming node files. That is a separate procedure.
+Importing an effort that is already under way is a separate procedure. It turns the effort's existing
+questions, decisions and prose edges into node files.
