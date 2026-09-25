@@ -8,13 +8,8 @@ Terms are used exactly as the glossary (`CONTEXT.md`) defines them.
 If a repo's tracker doc already documents a different local-markdown scheme, see
 `wayfinder-divergences.md`.
 
-The manager is the only writer of the graph's record. It writes as a scribe. A worker returns text. The
-manager pastes each part of it under the right heading without re-authoring, shortening, re-ordering or
-re-rendering it. Anything of the manager's own goes beside that text as its own marked note.
-
-A worker whose node's own work is a change to a graph file makes that change itself, as it would any
-other work. The recording stays the manager's: the answer, the status, the `decisions.md` line, the
-flags, and every procedure below.
+`## Writing the graph` in `SKILL.md`, the file beside this one, says who writes the graph's record and
+how the manager pastes what a worker hands it.
 
 No edit deletes. When a graph file changes, strike through or mark in place the text that no longer
 holds, and add the new text around it. Remove text from a file only when it is wrong or the human asks
@@ -51,9 +46,10 @@ Among what `map-manager-only.md` holds are three of the map's sections:
 - `## Not yet specified` — the fog.
 - `## Out of scope` — one line per node ruled beyond the destination, and one per area consciously ruled
   out.
-- `## Landing an implementation node's work` — the landing policy: where a node's worker works, and what
-  happens to that work between the gate and the repository. Landing is the manager's, so neither a
-  worker nor its checker reads this section.
+- `## Landing an implementation node's work` — the landing policy: where a node's worker works, what one
+  path-limited commit of that node's paths takes, and what happens to the worker's tree on each of the
+  gate's three outcomes. Landing is the manager's, so neither a worker nor its checker reads this
+  section.
 
 `map-implementation-rules.md` holds the bar's commands and the standards an implementation node's work
 is held against. Its readers are that node's worker and its checker, rather than every worker. What the
@@ -75,9 +71,8 @@ relevance and never a restatement. The lines are grouped under the declared labe
 exists, and flat where it does not.
 
 `flags.md` is the graph's capped index of every judgement an agent made on its own. It holds one line
-per flag, one sentence long. Whoever holds the context writes that line as a report when the flag is
-raised. Nobody reconstructs it later. The closing report's outstanding flags are the unchecked lines of
-`flags.md`. The line's form:
+per flag, one sentence long, written as a report. `## Flags` in `SKILL.md` says whose text the line is,
+and `## Closing an effort` there says what the closing report takes from this file. The line's form:
 
 ```
 - [ ] NN.k ASSUMPTION · [<node name>](nodes/NN-<name>.md) — <one line>
@@ -166,9 +161,10 @@ Sections appear in the order shown, and only when they have content.
 
 ### `## Acceptance condition`
 
-The condition states what done means for this implementation node. It is written by the node that
-spawned this node, before any work starts. Its worker may not rewrite it. A worker that judges the
-condition wrong raises it.
+The condition states what done means for this implementation node. `## Acceptance conditions` in
+`SKILL.md` says who writes it and who may change it after it is written. The human changes only a
+condition on a node nobody holds yet. A condition under a live worker reaches the human by that
+worker's raise, and by no other route.
 
 A condition is self-contained text. Everything needed to judge whether the work is done is in the
 condition, so its reader never goes anywhere else to find out what it demands. That reader is the
@@ -182,55 +178,17 @@ copy, and only because the bar reaches the checker by its own route.
 
 A demand about the record as a whole belongs on the handover and in no condition, whatever its wording.
 Such a demand holds the work against every decision the effort has recorded: that the work contradicts
-none of them, or that everything in it traces back to one. Every worker returns `INVALIDATIONS` on its
-handover instead, naming which resolved node its work contradicts and how. A demand about what changed
-in the tree, such as *no file under `.scratch/` changes*, is permitted.
+none of them, or that everything in it traces back to one. Such a demand goes in the handover's
+`INVALIDATIONS` part, which names which resolved node the work contradicts and how. A demand about what
+changed in the tree, such as *no file under `.scratch/` changes*, is permitted.
 
-The manager hands a condition that points anyway to the checker as written, and supplies nothing it
-omits. Where the missing part is what the check depends on, the condition goes to the human instead. The
-manager raises such a condition where it meets one before the check. The checker raises one it cannot
-check.
-
-Four parties may change a condition after it is written:
-
-- The condition's own worker, which may not rewrite it and raises instead, as above.
-- The party that established a fact which falsified a clause of an unclaimed node's condition, because a
-  node resolved or work landed. That party writes the replacement as text on its handover. The manager
-  files it. Two provisos apply. Every word of the replacement is already fixed by a resolved node, by
-  work landed in the tree, by the glossary or by the shipped files. The amendment names which of these
-  fixed it.
-- The manager, under the same two provisos, where no such party exists. Separately, the manager may
-  extend a condition's scope to further instances of a defect the condition already describes, provided
-  the amendment writes no requirement that was not already fixed.
-- The human, who receives everything else.
-
-The last three change only a condition on a node nobody holds yet. A condition under a live worker
-reaches the human by that worker's raise, and by no other route.
-
-An amendment only transcribes words already fixed elsewhere. Writing a whole condition for a node that
-an agent created is a different act. That act is not the manager's.
-
-An amendment by the party that established the fact, or by the manager, can reach none of the following
-three things:
-
-- A new demand at any place.
-- An ambiguous demand at a place the condition already lists. While the ambiguity is open, the worker
-  decides it and flags it, or raises it. Once a resolved node has settled the ambiguity, the clause can
-  be amended to that node's reading.
-- A defect the condition does not describe. Reaching one takes a new node, whatever file the defect
-  lives in.
-
-Before handing back, the party that established a fact must search for the conditions that fact
-falsifies. It searches the open nodes' `## Acceptance condition` sections for what its own work fixes:
-each word it refuses, each path it changes or moves something out of, and each phrase it supersedes. It
-reads only what matches. Where no such party exists, the manager searches. The search covers every open
-node's condition, claimed or not. What to do about a claimed node stays the manager's, under the raise
-above. The party names on its handover what it searched for.
+`## The checker` in `SKILL.md` says how the manager hands a condition to the checker, and what it does
+with a condition that leaves part of its demand in another file.
 
 ### `## Flags`
 
-The section holds one entry per flag, in free prose. Each entry starts with the flag's id and then one
-of three markers:
+The section holds one entry per flag, in free prose. Each entry starts with the flag's id and then its
+marker, one word saying which kind of judgement the flag records. There are three markers:
 
 - `ASSUMPTION` — the worker decided a small ambiguity itself.
 - `CONDITION-WRONG` — filed by the manager, after a worker raised its acceptance condition as wrong and
@@ -249,23 +207,16 @@ a checkbox.
 ### Recording the human's words
 
 The rules in this section cover `## Interview` and `## Review`, the two sections that hold the human's
-words.
+words. `### The human's words` in `SKILL.md` says when the manager records an answer, what it pastes,
+and what it does with a terse reply whose option is unclear.
 
-The manager writes the human's answer into its section the moment the human speaks, at relay time.
-Resuming a worker is a background send and does not block, so the manager sends the resume and writes
-the answer in the same turn.
-
-Every recorded answer carries one of two markers, `verbatim` or `paraphrase`. The manager pastes the
-reply as the human wrote it, however terse, and marks it `verbatim`. A reply such as *"ok for
-recommended"* is a complete answer and is recorded as one. Where the reply takes an option or an outcome
-it was offered, the manager quotes that option in the same entry. The quote is attributed to whoever
-wrote it, usually the worker.
+Every recorded answer carries one of two markers, `verbatim` or `paraphrase`. A reply pasted as the
+human wrote it is marked `verbatim`. That mark says the answer is the human's own words rather than the
+manager's rendering of them. Where the reply takes an option or an outcome it was offered, the manager
+quotes that option in the same entry. The quote is attributed to whoever wrote it, usually the worker.
 
 The manager marks an answer `paraphrase` only where it could not avoid rendering the answer in its own
 words.
-
-Where a terse reply does not make clear which option it points at, the manager records the reply and
-asks which.
 
 ### `## Review`
 
@@ -277,8 +228,8 @@ one node. It holds three kinds of entry and nothing else:
    says what it raised.
 2. Each correction round, numbered, with the human's words verbatim and what the worker changed.
 3. The gate's outcome: approve, correct or reject. For a reject, the entry also records what
-   implementing the node surfaced, and which of three routes the node then took: `out-of-scope`,
-   `superseded` by a replacement, or back to `open` behind a new `Blocked by:` edge.
+   implementing the node surfaced, and which of the three routes under `### What reject means` in
+   `SKILL.md` the node then took.
 
 A checker that gives a `PASS` or `FAIL` may also name a part of the acceptance condition that it could
 not establish, for lack of material it was not given. The run's entry lists such parts under a
@@ -299,9 +250,8 @@ after it. One item holds one part, so parts are counted by items and never by se
 `NOT COVERED:` label stands alone on its own line, so prose that mentions the words names no part. The
 state is the manager's bookkeeping, as a flag's state is. The part is the checker's own text, pasted.
 
-A part stays owed until someone establishes it. The manager usually does, since it holds the handover
-the checker does not see. The human at the gate, or a later run of the check, may do so instead. Every
-part is established by the gate at the latest.
+A part stays owed until someone establishes it. `### The payload` in `SKILL.md` says who establishes
+it, and by when.
 
 Who established the part, and what they read or ran, is recorded on the part's own item, and not where
 the establishing happened. A part nobody established stays visible as an item opening `OWED`, which
@@ -312,9 +262,10 @@ An entry for a run that covered the whole condition has no `NOT COVERED:` label,
 ### `## Interview`
 
 The section holds one block per attempt. A block gives the attempt's routing key, then each relayed
-question and each of the human's answers. An answer that contradicts the recommendation the worker gave
-is also marked `DIVERGENCE`. A dead attempt is marked in its own heading. A node holds at most three
-attempt blocks.
+question and each of the human's answers. The manager also marks `DIVERGENCE` on an answer that
+contradicts the recommendation the worker gave, so the worker does not read an unmarked answer as
+agreement and resolve as though its recommendation had been taken. A dead attempt is marked in its own
+heading. A node holds at most three attempt blocks.
 
 ## Statuses
 
@@ -414,7 +365,8 @@ node out of scope too, or correct its `Blocked by:`. Until then, check 1 below r
    every question already answered, with the human's words verbatim and not summarised.
 3. `nodes/NN-<name>.md`: set `Status: open`.
 
-Answers already relayed are already on the node.
+Answers already relayed are already on the node, because `### The human's words` in `SKILL.md` has the
+manager write each one there as it is given.
 
 ### Raise a flag
 
@@ -435,15 +387,7 @@ account. Where a node has no round at all, as with a `research` node or an AFK `
 1. `flags.md`: change that flag's `- [ ]` to `- [x]`.
 2. `nodes/NN-<name>.md`: mark that flag `settled` under `## Flags`.
 
-Settle a node's flags at its gate, where it is an implementation node that has one. Otherwise, settle
-them at the pick report that closes the node. Every kind of node follows this rule.
-
-The pick report waits for no answer, so its flags settle on whatever the human says next. The manager
-never settles a flag on its own judgement or because time has passed.
-
-Flags reach the closing report in two cases only. The first is a flag raised before this settling rule
-existed, on a node already resolved. The second is a flag whose pick report the human never answered,
-because they never spoke again.
+`## Flags` in `SKILL.md` says when a node's flags settle, and which flags reach the closing report.
 
 A flag the human turns into a node is settled the same way. The new node is created by the steps under
 `## Adding a node`.

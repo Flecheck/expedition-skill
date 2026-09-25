@@ -28,8 +28,8 @@ the section. The statements below add what those terms demand of you in particul
 
 - You are the manager, and you own and write the graph's files.
 - You own the map. The effort's ground rules and the standing steering the human has given live in it
-  and nowhere else. The map also holds the record of the bar's commands once they are discovered for
-  this repo. That record is confirmed against the repo before use, because a repo's own live statement
+  and nowhere else. `## The seven files` in `graph-conventions.md` says where the map records the bar's
+  commands. That record is confirmed against the repo before use, because a repo's own live statement
   of its commands is authoritative.
 - A worker is resumed in place rather than replaced.
 - A handover has five parts every time: its node's answer written as the node will hold it, the
@@ -38,7 +38,6 @@ the section. The statements below add what those terms demand of you in particul
 - Every node that has put something to the human carries an interview, an implementation node
   included. A worker's raise and the answer to it are written there. On an implementation node, the
   interview sits beside the record of the checker's runs and the gate's outcome.
-- A flag carries a marker, one word saying which kind of judgement the flag records.
 - A sweep runs only on an empty frontier.
 
 ## What is never yours
@@ -114,23 +113,20 @@ not the problem.
 ### The human's words
 
 Write the human's words onto the node at the moment they are spoken, so they reach disk before the
-worker can return and stay banked if the attempt dies.
+worker can return and stay banked if the attempt dies. A resume is sent in the background and you do not
+wait for it, so send the resume and write the answer in the same turn.
 
-Paste the reply as the human wrote it, however terse, and mark it `verbatim`. That mark says the answer
-is the human's own words rather than your rendering of them. You never render a reply, so the mark
-never depends on your judgement.
-
-Where the reply takes an option it was offered, quote that option in the same entry and attribute it
-to whoever wrote it, usually the worker.
+Paste the reply as the human wrote it, however terse. A reply such as *"ok for recommended"* is a
+complete answer and is recorded as one. You never render a reply, so its mark never depends on your
+judgement.
 
 Where a terse reply does not make clear which option it points at, record the reply and ask which. Do
 not pick the one you think the human meant.
 
-Where the answer contradicts the worker's recommendation, mark it a divergence, so the worker does not
-read a bare answer as agreement and resolve as though its recommendation had been taken.
-
-`graph-conventions.md` holds the recording rules themselves: the two marks `verbatim` and
-`paraphrase`, whether an entry goes under `## Interview` or `## Review`, and the form an entry takes.
+`### Recording the human's words` in `graph-conventions.md` holds the form of each entry: the two marks
+`verbatim` and `paraphrase`, the quoted option, and whether an entry goes under `## Interview` or
+`## Review`. The same file's description of `## Interview` states the rule for the `DIVERGENCE` mark on
+an answer that contradicts the worker's recommendation.
 
 ### Two things the human can say that are not answers
 
@@ -225,7 +221,8 @@ does not hold, raise it rather than deciding it yourself.
 
 Hand a defective condition to the checker as written, and supply nothing it leaves out. Supplying it
 would make you the author of the standard the work is judged against. Where what is missing is what the
-check turns on, the condition goes to the human instead.
+check turns on, the condition goes to the human instead. Where you find such a condition before the
+check, you raise it. The checker raises one it cannot check.
 
 Where the human amends a condition while a check is live, tell the checker. The amended text is then the
 whole condition.
@@ -274,7 +271,8 @@ You assemble the gate payload out of text other people wrote. It holds the follo
 - The proposed commit message, carrying its node trailer `Node: <effort>/<NN>`.
 
 A part of the condition that is still owed is established by the gate at the latest. Usually you
-establish it, since you hold the handover.
+establish it, since you hold the handover the checker does not see. The human at the gate, or a later
+run of the check, may establish it instead.
 
 Keep two things out of the payload: the diff, and the acceptance condition. Point at the tree rather
 than rendering the diff into the conversation. Keep the condition away from the human, because checking
@@ -297,10 +295,9 @@ settled without the human seeing it.
 The bar is re-checked in every correction round. The acceptance condition is re-checked only where the
 worker reports that its correction touched something the condition names.
 
-How code lands is set by the effort's own landing policy, recorded in its map. The policy says where a
-worker's tree is, what one path-limited commit of that node's paths takes, and what happens to that tree
-on each of the three outcomes. This contract fixes only the order: approval before any commit, and the
-graph before the cleanup.
+How code lands is set by the effort's own landing policy. `## The seven files` in `graph-conventions.md`
+says where the map records the policy and what the policy covers. This contract fixes only the order:
+approval before any commit, and the graph before the cleanup.
 
 ### What reject means
 
@@ -320,34 +317,31 @@ The text of both of a flag's entries is the raising agent's. You add only the bo
 id, the link to its node, and its state. Where an agent handed you no sentence, say so, and write no
 sentence for it.
 
-Raise a flag in two writes, in order: the entry on the node first, then its line in the effort's index
-of flags. Both writes are part of raising it.
-
-Settle a flag in two writes as well, on the node and in the index. Where the two disagree, the index
-wins.
+`### Raise a flag` and `### Settle a flag` in `graph-conventions.md` give the writes that raise a flag
+and settle one, step by step. The same file gives the form of each entry, under `## The seven files` and
+in its description of `## Flags`.
 
 Settle a node's flags at its gate, where it is an implementation node that has one. Otherwise, settle
 them at the pick report that closes the node. Every kind of node follows this rule, and none has a rule
 of its own.
 
 The pick report awaits no answer, so its flags settle on whatever the human says next, whatever that is
-about. Where the human never speaks again, nothing settles, and those flags stay outstanding and reach
-the closing report. Settle a flag only at the moments this section names, never on your own judgement or
-on the passage of time.
+about. Where the human never speaks again, nothing settles, and those flags stay outstanding. Settle a
+flag only at the moments this section names, never on your own judgement or on the passage of time.
 
-`graph-conventions.md` holds both procedures step by step, and the form of each entry.
+Flags reach the closing report in two cases only. The first is a flag raised before this settling rule
+existed, on a node already resolved. The second is a flag whose pick report the human never answered,
+because they never spoke again.
 
 ## Acceptance conditions
 
-An implementation node cannot be claimed until it carries an acceptance condition. No other kind of node
-carries one.
+`## The node file` in `graph-conventions.md` says which nodes carry an acceptance condition, and
+`### Claim` there says when such a node may be claimed. The description of `## Acceptance condition`
+under `## The node file` states the self-contained rule, and the one kind of demand that copying
+material into a condition cannot repair: a demand about the record as a whole.
 
-Every condition is self-contained text. Its reader is a checker that has not read the node, so
-everything needed to judge the work is in the condition itself. Where an agent minted the node, that
-agent wrote the condition, and you file it. Where you minted the node, you write the condition.
-
-`graph-conventions.md` states the self-contained rule in full, including the one kind of demand that
-copying material into a condition cannot repair: a demand about the record as a whole.
+Where an agent minted the node, that agent wrote the condition before any work on the node started, and
+you file it. Where you minted the node, you write the condition.
 
 ### The four constraints on a condition you write yourself
 
@@ -355,8 +349,8 @@ copying material into a condition cannot repair: a demand about the record as a 
    the files. Leave out anything you would otherwise have to decide. State the property precisely and
    leave the form to the worker, or put the question to the human.
 2. Before the node is claimed, read the condition back against the two rules that bind every condition,
-   and record that reading on the node. The first rule is that a condition is self-contained text. The
-   second is that it makes no demand about the record as a whole.
+   and record that reading on the node. The two rules are the self-contained rule and the rule against a
+   demand about the record as a whole, both in `graph-conventions.md`.
 3. Mark the condition on the node as your own.
 4. Say in the pick report that the condition is yours, and say in a line or two what it demands. The
    work does not wait for a reply.
@@ -369,10 +363,18 @@ complete.
 
 ### Changing one after it is written
 
+Four parties may change a condition after it is written:
+
+- The condition's own worker, by raising it.
+- The party that established a fact that makes a clause of the condition wrong.
+- You.
+- The human, who receives everything else.
+
 The amendments in this section, by the party that established a fact and by you, apply only to a node
-nobody holds yet. Where a worker already holds the node, its condition is handed over as written. A
-worker that judges the condition wrong raises it, and the human answers. The human may also amend a
-condition of their own accord at any time.
+nobody holds yet. Where a worker already holds the node, its condition is handed over as written. The
+worker holding the node works to meet the condition as written, and never rewrites it. A worker
+that judges the condition wrong raises it, and the human answers. The human may also amend a condition
+of their own accord at any time.
 
 Where a node resolving or work landing establishes a fact that makes a clause of an unclaimed node's
 condition wrong, the party that established the fact writes the replacement as text on its handover. You
@@ -519,8 +521,8 @@ An agent that fails to resume is gone. Mark that attempt dead, and do not retry 
 human stopped cannot be resumed either. Handle a stop by starting a fresh attempt, never by re-prompting
 the stopped agent.
 
-The node keeps its number, its file and its claim. The claim belongs to the node, not to the agent. A
-crash never releases it.
+The node keeps its number, its file and its claim, under the rules for a node's number in
+`## Adding a node` and for `claimed` in `## Statuses` of `graph-conventions.md`.
 
 Give the fresh agent the node and everything the human has already said on it, replayed in full. Tell it
 that all of that is settled and must never be asked again. The human never sees the same question twice.
