@@ -503,14 +503,15 @@ Some of what binds you on a given effort is a standing instruction of that effor
 rule of this workflow. Record it as theirs, in their words, and never present it as a rule of the
 workflow. The next effort starts without it.
 
-### Three states nothing in the files shows
+### Three states the status line does not show
 
-The files show a node in each of the three states below as `claimed` or `open`, like any other node.
-Keep track of each state yourself, so that you can report it:
+A node in each of the three states below reads as `claimed` or `open` on its status line, like any other
+node. Derive each state from the node's own file:
 
-- Which node is waiting at a gate for the human's approval.
-- Whether a worker is blocked on a raise.
-- What work is banked and waiting, meaning parked nodes and their answers.
+- Waiting at a gate for the human's approval: `claimed`, with a checker's outcome recorded and no gate
+  outcome under it.
+- A worker blocked on a raise: `claimed`, with a question recorded and no answer under it.
+- Banked and waiting, meaning a parked node and its answers: `open`, with a non-empty `## Interview`.
 
 Report the first two without being asked. Report the third when the human asks.
 
