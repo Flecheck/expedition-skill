@@ -145,295 +145,277 @@ interview, and you hold the channel.
 
 ## Spawning a worker
 
-A spawn is a dispatch rather than a briefing. It carries:
+A spawn is the message that starts a worker on its node. It points the worker at what to read, and does
+not summarise it. A spawn carries the following:
 
-- **the node** — its name and its path;
-- **the statement that the worker is not the manager and has no channel to the human**;
-- **the contract to follow**, named by its path, with the file on disk winning over anything you say
-  about it;
-- **the pointers the worker reads** — its own node file, the effort's map, and the effort's index of
-  decisions scoped by label where a vocabulary exists. Scoping is a filter instruction rather than an
-  extract: the pointer stays a pointer;
-- **the per-kind additions** — for `research`, the sources and their standing, and that it may read
-  outside the working directory; for `prototype`, where the artifact goes and that it is discarded; for
-  `implementation`, its acceptance condition, the bar by way of the map, and the paths the spawning
-  node expects it to touch — **orientation rather than permission**, so a worker that writes outside
-  the list is not in violation and simply reports what it touched; for `precondition`, what must be
-  true when it is done and which of its results later nodes depend on; for `grilling`, nothing extra;
-- **your own notes**, optional.
+- The node, by its name and its path.
+- A statement that the worker is not the manager and has no channel to the human.
+- The contract to follow, named by its path. Say that the file on disk wins over anything you say about
+  it.
+- The pointers the worker reads: its own node file, the effort's map, and the effort's index of
+  decisions. Where the effort has a label vocabulary, scope that index by label. Scoping is a filter, so
+  the index stays a pointer.
+- Your own notes, if you have any.
+- What the node's kind adds, listed below.
 
-**A note of yours is capped at context you already hold.** You do not read code, and you do not go and
-find things out, in order to produce one. Without that cap you duplicate the worker's work and become a
-second implementer instead of a second pair of eyes. A note may name which of a worker's questions you
-believe is sharpest; it may not say what you think the answer is — *the sharpest*, never *the answer*.
+What each kind of node adds:
 
-Keep a spawn focused. Everything in it is in the worker's context from its first turn, and a worker
-pays its whole opening payload at full rate.
+- `research`: the sources and their standing, and that it may read outside the working directory.
+- `prototype`: where the artifact goes, and that it is discarded.
+- `implementation`: its acceptance condition, the bar by way of the map, and the paths the spawning node
+  expects it to touch. The paths tell the worker where to start. A worker that writes outside them
+  breaks no rule, and reports what it touched.
+- `precondition`: what must be true when its work is finished, and which of its results later nodes
+  depend on.
+- `grilling`: nothing extra.
+
+Write a note only from context you already hold. Do not read code, or go and find things out, in order
+to write one. A note may name the one of a worker's questions you believe is sharpest. It may not say
+what you think the answer is.
+
+Keep a spawn focused, because the worker pays for all of it from its first turn.
 
 ### Two things that travel in a spawn and are not yours
 
-Neither is a note of yours and neither is governed by the cap above, because neither is your material:
+A spawn may also carry two things that are not your material, so the limit on notes above does not apply
+to them.
 
-- **A direction of the human's**, carried as their words and marked as theirs rather than as yours.
-  Where the effort's own repository does not own the thing that is blocking, this is the only route
-  past it.
-- **A licence** the human granted in answer to a raise of yours, below.
+- A direction from the human, carried in their words and marked as theirs. Where the thing blocking a
+  node is not owned by the effort's own repository, such a direction is the only way the node can
+  proceed.
+- A permission the human gave in answer to a raise of yours, described in the next section.
 
 ### When a contract blocks the node in front of it
 
-You may **not** depart from a worker contract on your own authority, and nothing you send a worker may
-widen what that worker is permitted to write. The write rules are what keep the graph's record
-yours, and that floor is written over everything you send — a resume as much as a first message.
+Depart from a worker contract only with the human's permission. Keep what a worker may write within what
+it is already permitted to write, counting its contract and any permission the human granted. That holds
+for every message you send it, a resume included.
 
-Where a clause of a contract genuinely blocks the node in front of it, raise it to the human. Their
-answer produces **two things, always both**:
+Where a clause of a contract blocks the node in front of it, raise the clause to the human. Their answer
+always produces both of the following:
 
-1. **a licence for that one attempt**, recorded as a flag on the node; and
-2. **a node for the permanent fix.**
+1. A permission for that one attempt, recorded as a flag on the node.
+2. A node for the permanent fix.
 
-A licence changes nothing on disk. Amending a contract is its own piece of work against that file, and
-never something you do mid-flight.
+The permission changes nothing on disk. Changing a contract is a separate piece of work on that file.
+You never change one while the node it blocks is being worked.
 
 ## The checker
 
-**You spawn the checker, never the worker that wrote the code.** Whoever spawns it chooses what it
-sees, and an implementer extracting its own condition can extract it favourably. Extraction is copying,
-so it is scribe work and costs you nothing to keep.
+You spawn the checker. The worker that wrote the code never spawns it. Whoever spawns the checker
+chooses what it sees.
 
-What it receives:
+The checker receives the following:
 
-- **the acceptance condition, as extracted text** — the words themselves, not somewhere to go and read
-  them;
-- **the bar** — its properties, which are the whole of what the spawn conveys of it: the commands the
-  checker discovers from the repo itself, exactly as the implementation worker does;
-- **the work** — the paths that changed, in the working tree holding them;
-- **the effort's standing ground rules, copied as text**, with the duty to follow them. Where the
-  effort declares none, that given is absent.
+- The acceptance condition, as extracted text. It gets the words themselves, not a place to go and read
+  them.
+- The bar, as its properties. The spawn says nothing more about the bar. The checker discovers the
+  commands from the repo itself, as the implementation worker does.
+- The work: the paths that changed, in the working tree that holds them.
+- The effort's standing ground rules, copied as text, with the duty to follow them. Where the effort
+  declares none, the checker receives no ground rules.
 
-It is given **nothing from the effort's own record**. It is the one agent whose payload cannot be a
-pointer, because pointing it at the node file would unblind it.
+The checker receives nothing from the effort's own record, so its spawn never points it at the node
+file.
 
-**What may be copied to it as a ground rule.** Only a standing constraint on the effort, true of any
-node's work. A rule holding everywhere tells the checker nothing about this work in particular, which
-is what makes it safe to hand over. An account of what happened — on this work or anywhere in the
-record — is never a ground rule and never travels that route, that being exactly what the checker is
-kept blind to. Copy the block as text and add nothing of your own; where a check needs a constraint the
-block does not hold, that is a raise rather than a judgement of yours.
+Copy to the checker as a ground rule only a standing constraint on the effort, true of any node's work.
+An account of what happened, on this work or anywhere in the record, is never a ground rule. Copy the
+block of ground rules as text, and add nothing of your own. Where a check needs a constraint the block
+does not hold, raise it rather than deciding it yourself.
 
-**A condition that omits what the check turns on.** Hand a defective condition to the checker **as
-written** and supply nothing it leaves out. Supplying it would make you the author of the standard the
-work is judged against. Where what is missing is what the check turns on, that goes to the human
-instead.
+Hand a defective condition to the checker as written, and supply nothing it leaves out. Supplying it
+would make you the author of the standard the work is judged against. Where what is missing is what the
+check turns on, the condition goes to the human instead.
 
-Where the human amends a condition while a check is live, say so to the checker. The amended text is
-then the whole of it.
+Where the human amends a condition while a check is live, tell the checker. The amended text is then the
+whole condition.
 
 ## What comes back
 
-**The test is whether you can file it. It is never whether the agent followed its contract.**
+File every handover you are able to file, whether or not the agent followed its contract. That includes
+a handover carrying something unasked-for beside everything required. It also includes one taking a
+route its contract does not offer, in place of one it does. Only a handover you cannot file at all goes
+back. Such a handover has a part missing, or has a shape with no heading to sit under.
 
-- A handover carrying everything required **plus something unasked-for**: file it.
-- A handover **taking a route the contract does not offer** in place of one it does: file it.
-- Only a handover you cannot file **at all** — one of the parts above missing, or a shape with no
-  heading to sit under — goes back.
+Where a handover departs from its contract, you file a flag about the departure beside it, against the
+node. File that flag at the gate where the node has one, and as you file the answer where it does not.
+Refusing departures costs more than it saves.
 
-What a handover departed by becomes a **flag beside it**, filed by you against the node: at the gate
-where the node has one, and as you file the answer where it does not. Refusing departures costs more
-than it saves — the most valuable things a worker produces arrive off-contract.
+Before you file what an agent wrote, hold it against the human's own words already on the node. File
+anything that rests on words the human did not say, with a flag beside it, rather than refusing it.
 
-**Hold what an agent wrote against the human's own words already on the node** before you file it. You
-are the one party holding both sides, so nothing is re-read and nothing is re-derived. Anything resting
-on words the human did not say is **filed as a flag beside it** rather than refused.
+Send an unfileable handover back once, naming the missing part. Where the next handover cannot be filed
+either, file what you can instead of sending it back or respawning. Leave the node open, holding what is
+already on it. Tell the human once, by node name. Write nothing you sent back onto the node.
 
-**A handover you cannot file** goes back exactly once, naming the missing part. A second unfileable one
-is neither sent back again nor respawned: file what you can, leave the node open holding what is
-already on it, and tell the human once by node name. Nothing you sent back is written onto the node.
-
-`none`, written out in full, is load-bearing: it is how a worker tells you *looked and found nothing*
-from *did not look*. A part left off is a missing part, and a part answered `none` is an answer.
+A part answered `none`, written out in full, is an answer. It tells you the worker looked and found
+nothing. A part left off is a missing part, and does not tell you whether the worker looked.
 
 ## The gate
 
-**Raise the gate once the checker passes**, so the human never sees a node whose findings are still
-open. One exception, stated rather than hidden: a check that will not pass must still reach them,
-because the gate is the only place an implementation node ever becomes visible to them. Raise it on the
-failing tree, and say so in the first line.
+Raise the gate once the checker passes. The one exception is a check that will not pass. Raise the gate
+on the failing tree anyway, and say so in the payload's first line.
 
 ### The payload
 
-Assembled out of other people's text rather than written by you:
+You assemble the gate payload out of text other people wrote. It holds the following:
 
-- **the checker's runs**, laid end to end, oldest first, each naming its outcome — `PASS`, or `FAIL`
-  and which of the two it failed, or that it raised and issued no outcome at all. A run's entry also
-  carries whatever that run handed back **alongside** its outcome, and there are two such things: **the
-  questions it raised**, which you carry to the human with the rest of what you put in front of them;
-  and **any part of the condition it could not cover**, each with its state — still owed, or who
-  established it and what they read or ran;
-- **what the worker changed for each thing the checker found**, in the worker's own words;
-- **the flags the node holds**;
-- **the node**;
-- **the paths the worker reported touching** — reported, never inferred from the state of the tree;
-- **where the work is, and the command that shows its diff.** An implementation node's work sits
-  uncommitted in a tree the human is not standing in, so a gate that describes a change and points at
-  nothing has not been presented. One of the human's two interfaces is the diff itself;
-- **the proposed commit message**, carrying its node trailer `Node: <effort>/<NN>`. The effort's name
-  is part of it because node numbers restart at `01` for each effort a repo hosts.
+- The checker's runs, one after another, oldest first. Each run names its outcome: `PASS`, or `FAIL` and
+  which of the two it failed, or that it raised and gave no outcome. Each run's entry also carries the
+  two things that run handed back beside its outcome. The first is the questions it raised, which you
+  carry to the human with the rest of the payload. The second is any part of the condition it could not
+  cover, each with its state: still owed, or who established it and what they read or ran.
+- What the worker changed for each thing the checker found, in the worker's own words.
+- The flags the node holds.
+- The node.
+- The paths the worker reported touching. Take them from its report, never from the state of the tree.
+- Where the work is, and the command that shows its diff. A gate that describes a change and points at
+  nothing has not been presented.
+- The proposed commit message, carrying its node trailer `Node: <effort>/<NN>`.
 
-**An owed part is established by the gate at the latest, and usually by you** — you hold the handover
-the checker does not.
+A part of the condition that is still owed is established by the gate at the latest. Usually you
+establish it, since you hold the handover.
 
-Two things stay out, and each has somewhere else to be. **Never render the diff into the conversation**
-— point at the tree, which is the item above. And **never put the acceptance condition in front of the
-human**: a human checking the condition themselves is doing the checker's work.
+Keep two things out of the payload: the diff, and the acceptance condition. Point at the tree rather
+than rendering the diff into the conversation. Keep the condition away from the human, because checking
+it is the checker's work.
 
 ### A flag in a payload
 
-A flag reaching the human carries **what was done, why, and the context needed to answer it**, so that
+A flag that reaches the human carries what was done, why, and the context needed to answer it, so that
 answering never requires opening a file.
 
-**A payload that omits a flag settles that flag silently**, because the human's approval of a node's
-end is that node's settlement. So every flag the node holds is in the payload. *(This is one effort's
-standing instruction from its human rather than a rule of the workflow — see* Standing steering *below.
-Where an effort's human has not said it, ask.)*
+The human's approval of a node's end settles that node's flags, so a flag left out of the payload is
+settled without the human seeing it.
 
 ### Three outcomes, and no fourth
 
-- **approve** → you make the commit, and the node resolves.
-- **correct** → the worker fixes it and you raise the gate again. Uncapped.
-- **reject** → **edit the graph first, then clean the working state.** In that order: once the tree is
-  cleaned the discovery is the only thing left, and it is the thing worth keeping.
+- approve: you make the commit, and the node resolves.
+- correct: the worker fixes the work, and you raise the gate again. The rounds are uncapped.
+- reject: edit the graph first, and clean the working state after.
 
-The bar is re-checked every correction round. The acceptance condition is re-checked only where the
-worker reports that its correction touched something the condition names — the trigger sits on the
-worker because the worker is the party that knows.
+The bar is re-checked in every correction round. The acceptance condition is re-checked only where the
+worker reports that its correction touched something the condition names.
 
-**How code actually lands is the effort's own landing policy, recorded in its map**: where a worker's
-tree is, what one path-limited commit of that node's paths takes, and what happens to that tree on each
-of the three outcomes. It is not fixed here, because it turns on what the repository allows. What is
-fixed here is the order — approval before any commit, and the graph before the cleanup.
+How code lands is set by the effort's own landing policy, recorded in its map. The policy says where a
+worker's tree is, what one path-limited commit of that node's paths takes, and what happens to that tree
+on each of the three outcomes. This contract fixes only the order: approval before any commit, and the
+graph before the cleanup.
 
 ### What reject means
 
-Reject means that implementing the node **taught the graph that this code should not exist**. It is a
-discovery rather than a verdict on quality. *Try again, differently* is a correction round, not a
-reject.
+A reject means that implementing the node showed this code should not exist. It says nothing about the
+code's quality. An instruction to try again differently is a correction round.
 
-A rejected node goes to exactly one of three places, and naming which is yours:
+A rejected node goes to exactly one of three places, and you name which:
 
-- **beyond the destination** → the node is ruled out of scope;
-- **the node asked the wrong question** → it is superseded by a replacement;
-- **something upstream of it is wrong** → it returns to open behind a new blocking edge on the upstream
+- Where the node is beyond the destination, it is ruled out of scope.
+- Where the node asked the wrong question, a replacement supersedes it.
+- Where something upstream of it is wrong, it returns to open behind a new blocking edge on the upstream
   fix.
 
 ## Flags
 
-**The text of both of a flag's entries is the raising agent's.** What you add is bookkeeping and
-nothing else: the flag's id, the link to its node, and its state. You never write an agent's sentence
-for it, and where an agent handed you no sentence you say so rather than supplying one.
+The text of both of a flag's entries is the raising agent's. You add only the bookkeeping: the flag's
+id, the link to its node, and its state. Where an agent handed you no sentence, say so, and write no
+sentence for it.
 
-**Raising a flag is two writes, in order**: the entry on the node first, then the one line in the
-effort's index of flags. Both belong to the act of raising it.
+Raise a flag in two writes, in order: the entry on the node first, then its line in the effort's index
+of flags. Both writes are part of raising it.
 
-**Settling a flag is two writes too**: the node and the index, both. **Where the two disagree, the
-index wins.**
+Settle a flag in two writes as well, on the node and in the index. Where the two disagree, the index
+wins.
 
-**A node's flags are settled at the first human moment its close reaches** — an implementation node's
-**gate** where it has one, and otherwise the **pick report** that closes it. No kind of node is exempt
-and none has a rule of its own. Settling it there is what makes judging a flag cheap — the work is
-still in front of everybody — and it is also the earliest moment that works, a node's flags not
-existing until its worker hands them back.
+Settle a node's flags at its gate, where it is an implementation node that has one. Otherwise, settle
+them at the pick report that closes the node. Every kind of node follows this rule, and none has a rule
+of its own.
 
-**The pick report awaits no answer**, so the settlement rides whatever the human says next, whatever
-that next thing is about. **Where the human never speaks again, nothing settles**: those flags stay
-outstanding and reach the closing report by the route for a flag whose moment never came. **You never
-settle a flag on your own judgement or on the passage of time.**
+The pick report awaits no answer, so its flags settle on whatever the human says next, whatever that is
+about. Where the human never speaks again, nothing settles, and those flags stay outstanding and reach
+the closing report. Settle a flag only at the moments this section names, never on your own judgement or
+on the passage of time.
 
 `graph-conventions.md` holds both procedures step by step, and the form of each entry.
 
 ## Acceptance conditions
 
-**An implementation node may not be claimed at all until it carries one.** No other kind of node
+An implementation node cannot be claimed until it carries an acceptance condition. No other kind of node
 carries one.
 
-Every condition is **self-contained text**: its reader is a checker that has not read the node, so
-everything it takes to judge the work sits in the condition itself. Where a node was minted by an
-agent, that agent wrote the condition and you file it. Where **you** minted the node, the condition is
-yours to write.
+Every condition is self-contained text. Its reader is a checker that has not read the node, so
+everything needed to judge the work is in the condition itself. Where an agent minted the node, that
+agent wrote the condition, and you file it. Where you minted the node, you write the condition.
 
-`graph-conventions.md` states that rule in full, including the one demand no copying repairs.
+`graph-conventions.md` states the self-contained rule in full, including the one kind of demand that
+copying material into a condition cannot repair: a demand about the record as a whole.
 
 ### The four constraints on a condition you write yourself
 
-1. **It may demand only what is already fixed** — by a settled node, by the node's own question, or by
-   the state of the files. Anything you would otherwise have to decide is not written into it. State
-   the property precisely and leave the form to the worker, or put the question to the human. Deciding
-   an open question inside a condition is a judgement of yours reaching the graph disguised as a
-   standard.
-2. **Read it back against the two rules that bind every condition** before the node is claimed — that
-   it is self-contained text, and that it may not quantify over the record — and **record that reading
-   on the node**. Doing it before the claim is what finds a defect there rather than in a worker's
-   third hour.
-3. **Mark the condition on the node as your own**, so a later reader knows which party wrote the
-   standard.
-4. **Say in the report accompanying the pick that it is yours, and in a line or two what it demands.**
-   The work does not wait for a reply.
+1. Demand only what is already fixed, by a settled node, by the node's own question, or by the state of
+   the files. Leave out anything you would otherwise have to decide. State the property precisely and
+   leave the form to the worker, or put the question to the human.
+2. Before the node is claimed, read the condition back against the two rules that bind every condition,
+   and record that reading on the node. The first rule is that a condition is self-contained text. The
+   second is that it makes no demand about the record as a whole.
+3. Mark the condition on the node as your own.
+4. Say in the pick report that the condition is yours, and say in a line or two what it demands. The
+   work does not wait for a reply.
 
 ### Where you cannot write one in full
 
-Write the part you can, say plainly what is missing and why, and never leave it out in silence. What
-you could not write is what goes to the human. **The node is not claimed until the condition is
-complete.**
+Write the part you can, and say plainly what is missing and why. Never leave the missing part out in
+silence. What you could not write goes to the human. The node is not claimed until the condition is
+complete.
 
 ### Changing one after it is written
 
-**Everything here reaches a node nobody holds yet.** Where a worker already holds the node, its
-condition goes over as written, and a worker that judges it wrong raises — which the human answers, and
-they may amend a condition of their own accord at any time.
+The amendments in this section, by the party that established a fact and by you, apply only to a node
+nobody holds yet. Where a worker already holds the node, its condition is handed over as written. A
+worker that judges the condition wrong raises it, and the human answers. The human may also amend a
+condition of their own accord at any time.
 
-**Where a node resolves, or work lands, and a clause of an unclaimed node's condition is wrong as a
-result**, the party that established that fact writes the replacement as text on its handover and **you
-file it** — your ordinary scribe act, and not an act of authorship. **File it only where both provisos
-hold**: every word of the replacement is already fixed by a resolved node, by work landed in the tree,
-by the glossary or by the shipped files, and the amendment names which. **Where no such party exists**
-— landed code falsified the clause, or somebody noticed later — writing it under those same two
-provisos is yours. **Where any part of it needs a judgement nobody has made, it goes to the human.**
+Where a node resolving or work landing establishes a fact that makes a clause of an unclaimed node's
+condition wrong, the party that established the fact writes the replacement as text on its handover. You
+file it. Filing it is your ordinary scribe act, and does not make you its author. File it only where
+both of two provisos hold. The first is that every word of the replacement is already fixed by a
+resolved node, by work landed in the tree, by the glossary or by the shipped files. The second is that
+the amendment names which of those sources fixed it.
 
-**Separately, you may extend a condition's scope** to further instances of a defect the condition
-already describes, provided the amendment writes no requirement that was not already fixed.
+Where no such party exists, because landed code falsified the clause or somebody noticed later, you
+write the replacement under the same two provisos. Where any part of the replacement needs a judgement
+nobody has made, it goes to the human.
 
-**Three things neither pen reaches**, each with somewhere else for it to go:
+You may also extend a condition's scope to further instances of a defect the condition already
+describes, provided the amendment writes no requirement that was not already fixed.
 
-- a **new demand at any place** — a requirement nobody has fixed does not become fixed by being written
-  into a condition;
-- an **ambiguous demand at a place the condition already lists** — while the ambiguity is open it is
-  the worker's to decide and flag or to raise, and sharpening it yourself is authoring the standard;
-  once a resolved node has settled it, the sharpening is that node's and the clause is amendable;
-- a **defect the condition does not describe** — that is a new node, whatever file it lives in.
+An amendment by the party that established a fact, or by you, cannot cover any of the following three
+things. Each has another route.
 
-**Amending is never authoring**, and nothing here moves what is never yours: a condition for a node an
-agent minted is still that agent's to author, and you file it. An amendment whose every word is fixed
-elsewhere transcribes a standard somebody else set.
+- A new demand, at any place.
+- An ambiguous demand at a place the condition already lists. While the ambiguity is open, the worker
+  decides it and flags it, or raises it. Once a resolved node has settled the ambiguity, the clause can
+  be amended to that node's reading.
+- A defect the condition does not describe. That takes a new node, whatever file the defect is in.
 
-**Re-derive an enumerated scope before the node is claimed.** Where a condition's scope is a list of
-files, re-run the search that produced that list rather than reading the list. Where the list has
-grown, widen it **before the node is claimed**, rather than after a worker has read the short version.
+Re-derive an enumerated scope before the node is claimed. Where a condition's scope is a list of files,
+re-run the search that produced the list, rather than reading the list. Where the list has grown, widen
+it before the node is claimed, so that no worker reads the short version.
 
-**Five things accompany every amendment**, whoever wrote it:
+Every amendment, whoever wrote it, comes with five things:
 
-1. it is recorded on the node, **beside the search or the fact that justified it**;
-2. it is marked as its author's own — **as yours where you wrote it**;
-3. it is kept distinct from the minting author's text, never merged into it;
-4. it is carried as a **flag**;
-5. it is named in the report accompanying the pick — or, where the amendment is made after the node is
-   claimed, in that node's closing report instead.
+1. It is recorded on the node, beside the search or the fact that justified it.
+2. It is marked as its author's own, and as yours where you wrote it.
+3. It is kept apart from the minting author's text, and never merged into it.
+4. It is carried as a flag.
+5. It is named in the pick report. Where the amendment is made after the node is claimed, it is named in
+   the report that closes that node instead.
 
-**Before a fact is handed back, somebody looks.** The party that established it searches the open
-nodes' `## Acceptance condition` sections for the **handles its own work fixes** — a word it refuses, a
-path it changes or moves something out of, a phrase it supersedes — and reads only what matches; it
-names on its handover which handles it searched, and you file that naming with the rest. **Where no
-such party exists, the search is yours.** It reaches **every open node's condition, claimed or not** —
-a worker being judged right now against a standard known to be wrong is the worst case rather than an
-excluded one — while what to do about a claimed node stays yours, under the raise above.
+Before a party hands back a fact it established, it searches for the conditions that fact makes wrong.
+It searches the open nodes' `## Acceptance condition` sections for what its own work fixes: each word it
+refuses, each path it changes or moves something out of, and each phrase it supersedes. It reads only
+what matches. It names on its handover what it searched for, and you file that with the rest. Where no
+such party exists, you do the search. The search covers every open node's condition, claimed or not.
+What to do about a claimed node stays yours, under the raise above.
 
 ## What is in front of the human, and when
 
