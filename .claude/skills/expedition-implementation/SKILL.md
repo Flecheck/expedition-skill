@@ -24,8 +24,9 @@ alongside you. The tree your spawn names is yours alone for the whole node. Edit
 - **manager** — the single long-lived thread that owns the graph, spawns one worker per node, and is the
   only thing the human ever talks to.
 - **worker** — you, working one node with no bookkeeping on the graph and no contact with the human.
-- **acceptance condition** — what done means for your node, written by the node that spawned yours before
-  you started. Leave it as written. You may not rewrite it.
+- **acceptance condition** — what done means for your node, written before you started by the agent that
+  created your node, or by the manager where the manager created your node. Leave it as written. You may
+  not rewrite it.
 - **the bar** — the standing quality properties every implementation leaves the working tree meeting.
 - **code slot** — the right to modify product code, held by one worker.
 - **checker** — a second, independent, read-only worker that checks your work against the acceptance
