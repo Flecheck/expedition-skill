@@ -118,11 +118,13 @@ gate)
 
 ## The five kinds of node
 
-Each kind names what its worker does. Three of the kinds name a skill the worker invokes.
+Each kind names what its worker does.
 
 **grilling**:
 A decision only the human can make, reached by interviewing them. Its worker may put several of its
-questions in one payload. Only questions that are independent of each other share a payload.
+own questions in one payload. Two questions share a payload only where neither's answer depends on the
+other's. A question whose answer depends on another question in that payload is held for a later
+payload.
 _Avoid_: decision, question, interview
 
 **research**:
@@ -207,8 +209,10 @@ is met. The bar is a list of properties. The commands that check them are discov
 _Avoid_: quality bar, default checks, CI
 
 **Code slot**:
-The right to modify product code, held by one worker at a time. Occupancy is discovered from the
-working tree rather than recorded, so a dying worker leaves nothing behind to clean up.
+The right to modify product code. How many code slots an effort runs is that effort's own setting, one
+worker to a slot, and the number may be more than one. A slot's occupancy is discovered by counting
+the live worktrees, one per claimed implementation node, rather than by inspecting the working tree
+for uncommitted changes.
 _Avoid_: write lock, code lock — there is no lock
 
 ## Talking to the human
@@ -275,8 +279,10 @@ The human's yes at the gate. The only thing that permits a code commit.
 **Reject**:
 The human's finding at the gate that implementing the node revealed that its code should not exist.
 A reject is not a verdict on quality: a node whose code is merely wrong takes a correction round. On a
-reject the node does not resolve, and the working tree is cleaned. What is kept is the discovery. The
-word is the human's alone; the checker's outcomes are `PASS` and `FAIL`.
+reject the node does not resolve, and the manager removes that node's worktree and deletes its branch.
+Where the human asks for the work to be kept, it is committed onto that branch before the directory is
+removed. What is kept is the discovery. The word is the human's alone; the checker's outcomes are
+`PASS` and `FAIL`.
 _Avoid_: refuse, discard, abandon (which names losing the code, not learning why)
 
 **Salvage**:
@@ -305,12 +311,34 @@ _Avoid_: bookkeeping commit
 `Node: <effort>/<NN>` in a code commit's body. It is the key that joins git history to the graph. It
 carries the effort because `NN` restarts at `01` for every new effort a repo hosts.
 
+## Starting an effort
+
+**Starting an effort**:
+The act that creates an effort. The manager performs it, and it happens before the graph exists. It
+produces the effort's files and its first nodes. It has two inputs: a conversation with the human, or
+a directory of work that already exists. The input is the only thing the two ways of starting differ
+in.
+_Avoid_: charting (this workflow's cartographic metaphor stops at the map, and every act beneath it is
+described plainly; and the word names what the workflow's ancestor does when it "works out what the
+work is", rather than anything this workflow performs), kickoff, onboarding, bootstrap, setup, init
+
+**Adoption**:
+Starting an effort from a directory of work that already exists. It is a way of starting an effort,
+not a kind of node. It carries steps that starting from a conversation does not: taking the effort's
+name from the directory that already exists, resolving any reserved graph name the directory already
+uses for something else, deriving the map from the record the effort already wrote rather than from a
+conversation, declaring the label vocabulary from the foreign label families, and minting the bulk
+import as `precondition` nodes.
+_Avoid_: migration (which names moving data, not taking on an effort), import (importing is one step
+inside adoption, not the act itself), onboarding, port
+
 ## Closing an effort
 
 **Closed**:
 The human's declaration that an effort is over. Only the human closes one; the manager reports that
-the conditions hold and nothing more. Most efforts are never closed, and that is a legitimate steady
-state.
+the conditions hold and nothing more. An effort whose destination says it is not expected to end, and
+whose frontier never empties, is in a legitimate steady state rather than a stalled one, and is not to
+be treated as a defect.
 _Avoid_: done, finished, complete
 
 **Closing report**:
