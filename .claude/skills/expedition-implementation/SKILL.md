@@ -51,6 +51,16 @@ Read each of the following. Do not trust any summary of them.
 - `decisions.md` — the sections the spawn names
 - the paths the spawn expects you to touch
 
+Read everything the list above names in full. Search the rest of the effort's record instead of reading
+it, leaving out any file this section tells you to leave unread. Where you need a fact you cannot place,
+search for it in that way before you open any file whole. Open a file of the record that is not on the
+list above only because such a search led you to it. Narrow a search before you read its results:
+establish the files that match, narrow the phrase, then read what matched. A broad term can match a
+longer text than the file it was meant to spare. Your environment provides the search, and no particular
+tool is required. This governs the facts the record holds, and never the rules you are held to. Those
+arrive in the spawn and in the files the list above names, and you never go looking for a standard you
+are judged against.
+
 Leave `flags.md` unread. It is not yours.
 
 The paths the spawn expects you to touch neither permit nor forbid an edit. Where the work needs changes
@@ -185,7 +195,7 @@ In a correction round:
 ## What you hand back
 
 Hand back exactly one of two things: the raise under `### The raise`, or the handover below. Write all
-six parts of the handover every time, with `none` in full for a part you have nothing for.
+eight parts of the handover every time, with `none` in full for a part you have nothing for.
 
 ```
 HANDOVER:      <your node's name>
@@ -196,10 +206,32 @@ FLAGS:         <per flag, prefixed ASSUMPTION: the prose for your node, then the
                 the index>
 NEW NODES:     <name, kind, question, blockers — one block each, and for an implementation node
                 its acceptance condition too>
-INVALIDATIONS: <which resolved node your work contradicts, and how>
+INVALIDATIONS: <which resolved node your work changes, and how: a rename, an extension, a narrowing
+                or a contradiction of what it says>
+CONDITIONS:    <what you searched the open nodes' conditions for, and each replacement you write for
+                a clause of an unclaimed node's condition, with what fixed its words>
+MISSING FROM MAP: <what you needed about the effort that map.md did not tell you, and where you got
+                  it instead or how you went on without it>
 GATE PAYLOAD:  <for each thing the checker found, what you changed; the paths you actually
                 touched; a proposed commit message carrying the trailer `Node: <effort>/NN`>
 ```
+
+In `INVALIDATIONS`, an outright contradiction is the minority case. The ordinary case is a renamed term
+or a narrowed rule.
+
+Before you write your handover, search the open nodes' `## Acceptance condition` sections for what your
+own work fixes: each word it refuses, each path it changes or moves something out of, and each phrase it
+supersedes. Search every open node's condition, claimed or not, and read only what matches. Name in
+`CONDITIONS` what you searched for. Where your work establishes a fact that makes a clause of an
+unclaimed node's condition wrong, write the replacement for that clause in `CONDITIONS` as text. Every
+word of the replacement must already be fixed by a resolved node, by work landed in the tree, by the
+glossary or by the shipped files, and the replacement names which of those fixed it.
+
+In `MISSING FROM MAP`, write anything about the effort you needed that `map.md` did not tell you, and
+where you got it instead or how you went on without it. Write `none` there in full when you have nothing
+for it. This part never blocks: wait for no answer to it, and let nothing in your handover depend on
+one. It is not the route for something you cannot go on without. That route is the raise under
+`### The raise`.
 
 One marker is yours: `ASSUMPTION`, for a small ambiguity you settled yourself. `CONDITION-WRONG` is the
 manager's to file after a raise.
@@ -233,9 +265,10 @@ gate, your `## Flags` entry holds that account instead: what you actually did, i
 ## When a node you report is an implementation node
 
 An `implementation` node can be claimed only once it carries an **acceptance condition**: what done means
-for that node, written by the node that spawned it, before any work on it starts. When you report one,
-your node is the one that spawned it, so write its condition in the `NEW NODES` block as the node will
-hold it. No other kind of node carries a condition.
+for that node, written before any work on it starts, by the agent that created the node, or by the
+manager where the manager created it. When you report one, your node is the one that spawned it, so
+write its condition in the `NEW NODES` block as the node will hold it. No other kind of node carries a
+condition.
 
 If you genuinely cannot say what done means, because the work depends on something you did not settle,
 write the part you can and say plainly what is missing and why. Never leave the condition out silently,
@@ -248,7 +281,8 @@ independent, read-only agent that is handed the condition as text, has not read 
 read the record at all. So write the condition to the four points that follow.
 
 - A path may say where, because the checker has the repo: the work must touch that file, produce it, or
-  leave it in a stated state.
+  leave it in a stated state. Write the path relative to the repository root, because an absolute path
+  names a machine, and the worker and the checker that read the condition may not be on it.
 - Put the demand itself in the text, and never a pointer to it such as *as decided at node NN*, *the
   section agreed in the interview* or *the wording the human chose*.
 - Copy in any material held elsewhere, except **the bar**: the standing quality properties every
