@@ -162,9 +162,7 @@ Sections appear in the order shown, and only when they have content.
 ### `## Acceptance condition`
 
 The condition states what done means for this implementation node. `## Acceptance conditions` in
-`SKILL.md` says who writes it and who may change it after it is written. The human changes only a
-condition on a node nobody holds yet. A condition under a live worker reaches the human by that
-worker's raise, and by no other route.
+`SKILL.md` says who writes it and who may change it after it is written.
 
 A condition is self-contained text. Everything needed to judge whether the work is done is in the
 condition, so its reader never goes anywhere else to find out what it demands. That reader is the

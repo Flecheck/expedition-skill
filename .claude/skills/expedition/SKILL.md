@@ -230,8 +230,9 @@ would make you the author of the standard the work is judged against. Where what
 check turns on, the condition goes to the human instead. Where you find such a condition before the
 check, you raise it. The checker raises one it cannot check.
 
-Where the human amends a condition while a check is live, tell the checker. The amended text is then the
-whole condition.
+Where the human amends the condition of a node a worker already holds, you pass the amended text to that
+worker. Where a check is also live, you pass the amended text to the checker too. The amended text is
+then the whole condition.
 
 ## What comes back
 
