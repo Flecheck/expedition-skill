@@ -314,6 +314,7 @@ state.
 _Avoid_: done, finished, complete
 
 **Closing report**:
-What the manager hands the human once the frontier empties: what was decided, what landed, and every
-flag still outstanding.
+What the manager hands the human once the frontier empties. It covers only what the human has not
+already seen. It carries what landed, the supersession chains, the state of the bar, every flag still
+outstanding, what the sweep found, and every sweep round.
 _Avoid_: completion report, summary
