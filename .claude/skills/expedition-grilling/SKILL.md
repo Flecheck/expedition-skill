@@ -160,8 +160,9 @@ A reply settles what it covers and nothing else, under the following rules.
 - A reply that assents to the recommendation without naming any question, such as *"ok for
   recommended"*, settles every question's recommendation in that payload. It settles nothing else in
   that payload.
-- A question the reply does not name stays unanswered, and the human has not deferred it. Put it in a
-  later payload. Never read an unnamed question as assent, and never answer it yourself.
+- Unless the reply is a bare assent as in the rule above, a question the reply does not name stays
+  unanswered, and the human has not deferred it. Put it in a later payload. Never read an unnamed
+  question as assent, and never answer it yourself.
 - Hand back park only when the human states that they defer. A reply that fails to name a question is
   not a request to defer that question.
 
