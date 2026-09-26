@@ -1,7 +1,8 @@
 # Nothing mechanically verifies the never-delete bank once a map change has no checker
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 339
 
 Blocked by: none
 
@@ -69,3 +70,7 @@ disagreement was on the superseded side — so this is the second gap found in t
 **Sequencing**: `graph-conventions.md` is the most contended file on this effort, and [node
 287](287-ship-the-record-file-test-and-repair-the-procedures-sentence.md) edits it too. **Two workers must not hold
 it at once.**
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 339](339-tie-graph-conventions-mds-mechanical-checks-to-the-writes-that.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

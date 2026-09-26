@@ -103,3 +103,21 @@ has not decided which.
 `verbatim`, at node 296's gate: *"approve, we will fix the glossary issuea after, I think we need to rename the file in node 56"*. The manager had put it to them, `verbatim`: *"Node 56: keep its `CONTEXT.md` name inside the skill folder, or amend it to a distinct name such as `glossary.md`?"*. The reason given was that a host repository's own root `CONTEXT.md` can be confused with ours.
 
 *The manager's note:* the direction is to rename, and the new name is not yet chosen. This node's condition names `.claude/skills/expedition/CONTEXT.md` throughout, so it is amended by the human before it is claimed. Since node 296 landed (`6745f37`), `.claude/skills/expedition/SKILL.md` also points at `CONTEXT.md` by name, beside `graph-conventions.md`, so the rename re-points both.
+
+### The name, 2026-09-25
+
+The manager asked, `verbatim`: *"What name should node 56 give `CONTEXT.md`?"*, recommending *"`glossary.md`, giving `.claude/skills/expedition/glossary.md`"*, with *"`expedition-glossary.md`"* as the alternative.
+
+The human, `verbatim`: *"glossary is fine"*. This takes the manager's recommended option, `.claude/skills/expedition/glossary.md`.
+
+## Amendment by the human, 2026-09-25
+
+*The human chose the name above in answer to a question that said their choice would become their amendment to this condition. The manager wrote the wording below as a direct substitution. The original clauses above are left as they were.*
+
+Wherever the acceptance condition above names `.claude/skills/expedition/CONTEXT.md`, read `.claude/skills/expedition/glossary.md`. Nothing else in the condition changes.
+
+*The manager's note:* the substitution leaves clause 2 (a root `CONTEXT-MAP.md` linking the glossary) and clause 5 (the root `CONTEXT.md` kept as a pointer, marked superseded) as they were. Whether those two still fit a file no longer called `CONTEXT.md` is a question for this node's worker to raise, not something this amendment decides.
+
+*The manager's note, 2026-09-26:* [node 302](302-rewrite-the-glossary.md) rewrote `CONTEXT.md` in plain English (landed `de347dc`), keeping 51 term entries and 41 `_Avoid_` lines. Its worker reported two things for this node, in its own words: "Node 56's condition section says "`CONTEXT.md` today holds exactly **50** term entries", but its clause 1, and the file, say 51." And: "`CONTEXT.md`'s intro names `.scratch/graph-workflow/nodes/`, a path specific to this effort, in a shipped file. That goes against ground rule 1. I kept it, because node 56 rewrites the file's head."
+
+*The manager's note, 2026-09-26:* the human's "ok" to [node 328](328-group-the-open-nodes-against-the-glossary.md)'s C5 settles that this node's condition is amended before it is claimed: clause 1's exact entry count (51, and the note's stale 50) is re-pointed to the count at claim time, the stale fallback path `.claude/skills/expedition/CONTEXT.md` in other nodes is read as `.claude/skills/expedition/glossary.md`, and the conditions naming the root `CONTEXT.md` that node 328 lists (137, 120, 258, 124, 61, 109) are checked against the move. This node goes last among the glossary's changes.

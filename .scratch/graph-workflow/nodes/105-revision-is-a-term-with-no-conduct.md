@@ -1,7 +1,8 @@
 # `revision` is a defined term with no conduct behind it, and the duty it hides is the second-supersession escalation
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 337
 
 ## Question
 
@@ -29,3 +30,19 @@ pasted as it wrote it.*
 > and its list of things that are not claimants are unchanged, and the file's list of duties nobody has settled is
 > not reduced. No other file under `.claude/skills/` changes, and no file under `.scratch/` changes. The working tree
 > meets the bar.
+
+## Amendment, 2026-09-25 (from node 298)
+
+*Written by [node 298](298-rewrite-the-manager-contract-part-3.md)'s worker and filed by the manager, after that node's work landed as commit `9d8044c`. Every word of the replacement is fixed by that commit: it quotes `expedition/SKILL.md`'s after-text. The minting author's condition above is left as it was. Node 298's worker's search is on node 298 under `RE-POINTING SEARCH`.*
+
+- Replace "its two tiers and its list of things that are not claimants are unchanged" with "its two tiers and its list beginning *"Three things never enter the queue:"* are unchanged".
+
+*The manager's note:* the worker reported that this condition's "the file's list of duties nobody has settled is not reduced" binds only this node's own work, and that the list now holds eight items.
+
+## Flags
+
+`105.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from node 298's re-pointing list, on the ground that every word of the replacement is fixed by commit `9d8044c`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 337](337-carry-the-record-file-test-the-home-of-a-standing.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

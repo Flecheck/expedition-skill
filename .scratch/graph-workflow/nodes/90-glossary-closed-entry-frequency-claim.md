@@ -1,7 +1,8 @@
 # Bring the glossary's `Closed` entry off the rejected frequency claim
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 332
 
 ## Question
 
@@ -57,3 +58,7 @@ amended](82-amending-a-condition-whose-scope-was-too-narrow.md) so the shape wou
 
 **Node 86's answer names this as the only site of the rejected claim that is a true edit.** Its other seven sites are
 graph files repaired by annotation under the never-delete rule; this one ships.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 332](332-repair-the-glossarys-code-slot-reject-kinds-grilling-and-closed-text.md), the merged glossary node [node 328](328-group-the-open-nodes-against-the-glossary.md)'s worker proposed, on the human's "ok". This node's demands are carried there, each tagged with this node's number; the question and acceptance condition above are superseded as a whole.

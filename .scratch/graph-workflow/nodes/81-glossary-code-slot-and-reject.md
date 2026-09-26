@@ -1,7 +1,8 @@
 # Bring the glossary's code-slot and reject entries up to the worktree lifecycle
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 332, 333
 
 ## Question
 
@@ -128,3 +129,35 @@ contract](28-spawn-overriding-a-contract.md)'s shape — a licence for one attem
 permanent fix. *Filed as `ASSUMPTION` because the three kinds `flags.md` declares — `ASSUMPTION`,
 `CONDITION-WRONG`, `DELEGATED` — have no word for a departure the human licensed, and inventing a fourth here would
 be a second departure to cover the first.*
+
+## Amendment, 2026-09-25 (from node 293)
+
+*Written by [node 293](293-rewrite-the-prototype-contract.md)'s worker and filed by the manager, after that node's work landed as commit `6d26be1`. Every word of the replacement is fixed by that commit: it quotes `expedition-prototype/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 293's worker's search is on node 293 under `RE-POINTING SEARCH`.*
+
+- **Entry 3.** Three replacements:
+  - "It currently reads: *"the right to modify product code, held by one worker at a time. Never yours."*" becomes "It currently reads: *"the right to modify product code, held by one worker at a time. It is never yours."*"
+  - "and keeps *"Never yours"*" becomes "and keeps *"It is never yours"*"
+  - "its hard rule 1, *"You do not hold the code slot"*, is true under the lifecycle and is left exactly as it stands" becomes "its hard rule 1's sentence *"You do not hold the code slot."*, which is true under the lifecycle, is left exactly as it stands"
+
+*The manager's note:* the worker reported that the sentence *"You do not hold the code slot."* is byte-identical in the after-text, and that the rest of hard rule 1 now reads "Put everything you build in `prototypes/NN-<name>/`. Keep all of it out of the product tree, and make none of it product code."
+
+`81.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 293](293-rewrite-the-prototype-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6d26be1`.
+
+## Amendment, 2026-09-26 (from node 302)
+
+*Written by [node 302](302-rewrite-the-glossary.md)'s worker and filed by the manager, after that node's work landed as commit `de347dc`. Every word of the replacement is fixed by that commit: it quotes `CONTEXT.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 302's worker's search is on node 302 under `RE-POINTING SEARCH`.*
+
+- **Entry 2 (`Reject`).** Three replacements:
+  - "Its clause *"so the node does not resolve, the working tree is cleaned, and what survives is the discovery"* is false." becomes "Its sentences *"On a reject the node does not resolve, and the working tree is cleaned. What is kept is the discovery."* are false."
+  - "The rewritten clause says that" becomes "The rewritten sentences say that".
+  - "*"Not a verdict on quality — a node whose code is merely wrong takes a correction round"*" becomes "*"A reject is not a verdict on quality: a node whose code is merely wrong takes a correction round."*"
+
+*The manager's note:* the worker reported that the quoted *"The word is the human's alone; the checker's outcomes are `PASS` and `FAIL`"*, the `Code slot` entry, and both `_Avoid_` lines are byte-identical, so entries 1 and 3 need nothing.
+
+`81.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 302](302-rewrite-the-glossary.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `de347dc`.
+
+*The manager's note, 2026-09-26:* the human's "ok" to [node 328](328-group-the-open-nodes-against-the-glossary.md)'s C1(a) splits this node: its entries 1 and 2 are carried by [node 332](332-repair-the-glossarys-code-slot-reject-kinds-grilling-and-closed-text.md), and its entry 3 (the prototype contract's `code slot` line) goes to the worker-contracts merge proposed by [node 329](329-group-the-open-nodes-against-the-worker-contracts.md), which is still before the human. This node is superseded by both once that merge is filed.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Its entries 1 and 2 are replaced by [node 332](332-repair-the-glossarys-code-slot-reject-kinds-grilling-and-closed-text.md) (node 328's C1(a)), and its entry 3 by [node 333](333-land-the-open-repairs-to-the-five-worker-contracts-in-one-change.md) (node 329's option O4), both on the human's "ok".

@@ -1,7 +1,8 @@
 # `graph-conventions.md`'s rules for the map now resolve to more than one `## Notes`
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 338
 
 Blocked by: none — [node 139](139-move-the-managers-material-out-of-the-map.md) landed as `4e38c11`
 
@@ -39,3 +40,7 @@ blind to each other.**
 **It is distinct from [node 142](142-bring-graph-conventions-map-shape-into-line.md)**, which owns the same file's
 stale section list and two procedure steps, and which waits on node 140. This one waits on nothing. **The manager has
 not merged them** and records that they touch one file and would serialise on the code slot anyway.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 338](338-say-in-graph-conventions-md-which-file-of-the-map.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

@@ -1,7 +1,8 @@
 # Write the glossary's starting-an-effort entries
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 332
 
 Blocked by: none
 
@@ -65,3 +66,19 @@ rule that resolves whichever of the two has happened."*
 ## Flags
 
 `247.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
+
+## Amendment, 2026-09-26 (from node 302)
+
+*Written by [node 302](302-rewrite-the-glossary.md)'s worker and filed by the manager, after that node's work landed as commit `de347dc`. Every word of the replacement is fixed by that commit: it quotes `CONTEXT.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 302's worker's search is on node 302 under `RE-POINTING SEARCH`.*
+
+- **Scope paragraph.** "`grep -rn -i "chart" .claude/skills/ CONTEXT.md` returns exactly one line, the glossary's own `Expedition` entry;" becomes "`grep -rn -i "chart" .claude/skills/ CONTEXT.md` returns nothing;"
+- **Clause 4, second half.** "and that the file's existing `Expedition` entry uses the word for what the workflow's ancestor does rather than for anything this workflow performs" becomes "and that the act the word names is what the file's existing `Expedition` entry says the workflow's ancestor does, *"works out what the work is"*, rather than anything this workflow performs".
+- **Clause 9, second sentence.** "The verb *charts* appears only in the `Expedition` entry item 8 preserves." becomes "No other form of the word *chart* appears anywhere in the file."
+
+*The manager's note:* the worker reported that clause 8 still holds as written, because it is measured from before node 247's own work, and that the baselines 51 and 41 are unchanged.
+
+`247.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 302](302-rewrite-the-glossary.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `de347dc`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 332](332-repair-the-glossarys-code-slot-reject-kinds-grilling-and-closed-text.md), the merged glossary node [node 328](328-group-the-open-nodes-against-the-glossary.md)'s worker proposed, on the human's "ok". This node's demands are carried there, each tagged with this node's number; the question and acceptance condition above are superseded as a whole.

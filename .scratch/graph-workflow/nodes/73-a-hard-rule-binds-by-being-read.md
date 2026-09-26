@@ -1,7 +1,8 @@
 # State in a shipped file that a hard rule binds by being read
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 340
 
 ## Question
 
@@ -58,3 +59,7 @@ Node 64's worker established that **no relative markdown link between the two re
 reason. The clause says *"cites by name"* rather than *by link*, so it is satisfiable — but whoever claims this
 should expect to name the file in backticks rather than link it, and a checker reading it as a link requirement
 would be reading in more than the clause says.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 340](340-add-the-annotation-section-and-what-a-hard-rule-is.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

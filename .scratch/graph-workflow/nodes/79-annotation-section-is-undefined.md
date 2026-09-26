@@ -1,7 +1,8 @@
 # The node format has no section for a manager-filed annotation
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 340
 
 ## Question
 
@@ -57,3 +58,7 @@ answer a later node has changed the meaning of. Done means all of the following.
 > Whether an annotation is properly a **section** of the node file or a marked append inside `## Answer`. Clause 2
 > states the property — the file's own ordering rule must come out true — and leaves the form to the worker,
 > because choosing between the two is a decision this node's author was not in a position to make.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 340](340-add-the-annotation-section-and-what-a-hard-rule-is.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

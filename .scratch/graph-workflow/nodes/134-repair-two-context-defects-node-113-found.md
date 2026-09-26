@@ -1,7 +1,8 @@
 # Repair the two `CONTEXT.md` defects node 113 found
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 332
 
 Blocked by: 133
 
@@ -84,3 +85,7 @@ both, and where it judges the filed condition defective, that is a raise rather 
 wrong goes to the human. **One fact bearing on that raise:** node 133 has landed the deletion its clause 1 turns on,
 and node 133's own checker independently reported the same `CONTEXT.md` sentence as now contradicting the shipped
 state, giving the same enumerator's domain.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 332](332-repair-the-glossarys-code-slot-reject-kinds-grilling-and-closed-text.md), the merged glossary node [node 328](328-group-the-open-nodes-against-the-glossary.md)'s worker proposed, on the human's "ok". This node's demands are carried there, each tagged with this node's number; the question and acceptance condition above are superseded as a whole.

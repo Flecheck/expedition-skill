@@ -154,8 +154,9 @@ banked whole in [map-history.md](map-history.md).**
 - **Resume and recovery** — what happens when the manager's context compacts or its session dies mid-graph.
   **Mostly discharged by measurement rather than by design, and this is the account.** A fresh manager ran this
   effort's graph cold at the start of a session and reconstructed it from the files alone; at the end of that session
-  it verified, against three live nodes, that the **three states the manager's contract says "nothing in the files
-  shows" are in fact derivable**:
+  it verified, against three live nodes, that the **three states the manager's contract ~~says~~ then said "nothing in the files
+  shows" are in fact derivable**, which its section `### Three states the status line does not show` has stated since
+  [node 314](nodes/314-the-manager-contract-says-three-node-states-show-in-no-file.md) landed as `4cc74de`:
   - **waiting at a gate** — `Status: claimed`, a `## Review` carrying a checker outcome, and no `### Gate` entry;
   - **a worker holding an unanswered question** — `Status: claimed`, a `## Interview` holding a question, and no
     answer recorded under it;

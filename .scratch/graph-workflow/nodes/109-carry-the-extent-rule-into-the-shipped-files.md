@@ -98,3 +98,51 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 ## Flags
 
 `109.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
+
+## Amendment, 2026-09-25 (from node 294)
+
+*Written by [node 294](294-rewrite-the-implementation-contract.md)'s worker and filed by the manager, after that node's work landed as commit `724c361`. Every word of the replacement is fixed by that commit: it quotes `expedition-implementation/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 294's worker's search is on node 294 under `RE-POINTING SEARCH`.*
+
+- **The enumerator paragraph**, as amended by node 290. Replace "and *"against the four points above"* in `.claude/skills/expedition-research/SKILL.md`" with "and *"against the four points above"* in `.claude/skills/expedition-research/SKILL.md` and `.claude/skills/expedition-implementation/SKILL.md`".
+- **Clause 6**, as amended by node 290. Replace "or in the research contract" with "or in the research and implementation contracts". The rest is unchanged.
+
+`109.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 294](294-rewrite-the-implementation-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `724c361`.
+
+## Amendment, 2026-09-25 (from node 291)
+
+*Written by [node 291](291-rewrite-the-grilling-contract.md)'s worker and filed by the manager, after that node's work landed as commit `0a3e68b`. Every word of the replacement is fixed by that commit: it quotes `expedition-grilling/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 291's worker's search is on node 291 under `RE-POINTING SEARCH`.*
+
+- **The enumerator paragraph**, as amended by nodes 290 and 294. Replace "in `.claude/skills/expedition-research/SKILL.md` and `.claude/skills/expedition-implementation/SKILL.md`" with "in `.claude/skills/expedition-research/SKILL.md`, `.claude/skills/expedition-implementation/SKILL.md` and `.claude/skills/expedition-grilling/SKILL.md`".
+- **Clause 6**, as amended by node 294. Replace "or in the research and implementation contracts" with "or in the research, implementation and grilling contracts". The rest is unchanged.
+
+`109.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 291](291-rewrite-the-grilling-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0a3e68b`.
+
+## Amendment by the human, 2026-09-25
+
+*The manager's question, carrying node 312's worker's recommendation from node 312's `RE-POINTING SEARCH:`:* "Do you agree to amend node 109's clause 5 this way, or keep it as written?" The way proposed: `graph-conventions.md`'s `### Acceptance condition` states the rule itself (clauses 1 to 4), and the manager contract's `## Acceptance conditions` states only the manager's duties under it, pointing at `graph-conventions.md` in one sentence. The reason given: clause 5 as written would re-create a rule stated in both files, which the split the human approved at node 312 rules out.
+
+The human, `verbatim`: *"I agree"*
+
+*The manager drafted the wording below, and the human amended the condition with it. The condition above and its earlier amendments are left as they were. The clause below takes the place of clause 5.*
+
+5. **`graph-conventions.md`'s `### Acceptance condition` carries clauses 1 through 4.** `SKILL.md`'s `## Acceptance conditions` states the manager's duties under that rule: it files a condition carrying none of the three rungs as malformed rather than claiming the node on it, and where a condition records its enumerator, re-deriving the scope is running that recorded command rather than reconstructing one. `SKILL.md` does not restate clauses 1 through 4. It points at `graph-conventions.md`'s `### Acceptance condition` for them in one sentence.
+
+## Amendment, 2026-09-25 (from node 292)
+
+*Written by [node 292](292-rewrite-the-precondition-contract.md)'s worker and filed by the manager, after that node's work landed as commit `ede2c76`. Every word of the replacement is fixed by that commit: it quotes `expedition-precondition/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 292's worker's search is on node 292 under `RE-POINTING SEARCH` and its addendum.*
+
+- **The enumerator paragraph**, as amended by node 291. In the list of files that hold *"against the four points above"*, add `.claude/skills/expedition-precondition/SKILL.md`.
+- **Clause 6**, as amended by node 291. In the list of contracts whose read-back sentence reads *"check what you wrote against the four points above"*, add the precondition contract. The rest is unchanged.
+
+`109.4` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 292](292-rewrite-the-precondition-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `ede2c76`.
+
+## Amendment, 2026-09-25 (from node 293)
+
+*Written by [node 293](293-rewrite-the-prototype-contract.md)'s worker and filed by the manager, after that node's work landed as commit `6d26be1`. Every word of the replacement is fixed by that commit: it quotes `expedition-prototype/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 293's worker's search is on node 293 under `RE-POINTING SEARCH`.*
+
+- **The enumerator paragraph**, as amended by nodes 290, 294 and 291. In the list of files that hold *"against the four points above"*, add `.claude/skills/expedition-prototype/SKILL.md`.
+- **Clause 6**, as amended by node 291. In the list of contracts whose read-back sentence is *"check what you wrote against the four points above"*, add the prototype contract. The rest is unchanged.
+
+*The manager's note:* the worker reported that `grep -rlnE "against (those four|the four points above)" --include="*.md" .claude/` still returns the five worker contracts and no others, and that the `self-contained` grep still returns the same seven paths.
+
+`109.5` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 293](293-rewrite-the-prototype-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6d26be1`.

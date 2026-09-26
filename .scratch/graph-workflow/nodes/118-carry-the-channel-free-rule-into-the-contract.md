@@ -1,7 +1,8 @@
 # Carry the channel-free rule and the manager's duty to fill a gap into the manager's contract
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 336
 
 ## Question
 
@@ -60,3 +61,19 @@ repairing instances of a defect spread across the tree — but the condition doe
 manager has **not** amended it: supplying a rung is within the manager's permission at node 82's guard 1, and doing
 it here would be supplying a rung to a condition that needs none. Named so a checker does not read the absence as the
 defect node 94 is about.
+
+## Amendment, 2026-09-25 (from node 298)
+
+*Written by [node 298](298-rewrite-the-manager-contract-part-3.md)'s worker and filed by the manager, after that node's work landed as commit `9d8044c`. Every word of the replacement is fixed by that commit: it quotes `expedition/SKILL.md`'s after-text. The minting author's condition above is left as it was. Node 298's worker's search is on node 298 under `RE-POINTING SEARCH`.*
+
+- **Clause 6.** Replace "the sentence beginning *"Three things are not claimants at all"* together with the three things it names" with "the sentence *"Three things never enter the queue:"* together with the three things it lists".
+
+*The manager's note:* the worker also reported that the manager's note under this condition ("the sentence that lists three non-claimants") needs the same wording change. That is the manager's text, not a clause.
+
+## Flags
+
+`118.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from node 298's re-pointing list, on the ground that every word of the replacement is fixed by commit `9d8044c`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 336](336-carry-the-rules-on-what-reaches-the-human-the-code.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

@@ -1,7 +1,8 @@
 # Write the starting-an-effort section and its procedure
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 337
 
 ## Question
 
@@ -107,3 +108,11 @@ code slot, so they land one at a time and each rebases onto the last.
 ## The manager's note, 2026-09-24
 
 *The manager's own note.* Two workers in the plain-English pass reported stale facts in this node's condition. Node 299's worker: "Node 111's clause 10 cites `## The five files`, but the heading is `## The seven files`." Node 296's worker: "Node 111's recorded count of fourteen `## ` headings was already wrong before this work: there are 15." Both need re-deriving before this node is claimed.
+
+*The manager's note, 2026-09-26:* [node 302](302-rewrite-the-glossary.md)'s worker reported, in its own words: "Node 111's clause 2 names "charting" as a way to start an effort. Node 112's decision, which node 247 carries, refuses that word. This is outside my scope, and I did not verify which of the two is current." Whoever claims this node checks it.
+
+*The manager's note, 2026-09-26:* the human's "ok" to [node 328](328-group-the-open-nodes-against-the-glossary.md)'s C4(a) settles that this node's condition is amended to refuse `charting`, following node 112's decision, rather than to name it. The amendment is applied where this node's demands are filed next: [node 330](330-group-the-open-nodes-against-the-manager-contract.md) merged this node whole into one of its proposed nodes.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 337](337-carry-the-record-file-test-the-home-of-a-standing.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

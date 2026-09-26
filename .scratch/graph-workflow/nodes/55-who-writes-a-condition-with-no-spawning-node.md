@@ -1,7 +1,8 @@
 # Say who writes a condition when no node spawned the node
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 318
 
 ## Question
 
@@ -81,3 +82,13 @@ the repo root — the human assenting to all three parts of that proposal. Claus
 nodes lands second inherits a file the other one moved or rewrote**, and clause 6's *"no file outside
 `.claude/skills/expedition/` and `CONTEXT.md`"* reads differently once the glossary lives inside that directory.
 Neither is blocked on the other and the two are not concurrently claimable, both editing the glossary.
+
+## The human's decision, 2026-09-25
+
+*The manager's question, proposing what node 312's worker proposed under its `RE-POINTING SEARCH:`:* "Do you agree to supersede node 55 with a smaller node covering those two parts, or keep node 55 as it is?" The two parts were `CONTEXT.md`'s entry saying a condition is "written by the node that spawned it", and the template code block in `graph-conventions.md` saying the same.
+
+The human, `verbatim`: *"ok for supersede"*
+
+## Superseded, 2026-09-25
+
+*The manager's note.* Clauses 1, 2 and 5 are made unnecessary by [node 312](312-cut-the-rules-both-the-manager-contract-and-graph-conventions-state.md)'s landing as `e64b3de`: under the split the human approved, who writes a manager-minted condition and the four constraints live in `expedition/SKILL.md`'s `## Acceptance conditions`, not in `graph-conventions.md`. The two parts still live are carried by [node 318](318-say-who-writes-a-condition-in-the-glossary-and-the-node-template.md).

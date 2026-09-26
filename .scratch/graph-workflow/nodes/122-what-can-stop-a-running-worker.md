@@ -439,3 +439,5 @@ non-delivery, and the operational conclusion is unaffected."*
 workers have now reported the same gap in the research contract — that it names the files as a source and is silent
 on the runtime — and this one widens it to the harness's own binary. The manager has recorded the promotion here and
 has **not** minted a node for it, the frontier already holding two of this worker's own.
+
+*The manager's note, 2026-09-26:* [node 123](123-who-performs-a-stop.md)'s worker read the installed harness, 2.1.280, and reports this node's answer as too narrow there: "Its table gives the human's stop as "the human's Esc / task UI", and calls it "stop now, discard — and it is the human's alone". In 2.1.280, rewinding the conversation and the SDK and remote interrupt sweeps also set the flag, and the flag does not mean "discard"."

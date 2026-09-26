@@ -1,7 +1,8 @@
 # Stop the checker's spawn carrying the bar's commands, and narrow what it claims to share with the implementer
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 334
 
 Blocked by: none
 
@@ -70,3 +71,22 @@ and [node 164](164-what-a-standards-path-may-hold.md). The manager holds that or
 **Its author's own retrospective says nodes 151 and 164 may be defective**, their conditions naming a spawn-feeds-the-
 standards mechanism node 143's amendment abolished. That is a finding about other nodes rather than about this one,
 and the manager records it here because this node's ordering sits among them.
+
+## Amendment, 2026-09-25 (from node 295)
+
+*Written by [node 295](295-rewrite-the-checker-contract.md)'s worker and filed by the manager, after that node's work landed as commit `76e66e3`. Every word of each replacement is fixed by that commit: it quotes `expedition-checker/SKILL.md`'s after-text. The minting author's condition above is left as it was. Node 295's worker's search is on node 295 under `RE-POINTING SEARCH:`.*
+
+- **Clause 1.** Replace "the item in the list of what the checker is given that begins `**The bar**`" with "the item in the list of what the checker is given that begins `The bar:`".
+- **Clause 4.** Replace "and that this is a complete bar and not a deficient one" with "and that this is, in the file's words, "the complete bar for such a repo"".
+- **Clause 6.** Replace the quoted sentence with `The implementer works from the same file, so the two of you hold the work to one set of standards`.
+- **Clause 8.** Replace "the given-list item beginning `**The bar**`" with "the given-list item beginning `The bar:`".
+
+*The manager's note:* node 295's worker judged that clause 6 is now met by the rewrite, because the replacement sentence already claims only the standards and keeps the ground that the implementer works from the same file. It offered two further choices, to restate clause 6 as "is kept so that…" or to drop it. Choosing either would be authoring the condition, so neither is filed.
+
+## Flags
+
+`173.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from node 295's re-pointing list, on the ground that every word of the replacements is fixed by commit `76e66e3`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 334](334-land-the-open-repairs-to-the-checker-contract-in-one-change.md), the merge [node 329](329-group-the-open-nodes-against-the-worker-contracts.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

@@ -1,7 +1,8 @@
 # Write the two graph writes that have no procedure
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 339
 
 Blocked by: none
 
@@ -54,3 +55,7 @@ Acceptance condition:
 **This node was specified in a handover the manager left unfiled for a session**, and is minted late for that
 reason rather than any other — flag `213.4` records the delay against the manager. Nothing in the text above
 was re-authored on the way here; it is the worker's own, recovered verbatim from the session record.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 339](339-tie-graph-conventions-mds-mechanical-checks-to-the-writes-that.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

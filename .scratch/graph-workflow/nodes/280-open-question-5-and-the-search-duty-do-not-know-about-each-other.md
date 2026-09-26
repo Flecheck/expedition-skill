@@ -1,7 +1,8 @@
 # The manager contract's open question 5 and the search duty three sections above it do not know about each other
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 337
 
 Blocked by: ~~95~~ **none — node 95 resolved and landed at `b095bb6`.**
 
@@ -49,3 +50,17 @@ ground — different corpus, differently indexed, different consequence. **This 
 the shipped file stop asserting that nothing exists when part of it now does.
 
 **The `Blocked by: 95` edge is real**: clause 1 requires item 5 to point at a statement node 95 has not landed yet.
+
+## Amendment, 2026-09-25 (from node 298)
+
+*Written by [node 298](298-rewrite-the-manager-contract-part-3.md)'s worker and filed by the manager, after that node's work landed as commit `9d8044c`. Every word of the replacement is fixed by that commit: it quotes `expedition/SKILL.md`'s after-text. The minting author's condition above is left as it was. Node 298's worker's search is on node 298 under `RE-POINTING SEARCH`.*
+
+- **Clause 1.** Replace "`## What nothing here settles` item 5" with "`## What nothing here settles` item 4, the item reading *"Does anything tell a worker to look at the record when it reports what its work invalidates?"*". The rest of the clause is unchanged, and so is clause 2.
+
+## Flags
+
+`280.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from node 298's re-pointing list, on the ground that every word of the replacement is fixed by commit `9d8044c`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 337](337-carry-the-record-file-test-the-home-of-a-standing.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

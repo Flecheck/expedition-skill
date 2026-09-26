@@ -1,7 +1,8 @@
 # Every manager report ends with one line saying what is expected of the human
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 336
 
 ## Question
 
@@ -78,3 +79,19 @@ the two rules that bind every condition, and that reading recorded on the node.*
 The human, unprompted, in the same reply that approved node 58's gate. Minted by the manager at their instruction;
 the question above and the acceptance condition are the manager's, and the instruction itself is quoted verbatim at
 the top.
+
+## Amendment, 2026-09-25 (from node 298)
+
+*Written by [node 298](298-rewrite-the-manager-contract-part-3.md)'s worker and filed by the manager, after that node's work landed as commit `9d8044c`. Every word of the replacement is fixed by that commit: it quotes `expedition/SKILL.md`'s after-text. The minting author's condition above is left as it was. Node 298's worker's search is on node 298 under `RE-POINTING SEARCH`.*
+
+- **Clause 6.** Replace "the nine duties listed as unsettled are not reduced to eight" with "the eight duties listed as unsettled are not reduced to seven".
+
+*The manager's note:* the worker also reported that the manager's read-back under this condition says "the nine unsettled duties". That is the manager's text, not a clause, and it is now out of date.
+
+## Flags
+
+`96.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from node 298's re-pointing list, on the ground that every word of the replacement is fixed by commit `9d8044c`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 336](336-carry-the-rules-on-what-reaches-the-human-the-code.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

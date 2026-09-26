@@ -87,3 +87,5 @@ author said it should say, and nothing more. Had the author named no substance, 
 real but partial: *"a checker or an implementation worker whose work under check is a record file is inside the
 `.scratch/**` glob"*. So the record must not say *every agent*, and must not say *only the manager* either. The
 replacement says **an agent whose work touches an effort's record**, which is what the glob actually does.
+
+*The manager's note, 2026-09-25:* [node 301](301-rewrite-the-stop-skill-wayfinder-divergences-and-the-triggers-rule.md)'s worker reported, in its re-pointing search: "226 clause 1 describes the file as holding "the trigger form of duties stated elsewhere in the map", but both before-text and after-text say the governing statement is in the `/expedition` skill." The condition is not the manager's to change. Whoever claims this node raises it if it blocks the work.

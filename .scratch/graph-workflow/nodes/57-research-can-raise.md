@@ -1,7 +1,8 @@
 # Give a research node the cannot-proceed raise
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 333, 335
 
 ## Question
 
@@ -82,3 +83,17 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 ## Flags
 
 `57.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
+
+## Amendment, 2026-09-26 (from node 302)
+
+*Written by [node 302](302-rewrite-the-glossary.md)'s worker and filed by the manager, after that node's work landed as commit `de347dc`. Every word of the replacement is fixed by that commit: it quotes `CONTEXT.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 302's worker's search is on node 302 under `RE-POINTING SEARCH`.*
+
+- **Clause 5.** "`CONTEXT.md`'s `research` entry no longer says a research node *"never involves the human"* without qualification." becomes "`CONTEXT.md`'s `research` entry no longer says without qualification that a research node is worked without the human, which it states today as *"It is worked without the human."*" The rest of clause 5 is unchanged.
+
+*The manager's note:* the worker added: "the `research` entry has no `_Avoid_` line, before or after, so "Its `_Avoid_` line is unchanged" holds trivially."
+
+`57.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 302](302-rewrite-the-glossary.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `de347dc`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Its research-contract part is replaced by [node 333](333-land-the-open-repairs-to-the-five-worker-contracts-in-one-change.md), and its `CONTEXT.md` part by [node 335](335-qualify-the-glossarys-research-entry-for-the-research-raise.md), the merge [node 329](329-group-the-open-nodes-against-the-worker-contracts.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

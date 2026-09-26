@@ -1,7 +1,8 @@
 # `CONTEXT.md`'s Code slot entry contradicts the map on both of its claims
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 332
 
 ## Question
 
@@ -44,3 +45,7 @@ is amended](82-amending-a-condition-whose-scope-was-too-narrow.md) exists to gov
 **It was found by a worker scanning the glossary's `_Avoid_` lines for its own node**, and it is unrelated to that
 node. `map.md` records that such a scan is a poor grep target — about a third of the refused words are ordinary
 English — so the find was a by-product of a check the map already prices as expensive.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 332](332-repair-the-glossarys-code-slot-reject-kinds-grilling-and-closed-text.md), the merged glossary node [node 328](328-group-the-open-nodes-against-the-glossary.md)'s worker proposed, on the human's "ok". This node's demands are carried there, each tagged with this node's number; the question and acceptance condition above are superseded as a whole.

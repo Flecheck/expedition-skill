@@ -1,7 +1,8 @@
 # Carry the home of an effort's standing rules into the manager's contract
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 337
 
 ## Question
 
@@ -64,3 +65,19 @@ onto the last.
 **The rule this node ships is the one the manager acted under while filing it.** The two map entries node 93's answer
 said were owed — the strengthened never-idle rule, and the report's closing line — were written into `map.md` at the
 same time as this file, by the manager, as the ordinary bookkeeping that answer named.
+
+*The manager's note, 2026-09-25:* node 298's worker reported in its retrospective that this condition "asks for strike-in-place in a shipped file, which `map.md` says the never-delete rule does not cover". The manager has not checked it. It is recorded here for whoever picks this node up.
+
+## Amendment, 2026-09-25 (from node 298)
+
+*Written by [node 298](298-rewrite-the-manager-contract-part-3.md)'s worker and filed by the manager, after that node's work landed as commit `9d8044c`. Every word of the replacement is fixed by that commit: it quotes `expedition/SKILL.md`'s after-text. The minting author's condition above is left as it was. Node 298's worker's search is on node 298 under `RE-POINTING SEARCH`.*
+
+- Replace "The existing paragraph beginning *"Some of what binds you on a given effort is a **standing instruction of that effort's human**"* is kept" with "The existing paragraph beginning *"Some of what binds you on a given effort is a standing instruction of that effort's human, and not a rule of this workflow."* is kept". The rest of that sentence is unchanged.
+
+## Flags
+
+`101.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from node 298's re-pointing list, on the ground that every word of the replacement is fixed by commit `9d8044c`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 337](337-carry-the-record-file-test-the-home-of-a-standing.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

@@ -84,3 +84,35 @@ code slot of one they serialise anyway.
 **Flag `107.3` bears directly on clause 5.** It records that the recommended parenthetical wording is a
 recommendation rather than the human's own words, which is why clause 5 demands properties and offers the wording.
 The worker holding this node may improve on it.
+
+## Amendment, 2026-09-25 (from node 297)
+
+*Written by [node 297](297-rewrite-the-manager-contract-part-2.md)'s worker and filed by the manager, after that node's work landed as commit `e6c43fb`. Every word of the replacement is fixed by that commit and by this node's own clause 6: it quotes `expedition/SKILL.md`'s after-text. The minting author's condition above is left as it was. Node 297's worker's search is on node 297 under `### Re-pointing search`.*
+
+- **Clause 8.** Replace it with: "8. `expedition/SKILL.md` today reads *"Say in the pick report that the condition is yours, and say in a line or two what it demands."* Its `pick report` takes the node-level term under clause 6, like every other occurrence."
+
+## Flags
+
+`137.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from node 297's re-pointing list, on the ground that every word of the replacement is fixed by commit `e6c43fb`.
+
+## Amendment, 2026-09-25 (from node 292)
+
+*Written by [node 292](292-rewrite-the-precondition-contract.md)'s worker and filed by the manager, after that node's work landed as commit `ede2c76`. Every word of the replacement is fixed by that commit: it quotes `expedition-precondition/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 292's worker's search is on node 292 under `RE-POINTING SEARCH` and its addendum.*
+
+- **Clause 6.** After clause 6's last sentence, add: "`.claude/skills/expedition-precondition/SKILL.md` no longer says `pick report`. It reads *"The flag settles at the report the manager sends the human when your node closes."* That phrase names the node-level report, and it is replaced by the node-level term." The file stays in this node's scope list, so no other clause changes.
+
+`137.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 292](292-rewrite-the-precondition-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `ede2c76`.
+
+## Amendment, 2026-09-26 (from node 302)
+
+*Written by [node 302](302-rewrite-the-glossary.md)'s worker and filed by the manager, after that node's work landed as commit `de347dc`. Every word of the replacement is fixed by that commit: it quotes `CONTEXT.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 302's worker's search is on node 302 under `RE-POINTING SEARCH`.*
+
+- **Clause 5.** "`CONTEXT.md`'s `**Handover**:` entry ends today with `_Avoid_: report (the closing report owns that word), return, payload, deliverable`." becomes "`CONTEXT.md`'s `**Handover**:` entry ends today with `_Avoid_: report (the closing report uses that word), return, payload, deliverable`." The rest of clause 5 is unchanged.
+
+*The manager's note:* the worker reported that clause 6's recorded count, "2 in `CONTEXT.md`" for `pick report`, and clause 7's `closing report` occurrences in `CONTEXT.md` (3) are the same before and after.
+
+`137.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 302](302-rewrite-the-glossary.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `de347dc`.
+
+*The manager's note, 2026-09-26:* [node 106](106-context-closing-report-entry-lists-three.md)'s worker reports, under its `INVALIDATIONS`, that clause 1 of this node's condition defines the effort closing report as "what was decided, what landed, and every flag still outstanding", and clause 2 says the renamed entry's meaning is unchanged. Node 106 replaces that three-item list with the manager contract's six items. Once 106 lands, a worker following clause 1 would put the three-item list back. Repairing this condition goes to the human; this node is not started until they answer.
+
+*The manager's note, 2026-09-26:* the human's "ok" to [node 328](328-group-the-open-nodes-against-the-glossary.md)'s C6, on the manager's pick, settles that clause 1 of this node's condition is amended to define the effort closing report by node 106's six items rather than by "what was decided, what landed, and every flag still outstanding". Node 106's landed text (`64db5aa`): "What the manager hands the human once the frontier empties. It covers only what the human has not already seen. It carries what landed, the supersession chains, the state of the bar, every flag still outstanding, what the sweep found, and every sweep round."

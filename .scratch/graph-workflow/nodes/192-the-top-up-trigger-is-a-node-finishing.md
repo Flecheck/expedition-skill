@@ -1,7 +1,8 @@
 # The trigger for topping up the human-facing nodes is a node finishing, and nothing states it
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 100
 
 Blocked by: none
 
@@ -81,3 +82,7 @@ forbids.
 
 **Caught by the human**, `verbatim`: *"only one grilling slot ?"*. **This is the third top-up failure of this
 effort**, after the one that minted this node and one during the shipping backlog.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Made unnecessary by [node 100](100-the-manager-starts-the-next-node-rather-than-proposing-it.md)'s landed work (`47703bb`): `### Picking the next node` already says "When a node finishes, pick the next one, spawn its worker" and "When a node finishes, start enough work to bring every count back up". Node 330's worker recommended superseding it and the human took that with their "ok".

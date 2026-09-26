@@ -1,7 +1,8 @@
 # `Reading the graph` does not describe the `Blocked by:` field a scanner will meet
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 339
 
 Blocked by: none
 
@@ -58,3 +59,7 @@ set is what a *reader* meets. Conflating them would make the format's statement 
 **Sequencing, which is the manager's.** `graph-conventions.md` is the most contended file on this effort — one
 worker measured **nineteen** open nodes editing it and another **twenty-seven** conditions naming it, and several
 demand it change in no other respect. **Two workers must not hold it at once.**
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 339](339-tie-graph-conventions-mds-mechanical-checks-to-the-writes-that.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

@@ -1,7 +1,7 @@
 # Rewrite the manager contract's second part in plain English
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: 296
 
 ## Question
@@ -45,6 +45,12 @@ Rewrite the second part of `.claude/skills/expedition/SKILL.md` in plain English
 1a. **Terms `CONTEXT.md` does not define.** A term the before-text defines that `CONTEXT.md` does not define may be dropped as a term, where its meaning is still stated in plain words at the place it was defined. Dropping a term that way is not a rule change.
 2. **Added statements are rule changes.** A rule, permission, duty, exception, defined term or refused word that the after-text states and the before-text does not is a rule change. The checker lists it the same way as under clause 1. It does not fail the work.
 3. *(added sentence)* A generalisation that changes an outcome, or decides a case the before-text left undecided, is a rule change under clause 1 or clause 2.
+
+## Answer
+
+Rewrote the manager contract's second part (Spawning a worker to Changing one after it is written) in plain English, 3,147 to 2,724 words; the human made approval-settles-flags a workflow rule.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`, as changed by correction rounds 1 and 2. The human approved the listed rule changes, and struck and corrected two at the gate. The checker's independent list is under `### Checker run 3`. The work landed as commit `e6c43fb`.
 
 ## Handover, attempt 1
 
@@ -159,3 +165,190 @@ none. The merges were: "What comes back": three bullets folded into prose · "Tw
 > **Not re-raised:** run 6's open question about ground rule 1 and `CONTEXT.md` concerns lines outside G2, which this work does not change. G2 adds no new dependence on this repo.
 
 *The manager's note, matching the two lists:* the checker's rule changes 1–6 are the worker's 6, 7, 9, 13, 12 and 10. Every one is on the worker's list. What goes back is the 8c finding.
+
+### Correction round 1 — the worker's changes for checker run 1
+
+*The worker's own text, pasted.*
+
+All three clause 8c breaches in run 1 are fixed. I also rewrote the three passages the checker called borderline. The only file changed is `.claude/skills/expedition/SKILL.md` in the node 297 worktree, still uncommitted.
+
+1. The checker's runs: "The checker's runs, laid end to end, oldest first." became "The checker's runs, one after another, oldest first."
+2. A direction from the human: "such a direction is the only way past it." became "such a direction is the only way the node can proceed."
+3. When flags settle: "A node's flags are settled at the first human moment its close reaches. That moment is an implementation node's gate where it has one, and otherwise the pick report that closes the node." became "Settle a node's flags at its gate, where it is an implementation node that has one. Otherwise, settle them at the pick report that closes the node." This is node 300's wording from `graph-conventions.md`. The sentences after it are unchanged, including "Settle a flag only at the moments this section names, …".
+4. Borderline passages: "reach only a node nobody holds yet" became "apply only to a node nobody holds yet" · "its condition goes over as written" became "its condition is handed over as written" · "never reaches any of the following three things" became "cannot cover any of the following three things".
+
+Each changed paragraph was rewrapped at 104 characters. Rewrapping the whole range also moved one line break in the paragraph that starts "Depart from a worker contract…". Its words are unchanged.
+
+**Did the change touch what the condition names:** yes. Every edit is plain-English prose inside the rewritten range, which clause 8c governs. None of them changes a rule. Text outside the range is still byte-identical to `6745f37`. The headings are unchanged. There is still no bold, dash or semicolon in the range. The refused-word grep finds nothing. The range is now 2,746 words, down from 3,147 in the before-text. The bar is still met. The repo has no build, tests or formatter.
+
+**Handover parts that differ:** INDEX LINE: Rewrote the manager contract's second part (Spawning a worker to Changing one after it is written) in plain English, 3,147 to 2,746 words, no intended rule changes · RULE CHANGES, one entry added: 16. Flag settlement. Before: "A node's flags are settled at the first human moment its close reaches — an implementation node's gate where it has one, and otherwise the pick report that closes it." After: "Settle a node's flags at its gate, where it is an implementation node that has one. Otherwise, settle them at the pick report that closes the node." I believe the outcome is the same in every case. It is listed as borderline because the new wording drops "first", which named the earliest such moment. The gate and the pick report are each the only moment of their kind for their node, so I judge nothing is lost · RE-POINTING SEARCH, addition: I searched the open and claimed nodes' conditions for "first human moment", "human moment", "its close reaches", "laid end to end", "way past it", "only route past it", "goes over as written", "reach only a node" and "never reaches any". The only hit is node 41, clause 5: "the way past it is an instruction from the human". That is node 41's own wording about the document it targets, not a quote from this file, so it needs no replacement · every other part as first returned.
+
+### Checker run 2 — `PASS`, under the amended condition
+
+*The checker's own text, pasted, 2026-09-24.*
+
+> PASS
+>
+> This is run 2 on node 297, "Rewrite the manager contract's second part in plain English", re-checked against the amended condition and the bar.
+>
+> **What changed since run 1.** I did not rely on the worker's account. I compared the words of the corrected G2 against my own copy of the run-1 G2, after unwrapping both. The only word changes are the six the worker describes. The move of one line break in the "Depart from a worker contract…" paragraph changes no word.
+>
+> **What I checked again in full:** `.claude/skills/expedition/SKILL.md` is still the only changed path, and nothing is untracked · Everything before `## Spawning a worker` and everything from `## What is in front of the human, and when` onward is byte-identical to `6745f37` (`cmp`, both parts) · The frontmatter is byte-identical · G2 has no code fences, and all its headings are byte-identical · G2 has no bold · No sentence has more than one dash aside or more than one semicolon · No line is longer than 106 characters · The `_Avoid_` scan returns nothing.
+>
+> **Clause by clause:** Clause 1: the six edits keep the outcomes of the statements they replace. "the only way the node can proceed" means the same as the before-text's "the only route past it". "one after another" means the same as "laid end to end". "Settle a node's flags at its gate, where it is an implementation node that has one. Otherwise, settle them at the pick report that closes the node." This names the same two moments as the before-text's "at the first human moment its close reaches — an implementation node's gate where it has one, and otherwise the pick report that closes it". Who settles is the same: you, as "You never settle a flag…" already said. The unchanged sentence "its flags settle on whatever the human says next" still covers the pick-report case. "apply only to", "is handed over as written" and "cannot cover" give the outcomes of "reach only", "goes over as written" and "neither pen reaches". The rest of the clause-1 walk from run 1 stands · Clause 1a: as in run 1. "licence" and "handles" were dropped with their meaning stated in plain words where they were defined, so neither is a rule change · Clause 2: no edit adds a statement. The run-1 list stands, as below · Clause 3: holds · Clauses 4 and 5: hold, as above · Clause 6: holds. "described in the next section", "the moments this section names" and "under the raise above" still resolve · Clause 7: holds. No new term is coined, and no refused word is used · Clause 8: holds, and the run-1 finding is resolved. "laid end to end", "the only way past it" and "the first human moment its close reaches" no longer appear. The three passages I judged borderline were also reworded into plain words. In the new flag sentences, "it" refers to the node, "one" to a gate, and "them" to the node's flags. The one remaining "reaches", "A flag that reaches the human", means delivered to the human. It stood in run 1 and I do not count it · Clause 9 (reported, not enforced): `wc -w` of G2 is 3147 before and 2746 after, which is 87%. The target is at most 2098, so it was missed. That does not fail the work · Clauses 10 and 11: hold, as above.
+>
+> **The bar.** The repo still has no build, test suite, formatter or CI, so there is no command to run. The non-command half is met. I held the work against the ground rules, the five standing rules for writing, `CONTEXT.md`'s `_Avoid_` lines, `graph-conventions.md` and `/writing-for-agents`, which are the standards named in `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md`. That file names no reviewing skill, so I ran none.
+>
+> RULE CHANGES
+>
+> These are unchanged from run 1. None of the six edits adds, removes or resolves one.
+>
+> Clause 1. 1. Before: "nothing you send a worker may widen what that worker is permitted to write". After: "Keep what a worker may write within what its contract allows, in every message you send it, a resume included." The limit moves from what the worker is permitted to what its contract allows. Carrying the human's one-attempt permission is allowed by `### Two things that travel in a spawn and are not yours`. A message doing that, where the permission lets the worker write beyond its contract, now falls outside the rule · 2. Before: "Amending a contract is its own piece of work against that file, and never something you do mid-flight." After: "Changing a contract is a separate piece of work on that file. You never change one while the node it blocks is being worked." The ban is narrowed from "mid-flight", which named no node, to the blocked node · 3. Before: "*(This is one effort's standing instruction from its human rather than a rule of the workflow — see* Standing steering *below. Where an effort's human has not said it, ask.)*" After: "That settling rule is one effort's standing instruction from its human, and is not a rule of the workflow. Where an effort's human has not given it, ask them whether their approval settles the node's flags." The before-text left open what "This" meant and what to ask. The after-text decides both. It now states that the settling rule is not a rule of the workflow. That sits against `## Flags`, which says "Every kind of node follows this rule" · 4. Before: "Everything here reaches a node nobody holds yet." After: "The amendments in this section, by the party that established a fact and by you, apply only to a node nobody holds yet." The rule is narrowed from the whole section to those two kinds of amendment. That settles the before-text's conflict with the search, which covers every open node's condition, "claimed or not" · 5. Before: "in that node's closing report instead". Under the line-25 import, that meant `CONTEXT.md`'s effort-level Closing report. After: "in the report that closes that node instead".
+>
+> Clause 2. 6. Line 191: "Settle a flag only at the moments this section names, never on your own judgement or on the passage of time." The word "only" adds a ban on settling a flag at any other moment.
+>
+> **Extent of the list:** a bounding set, the same as in run 1. It is every G2 statement before and after, walked paragraph by paragraph, and re-walked this run for the six edited passages.
+
+### Gate — correct, 2026-09-25
+
+The human, `verbatim`: *"for 1 I agree, it the user wants something, at the end it should do what the user wants (the workflow should still use the best tool he has) . for 3, its a workflow rule"*
+
+- **Rule change 1** takes the manager's suggestion, *"I'd suggest striking this one and keeping the original meaning"* (the manager's gate payload): strike it and restore the before-text's meaning, that nothing sent to a worker widens what it is permitted to write, a permission the human granted included.
+- **Rule change 3** is answered directly: the rule that approval settles a node's flags is a rule of the workflow. The after-text states it as one effort's instruction, so the text is corrected. This also answers [node 310](310-does-approval-settling-flags-belong-to-the-workflow-or-to-one-effort.md).
+- The other rule changes stand, not struck.
+
+### Correction round 2 — the worker's changes for the human's gate correction
+
+*The worker's own text, pasted, 2026-09-25.*
+
+CORRECTION ROUND 2 (the human's gate correction): both points are fixed in `.claude/skills/expedition/SKILL.md` in the node 297 worktree, still uncommitted.
+
+WHAT I CHANGED:
+1. Rule change 1 is struck and the before-text's meaning restored, under `### When a contract blocks the node in front of it`. The limit is again what the worker is already permitted to write, which includes any permission the human granted. It is no longer the contract alone.
+   - Was: "Depart from a worker contract only with the human's permission. Keep what a worker may write within what its contract allows, in every message you send it, a resume included."
+   - Now: "Depart from a worker contract only with the human's permission. Keep what a worker may write within what it is already permitted to write, counting its contract and any permission the human granted. That holds for every message you send it, a resume included."
+2. Under `### A flag in a payload`, I removed these two sentences: "That settling rule is one effort's standing instruction from its human, and is not a rule of the workflow. Where an effort's human has not given it, ask them whether their approval settles the node's flags." The paragraph now reads only: "The human's approval of a node's end settles that node's flags, so a flag left out of the payload is settled without the human seeing it." Nothing in the range now presents that rule as one effort's instruction. It stands as a workflow rule, consistent with `## Flags` ("Every kind of node follows this rule, and none has a rule of its own"). The "ask" instruction went with it.
+
+DID THE CHANGE TOUCH WHAT THE CONDITION NAMES: yes, both edits are inside the rewritten range.
+- Rule 1: the edit restores the before-text's outcome, so it is no longer a rule change.
+- Rule 3: the edit is a rule change the human made at the gate.
+- Checks still hold:
+  - Text outside the range is byte-identical to `6745f37`.
+  - The headings are unchanged.
+  - No line is over 104 characters.
+  - The range has no bold, dash or semicolon.
+  - The refused-word grep on the range finds nothing.
+- The range is now 2,724 words, down from 3,147 in the before-text.
+- The bar still holds. The repo has no build, tests or formatter.
+
+RE-POINTING SEARCH for the changed wording: I searched the conditions of open and claimed nodes, normalised as before, for these phrases:
+- "widen what that worker is permitted to write"
+- "permitted to write"
+- "what its contract allows"
+- "standing instruction from its human"
+- "one effort's standing instruction"
+- "rather than a rule of the workflow"
+- "not a rule of the workflow"
+- "has not said it, ask"
+- "has not given it"
+- "whether their approval settles"
+
+No condition matches, so no replacement is owed.
+
+HANDOVER PARTS THAT DIFFER:
+
+INDEX LINE:    Rewrote the manager contract's second part (Spawning a worker to Changing one after it is written) in plain English, 3,147 to 2,724 words; the human made approval-settles-flags a workflow rule.
+
+FLAGS: withdraw the second ASSUMPTION, the one about what the bare "ask" asks. Its sentence is gone. The ASSUMPTION about "mid-flight" stands.
+
+NEW NODES: withdraw proposed node 1 ("Does the human's approval settling flags belong to the workflow or to one effort?"). The human answered it at the gate: it is a workflow rule. Proposed node 2, on the human amending a held node's condition, stands.
+
+RULE CHANGES:
+- Entry 6 (the write rules) is withdrawn. The after-text now keeps the before-text's meaning.
+- Entry 9 (the "ask" sentence) is replaced by this: "Before: '(This is one effort's standing instruction from its human rather than a rule of the workflow — see Standing steering below. Where an effort's human has not said it, ask.)' After: removed. Why: the human ruled at the gate that approval settling a node's flags is a rule of the workflow, which `## Flags` already states."
+- The other entries stand.
+
+GATE PAYLOAD, added for correction round 2:
+- The human's two points were applied as listed above.
+- Paths touched are unchanged: `.claude/skills/expedition/SKILL.md`.
+- The commit message is unchanged: `Rewrite the manager contract's second part in plain English` / blank / `Node: graph-workflow/297`.
+
+Every other part of the handover is as first returned.
+
+*The manager's note:* the proposed node 1 the worker withdraws was already minted as node 310, which the human's gate answer resolved. Proposed node 2 is node 311. Flag `297.2` is withdrawn by the worker and stays listed below until the gate settles it.
+
+### Checker run 3 — `PASS`, under the amended condition
+
+*The checker's own text, pasted, 2026-09-25.*
+
+> PASS
+>
+> This is run 3 on node 297, "Rewrite the manager contract's second part in plain English". I checked the work against the amended acceptance condition and the bar.
+>
+> **What changed since run 2.** I diffed the G2 of the file as it stands against my own copy of the run-2 G2. There are exactly two changes, and nothing else in G2 moved:
+> 1. **`### When a contract blocks the node in front of it`, lines 44–46.**
+>    - Run 2: "Keep what a worker may write within what its contract allows, in every message you send it, a resume included."
+>    - Now: "Keep what a worker may write within what it is already permitted to write, counting its contract and any permission the human granted. That holds for every message you send it, a resume included."
+> 2. **`### A flag in a payload`, lines 142–144.** Three sentences were deleted: "That settling rule is one effort's standing instruction from its human, and is not a rule of the workflow. Where an effort's human has not given it, ask them whether their approval settles the node's flags." The paragraph now ends "…so a flag left out of the payload is settled without the human seeing it."
+>
+> **Checked again in full:**
+> - `.claude/skills/expedition/SKILL.md` is still the only changed path, and nothing is untracked. The merge-base is still `6745f37`.
+> - Everything before `## Spawning a worker` and everything from `## What is in front of the human, and when` onward is byte-identical to the before-text (`cmp`, both parts).
+> - The frontmatter is byte-identical.
+> - G2 has no code fences and no bold, and all its headings are byte-identical.
+> - No line is longer than 106 characters.
+>
+> **Clause by clause:**
+> - **Clause 1:** walked again for both changed passages. The rest of the walk from runs 1 and 2 stands. The results are in RULE CHANGES below, and none fails the work.
+>   - The first change gives the before-text's outcome ("nothing you send a worker may widen what that worker is permitted to write"), so run 2's rule change 1 is resolved.
+>   - The second change removes a before-text statement, so run 2's rule change 3 is replaced by a removal, item 2 below.
+> - **Clause 1a:** as before. "licence" and "handles" were dropped with their meaning stated in plain words where they were defined, so neither is a rule change.
+> - **Clause 2:** neither change adds a statement. Item 5 below stands.
+> - **Clause 3:** holds.
+> - **Clauses 4 and 5:** hold, as above.
+> - **Clause 6:** holds. The before-text's pointer "see* Standing steering *below" is gone along with the deleted sentences. Every remaining reference in G2 resolves.
+> - **Clause 7:** holds. No new term is coined, and no refused word is used.
+> - **Clause 8 (plain English):** holds for the new text.
+>   - The rule is stated as what to do.
+>   - "it" is the worker, and "That" is the rule in the sentence before.
+>   - Each sentence holds one idea, with no dash aside and no semicolon.
+> - **Clause 9 (reported, not enforced):** `wc -w` of G2 is 3147 before and 2724 after, which is 87%. The target is at most 2098, so it was missed. That does not fail the work.
+> - **Clauses 10 and 11:** hold, as above.
+>
+> **The bar.** The repo still has no build, test suite, formatter or CI, so there is no command to run. The non-command half is met: the ground rules, the five standing rules for writing, `CONTEXT.md`'s `_Avoid_` lines, `graph-conventions.md` and `/writing-for-agents`, as named in `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md`. That file names no reviewing skill, so I ran none.
+>
+> RULE CHANGES
+>
+> Clause 1. For each entry: the before-text statement in G2, then its counterpart.
+> 1. **Changing a contract.** Before: "Amending a contract is its own piece of work against that file, and never something you do mid-flight." After: "Changing a contract is a separate piece of work on that file. You never change one while the node it blocks is being worked."
+>    - The ban is narrowed from "mid-flight", which named no node, to the node the contract blocks.
+> 2. **A flag in a payload.** Before: "*(This is one effort's standing instruction from its human rather than a rule of the workflow — see* Standing steering *below. Where an effort's human has not said it, ask.)*" After: removed.
+>    - Two binding statements go with it: the classification of that passage as one effort's standing instruction rather than a rule of the workflow, and the duty to ask where an effort's human has not said it.
+>    - `### Standing steering, and standing instructions of one effort` is unchanged and speaks of such instructions in general only. It does not name this one.
+>    - So "The human's approval of a node's end settles that node's flags" now stands in every effort as a rule of the workflow, and nothing tells you to ask. That agrees with `## Flags` ("Every kind of node follows this rule"), which the run-2 wording contradicted.
+> 3. **Which amendments reach only unclaimed nodes.** Before: "Everything here reaches a node nobody holds yet." After: "The amendments in this section, by the party that established a fact and by you, apply only to a node nobody holds yet."
+>    - The rule is narrowed from the whole section to those two kinds of amendment.
+>    - That settles the before-text's conflict with the search, which covers every open node's condition, "claimed or not".
+> 4. **Where an amendment is named.** Before: "in that node's closing report instead". Under the line-25 import, that meant `CONTEXT.md`'s effort-level Closing report. After: "in the report that closes that node instead".
+>
+> Clause 2. For each entry: a statement the after-text makes that the whole before-text does not.
+> 5. **When a flag may be settled.** Line 190: "Settle a flag only at the moments this section names, never on your own judgement or on the passage of time." The word "only" adds a ban on settling a flag at any other moment.
+>
+> **Resolved this run, and no longer a rule change:** run 2's item 1, the limit on what a message lets a worker write. "within what it is already permitted to write, counting its contract and any permission the human granted" gives the outcome of the before-text's "may widen what that worker is permitted to write". That includes the case of a message carrying the human's one-attempt permission.
+>
+> **Extent of the list:** a bounding set, every G2 statement before and after, walked paragraph by paragraph. Each G2 statement was held against the whole after-text, including `CONTEXT.md` through the line-25 import. Each G2 statement of the after-text was held against the whole before-text. This run I re-walked the two changed passages. The rest of the walk from runs 1 and 2 stands.
+>
+> File: `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/297-rewrite-the-manager-contract-part-2/.claude/skills/expedition/SKILL.md`
+
+*The manager's note, matching the two lists:* the checker's rule changes 1–5 are the worker's 7, 9 (as replaced in correction round 2), 13, 12 and 10. Every one is on the worker's list, and the worker's withdrawn entry 6 is the one the checker reports resolved.
+
+### Gate — approve, 2026-09-25
+
+The human, `verbatim`: *"approve"*
+
+## Flags
+
+`297.1` **· settled** `ASSUMPTION` — I read "never something you do mid-flight" (changing a contract) as "while the node it blocks is being worked". After-text: "You never change one while the node it blocks is being worked."
+
+`297.2` **· settled** `ASSUMPTION` — I read "Where an effort's human has not said it, ask." as asking whether their approval settles the node's flags, and wrote that out in full.
+*The manager's note:* withdrawn by the worker in correction round 2, because the sentence it concerns was removed.

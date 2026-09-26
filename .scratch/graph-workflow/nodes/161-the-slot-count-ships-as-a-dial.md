@@ -1,7 +1,8 @@
 # The slot count ships as a dial with its price stated
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 336
 
 Blocked by: none
 
@@ -50,3 +51,18 @@ wrote it.*
 **Its clause 2 removes an item from the manager contract's own list of unsettled duties**, which is the first time
 that list has shrunk. The manager records that the item was answered by material already shipped rather than by new
 work — node 115's worker's words: *"the answer was already shipped without anyone noticing."*
+
+## Amendment, 2026-09-25 (from node 298)
+
+*Written by [node 298](298-rewrite-the-manager-contract-part-3.md)'s worker and filed by the manager, after that node's work landed as commit `9d8044c`. Every word of the replacement is fixed by that commit: it quotes `expedition/SKILL.md`'s after-text. The minting author's condition above is left as it was. Node 298's worker's search is on node 298 under `RE-POINTING SEARCH`.*
+
+- **Clause 1.** Replace "The bullet beginning `**how many implementation nodes run at once**`" with "The bullet beginning `How many implementation nodes run at once.`".
+- **Clause 2.** Replace "reading `**What does a worker do when a file it must read is being changed by whoever holds the code slot?**`, together with the two sentences under it" with "reading `What does a worker do when a file it must read is being changed by whoever holds the code slot?` (now item 5), together with the two sentences after it". Its clause 5 holds as written.
+
+## Flags
+
+`161.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from node 298's re-pointing list, on the ground that every word of the replacement is fixed by commit `9d8044c`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 336](336-carry-the-rules-on-what-reaches-the-human-the-code.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

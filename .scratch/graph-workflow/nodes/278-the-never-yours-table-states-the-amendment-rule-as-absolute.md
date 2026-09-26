@@ -1,7 +1,8 @@
 # The manager contract's table of what is never the manager's still states the amendment rule as absolute
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 337
 
 Blocked by: ~~95~~ **none — node 95 resolved and landed at `b095bb6`.**
 
@@ -41,3 +42,7 @@ condition's rule that no other statement may change meaning. It reported the def
 it, which is the behaviour the clause exists to produce.
 
 **The `Blocked by: 95` edge is real**: clause 1 requires the row to point at a statement node 95 has not landed yet.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 337](337-carry-the-record-file-test-the-home-of-a-standing.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

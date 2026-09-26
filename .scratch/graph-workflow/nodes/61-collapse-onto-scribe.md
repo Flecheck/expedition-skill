@@ -1,7 +1,8 @@
 # Collapse the manager's discipline onto the leading word `scribe`
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 76
 
 ## Question
 
@@ -74,3 +75,15 @@ the others left. Node 56 is the one that moves it, so landing that first costs t
 ## Flags
 
 `61.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
+
+## Amendment, 2026-09-25 (from node 312)
+
+*Written by [node 312](312-cut-the-rules-both-the-manager-contract-and-graph-conventions-state.md)'s worker and filed by the manager, after that node's work landed as commit `e64b3de`. Every word of the replacement is fixed by that commit: it quotes the after-text of `expedition/SKILL.md` and `expedition/graph-conventions.md`. The minting author's condition and any earlier amendment above are left as they were. Node 312's worker's search is on node 312 under `RE-POINTING SEARCH:`.*
+
+- **Preamble**, as amended by node 299. Replace the proposed wording with: "in `expedition/SKILL.md`, under `### You write as a scribe`; `expedition/graph-conventions.md` no longer uses the word, and its opening says "`## Writing the graph` in `SKILL.md`, the file beside this one, says who writes the graph's record and how the manager pastes what a worker hands it."" The manager's existing question, whether node 61 still needs doing, stands.
+
+`61.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 312](312-cut-the-rules-both-the-manager-contract-and-graph-conventions-state.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `e64b3de`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Made unnecessary by [node 76](76-write-the-manager-skill.md), whose landing (`4f9781b`) gave the glossary its **Scribe** entry and the manager contract its scribe wording. [Node 328](328-group-the-open-nodes-against-the-glossary.md)'s worker (its conflict C7) and node 329's worker (its conflict 8) both found this node's premise false and its definition in conflict with the existing entry; the human took the manager's pick to supersede it with their "ok".

@@ -1,7 +1,8 @@
 # A gate payload stops carrying a command that prints a diff
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 336
 
 Blocked by: 229
 
@@ -55,3 +56,7 @@ the manager does. This node is for the two files that still say otherwise.
 reversed by the human — the first being node 218's `## What this file is`, which a clause of the manager's demanded
 and which they removed. **The map's standing preference that a decision of theirs may be proposed for change on the
 same footing as one the workflow made is doing real work**, and neither reversal needed a supersession argument.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 336](336-carry-the-rules-on-what-reaches-the-human-the-code.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

@@ -1,7 +1,8 @@
 # Write the checker contract's `## How you check` section
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 334
 
 Blocked by: 143
 
@@ -65,3 +66,7 @@ which is flagged at `149.1`. The spawn asked for that explicitly after node 149'
 says why**, at flag `145.3`: between node 143 landing and this node landing, the shipped checker contract states its
 standards as a given and nowhere says which of its two verdicts they report under. **That is a sequencing request on
 the manager rather than an edge**, and the manager has recorded it rather than acted on it.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 334](334-land-the-open-repairs-to-the-checker-contract-in-one-change.md), the merge [node 329](329-group-the-open-nodes-against-the-worker-contracts.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

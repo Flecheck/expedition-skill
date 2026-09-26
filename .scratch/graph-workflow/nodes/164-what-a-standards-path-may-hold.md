@@ -1,7 +1,8 @@
 # What a standards path may hold, given the checker's blindness to the record
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 334
 
 Blocked by: 143, 151
 
@@ -62,3 +63,19 @@ not overlap.** Node 163 asks whether a checker may read the changed graph files 
 node asks what a file handed to it **as a standard** may contain. One is about the diff, the other about the givens.
 Node 163's worker independently found that the blindfold is against *"a second statement of intent, not a
 directory"*, which is the distinction both nodes turn on.
+
+## Amendment, 2026-09-25 (from node 295)
+
+*Written by [node 295](295-rewrite-the-checker-contract.md)'s worker and filed by the manager, after that node's work landed as commit `76e66e3`. Every word of the replacement is fixed by that commit: it quotes `expedition-checker/SKILL.md`'s after-text. The minting author's condition above is left as it was. Node 295's worker's search is on node 295 under `RE-POINTING SEARCH:`.*
+
+- **Clause 4.** Replace "The file's existing statement of what may be copied to the checker as a ground rule and what may not" with "The file's statement beginning "A ground rule is a standing constraint on the effort that is true of any node's work"".
+
+*The manager's note:* node 295's worker also reported that clause 3's "the two routes by which they reach it" was already stale before that rewrite, since the file has had one route since the standards moved into a file. It did not repair it, and no replacement is fixed by the landed text, so nothing is filed for clause 3.
+
+## Flags
+
+`164.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from node 295's re-pointing list, on the ground that every word of the replacement is fixed by commit `76e66e3`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 334](334-land-the-open-repairs-to-the-checker-contract-in-one-change.md), the merge [node 329](329-group-the-open-nodes-against-the-worker-contracts.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

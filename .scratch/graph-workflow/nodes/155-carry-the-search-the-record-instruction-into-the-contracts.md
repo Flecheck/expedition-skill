@@ -1,7 +1,8 @@
 # Carry the search-the-record instruction into the five worker contracts
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 333
 
 Blocked by: none
 
@@ -81,3 +82,45 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 ## Flags
 
 `155.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
+
+## Amendment, 2026-09-25 (from node 294)
+
+*Written by [node 294](294-rewrite-the-implementation-contract.md)'s worker and filed by the manager, after that node's work landed as commit `724c361`. Every word of the replacement is fixed by that commit: it quotes `expedition-implementation/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 294's worker's search is on node 294 under `RE-POINTING SEARCH`.*
+
+- **The sentence before its clauses**, as amended by node 290. Replace it with: "Each carries a `## What you read` section opening `Read each of these. Do not trust any summary of them.`, or, in `.claude/skills/expedition-research/SKILL.md` and `.claude/skills/expedition-implementation/SKILL.md`, `Read each of the following. Do not trust any summary of them.`, followed by a bulleted list of pointers and then a line stating that `flags.md` is not the worker's."
+
+*The manager's note:* the worker reported that in the implementation file the `flags.md` line ("Leave `flags.md` unread. It is not yours.") follows the list directly, and that the decisions bullet is byte-identical, so clauses 1, 3 and 4 still hold.
+
+`155.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 294](294-rewrite-the-implementation-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `724c361`.
+
+## Amendment, 2026-09-25 (from node 291)
+
+*Written by [node 291](291-rewrite-the-grilling-contract.md)'s worker and filed by the manager, after that node's work landed as commit `0a3e68b`. Every word of the replacement is fixed by that commit: it quotes `expedition-grilling/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 291's worker's search is on node 291 under `RE-POINTING SEARCH`.*
+
+- **The sentence before its clauses**, as amended by node 294. Replace it with: "Each carries a `## What you read` section opening `Read each of these. Do not trust any summary of them.`, or, in `.claude/skills/expedition-research/SKILL.md`, `.claude/skills/expedition-implementation/SKILL.md` and `.claude/skills/expedition-grilling/SKILL.md`, `Read each of the following. Do not trust any summary of them.`, followed by a bulleted list of pointers and then a line stating that `flags.md` is not the worker's."
+
+`155.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 291](291-rewrite-the-grilling-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0a3e68b`.
+
+## Amendment, 2026-09-25 (from node 292)
+
+*Written by [node 292](292-rewrite-the-precondition-contract.md)'s worker and filed by the manager, after that node's work landed as commit `ede2c76`. Every word of the replacement is fixed by that commit: it quotes `expedition-precondition/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 292's worker's search is on node 292 under `RE-POINTING SEARCH` and its addendum.*
+
+- **The sentence before its clauses**, as amended by node 291. In the list of files whose `## What you read` section opens `Read each of the following. Do not trust any summary of them.`, add `.claude/skills/expedition-precondition/SKILL.md`.
+
+*The manager's note:* the worker reported that in the precondition file the `flags.md` line follows the list directly, that the list now has four bullets because the node-file bullet was split in two, and that the decisions bullet is byte-identical, so clauses 1, 3 and 4 still hold.
+
+`155.4` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 292](292-rewrite-the-precondition-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `ede2c76`.
+
+## Amendment, 2026-09-25 (from node 293)
+
+*Written by [node 293](293-rewrite-the-prototype-contract.md)'s worker and filed by the manager, after that node's work landed as commit `6d26be1`. Every word of the replacement is fixed by that commit: it quotes `expedition-prototype/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 293's worker's search is on node 293 under `RE-POINTING SEARCH`.*
+
+- **The sentence before its clauses**, as amended by node 291. In the list of files whose `## What you read` section opens `Read each of the following. Do not trust any summary of them.`, add `.claude/skills/expedition-prototype/SKILL.md`.
+
+*The manager's note:* the worker reported that in the prototype file the `flags.md` line ("Leave `flags.md` unread. It is not yours.") follows the list directly, and that the decisions bullet ("`decisions.md` — the sections the spawn names") is byte-identical, so clauses 1, 3 and 4 still hold.
+
+`155.5` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 293](293-rewrite-the-prototype-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6d26be1`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 333](333-land-the-open-repairs-to-the-five-worker-contracts-in-one-change.md), the merge [node 329](329-group-the-open-nodes-against-the-worker-contracts.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

@@ -1,7 +1,8 @@
 # Co-locate the scan rules with the mechanical checks
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 339
 
 ## Question
 
@@ -76,3 +77,7 @@ discipline the older eight lack — **evidence that the gap is known locally and
 **A second lever for the same finding.** The scattering is also a **leading-word** failure: the standard's
 *"Repeated as a token, never as a sentence"* against `unwrap`, which is stated as a sentence at four sites in the
 checker contract (`:64-66`, `:92-93`, `:110-111`, `:301-305`) and appears in **no other shipped file at all**.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 339](339-tie-graph-conventions-mds-mechanical-checks-to-the-writes-that.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

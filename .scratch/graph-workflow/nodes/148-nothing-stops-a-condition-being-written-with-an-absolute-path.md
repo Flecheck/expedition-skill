@@ -1,7 +1,8 @@
 # Nothing stops the next acceptance condition being written with an absolute path
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 333, 338
 
 Blocked by: none
 
@@ -88,3 +89,45 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 - **Clause 2.** Replace "the sentence beginning `A **path** may say where`" with "the sentence beginning `A path may say where:`". The reason "because the checker has the repo" is now cut. Node 148's own demand, adding the relative-path rule and its reason, is unaffected.
 
 `148.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
+
+## Amendment, 2026-09-25 (from node 294)
+
+*Written by [node 294](294-rewrite-the-implementation-contract.md)'s worker and filed by the manager, after that node's work landed as commit `724c361`. Every word of the replacement is fixed by that commit: it quotes `expedition-implementation/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 294's worker's search is on node 294 under `RE-POINTING SEARCH`.*
+
+- **Clause 1**, as amended by node 290. Replace it with: "the bullet beginning `A path may say where, because the checker has the repo` in `.claude/skills/expedition-research/SKILL.md` and `.claude/skills/expedition-implementation/SKILL.md`, and in any of the five not yet rewritten, the bullet beginning `a **path** may say where`".
+
+`148.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 294](294-rewrite-the-implementation-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `724c361`.
+
+## Amendment, 2026-09-25 (from node 291)
+
+*Written by [node 291](291-rewrite-the-grilling-contract.md)'s worker and filed by the manager, after that node's work landed as commit `0a3e68b`. Every word of the replacement is fixed by that commit: it quotes `expedition-grilling/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 291's worker's search is on node 291 under `RE-POINTING SEARCH`.*
+
+- **Clause 1**, as amended by node 294. Replace it with: "the bullet beginning `A path may say where, because the checker has the repo` in `.claude/skills/expedition-research/SKILL.md`, `.claude/skills/expedition-implementation/SKILL.md` and `.claude/skills/expedition-grilling/SKILL.md`, and in any of the five not yet rewritten, the bullet beginning `a **path** may say where`".
+
+`148.4` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 291](291-rewrite-the-grilling-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0a3e68b`.
+
+## Amendment, 2026-09-25 (from node 292)
+
+*Written by [node 292](292-rewrite-the-precondition-contract.md)'s worker and filed by the manager, after that node's work landed as commit `ede2c76`. Every word of the replacement is fixed by that commit: it quotes `expedition-precondition/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 292's worker's search is on node 292 under `RE-POINTING SEARCH` and its addendum.*
+
+- **Clause 1**, as amended by node 291. In the list of files where the bullet begins `A path may say where, because the checker has the repo`, add `.claude/skills/expedition-precondition/SKILL.md`.
+
+`148.5` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 292](292-rewrite-the-precondition-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `ede2c76`.
+
+## Amendment, 2026-09-25 (from node 293)
+
+*Written by [node 293](293-rewrite-the-prototype-contract.md)'s worker and filed by the manager, after that node's work landed as commit `6d26be1`. Every word of the replacement is fixed by that commit: it quotes `expedition-prototype/SKILL.md`'s after-text. The minting author's condition and the earlier amendments above are left as they were. Node 293's worker's search is on node 293 under `RE-POINTING SEARCH`.*
+
+- **Clause 1**, as amended by node 291. In the list of files that hold the bullet beginning `A path may say where, because the checker has the repo`, add `.claude/skills/expedition-prototype/SKILL.md`.
+
+*The manager's note:* the worker reported that the absolute-path grep of clause 3 returns 0.
+
+`148.6` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 293](293-rewrite-the-prototype-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6d26be1`.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Its worker-contract part is replaced by [node 333](333-land-the-open-repairs-to-the-five-worker-contracts-in-one-change.md), the merge [node 329](329-group-the-open-nodes-against-the-worker-contracts.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole. Its `graph-conventions.md` sentence is held on node 329 as its remainder R1, for the manager-contract merge of [node 330](330-group-the-open-nodes-against-the-manager-contract.md) to absorb; the manager adds the replacement there when that merge is filed.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Its `graph-conventions.md` sentence, held on node 329 as remainder R1, is now carried by [node 338](338-say-in-graph-conventions-md-which-file-of-the-map.md) as clause 17a or 17b, on the human's "ok" to node 330's merge.

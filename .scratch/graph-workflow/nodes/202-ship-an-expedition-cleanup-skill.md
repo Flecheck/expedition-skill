@@ -3,7 +3,7 @@
 Type: implementation
 Status: open
 
-Blocked by: 201
+Blocked by: 338
 
 ## Question
 
@@ -93,3 +93,5 @@ care"*.
 
 **Its clause 9's 5,000-byte cap is the author's own** and is not drawn from any rule of this effort's. The manager
 records that it was chosen rather than derived, so a worker that finds it binding has somewhere to point.
+
+*The manager's note, 2026-09-26:* node 201 was superseded by [node 338](338-say-in-graph-conventions-md-which-file-of-the-map.md), so this node's blocker is re-pointed to 338.

@@ -1,7 +1,8 @@
 # `graph-conventions.md` still says `map.md`'s `## Notes` holds the label vocabulary and the bar's commands
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 338
 
 Blocked by: 140
 
@@ -36,3 +37,7 @@ steps and not this bullet's description."*
 not taken it.** Both edit one file and both wait on node 140, so they serialise on the code slot regardless; keeping
 them apart costs a node file and keeps two conditions each answerable on its own. Whoever works the later of the two
 should read the earlier's landed diff first.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 338](338-say-in-graph-conventions-md-which-file-of-the-map.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

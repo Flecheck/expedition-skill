@@ -1,7 +1,8 @@
 # A worker reports what the map did not tell it
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 333
 
 ## Question
 
@@ -52,3 +53,7 @@ Done means every one of the following is true of the finished tree.
    `.claude/`.
 7. No hard rule in any of the five files is reworded, nothing else in them changes, and no file outside them
    changes.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 333](333-land-the-open-repairs-to-the-five-worker-contracts-in-one-change.md), the merge [node 329](329-group-the-open-nodes-against-the-worker-contracts.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

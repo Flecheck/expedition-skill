@@ -549,3 +549,5 @@ amended neither.** The pen here is the manager's, node 252's and node 94's worke
 being exercised silently: whether this node carries node 252's rule or a fresh node does is a judgement about scope,
 and it is named for the human in node 252's pick report. **This node is also the standing evidence in node 252's own
 answer** that a permission can be granted and never exercised.
+
+*The manager's note, 2026-09-26:* [node 311](311-may-the-human-amend-a-held-nodes-condition-of-their-own-accord.md) reports that it contradicts part of this node's landed work: flag 95.3's unclaimed-only boundary was applied in `graph-conventions.md` to the human as well as to the two agents, and it holds only for the agents. The fix is [node 321](321-remove-graph-conventions-limit-on-the-human-amending-a-held-nodes-condition.md). The rest of this node's work stands.

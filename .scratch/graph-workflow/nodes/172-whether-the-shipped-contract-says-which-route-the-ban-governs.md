@@ -3,7 +3,7 @@
 Type: grilling
 Status: open
 
-Blocked by: 164
+Blocked by: 334
 
 ## Question
 
@@ -33,3 +33,5 @@ human. The flag and this node are two halves of one thing.
 **The human has already decided the effort-local half**, `verbatim`: *"I would say add it to the rules in the map
 somewhere, not the skill at it is relevant only for this project"*. This node asks about the shipped file only, which
 is the half that direction did not reach.
+
+*The manager's note, 2026-09-26:* node 164 was superseded by [node 334](334-land-the-open-repairs-to-the-checker-contract-in-one-change.md), so this node's blocker is re-pointed to 334.

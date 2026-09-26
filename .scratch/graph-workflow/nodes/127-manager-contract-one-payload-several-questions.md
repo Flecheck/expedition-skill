@@ -1,7 +1,8 @@
 # Say in the manager's contract that one payload may carry several of one worker's questions
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 336
 
 Blocked by: none
 
@@ -52,3 +53,7 @@ copying.
 118](118-carry-the-channel-free-rule-into-the-contract.md) both edit `## What is in front of the human, and when`.
 Node 118 carries node 108's channel-free rule into the same section. With a code slot of one they serialise, but
 whichever runs second reads a section the other moved.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 336](336-carry-the-rules-on-what-reaches-the-human-the-code.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

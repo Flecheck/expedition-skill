@@ -1,7 +1,8 @@
 # Ship the cleanup exemption and the flag check into the conventions document
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 338
 
 Blocked by: none — [node 194](194-ship-where-the-never-delete-rule-stops.md) landed as `02f9e38`
 
@@ -57,3 +58,7 @@ over one file; that sequencing is not an edge and none of those nodes blocks thi
 went and where it is recoverable from is the *announcement* the never-delete rule's own harm clause is about —
 *"Quiet deletion is most damaging and least visible"*. The human put it as a property of the act rather than of the
 text: *"For the cleanup skill, it is designed to delete things so it should be fine."*
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 338](338-say-in-graph-conventions-md-which-file-of-the-map.md), the merge [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.

@@ -1,7 +1,8 @@
 # The checker is given the review route instead of finding it
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 143
 
 ## Question
 
@@ -57,3 +58,7 @@ rather than inside it.
 [The checker has no form for two clauses of one condition that cannot both hold](66-two-clauses-that-cannot-both-hold.md)
 and [What a finding must carry so it can be swept](71-what-a-finding-must-carry.md), both of which edit the same
 file. **Those three should probably be one node**, on the ground node 48 was bundled: one file, one check, one gate.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Made unnecessary by [node 143](143-rules-arrive-by-the-spawn-never-by-a-search.md): the checker is no longer told to find its standards, and reads `map-implementation-rules.md` itself. Node 329's worker recommended this and the human took it with their "ok".
