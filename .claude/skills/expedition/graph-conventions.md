@@ -150,7 +150,7 @@ Supersedes: 12
 Superseded by: 88
 
 ## Question
-## Acceptance condition     <- implementation only; written by the spawning node
+## Acceptance condition     <- implementation only; written by the agent or manager that created the node
 ## Answer                   <- appended on resolution
 ## Flags
 ## Review

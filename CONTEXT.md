@@ -192,8 +192,9 @@ Turning a flag, or a one-line note of a difficulty met while working, into a nod
 _Avoid_: postpone, defer (both are too close in meaning to park)
 
 **Acceptance condition**:
-What done means for one implementation node, written by the node that spawned it, before any work
-starts. Its worker leaves it as written, and may not rewrite it. Where the worker judges the condition
+What done means for one implementation node, written before any work starts. Its worker leaves it as
+written, and may not rewrite it. Where an agent created the node, that agent writes the condition.
+Where the manager created the node, the manager writes it. Where the worker judges the condition
 wrong, the worker raises the matter, and does not raise a flag of its own. The `CONDITION-WRONG`
 flag is the manager's to file, and only where the human answered that raise by saying to carry on and
 ship anyway.
