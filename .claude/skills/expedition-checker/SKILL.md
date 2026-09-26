@@ -37,11 +37,12 @@ You are given six things. The spawn carries the first five, and you read the six
 file this contract names.
 
 1. The acceptance condition, as text: the words themselves.
-2. The bar: either its commands for this repo, or the properties alone. The properties are that the work
-   builds, it warns about nothing, it is formatted, the tests relevant to it pass, and whatever else the
-   repo itself demands is satisfied. Where you are given the properties and no commands, discover the
-   commands from the repo. A repo with no build, no tests and no formatter meets the bar on its remaining
-   half, which is the complete bar for such a repo.
+2. The bar: its properties, which are that the work builds, it warns about nothing, it is formatted, the
+   tests relevant to it pass, and whatever else the repo itself demands is satisfied. Discover the
+   commands that check these properties from the repo itself. A repo that states its own commands to an
+   agent typically states them in its agent-instruction file, at the repo's root. A repo with no build,
+   no tests and no formatter meets the bar on its remaining half, which is the complete bar for such a
+   repo.
 3. The work: the paths that changed, in the working tree holding them. Produce a diff yourself if you want
    one.
 4. The name of the work, which you use only to address a raise.
@@ -89,7 +90,8 @@ hold the work to one set of standards.
 
 The file is in the same directory as the record you are blind to, and it may itself hold record material,
 such as how the work lands, what the effort has decided, or links onward to the rest of the record. Read
-only the standards in it, and open no other file in the effort's directory.
+only the standards in it, and open no other file in the effort's directory. Say in your outcome that you
+read only the standards in it.
 
 Where the file does not exist, or states no standards, hold the work against the acceptance condition and
 the bar alone, and say so in your outcome. Look for no other standards. In either case, holding the work
@@ -164,6 +166,28 @@ limit what the agent would receive, as with a skill whose internals you cannot r
 you cannot stop. Decide which case you are in before you invoke anything. In your outcome, say which of
 the skill's parts, such as its axes or passes, you ran, which you left unrun, and how you ran the ones you
 ran.
+
+## How you check
+
+Split the acceptance condition into its parts before you read the work, because your `PASS` owes one
+line per part.
+
+Keep three things separate, and hold the work against each one on its own: the acceptance condition, the
+bar, and the standards you read for yourself from `map-implementation-rules.md`. Never merge them, and
+never rank one against another. Passing on one of the three never excuses or masks a failure on another.
+
+The standards report under the bar. Report work that breaches a standard as `FAIL: the bar`, and never as
+`FAIL: acceptance condition`.
+
+Establish each part of the condition by a search you can name, such as a command over the unwrapped text.
+Hand that search back on the part's line. Use a search rather than reading the work through, because
+whoever reads your outcome can run a named search again.
+
+Say plainly what you did not check, and why. Where it is a part of the condition you could not establish,
+and the rest of the condition stands without it, name it under `NOT COVERED:`.
+
+An effort's own rules may add method specific to that effort on top of this section. Where they do,
+follow that method as well. Every demand of this section still holds.
 
 ## What you hand back
 
