@@ -1,24 +1,26 @@
 # Expedition
 
-Expedition is a workflow for taking a loose idea all the way to finished code. One manager thread
-owns a graph of nodes and spawns one worker per node; the human talks only to the manager. Its
-ancestor is Matt Pocock's `/wayfinder`, which it supersedes for efforts it is run on, and it borrows
-its one-liaison-behind-a-crew shape from [firstmate](https://github.com/kunchenguid/firstmate).
+Expedition is a workflow that takes a loose idea all the way to finished code. One manager thread
+owns a graph of nodes and spawns one worker per node. The human talks only to the manager.
+Its ancestor is Matt Pocock's `/wayfinder`, and Expedition replaces `/wayfinder` on the efforts
+Expedition is run on. From [firstmate](https://github.com/kunchenguid/firstmate) it takes this design:
+one agent talks to the human on behalf of a crew of agents.
 
-This glossary is the vocabulary the skill files are written in. It grows only as terms are actually
-resolved, and the reasoning behind each one lives in the node that settled it, under
+This glossary defines the words the skill files are written in. A term is added only when the node
+that settles it resolves. The reasoning behind each term is in the node that settled it, under
 `.scratch/graph-workflow/nodes/`.
 
 ## The effort and its graph
 
 **Expedition**:
-The workflow itself, invoked as `/expedition`. Where its ancestor charts the way, an expedition
-travels it — implementation lives inside the graph rather than downstream of it.
+The workflow itself, invoked as `/expedition`. Its ancestor works out what the work is, and leaves the
+implementation to follow afterwards. An expedition also implements the work, as nodes inside its own
+graph.
 _Avoid_: graph-agent (the repository's name, not the workflow's), wayfinder
 
 **Effort**:
-One expedition's worth of work: a single graph, from loose idea to the human closing it. Its files
-live in `.scratch/<effort>/`, and its name is that directory's.
+One expedition's work: a single graph, from a loose idea until the human closes the effort. Its files
+are in `.scratch/<effort>/`, and the effort's name is the name of that directory.
 _Avoid_: project, run, epic, session
 
 **Graph**:
@@ -32,109 +34,115 @@ _Avoid_: issue, ticket, card, item (each names something in a hosted tracker, an
 real ones), gap, task
 
 **Map**:
-The whole effort at low resolution: the destination, the standing notes, the fog, and what is out of
-scope. It is more than one file and no reader reads all of it — the part every worker reads cold once
-per node holds what every worker can act on, and material only one kind of reader acts on sits in a
-sibling of that part. It indexes decisions and never restates one.
+An outline of the whole effort: the destination, the standing notes, the fog, and what is out of
+scope. It is more than one file, and no reader reads all of it. Every worker reads one part of it
+once per node, and that part holds what every worker can act on. Material that only one kind of
+reader acts on is kept in another file beside that part. The map points to decisions and does not
+restate them.
 _Avoid_: index, plan, README
 
 **Destination**:
-What reaching the end of an effort looks like. It fixes the scope, which is what makes work beyond it
-out of scope rather than fog. It also says, in one line, whether the effort is expected to reach it.
-Where an effort is not expected to reach it, that line is where a manager reads that a non-empty
-frontier is that effort's steady state rather than a defect.
+What the end of an effort looks like. It fixes the scope, so work beyond the destination is out of
+scope and is not fog. It also says, in one line, whether the effort is expected to reach its
+destination. Where the effort is not expected to reach it, that line tells a manager that a frontier
+that is not empty is the effort's steady state and not a defect.
 _Avoid_: goal, objective, definition of done
 
 **Frontier**:
-The nodes that are open, unblocked and unclaimed — the work takeable right now.
+The nodes that are open, unblocked and unclaimed: the work that can be taken now.
 _Avoid_: backlog, queue, ready
 
 **Fog**:
-In-scope work you can tell is coming but cannot yet phrase as a question. Sharpness, not scope, keeps
-something here.
+In-scope work that is known to be coming but cannot yet be phrased as a question. Work stays in the
+fog until it can be phrased as one.
 _Avoid_: unknowns, TBD, icebox
 
 **Out of scope**:
-Work consciously ruled beyond the destination. Both a node status and a section of the map, and it
-never graduates into fog.
+Work deliberately ruled to lie beyond the destination. It is both a node status and a section of the
+map. Work that is out of scope stays out of the fog.
 _Avoid_: retired (that is supersession, a different thing), wontfix, cancelled
 
 **Labels**:
-The family or part a node belongs to, so work can be scoped to one area of a large graph. A filter
-and never structure: no order may be inferred from a label, and a label is never a node's identity.
+The family or part a node belongs to, so that work can be limited to one area of a large graph. A
+label only filters nodes. No order may be inferred from a label, and a label is never a node's
+identity.
 _Avoid_: tags, categories
 
 ## The actors
 
 **Manager**:
-The single long-lived thread that owns the graph: it picks what to work on, spawns one worker per
-node, is the only writer of the graph's record, and is the only thing the human ever talks to. It
-never answers a question on the human's behalf. The record is what it alone writes — every answer,
-status, index line and flag — rather than every byte of the graph's files.
+The single long-lived thread that owns the graph. It picks what to work on, spawns one worker per
+node, is the only writer of the graph's record, and is the only thing the human ever talks to. A
+question put to the human is the human's to answer, and the manager never answers one on the human's
+behalf. The record is every answer, status, index line and flag, and the manager alone writes it.
+Other text in the graph's files is not part of the record.
 _Avoid_: orchestrator, first mate, coordinator, main thread
 
 **Scribe**:
-How the manager writes. It pastes what an agent handed back under the right heading and never
-re-authors, shortens, re-orders or re-renders it, and anything of its own goes beside that text as its
-own marked note. Assembling is inside the boundary — ordering pasted pieces, laying runs end to end,
-extracting a block of text to hand to somebody else — and rewriting them into a gloss is not.
+How the manager writes. It pastes what an agent handed back under the right heading, as it was
+handed back. It never re-authors, shortens, re-orders or re-renders that text. Anything of its own
+goes beside that text, as its own marked note. The manager may assemble pasted pieces: put them in
+order, join them into one continuous text, and extract a block of text to hand to somebody else. It
+may not rewrite the pieces into a gloss.
 _Avoid_: editor, curator, secretary
 
 **Worker**:
 An agent spawned to work exactly one node. It reads the repo, does none of the graph's bookkeeping,
-and never addresses the human directly. Where its own node's work is itself a change to a graph file
-it makes that change itself; what stays the manager's is the recording. Named for its role rather
-than for the harness, because the harness is replaceable.
+and never addresses the human directly. Anything it has for the human goes through the manager.
+Where its own node's work is a change to a graph file, the worker makes that change itself, and the
+recording stays the manager's. It is named for its role, not for the harness, because the harness can
+be replaced.
 _Avoid_: subagent, crewmate, subtask (which names the work, not the worker)
 
 **AFK / HITL**:
-Whether a node needs the human in order to be worked. An AFK worker needs no live answer to proceed, though
-it may still raise a broken premise; a HITL worker cannot finish without the human's own words. Both are
-properties of the node's kind rather than of the harness running it.
+Whether a node needs the human in order to be worked. An AFK worker needs no live answer to proceed,
+though it may still raise a broken premise. A HITL worker cannot finish without the human's own
+words. Both are properties of the node's kind, not of the harness that runs it.
 _Avoid_: autonomous, unattended, automatic, interactive
 
 **Attempt**:
-One worker instance on one node. A node outlives its attempts: a dead worker is replaced, and the
-replacement is a new attempt.
+One worker instance on one node. A node lasts longer than any of its attempts: a worker that dies is
+replaced, and the replacement is a new attempt.
 _Avoid_: retry, run, session
 
 **Checker**:
 The second, independent, read-only agent that checks a landed implementation against its acceptance
 condition and the bar before the human sees it. It checks against something stated, so it is not a
-second opinion. Started by the manager and never by the implementer, because whoever spawns it chooses
-what it sees. Its outcomes are `PASS` and `FAIL`, and a `FAIL` names which of the two was not met. It may
-instead raise, in which case it issues no verdict at all — its characteristic case is an acceptance
-condition that is incoherent or unmeasurable, which it alone ever reads cold.
-_Avoid_: reviewer, verifier, auditor — reviewing is the human's; reject — that is the human's word at
-the gate
+second opinion. The manager starts it, and the implementer never does, because whoever spawns it
+chooses what it sees. Its outcomes are `PASS` and `FAIL`, and a `FAIL` names which of the two was
+not met. It may raise instead, and then it gives no outcome at all. The typical reason it raises is an
+acceptance condition that is incoherent or unmeasurable. The checker is the only agent that reads the
+condition without having read the node.
+_Avoid_: reviewer, verifier, auditor (reviewing is the human's), reject (the human's word at the
+gate)
 
 ## The five kinds of node
 
-Each names what its worker does, and three of them name a skill the worker invokes.
+Each kind names what its worker does. Three of the kinds name a skill the worker invokes.
 
 **grilling**:
 A decision only the human can make, reached by interviewing them. Its worker may put several of its
-questions in one payload, independence being what decides which of them share one.
+questions in one payload. Only questions that are independent of each other share a payload.
 _Avoid_: decision, question, interview
 
 **research**:
-A fact from outside the working directory, read and reported. Never involves the human.
+A fact from outside the working directory, read and reported. It is worked without the human.
 
 **prototype**:
-A probe built to be reacted to and then discarded. Need not be code, and lives outside the product
-tree.
+A probe built to be reacted to and then discarded. It need not be code. It is kept outside the
+product tree.
 
 **implementation**:
 Product code that lands in the repo and has to be correct. Its worker needs no live answer in order to
-proceed and raises only when its premise is broken. Its gate is the last point at which the human can
-act on it, and is neither where the node ends nor where it resolves: after approval the manager commits
-the work and lands it, and the node resolves after that.
+proceed, and raises only when its premise is broken. Its gate is the last point at which the human can
+act on it. The node continues after its gate: after approval the manager commits the work and lands
+it, and the node resolves after that.
 
 **precondition**:
-Work that must happen before something else can be decided. It decides nothing, probes nothing, and
-produces no product code.
-_Avoid_: task (every node is a task in ordinary English, and it collides with the word for a worker),
-chore, setup
+Work that must happen before something else can be decided. It does only that work: it decides
+nothing, probes nothing, and produces no product code.
+_Avoid_: task (every node is a task in ordinary English, and it is too close to the words used for a
+worker), chore, setup
 
 ## Working a node
 
@@ -143,8 +151,9 @@ Taking a node off the frontier before any work starts, so that a concurrent sess
 
 **Handover**:
 What a worker returns when it has finished: its node's answer written as the node will hold it, the
-index line, its flags, and the nodes it surfaced or invalidated. The manager files it unaltered.
-_Avoid_: report (the closing report owns that word), return, payload, deliverable
+index line, its flags, the new nodes it found, and the nodes it invalidated. The manager files it
+unaltered.
+_Avoid_: report (the closing report uses that word), return, payload, deliverable
 
 **Resolve**:
 Answering a node's question and writing that answer onto it. The only outcome that satisfies an edge.
@@ -156,42 +165,44 @@ superseded node does not satisfy an edge, so everything blocked on it stays bloc
 _Avoid_: revise, obsolete, rewrite
 
 **Revision**:
-An already-settled node turning out wrong. Handled in place where the node still needs to exist, and
-by supersession where it does not.
+An already-settled node that turns out to be wrong. It is handled in place where the node still needs
+to exist, and by supersession where it does not.
 _Avoid_: correction (a correction round is a different thing), change request
 
 **Cascade**:
-An AFK pass that propagates a known revision outward over edges and code, queueing graph edits rather
-than interrupting the human.
+An AFK pass that propagates a known revision outward along edges and into code. It queues graph
+edits and does not interrupt the human.
 
 **Sweep**:
-A pass looking for revisions nobody propagated. The same work as a cascade in the opposite direction:
-a cascade knows what changed, and a sweep is looking.
+A pass that looks for revisions nobody propagated. It is the same work as a cascade, done in the
+opposite direction: a cascade starts from a known change, and a sweep searches for changes.
 _Avoid_: audit, full cascade
 
 **Flag**:
-A note recording a judgement an agent made on its own and the human may want to revisit — usually a
-worker's, and the manager's where a judgement of its own reached the graph. Raising one blocks nothing.
-It is settled at the first human moment its node's close reaches — an implementation node's gate where
-it has one, and otherwise the pick report that closes the node — and reaches the closing report only
-where the human never spoke again.
+A note recording a judgement that an agent made on its own and that the human may want to revisit.
+The agent is usually a worker, and it is the manager where a judgement of the manager's own went into
+the graph. Raising a flag blocks nothing. A flag is settled at the first moment, after its node's
+worker has handed back, at which the node is put in front of the human. That moment is an
+implementation node's gate where the node has one, and otherwise the pick report that closes the
+node. A flag goes into the closing report only where the human never spoke again.
 _Avoid_: TODO, warning
 
 **Promote**:
-Turning a flag, or a one-line note of friction, into a node.
-_Avoid_: postpone, defer (both blur into park)
+Turning a flag, or a one-line note of a difficulty met while working, into a node.
+_Avoid_: postpone, defer (both are too close in meaning to park)
 
 **Acceptance condition**:
 What done means for one implementation node, written by the node that spawned it, before any work
-starts. Its worker may not rewrite it, and a condition it judges wrong is a raise rather than a flag of
-its own: the `CONDITION-WRONG` flag is the manager's to file, and only where the human's answer to that
-raise was to carry on and ship it anyway.
+starts. Its worker leaves it as written, and may not rewrite it. Where the worker judges the condition
+wrong, the worker raises the matter, and does not raise a flag of its own. The `CONDITION-WRONG`
+flag is the manager's to file, and only where the human answered that raise by saying to carry on and
+ship anyway.
 _Avoid_: definition of done, criteria, spec
 
 **The bar**:
-The standing quality properties every implementation must leave the tree meeting — builds, no
-warnings, formatted, tests pass where relevant, plus whatever the repo itself demands. Properties
-rather than commands: the commands are discovered per repo.
+The standing quality properties that every implementation must leave the tree meeting: it builds, it
+has no warnings, it is formatted, the relevant tests pass, and whatever else the repo itself demands
+is met. The bar is a list of properties. The commands that check them are discovered in each repo.
 _Avoid_: quality bar, default checks, CI
 
 **Code slot**:
@@ -202,78 +213,81 @@ _Avoid_: write lock, code lock — there is no lock
 ## Talking to the human
 
 **Relay**:
-The channel and the payload carrying a worker's questions to the human and the answers back. One
-payload holds one of that worker's questions or several of them, and either way it is one thing in
-front of the human; it never carries a second worker's. The manager passes both along unaltered and
-answers nothing itself.
+The channel and the payload that carry a worker's questions to the human and the answers back. One
+payload holds one or several of that worker's questions, and it is one thing in front of the human
+either way. A payload carries the questions of one worker only. The manager passes the questions and
+the answers along unaltered, and answers nothing itself.
 _Note_: firstmate's Relay means external channels like X and Discord, which this workflow rules out
 of scope.
 
 **Raise**:
-An agent putting something to the human. Whether it waits is a property of the channel rather than of the
-word: a worker's raise stops its work until the human acts, a checker's question handed back alongside
-its outcome does not, and a flag waits for the moment that closes its node — an implementation node's
-gate, or the pick report. The gate is the scheduled form of the blocking kind, on a finished
-diff; a worker opens an unscheduled one when its premise is broken — the thing that is wrong is not the
-worker's to change, the decision changes a lot, or the choice is genuinely too hard to make alone. Below
-that line it decides and leaves a flag instead. A blocking raise holds the code slot while it waits, it
-pre-empts grilling work in the manager's queue, and its answer either continues that worker or stops it.
-_Avoid_: escalate, interrupt; and *ask*, the ordinary mode of a worker built to question the human, where
-a raise is what a worker meant to work mostly by itself does when it needs input it does not have
+An agent putting something to the human. Whether a raise waits depends on its channel. A worker's
+raise stops its work until the human acts. A checker's question, handed back alongside its outcome,
+does not wait for the human. A flag waits for the moment that closes its node: an
+implementation node's gate, or the pick report. The gate is the scheduled form of a blocking raise,
+made on a finished diff. A worker opens an unscheduled blocking raise when its premise is broken: the
+thing that is wrong is not the worker's to change, the decision changes a lot, or the choice is
+genuinely too hard to make alone. Where none of these holds, the worker decides and leaves a flag
+instead. A blocking raise holds the code slot while it waits, and is put ahead of grilling work in the
+manager's queue. Its answer either continues that worker or stops it.
+_Avoid_: escalate, interrupt, and *ask* (asking is the ordinary work of a worker built to question the
+human, and a raise is what a worker meant to work mostly by itself does when it needs input it does
+not have)
 
 **Manager note**:
 The manager's own annotation on a relayed question, drawn only from context it already holds.
 
 **Verbatim / paraphrase**:
-The two ways a recorded answer can stand — the human's own words, or the manager's rendering of them.
+The two forms a recorded answer can take: the human's own words, or the manager's rendering of them.
 _Avoid_: provenance (an abstraction over a two-valued label)
 
 **Divergence**:
 A marker on a recorded answer noting that the human contradicted the recommendation they were given.
 
 **Park**:
-The human deferring a live question. The node stores its progress and returns to open, and the
-answers it already holds stay banked.
+The human deferring a live question. The node stores its progress and returns to open, and it keeps
+the answers it already holds as banked answers.
 _Avoid_: pause, snooze, postpone
 
 **Banked answer**:
-An answer the human has already given, held on a parked node and waiting for a fresh worker. Paid for
-once.
+An answer the human has already given, held on a parked node and waiting for a fresh worker. The human
+is not asked for it a second time.
 _Avoid_: cached, saved
 
 **Interview**:
-The record of a HITL exchange on a node — its attempts, and the human's answers with their
-verbatim-or-paraphrase standing.
+The record of a HITL exchange on a node: its attempts, and the human's answers, each marked verbatim
+or paraphrase.
 _Avoid_: comments, discussion, log
 
 ## Landing code
 
 **Gate**:
-The one point on the code path where work stops until the human acts: the manager raises a checked
-diff, and nothing is committed until it is approved. It has exactly three outcomes — approval, a
-correction round, or a reject — and the manager assembles what it raises out of text others wrote,
-never rendering the diff into the conversation.
+The one point on the code path where work stops until the human acts. The manager raises a checked
+diff, and nothing is committed until the diff is approved. The gate has exactly three outcomes:
+approval, a correction round, or a reject. The manager assembles what it raises out of text others
+wrote, and does not render the diff into the conversation.
 _Avoid_: review (that is what the human does at the gate), sign-off, PR
 
 **Approval**:
 The human's yes at the gate. The only thing that permits a code commit.
 
 **Reject**:
-The human's finding at the gate that implementing the node surfaced something meaning its code should
-not exist. Not a verdict on quality — a node whose code is merely wrong takes a correction round — so
-the node does not resolve, the working tree is cleaned, and what survives is the discovery. The word is
-the human's alone; the checker's outcomes are `PASS` and `FAIL`.
+The human's finding at the gate that implementing the node revealed that its code should not exist.
+A reject is not a verdict on quality: a node whose code is merely wrong takes a correction round. On a
+reject the node does not resolve, and the working tree is cleaned. What is kept is the discovery. The
+word is the human's alone; the checker's outcomes are `PASS` and `FAIL`.
 _Avoid_: refuse, discard, abandon (which names losing the code, not learning why)
 
 **Salvage**:
-The unfinished work saved off a stopped attempt before the working tree is cleaned: a path-limited diff the
-manager writes without reading it, kept out of the product tree and linked from whichever node inherits the
-work. Saved and never finished — nothing is tidied, made to build, or brought to the bar on its way out.
+The unfinished work saved from a stopped attempt before the working tree is cleaned. It is a
+path-limited diff that the manager writes without reading. It is kept out of the product tree, and
+linked from the node that takes over the work. It is saved and never finished: nothing in it is
+tidied, made to build, or brought to the bar when it is saved.
 _Avoid_: stash, WIP, draft, backup
 
 **Correction round**:
 One cycle of the human saying what is wrong and the worker fixing it, while the node stays claimed.
-Uncapped, and neither a revision nor a check.
+The number of rounds has no limit. A correction round is not a revision, and it is not a check.
 _Avoid_: review round, iteration, revision
 
 **Code commit**:
@@ -282,12 +296,12 @@ and made by the manager on approval.
 _Avoid_: landing commit
 
 **Graph commit**:
-A commit of an effort's own markdown files, made by the human whenever they like. It passes through
-no gate and names no node.
+A commit of an effort's own markdown files, made by the human whenever they like. No gate applies to
+it, and it names no node.
 _Avoid_: bookkeeping commit
 
 **Node trailer**:
-`Node: <effort>/<NN>` in a code commit's body — the join key between git history and the graph. It
+`Node: <effort>/<NN>` in a code commit's body. It is the key that joins git history to the graph. It
 carries the effort because `NN` restarts at `01` for every new effort a repo hosts.
 
 ## Closing an effort
