@@ -336,8 +336,7 @@ The pick report awaits no answer, so its flags settle on whatever the human says
 about. Where the human never speaks again, nothing settles, and those flags stay outstanding. Settle a
 flag only at the moments this section names, never on your own judgement or on the passage of time.
 
-Flags reach the closing report in two cases only. The first is a flag raised before this settling rule
-existed, on a node already resolved. The second is a flag whose pick report the human never answered,
+Flags reach the closing report in one case only: a flag whose pick report the human never answered,
 because they never spoke again.
 
 ## Acceptance conditions
