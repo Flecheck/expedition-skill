@@ -106,7 +106,7 @@ replaced, and the replacement is a new attempt.
 _Avoid_: retry, run, session
 
 **Checker**:
-The second, independent, read-only agent that checks a landed implementation against its acceptance
+The second, independent, read-only agent that checks a finished implementation against its acceptance
 condition and the bar before the human sees it. It checks against something stated, so it is not a
 second opinion. The manager starts it, and the implementer never does, because whoever spawns it
 chooses what it sees. Its outcomes are `PASS` and `FAIL`, and a `FAIL` names which of the two was
