@@ -117,8 +117,14 @@ worker can return and stay banked if the attempt dies. A resume is sent in the b
 wait for it, so send the resume and write the answer in the same turn.
 
 Paste the reply as the human wrote it, however terse. A reply such as *"ok for recommended"* is a
-complete answer and is recorded as one. You never render a reply, so its mark never depends on your
-judgement.
+complete answer and is recorded as one.
+
+Record a reply in your own words only when the human's words are no longer in your context to copy.
+A compaction of your context, or the end of a management session, can lose the human's words before
+you have written them onto the node. In that case, write down what you still have. Mark the entry
+`paraphrase` and never `verbatim`, and add a note of your own that says why you could not paste.
+Whether the words are still in your context is a fact and not a judgement of yours, so the mark never
+depends on your judgement.
 
 Where a terse reply does not make clear which option it points at, record the reply and ask which. Do
 not pick the one you think the human meant.

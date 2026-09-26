@@ -208,15 +208,12 @@ a checkbox.
 
 The rules in this section cover `## Interview` and `## Review`, the two sections that hold the human's
 words. `### The human's words` in `SKILL.md` says when the manager records an answer, what it pastes,
-and what it does with a terse reply whose option is unclear.
+when it marks an answer `paraphrase`, and what it does with a terse reply whose option is unclear.
 
 Every recorded answer carries one of two markers, `verbatim` or `paraphrase`. A reply pasted as the
 human wrote it is marked `verbatim`. That mark says the answer is the human's own words rather than the
 manager's rendering of them. Where the reply takes an option or an outcome it was offered, the manager
 quotes that option in the same entry. The quote is attributed to whoever wrote it, usually the worker.
-
-The manager marks an answer `paraphrase` only where it could not avoid rendering the answer in its own
-words.
 
 ### `## Review`
 
@@ -226,7 +223,8 @@ one node. It holds three kinds of entry and nothing else:
 1. One entry per checker run, giving its outcome: `PASS`, or `FAIL` and whether the acceptance condition
    or the bar was not met. A checker may raise instead of judging. Its entry then gives no verdict and
    says what it raised.
-2. Each correction round, numbered, with the human's words verbatim and what the worker changed.
+2. Each correction round, numbered, with the human's words and what the worker changed. The human's
+   words are recorded as `### The human's words` in `SKILL.md` says.
 3. The gate's outcome: approve, correct or reject. For a reject, the entry also records what
    implementing the node surfaced, and which of the three routes under `### What reject means` in
    `SKILL.md` the node then took.
