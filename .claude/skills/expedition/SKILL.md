@@ -442,8 +442,18 @@ its membership is fixed:
 Tier 2 holds relayed interview questions. Within a tier, take things in the order they arrived. Only the
 human can add a fourth kind to tier 1. Never infer one yourself.
 
-Send the one thing that the tiers and arrival order choose. Never ask the human which waiting thing to
-take next, whether by a question or by listing what is waiting and inviting them to pick.
+A gate waits in arrival order like the other two kinds in tier 1. Send a gate after every older thing in
+tier 1, such as an older raise from a blocked worker or an older raise of your own. Keep a gate at its
+place in arrival order even though it holds a code slot while it waits. Never move a gate ahead on your
+own judgement.
+
+The human may ask for a waiting gate to be sent first. That gate then goes ahead of everything else in
+the queue. It is still sent only when nothing is in front of the human. The request applies once and
+lapses once it is used.
+
+Send the one thing that the tiers and arrival order choose, or the gate the human asked for. Never ask
+the human which waiting thing to take next, whether by a question or by listing what is waiting and
+inviting them to pick.
 
 That rule leaves two things unchanged:
 
@@ -573,9 +583,6 @@ make. Where you meet one, do what the node in front of you needs, and raise the 
   condition leaves out, because that would make you the author of the standard the work is judged
   against. You may still write a whole condition for a node you minted yourself. Nothing settles whether
   the two differ in authorship or only in how visible the authorship is.
-- Arrival order against the cost of a waiting gate. Tier 1 is ordered by arrival. A waiting gate holds a
-  code slot, and a relayed question does not. So a gate held behind an older question costs throughput.
-  Nothing says whether a gate may go ahead of an older tier 1 question.
 
 ## What nothing here settles
 
