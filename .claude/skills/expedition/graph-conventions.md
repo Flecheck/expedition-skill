@@ -288,8 +288,19 @@ An entry for a run that covered the whole condition has no `NOT COVERED:` label,
 The section holds one block per attempt. A block gives the attempt's routing key, then each relayed
 question and each of the human's answers. The manager also marks `DIVERGENCE` on an answer that
 contradicts the recommendation the worker gave, so the worker does not read an unmarked answer as
-agreement and resolve as though its recommendation had been taken. A dead attempt is marked in its own
-heading. A node holds at most three attempt blocks.
+agreement and resolve as though its recommendation had been taken. A node holds at most three attempt
+blocks.
+
+`## When an agent dies or is stopped` and `## Stopping a running worker` in `SKILL.md` say when an
+attempt is resumed, replaced or stopped. An attempt's block records what happened to it this way:
+
+- An attempt whose agent died and did not continue is marked `dead` in its own heading. Its block
+  carries the dead agent's transcript record count, and its cause of death as the harness stated it.
+- An attempt whose agent died and was resumed is the same attempt continuing, and is not a new attempt
+  block. Its block carries the same two facts about the death. So no resume counts toward the limit of
+  three attempt blocks.
+- An attempt the human said is final is marked `final stop` in its own heading, beside where a dead
+  attempt is marked `dead`. No manager resumes an attempt so marked.
 
 ## Statuses
 

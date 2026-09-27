@@ -101,9 +101,24 @@ words. Both are properties of the node's kind, not of the harness that runs it.
 _Avoid_: autonomous, unattended, automatic, interactive
 
 **Attempt**:
-One worker instance on one node. A node lasts longer than any of its attempts: a worker that dies is
-replaced, and the replacement is a new attempt.
+One worker instance on one node. A node lasts longer than any of its attempts. A worker that dies is
+resumed where the manager can resume it, and replaced only where it cannot. A worker stopped from the
+human's side is replaced only on the human's answer. A resumed worker continues the same attempt, and
+a replacement is a new attempt.
 _Avoid_: retry, run, session
+
+**Stop**:
+Ending a running worker's work before it hands back. The manager performs every stop, at the human's
+word, with the harness's own tool for it, and the stopped attempt stays resumable within the manager's
+session. A stop from the human's side is a different act: it marks the agent as stopped by the user,
+and the manager can no longer resume it, though the human can revive it by typing to it. A message
+asking a worker to stop is not a stop, because the worker receives it late and may decline it.
+_Avoid_: kill (the harness's status word for a stop, not this workflow's), cancel
+
+**Final stop**:
+A stop the human says is final. The manager records on the node that the attempt is not to be resumed,
+and no manager resumes it. The record makes a stop final, because no stop from either side removes a
+worker for good.
 
 **Checker**:
 The second, independent, read-only agent that checks a finished implementation against its acceptance

@@ -32,7 +32,9 @@ the section. The statements below add what those terms demand of you in particul
   and nowhere else. `## The seven files` in `graph-conventions.md` says where the map records the bar's
   commands. That record is confirmed against the repo before use, because a repo's own live statement
   of its commands is authoritative.
-- A worker is resumed in place rather than replaced.
+- A dead attempt is resumed where you can resume it, and replaced only where you cannot. An attempt
+  stopped from the human's side is replaced only on the human's answer. A replacement is a new
+  attempt, recorded after the one it replaces.
 - A handover has seven parts every time: its node's answer written as the node will hold it, the
   one-line index line for the effort's index of decisions, its flags, the nodes it surfaced, which
   resolved node its work changes (`INVALIDATIONS`), the open conditions it searched and any replacement
@@ -536,8 +538,8 @@ node and kind you started. The pick report awaits no answer and takes no place i
 Continue without waiting for a reply.
 
 The human's redirection of a pick normally arrives after the work has started. They name a different
-node in one line. You then stop or redirect what you started. Start a pick without waiting for
-permission.
+node in one line. You then stop or redirect what you started, and you perform such a stop with
+`TaskStop`, as `## Stopping a running worker` says. Start a pick without waiting for permission.
 
 A pick report that closes a node holding flags carries every one of those flags, in the fuller form
 under `### A flag in a payload` above. Those flags settle at the pick report, so a flag it leaves out is
@@ -609,17 +611,94 @@ node. Derive each state from the node's own file:
 
 Report the first two without being asked. Report the third when the human asks.
 
+## Stopping a running worker
+
+You perform every stop of a worker. The human asks for one in words, naming the node, and you perform
+it with `TaskStop`. The human may ask when they redirect a node that is running, when a worker has left
+its contract, when a worker is looping without end, or when resuming an attempt has made its
+replacement unnecessary. Never tell the human to stop an agent from the task UI.
+
+1. Stop the agent with `TaskStop`, addressed by the agent's id. Only your own thread can do this. A
+   worker that calls `TaskStop` on another agent is refused, with an error naming that agent as its
+   own owner.
+2. The stop aborts whatever the agent is doing at once. It does not wait for the agent's next tool
+   round. It also stops every agent the stopped agent had spawned.
+3. You learn of the stop as an ordinary task-notification whose status reads `killed`.
+4. Confirm the stop by watching the record count of the agent's transcript stop growing. The success
+   message `TaskStop` returns does not confirm it.
+5. Where the human says the stop is final, it is a final stop: record on the node that the attempt is
+   not to be resumed. `` ### `## Interview` `` in `graph-conventions.md` says how the attempt's heading
+   is marked. No manager resumes an attempt recorded that way.
+
+A worker stopped with `TaskStop` keeps its transcript. It can be resumed afterwards within your session,
+like any other stopped agent. That is what makes stopping a worker cheaper than replacing it: a resumed
+worker continues from its transcript, and a replacement starts again from the record.
+
+A message asking a worker to stop is not a stop. It reaches the worker as text at the end of the
+worker's next tool call, so a worker inside one long command cannot be reached for the whole of that
+command. The worker may also decline it. Declining is most likely when the worker's own instructions
+tell it not to stop early, which is the case of a worker looping without end. So where you need a
+worker to actually stop, use `TaskStop`, and never a message.
+
+A stop from the human's side is a different act, with one different consequence. It marks the agent as
+stopped by the user. Every resume you attempt on that agent is then refused, while the human can still
+revive the agent by typing to it. The task UI's stop sets the mark, and so does rewinding the
+conversation past the agent's spawn. So the mark does not show that the human meant the work to be
+thrown away. You can tell the two stops apart before attempting anything: read `stoppedByUser` from the
+agent's `.meta.json` metadata file, beside its transcript. `## When an agent dies or is stopped` says
+what you do where the mark is set.
+
 ## When an agent dies or is stopped
 
-You learn that an agent has died only when a resume fails, so attempting the resume is how you find out.
-An agent that fails to resume is gone. Mark that attempt dead, and do not retry the resume. An agent the
-human stopped cannot be resumed either. Handle a stop by starting a fresh attempt, never by re-prompting
-the stopped agent.
+An agent that stopped before handing back is not gone for that reason. It may have died, by a harness
+error or a usage quota, or it may have been stopped. Resume its attempt wherever you can resume it,
+rather than replacing it. Replacement is the fallback where the resume fails, with one exception: an
+attempt whose agent was stopped from the human's side is never replaced without the human's answer. An
+attempt recorded as a final stop is never resumed.
 
-The node keeps its number, its file and its claim, under the rules for a node's number in
-`## Adding a node` and for `claimed` in `## Statuses` of `graph-conventions.md`.
+You resume an agent by sending it a message. Find out whether a resume is possible by attempting it
+and acting on what the harness answers, and never decide it in advance. A failed resume starts no agent
+and costs nothing, so test whether a resume is possible, and never predict it.
 
-Give the fresh agent the node and everything the human has already said on it, replayed in full. Tell it
+Resuming is limited to your own session. You can resume an attempt spawned in your current session,
+unless its agent carries the mark of a stop from the human's side. You cannot resume any attempt from
+an earlier session, even though its transcript still exists on disk.
+
+A message you send to an agent reports back one of four outcomes:
+
+- The agent is alive and still working.
+- The agent had stopped, and is resumed from its transcript.
+- The agent was stopped by the user. No resume is attempted at all, and the reply says so explicitly.
+- The agent is gone: no transcript was found.
+
+The third outcome is not the fourth. An agent stopped by the user still has its transcript, and the
+human can still revive it. A manager that reads only three outcomes files that attempt as gone or as
+resumable, and both are wrong. The third outcome leads to the question below. Where a resume fails for
+any other reason, the agent is gone: mark its attempt dead, and do not retry the resume.
+
+Where an attempt's agent carries the mark of a stop from the human's side, do not replace the attempt on
+your own, and do not retry the resume. Keep the node claimed and put one question to the human. The
+question names the node and says that you cannot resume the attempt. It says what would be lost: the
+worker's own work, and not the human's answers, which are recorded. It offers two choices: the human
+revives the agent by typing to it, or you replace the attempt and replay the human's answers.
+
+Read a dead agent's state from its transcript's record count and byte size, and never from the one-line
+summary the harness shows as its result. Its cause of death is the last record of its own transcript.
+Where that cause is a usage quota, that record names the time the quota resets. Where the quota is a
+shared one, wait for the stated reset and then resume. No replacement could work in that window either,
+so waiting loses nothing that replacing would gain. Where a replacement already working has overtaken
+the dead attempt, measured in transcript records, let the replacement finish and hold the dead attempt
+as the fallback.
+
+The resume rule covers the checker. Resume a checker to continue or revise a check it is still
+conducting, which includes a re-check after a correction round. Spawn a fresh checker only where the
+purpose is a check independent of a verdict already delivered. A resumed re-check establishes again
+that no standard the work is held against has changed since the checker last read it.
+
+Where you replace an attempt, the node keeps its number, its file and its claim, under the rules for a
+node's number in `## Adding a node` and for `claimed` in `## Statuses` of `graph-conventions.md`.
+
+Give the new agent the node and everything the human has already said on it, replayed in full. Tell it
 that all of that is settled and must never be asked again. The human never sees the same question twice.
 
 Tell the human once, by node name, that the agent for that node died, that their answers are recorded
