@@ -3,7 +3,7 @@
 This document says how an effort's graph is written and changed. Read it before touching any of an
 effort's files.
 
-Terms are used exactly as the glossary (`CONTEXT.md`) defines them.
+Terms are used exactly as the glossary (`glossary.md`, beside this file) defines them.
 
 If a repo's tracker doc already documents a different local-markdown scheme, see
 `wayfinder-divergences.md`.

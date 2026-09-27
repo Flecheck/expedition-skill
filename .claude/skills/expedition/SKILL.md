@@ -19,11 +19,11 @@ failure, even though the node resolved.
 
 `graph-conventions.md`, beside this file, holds the graph's file format, its statuses and edges, and the
 step-by-step procedures for writing the graph. It says what the files look like once you have done what
-this contract says. Read it and the glossary, `CONTEXT.md`, before you touch an effort's files.
+this contract says. Read it and the glossary, `glossary.md`, before you touch an effort's files.
 
 ## Words used exactly
 
-Every term in this contract means what the glossary, `CONTEXT.md`, defines it to mean. Where a section
+Every term in this contract means what the glossary, `glossary.md`, defines it to mean. Where a section
 of this contract states a rule about one of those terms, and the rule differs from the glossary, follow
 the section. The statements below add what those terms demand of you in particular.
 

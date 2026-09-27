@@ -2,7 +2,7 @@
 
 This file tells the manager how to start an effort from a directory of work that already exists. Read
 `## Starting an effort` in `SKILL.md` and `### Start an effort` in `graph-conventions.md` first. This
-file holds only the steps adoption adds to them. Terms are used exactly as the glossary (`CONTEXT.md`)
+file holds only the steps adoption adds to them. Terms are used exactly as the glossary (`glossary.md`)
 defines them.
 
 Adoption is a way of starting an effort, and not a kind of node. You perform it, before the graph
