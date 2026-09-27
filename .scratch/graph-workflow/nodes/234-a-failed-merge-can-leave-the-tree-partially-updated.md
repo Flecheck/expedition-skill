@@ -69,3 +69,14 @@ shape. **Whoever claims this should not read node 198 as the normal case.**
 
 **Its author's blocker note is scheduling and the manager holds it**: node 160 lists `map-manager-only.md` among its
 permitted files, so these two must not run in one slot pair. No blocking edge is written.
+
+## Amendment, 2026-09-27 (from node 160)
+
+*Written by [node 160](160-carry-the-integration-conflict-rule-into-the-map.md)'s worker under its `CONDITIONS`, and filed by the manager. Pasted as it wrote it.*
+
+Node 234, clause 4, second sentence. Current text: "The sentence beginning `**A rebase conflict is resolved by nobody in the moment**` is not edited, struck, moved or deleted by this node." That sentence no longer exists, so the clause is vacuously true and no longer protects anything. Replacement: "The text in that paragraph beginning `A rebase conflict is resolved, and the rebase is not aborted.` and ending `the manager runs `git rebase --abort` and the node takes a correction round.` is not edited, struck, moved or deleted by this node." What fixes these words: this node's work, once landed in the tree.
+Clause 4's first sentence, "The paragraph beginning `**Landing policy**` is byte-identical to its state at `HEAD`", still holds against whatever HEAD is when node 234 runs.
+
+## Flags
+
+`234.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 160 above.* Node 160's replacement for clause 4's second sentence was filed on this open, unclaimed node without asking the human first.

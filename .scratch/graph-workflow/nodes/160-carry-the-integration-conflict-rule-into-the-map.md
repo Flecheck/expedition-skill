@@ -153,6 +153,15 @@ confirm against the tree rather than inherit.
 > 12. The same new text states that an implementation worker reads and edits the effort's record files in its own worktree, and never in the main checkout.
 > 13. The sentence clause 7 quotes is looked for in `.scratch/graph-workflow/map-manager-only.md`, which is where it now stands. Scope search: `grep -rn -l 'committed periodically' --include=*.md .` run from the repository root returned `.scratch/graph-workflow/map-manager-only.md` and `.scratch/graph-workflow/map-history.md`, with the `nodes/` directory excluded. The `map-history.md` hit is banked history and is not edited. Any instance the search reaches outside these two files is reported, not edited.
 
+## Amendment by the human, 2026-09-27 (from raise 1)
+
+*The worker's recommended wording, taken by the human's "ok" to raise 1 and "ok" to the manager's follow-up, both recorded under `## Interview`. Filed by the manager.*
+
+- **Clause 1** reads: "In `map-manager-only.md`, inside the paragraph beginning `**Landing policy**`, the sentence `<quoted>` is removed, and the new text clause 3 demands stands where it stood."
+- **Clause 7**, amended in the same way: remove the sentence, with the new text standing in its place.
+- **Clause 2, and clause 7's history half**, stay as written: each removed sentence is appended verbatim to `map-history.md` under a heading mirroring `## Landing an implementation node's work`.
+- **Clause 4** also lets "still open at node 160" be replaced by the same route.
+
 ## Interview
 
 #### Raise 1, relayed 2026-09-27
@@ -190,6 +199,136 @@ The human, `verbatim`: *"ok"*. It takes the worker's recommendation: "Yes, repla
 
 *The manager's note:* the manager had also asked whether the answer takes the worker's optional point, "Optionally, clause 4 could also let "still open at node 160" be replaced by the same route." The bare "ok" does not say, so the manager asks which before resuming the worker.
 
+#### The human's answer to the manager's follow-up on raise 1, 2026-09-27
+
+The manager asked: "Should clause 4 also let that phrase be replaced the same way, with the old text moved to `map-history.md`?", recommending yes. The human, `verbatim`: *"ok"*. It takes the worker's optional point: "Optionally, clause 4 could also let "still open at node 160" be replaced by the same route."
+
+## Handover, attempt 1
+
+*Filed by the manager as handed back, 2026-09-27. The worker's own text, pasted.*
+
+````
+HANDOVER:      Carry the integration-conflict rule into the map (160)
+
+ANSWER:        Node 115's integration-conflict rule, and the record commits from nodes 176 and 266, are now in `.scratch/graph-workflow/map-manager-only.md` under `## Landing an implementation node's work`. The old text was replaced and kept, not struck in place. That follows the human's "ok" to raise 1: the condition's strike-in-place wording in clauses 1 and 7 contradicted node 189's rule and `graph-conventions.md`, which say a map file's live rule is replaced and its old text moved to `map-history.md`. The human's second "ok" also let the code-slot paragraph's "still open at node 160" be replaced in the same way.
+               - **Where the text is.** Clause 1's file name was wrong. The `**Landing policy**` paragraph moved to `map-manager-only.md` at node 188. `map-implementation-rules.md` keeps only a pointer to it and was not edited.
+               - **Rebase conflicts (clause 3).** In the `**Landing policy**` paragraph, the sentence beginning "A rebase conflict is resolved by nobody in the moment" is replaced by new text in the same place. It says a rebase conflict is resolved and the rebase is not aborted. A conflict in text held under the never-delete rule is resolved by the manager keeping both sides. That is assembly, not authoring, so it is reported and does not return to the checker or the gate. Any other conflict, product code included, is resolved by the worker whose branch is being rebased. The manager resumes that worker to edit the conflicted files in place and runs every git command itself. That resolution returns to the checker and the gate. Where the two sides contradict each other, the manager runs `git rebase --abort` and the node takes a correction round.
+               - **Record commits (clauses 7, 11, 12).** The sentence "The graph's own files are *not* committed per node; they are committed periodically by the human…" is replaced in the same way. The manager commits the record itself at two moments. The first is before every implementation worktree it cuts, whatever paths the node names, so the worker's tree equals the manager's. The second is the first step of landing on approval, before the rebase. The reason: `git merge --ff-only` is refused where a dirty file is one the branch also changes, and a record commit made after the rebase leaves the branch unable to fast-forward. Neither commit replaces the other. Both are made on the manager's own authority, path-limited to `.scratch/graph-workflow/`, with no diff shown first and each reported afterwards. An implementation worker reads and edits the record in its own worktree, never in the main checkout.
+               - **Code-slot count (clauses 4, 5).** The paragraph beginning `**How many implementation workers run at once` gains new sentences. Raising the count buys parallel implementation at the price of integration conflicts. The human sets the count. The manager does not raise it on its own judgement and does not treat the current value as a ceiling. The human's words from node 115 are quoted and marked `verbatim`. That paragraph's "still open at node 160 and node 162" clause is replaced: the conflicts are resolved as the landing policy states, the rule was settled at node 115 and carried in at node 160, and how much of it ships is still open at node 162.
+               - **Disjoint paths (clause 6).** A new paragraph after it says that when more than one code slot is free, the manager prefers candidates whose conditions name disjoint sets of paths. The reason given is that a condition already lists its paths, so how likely two nodes are to conflict can be read before either starts.
+               - **History.** The three replaced passages are appended word for word to `.scratch/graph-workflow/map-history.md` under a new heading, "Superseded from `map-manager-only.md` at node 160 — …", with one sub-heading each named after the section they came from. For the third passage, the whole sentence containing the replaced clause is kept. The history file was only appended to, so its earlier content is an unchanged prefix. Every removed passage appears byte for byte in the appended text, which meets `graph-conventions.md` check 11.
+
+INDEX LINE:    The landing policy now resolves rebase conflicts instead of aborting them. The manager commits the record at every worktree cut and before every landing rebase. The slot count is the human's dial.
+
+FLAGS:         ASSUMPTION: The new rebase-conflict text keeps the condition's words "text held under the never-delete rule" for the manager's keep-both-sides case. Since node 189, that rule no longer covers rule text in map files, which is replaced instead. So the words cover a conflict in record text (node files, `decisions.md`, `flags.md`), and a conflict between two edits to a map file's live rules falls to the worker, or to the abort where the two sides contradict. I kept the condition's wording rather than narrowing or widening it, because clause 3 fixes the four things the text must state.
+               Index sentence: node 160 kept "text held under the never-delete rule" as the manager's keep-both-sides case, so since node 189 conflicts in a map file's live rules go to the worker, not to the manager.
+               ASSUMPTION: For the stale "still open at node 160" clause in the code-slot paragraph, I replaced only that clause of the sentence and moved the whole sentence to `map-history.md`. The rest of the paragraph's text is unchanged.
+               Index sentence: node 160 replaced only the "still open at node 160" clause of the code-slot paragraph and banked the whole sentence it sat in.
+
+NEW NODES:     none
+
+INVALIDATIONS: Node 68 (*Run an implementation node's work in a worktree*): contradicted. Its "a conflict aborts into a correction round" now holds only where the two sides contradict each other. Otherwise the conflict is resolved.
+               Node 11 (*Git and code-landing policy*): contradicted on the record being "committed periodically by the human". The manager now commits it at every cut and at landing. Node 266 already reported this, and node 160 carries it out.
+               Node 115: extended. Its section 5 remedy, commit before a worktree is cut, is now joined by node 176's commit before the rebase.
+               Node 188: narrowed. The landing section is no longer byte-identical to what it moved.
+
+CONDITIONS:    I searched the `## Acceptance condition` of every open and claimed node for: `resolved by nobody`, `rebase --abort`, `committed periodically`, `still open at`, `second slot`, `Landing policy` and `map-manager-only`. Matches were in nodes 152, 149, 234, 230, 236, 254, 276, 284 and 352, plus this node's own condition. After reading what matched, only node 234 (open, unclaimed) has a clause my work makes wrong.
+               Node 234, clause 4, second sentence. Current text: "The sentence beginning `**A rebase conflict is resolved by nobody in the moment**` is not edited, struck, moved or deleted by this node." That sentence no longer exists, so the clause is vacuously true and no longer protects anything. Replacement: "The text in that paragraph beginning `A rebase conflict is resolved, and the rebase is not aborted.` and ending `the manager runs `git rebase --abort` and the node takes a correction round.` is not edited, struck, moved or deleted by this node." What fixes these words: this node's work, once landed in the tree.
+               Clause 4's first sentence, "The paragraph beginning `**Landing policy**` is byte-identical to its state at `HEAD`", still holds against whatever HEAD is when node 234 runs.
+
+MISSING FROM MAP: `map.md` does not say that conditions written before node 189 may still require strike-in-place for live rules, a known kind of clash (node 200). I found it through `graph-conventions.md` and by searching node 200.
+               Clause 12 puts a rule for workers ("a worker reads and edits the record in its own worktree") into `map-manager-only.md`, which no worker reads. I wrote it where the condition demands. A worker learns it from its spawn.
+
+GATE PAYLOAD:  Checker findings: none yet (no checker has run).
+               Raise 1 is answered ("ok", and "ok" to the optional clause-4 point). Both old sentences are now replaced rather than struck, and they are banked in `map-history.md`. The code-slot paragraph's "still open at node 160" clause is replaced and its sentence banked.
+               Bar: the repo has no build, tests, formatter or CI. The worktree root holds only `.claude`, `CONTEXT.md`, `.gitignore` and `.scratch`, with no manifest, which matches the rules file's record. Both edited files are markdown.
+               Checks run: every relative markdown link in both edited files resolves (clause 9). No `## Notes` heading was added (clause 8). `git status` shows only the two files below (clause 10).
+               Paths touched (worktree `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/160-record-commits`):
+               - `.scratch/graph-workflow/map-manager-only.md`
+               - `.scratch/graph-workflow/map-history.md`
+               Proposed commit message:
+                 Carry the integration-conflict rule and the record commits into the map
+
+                 The landing policy in map-manager-only.md now resolves a rebase conflict
+                 instead of aborting it, and says who resolves it depending on what
+                 conflicted. The manager commits the record before every worktree cut and
+                 as the first step of landing. The code-slot count is the human's dial,
+                 with its price stated, and the pick prefers nodes whose paths are
+                 disjoint. The replaced sentences are banked in map-history.md.
+
+                 Node: graph-workflow/160
+
+RETROSPECTIVE
+1. What I had to hunt for: where the clause-1 sentence now stands (found by grep, in `map-manager-only.md`). Whether node 189's replace rule reaches that file (`graph-conventions.md`, the paragraph on "every sibling of it that states rules that currently bind"). The node-200 precedent (by searching decisions.md and node 200).
+2. What arrived that this node did not need: most of `map.md` (destination, the v2/token notes, the vocabulary note). Most of `map-manager-only.md` outside the landing section, read whole because the condition names the file. The node file's struck pointer paragraph and flag 160.2.
+3. What would have made this easier: a note on the node that its condition predates node 189 and requires strike-in-place for live rules. Clause 1's file name filed as an amendment, as clause 13 did for clause 7, rather than left in an annotation. The resume pointing at the answered `## Interview` in the main checkout did help.
+4. Stale, wrong or contradictory: clause 1 names the wrong file. Clauses 1 and 7 contradicted node 189 and `graph-conventions.md`, which the raise settled. Node 234's clause 4 now points at a sentence that is gone (replacement given above). The rules file's own supersession paragraph is scoped to "a rule in this file", although the same rule binds the other map files through `graph-conventions.md`.
+````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-09-27. The checker was resumed from node 56's check; the condition reached it as a verbatim copy in `$TMPDIR/c160.md`.*
+
+> PASS
+>
+> This is the check of node 160, "Carry the integration-conflict rule into the map". The work is the uncommitted diff to the record files `.scratch/graph-workflow/map-manager-only.md` and `.scratch/graph-workflow/map-history.md` in `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/160-record-commits`, on base 7bfa1e8. I read those two files as the work, under the rules file.
+>
+> I read the whole of `/tmp/claude-1000/c160.md`. That includes node 266's clauses 11 to 13 and the human's amendment of 2026-09-27. Under that amendment, clauses 1 and 7 read as removing the sentence and banking it verbatim, clause 1 names `map-manager-only.md`, and clause 4's "still open at node 160" may be replaced the same way. The struck manager note at the top of the file sits outside the quoted condition, so I did not hold the work to it.
+>
+> **Parts of the condition**
+>
+> - **Scope, and clause 10:** met. `git status --short --untracked-files=all` shows only `map-manager-only.md` and `map-history.md`. The diff contains no node file, no `decisions.md` and no `flags.md`.
+> - **Clause 1 (amended):** met. In the `**Landing policy**` paragraph of `map-manager-only.md`, the sentence "**A rebase conflict is resolved by nobody in the moment**: … with the worker respawned." is gone, and clause 3's text now stands in its place.
+> - **Clause 2:** met. That sentence appears verbatim in `map-history.md` under `### From *Landing an implementation node's work* — the landing policy's sentence on a rebase conflict`. The text is identical: `grep -F` finds it in HEAD's `map-manager-only.md`. The history diff removes 0 lines.
+> - **Clause 3:** met. The new text states all four points, and nothing else in the paragraph contradicts them:
+>   - "A rebase conflict is resolved, and the rebase is not aborted";
+>   - for a conflict in never-delete text, the manager keeps both sides, "assembly rather than authoring", reports it, and "the work does not return to the checker or to the gate";
+>   - for any other conflict, product code included, the manager resumes the worker to edit in place while "the manager itself runs every git command", and "That resolution returns to the checker and to the gate";
+>   - where keeping both sides would make the file assert two incompatible things, the manager runs `git rebase --abort` and the node takes a correction round.
+>   - The next sentence, "A post-rebase bar failure likewise takes a correction round", agrees with these.
+> - **Clause 4 (amended):** met.
+>   - The sentence naming node 160 as open now reads "resolved as the landing policy above states, settled at node 115 and carried here at node 160, and how much of that rule ships is still open at node 162". The old sentence is banked verbatim (`grep -F` finds it in HEAD).
+>   - New text is appended at the end of the paragraph: "Raising the count buys parallel implementation at the price of integration conflicts. The human sets the count. The manager does not raise it on its own judgement, and does not treat the effort's current value as a ceiling."
+>   - Apart from those, the paragraph's text is unchanged.
+> - **Clause 5:** met. The paragraph carries the quotation marked `verbatim`, word for word: *"but the framework should allow user to tell the manager to increase parallelization, at the expanse of odds of having to resolve merge conflicts"*.
+> - **Clause 6:** met. A new paragraph reads "When more than one code slot is free, the manager prefers candidates whose acceptance conditions name disjoint sets of paths." Its one-sentence reason is "A condition already lists its paths, so how likely two nodes are to conflict can be read before either node starts."
+> - **Clause 7 (amended), with clause 11:** met.
+>   - The sentence "The graph's own files are *not* committed per node; …" is removed. It is banked verbatim under a heading mirroring `## Landing an implementation node's work`.
+>   - The text in its place states the commit "before it cuts every implementation worktree, whatever paths that node's condition names, so that the tree a worker is given equals the tree the manager is standing on".
+>   - It states the commit on approval "as the first step of landing, before the rebase", with both reasons: `--ff-only` is refused over a dirty file, and a record commit made after the rebase blocks the fast-forward.
+>   - It says "neither one replaces the other".
+>   - Clause 11: "The manager makes both commits on its own authority, path-limited to `.scratch/graph-workflow/`. It shows the human no diff before either commit, and reports each commit to the human afterwards."
+> - **Clause 12:** met. "An implementation worker reads and edits the effort's record files in its own worktree, and never in the main checkout."
+> - **Clause 13:** met. The recorded search matches its recorded return. I ran `git grep -l 'committed periodically' HEAD -- '*.md' ':!*/nodes/*'`, and it returns `map-manager-only.md` and `map-history.md`. On the worked tree, `grep -rn -l … --exclude-dir=nodes --exclude-dir=worktrees` returns only `map-history.md`, which is banked history. No instance lies outside the two files.
+> - **Clause 8:** met. `grep -c '^## Notes'` in `map-manager-only.md` gives 1 both before and after, so no heading was added. The diff adds no heading to `map-history.md`.
+> - **Clause 9:** met. Every `](path)` target outside fences in the two files exists relative to `.scratch/graph-workflow/`, except `/home/mathieu/projects/Lang`. That path is outside this repository, which the clause excludes. It also predates this work: it is not in the diff.
+>
+> **The bar**
+>
+> - The worktree's `map-implementation-rules.md` records no build, tests, formatter or CI. The repo confirms this: there is no manifest.
+> - `git diff --check` is clean (exit 0).
+>
+> **Standards.** As in my earlier checks, I read only the standards in `map-implementation-rules.md`, together with the ground rules given as text.
+>
+> - These bore on the work, and I found nothing against them:
+>   - `graph-conventions.md`'s `### Change the map`: each replaced sentence is banked verbatim under a mirroring heading, and the new statements cite nodes 115, 176 and 266 by link;
+>   - `## Writing the map`;
+>   - the `CONTEXT.md` `_Avoid_` lines;
+>   - the writing rules;
+>   - `/writing-for-agents`;
+>   - the ground rules. These are record files, not shipped files, so the git commands named in them are the effort's own practice.
+> - `/coding-principles` and `/naming` did not bear on the work.
+> - No reviewing skill is named, so I ran none.
+>
+> NOT COVERED:
+> - None of the condition's parts is uncovered. Clause 10 and the scope sentence's ban on node, `decisions.md` and `flags.md` writes are established from the worktree diff. What the main checkout's record holds is outside what I was given.
+
+### Gate — approve, `standing yes`, 2026-09-27
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and its one NOT COVERED item is the worker's bookkeeping. This settles none of the node's flags; they settle at the node closing report.
+
 ## Flags
 
 `160.2` `MANAGER-WRONG` — **The manager reported this node to the human as carrying an unsafe amendment shape, and
@@ -202,3 +341,7 @@ ever changed by it. **The cost was a false statement to the human and a paragrap
 condition a worker will read cold.**
 
 `160.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 266 above.* Node 266's clauses 11 to 13 were filed on this open, unclaimed node without asking the human first.
+
+`160.4` `ASSUMPTION` — The new rebase-conflict text keeps the condition's words "text held under the never-delete rule" for the manager's keep-both-sides case. Since node 189, that rule no longer covers rule text in map files, which is replaced instead. So the words cover a conflict in record text (node files, `decisions.md`, `flags.md`), and a conflict between two edits to a map file's live rules falls to the worker, or to the abort where the two sides contradict. I kept the condition's wording rather than narrowing or widening it, because clause 3 fixes the four things the text must state.
+
+`160.5` `ASSUMPTION` — For the stale "still open at node 160" clause in the code-slot paragraph, I replaced only that clause of the sentence and moved the whole sentence to `map-history.md`. The rest of the paragraph's text is unchanged.
