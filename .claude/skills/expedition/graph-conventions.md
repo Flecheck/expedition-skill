@@ -211,6 +211,30 @@ none of them, or that everything in it traces back to one. Such a demand goes in
 what that answer says: a rename, an extension, a narrowing or a contradiction. A demand about what
 changed in the tree, such as *no file under `.scratch/` changes*, is permitted.
 
+Where a condition's scope was derived from a search, the condition states that search. The list of
+files stays, and so does the clause that excludes every other file. The search is written beside the
+list, as what produced it, and never in place of it. The condition's author owes exactly one of the
+three below. A condition addressing a defect with instances that carries none of the three is
+malformed.
+
+1. An **enumerator**: the command, and what it returned when it was run.
+2. Where no command fits, a **bounding set**: the smallest set that provably contains every instance,
+   and how that set was computed.
+3. An explicit statement that the scope came from no search, because the work creates a file, or
+   because the named places are the work rather than instances of a defect.
+
+An enumerator searches the working tree and never the effort's record. A search over the effort's own
+node files or its indexes quantifies over the record, which a condition may not do, and no copy
+repairs it.
+
+An instance the search reaches outside the condition's list is reported and not edited. A worker whose
+search matches a place the list does not name gains a duty to report it, and never a permission to edit
+it. A false positive costs one line in a handover.
+
+A condition's scope is a finding stated in advance. Its readers, the checker and the worker before it,
+cannot go and look at how the scope was found, so a condition owes them the same extent that a
+checker's finding owes.
+
 `## The checker` in `SKILL.md` says how the manager hands a condition to the checker, and what it does
 with a condition that leaves part of its demand in another file.
 

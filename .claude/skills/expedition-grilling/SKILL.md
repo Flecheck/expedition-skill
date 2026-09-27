@@ -300,7 +300,7 @@ to the human.
 A condition is **self-contained**: everything needed to judge whether the work is done is in it, and its
 reader never goes anywhere else to find out what it demands. That reader is the **checker**, a second,
 independent, read-only agent that is handed the condition as text, has not read the node, and does not
-read the record at all. So write the condition to the four points that follow.
+read the record at all. So write the condition to the five points that follow.
 
 - A path may say where, because the checker has the repo: the work must touch that file, produce it, or
   leave it in a stated state. Write the path relative to the repository root, because an absolute path
@@ -313,8 +313,17 @@ read the record at all. So write the condition to the four points that follow.
 - Put a demand about the record as a whole, such as that the work contradicts no decision or that
   everything in it traces back to one, on `INVALIDATIONS` and in no condition. No copy can repair such a
   demand.
+- Where the condition's scope came from a search, state that search beside the list of files, and never
+  in place of it. State exactly one of three: the command and what it returned when you ran it; where no
+  command fits, the smallest set that provably contains every instance, and how you computed it; or that
+  the scope came from no search, because the work creates a file or the named places are the work
+  rather than instances of a defect. A condition addressing a defect with instances that states none of
+  the three is malformed. Run the command over the working tree, and never over the effort's own record.
+  Write into the condition that an instance the search reaches outside the list is reported and not
+  edited. The condition's readers cannot go and look at how its scope was found, so the condition tells
+  them.
 
-Before you hand the condition over, check what you wrote against the four points above. The worker that
+Before you hand the condition over, check what you wrote against the five points above. The worker that
 claims the node may not fix a condition it judges wrong. That node stops instead, and the condition goes
 to the human. So any loose wording you write here can stop that node.
 

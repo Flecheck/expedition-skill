@@ -377,19 +377,24 @@ never answered, because they never spoke again.
 `## The node file` in `graph-conventions.md` says which nodes carry an acceptance condition, and
 `### Claim` there says when such a node may be claimed. The description of `## Acceptance condition`
 under `## The node file` states the self-contained rule, and the one kind of demand that copying
-material into a condition cannot repair: a demand about the record as a whole.
+material into a condition cannot repair: a demand about the record as a whole. That description also
+states what a condition owes about the search that produced its scope, and when a condition is malformed
+for lacking it.
 
 Where an agent minted the node, that agent wrote the condition before any work on the node started, and
-you file it. Where you minted the node, you write the condition.
+you file it. Where you minted the node, you write the condition. Where a condition carries none of the
+three things it owes about its scope and is malformed for it, file it as malformed rather than claim the
+node on it.
 
 ### The four constraints on a condition you write yourself
 
 1. Demand only what is already fixed, by a settled node, by the node's own question, or by the state of
    the files. Leave out anything you would otherwise have to decide. State the property precisely and
    leave the form to the worker, or put the question to the human.
-2. Before the node is claimed, read the condition back against the two rules that bind every condition,
-   and record that reading on the node. The two rules are the self-contained rule and the rule against a
-   demand about the record as a whole, both in `graph-conventions.md`.
+2. Before the node is claimed, read the condition back against the three rules that bind every
+   condition, and record that reading on the node. The three rules are the self-contained rule, the rule
+   against a demand about the record as a whole, and the rule on what a condition owes about the search
+   that produced its scope, all in `graph-conventions.md`.
 3. Mark the condition on the node as your own.
 4. Say in the node closing report that the condition is yours, and say in a line or two what it
    demands. The work does not wait for a reply.
@@ -449,7 +454,9 @@ that node's name and question yourself, marked as your own.
 
 Re-derive an enumerated scope before the node is claimed. Where a condition's scope is a list of files,
 re-run the search that produced the list, rather than reading the list. Where the list has grown, widen
-it before the node is claimed, so that no worker reads the short version.
+it before the node is claimed, so that no worker reads the short version. Where the condition records
+the command that produced its scope, re-deriving the scope is running that recorded command, rather
+than reconstructing one.
 
 Every amendment, whoever wrote it, comes with five things. `### Amend an acceptance condition` in
 `graph-conventions.md` gives the writes that record them.
