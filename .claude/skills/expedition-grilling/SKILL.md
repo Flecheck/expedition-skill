@@ -224,8 +224,9 @@ NEW NODES:     <name, kind, question, blockers — one block each, and for an im
                 and the clauses to add to its condition>
 INVALIDATIONS: <which resolved node your answer changes, and how: a rename, an extension, a narrowing
                 or a contradiction of what it says>
-CONDITIONS:    <what you searched the open nodes' conditions for, and each replacement you write for
-                a clause of an unclaimed node's condition, with what fixed its words>
+CONDITIONS:    <what you searched the open nodes' conditions and questions for; each replacement you
+                write for a clause of an unclaimed node's condition, with what fixed its words; and
+                each open node whose question your work changes, and how>
 MISSING FROM MAP: <what you needed about the effort that map.md did not tell you, and where you got
                   it instead or how you went on without it>
 ```
@@ -235,11 +236,16 @@ or a narrowed rule.
 
 Before you write your handover, search the open nodes' `## Acceptance condition` sections for what your
 own work fixes: each word it refuses, each path it changes or moves something out of, and each phrase it
-supersedes. Search every open node's condition, claimed or not, and read only what matches. Name in
-`CONDITIONS` what you searched for. Where your work establishes a fact that makes a clause of an
-unclaimed node's condition wrong, write the replacement for that clause in `CONDITIONS` as text. Every
-word of the replacement must already be fixed by a resolved node, by work landed in the tree, by the
-glossary or by the shipped files, and the replacement names which of those fixed it.
+supersedes. Search every open node's condition, claimed or not, and read only what matches. Search the
+open nodes' `## Question` sections the same way, for the same words, paths and phrases, in every open
+node, claimed or not, and read only what matches. Name in `CONDITIONS` what you searched for. Where your
+work establishes a fact that makes a clause of an unclaimed node's condition wrong, write the
+replacement for that clause in `CONDITIONS` as text. Every word of the replacement must already be fixed
+by a resolved node, by work landed in the tree, by the glossary or by the shipped files, and the
+replacement names which of those fixed it. Where your work changes an open node's question, name that
+node in `CONDITIONS` and say how: a term in it renamed, a part of it answered, or the node made
+unnecessary. A question that names a thing in words different from the ones your work uses will not
+match this search, and that miss is accepted.
 
 In `MISSING FROM MAP`, write anything about the effort you needed that `map.md` did not tell you, and
 where you got it instead or how you went on without it. Write `none` there in full when you have nothing

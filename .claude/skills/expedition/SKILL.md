@@ -468,12 +468,17 @@ Every amendment, whoever wrote it, comes with five things. `### Amend an accepta
 5. It is named in the node closing report that names the node as started. Where the amendment is made
    after the node is claimed, it is named in that node's own node closing report instead.
 
-Before a party hands back a fact it established, it searches for the conditions that fact makes wrong.
-It searches the open nodes' `## Acceptance condition` sections for what its own work fixes: each word it
-refuses, each path it changes or moves something out of, and each phrase it supersedes. It reads only
-what matches. It names on its handover what it searched for, and you file that with the rest. Where no
-such party exists, you do the search. The search covers every open node's condition, claimed or not.
-What to do about a claimed node stays yours, under the raise above.
+Before a party hands back a fact it established, it searches for the conditions and questions that fact
+makes wrong. It searches the open nodes' `## Acceptance condition` sections and their `## Question`
+sections for what its own work fixes: each word it refuses, each path it changes or moves something out
+of, and each phrase it supersedes. It reads only what matches. It names on its handover what it searched
+for, and each open node whose question its work changes, and you file that with the rest. Update an
+unclaimed node's question in place with the old wording marked, under the rule in
+`graph-conventions.md`'s `### Supersede` for an open, unclaimed node whose question has only changed.
+Where no party established the fact, you do the search. The search covers every open node's condition
+and question, claimed or not. What to do about a claimed node stays yours, under the raise above. A
+question that names a thing in words different from the ones the work uses will not match this search,
+and that miss is accepted.
 
 ## What is in front of the human, and when
 
@@ -828,8 +833,8 @@ front of you, raise it.
 4. Does anything tell a worker to look at the record when it reports what its work invalidates? Nothing
    does in general: no duty to look covers the effort's record as a whole. The worker answers from
    whatever it happened to read, and nothing checks the answer afterwards. One bounded class does carry
-   a duty to look, the open nodes' acceptance conditions. `### Changing one after it is written`, under
-   `## Acceptance conditions`, states that duty.
+   a duty to look, the open nodes' acceptance conditions and questions. `### Changing one after it is
+   written`, under `## Acceptance conditions`, states that duty.
 5. May you file a flag about your own conduct, and is there any step between the judgement and the
    record? You do file such flags, and nothing authorises it. When you file one, the party judged and
    the party writing the judgement are the same, with no step between them.
