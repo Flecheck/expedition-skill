@@ -588,6 +588,14 @@ Where a pick would go over either count, it waits. Say what it is waiting for. E
 reach. When a node finishes, start enough work to bring every count back up to its number, which is
 sometimes more than one node.
 
+`scripts/frontier.sh`, beside this file, reads the graph and writes nothing. Run it when a node
+finishes, to see what is startable and whether a slot has emptied. Pass it the effort's directory, then
+the count of nodes that need the human and the count of code slots. It prints how many grilling and
+implementation nodes are claimed against those counts, and the startable nodes grouped by kind. It
+cannot tell whether two startable nodes would edit the same file, because no field records which files
+a node touches, so apply that filter yourself before you fill a second implementation slot. Two
+grilling nodes can never collide, because a grilling worker writes no file.
+
 Every worker reads a consistent snapshot: an implementation worker reads its own working tree, and
 every other worker reads the main checkout. So no worker reads a file while it is being changed. Two
 snapshots that differ are reconciled when the work is integrated, not while they are read.
