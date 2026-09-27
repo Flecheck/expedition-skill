@@ -42,7 +42,7 @@ region in their own words. Never judge on your own that a region is finished.
    - the human has confirmed the set.
    Where one of the first two fails, say which node fails it and why, and propose an amended set.
 3. A node in the set that holds an outstanding flag also stops the removal. Put that flag to the human
-   first, because removing its line would drop it from the closing report.
+   first, because removing its line would drop it from the effort closing report.
 4. Put the set in front of the human for confirmation or amendment. Remove nothing before they confirm
    it.
 5. Remove the region from every file of the effort's record, and not from the node files alone. That
@@ -58,8 +58,8 @@ files, rather than on a node. So it is never in a region to begin with.
 
 ## Flag cleanup
 
-`flags.md` holds one line per flag, with its state. The closing report is built from its lines whose
-flag is not yet settled.
+`flags.md` holds one line per flag, with its state. The effort closing report is built from its lines
+whose flag is not yet settled.
 
 1. Remove from `flags.md` each line whose flag is settled, marked `- [x]`.
 2. Leave every line whose flag is outstanding, marked `- [ ]`.

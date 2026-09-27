@@ -77,13 +77,12 @@ turn you would otherwise have queued it.
    yes always takes the recommendation.
 3. For a gate, commit as on an approval. The node then resolves.
 
-## Flags, and the pick report
+## Flags, and the node closing report
 
 A gate taken under a standing yes is not put in front of the human, so it settles none of the node's
-flags. The node's flags settle at the pick report that closes the node, as a node's flags do where it
-has no gate.
+flags. The node's flags settle at the node closing report, as a node's flags do where it has no gate.
 
-The pick report that closes a node names every item on that node taken under a standing yes, each with
-its scope. It carries every flag the node holds, as any pick report that closes a node does. It states
-that the human may take any listed item back by naming it in a reply. An item taken back is a revision
-of its node, handled like any other.
+The node closing report names every item on the node taken under a standing yes, each with its scope.
+It carries every flag the node holds, as any node closing report does. It states that the human may
+take any listed item back by naming it in a reply. An item taken back is a revision of its node,
+handled like any other.
