@@ -131,6 +131,9 @@ adopted from a tracker that had one. For example, a node imported as `AUTH-2` is
 Create the file with its mandatory fields and its `## Question`. When you create several nodes at once,
 write every file first, then fill in `Blocked by:` in a second pass.
 
+1. Whoever adds the node runs checks 1, 3 and 4 under `## Mechanical checks` itself, as part of adding
+   it, over the material this addition touched: each new node's number, `Blocked by:` and `Labels:`.
+
 ## The node file
 
 Fields are bare `Key: value` lines. They live only in the header block, which is everything above the
@@ -301,11 +304,27 @@ The frontier is every node that is `open`, unblocked and unclaimed. A node is un
 in its `Blocked by:` is `resolved`. This document sets no order within the frontier. `Labels:` can
 narrow it to one area.
 
-A node file's body and its fenced blocks can hold lines that look like fields, so anything that scans
-these files follows two rules:
+A node file's body and its fenced blocks can hold lines that look like fields, and a field can hold
+text that is not a value. So anything that scans these files follows these rules:
 
 1. Read fields only from the header block, which is everything above the first `##` heading.
 2. Skip fenced code blocks.
+3. Take node numbers from a `Blocked by:` field by this rule. The field is written under the
+   never-delete rule, so a blocker that has been satisfied is struck through in place rather than
+   removed. The field may also hold markdown links to node files, explanatory prose, and commit hashes
+   inside code spans. So take a node number from the field only where the number lies outside every
+   backtick-delimited code span, outside every `~~...~~` strikethrough, and outside the parenthesised
+   target of every markdown link. For example:
+   - ``Blocked by: ~~31~~`` gives nothing, because its one blocker is struck through.
+   - ``Blocked by: [95](95-carry-the-widening-rule-into-the-shipped-files.md),
+     [103](103-carry-the-pick-report-settling-moment.md)`` gives 95 and 103, from the link texts, and
+     nothing from the link targets.
+   - ``Blocked by: none — [node 139](139-move-the-managers-material-out-of-the-map.md)
+     landed as `4e38c11` `` gives 139, from the link text. It gives nothing from the link target, and
+     nothing from the digits of the commit hash inside the code span.
+   - ``Blocked by: ~~277~~ **none — node 277 resolved and landed at `b94104a`.**`` gives 277, from the
+     prose "node 277", and nothing from the struck blocker or the commit hash. Node 277 is resolved, so
+     the number the prose repeats blocks nothing.
 
 ## Procedures
 
@@ -318,6 +337,9 @@ Each procedure lists every file it changes, in the order the changes are made.
 Save the file before any work starts. Claim an `implementation` node only once it has an
 `## Acceptance condition`.
 
+2. Whoever claims the node runs check 7 under `## Mechanical checks` itself, as part of this claim, over
+   the material this claim touched: the claimed node.
+
 ### Resolve
 
 1. `nodes/NN-<name>.md`: append the `## Answer`.
@@ -327,6 +349,9 @@ Save the file before any work starts. Claim an `implementation` node only once i
    node, append that item's text verbatim.
 5. `map-manager-only.md`: remove that item from `## Not yet specified`. Step 4 has already appended it
    verbatim, so the text is removed rather than struck in place.
+6. Whoever resolves the node runs checks 5 and 9 below itself, as part of this resolve, over the
+   material this resolve touched: the resolved node and its line in `decisions.md`. Where steps 4 and 5
+   moved a fog item, it also runs check 11 over `map-history.md` and `map-manager-only.md`.
 
 ### Supersede
 
@@ -344,6 +369,10 @@ holds no work, still needs to exist. Update it in place instead, marking the old
 
 Step 1 needs only the replacement nodes to exist. Their own work need not have landed.
 
+6. Whoever supersedes the node runs checks 1 and 2 below itself, as part of this supersession, over the
+   material it touched: the superseded node, each replacement, and every node whose `Blocked by:` step
+   4 changed.
+
 ### Rule out of scope
 
 1. `nodes/NN-<name>.md`: set `Status: out-of-scope`.
@@ -352,6 +381,9 @@ Step 1 needs only the replacement nodes to exist. Their own work need not have l
 
 Every node that lists `NN` in `Blocked by:` now holds an edge that nothing satisfies. Rule each such
 node out of scope too, or correct its `Blocked by:`. Until then, check 1 below reports it.
+
+3. Whoever rules the node out of scope runs check 1 below itself, as part of this ruling, over the
+   material it touched: the node ruled out and every node that lists it in `Blocked by:`.
 
 ### Park
 
@@ -363,6 +395,28 @@ node out of scope too, or correct its `Blocked by:`. Until then, check 1 below r
 
 Answers already relayed are already on the node, because `### The human's words` in `SKILL.md` has the
 manager write each one there as it is given.
+
+4. Whoever parks the node runs check 8 below itself, as part of parking it, over the material this act
+   touched: the node's `## Interview`.
+
+### Record a question or an answer
+
+Use this when a relayed question, or the human's answer to one, is written onto its node.
+
+1. `nodes/NN-<name>.md`: append the question or the answer to `## Interview`, under the current
+   attempt, in the form that the `## Interview` subsection of `## The node file` above gives. An answer
+   carries the marker that `### Recording the human's words` above requires.
+2. Whoever appends it runs check 8 below itself, as part of this append, over the material it touched:
+   the node's `## Interview`.
+
+### Record a checker's run
+
+Use this when a checker hands back its outcome, or hands back a raise instead of an outcome.
+
+1. `nodes/NN-<name>.md`: append the run's entry to `## Review`, in the form that the `## Review`
+   subsection of `## The node file` above gives.
+2. Whoever appends it runs check 9 below itself, as part of this append, over the material it touched:
+   the entry just appended.
 
 ### Raise a flag
 
@@ -378,6 +432,9 @@ did, told in the worker's words. A one-line summary is enough under `## Flags`. 
 account. Where a node has no round at all, as with a `research` node or an AFK `precondition` node, the
 `## Flags` entry carries that account itself.
 
+3. Whoever raises the flag runs check 6 below itself, as part of raising it, over the material it
+   touched: the flag's entry on its node and its line in `flags.md`.
+
 ### Settle a flag
 
 1. `flags.md`: change that flag's `- [ ]` to `- [x]`.
@@ -387,6 +444,9 @@ account. Where a node has no round at all, as with a `research` node or an AFK `
 
 A flag the human turns into a node is settled the same way. The new node is created by the steps under
 `## Adding a node`.
+
+3. Whoever settles the flag runs check 6 below itself, as part of settling it, over the material it
+   touched: the flag's entry on its node and its line in `flags.md`.
 
 ### Change the map
 
@@ -401,6 +461,10 @@ is written straight into its file, with no other change.
 
 `## Writing the map` above says why a map file holds the current statement and not the account.
 
+3. Whoever changes the map runs checks 4, 10 and 11 below itself, as part of this change, over the
+   material it touched: the map file it changed and `map-history.md`. Check 11 is what establishes that
+   step 1 was carried out.
+
 ## Mechanical checks
 
 Each of these is decidable by reading the files.
@@ -410,7 +474,8 @@ Each of these is decidable by reading the files.
    `Superseded by:`.
 3. Every `NN` is used once, and there is no gap that indicates a reused number.
 4. Every `Labels:` entry appears in the map's declared vocabulary.
-5. Every `resolved` node has an `## Answer` and exactly one line in `decisions.md`.
+5. Every `resolved` node has an `## Answer` and exactly one line in `decisions.md` that is not struck
+   through. It may have any number of struck-through lines there.
 6. Every `## Flags` entry has a line in `flags.md` with the same id, and every line there has an entry.
    The two agree on state: a flag that is `- [x]` in `flags.md` is marked `settled` on its node, and a
    flag marked `settled` on its node is `- [x]`.
@@ -420,3 +485,46 @@ Each of these is decidable by reading the files.
    Every such item on a `resolved` node opens with `ESTABLISHED BY`.
 10. The check lists every item in the map's `## Notes` that is over the 500-byte target set under
     `## Writing the map` above, with its size. It reports and never fails.
+11. Every change to a map file, meaning `map.md` or a sibling of it that states rules that currently
+    bind, keeps everything it takes out in `map-history.md`. This has two halves. First,
+    `map-history.md`'s content before the change is a byte-exact prefix of its content after the
+    change, so the file gained text and lost none. Second, every passage the change removed from a map
+    file appears byte-identically inside the text the change appended to `map-history.md`. The check
+    is decided by comparing the two states of the files character by character, and not by reading
+    them for sense, so it too is decidable by reading the files. It fails where either half does not
+    hold.
+
+### Who runs a check, and when
+
+Every check is run by whoever performs an act that can make it false, at that act, over the material
+that act touched. So each procedure under `## Procedures`, and `## Adding a node`, ends with a step
+naming the checks its writes can make false. No schedule, no periodic pass and no separately spawned
+agent runs any of them. One run is not tied to an act: a run of every check over the whole graph, which
+remains available at an empty frontier.
+
+### What a failure produces
+
+A failed check produces one of two things, and neither raises a flag.
+
+- Where what failed is that act's own bookkeeping, such as a missing index line, a missing edge or a
+  flag left unmarked, whoever performs the act repairs it inside the same act and reports nothing.
+- Where the repair would change something the human decided, would rewrite or remove text already
+  recorded, or would reverse a status, whoever performs the act puts it to the human instead.
+
+### How a check reads the files
+
+A check reads the files by these rules.
+
+- `## Reading the graph` above holds three of them: fields are read only from the header block, fenced
+  code blocks are skipped, and node numbers are taken from a `Blocked by:` field by the rule stated
+  there.
+- Text is unwrapped into unbroken lines before any phrase is matched, because a phrase that wraps is
+  invisible to a search over lines.
+- In `flags.md`, a flag's node is the first link on the line.
+- In `decisions.md`, a resolved node's entry is identified by the first link on its line. So an entry
+  whose text cites another node is not counted as an entry for that node.
+- A `## Flags` entry is line-anchored: it begins at the start of a line with the flag's id. So a flag
+  id that appears mid-sentence inside another entry's prose is not itself an entry.
+- A flag counts as settled on its node only where the marker `**· settled**` stands in an entry's
+  marker position, directly after its id, as the settled form under `## The node file` shows. The bare
+  word `settled` in an entry's prose does not settle it.
