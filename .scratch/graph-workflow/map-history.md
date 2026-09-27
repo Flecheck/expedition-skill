@@ -950,3 +950,25 @@ They are rules of writing, where the ground rules above are rules of scope.
 **Skills every session should consult:** `/grilling` and `/domain-modeling` by default, `/naming` for terminology, `/coding-principles` before writing code, `/prototype` for prototype nodes. **Plus one file, not a skill:** [`CONTEXT.md`](../../CONTEXT.md) at the repo root is the glossary, and reading it is a precondition for writing anything — its `_Avoid_` lines are what stop a settled term from drifting back.
 
 **The workflow is named `/expedition`, and its vocabulary is fixed**, by [Naming](nodes/14-naming.md). The metaphor stops at the map: the product and one run of it are cartographic, and every actor and mechanism underneath is described plainly — **manager**, **worker**, **checker**, **gate**, **node**. [`CONTEXT.md`](../../CONTEXT.md) holds **51 term entries and 41 `_Avoid_` lines, counted 2026-09-10** by [node 224](nodes/224-the-glossary-says-the-map-is-read-once-per-session.md)'s worker and independently by its checker. Dated and non-authoritative under [node 183](nodes/183-nothing-measures-the-record-about-itself.md): re-derive rather than trust it, and the refusals are the part that does the work: `postpone`, `provenance`, `write lock`, `done`, `issue`, `ticket` and `task` are refused by name. **That file is still at the root.** [Ship the glossary inside the skill directory and make it state its own completeness](nodes/56-ship-the-glossary-into-the-skill-set.md) moves it to `.claude/skills/expedition/glossary.md`, the name the human chose on 2026-09-25, because a glossary the shipped files declare authoritative and which does not travel with them is a defect. **Prose written before a word changed still says the old word: that is the never-delete rule rather than drift, and the glossary is authoritative.** The earlier counts and wordings are in [map-history.md](map-history.md).
+
+## Superseded from `map-manager-only.md` at node 160 — the rebase conflict aborted, the record committed by the human, and node 160 named as open
+
+*Replaced under the `Change the map` procedure at [node 160](nodes/160-carry-the-integration-conflict-rule-into-the-map.md), which carried [node 115](nodes/115-two-writers-edit-the-map-at-once.md)'s integration-conflict rule and the record commits of [node 176](nodes/176-the-managers-record-edits-collide-with-a-landing.md) and [node 266](nodes/266-a-worker-cannot-see-the-record-the-manager-has-not-committed.md) into the map.*
+
+### From *Landing an implementation node's work* — the landing policy's sentence on a rebase conflict
+
+*Replaced, and it stood as:*
+
+**A rebase conflict is resolved by nobody in the moment**: the manager runs `git rebase --abort` and the node takes a correction round with the worker respawned.
+
+### From *Landing an implementation node's work* — the landing policy's sentence on committing the graph's own files
+
+*Replaced, and it stood as:*
+
+The graph's own files are *not* committed per node; they are committed periodically by the human, which is safe only because node files are append-only.
+
+### From *Landing an implementation node's work* — the code-slot paragraph's sentence naming node 160 as open
+
+*Replaced, and it stood as:*
+
+**What the manager carries with the second slot** is that two implementation workers may hold two worktrees over the same shipped file, so it picks nodes whose paths are disjoint; the integration-conflict question that raises is [node 115](nodes/115-two-writers-edit-the-map-at-once.md)'s, still open at [node 160](nodes/160-carry-the-integration-conflict-rule-into-the-map.md) and [node 162](nodes/162-how-much-of-the-integration-rule-ships.md).
