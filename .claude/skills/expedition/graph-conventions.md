@@ -188,7 +188,8 @@ Sections appear in the order shown, and only when they have content.
 ### `## Acceptance condition`
 
 The condition states what done means for this implementation node. `## Acceptance conditions` in
-`SKILL.md` says who writes it and who may change it after it is written.
+`SKILL.md` says who writes it and who may change it after it is written. `### Amend an acceptance
+condition` under `## Procedures` says how a change is recorded on the node.
 
 A condition is self-contained text. Everything needed to judge whether the work is done is in the
 condition, so its reader never goes anywhere else to find out what it demands. That reader is the
@@ -503,6 +504,19 @@ Use this when a checker hands back its outcome, or hands back a raise instead of
    subsection of `## The node file` above gives.
 2. Whoever appends it runs check 9 below itself, as part of this append, over the material it touched:
    the entry just appended.
+
+### Amend an acceptance condition
+
+Use this when a node's acceptance condition is changed after it is written. `### Changing one after it
+is written` in `SKILL.md` says who may change it and what the change may cover.
+
+1. `nodes/NN-<name>.md`: under `## Acceptance condition`, mark each clause the amendment replaces as
+   superseded where the clause stands. Append the amendment after the text of the condition's author,
+   marked as its own author's, beside the search or the fact that justified it.
+2. `nodes/NN-<name>.md` and `flags.md`: raise the amendment's flag by the steps under
+   `### Raise a flag`.
+3. Whoever amends the condition runs check 6 below itself, as part of this amendment, over the material
+   it touched: the flag's entry on its node and its line in `flags.md`.
 
 ### Raise a flag
 

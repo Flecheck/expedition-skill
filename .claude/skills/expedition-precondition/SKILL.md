@@ -154,7 +154,8 @@ INDEX LINE:    <one sentence, about 25 words, for decisions.md>
 FLAGS:         <per flag, prefixed ASSUMPTION or DELEGATED: the prose for your node, then the one
                 sentence for the index>
 NEW NODES:     <name, kind, question, blockers — one block each, and for an implementation node
-                its acceptance condition too>
+                its acceptance condition too; for a defect that joins an open node, that node
+                and the clauses to add to its condition>
 INVALIDATIONS: <which resolved node your work changes, and how: a rename, an extension, a narrowing
                 or a contradiction of what it says>
 CONDITIONS:    <what you searched the open nodes' conditions for, and each replacement you write for
@@ -255,6 +256,13 @@ read the record at all. So write the condition to the four points that follow.
 Before you hand the condition over, check what you wrote against the four points above. The worker that
 claims the node may not fix a condition it judges wrong. That node stops instead, and the condition goes
 to the human. So any loose wording you write here can stop that node.
+
+Where a defect you would report concerns the same file and the same concern as an open implementation
+node, join the defect to that node instead of proposing a new node. To find such a node, search the open
+nodes' `## Acceptance condition` sections for the path the defect is in, and read only what matches. In
+`NEW NODES`, name that node and give the clauses to add to its acceptance condition. Write those clauses
+to the same points as a condition. The manager adds them to that node's condition where nobody holds
+the node yet, and files them as a new node where somebody does.
 
 ## If you are a replacement attempt
 

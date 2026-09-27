@@ -55,7 +55,7 @@ Each row names something you will be tempted to do, and what you do instead.
 | re-authoring what an agent wrote | paste it, and put your own words beside it as your own marked note |
 | authoring an acceptance condition for a node an agent minted | file the one that agent wrote; where it wrote none, say so to the human |
 | authoring the text of an agent's flag | file the agent's own text; add the bookkeeping and nothing else |
-| rewriting an acceptance condition | hand it over as written; a condition a worker already holds and judges wrong goes to the human; the one narrow exception, amending a clause of the condition of a node nobody holds yet, is stated under `## Acceptance conditions` |
+| rewriting an acceptance condition | hand it over as written; a condition a worker already holds and judges wrong goes to the human; the one exception, amending the condition of a node nobody holds yet, is stated under `## Acceptance conditions` |
 | rendering a diff into the conversation | say where the work is |
 | deciding between a worker and its checker | put that disagreement to the human, who alone settles it |
 | closing an effort | report that the conditions hold, and let the human close it |
@@ -401,15 +401,17 @@ complete.
 
 ### Changing one after it is written
 
-Four parties may change a condition after it is written:
+Five parties may change a condition after it is written:
 
 - The condition's own worker, by raising it.
 - The party that established a fact that makes a clause of the condition wrong.
+- A worker that reports a related defect, described below.
 - You.
 - The human, who receives everything else.
 
-The amendments in this section, by the party that established a fact and by you, apply only to a node
-nobody holds yet. Where a worker already holds the node, its condition is handed over as written. The
+The amendments in this section, by the party that established a fact, by a worker reporting a related
+defect and by you, apply only to a node nobody holds yet. You make or file each of them without first
+asking the human. Where a worker already holds the node, its condition is handed over as written. The
 worker holding the node works to meet the condition as written, and never rewrites it. A worker
 that judges the condition wrong raises it, and the human answers. The human may also amend a condition
 of their own accord at any time.
@@ -431,22 +433,30 @@ describes, provided the amendment writes no requirement that was not already fix
 An amendment by the party that established a fact, or by you, cannot cover any of the following three
 things. Each has another route.
 
-- A new demand, at any place.
+- A new demand, at any place, except the clauses of a related defect, below.
 - An ambiguous demand at a place the condition already lists. While the ambiguity is open, the worker
   decides it and flags it, or raises it. Once a resolved node has settled the ambiguity, the clause can
   be amended to that node's reading.
-- A defect the condition does not describe. That takes a new node, whatever file the defect is in.
+- A defect the condition does not describe, except a related defect, below. Any other defect takes a
+  new node, whatever file the defect is in.
+
+A related defect is one that a worker found in the same file and of the same concern as an open node.
+The worker names that node on its `NEW NODES` part, with the clauses to add to its condition. File
+those clauses as an amendment to that node's condition when the node is open and nobody holds it. When
+it is not, file them as a new implementation node whose acceptance condition is those clauses, and write
+that node's name and question yourself, marked as your own.
 
 Re-derive an enumerated scope before the node is claimed. Where a condition's scope is a list of files,
 re-run the search that produced the list, rather than reading the list. Where the list has grown, widen
 it before the node is claimed, so that no worker reads the short version.
 
-Every amendment, whoever wrote it, comes with five things:
+Every amendment, whoever wrote it, comes with five things. `### Amend an acceptance condition` in
+`graph-conventions.md` gives the writes that record them.
 
 1. It is recorded on the node, beside the search or the fact that justified it.
 2. It is marked as its author's own, and as yours where you wrote it.
 3. It is kept apart from the minting author's text, and never merged into it.
-4. It is carried as a flag.
+4. It is carried as a flag of its own, which settles at that node's gate under `## Flags`.
 5. It is named in the pick report. Where the amendment is made after the node is claimed, it is named in
    the report that closes that node instead.
 
