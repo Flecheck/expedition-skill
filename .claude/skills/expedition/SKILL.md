@@ -790,12 +790,10 @@ front of you, raise it.
    whatever it happened to read, and nothing checks the answer afterwards. One bounded class does carry
    a duty to look, the open nodes' acceptance conditions. `### Changing one after it is written`, under
    `## Acceptance conditions`, states that duty.
-5. Where does an annotation onto an already-resolved node belong? You write such annotations, and the
-   graph's file format defines no section for them: no name, no place in the order, and no form.
-6. May you file a flag about your own conduct, and is there any step between the judgement and the
+5. May you file a flag about your own conduct, and is there any step between the judgement and the
    record? You do file such flags, and nothing authorises it. When you file one, the party judged and
    the party writing the judgement are the same, with no step between them.
-7. What limits what a spawn may assert about the conclusion its node is meant to reach? Nothing does. An
+6. What limits what a spawn may assert about the conclusion its node is meant to reach? Nothing does. An
    inference of yours that nobody has established, written into a node's question or into a spawn, is
    read by the worker as settled fact.
 

@@ -180,6 +180,7 @@ Superseded by: 88
 ## Flags
 ## Review
 ## Interview
+## Annotation               <- written by the manager; one section per annotation, in the order written
 ```
 
 Sections appear in the order shown, and only when they have content.
@@ -301,6 +302,28 @@ attempt is resumed, replaced or stopped. An attempt's block records what happene
   three attempt blocks.
 - An attempt the human said is final is marked `final stop` in its own heading, beside where a dead
   attempt is marked `dead`. No manager resumes an attempt so marked.
+
+### `## Annotation`
+
+An annotation records what a later piece of work changed about this node's answer. The manager writes
+one onto a node whose answer a later node has changed the meaning of. An annotation is the manager's to
+write and never a worker's, because `## Writing the graph` in `SKILL.md` makes the manager the only
+writer of the graph's record. A worker whose work changes another node's answer reports that change in
+its handover, and the manager writes the annotation from that report.
+
+Where a reporting agent supplied the text, the annotation is that agent's own words, pasted as
+`### You write as a scribe` in `SKILL.md` says. Anything the manager adds stands beside those words as
+its own marked note.
+
+An annotation is added to the node. It replaces nothing the node already holds.
+
+Each annotation is its own section. Annotations come after every other section, in the order they were
+written, as the block under `## The node file` above shows. The heading is `## Annotation`, and it may
+name what the annotation records after a colon:
+
+```
+## Annotation: <what this annotation records>
+```
 
 ## Statuses
 
@@ -591,3 +614,18 @@ A check reads the files by these rules.
 - A flag counts as settled on its node only where the marker `**· settled**` stands in an entry's
   marker position, directly after its id, as the settled form under `## The node file` shows. The bare
   word `settled` in an entry's prose does not settle it.
+
+## What a hard rule in a worker contract is
+
+A hard rule in a worker contract binds by being read by the agent the contract was given to. No
+mechanism in the shipped workflow enforces one.
+
+A contract says what a worker may do. What a worker can do is a property of the harness that ran it,
+such as which tools the harness gave it. A clause about what a worker may do survives a change of
+harness. A clause about what a worker can do does not, because the next harness may allow what the last
+one prevented.
+
+So whoever writes or edits a contract writes each rule as what a worker may do. A rule that would be
+false on a harness unable to enforce it does not belong in a shipped file. Where agents keep reading a
+rule as demanding less than it says, the remedy is a better-written rule or an exception granted to that
+rule, and never an assumed capability.
