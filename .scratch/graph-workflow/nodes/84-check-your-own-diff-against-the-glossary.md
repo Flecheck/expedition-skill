@@ -83,3 +83,5 @@ restoring a clause a checker had already **cleared** on a ground that stopped be
 headword scan guards the **shared vocabulary** against a file that borrows a word, and the inverse scan guards the
 **file's internal consistency** against a file that contradicts itself. A contract defining thirty-seven terms of
 its own needs the second more than the first.
+
+*The manager's note, 2026-09-27:* [node 56](56-ship-the-glossary-into-the-skill-set.md)'s worker reports this node's question is changed, once node 56 lands. Its words, pasted: Nodes 84 and 208 (open), questions: `CONTEXT.md` becomes `.claude/skills/expedition/glossary.md`. This is a rename only.

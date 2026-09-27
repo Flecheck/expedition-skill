@@ -96,6 +96,12 @@ so the two are disjoint in fact though not by any written edge. The manager hold
 
 - Node 190 (open, unclaimed). Clause 1, as amended by node 348, contains the phrase "this effort's five standing rules for writing, stated as held in this file". Replacement: "this effort's five standing rules for writing, stated as held in `map.md`'s `## Notes` inside the ground-rules block and received by a checker as text in its spawn". Clause 4, as amended by node 168, reads "No numbered rule in the file's block of five standing rules for writing is reworded, renumbered or reordered". Replacement: "4. The file states neither the five ground rules nor the five standing rules for writing as a numbered list. Where it names them, it names `map.md`'s `## Notes` as holding them." Both replacements are fixed by this node, once resolved, and by the new implementation node above, once landed. Node 190 must not be claimed before that node lands.
 
+## Amendment, 2026-09-27 (from node 56)
+
+*Written by [node 56](56-ship-the-glossary-into-the-skill-set.md)'s worker under its `CONDITIONS`, and filed by the manager. Pasted as it wrote it.*
+
+- Node 190 (open, unclaimed): clause 1 "`CONTEXT.md`'s `_Avoid_` lines" should read "`.claude/skills/expedition/glossary.md`'s `_Avoid_` lines". Clause 2 "that `CONTEXT.md`'s refused words return false positives" should read "that `.claude/skills/expedition/glossary.md`'s refused words return false positives". The path is fixed by this node's work in the tree, the human's 2026-09-25 choice of name.
+
 ## Flags
 
 `190.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 168's replacement for clause 4 was filed on this open, unclaimed node, and the node was made to wait on node 348.
@@ -105,3 +111,5 @@ so the two are disjoint in fact though not by any written edge. The manager hold
 *The manager's note, 2026-09-27:* edge to [node 349](349-whether-the-five-standing-rules-for-writing-reach-other-workers.md) added. Node 349's worker found that clause 4, and node 348's amendment to clause 1, both assume the five standing rules for writing stay in the rules file. Node 349's question is whether they move, so this node waits on it.
 
 `190.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 349 above.* Node 349's replacements for clauses 1 and 4 were filed on this open, unclaimed node without asking the human first, and the node was made to wait on [node 352](352-move-the-five-standing-rules-for-writing-into-the-ground-rules-block.md).
+
+`190.4` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 56 above.* Node 56's replacement naming `.claude/skills/expedition/glossary.md` in place of `CONTEXT.md` was filed on this open, unclaimed node without asking the human first.

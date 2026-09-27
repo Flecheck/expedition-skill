@@ -110,3 +110,5 @@ standard. Node 29's answer is what makes that refusal correct rather than merely
 ## Flags
 
 `41.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 137's worker's replacement clause was filed on this open, unclaimed node without asking the human first, under the rule node 327 landed.
+
+*The manager's note, 2026-09-27:* [node 56](56-ship-the-glossary-into-the-skill-set.md)'s worker reports this node's question is changed, once node 56 lands. Its words, pasted: Node 41 (open), question changed: the entry for `FRICTION` that its worker owes under the bar now goes in `.claude/skills/expedition/glossary.md`. The completeness paragraph node 29 designed is now in place, so node 41 is the mechanism's first test as planned. Its manager-note link `[CONTEXT.md](../../../CONTEXT.md)` now reaches the superseded pointer. Its condition clause "written into that effort's ground rules in `map.md`'s `## Notes`" agrees with the new `Ground rules` entry.

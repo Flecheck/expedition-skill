@@ -49,3 +49,5 @@ the third because the manager did not notice the second — the same failure [no
 **Every one of the three workers substituted and flagged rather than raising**, and every substitution has so far
 survived its check. So the measured cost is three flags and three paragraphs of a worker's reasoning, not a failed
 node.
+
+*The manager's note, 2026-09-27:* [node 56](56-ship-the-glossary-into-the-skill-set.md)'s worker reports this node's question is changed, once node 56 lands. Its words, pasted: Nodes 84 and 208 (open), questions: `CONTEXT.md` becomes `.claude/skills/expedition/glossary.md`. This is a rename only.

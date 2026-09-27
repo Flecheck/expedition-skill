@@ -184,6 +184,12 @@ RETROSPECTIVE (this raise, not a handover)
 4. Stale, wrong or contradictory: clause 1 names the wrong file, and nothing amends it. Clauses 1 and 7 contradict node 189 and graph-conventions.md. The code-slot paragraph's "still open at node 160" will be stale once this lands, and clause 4 freezes it. map.md's opening pointer to map-implementation-rules.md is correct.
 ```
 
+#### The human's answer to raise 1, 2026-09-27
+
+The human, `verbatim`: *"ok"*. It takes the worker's recommendation: "Yes, replace. Amend clause 1 to read: "In `map-manager-only.md`, inside the paragraph beginning `**Landing policy**`, the sentence `<quoted>` is removed, and the new text clause 3 demands stands where it stood." Amend clause 7 in the same way: remove the sentence, with the new text standing in its place. Clause 2, and clause 7's history half, stay as written".
+
+*The manager's note:* the manager had also asked whether the answer takes the worker's optional point, "Optionally, clause 4 could also let "still open at node 160" be replaced by the same route." The bare "ok" does not say, so the manager asks which before resuming the worker.
+
 ## Flags
 
 `160.2` `MANAGER-WRONG` — **The manager reported this node to the human as carrying an unsafe amendment shape, and

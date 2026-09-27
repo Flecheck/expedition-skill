@@ -114,3 +114,5 @@ is the same shape of question about a different body of text.
 
 **One thing this does not settle and node 138 now owns for every direction of theirs:** whether it binds the shipped
 files or this effort only. The manager has again recorded a direction of theirs without putting that to them.
+
+*The manager's note, 2026-09-27:* [node 56](56-ship-the-glossary-into-the-skill-set.md)'s worker reports this node's question is changed, once node 56 lands. Its words, pasted: Node 130 (open), question partly answered: "keeping a glossary true as terms move" is now stated in the glossary itself.
