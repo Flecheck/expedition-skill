@@ -162,3 +162,5 @@ RETROSPECTIVE
 `275.2` `ASSUMPTION` **· settled** — Assigned deletion of the remote copy to the human. *(The worker's full text is under its handover's `FLAGS`.)*
 
 *The manager's note, 2026-09-27:* flags 275.1 and 275.2 settle at the node closing report that closes this node.
+
+*The manager's note, 2026-09-27:* when the human ran `git push origin --delete worktree-250-worker-reaches-its-worktree`, it failed with "remote ref does not exist". The branch had already been deleted on GitHub. The worker's `origin/...` copy was a stale remote-tracking ref, and the manager deleted it locally. No ref for node 250's branch remains, local or remote.

@@ -3,7 +3,7 @@
 Type: implementation
 Status: open
 
-Blocked by: 184, 348
+Blocked by: 184, 348, 349
 
 ## Question
 
@@ -95,3 +95,5 @@ so the two are disjoint in fact though not by any written edge. The manager hold
 `190.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 168's replacement for clause 4 was filed on this open, unclaimed node, and the node was made to wait on node 348.
 
 `190.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 348 above.* Node 348's replacement for clause 1 was filed on this open, unclaimed node without asking the human first.
+
+*The manager's note, 2026-09-27:* edge to [node 349](349-whether-the-five-standing-rules-for-writing-reach-other-workers.md) added. Node 349's worker found that clause 4, and node 348's amendment to clause 1, both assume the five standing rules for writing stay in the rules file. Node 349's question is whether they move, so this node waits on it.
