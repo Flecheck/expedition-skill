@@ -1,7 +1,7 @@
 # Ship the glossary inside the skill directory and make it state its own completeness
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 ## Question
 
@@ -135,6 +135,12 @@ Wherever the acceptance condition above names `.claude/skills/expedition/CONTEXT
 *Written by [node 97](97-write-the-adoption-procedure.md)'s worker under its `NEW NODES`, as a related defect joined to this open, unclaimed node, and filed by the manager under the rule [node 327](327-a-related-defect-joins-an-open-node-instead-of-becoming-a-new-one.md) landed. Pasted as it wrote it. Its words are fixed by this node's amendment by the human (`glossary.md`, 2026-09-25) and by node 97's work once it lands.*
 
 - **A new clause, read under the amendment by the human that substitutes `glossary.md`.** "6a. Wherever `.claude/skills/expedition/adoption.md` names the glossary, it names `glossary.md`, the file beside it in `.claude/skills/expedition/`."
+
+## Answer
+
+The glossary moves to `.claude/skills/expedition/glossary.md` with a completeness paragraph and a `Ground rules` entry. The root `CONTEXT.md` becomes a superseded pointer, and `CONTEXT-MAP.md` links the new file.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `9a87ac0`. Flags 56.1, 56.2, 56.3, 56.4 settle at the node closing report.
 
 ## Handover, attempt 1
 
@@ -310,10 +316,12 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`56.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 97's related-defect clause 6a was added to this node's condition without asking the human first; it binds once node 97's `adoption.md` has landed.
+`56.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above.* Node 97's related-defect clause 6a was added to this node's condition without asking the human first; it binds once node 97's `adoption.md` has landed.
 
-`56.2` `ASSUMPTION` — Clauses 2 and 5 were implemented as written, without a raise. The rename's reason (confusion with a host repo's `CONTEXT.md`) concerns only the shipped copy. The root `CONTEXT.md` pointer keeps the record's many `../../CONTEXT.md` links working. `CONTEXT-MAP.md` points tools that follow the context-map convention at a file no longer called `CONTEXT.md`. Neither root file ships.
+`56.2` `ASSUMPTION` **· settled** — Clauses 2 and 5 were implemented as written, without a raise. The rename's reason (confusion with a host repo's `CONTEXT.md`) concerns only the shipped copy. The root `CONTEXT.md` pointer keeps the record's many `../../CONTEXT.md` links working. `CONTEXT-MAP.md` points tools that follow the context-map convention at a file no longer called `CONTEXT.md`. Neither root file ships.
 
-`56.3` `ASSUMPTION` — The glossary's intro is rewritten. The effort-specific path `.scratch/graph-workflow/nodes/` is dropped (ground rule 1). "added only when the node that settles it resolves" becomes "added only once a node has settled it", because the old timing conflicted with the new "coining a term and writing its entry are one change". The completeness paragraph is placed first, before the workflow description, so the file literally opens with it.
+`56.3` `ASSUMPTION` **· settled** — The glossary's intro is rewritten. The effort-specific path `.scratch/graph-workflow/nodes/` is dropped (ground rule 1). "added only when the node that settles it resolves" becomes "added only once a node has settled it", because the old timing conflicted with the new "coining a term and writing its entry are one change". The completeness paragraph is placed first, before the workflow description, so the file literally opens with it.
 
-`56.4` `ASSUMPTION` — The completeness paragraph is written as a rule, not as a claim that every term has an entry today. The tree still has terms used without a headword: `implementer`, in the glossary's own Checker entry and five times in the checker contract. Possibly also the markers `ASSUMPTION` and `CONDITION-WRONG`, which appear in the contracts and in the Acceptance condition entry's prose. Under the paragraph each is a defect of the change that introduced it, not of this one. I did not fix them, because clause 7 forbids rewording entries and clause 1 fixes the count. A checker at this gate may name them.
+`56.4` `ASSUMPTION` **· settled** — The completeness paragraph is written as a rule, not as a claim that every term has an entry today. The tree still has terms used without a headword: `implementer`, in the glossary's own Checker entry and five times in the checker contract. Possibly also the markers `ASSUMPTION` and `CONDITION-WRONG`, which appear in the contracts and in the Acceptance condition entry's prose. Under the paragraph each is a defect of the change that introduced it, not of this one. I did not fix them, because clause 7 forbids rewording entries and clause 1 fixes the count. A checker at this gate may name them.
+
+*The manager's note, 2026-09-27:* flags 56.1, 56.2, 56.3, 56.4 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.

@@ -942,3 +942,11 @@ That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **
 *Replaced, and it stood as:*
 
 They are rules of writing, where the ground rules above are rules of scope.
+
+### From `map.md`'s `## Notes` — the glossary's location, superseded when node 56 landed, 2026-09-27
+
+*Replaced, and it stood as:*
+
+**Skills every session should consult:** `/grilling` and `/domain-modeling` by default, `/naming` for terminology, `/coding-principles` before writing code, `/prototype` for prototype nodes. **Plus one file, not a skill:** [`CONTEXT.md`](../../CONTEXT.md) at the repo root is the glossary, and reading it is a precondition for writing anything — its `_Avoid_` lines are what stop a settled term from drifting back.
+
+**The workflow is named `/expedition`, and its vocabulary is fixed**, by [Naming](nodes/14-naming.md). The metaphor stops at the map: the product and one run of it are cartographic, and every actor and mechanism underneath is described plainly — **manager**, **worker**, **checker**, **gate**, **node**. [`CONTEXT.md`](../../CONTEXT.md) holds **51 term entries and 41 `_Avoid_` lines, counted 2026-09-10** by [node 224](nodes/224-the-glossary-says-the-map-is-read-once-per-session.md)'s worker and independently by its checker. Dated and non-authoritative under [node 183](nodes/183-nothing-measures-the-record-about-itself.md): re-derive rather than trust it, and the refusals are the part that does the work: `postpone`, `provenance`, `write lock`, `done`, `issue`, `ticket` and `task` are refused by name. **That file is still at the root.** [Ship the glossary inside the skill directory and make it state its own completeness](nodes/56-ship-the-glossary-into-the-skill-set.md) moves it to `.claude/skills/expedition/glossary.md`, the name the human chose on 2026-09-25, because a glossary the shipped files declare authoritative and which does not travel with them is a defect. **Prose written before a word changed still says the old word: that is the never-delete rule rather than drift, and the glossary is authoritative.** The earlier counts and wordings are in [map-history.md](map-history.md).

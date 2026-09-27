@@ -1,7 +1,7 @@
 # Nothing in the record says the auto-loaded trigger file exists
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
