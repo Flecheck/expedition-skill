@@ -81,10 +81,9 @@ file admits is under `## Writing the map` below.
   than a defect.
 - `## Notes` — the domain, the skills every session consults, and the standing preferences for this
   effort. Two further blocks are optional prose, written where the effort has them. Each lives here
-  unless the effort holds it in a sibling file of the map. The first is the effort's ground rules. The
-  second declares, by path and glob, which sources are authoritative, which are evidence only, and
-  which hold statements known to be false. Absent any declaration, every source a worker is pointed at
-  is authoritative.
+  and in no sibling file of the map. The first is the effort's ground rules. The second declares, by
+  path and glob, which sources are authoritative, which are evidence only, and which hold statements
+  known to be false. Absent any declaration, every source a worker is pointed at is authoritative.
 - `## Decisions so far` — a pointer to `decisions.md`. The section holds no decision.
 
 `decisions.md` holds one line per resolved node: one sentence of about 25 words, enough to judge

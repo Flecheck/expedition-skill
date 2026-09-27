@@ -55,8 +55,8 @@ Leave `flags.md` unread. It is not yours.
 
 The map may declare the effort's ground rules. It may also declare, by path or glob, which sources are
 authoritative, which are evidence only, and which hold statements known to be false. Follow both. Each
-declaration sits in `map.md`'s `## Notes` unless the effort holds it in a sibling file of the map. Absent
-any declaration, every source you are pointed at is authoritative.
+declaration sits in `map.md`'s `## Notes`. Absent any declaration, every source you are pointed at is
+authoritative.
 
 The map's `## Notes` may also declare the effort's own domain vocabulary. The words defined under
 `## Words used exactly` hold either way.
