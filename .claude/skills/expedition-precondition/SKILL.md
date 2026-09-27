@@ -96,9 +96,9 @@ The human answers in one of two ways.
 - Stop. You are finished. Write nothing more, and hand nothing more back.
 
 Where none of the three triggers holds, decide the matter yourself, continue the work, and hand back one
-`ASSUMPTION` flag. The flag settles at the report the manager sends the human when your node closes.
-That report is where the human first sees your node, so write the flag short and plain enough to be
-settled without reading anything else.
+`ASSUMPTION` flag. The flag settles at the node closing report, which the manager sends the human when
+your node closes. That report is where the human first sees your node, so write the flag short and
+plain enough to be settled without reading anything else.
 
 ## What you hand back
 

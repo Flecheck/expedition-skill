@@ -93,7 +93,8 @@ exists, and flat where it does not.
 
 `flags.md` is the graph's capped index of every judgement an agent made on its own. It holds one line
 per flag, one sentence long, written as a report. `## Flags` in `SKILL.md` says whose text the line is,
-and `## Closing an effort` there says what the closing report takes from this file. The line's form:
+and `## Closing an effort` there says what the effort closing report takes from this file. The line's
+form:
 
 ```
 - [ ] NN.k ASSUMPTION · [<node name>](nodes/NN-<name>.md) — <one line>
@@ -105,9 +106,9 @@ marker. On the node's `## Flags` entry it sits in front of the marker.
 
 `- [ ]` means outstanding. `- [x]` means the human has dealt with the flag, which does not mean they
 agreed with it. The node holds the same state, marking a settled flag `settled`, so the node and
-`flags.md` can disagree. Where they disagree, `flags.md` wins, because the sweep and the closing report
-are built from it. The flag's node is the first link on the line. The text after the dash may contain
-other links.
+`flags.md` can disagree. Where they disagree, `flags.md` wins, because the sweep and the effort closing
+report are built from it. The flag's node is the first link on the line. The text after the dash may
+contain other links.
 
 ## Writing the map
 
@@ -540,7 +541,8 @@ account. Where a node has no round at all, as with a `research` node or an AFK `
 1. `flags.md`: change that flag's `- [ ]` to `- [x]`.
 2. `nodes/NN-<name>.md`: mark that flag `settled` under `## Flags`.
 
-`## Flags` in `SKILL.md` says when a node's flags settle, and which flags reach the closing report.
+`## Flags` in `SKILL.md` says when a node's flags settle, and which flags reach the effort closing
+report.
 
 A flag the human turns into a node is settled the same way. The new node is created by the steps under
 `## Adding a node`.

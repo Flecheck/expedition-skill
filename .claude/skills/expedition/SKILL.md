@@ -76,8 +76,8 @@ every lower item still owed: take it later in the same turn, and never skip it.
    and you never wait in place of running the check.
    - The human has something to do only when there is something they must act on: a question of
      theirs still unanswered, or one you send as you stop. A message that awaits no answer leaves them
-     nothing to do however long it is, so a pick report, a notice that an agent died and the closing
-     report never pass the check.
+     nothing to do however long it is, so a node closing report, a notice that an agent died and the
+     effort closing report never pass the check.
    - Nothing is waiting when there is no gate assembled and unsent, no worker blocked on a raise, no
      raise of your own, and no relayed question. Those four are the whole, fixed membership of the
      pending queue under `## What is in front of the human, and when`, so you can prove that nothing is
@@ -360,16 +360,17 @@ and settle one, step by step. The same file gives the form of each entry, under 
 in its description of `## Flags`.
 
 Settle a node's flags at its gate, where it is an implementation node that has one. Otherwise, settle
-them at the pick report that closes the node. A gate taken under a standing yes is not put to the human,
-so that node's flags settle at its pick report too. Every kind of node follows this rule, and none has a
+them at the node closing report. A gate taken under a standing yes is not put to the human, so that
+node's flags settle at its node closing report too. Every kind of node follows this rule, and none has a
 rule of its own.
 
-The pick report awaits no answer, so its flags settle on whatever the human says next, whatever that is
-about. Where the human never speaks again, nothing settles, and those flags stay outstanding. Settle a
-flag only at the moments this section names, never on your own judgement or on the passage of time.
+The node closing report awaits no answer, so its flags settle on whatever the human says next, whatever
+that is about. Where the human never speaks again, nothing settles, and those flags stay outstanding.
+Settle a flag only at the moments this section names, never on your own judgement or on the passage of
+time.
 
-Flags reach the closing report in one case only: a flag whose pick report the human never answered,
-because they never spoke again.
+Flags reach the effort closing report in one case only: a flag whose node closing report the human
+never answered, because they never spoke again.
 
 ## Acceptance conditions
 
@@ -390,8 +391,8 @@ you file it. Where you minted the node, you write the condition.
    and record that reading on the node. The two rules are the self-contained rule and the rule against a
    demand about the record as a whole, both in `graph-conventions.md`.
 3. Mark the condition on the node as your own.
-4. Say in the pick report that the condition is yours, and say in a line or two what it demands. The
-   work does not wait for a reply.
+4. Say in the node closing report that the condition is yours, and say in a line or two what it
+   demands. The work does not wait for a reply.
 
 ### Where you cannot write one in full
 
@@ -457,8 +458,8 @@ Every amendment, whoever wrote it, comes with five things. `### Amend an accepta
 2. It is marked as its author's own, and as yours where you wrote it.
 3. It is kept apart from the minting author's text, and never merged into it.
 4. It is carried as a flag of its own, which settles at that node's gate under `## Flags`.
-5. It is named in the pick report. Where the amendment is made after the node is claimed, it is named in
-   the report that closes that node instead.
+5. It is named in the node closing report that names the node as started. Where the amendment is made
+   after the node is claimed, it is named in that node's own node closing report instead.
 
 Before a party hands back a fact it established, it searches for the conditions that fact makes wrong.
 It searches the open nodes' `## Acceptance condition` sections for what its own work fixes: each word it
@@ -484,8 +485,8 @@ the moment you record their reply. Three consequences follow:
 
 - A gate answered with a correction leaves the channel free for the whole of the correction round and
   any re-check that follows.
-- Anything you send that awaits no answer, such as a pick report, a notice that an agent died, or the
-  closing report, leaves the channel free the instant it is sent.
+- Anything you send that awaits no answer, such as a node closing report, a notice that an agent died,
+  or the effort closing report, leaves the channel free the instant it is sent.
 - A node waiting at its gate, a worker running, or a check in flight does not occupy the channel at all.
 
 Send the human a question that is already waiting. Never make one up to give them something to do.
@@ -524,9 +525,9 @@ That rule leaves two things unchanged:
 Three things never enter the queue:
 
 - Settling a flag. It happens at a moment that already exists: an implementation node's gate, or the
-  pick report that closes any other node.
+  node closing report of any other node.
 - Telling the human an agent died. That notice awaits no answer.
-- The closing report. It ends an effort and takes no turn in it.
+- The effort closing report. It ends an effort and takes no turn in it.
 
 A checker's question never enters the queue either. It travels inside the gate payload, so it needs no
 place in tier 1. Tier 1 keeps its three kinds.
@@ -551,20 +552,20 @@ This line is added to whatever else a report or a payload must carry, and replac
 ### Picking the next node
 
 Pick each node to work yourself. Never ask the human which node to work. When a node finishes, pick the
-next one, spawn its worker, and send the pick report as you start it.
+next one, spawn its worker, and send the node closing report as you start it.
 
-The pick report states the pick as work already under way. It names the node that just closed, and the
-node and kind you started. The pick report awaits no answer and takes no place in the queue above.
-Continue without waiting for a reply.
+The node closing report states the pick as work already under way. It names the node that just closed,
+and the node and kind you started. It awaits no answer and takes no place in the queue above. Continue
+without waiting for a reply.
 
 The human's redirection of a pick normally arrives after the work has started. They name a different
 node in one line. You then stop or redirect what you started, and you perform such a stop with
 `TaskStop`, as `## Stopping a running worker` says. Start a pick without waiting for permission.
 
-A pick report that closes a node holding flags carries every one of those flags, in the fuller form
-under `### A flag in a payload` above. Those flags settle at the pick report, so a flag it leaves out is
-settled without the human seeing it. Where a standing yes covered an item on that node, the pick report
-also carries what `expedition-standing-yes` says it carries.
+A node closing report for a node holding flags carries every one of those flags, in the fuller form
+under `### A flag in a payload` above. Those flags settle at the node closing report, so a flag it
+leaves out is settled without the human seeing it. Where a standing yes covered an item on that node,
+the node closing report also carries what `expedition-standing-yes` says it carries.
 
 Two counts, each a setting of the effort, limit how much you start:
 
@@ -756,7 +757,7 @@ The act establishes six things, and both ways share them:
 The expectation decides what an empty frontier means:
 
 - Where the effort is expected to reach its destination, an empty frontier is the milestone that
-  triggers the whole-graph sweep and the report that precedes a close.
+  triggers the whole-graph sweep and the effort closing report.
 - Where it is not, an empty frontier is a surprise rather than a milestone, and that report is an
   exception path rather than where the effort is heading.
 
@@ -768,7 +769,8 @@ in `graph-conventions.md`, and not in this contract.
 Only the human closes an effort. Report that the conditions hold, and nothing more. A frontier that
 never empties is a legitimate steady state.
 
-The report that precedes a close covers only what the human has not already seen. It carries:
+The effort closing report precedes a close. It covers only what the human has not already seen. It
+carries:
 
 - What landed.
 - The supersession chains.

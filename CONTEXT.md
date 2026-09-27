@@ -173,7 +173,8 @@ What a worker returns when it has finished, in seven parts: its node's answer wr
 will hold it, the index line, its flags, the new nodes it found, which resolved node its work changes,
 the open conditions it searched and any replacement clauses it wrote, and what `map.md` did not tell
 it. An implementation worker returns an eighth part, the gate payload. The manager files it unaltered.
-_Avoid_: report (the closing report uses that word), return, payload, deliverable
+_Avoid_: report (a report goes to the human; a handover goes to the manager), return, payload,
+deliverable
 
 **Resolve**:
 Answering a node's question and writing that answer onto it. The only outcome that satisfies an edge.
@@ -203,8 +204,8 @@ A note recording a judgement that an agent made on its own and that the human ma
 The agent is usually a worker, and it is the manager where a judgement of the manager's own went into
 the graph. Raising a flag blocks nothing. A flag is settled at the first moment, after its node's
 worker has handed back, at which the node is put in front of the human. That moment is an
-implementation node's gate where the node has one, and otherwise the pick report that closes the
-node. A flag goes into the closing report only where the human never spoke again.
+implementation node's gate where the node has one, and otherwise the node closing report. A flag
+goes into the effort closing report only where the human never spoke again.
 _Avoid_: TODO, warning
 
 **Promote**:
@@ -246,12 +247,12 @@ of scope.
 **Raise**:
 An agent putting something to the human. Whether a raise waits depends on its channel. A worker's
 raise stops its work until the human acts. A checker's question, handed back alongside its outcome,
-does not wait for the human. A flag waits for the moment that closes its node: an
-implementation node's gate, or the pick report. The gate is the scheduled form of a blocking raise,
-made on a finished diff. A worker opens an unscheduled blocking raise when its premise is broken: the
-thing that is wrong is not the worker's to change, the decision changes a lot, or the choice is
-genuinely too hard to make alone. Where none of these holds, the worker decides and leaves a flag
-instead. A blocking raise holds the code slot while it waits, and is put ahead of grilling work in the
+does not wait for the human. A flag waits for the moment that closes its node: an implementation
+node's gate, or the node closing report. The gate is the scheduled form of a blocking raise, made on
+a finished diff. A worker opens an unscheduled blocking raise when its premise is broken: the thing
+that is wrong is not the worker's to change, the decision changes a lot, or the choice is genuinely
+too hard to make alone. Where none of these holds, the worker decides and leaves a flag instead. A
+blocking raise holds the code slot while it waits, and is put ahead of grilling work in the
 manager's queue. Its answer either continues that worker or stops it.
 _Avoid_: escalate, interrupt, and *ask* (asking is the ordinary work of a worker built to question the
 human, and a raise is what a worker meant to work mostly by itself does when it needs input it does
@@ -290,6 +291,13 @@ human's reply on items inside that scope. On a worker's question or raise it tak
 recommendation, and on a gate it takes the checker's `PASS` as the approval. The human gives it by
 invoking `/expedition-standing-yes`, and it is recorded in the effort's map.
 _Avoid_: auto-approve (in Claude Code the word means approving tool-permission prompts)
+
+**Node closing report**:
+The message the manager sends the human the moment a node closes. It names the node that closed. It
+carries in full every flag that node holds, because those flags settle there. It names the work the
+manager started in response. It awaits no answer and takes no place in the queue of things waiting
+for the human. An unqualified "closing report" means this report. Prose written before this term was
+settled uses "closing report" for the effort closing report.
 
 ## Landing code
 
@@ -369,7 +377,7 @@ whose frontier never empties, is in a legitimate steady state rather than a stal
 be treated as a defect.
 _Avoid_: done, finished, complete
 
-**Closing report**:
+**Effort closing report**:
 What the manager hands the human once the frontier empties. It covers only what the human has not
 already seen. It carries what landed, the supersession chains, the state of the bar, every flag still
 outstanding, what the sweep found, and every sweep round.
