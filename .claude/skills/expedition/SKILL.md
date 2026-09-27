@@ -53,7 +53,7 @@ Each row names something you will be tempted to do, and what you do instead.
 | re-authoring what an agent wrote | paste it, and put your own words beside it as your own marked note |
 | authoring an acceptance condition for a node an agent minted | file the one that agent wrote; where it wrote none, say so to the human |
 | authoring the text of an agent's flag | file the agent's own text; add the bookkeeping and nothing else |
-| rewriting an acceptance condition | hand it over as written; a condition that is wrong goes to the human |
+| rewriting an acceptance condition | hand it over as written; a condition a worker already holds and judges wrong goes to the human; the one narrow exception, amending a clause of the condition of a node nobody holds yet, is stated under `## Acceptance conditions` |
 | rendering a diff into the conversation | say where the work is |
 | deciding between a worker and its checker | put that disagreement to the human, who alone settles it |
 | closing an effort | report that the conditions hold, and let the human close it |
@@ -95,10 +95,26 @@ spawning still keep a question from waiting for ever.
 ## Writing the graph
 
 You are the only writer of the graph's record. The answer, the status, the `decisions.md` line, the
-flags, and every procedure in `graph-conventions.md` are yours, and no worker performs one.
+flags, and every procedure in `graph-conventions.md` except `### Change the map` are yours. A worker
+performs `### Change the map` in the third branch of the test below, and you perform it otherwise.
 
 That rule covers recording only. Where a node's own work is a change to a graph file, that node's worker
 makes the change itself, as it would any other work.
+
+The file a change touches decides whose change it is. Look only at which file it touches, and take no
+account of what the change says. The test has three branches, and no fourth:
+
+- A change to a file the workflow ships, meaning its skill files, its rules files and its glossary, is
+  a node's work. That holds always, whoever noticed that the file needed changing.
+- A change confined to the graph's files, meaning the effort's map, the siblings of its map, its
+  history file, its decisions index, its flags index and its node files, is your own. You make it with
+  no node, no acceptance condition, no worker, no checker and no gate.
+- Where a node of the first branch would otherwise leave the graph's files contradicting what that node
+  ships, that node's worker makes the change to the graph's files too, inside that node. The node's
+  acceptance condition names that change, so both land together.
+
+The third branch does not hold in reverse. Noticing that a graph file is wrong never makes a node for a
+shipped file. A defect confined to the graph's files falls in the second branch, whatever produced it.
 
 ### You write as a scribe
 
@@ -320,6 +336,11 @@ A rejected node goes to exactly one of three places, and you name which:
 - Where the node asked the wrong question, a replacement supersedes it.
 - Where something upstream of it is wrong, it returns to open behind a new blocking edge on the upstream
   fix.
+
+Where a reject or a revision would have you supersede a node that is itself a replacement, do not
+supersede it again. Put the chain to the human instead, as a decision about the shape of the graph.
+There is no depth counter and no budget on supersession. The chain itself makes the friction visible,
+because each replacement in it names the node it replaced.
 
 ## Flags
 
@@ -559,6 +580,23 @@ Some of what binds you on a given effort is a standing instruction of that effor
 rule of this workflow. Record it as theirs, in their words, and never present it as a rule of the
 workflow. The next effort starts without it.
 
+A standing rule the human gives, whether about what to work on or about how work is done, binds an
+effort only once it is written into that effort's map. Write it there when the human states it. Until
+it is there, it binds nobody. This holds for rules of conduct as well as for steering about what gets
+worked.
+
+The map is a rule's ordinary home, and usually its only one. On most efforts the workflow's own skill
+files are not changed at all, so a rule the human gives lives in the map and nowhere else, and the next
+effort starts without it.
+
+A rule reaches a shipped skill file only where the human says so, and it does so as a node. Carry a
+rule into a shipped file only on the human's word, and never on your own judgement, even where you
+judge the rule to be about the workflow rather than about the effort. Where the human says nothing
+about a rule's scope, the rule is the effort's alone.
+
+Every worker on an effort is bound by everything in that effort's map, whatever a rule's origin. So no
+rule needs a scope marking for a worker's sake, and the map has no field for a rule's scope.
+
 ### Three states the status line does not show
 
 A node in each of the three states below reads as `claimed` or `open` on its status line, like any other
@@ -594,6 +632,36 @@ holds work by then, so its replacements come by ordinary supersession.
 
 The same rules cover an implementation node. As well as the human's words, such a node holds a working
 tree, which is a second piece of state to recover.
+
+## Starting an effort
+
+Starting an effort is the act that creates it. You perform it, and it happens before the graph exists.
+
+An effort begins in one of two ways, told apart by their input. One takes a conversation with the
+human as its input. The other is adoption, whose input is a directory of work that already exists.
+Both produce the same thing, the effort's files and its first nodes, and they differ only in their
+input.
+
+The act establishes six things, and both ways share them:
+
+- the effort's name, which is its directory's name;
+- the destination, meaning what reaching the end of the effort looks like;
+- whether the effort is expected to reach that destination;
+- the map's standing preferences, the effort's ground rules where it has any, and its declaration of
+  which sources are authoritative, which are evidence only, and which hold statements known to be
+  false, where it has one;
+- the label vocabulary, declared, or declared to be absent;
+- the effort's first nodes.
+
+The expectation decides what an empty frontier means:
+
+- Where the effort is expected to reach its destination, an empty frontier is the milestone that
+  triggers the whole-graph sweep and the report that precedes a close.
+- Where it is not, an empty frontier is a surprise rather than a milestone, and that report is an
+  exception path rather than where the effort is heading.
+
+Which files the act creates, and in what order, is mechanical detail. It is in `### Start an effort`
+in `graph-conventions.md`, and not in this contract.
 
 ## Closing an effort
 
@@ -639,7 +707,10 @@ front of you, raise it.
    You cannot settle the dispute, because you are a scribe and answer nothing. So a worker sure that a
    finding is wrong must either edit code that is not broken or depart from its contract.
 4. Does anything tell a worker to look at the record when it reports what its work invalidates? Nothing
-   does. The worker answers from whatever it happened to read, and nothing checks the answer afterwards.
+   does in general: no duty to look covers the effort's record as a whole. The worker answers from
+   whatever it happened to read, and nothing checks the answer afterwards. One bounded class does carry
+   a duty to look, the open nodes' acceptance conditions. `### Changing one after it is written`, under
+   `## Acceptance conditions`, states that duty.
 5. Where does an annotation onto an already-resolved node belong? You write such annotations, and the
    graph's file format defines no section for them: no name, no place in the order, and no form.
 6. May you file a flag about your own conduct, and is there any step between the judgement and the

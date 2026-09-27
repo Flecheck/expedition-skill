@@ -75,7 +75,10 @@ file admits is under `## Writing the map` below.
 
 `map.md` has three sections, in this order:
 
-- `## Destination` — what reaching the end of the effort looks like.
+- `## Destination` — what reaching the end of the effort looks like. The section also says, in one
+  line, whether the effort is expected to reach the destination. Where the effort is not expected to,
+  this line is where a manager reads that a non-empty frontier is that effort's steady state rather
+  than a defect.
 - `## Notes` — the domain, the skills every session consults, and the standing preferences for this
   effort. Two further blocks are optional prose, written where the effort has them. Each lives here
   unless the effort holds it in a sibling file of the map. The first is the effort's ground rules. The
@@ -352,6 +355,26 @@ text that is not a value. So anything that scans these files follows these rules
 
 Each procedure lists every file it changes, in the order the changes are made.
 
+### Start an effort
+
+Use this to create an effort's files. `## Starting an effort` in `SKILL.md` says what the act
+establishes and who performs it.
+
+1. `map.md`: write its three sections, as `## The seven files` above describes them. Its
+   `## Destination` says both what reaching the end of the effort looks like and whether the effort is
+   expected to reach it.
+2. `map-history.md`: create it, holding no text yet.
+3. `map-manager-only.md`: create it, holding the declared label vocabulary, or a line saying that the
+   effort declares none.
+4. `map-implementation-rules.md`: create it.
+5. `decisions.md`: create it, holding no line yet.
+6. `flags.md`: create it, holding no line yet.
+7. `nodes/`: create the directory.
+8. `nodes/NN-<name>.md`: create each of the effort's first nodes by the steps under `## Adding a node`.
+9. Whoever starts the effort, which is the manager, runs checks 1, 3 and 4 under `## Mechanical checks`
+   itself, as part of this act, over the material it touched: each first node's number, `Blocked by:`
+   and `Labels:`, and the declared label vocabulary.
+
 ### Claim
 
 1. `nodes/NN-<name>.md`: set `Status: claimed`.
@@ -475,6 +498,11 @@ A flag the human turns into a node is settled the same way. The new node is crea
 Use this when a note or standing preference in `map.md`, or a fog item in `map-manager-only.md`, no
 longer says what holds. Use it too when a rule in a sibling of `map.md` that states rules that currently
 bind no longer holds. A new item is written straight into its file, with no other change.
+
+The manager runs this procedure, except in one case. Where a node's work changes a file the workflow
+ships, and would otherwise leave a map file contradicting what that node ships, that node's worker runs
+this procedure inside that node. That case is the third branch of the test under `## Writing the graph`
+in `SKILL.md`.
 
 1. `map-history.md`: append the item's existing text verbatim, under the heading mirroring the map
    section it came from. Struck-through text stays struck through.
