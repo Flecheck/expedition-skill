@@ -128,7 +128,8 @@ payload.
 _Avoid_: decision, question, interview
 
 **research**:
-A fact from outside the working directory, read and reported. It is worked without the human.
+A fact from outside the working directory, read and reported. Its ordinary work is done without the
+human. Its worker may raise where the node's premise is broken.
 
 **prototype**:
 A probe built to be reacted to and then discarded. It need not be code. It is kept outside the
@@ -152,9 +153,10 @@ worker), chore, setup
 Taking a node off the frontier before any work starts, so that a concurrent session skips it.
 
 **Handover**:
-What a worker returns when it has finished: its node's answer written as the node will hold it, the
-index line, its flags, the new nodes it found, and the nodes it invalidated. The manager files it
-unaltered.
+What a worker returns when it has finished, in seven parts: its node's answer written as the node
+will hold it, the index line, its flags, the new nodes it found, which resolved node its work changes,
+the open conditions it searched and any replacement clauses it wrote, and what `map.md` did not tell
+it. An implementation worker returns an eighth part, the gate payload. The manager files it unaltered.
 _Avoid_: report (the closing report uses that word), return, payload, deliverable
 
 **Resolve**:
