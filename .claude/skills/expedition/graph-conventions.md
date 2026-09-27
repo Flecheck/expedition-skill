@@ -15,21 +15,37 @@ No edit deletes. When a graph file changes, strike through or mark in place the 
 holds, and add the new text around it. Remove text from a file only when it is wrong or the human asks
 for it gone. The never-delete rule covers only the graph's own files, listed under `## The seven files`
 below. Edit the product the effort changes, and every file the effort ships, plainly: remove superseded
-wording, and move nothing to a history file.
+wording, and move nothing to a history file. The never-delete rule also does not reach a removal made by
+an act that is invoked and whose declared purpose is removal. The rule guards against deletion that is
+unannounced, and being invoked for that purpose is the announcement. Such an act leaves an entry in
+place of what it removed. The entry names what was removed and records that the text remains recoverable
+from the effort's version control history.
 
-Inside the graph's files, what happens to superseded text depends on the text's job, whichever file
-holds it. Text that records what happened, such as a node's `## Answer`, a line in `decisions.md` or an
-entry in `flags.md`, is marked superseded in place and never removed. Text that states a rule that
-currently binds is replaced by its current form, with its superseded text appended verbatim to
-`map-history.md`. `map-history.md` holds superseded text only, and is never rewritten. `map.md` is
-written this way, and so is every sibling of it that states rules that currently bind.
-`## Writing the map` below describes how.
+Inside the graph's files, two separate questions settle what happens to superseded text. The first is
+what the text is, and this test answers it: *"text is rule-stating if an agent could act differently
+because of it today; it is record-stating if it only tells you what was already decided or done."*
+What a text is settles that a superseded version of it must never be left readable as though it still
+binds. Where the superseded text goes is a second and separate question.
+
+Where superseded text goes is settled by whether the file holding it already archives its own subject.
+A node file does: it holds every superseded thing about its one node, so superseded text in a node file
+stays in it, marked superseded where it stands. `map.md`, and every sibling of it that states rules
+that currently bind, does not. So a superseded item in one of them is replaced by its current form, and
+its superseded text is appended verbatim to `map-history.md`. `## Writing the map` below describes
+how. Text that records what happened, such as a line in `decisions.md` or an entry in `flags.md`, is
+marked superseded in place and never removed. `map-history.md` holds superseded text only, and is never
+rewritten.
+
+An implementation node's acceptance condition is rule-stating while its node is live. A superseded
+clause of one stays in the node file and is never appended to `map-history.md`. The clause is marked
+superseded where the clause itself stands, rather than only recorded elsewhere in the node file. The
+reason is that the checker is handed the condition as text and does not read the node.
 
 ## The seven files
 
 ```
 .scratch/<effort>/
-  map.md                 The whole effort at low resolution. Read once per session.
+  map.md                 The whole effort at low resolution. Every worker reads it once per node.
   map-history.md         The account behind the map's lines. Read for history, not to work a node.
   map-manager-only.md    The part of the map only the manager acts on. No worker reads it.
   map-implementation-rules.md  The rules an implementation node's work is held to.
@@ -51,6 +67,8 @@ Among what `map-manager-only.md` holds are three of the map's sections:
   gate's three outcomes. Landing is the manager's, so neither a worker nor its checker reads this
   section.
 
+`map-manager-only.md` also holds the declared label vocabulary, where the effort declares one.
+
 `map-implementation-rules.md` holds the bar's commands and the standards an implementation node's work
 is held against. Its readers are that node's worker and its checker, rather than every worker. What the
 file admits is under `## Writing the map` below.
@@ -59,11 +77,11 @@ file admits is under `## Writing the map` below.
 
 - `## Destination` — what reaching the end of the effort looks like.
 - `## Notes` — the domain, the skills every session consults, and the standing preferences for this
-  effort. The manager also maintains two things here: the declared label vocabulary, and the bar's
-  commands once they have been discovered for this repo. Two further blocks are optional prose, written
-  where the effort has them. The first is the effort's ground rules. The second declares, by path and
-  glob, which sources are authoritative, which are evidence only, and which hold statements known to be
-  false. Absent any declaration, every source a worker is pointed at is authoritative.
+  effort. Two further blocks are optional prose, written where the effort has them. Each lives here
+  unless the effort holds it in a sibling file of the map. The first is the effort's ground rules. The
+  second declares, by path and glob, which sources are authoritative, which are evidence only, and
+  which hold statements known to be false. Absent any declaration, every source a worker is pointed at
+  is authoritative.
 - `## Decisions so far` — a pointer to `decisions.md`. The section holds no decision.
 
 `decisions.md` holds one line per resolved node: one sentence of about 25 words, enough to judge
@@ -91,9 +109,9 @@ other links.
 ## Writing the map
 
 This section covers `map.md` and every sibling of it that states rules that currently bind, including a
-file the map later splits into, from the day it is written. The graph's other files record what
-happened: `decisions.md`, `flags.md`, the node files, and `map-history.md`, which holds superseded text
-only. Superseded text in those files stays where it is.
+file the map later splits into, from the day it is written. None of these files archives its own
+subject, so their superseded text goes to `map-history.md`, as the paragraphs above `## The seven files`
+state.
 
 Each file of the map declares its reader: one kind of worker, or the manager alone. The file admits a
 line only where that reader would do something differently for having read it while working a node.
@@ -103,7 +121,8 @@ cost, who was wrong, and what the file said before. Move that material to `map-h
 its place the markdown link to the node that shaped the line. A trigger is part of a rule and stays. A
 trigger is an error string, a symptom, or the condition under which a rule fires.
 
-Every note, standing preference and fog item in `map.md` is a current statement: it says what holds now.
+Every note and standing preference in `map.md`'s `## Notes`, and every fog item in
+`map-manager-only.md`'s `## Not yet specified`, is a current statement: it says what holds now.
 It cites by markdown link the nodes that shaped it, without restating what those nodes hold. The account
 behind an item is how it came to say what it says, what was measured, and what it used to say. That
 account belongs in `map-history.md`, under a heading mirroring the map section the item came from. So a
@@ -115,10 +134,10 @@ Moving the superseded text out deletes nothing. Text moved to `map-history.md` i
 without summarising, paraphrasing or shortening it. Text already struck through moves struck through. An
 item carrying no account beyond its current statement moves nothing.
 
-Each item in `## Notes` targets 500 bytes, counting the item's own prose and not any quotation of the
-human's own words. The target never forces text out: an item that needs more exceeds it and says why. No
-check below treats a breach as a defect. To bring an item down to the target, use the `Change the map`
-procedure below.
+Each item in the `## Notes` of `map.md`, and of any sibling of it that has one, targets 500 bytes,
+counting the item's own prose and not any quotation of the human's own words. The target never forces
+text out: an item that needs more exceeds it and says why. No check below treats a breach as a defect.
+To bring an item down to the target, use the `Change the map` procedure below.
 
 ## Adding a node
 
@@ -172,15 +191,18 @@ condition, so its reader never goes anywhere else to find out what it demands. T
 checker, which is handed the condition as text and has not read the node.
 
 So the condition states what must be true, in its own words. A path may say where: the work must touch
-that file, produce it, or leave it in a stated state. The demand itself stays in the text, and never
-behind a pointer such as *as decided at node NN*. Where a condition depends on material held elsewhere,
-whoever writes the condition copies that material into it. The bar is the one thing a condition need not
-copy, and only because the bar reaches the checker by its own route.
+that file, produce it, or leave it in a stated state. Such a path is written relative to the repository
+root, because an absolute path names a machine, and the worker and the checker that read the condition
+may not be on it. The demand itself stays in the text, and never behind a pointer such as *as decided at
+node NN*. Where a condition depends on material held elsewhere, whoever writes the condition copies that
+material into it. The bar is the one thing a condition need not copy, and only because the bar reaches
+the checker by its own route.
 
 A demand about the record as a whole belongs on the handover and in no condition, whatever its wording.
 Such a demand holds the work against every decision the effort has recorded: that the work contradicts
 none of them, or that everything in it traces back to one. Such a demand goes in the handover's
-`INVALIDATIONS` part, which names which resolved node the work contradicts and how. A demand about what
+`INVALIDATIONS` part, which names every resolved node whose answer the work changes, and how it changes
+what that answer says: a rename, an extension, a narrowing or a contradiction. A demand about what
 changed in the tree, such as *no file under `.scratch/` changes*, is permitted.
 
 `## The checker` in `SKILL.md` says how the manager hands a condition to the checker, and what it does
@@ -293,7 +315,7 @@ An edge exists only where one of these fields states it. No field records which 
 A label names the family or part a node belongs to, for example `CLASS` rather than `CLASS-1`. Labels
 are optional, and a node may carry several.
 
-- A node uses only labels declared in the map's `## Notes`.
+- A node uses only labels declared in the effort's label vocabulary, which `map-manager-only.md` holds.
 - A label is only a filter. Order comes from `Blocked by:` edges and never from a label.
 - A node's identity is its `NN` and never a label.
 - An effort that declares no vocabulary has no labels on any node.
@@ -450,9 +472,9 @@ A flag the human turns into a node is settled the same way. The new node is crea
 
 ### Change the map
 
-Use this when a note, standing preference or fog item in `map.md` no longer says what holds. Use it too
-when a rule in a sibling of `map.md` that states rules that currently bind no longer holds. A new item
-is written straight into its file, with no other change.
+Use this when a note or standing preference in `map.md`, or a fog item in `map-manager-only.md`, no
+longer says what holds. Use it too when a rule in a sibling of `map.md` that states rules that currently
+bind no longer holds. A new item is written straight into its file, with no other change.
 
 1. `map-history.md`: append the item's existing text verbatim, under the heading mirroring the map
    section it came from. Struck-through text stays struck through.
@@ -478,13 +500,15 @@ Each of these is decidable by reading the files.
    through. It may have any number of struck-through lines there.
 6. Every `## Flags` entry has a line in `flags.md` with the same id, and every line there has an entry.
    The two agree on state: a flag that is `- [x]` in `flags.md` is marked `settled` on its node, and a
-   flag marked `settled` on its node is `- [x]`.
+   flag marked `settled` on its node is `- [x]`. A settled flag whose index line has been removed is not
+   a mismatch. An outstanding flag missing its index line still is one.
 7. Every `implementation` node has an `## Acceptance condition` before it is `claimed`.
 8. Every node has at most three `## Interview` attempt blocks.
 9. Every item under a `NOT COVERED:` label in a `## Review` opens with `OWED` or with `ESTABLISHED BY`.
    Every such item on a `resolved` node opens with `ESTABLISHED BY`.
-10. The check lists every item in the map's `## Notes` that is over the 500-byte target set under
-    `## Writing the map` above, with its size. It reports and never fails.
+10. The check lists every item in the `## Notes` of `map.md`, and of any sibling of it that has one,
+    that is over the 500-byte target set under `## Writing the map` above, with its size. It reports and
+    never fails.
 11. Every change to a map file, meaning `map.md` or a sibling of it that states rules that currently
     bind, keeps everything it takes out in `map-history.md`. This has two halves. First,
     `map-history.md`'s content before the change is a byte-exact prefix of its content after the
