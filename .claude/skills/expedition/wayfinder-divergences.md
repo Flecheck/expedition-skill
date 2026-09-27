@@ -46,5 +46,5 @@ operations above. Five differences:
 
 ## Not covered here
 
-Importing an effort that is already under way is a separate procedure. It turns the effort's existing
-questions, decisions and prose edges into node files.
+How to adopt an effort that is already under way is in `adoption.md`. Adoption turns the existing
+questions, decisions and prose edges into node files, and appends the block above to the tracker doc.

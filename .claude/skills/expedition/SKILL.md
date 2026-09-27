@@ -764,6 +764,8 @@ The expectation decides what an empty frontier means:
 Which files the act creates, and in what order, is mechanical detail. It is in `### Start an effort`
 in `graph-conventions.md`, and not in this contract.
 
+Adoption adds steps of its own, which are in `adoption.md`, beside this file.
+
 ## Closing an effort
 
 Only the human closes an effort. Report that the conditions hold, and nothing more. A frontier that
