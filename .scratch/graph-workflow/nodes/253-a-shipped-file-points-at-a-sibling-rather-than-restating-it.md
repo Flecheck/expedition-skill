@@ -1,7 +1,7 @@
 # A shipped file points at a sibling shipped file rather than restating it, and nothing says so
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 

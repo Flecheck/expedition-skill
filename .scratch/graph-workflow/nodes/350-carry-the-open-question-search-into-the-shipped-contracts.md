@@ -1,7 +1,7 @@
 # Carry the open-question search into the shipped contracts
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: 348
 
 ## Question

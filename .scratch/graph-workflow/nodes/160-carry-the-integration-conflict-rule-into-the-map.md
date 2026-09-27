@@ -1,7 +1,7 @@
 # Carry the integration-conflict rule into the map
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: 144
 

@@ -1,7 +1,7 @@
 # Whether the five standing rules for writing reach a worker that is not an implementation worker
 
 Type: grilling
-Status: open
+Status: claimed
 Blocked by: 348
 
 ## Question
