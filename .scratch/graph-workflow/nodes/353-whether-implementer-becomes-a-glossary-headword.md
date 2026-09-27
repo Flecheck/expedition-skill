@@ -1,7 +1,7 @@
 # Whether `implementer` becomes a glossary headword or leaves the shipped files
 
 Type: grilling
-Status: open
+Status: claimed
 Blocked by: 56
 
 ## Question

@@ -1,9 +1,15 @@
 # A shipped file points at a sibling shipped file rather than restating it, and nothing says so
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+A shipped file points at a heading of a file its reader already reads, and restates text found in a file otherwise unread and mostly unneeded; an effort-only sixth writing rule.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The nodes it surfaced are [node 354](354-add-the-sixth-standing-rule-for-writing.md) and [node 355](355-where-the-manager-read-shipped-files-restate-one-another.md). Flags 253.1 and 253.2 settle at the node closing report.
 
 ## Question
 
@@ -101,3 +107,116 @@ ALTERNATIVES:  - Freeze cited headings, so they are never renamed. This blocks l
 ```
 
 *The manager's note, 2026-09-27:* Q2 recommends a sixth writing rule in `map-implementation-rules.md`. [Node 349](349-whether-the-five-standing-rules-for-writing-reach-other-workers.md)'s question, which is in front of the human first, is whether the five writing rules move from that file to `map.md`. Its answer may change where Q2's rule would go.
+
+#### The human's answer to questions 1 to 3, 2026-09-27
+
+The human, `verbatim`: *"ok but when it's a file that would not be read and where there is a lot otherwise not useful information, it can be useful to duplicate to prevent reading useless information"*. The "ok" takes the worker's recommendations on Q1 ("Yes, in this wording: …"), Q2 ("This effort only.") and Q3 ("Yes, as one more sentence of the same rule."). The rest adds a qualification to Q1's rule, in the human's own words above. The manager does not read it as choosing among the offered options, and relays it to the worker unaltered.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+````
+HANDOVER:      A shipped file points at a sibling shipped file rather than restating it, and nothing says so
+
+ANSWER:
+**A shipped file points at a heading of another shipped file where its reader already reads that file. Where the reader does not, it restates what it needs if the other file is mostly text that reader does not need.** This is this effort's rule only: a sixth standing rule for writing, held with the other five. It is not written into any shipped file.
+
+The rule, as it will be written:
+
+> 6. **Point at a heading of another shipped file instead of restating what it holds, where the reader is already told to read that file.** Where the reader is not, restate what the reader needs when the file pointed at is mostly text that reader does not need, so the reader is not sent to read it. A passage that changes a rule for its own case names that rule by heading and states the change in its own words. Rename a heading that another shipped file cites only in the change that updates every citation of it, found by searching the shipped files for the heading's exact text.
+
+How it was reached. The payload put three questions, each with a recommendation:
+- Q1: point where the reader already reads the target, restate otherwise, with an exception for a passage that switches a rule off.
+- Q2: bind this effort only, as a writing rule.
+- Q3: rename a cited heading only in the change that updates every citation.
+
+The human's reply, `verbatim`: *"ok but when it's a file that would not be read and where there is a lot otherwise not useful information, it can be useful to duplicate to prevent reading useless information"*.
+
+- **"ok"** is assent without naming a question, so it settles all three recommendations.
+- **The "but" clause refines Q1.** Restating is justified when following the pointer would make the reader open a file it would otherwise not read, mostly full of text it does not need. The rule's second sentence states exactly that. Pointing stays allowed where the target would not otherwise be read but its text is small and relevant.
+
+What the rule is consistent with, as the tree stands on 2026-09-27:
+- **Node 312:** `expedition/SKILL.md` and `graph-conventions.md` state each shared rule once, with one-line heading pointers. Both are read by the manager.
+- **The manager-invoked skills** (`expedition-stop`, `expedition-standing-yes`, `expedition-cleanup`) point at headings of the manager's files.
+- **Node 50's "keep them duplicated":** the six worker contracts point at no other shipped file (grep for `graph-conventions` over them returns 0). Each worker reads one contract, and any other contract would be mostly text that worker does not need.
+- **Ground rule 2:** each shipped worker contract stands alone.
+
+The exception resolves the case node 166's worker declined (flag `166.5`). A passage that suspends a rule does not restate the rule. It names it by heading and says what changes.
+
+The rename sentence turns into a standing rule what pass 289 applied only as an assumption (flag `289.4`: cited headings keep their text). It allows a rename provided every citation moves with it, and adds no mechanical check, which node 29 part 3 refused.
+
+**Where it is written.** The writing rules sit wherever the effort holds them. Once node 352 lands, that is the list in `map.md`'s ground-rules block. So the checker receives this rule as text in its spawn along with the rest of that block.
+
+INDEX LINE:    A shipped file points at a heading of a file its reader already reads, and restates text found in a file otherwise unread and mostly unneeded; an effort-only sixth writing rule.
+
+FLAGS:
+- ASSUMPTION: I read "ok but …" as a bare assent that settles all three recommendations, with the "but" clause refining Q1 rather than rejecting it. The rule's second sentence carries the refinement. The human named no question. Under the contract, a bare "ok" settles every recommendation in the payload, and the clause that follows addresses only Q1's content (when to duplicate).
+  Index: Node 253 read the human's "ok but …" as assent to all three recommendations, with the "but" refining when restating beats pointing.
+- ASSUMPTION: Q2 recommended `map-implementation-rules.md` as the rule's home. After the questions were asked, node 352 began moving the five writing rules from that file into `map.md`'s ground-rules block. I placed the rule with the writing rules wherever they are held, which will be `map.md` once 352 lands. What the human assented to was "this effort only, as a sixth writing rule", and the file named was only where those rules lived at the time.
+  Index: Node 253's rule goes with the writing rules into map.md's ground-rules block, not the rules file Q2 named, because node 352 moves them.
+
+NEW NODES:
+1. Name: Add the sixth standing rule for writing: point at a heading of a file the reader already reads.
+   Kind: implementation
+   Question: Write node 253's rule as the sixth standing rule for writing, in the list that holds the other five.
+   Blockers: node 352. The rule goes into the list 352 creates, and 352 is claimed, so its condition cannot take this clause.
+   Acceptance condition:
+   > The work is `.scratch/graph-workflow/map.md`, `.scratch/graph-workflow/map-implementation-rules.md` and `.scratch/graph-workflow/map-history.md`, and no other file may be edited. The worker may not mark this node, resolve it, or write a line in `decisions.md` or `flags.md`.
+   >
+   > Done means all of the following are true of the finished tree.
+   > 1. In `map.md`'s `## Notes`, the numbered list of this effort's standing rules for writing, inside the block that begins with the bold line "**Ground rules for this effort.**", ends with a sixth rule, word for word as below. Rules 1 to 5 of that list are not reworded, renumbered or reordered.
+   >    6. **Point at a heading of another shipped file instead of restating what it holds, where the reader is already told to read that file.** Where the reader is not, restate what the reader needs when the file pointed at is mostly text that reader does not need, so the reader is not sent to read it. A passage that changes a rule for its own case names that rule by heading and states the change in its own words. Rename a heading that another shipped file cites only in the change that updates every citation of it, found by searching the shipped files for the heading's exact text.
+   > 2. The list's bold lead-in links `nodes/253-a-shipped-file-points-at-a-sibling-rather-than-restating-it.md` as the node that fixed the sixth rule. Wherever the lead-in gives the number of rules, it says six.
+   > 3. No sentence in `map.md`, `map-implementation-rules.md` or `map-manager-only.md` gives the number of this effort's standing rules for writing as four or five.
+   > 4. Every text this work removes from `map.md` or `map-implementation-rules.md` is appended verbatim to `map-history.md`, under a heading that mirrors the section it came from, with struck-through text staying struck through. `map-history.md` gains text and loses none.
+   > 5. Every markdown link in the three files resolves to a path that exists.
+   >
+   > Scope search for clause 3: `grep -rn -i "rules for writing" .scratch/graph-workflow/map.md .scratch/graph-workflow/map-implementation-rules.md .scratch/graph-workflow/map-manager-only.md .claude/skills`. Run over the working tree on 2026-09-27, before node 352 landed, it returned 1 line in `map.md` (the paragraph beginning "The five standing rules for writing anything in this effort") and 3 matches in `map-implementation-rules.md` (the bar paragraph, and the review route paragraph twice). It returned none in `map-manager-only.md` or `.claude/skills`. Node 352 moves these lines, so the worker re-runs the command on the tree it starts from and edits every match in the three editable files. A match the search reaches in any other file is reported, not edited.
+2. Name: Where the manager-read shipped files restate one another.
+   Kind: research
+   Question: Under node 253's rule, which passages in the files the manager reads (`expedition/SKILL.md`, `graph-conventions.md`, `adoption.md`, `wayfinder-divergences.md`, `expedition-stop`, `expedition-standing-yes`, `expedition-cleanup`) restate a heading of another of those files that the same reader already reads, and what would pointing save, in words? This includes `expedition-stop`'s `## New work stops`, which suspends the top-up rule without naming its heading (see INVALIDATIONS).
+   Blockers: new node 1 above.
+   Offered because of the human's priority on compaction. I did not ask it: the reply did not reach it, and whether and when to work it is the manager's call.
+
+INVALIDATIONS:
+- Node 166 (flag `166.5`), a narrowing. The worker declined to point at `## Start no new node`, because the passage restates the top-up rule in order to suspend it. The new rule keeps the exception but changes its form: such a passage names the suspended rule by heading and states the change in its own words. It no longer restates the rule. `expedition-stop`'s current text ("When a node finishes, leave the effort's counts below their numbers rather than starting work to bring them back up.") states the change but names no heading. That is a defect under the new rule. I folded it into new node 2 and did not file it separately.
+- Node 289 (flag `289.4`), an extension that also narrows. Its pass-time assumption, that a heading cited elsewhere keeps its text, becomes a standing rule in a looser form: a cited heading may be renamed in the same change that updates every citation.
+- Node 50: no change. Its duplication of the worker contracts' shared blocks is what the new rule's second sentence prescribes.
+
+CONDITIONS:    I searched the `## Acceptance condition` and `## Amendment` sections of every open and claimed node for "restat", "duplicat", heading rename or citation, "cited heading", "writing rules", "five standing rules" and "standing rules for writing".
+               Matches: 152, 156, 190, 230, 284, 352.
+               - 152, 156 and 230 concern record text, not shipped files. My rule does not touch them.
+               - Node 352 (claimed) is the blocker of new node 1. Its clause 1 fixes a lead-in whose count my work changes. The change is placed in new node 1 and not in 352's condition.
+               - Node 190 (open, unclaimed): clause 4, and clause 1 as amended by node 348, say "five standing rules for writing". Once new node 1 lands, "five" is wrong. I write no replacement now, because "six" is fixed by no resolved node or landed work yet. The manager owes this replacement when new node 1 lands.
+               - Node 284 (open) already says "four standing rules for writing", which node 289 made stale. That is not caused by my work. Noted only.
+
+MISSING FROM MAP: - map.md does not say which shipped files each reader reads (the manager: its contract, `graph-conventions.md` and the three invoked skills; a worker: its one contract). The whole boundary rests on this. I derived it by grepping the shipped tree for cross-file references.
+                  - map.md did not say that the writing rules' location was changing. The manager's note supplied that.
+
+Skipped method-skill parts: none. I invoked no method skill.
+
+RETROSPECTIVE
+1. What I had to hunt for:
+   - Whether any rule already covered pointing. I had to find writing rules 2 and 4 in `map-implementation-rules.md`, since the spawn named only map.md and decisions.md.
+   - The precedents: node 50's answer and node 312's split. The decisions.md index lines led to them, but their grounds were only in the node files.
+   - How renamed headings are handled today (flag `289.4`, node 313's script).
+   - Which shipped files point at which, by grep.
+2. What arrived that this node did not need: nothing significant. The reading list was small and fit the node.
+3. What would have made this easier:
+   - The spawn naming flag `289.4` and nodes 50 and 312 as the three standing precedents on pointing versus duplicating.
+   - The spawn naming the file that holds the writing rules, which is where the new rule had to land.
+   - The node file saying which files each reader reads.
+4. What was stale, wrong or contradictory:
+   - The node file's "the worker contracts' existing instruction to read `graph-conventions.md`" is false today: no worker contract names that file.
+   - Q2's placement went stale between the payload and the answer, because node 352 started moving the writing rules out of `map-implementation-rules.md`.
+   - Node 284's condition still says "four standing rules for writing".
+````
+
+## Flags
+
+`253.1` `ASSUMPTION` **· settled** — I read "ok but …" as a bare assent that settles all three recommendations, with the "but" clause refining Q1 rather than rejecting it. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`253.2` `ASSUMPTION` **· settled** — Q2 recommended `map-implementation-rules.md` as the rule's home; the rule goes with the writing rules wherever they are held. *(The worker's full text is under its handover's `FLAGS`.)*
+
+*The manager's note, 2026-09-27:* flags 253.1 and 253.2 settle at the node closing report that closes this node.
