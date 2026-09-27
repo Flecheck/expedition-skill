@@ -119,11 +119,11 @@ state.
 
 Each file of the map declares its reader: one kind of worker, or the manager alone. The file admits a
 line only where that reader would do something differently for having read it while working a node.
-Whoever is already editing a passage applies that test to that passage. The test requires no sweep of a
-file, and permits none. How a rule was learned fails the test: how many attempts it took and what they
-cost, who was wrong, and what the file said before. Move that material to `map-history.md`, and leave in
-its place the markdown link to the node that shaped the line. A trigger is part of a rule and stays. A
-trigger is an error string, a symptom, or the condition under which a rule fires.
+Whoever is already editing a passage applies that test to that passage. No sweep of a file is owed under
+the test, and one is allowed. How a rule was learned fails the test: how many attempts it took and what
+they cost, who was wrong, and what the file said before. Move that material to `map-history.md`, and
+leave in its place the markdown link to the node that shaped the line. A trigger is part of a rule and
+stays. A trigger is an error string, a symptom, or the condition under which a rule fires.
 
 Every note and standing preference in `map.md`'s `## Notes`, and every fog item in
 `map-manager-only.md`'s `## Not yet specified`, is a current statement: it says what holds now.
