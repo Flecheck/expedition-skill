@@ -1,7 +1,7 @@
 # Carry the open-question search into the shipped contracts
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: 348
 
 ## Question
@@ -23,6 +23,12 @@ Node 272 decided that the search every party runs before handing back a fact cov
 > - (d) Each of the six files states that a question naming a thing in different words from the change's will not match, and that this is accepted.
 > - (e) No file under `.scratch/` is changed.
 > - (f) Every heading in each of the six files, as listed by `grep -n '^#\{1,6\} '` before the work, is still present afterwards, in the same order.
+
+## Answer
+
+All six shipped contracts now extend the pre-handover search to open nodes' questions; workers report changed questions under CONDITIONS; the manager updates unclaimed ones in place.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `0006cc5`. Flags 350.1, 350.2 settle at the node closing report.
 
 ## Handover, attempt 1
 
@@ -182,6 +188,8 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`350.1` `ASSUMPTION` — This node's own prose: node 350 edited one sentence in `.claude/skills/expedition/SKILL.md` outside the paragraph its condition names. Item 4 of `## What nothing here settles` said "One bounded class does carry a duty to look, the open nodes' acceptance conditions". After this work that is false. So it now reads "the open nodes' acceptance conditions and questions". The file is one of the six in scope, the concern is the same, and leaving the sentence as it was would have shipped a contradiction inside the manager's contract. The condition's "reported and not edited" clause covers instances outside the six files, so it does not apply here. Index sentence: Node 350 also corrected the manager contract's "What nothing here settles" item 4, which named only acceptance conditions as carrying a duty to look, to add questions.
+`350.1` `ASSUMPTION` **· settled** — This node's own prose: node 350 edited one sentence in `.claude/skills/expedition/SKILL.md` outside the paragraph its condition names. Item 4 of `## What nothing here settles` said "One bounded class does carry a duty to look, the open nodes' acceptance conditions". After this work that is false. So it now reads "the open nodes' acceptance conditions and questions". The file is one of the six in scope, the concern is the same, and leaving the sentence as it was would have shipped a contradiction inside the manager's contract. The condition's "reported and not edited" clause covers instances outside the six files, so it does not apply here. Index sentence: Node 350 also corrected the manager contract's "What nothing here settles" item 4, which named only acceptance conditions as carrying a duty to look, to add questions.
 
-`350.2` `ASSUMPTION` — This node's own prose: condition (b) allowed either the `CONDITIONS` part or a part placed beside it. Node 350 extended `CONDITIONS` and added no new handover part, because a new part would change each contract's handover part count and the shape the manager parses. Index sentence: Node 350 carried changed-question reports inside the existing CONDITIONS handover part rather than adding a ninth part to the worker handovers.
+`350.2` `ASSUMPTION` **· settled** — This node's own prose: condition (b) allowed either the `CONDITIONS` part or a part placed beside it. Node 350 extended `CONDITIONS` and added no new handover part, because a new part would change each contract's handover part count and the shape the manager parses. Index sentence: Node 350 carried changed-question reports inside the existing CONDITIONS handover part rather than adding a ninth part to the worker handovers.
+
+*The manager's note, 2026-09-27:* flags 350.1, 350.2 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.

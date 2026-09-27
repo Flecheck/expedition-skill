@@ -1,7 +1,7 @@
 # Ship the glossary inside the skill directory and make it state its own completeness
 
 Type: implementation
-Status: open
+Status: claimed
 
 ## Question
 
