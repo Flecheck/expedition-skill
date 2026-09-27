@@ -1,7 +1,7 @@
 # Carry the integration-conflict rule into the map
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: 144
 
@@ -203,6 +203,12 @@ The human, `verbatim`: *"ok"*. It takes the worker's recommendation: "Yes, repla
 
 The manager asked: "Should clause 4 also let that phrase be replaced the same way, with the old text moved to `map-history.md`?", recommending yes. The human, `verbatim`: *"ok"*. It takes the worker's optional point: "Optionally, clause 4 could also let "still open at node 160" be replaced by the same route."
 
+## Answer
+
+The landing policy now resolves rebase conflicts instead of aborting them. The manager commits the record at every worktree cut and before every landing rebase. The slot count is the human's dial.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `ed54b9b`. Flags 160.3, 160.4, 160.5 settle at the node closing report.
+
 ## Handover, attempt 1
 
 *Filed by the manager as handed back, 2026-09-27. The worker's own text, pasted.*
@@ -331,7 +337,7 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`160.2` `MANAGER-WRONG` — **The manager reported this node to the human as carrying an unsafe amendment shape, and
+`160.2` `MANAGER-WRONG` **· settled** — **The manager reported this node to the human as carrying an unsafe amendment shape, and
 it does not.** Node 199's worker classified node 160 alongside nodes 200 and 140 as a condition whose amendment sits
 only in a separate section. **The manager repeated that without opening the clause**, told the human that node 160
 was *"open and unclaimed, and its clause 7 sits unmarked"*, and added a pointer at the top of the condition as a
@@ -340,8 +346,12 @@ unnecessary and its premise was false**; it is struck above rather than deleted,
 ever changed by it. **The cost was a false statement to the human and a paragraph of noise at the head of a
 condition a worker will read cold.**
 
-`160.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 266 above.* Node 266's clauses 11 to 13 were filed on this open, unclaimed node without asking the human first.
+`160.3` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment from node 266 above.* Node 266's clauses 11 to 13 were filed on this open, unclaimed node without asking the human first.
 
-`160.4` `ASSUMPTION` — The new rebase-conflict text keeps the condition's words "text held under the never-delete rule" for the manager's keep-both-sides case. Since node 189, that rule no longer covers rule text in map files, which is replaced instead. So the words cover a conflict in record text (node files, `decisions.md`, `flags.md`), and a conflict between two edits to a map file's live rules falls to the worker, or to the abort where the two sides contradict. I kept the condition's wording rather than narrowing or widening it, because clause 3 fixes the four things the text must state.
+`160.4` `ASSUMPTION` **· settled** — The new rebase-conflict text keeps the condition's words "text held under the never-delete rule" for the manager's keep-both-sides case. Since node 189, that rule no longer covers rule text in map files, which is replaced instead. So the words cover a conflict in record text (node files, `decisions.md`, `flags.md`), and a conflict between two edits to a map file's live rules falls to the worker, or to the abort where the two sides contradict. I kept the condition's wording rather than narrowing or widening it, because clause 3 fixes the four things the text must state.
 
-`160.5` `ASSUMPTION` — For the stale "still open at node 160" clause in the code-slot paragraph, I replaced only that clause of the sentence and moved the whole sentence to `map-history.md`. The rest of the paragraph's text is unchanged.
+`160.5` `ASSUMPTION` **· settled** — For the stale "still open at node 160" clause in the code-slot paragraph, I replaced only that clause of the sentence and moved the whole sentence to `map-history.md`. The rest of the paragraph's text is unchanged.
+
+*The manager's note, 2026-09-27:* flags 160.3, 160.4, 160.5 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
+
+*The manager's note, 2026-09-27:* the landing rebase conflicted in `map-history.md`, where the manager's own appended block (node 56's glossary location) and this node's appended block met at the end of the file. The manager kept both sides, the manager's block first. That is the keep-both-sides case this node's rule gives the manager, and the resolved diff against `master` removes no line.

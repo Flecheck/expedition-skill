@@ -1,7 +1,7 @@
 # Move the five standing rules for writing into `map.md`'s ground-rules block
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
