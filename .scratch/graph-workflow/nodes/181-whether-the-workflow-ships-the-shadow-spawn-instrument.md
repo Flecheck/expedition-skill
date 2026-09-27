@@ -1,7 +1,7 @@
 # Whether the workflow ships the shadow-spawn instrument for pricing fed context
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: 165
 
