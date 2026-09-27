@@ -752,3 +752,193 @@ The rest of the paragraph it sat in is unchanged and is not reproduced here.*
 ### From `map.md`'s `## Notes`
 
 **The four standing rules for writing anything in this effort are in [map-implementation-rules.md](map-implementation-rules.md)** too, held against every prose deliverable and fixed by [node 53](nodes/53-what-token-findings-change.md) — moved by [node 144](nodes/144-make-the-rules-file-stand-alone.md).
+
+## 2026-09-26, the retrospective's place among the handover parts (node 333)
+
+Superseded wording from `map.md`'s `## Notes`, replaced when node 333 landed two new handover parts:
+
+> the **sixth** on the four kinds whose handover has five parts, the **seventh** on an implementation node, whose handover has six. Corrected at node 114's check, having said `sixth` for every kind; the superseded wording is in [map-history.md](map-history.md).
+
+## Superseded from `map-manager-only.md` at node 336 — the gate payload's command that shows the diff
+
+*Moved verbatim under the `Change the map` procedure at [Carry the rules on what reaches the human, the code-slot
+count and the gate's pointer to the work into the manager
+contract](nodes/336-carry-the-rules-on-what-reaches-the-human-the-code.md), carrying out [A gate payload stops
+carrying a command that prints a diff](nodes/231-a-gate-payload-stops-carrying-a-diff-command.md), on the human's
+instruction that the diff command is not useful to them. The sentence stated a rule that currently bound, so it took
+this route rather than strike-in-place, on [Where the never-delete rule
+stops](nodes/189-where-the-never-delete-rule-stops.md)'s test. What replaces it names the worktree's path and no
+command, and keeps the ground it gives. The rest of the paragraph it sat in is unchanged and is not reproduced here.*
+
+### From *Landing an implementation node's work* — the gate payload's sentence
+
+*Replaced, and it stood as:*
+
+**The gate payload names the worktree's path and the command that shows its diff**, because an implementation node's work is uncommitted in a checkout outside the repository and `git diff` where the human is standing does not show it — their words on being handed a gate without it: *"what are the changes ? I don't see them in git ?"*.
+
+
+### From *Notes* — the retrospective bullet's filing sentence
+
+*Replaced 2026-09-27 on the human's "ok for A": node 340 defined an annotation in `graph-conventions.md` as what a later piece of work changed about a node's answer, headed `## Annotation[: …]`, which a retrospective is not. What replaces it files the retrospective as its own `## Retrospective` section, placed last. The rest of the bullet is unchanged and is not reproduced here.*
+
+*Replaced, and it stood as:*
+
+**The worker hands it back as text and the manager files it** as a `## Retrospective` annotation on the node, which keeps the mandatory section order untouched.
+
+
+### From *Notes* — two bullets that named the retired "pick report"
+
+*Replaced 2026-09-27: [node 137](nodes/137-rename-the-two-reports-and-repair-the-avoid-line.md) (`fe2610b`) retired "pick report" for "node closing report"; node 344's worker reported that these bullets still used it. Only the term changed. They stood as:*
+
+- **Approving a node's end settles that node's flags.** The human's standing instruction, `verbatim`: *"Also, when I approve the end of the node, the flags should be considered ok"*. So the manager does not ask a second time. **The settling moment is the first human moment the node's close reaches** — an implementation node's **gate** where it has one, and otherwise the **pick report** that closes the node — fixed at [A node's flags arrive after the human moment that was supposed to settle them](nodes/99-flags-arrive-after-the-node-s-human-moment.md) and widened to every kind of node, `prototype` and AFK kinds included, at [Whether a research node's and an AFK precondition node's flags settle at the pick report too](nodes/102-do-afk-nodes-flags-settle-at-the-pick-report.md), and refining the practice on [Whether flags.md survives the settle-at-close practice](nodes/27-does-flags-file-survive.md). The close is the earliest moment that works: a node's flags do not exist until its worker hands them back, which is after every exchange that node had with the human. **The pick report awaits no answer**, so the settlement rides whatever the human says next, whatever that next thing is about; where they never speak again nothing settles and those flags reach the closing report, and the manager never settles a flag on its own judgement or on the passage of time. **The consequence the manager must carry:** every report that closes a node — a gate payload, or a pick report — presents every flag that node holds, in the fuller form a gate payload uses, because a report that omits one settles it silently. The superseded wording is in [map-history.md](map-history.md).
+- **A standing yes is in force: every gate is approved on the checker's `PASS`.** The human invoked `/expedition-standing-yes` on 2026-09-27, `verbatim`: *"Let's try it out. Approve all gates automatically"*. Scope text: *"Approve all gates automatically"*. It covers gates only, not workers' questions or raises, and never what the skill excludes (a `FAIL`, a checker's raise or question, a gate whose check will not pass, an uncovered owed part, a reject, a condition judged wrong). Each gate taken under it is recorded on its node's `## Review` marked `standing yes`, and the node's flags settle at the pick report that closes it. It stays in force until the human changes it.
+
+## Superseded from `map-implementation-rules.md` at node 346 — the clause that no sweep of the file is licensed
+
+*Moved verbatim under the `Change the map` procedure at [Allow a sweep of a map file, in
+`graph-conventions.md`](nodes/346-allow-a-sweep-of-a-map-file-in-graph-conventions-md.md), carrying out [node
+345](nodes/345-workers-report-most-of-map-md-bore-on-nothing.md)'s answer on the human's "ok for recommended". What
+replaces it says no sweep of the file is owed and one is allowed. The rest of the paragraph it sat in is unchanged and
+is not reproduced here.*
+
+### From the file's opening, *What this file admits* — the sentence on who applies the test
+
+*Replaced, and it stood as:*
+
+**Whoever is already editing a passage applies this to that
+passage**, and no sweep of the file is owed or licensed by it. Settled at [node
+191](nodes/191-the-rules-file-carries-accounts-rather-than-rules.md).
+
+## Superseded from `map.md`'s `## Notes` at node 345 — the accounts moved out of the items that stay, and two items reworded after moving
+
+*Moved verbatim under the `Change the map` procedure by the manager's pass carrying out [node 345](nodes/345-workers-report-most-of-map-md-bore-on-nothing.md)'s answer, point 2, on the human's "ok for recommended". Each item below stood in `map.md` as quoted and was replaced by a shorter current statement. The items that moved whole to [map-manager-only.md](map-manager-only.md) and [map-implementation-rules.md](map-implementation-rules.md) are not quoted here unless they were then reworded: they stand verbatim in those files, which are part of the map and not history.*
+
+### From *Notes* — the standing preference that the shipped files should not depend on the `mattpocock-skills` plugin
+
+*Replaced, and it stood as:*
+
+- **The shipped files should not depend on the `mattpocock-skills` plugin.** The human's standing direction, `verbatim`: *"I also would want the skill to not depend on mattpockock, I don't know what is the status of this. Add grilling directly on the skill and for the docs part we should make something. Inspired by "/domain-modeling" and https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"*. It goes further than ground rule 2, which requires only that each contract **stand alone as a file rather than depend on a skill being invocable**: this asks that the dependency not exist. **What it reaches, which is more than the contracts:** the `Skills every session should consult` line above, and **ground rule 5**, which locates `/writing-for-agents` in that plugin by name and against which every prose deliverable on this effort is held. **In force on this effort from now**, under [Rules added to one effort's map, and what makes them legitimate](nodes/93-effort-scoped-custom-rules.md). **What it does not do is settle the two open questions it lands on**, and the manager has changed neither: what happens to the contracts' invoke-a-skill line is [Whether the contracts' instruction to invoke a method skill is doing any work](nodes/113-whether-the-method-skill-instruction-does-any-work.md), whose first question was already in front of the human when this arrived, and what the workflow ships in place of `/domain-modeling` is [The docs discipline this workflow ships instead of depending on one](nodes/130-the-docs-discipline-this-workflow-ships.md).
+
+### From *Notes* — the standing direction that a checker's rules are given to it, never found by it
+
+*Replaced, and it stood as:*
+
+- **The rules a checker holds work against are given to it, never found by it — and the implementer is held against the same ones.** The human's standing direction, `verbatim`: *"Also I don't know if I have talked about it but in the checker, it shouldn't try to find the skill/rules, they should be at the map level and sent by the manager or just read by the checker. I don't know if it is still the case but we shouldn't use matt pockock skills code review skill as it is too generic. (it is easier to change the rule when its in a file than when the checker finds stuff by itself. The rules should also be used by the implementer"*. **Their stated ground is changeability**: a rule written in a file can be edited, where a rule a checker discovers for itself cannot. **In force on this effort from now**, under [Rules added to one effort's map, and what makes them legitimate](nodes/93-effort-scoped-custom-rules.md). **What it reaches, and it is more than one file:** the checker's contract, which today tells a checker to *find* a reviewing skill before it reads the work and to hold the work against whatever rules it found; the review route recorded for this repo, whose naming of a reviewing skill is superseded by it; **ground rule 5**, which locates `/writing-for-agents` in a plugin by name; and the implementation contract, which is held against the bar rather than against a named rule set. **What it does not settle, and the manager has decided none of it:** where the rules live now that they are not discovered, what a checker is given in place of a reviewing skill's procedure, and whether the implementer receives the same text or a pointer to it.
+
+### From *Notes* — the standing instruction that nodes are grouped by file
+
+*Replaced, and it stood as:*
+
+- **Nodes are grouped by file, and a related defect goes into a node that already exists.** The human's standing instruction, given 2026-09-26 after the manager agreed that nodes changing a few lines each cost more in overhead than in work, `verbatim`: *"You can do the groups. To avoid the issue, maybe we can make so that if it is related, put the defect in an already existing node ?"* The groups are the manager's proposal they accepted: open nodes against the same file are merged into one node whose condition carries the clauses of the nodes it replaces, and conflicts between those clauses go to the human. *The manager's reading of the second sentence:* where a worker surfaces a defect related to an open, unclaimed node, the defect is added to that node's condition as an amendment rather than minted as a new node. Shipping that rule into the contracts is [node 327](nodes/327-a-related-defect-joins-an-open-node-instead-of-becoming-a-new-one.md). Moments later, `verbatim`: *"I think we shouldn't be too afraid of updating a node before it is started"*. *The manager's reading:* a node that is open and unclaimed may have its condition amended, by the manager or from a worker's report, without a separate question to the human first; the amendment is recorded as one, with a flag that settles at the node's gate, and a claimed node's condition stays as written. Node 327 carries this too.
+
+### From *Notes* — the standing instruction that a decision of the human's own may be proposed for change
+
+*Replaced, and it stood as:*
+
+- **A decision of the human's own may be proposed for change, on the same footing as one the workflow made.** Their standing instruction, `verbatim`, given after the manager told them the opposite: *"You can offer to change a rule I made, the rules I choose where because I though they where the best at the point they where chosen, but in the spirit of this skill, as we make stuff, we discover stuff and that can make us decide an earlier desision was wrong"*. **What it corrects** is the manager's own statement that a rule the workflow wrote may be proposed for change while a rule of theirs could only be asked about — a distinction they do not hold and which would have made a worker soften a recommendation against one of their decisions. **What it does not license:** a worker still never changes a settled decision itself, and the proposal reaches them as a question with its ground stated. What changes is that *whose decision it was* is not a reason to weaken the proposal, and that discovery falsifying an earlier choice is the expected case rather than an awkward one. **This is the ground the never-delete rule's own authorship was corrected on**, that rule being the workflow's and approved by them rather than theirs, recorded at [node 189](nodes/189-where-the-never-delete-rule-stops.md).
+
+### From *Notes* — the standing instruction that a condition forcing a contradiction is a raise
+
+*Replaced, and it stood as:*
+
+- **Where an agent sees that its acceptance condition forces a contradiction, that is a raise and not a flag.** The
+human's standing instruction, `verbatim`, given at [node
+200](nodes/200-collapse-the-rules-files-two-map-history-statements.md)'s gate after both that node's worker and its
+checker had reported the same collision and neither had raised it: *"If both the checker and implementer knew it, I
+would have expeted a raise at least."* **What it corrects** is two agents' reading of their own contracts as
+licensing a decide-and-flag where the thing decided was that a clause of the condition cannot be honoured together
+with a standard the work is held against. The worker's own words were *"Decided rather than raised: the condition is
+satisfiable either way and the cost of the wrong choice is one sentence"*, and the checker's were that the wording
+*"was not the worker's to depart from, which is why this is a question and not a finding against the work"* — both
+correct about their own authority and both stopping short of the one route that would have reached the human before
+the work was done. **What it does not license:** a raise on any hard clause, or a worker stopping because a
+condition is inconvenient; the trigger is a contradiction the agent can name between the condition and something
+the work is measured against. **In force on this effort from now**, and its carriage into the shipped contracts is
+[node 214](nodes/214-a-condition-that-contradicts-a-standard-is-a-raise.md).
+
+### From *Notes* — the note on the workflow's name and vocabulary
+
+*Replaced, and it stood as:*
+
+**The workflow is named `/expedition`, and its vocabulary is fixed**, by [Naming](nodes/14-naming.md). The metaphor stops at the map: the product and one run of it are cartographic, and every actor and mechanism underneath is described plainly — **manager**, **worker**, **checker**, **gate**, **node**. [`CONTEXT.md`](../../CONTEXT.md) holds ~~**50 term entries and 40 `_Avoid_` lines**, measured at [What keeps the shipped files consistent when a decision changes a term](nodes/29-shipped-file-consistency.md)~~ **51 term entries and 41 `_Avoid_` lines, counted 2026-09-10** by [node 224](nodes/224-the-glossary-says-the-map-is-read-once-per-session.md)'s worker and independently by its checker — **the node-29 figures were already wrong before that node's own edit, which added neither an entry nor an `_Avoid_` line.** Dated and non-authoritative under [node 183](nodes/183-nothing-measures-the-record-about-itself.md): re-derive rather than trust it, and the refusals are the part that does the work: `postpone`, `provenance`, `write lock`, `done`, `issue`, `ticket` and `task` are refused by name. ~~That file is **moving** into `.claude/skills/expedition/CONTEXT.md`, with a `CONTEXT-MAP.md` at the root and the root path left resolving as a forward pointer~~ **That file is still at the root.** ~~**Where it moves and what it is called are open at [Ship the glossary inside the skill directory and make it state its own completeness](nodes/56-ship-the-glossary-into-the-skill-set.md), where the human's direction is to rename it; struck after node 294's worker reported the old wording stale**~~ **[Ship the glossary inside the skill directory and make it state its own completeness](nodes/56-ship-the-glossary-into-the-skill-set.md) moves it to `.claude/skills/expedition/glossary.md`, the name the human chose on 2026-09-25; the moving line before it was struck after node 294's worker reported it stale** — because a glossary the shipped files declare authoritative and which does not travel with them is a defect. **Prose written before a word changed still says the old word: that is the never-delete rule rather than drift, and the glossary is authoritative.**
+
+### From *Notes* — the standing preference that the manager never idles, reworded in `map-manager-only.md` at node 256
+
+*Replaced, and it stood as:*
+
+- **The manager never idles, and *starts* the next work itself the moment a node finishes.** Two standing instructions of the human's, the second strengthening the first. `verbatim`: *"You can start new tasks. You should automatically propose to start a new task when a task finish"*, and then *"Also the manager should proactively start new nodes when one has finished"*. **Proposing is not enough**: the manager picks, spawns the worker, and reports the pick as work already under way. That report awaits no answer and takes no place in the human's queue, and their redirection of a pick is a correction after the fact rather than a permission that was waited for. What bounds how much is started is two counts, each a setting of this effort: the code-slot count for implementation nodes, and the target for concurrently running nodes that need the human, in the bullet below. Filed here under the rule [What the manager works on next, and how the human redirects it](nodes/16-human-steering.md) fixed for standing instructions, and **shipped** into the manager's contract by [The manager starts the next node rather than proposing it](nodes/100-the-manager-starts-the-next-node-rather-than-proposing-it.md), landed as commit `47703bb`. Earlier wordings are in [map-history.md](map-history.md).
+
+### From *Notes* — the standing preference that a payload goes over as soon as it is ready, reworded in `map-manager-only.md` at node 256
+
+*Replaced, and it stood as:*
+
+- **A payload goes over as soon as it is ready, and still one at a time.** The human's instruction, `verbatim`,
+after the manager had sat on three finished payloads while waiting to be asked for each: *"Stop waiting for me to
+ask to give the questions"*. **The manager then over-read it and sent all three at once**, and was corrected,
+`verbatim`: *"Why did you give everything ?"* — so the one-question rule above is untouched and what was wrong was
+never the count. **What was wrong was the trigger.** The manager had been treating *the human answering* as what
+released the next payload, so a finished payload could wait through two landings before reaching them. **The
+trigger is the payload being ready**, and the count stays one.
+
+## Superseded from `map-manager-only.md`'s `## Not yet specified` at node 80 — the firstmate upgrade list naming worktrees
+
+*Moved verbatim under the `Change the map` procedure by the same pass, carrying out [node 80](nodes/80-map-items-nodes-64-and-68-left-stale.md)'s clause 2.*
+
+- **Whether the Claude Code subagent runtime proves too simple**, and the upgrade path to a firstmate shape — real sessions, worktrees, file mailboxes — if it does. Three ways it could be: node count at the dogfood's 179, an unknown stack, and — economic rather than technical — running a node on a model of the manager's choosing. What would settle it: a dogfood run carrying back the friction record and a **measured spend per node type**. The evidence so far indicts none of the three: the weak point is the long-lived manager thread rather than the fleet under it, per [friction from running this map by hand](nodes/24-self-hosted-friction.md). Parked here at the human's word: what model the manager itself needs, and where a kind-to-model mapping lives. Adjacent: [whether the AFK passes move to the dynamic-workflow runtime](nodes/62-afk-passes-on-the-workflow-runtime.md).
+
+## Superseded from `map-implementation-rules.md` at node 347 — the sentence that named a pass over the file a sweep
+
+*Moved verbatim under the `Change the map` procedure at [Rename "sweep of a file" to a word the glossary does not
+own](nodes/347-rename-sweep-of-a-file-to-a-word-the-glossary-does-not-own.md), carrying out the human's "ok" to the
+manager's recommendation at node 346's gate. The glossary's **Sweep** is the whole-graph pass, so what replaces it
+calls a pass over one map file under the admission test a pass over the whole file. The rest of the paragraph it sat
+in is unchanged and is not reproduced here.*
+
+### From the file's opening, *What this file admits* — the sentence on who applies the test
+
+*Replaced, and it stood as:*
+
+**Whoever is already editing a passage applies this to that
+passage**. No sweep of the file is owed, and one is allowed. Settled at [node
+191](nodes/191-the-rules-file-carries-accounts-rather-than-rules.md), and the sweep allowed at [node
+346](nodes/346-allow-a-sweep-of-a-map-file-in-graph-conventions-md.md).
+
+## Superseded from `map.md` and `map-implementation-rules.md` at node 348 — the ground rules placed in the rules file
+
+*Moved verbatim under the `Change the map` procedure at [Keep the ground rules in `map.md` and strike the sibling-file allowance](nodes/348-keep-the-ground-rules-in-map-md-and-strike-the-sibling-file-allowance.md), carrying out [node 168](nodes/168-where-a-non-implementation-worker-gets-the-ground-rules.md)'s answer: the effort's ground rules sit in `map.md`'s `## Notes`, which every worker reads, and in no sibling file of the map. The ground-rules block itself moved back from `map-implementation-rules.md` to `map.md` unchanged, so it is not appended. Each sentence below is shown alone, the rest of its paragraph being unchanged.*
+
+### From `map.md`'s `## Notes` — the pointer to the ground rules in the rules file
+
+*Removed, the block it pointed at standing in its place, and it stood as:*
+
+**Ground rules for this effort, now in [map-implementation-rules.md](map-implementation-rules.md)**: five numbered rules of scope, and the test a rule passes to join them — moved there by [node 144](nodes/144-make-the-rules-file-stand-alone.md) so that file stands alone for a reader who does not read this map.
+
+### From `map.md`'s `## Notes` — the pointer to the five standing rules for writing
+
+*Replaced, the word "too" having leaned on the pointer above, and it stood as:*
+
+**The five standing rules for writing anything in this effort are in [map-implementation-rules.md](map-implementation-rules.md)** too, held against every prose deliverable and fixed by [node 53](nodes/53-what-token-findings-change.md) and, for the fifth, [node 289](nodes/289-a-plain-english-and-compaction-pass-over-the-shipped-files.md) — moved by [node 144](nodes/144-make-the-rules-file-stand-alone.md).
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the bar's list of its non-command half
+
+*Replaced, and it stood as:*
+
+So the bar here is entirely its non-command half: the project criteria (the human's global coding principles and `/naming`), ~~this map's own standing preferences~~ **this effort's ground rules and its five standing rules for writing, the two blocks this file holds below — `map.md`'s standing preferences are not part of the bar, on [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s test as the review route below states**, `CONTEXT.md`'s `_Avoid_` lines, [`graph-conventions.md`](../../.claude/skills/expedition/graph-conventions.md), `/writing-for-agents`, and the node's acceptance condition — the last two added at [node 184](nodes/184-the-bar-and-the-standards-are-two-different-lists.md).
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the review route's list of the standards
+
+*Replaced, and it stood as:*
+
+**The standards to hold work against:** `/coding-principles` and `/naming`; [`CONTEXT.md`](../../CONTEXT.md)'s `_Avoid_` lines; ~~this map's standing preferences, ground rules and four standing rules~~ **this effort's ground rules and its five standing rules for writing, both of which this file holds below**; [`graph-conventions.md`](../../.claude/skills/expedition/graph-conventions.md); and `/writing-for-agents`, which is the standard that bites on prose deliverables and which `/coding-principles` barely touches.
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the two blocks that pass node 42's test
+
+*Replaced, and it stood as:*
+
+That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **ground rules** and the **five standing rules for writing**, both held below in this file, are the two blocks that pass it, and the struck wording named the preferences alongside them — a defect from node 42 onward, found at [node 138](nodes/138-where-the-rules-a-checker-is-held-to-live.md) and carried out here.
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the five standing rules for writing, set against the ground rules
+
+*Replaced, and it stood as:*
+
+They are rules of writing, where the ground rules above are rules of scope.

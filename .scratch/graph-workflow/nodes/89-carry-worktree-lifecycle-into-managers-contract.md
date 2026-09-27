@@ -60,3 +60,17 @@ manager acts on has no backstop when the manager does not act on it.**
   the question this node turns on is exactly the one that decision deliberately did not answer.
 - **[A human edit lands in a worker's tree while the node is claimed](85-human-edits-a-claimed-tree.md)** was minted
   from the same change and bears on what the lifecycle has to say about who may write into a worker's tree.
+
+## Amendment, 2026-09-27 (from node 275)
+
+*Written by [node 275](275-node-250s-finished-work-is-on-a-branch-nothing-will-land.md)'s worker under its `NEW NODES`, which joined it to this node, and filed by the manager. The worker's words, clauses to add to this node's acceptance condition:*
+
+> - `.claude/skills/expedition/SKILL.md` also states what happens to the working state of an implementation node that is superseded while its work is not landed. The graph is edited first, and after that the node's tree, and anything else that holds its unlanded work, is removed, in the same order the file gives for a reject. The file states this as properties rather than as commands of any one version-control tool, and names no command that a repository without that tool could not run.
+> - The line in `.claude/skills/expedition/SKILL.md` that reads "reject: edit the graph first, and clean the working state after." still states the reject outcome with the same order: the graph first, the working state after.
+> - Scope came from no search: the file named is the place of the work, not an instance of a defect.
+
+*The worker's remark, pasted:* "Node 89's condition is still incomplete and waits on a question (\"ships or merely permits the worktree mechanism\") that the landed plain-git route in `map-manager-only.md` may effectively have answered for this effort. The manager may want to revisit it before the joined clauses can ship."
+
+## Flags
+
+`89.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 275's clean-up clauses were filed on this open, unclaimed node without asking the human first.

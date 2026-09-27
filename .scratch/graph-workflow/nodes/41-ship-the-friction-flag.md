@@ -100,3 +100,13 @@ the blind checker should fault the work for it. Either outcome is informative.
 The manager notes against its own past practice: this is the case it met twice while filing conditions and left
 unrepaired both times, on the ground that supplying what a condition omits makes the manager the author of the
 standard. Node 29's answer is what makes that refusal correct rather than merely principled.
+
+## Amendment, 2026-09-27 (from node 137)
+
+*Written by [node 137](137-rename-the-two-reports-and-repair-the-avoid-line.md)'s worker under its `CONDITIONS`, and filed by the manager after that node landed as commit `fe2610b`, whose `**Effort closing report**:` entry in `CONTEXT.md` fixes every word of it. Under node 137's rule a bare "closing report" means the node closing report, and "that effort's" is a possessive, not the `effort` prefix.*
+
+- **A replacement.** Where this condition reads "outstanding — left unchecked, meaning carried, and re-surfaced in that effort's closing report", read "outstanding — left unchecked, meaning carried, and re-surfaced in the effort closing report of that effort."
+
+## Flags
+
+`41.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 137's worker's replacement clause was filed on this open, unclaimed node without asking the human first, under the rule node 327 landed.

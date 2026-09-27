@@ -3,7 +3,7 @@
 Type: implementation
 Status: open
 
-Blocked by: 184
+Blocked by: 184, 348
 
 ## Question
 
@@ -75,3 +75,23 @@ so the two are disjoint in fact though not by any written edge. The manager hold
 ## The manager's note, 2026-09-23
 
 *The manager's own note, not an amendment.* This node's `## Acceptance condition` quotes the words "four standing rules for writing". Since [node 289](289-a-plain-english-and-compaction-pass-over-the-shipped-files.md), `map-implementation-rules.md` holds five standing rules for writing and says "five" where it said "four". Found by the manager's search of the open conditions for "four standing rules". The clause must be re-pointed before this node is claimed.
+
+## Amendment, 2026-09-27 (from node 168)
+
+*Written by [node 168](168-where-a-non-implementation-worker-gets-the-ground-rules.md)'s worker under its `CONDITIONS`, and filed by the manager. The heading it quotes, "**Five standing rules for writing anything in this effort**", is in the tree (node 289). The clause becomes binding once [node 348](348-keep-the-ground-rules-in-map-md-and-strike-the-sibling-file-allowance.md) moves the ground-rules block out of this file; this node is not to be claimed before 348 lands.*
+
+- **Clause 4.** Read: "4. No numbered rule in the file's block of five standing rules for writing is reworded, renumbered or reordered."
+
+## Amendment, 2026-09-27 (from node 348)
+
+*Written by [node 348](348-keep-the-ground-rules-in-map-md-and-strike-the-sibling-file-allowance.md)'s worker under its `CONDITIONS`, and filed by the manager. Pasted as it wrote it.*
+
+- **Clause 1.** Replacement for its clause 1 phrase "this effort's ground rules and its four standing rules for writing":
+  "this effort's ground rules, stated as held in `map.md`'s `## Notes` and received by a checker as text in its spawn; this effort's five standing rules for writing, stated as held in this file"
+  Its words are fixed by node 289 (resolved; "five", with the heading "Five standing rules for writing anything in this effort" in the tree) and by this node's work once landed ("held in `map.md`'s `## Notes`", "a checker receives as text in its spawn", now in `map-implementation-rules.md` and `map.md`). Without it, node 190's merge of the two lists could drop what clause 6 here put in.
+
+## Flags
+
+`190.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 168's replacement for clause 4 was filed on this open, unclaimed node, and the node was made to wait on node 348.
+
+`190.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 348 above.* Node 348's replacement for clause 1 was filed on this open, unclaimed node without asking the human first.

@@ -145,6 +145,14 @@ name is already in its own permitted list, so the fix is two words — but rewri
 and *"only the two file names are wrong"* is itself a judgement of the worker's that whoever claims this node should
 confirm against the tree rather than inherit.
 
+## Amendment, 2026-09-27 (from node 266)
+
+*Written by [node 266](266-a-worker-cannot-see-the-record-the-manager-has-not-committed.md)'s worker under its `NEW NODES`, which joined it to this node, and filed by the manager. Clauses to add to this node's acceptance condition, pasted as it wrote them:*
+
+> 11. The new text that clause 7 demands states that the manager makes the commit before a worktree is cut **before every implementation worktree it cuts**, whatever paths that node's condition names. It also states that the manager makes both of clause 7's commits on its own authority, path-limited to `.scratch/graph-workflow/`, with no diff shown to the human first and each commit reported to the human afterwards.
+> 12. The same new text states that an implementation worker reads and edits the effort's record files in its own worktree, and never in the main checkout.
+> 13. The sentence clause 7 quotes is looked for in `.scratch/graph-workflow/map-manager-only.md`, which is where it now stands. Scope search: `grep -rn -l 'committed periodically' --include=*.md .` run from the repository root returned `.scratch/graph-workflow/map-manager-only.md` and `.scratch/graph-workflow/map-history.md`, with the `nodes/` directory excluded. The `map-history.md` hit is banked history and is not edited. Any instance the search reaches outside these two files is reported, not edited.
+
 ## Flags
 
 `160.2` `MANAGER-WRONG` — **The manager reported this node to the human as carrying an unsafe amendment shape, and
@@ -155,3 +163,5 @@ safety repair. Clause 7 carries its amendment inside the condition block, immedi
 unnecessary and its premise was false**; it is struck above rather than deleted, and no clause of this condition was
 ever changed by it. **The cost was a false statement to the human and a paragraph of noise at the head of a
 condition a worker will read cold.**
+
+`160.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 266 above.* Node 266's clauses 11 to 13 were filed on this open, unclaimed node without asking the human first.

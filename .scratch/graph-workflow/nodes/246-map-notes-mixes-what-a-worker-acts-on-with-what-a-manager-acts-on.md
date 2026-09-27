@@ -1,7 +1,8 @@
 # `map.md`'s `## Notes` mixes what a worker acts on with what a manager acts on, and four workers have now reported it
 
 Type: grilling
-Status: open
+Status: superseded
+Superseded by: 345
 
 Blocked by: none
 
@@ -67,3 +68,7 @@ repetition being where the weight is and the manager having missed three repeats
 remedies. It notes only what it already holds: this effort has performed the split remedy twice, at [node
 139](139-move-the-managers-material-out-of-the-map.md) and [node
 140](140-move-the-implementers-and-checkers-material-out-of-the-map.md), and has never tried the marker.
+
+## Superseded, 2026-09-27
+
+*The manager's note:* [node 345](345-workers-report-most-of-map-md-bore-on-nothing.md) asked and answered this node's question: the human took a one-pass fix to what `map.md` holds (its questions 1 and 2, both "ok for recommended"), and the pass is under way. This node is made unnecessary by it.

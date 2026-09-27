@@ -121,3 +121,21 @@ Wherever the acceptance condition above names `.claude/skills/expedition/CONTEXT
 *The manager's note, 2026-09-26:* [node 302](302-rewrite-the-glossary.md) rewrote `CONTEXT.md` in plain English (landed `de347dc`), keeping 51 term entries and 41 `_Avoid_` lines. Its worker reported two things for this node, in its own words: "Node 56's condition section says "`CONTEXT.md` today holds exactly **50** term entries", but its clause 1, and the file, say 51." And: "`CONTEXT.md`'s intro names `.scratch/graph-workflow/nodes/`, a path specific to this effort, in a shipped file. That goes against ground rule 1. I kept it, because node 56 rewrites the file's head."
 
 *The manager's note, 2026-09-26:* the human's "ok" to [node 328](328-group-the-open-nodes-against-the-glossary.md)'s C5 settles that this node's condition is amended before it is claimed: clause 1's exact entry count (51, and the note's stale 50) is re-pointed to the count at claim time, the stale fallback path `.claude/skills/expedition/CONTEXT.md` in other nodes is read as `.claude/skills/expedition/glossary.md`, and the conditions naming the root `CONTEXT.md` that node 328 lists (137, 120, 258, 124, 61, 109) are checked against the move. This node goes last among the glossary's changes.
+
+## Amendment, 2026-09-27 (from node 338)
+
+*Written by [node 338](338-say-in-graph-conventions-md-which-file-of-the-map.md)'s worker under its `CONDITIONS`, and filed by the manager after that node landed as commit `968b1ec`. Every word is fixed by the glossary's map entry and by `graph-conventions.md` as landed.*
+
+- **Clause 4.** Where it says ground rules are "declared in its map's `## Notes`", read "declared in its map".
+
+*The manager's note, 2026-09-27:* [node 342](342-ship-expedition-standing-yes.md)'s worker reports under its `CONDITIONS` that clause 1's counts (51 / at least 40) are stale: at `eb3b217` the root `CONTEXT.md` holds 56 term entries and 45 `_Avoid_` lines, so with clause 4's `ground rules` entry the moved file would hold 57 and at least 45. Its proposed replacement clause names the path `.claude/skills/expedition/CONTEXT.md`, which the amendment by the human above reads as `glossary.md`. The note above on node 328's C5 already re-points clause 1's count to the count at claim time, so no new amendment is filed; this note records the current figures.
+
+## Amendment, 2026-09-27 (from node 97)
+
+*Written by [node 97](97-write-the-adoption-procedure.md)'s worker under its `NEW NODES`, as a related defect joined to this open, unclaimed node, and filed by the manager under the rule [node 327](327-a-related-defect-joins-an-open-node-instead-of-becoming-a-new-one.md) landed. Pasted as it wrote it. Its words are fixed by this node's amendment by the human (`glossary.md`, 2026-09-25) and by node 97's work once it lands.*
+
+- **A new clause, read under the amendment by the human that substitutes `glossary.md`.** "6a. Wherever `.claude/skills/expedition/adoption.md` names the glossary, it names `glossary.md`, the file beside it in `.claude/skills/expedition/`."
+
+## Flags
+
+`56.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 97's related-defect clause 6a was added to this node's condition without asking the human first; it binds once node 97's `adoption.md` has landed.

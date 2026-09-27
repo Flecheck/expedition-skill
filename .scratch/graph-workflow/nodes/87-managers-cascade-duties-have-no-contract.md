@@ -74,3 +74,16 @@ working tree meets the bar.
 ## Where it came from
 
 The human's question at node 76's gate, `verbatim`: *"for the cascade, it will be done in another node ?"*
+
+## Amendment, 2026-09-27 (from node 272)
+
+*Written by [node 272](272-the-cascades-open-node-half-is-parked-on-a-ground-that-turns-out-to-be-false.md)'s worker under its `CONDITIONS`, and filed by the manager. Its words are fixed by the shipped `.claude/skills/expedition/SKILL.md` paragraph beginning "Before a party hands back a fact it established", by node 263, by node 272's answer, and by `graph-conventions.md`'s Supersede section.*
+
+- **The fourth duty.** Where this node's question lists "open-node targets stay manual" as a duty, read, and copy as text into the condition: "Open-node targets need no pass. Before a party hands back a fact it established, it searches the open nodes' `## Acceptance condition` and `## Question` sections for what its own work fixes, and reports the conditions and questions that fact makes wrong. The manager files the replacement conditions and updates an unclaimed node's question in place, old wording marked. Where no such party exists, the manager does the search."
+- *The worker's side remark, pasted:* "node 87's condition points at its own question for the five duties rather than copying them, which the self-containment rule forbids. It already says it is incomplete, pending the human's choice of file."
+
+## Flags
+
+`87.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 272's replacement for this node's fourth duty was filed on this open, unclaimed node without asking the human first.
+
+*The manager's note, 2026-09-27:* [node 351](351-the-cascades-per-candidate-agent-does-not-join-a-defect-to-an-open-node.md)'s worker made the location of the effort's node files an input of the cascade's per-candidate agent, so the manager's cascade spawn must carry it. No manager-side text describes the cascade spawn yet; that belongs to this node's duties.

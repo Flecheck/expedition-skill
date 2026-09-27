@@ -1,7 +1,8 @@
 # The manager's contract contradicts itself on whether a dead worker is resumed or replaced
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 124
 
 Blocked by: 255
 
@@ -53,3 +54,7 @@ record of it is on that node, corrected from an earlier entry that called the at
 *The manager's note, 2026-09-26:* [node 328](328-group-the-open-nodes-against-the-glossary.md)'s C8, taken by the human's "ok", leaves the conflict on the **Attempt** entry (this node's rewrite says "replaced only where it does not", while node 123 sends a user-stopped worker to the human) to the manager-contract grouping, [node 330](330-group-the-open-nodes-against-the-manager-contract.md).
 
 *The manager's note, 2026-09-26:* on the human's "ok" to [node 330](330-group-the-open-nodes-against-the-manager-contract.md)'s recommendation, nodes 120, 124 and 258 merge into node 124. [Node 341](341-draft-one-condition-for-nodes-120-124-and-258.md) drafts the merged condition; this node is not started until it is filed.
+
+## Superseded, 2026-09-26
+
+*The manager's note.* Replaced by [node 124](124-a-procedure-for-stopping-a-running-worker.md), whose condition, drafted by [node 341](341-draft-one-condition-for-nodes-120-124-and-258.md)'s worker and approved by the human's "ok", carries this node's demands tagged with its number.

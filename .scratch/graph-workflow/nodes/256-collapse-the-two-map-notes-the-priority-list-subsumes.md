@@ -1,9 +1,15 @@
 # Collapse the two map notes the priority list now subsumes
 
 Type: implementation
-Status: open
+Status: resolved
 
 Blocked by: 255
+
+## Answer
+
+Both items now name `SKILL.md`'s `## The order you act in` as where the order of acts is stated, and live in `map-manager-only.md`'s `## Notes`; their old text is in `map-history.md`.
+
+*The manager's note:* carried out by the manager's own map pass under [node 345](345-workers-report-most-of-map-md-bore-on-nothing.md), a change confined to the graph's files, which the file test makes the manager's with no gate. The pass moved both items to `map-manager-only.md` before rewording them, so this node's clause 1 path is read as that file. The pass's report is on node 345.
 
 ## Question
 

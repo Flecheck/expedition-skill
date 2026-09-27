@@ -114,3 +114,5 @@ against its own bookkeeping and not against any worker.
 ## Flags
 
 `80.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
+
+*The manager's note, 2026-09-27:* node 345's map pass carried out this node's clause 2 ("worktrees" is gone from the firstmate list in the fog item, old text in `map-history.md`) and found clause 1 already met. Clause 3, re-describing the async-landing seam and the price of a reject against today's landing lifecycle, is new analysis and stays open. The fog items sit in `map-manager-only.md`, which this node's condition does not name.

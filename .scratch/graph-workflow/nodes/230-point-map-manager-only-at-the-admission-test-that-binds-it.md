@@ -61,3 +61,13 @@ would make node 229 unsatisfiable through no fault of its worker.
 count of `~~` occurrences is unchanged; node 229's clause (a) drives that count to **zero** in the landing section.
 So this clause binds whatever the count is when this node starts, which is what *unchanged* means, and the two
 conditions do not disagree.
+
+## Amendment, 2026-09-27 (from node 347)
+
+*Written by [node 347](347-rename-sweep-of-a-file-to-a-word-the-glossary-does-not-own.md)'s worker under its `CONDITIONS`, and filed by the manager after that node landed as commit `4b538be`, whose `graph-conventions.md` text ("No pass over a whole file is owed under the test, and one is allowed.") fixes every word of it.*
+
+- **Clause 3's last sentence pair.** Where it reads "...does not state who applies the test or that no sweep is owed. A paragraph containing any of those is a restatement and fails this clause.", read "...does not state who applies the test, that no pass over a whole file is owed, or that one is allowed. A paragraph containing any of those is a restatement and fails this clause."
+
+## Flags
+
+`230.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 347's replacement for clause 3's last sentence pair was filed on this open, unclaimed node without asking the human first.
