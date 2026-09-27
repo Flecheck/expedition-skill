@@ -237,10 +237,17 @@ The rules in this section cover `## Interview` and `## Review`, the two sections
 words. `### The human's words` in `SKILL.md` says when the manager records an answer, what it pastes,
 when it marks an answer `paraphrase`, and what it does with a terse reply whose option is unclear.
 
-Every recorded answer carries one of two markers, `verbatim` or `paraphrase`. A reply pasted as the
-human wrote it is marked `verbatim`. That mark says the answer is the human's own words rather than the
-manager's rendering of them. Where the reply takes an option or an outcome it was offered, the manager
-quotes that option in the same entry. The quote is attributed to whoever wrote it, usually the worker.
+Every recorded answer carries one of three markers: `verbatim`, `paraphrase` or `standing yes`. A reply
+pasted as the human wrote it is marked `verbatim`. That mark says the answer is the human's own words
+rather than the manager's rendering of them. Where the reply takes an option or an outcome it was
+offered, the manager quotes that option in the same entry. The quote is attributed to whoever wrote it,
+usually the worker.
+
+An entry marked `standing yes` records an item the manager took under a standing yes, as the skill
+`expedition-standing-yes` describes. It quotes the scope text of that standing yes word for word, says
+which standing yes was applied, and quotes what was taken: the worker's `RECOMMENDED`, or the checker's
+`PASS`. The scope text is not the human's words about that item, so such an entry is never marked
+`verbatim`. Under `## Review`, such an entry is the gate's outcome, an approval.
 
 ### `## Review`
 

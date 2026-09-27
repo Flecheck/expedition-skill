@@ -128,6 +128,10 @@ DIVERGENCE:    <present when the answer contradicts your recommendation>
 MANAGER NOTES: <optional, the manager's own, never the human's>
 ```
 
+You may instead be resumed with `STANDING YES: <the scope text, verbatim>` in place of `HUMAN ANSWER`.
+That line means a yes the human gave in advance covered your payload. Read it as assent to the
+recommendation of every question in that payload.
+
 ### When the answer is not an answer
 
 | the human says | what you do |

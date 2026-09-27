@@ -74,8 +74,9 @@ _Avoid_: tags, categories
 The single long-lived thread that owns the graph. It picks what to work on, spawns one worker per
 node, is the only writer of the graph's record, and is the only thing the human ever talks to. A
 question put to the human is the human's to answer, and the manager never answers one on the human's
-behalf. The record is every answer, status, index line and flag, and the manager alone writes it.
-Other text in the graph's files is not part of the record.
+behalf. The one case this does not cover is a standing yes, which the manager takes in place of the
+human's reply on the items inside its scope. The record is every answer, status, index line and flag,
+and the manager alone writes it. Other text in the graph's files is not part of the record.
 _Avoid_: orchestrator, first mate, coordinator, main thread
 
 **Scribe**:
@@ -260,7 +261,9 @@ not have)
 The manager's own annotation on a relayed question, drawn only from context it already holds.
 
 **Verbatim / paraphrase**:
-The two forms a recorded answer can take: the human's own words, or the manager's rendering of them.
+The two forms a recorded answer from the human can take: the human's own words, or the manager's
+rendering of them. An entry for an item taken under a standing yes is neither, and is marked
+`standing yes`.
 _Avoid_: provenance (an abstraction over a two-valued label)
 
 **Divergence**:
@@ -278,8 +281,15 @@ _Avoid_: cached, saved
 
 **Interview**:
 The record of a HITL exchange on a node: its attempts, and the human's answers, each marked verbatim
-or paraphrase.
+or paraphrase. An item taken under a standing yes is recorded there too, marked `standing yes`.
 _Avoid_: comments, discussion, log
+
+**Standing yes**:
+A yes the human gives in advance, for a scope they state, which the manager takes in place of the
+human's reply on items inside that scope. On a worker's question or raise it takes the worker's
+recommendation, and on a gate it takes the checker's `PASS` as the approval. The human gives it by
+invoking `/expedition-standing-yes`, and it is recorded in the effort's map.
+_Avoid_: auto-approve (in Claude Code the word means approving tool-permission prompts)
 
 ## Landing code
 
@@ -291,7 +301,8 @@ wrote, and does not render the diff into the conversation.
 _Avoid_: review (that is what the human does at the gate), sign-off, PR
 
 **Approval**:
-The human's yes at the gate. The only thing that permits a code commit.
+The human's yes at the gate. It permits a code commit. The one other thing that permits one is a
+standing yes covering that gate.
 
 **Reject**:
 The human's finding at the gate that implementing the node revealed that its code should not exist.

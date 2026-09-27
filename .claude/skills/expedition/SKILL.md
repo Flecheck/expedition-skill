@@ -51,7 +51,7 @@ Each row names something you will be tempted to do, and what you do instead.
 
 | never yours | what you do instead |
 | --- | --- |
-| answering anything on the human's behalf | put it back to the worker holding that node, or to the human |
+| answering anything on the human's behalf, except by taking a standing yes the human gave for that item's scope | put it back to the worker holding that node, or to the human; take a standing yes as `expedition-standing-yes` says |
 | re-authoring what an agent wrote | paste it, and put your own words beside it as your own marked note |
 | authoring an acceptance condition for a node an agent minted | file the one that agent wrote; where it wrote none, say so to the human |
 | authoring the text of an agent's flag | file the agent's own text; add the bookkeeping and nothing else |
@@ -150,10 +150,10 @@ depends on your judgement.
 Where a terse reply does not make clear which option it points at, record the reply and ask which. Do
 not pick the one you think the human meant.
 
-`### Recording the human's words` in `graph-conventions.md` holds the form of each entry: the two marks
-`verbatim` and `paraphrase`, the quoted option, and whether an entry goes under `## Interview` or
-`## Review`. The same file's description of `## Interview` states the rule for the `DIVERGENCE` mark on
-an answer that contradicts the worker's recommendation.
+`### Recording the human's words` in `graph-conventions.md` holds the form of each entry: the three
+marks `verbatim`, `paraphrase` and `standing yes`, the quoted option, and whether an entry goes under
+`## Interview` or `## Review`. The same file's description of `## Interview` states the rule for the
+`DIVERGENCE` mark on an answer that contradicts the worker's recommendation.
 
 ### Two things the human can say that are not answers
 
@@ -281,6 +281,10 @@ nothing. A part left off is a missing part, and does not tell you whether the wo
 Raise the gate once the checker passes. The one exception is a check that will not pass. Raise the gate
 on the failing tree anyway, and say so in the payload's first line.
 
+A gate that a standing yes covers is handled by the skill `expedition-standing-yes`, and you do not put
+it to the human. That skill says which gates a standing yes can cover, and what you do in place of
+raising one.
+
 ### The payload
 
 You assemble the gate payload out of text other people wrote. It holds the following:
@@ -312,7 +316,7 @@ A flag that reaches the human carries what was done, why, and the context needed
 answering never requires opening a file.
 
 The human's approval of a node's end settles that node's flags, so a flag left out of the payload is
-settled without the human seeing it.
+settled without the human seeing it. A gate taken under a standing yes settles no flag.
 
 ### Three outcomes, and no fourth
 
@@ -325,7 +329,8 @@ worker reports that its correction touched something the condition names.
 
 How code lands is set by the effort's own landing policy. `## The seven files` in `graph-conventions.md`
 says where the map records the policy and what the policy covers. This contract fixes only the order:
-approval before any commit, and the graph before the cleanup.
+approval before any commit, and the graph before the cleanup. The one other thing that permits a commit
+is a standing yes covering the gate, which `expedition-standing-yes` takes as the human's approval.
 
 ### What reject means
 
@@ -355,8 +360,9 @@ and settle one, step by step. The same file gives the form of each entry, under 
 in its description of `## Flags`.
 
 Settle a node's flags at its gate, where it is an implementation node that has one. Otherwise, settle
-them at the pick report that closes the node. Every kind of node follows this rule, and none has a rule
-of its own.
+them at the pick report that closes the node. A gate taken under a standing yes is not put to the human,
+so that node's flags settle at its pick report too. Every kind of node follows this rule, and none has a
+rule of its own.
 
 The pick report awaits no answer, so its flags settle on whatever the human says next, whatever that is
 about. Where the human never speaks again, nothing settles, and those flags stay outstanding. Settle a
@@ -515,6 +521,10 @@ Three things never enter the queue:
 A checker's question never enters the queue either. It travels inside the gate payload, so it needs no
 place in tier 1. Tier 1 keeps its three kinds.
 
+An item that a standing yes covers is handled by the skill `expedition-standing-yes`, and you do not put
+it to the human. Such an item never enters the queue. That skill says which items a standing yes can
+cover, and what you do in place of putting one to the human.
+
 ### The last line of a report
 
 Every report you put in front of the human ends with one short line naming what is expected of them,
@@ -543,7 +553,8 @@ node in one line. You then stop or redirect what you started, and you perform su
 
 A pick report that closes a node holding flags carries every one of those flags, in the fuller form
 under `### A flag in a payload` above. Those flags settle at the pick report, so a flag it leaves out is
-settled without the human seeing it.
+settled without the human seeing it. Where a standing yes covered an item on that node, the pick report
+also carries what `expedition-standing-yes` says it carries.
 
 Two counts, each a setting of the effort, limit how much you start:
 

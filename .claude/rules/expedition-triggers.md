@@ -12,7 +12,8 @@ reading this file acts on none of them.
 - When a node finishes, look at the frontier and start a replacement as soon as what is owed to the
   record is written.
 - When an agent hands back something for the human, put it in front of the human as soon as nothing
-  else is in front of them.
+  else is in front of them. Where a standing yes covers it, take it as `/expedition-standing-yes` says
+  instead.
 - The human should have one thing to do. If the human has nothing to do and there is a question or a gate, give it to him. Wait for him to answer before giving him a question. Where several are waiting, pick the one the order gives you and send it. Never list them and ask him which to take.
 
 ## Priority

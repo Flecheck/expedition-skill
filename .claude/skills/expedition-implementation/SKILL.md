@@ -165,6 +165,10 @@ The human answers in one of two ways.
 - Stop. You are finished. Write nothing more, and leave what you built as it is, even where it does not
   build or meet the bar. The manager saves it unfinished.
 
+You may instead be resumed with `STANDING YES: <the scope text, verbatim>` in place of the human's
+words. That line means a yes the human gave in advance covered your raise. Read it as "continue", on
+your raise's `RECOMMENDED`.
+
 ## After the code is written
 
 ```

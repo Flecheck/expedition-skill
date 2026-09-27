@@ -126,6 +126,10 @@ recommended"* does. Then read that option as the human's own choice. Where `DIVE
 human's answer contradicts your recommendation. Continue from their answer, never as though your
 recommendation had been accepted.
 
+You may instead be resumed with `STANDING YES: <the scope text, verbatim>` in place of `HUMAN ANSWER`.
+That line means a yes the human gave in advance covered your payload. Read it as assent to the
+recommendation of every question in that payload.
+
 ### When the answer is not an answer
 
 | the human says | what you do |
