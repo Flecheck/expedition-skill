@@ -97,6 +97,9 @@ One landed node:
   whole line so that `Node: <effort>/4` does not also match 40 to 49 or 400 upward
 - its files, which are the paths those commits touched
 
+You are also given the place that holds the effort's node files, one file per node. Those files are the
+effort's record rather than product code. You read them only to search them, under `### What you do`.
+
 ### The code slot
 
 Before you read any product code, count the live worktrees beside the main checkout. Each such worktree
@@ -113,7 +116,16 @@ the main checkout, starting from the node's files and following what they lead y
 it, and write no file.
 
 Where the code departs from the answer, say where, quote the code, and quote what the answer says. Then
-report the node that would repair the departure, in the block under `### A node you report`.
+report the node that would repair the departure, in the first block under `### A node you report`.
+
+Before you report a node, search the open nodes' `## Acceptance condition` sections for the path the
+departure is in, and read only what matches. An open node is one that has not been resolved, superseded
+or put out of scope, whether a worker holds it or not. Search the node files the spawn points you at, and
+read nothing else of the record. Where the departure concerns the same file and the same concern as an
+open implementation node, join it to that node instead of reporting a new node. Name that node and give
+the clauses to add to its acceptance condition, in the second block under `### A node you report`. Write
+those clauses to the five points under `### The acceptance condition you write`. The manager adds them to
+that node's condition where nobody holds the node yet, and files them as a new node where somebody does.
 
 Report an `implementation` node where what the fix must be is determined, and write its acceptance
 condition yourself. Report a `grilling` node where the fix is a decision only the human can make, and a
@@ -133,7 +145,7 @@ CANDIDATE:     <the number and name of the landed node you were handed>
 AGREES:        <yes, or no, or none where you could not judge>
 DEPARTURES:    <one entry per place the code departs from the answer: the path, the code quoted, and
                 what the answer says, quoted>
-NEW NODES:     <one block per node, in the shape under `### A node you report`>
+NEW NODES:     <one block per node, in one of the two shapes under `### A node you report`>
 CANNOT JUDGE:  <what you could not judge, and why>
 ```
 
@@ -146,6 +158,15 @@ QUESTION:      <what the node must decide or do, and the departure that produced
 BLOCKED BY:    <the numbers of the nodes it waits on, or none>
 ACCEPTANCE CONDITION: <for an implementation node only, written to `### The acceptance condition
                       you write`; for any other kind, none>
+```
+
+For a departure that joins an open implementation node:
+
+```
+JOINS:         <the number and name of the open implementation node the departure joins>
+DEPARTURE:     <the departure the clauses repair>
+CLAUSES:       <the clauses to add to that node's acceptance condition, written to `### The
+                acceptance condition you write`>
 ```
 
 ### The acceptance condition you write
