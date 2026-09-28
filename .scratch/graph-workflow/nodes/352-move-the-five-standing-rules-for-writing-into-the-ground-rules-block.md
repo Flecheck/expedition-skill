@@ -1,7 +1,7 @@
 # Move the five standing rules for writing into `map.md`'s ground-rules block
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
 
 ## Question
@@ -31,6 +31,12 @@ Carry out node 349's answer: move the five standing rules for writing from `map-
 > 6. Every markdown link in the three files resolves to a path that exists.
 >
 > Scope search: `grep -rn -c "rules for writing" .scratch/graph-workflow/map.md .scratch/graph-workflow/map-implementation-rules.md .scratch/graph-workflow/map-manager-only.md .claude/skills CONTEXT.md`, run over the working tree on 2026-09-27, returned 1 match in `map.md` (the pointer paragraph) and 3 in `map-implementation-rules.md` (the bar paragraph, the review route paragraph twice counted as one line, and the block's lead-in), and none elsewhere. An instance the search reaches outside the three files named above is reported and not edited.
+
+## Answer
+
+The five standing rules for writing now stand as a second numbered list inside `map.md`'s ground-rules block; the rules file points there, and the displaced texts are in `map-history.md`.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1 and handed back a question, so the gate went to the human, who approved it (see `## Review`). The work landed as commit `e82789c`. The node raised no flags.
 
 ## Handover, attempt 1
 

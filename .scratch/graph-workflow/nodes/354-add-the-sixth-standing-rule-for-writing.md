@@ -1,7 +1,7 @@
 # Add the sixth standing rule for writing: point at a heading of a file the reader already reads
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: 352
 
 ## Question
