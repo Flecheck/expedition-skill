@@ -1,7 +1,7 @@
 # A failed `git merge --ff-only` can leave the tree partially updated, and the record says it cannot
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 

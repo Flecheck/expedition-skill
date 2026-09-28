@@ -1,7 +1,7 @@
 # An implementation worker tests the worktree it was handed before it starts work
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
