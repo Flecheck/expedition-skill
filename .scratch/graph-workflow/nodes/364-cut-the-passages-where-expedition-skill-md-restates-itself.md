@@ -1,7 +1,7 @@
 # Cut the passages where `expedition/SKILL.md` restates itself
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question

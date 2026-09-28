@@ -1,9 +1,15 @@
 # An implementation worker tests the worktree it was handed before it starts work
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+Dropped with no edit, per the human: the plain-git worktree route puts every tree inside the already-writable repository, so the silent unwritable-tree case this probe guarded no longer arises.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`, together with its agreement with the drop and its one caveat. No work landed and no gate was held. Its worktree and branch were removed with nothing on them. The node raised no flags.
 
 ## Question
 
@@ -123,3 +129,31 @@ RETROSPECTIVE
 ```
 
 *The manager's note:* the node's two annotations already said its condition was broken and unamended; the manager claimed it without reading them. That is the manager's defect, and the same one as nodes 226 and 236.
+
+#### The human's answer to raise 1, 2026-09-28 — a divergence
+
+The human, `verbatim`: *"I kinda feel like the way the worktree work now, there are no issues anymore no ? I would say maybe drop the node ? Do say if you disagree"*. **This is a divergence**: the worker recommended "Rewrite the condition and keep the node"; the human's answer takes the alternative the worker set aside, "Drop node 186 on the grounds that the plain-git route ("no first act to get wrong") removed the case it guards."
+
+*The manager's note:* the human asked the manager to say if it disagreed. The manager answered that it agrees, on context it already held: every worktree this session was cut with plain `git worktree add` inside the repository, every worker wrote its tree with no failure, node 186's own probe succeeded with the sandbox on, and node 184's false alarm came from a sandbox naming another node's worktree under the old route. The manager relays the human's answer with no further word from itself.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+````
+HANDOVER:      An implementation worker tests the worktree it was handed before it starts work
+ANSWER:        Dropped with no edit, per the human. The node guarded against a worker being handed a worktree its shell cannot write while its file-editing tools keep succeeding, so the loss shows up only at the node's closing git write (measured at node 175). Both measured cases came from routes that no longer exist: a harness-cut tree (node 175), and a sandbox allow-set naming a different harness worktree, which made the probe fire falsely on a writable tree (node 184's retrospective). Under the plain-git route of nodes 265 and 268, the tree is at `.scratch/graph-workflow/worktrees/<NN>-<name>`, inside the repository directory the session can already write. There the case does not come up, and a shell `touch`/`rm` probe on node 186's own tree succeeded with the sandbox on. The condition was also unmeetable as written: its anchor, a list of sandbox material in `map-implementation-rules.md`, had been removed by node 188, and its clause 3 had already given a false alarm. Reopen only if a worktree route again puts the tree outside the repository directory.
+INDEX LINE:    Dropped with no edit, per the human: the plain-git worktree route puts every tree inside the already-writable repository, so the silent unwritable-tree case this probe guarded no longer arises.
+FLAGS:         none
+NEW NODES:     none
+INVALIDATIONS: none
+CONDITIONS:    Searched the open nodes' conditions and questions for `probe`, `Read-only file system` and `tests the worktree`. Neither the conditions nor the questions depend on node 186, and dropping it changes no open node's question.
+MISSING FROM MAP: none
+GATE PAYLOAD:  Nothing found by a checker (none ran). Paths touched: none. No commit, because nothing lands; the manager removes worktree `.scratch/graph-workflow/worktrees/186-worktree-tests` and branch `worktree-186-worktree-tests`.
+
+RETROSPECTIVE
+1. What I had to hunt for: only whether an `## Amendment` existed and whether the rules file still held any sandbox list. One grep answered each.
+2. What arrived that this node did not need: most of the `decisions.md` worktree lines were struck history (nodes 150 and 243). Only the node 265, 277 and 281 lines mattered.
+3. What would have made this easier: the node already had two annotations saying its condition was broken. Checking whether the plain-git route had made the node unnecessary before claiming it would have saved the spawn.
+4. What was stale, wrong or contradictory: the condition's anchor (gone since node 188), its clause 3 (a known false alarm), and the Question's premise that the harness cuts the tree at spawn (superseded by node 265).
+````
