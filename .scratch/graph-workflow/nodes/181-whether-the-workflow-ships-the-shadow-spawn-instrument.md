@@ -1,9 +1,15 @@
 # Whether the workflow ships the shadow-spawn instrument for pricing fed context
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: 165
+
+## Answer
+
+The shadow-spawn instrument is not shipped. It stays this effort's optional practice, since its only returned pair was null and shipping would lengthen the skills the human wants compacted.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The node it surfaced is [node 356](356-whether-node-165s-remaining-shadow-pairs-still-run.md). Flags 181.1 and 181.2 settle at the node closing report.
 
 ## Question
 
@@ -69,3 +75,60 @@ ALTERNATIVES:  - Ship it now as a manager procedure in graph-conventions.md. The
 #### The human's answer to question 1, 2026-09-28
 
 The human, `verbatim`: *"yes, don't ship it"*. It takes the worker's recommendation: "Keep it as this effort's own practice and ship nothing. The node then stops waiting on the missing pairs."
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+````
+HANDOVER:      181 — Whether the workflow ships the shadow-spawn instrument for pricing fed context
+
+ANSWER:        **The shadow-spawn instrument is not shipped. It stays this effort's own practice, and this node does not wait on node 165's remaining pairs.** The human's answer, `verbatim`: *"yes, don't ship it"*, given as assent to the recommendation.
+
+               **What is decided.** No shipped file gains a shadow procedure: not `graph-conventions.md`, and not the manager's contract. Where this effort's manager has a live, reversible choice about a file fed to every worker, and wants a measurement instead of workers' self-report, it may still run node 165's protocol: a second worker on the same node without the file, the two compared at their first question, the second never resumed and never steering the real node. It is not a standing duty that this node creates.
+
+               **What it rests on.** When this was decided, the instrument's only returned evidence was one null pair (node 179). Under node 165's part (iv), a null licenses nothing. Pair 2 (node 176) was recorded as spawned, but no readout was filed. Pair 3 had not been run. The protocol's subject had also drifted: between pairs 1 and 2 the manager began scoping the `decisions.md` pointer to named entries, so the flat feed the pairs were designed to test is no longer what spawns carry. Shipping on that evidence would rank the instrument by predicted value, the failure this node's author named. A shipped procedure would also lengthen the skills against the human's standing ask to compact them. And the retrospective's "what arrived that this node did not need" question already prices fed context cheaply: the effort acted on it at node 345, cutting `map.md` from 42 KB to 22 KB without a shadow. Ground rule 4 favours the simple thing that can change later. The instrument can be shipped by a later node if a pair ever returns a divergence.
+
+               **Its blocker.** This node was filed blocked on node 165's three pairs returning with their readouts. It was decided without them because the question could be answered on the evidence already in, and the human gave token-use work priority. What happens to node 165's remaining duty is not decided here.
+
+INDEX LINE:    The shadow-spawn instrument is not shipped. It stays this effort's optional practice, since its only returned pair was null and shipping would lengthen the skills the human wants compacted.
+
+FLAGS:         ASSUMPTION — **I decided the node without the three shadow pairs its author named as the blocker.** At claim time only pair 1 had a readout, pair 2's had never been filed, and pair 3 had not run. I put the question to the human anyway, with "wait for the pairs" offered as an alternative, and they chose not to ship. The ground I gave was that a decision not to ship needs no positive evidence, and that the pairs now measure a scoped pointer instead of the flat feed they were designed for.
+               Index: Node 181 was decided without the three shadow pairs its author named as its blocker, on the ground that declining to ship needs no evidence the pairs could supply.
+
+               ASSUMPTION — **I read "yes, don't ship it" as assent to the whole recommendation, including "keep it as this effort's practice" and "stop waiting on the pairs".** The reply is a bare assent that also names the non-shipping part, so under the contract it settles every part of the single recommendation. If the human meant only "don't ship", the practice part is still open.
+               Index: The human's "yes, don't ship it" at node 181 was read as assent to the full recommendation, including keeping the shadow as optional effort practice.
+
+NEW NODES:     **Name:** Whether node 165's remaining shadow pairs still run
+               **Kind:** grilling
+               **Question:** Node 165's parts (ii)-(iv) made three shadow pairs a standing duty on the manager. Pair 1 (node 179) returned null with a finding outside the readout's two questions (the fed arm was handed a stale premise). Pair 2 (node 176) was spawned with a scoped pointer instead of the flat file, and its readout is filed nowhere in the record. Pair 3 has not run. Node 181 has decided that the instrument is not shipped. Should the manager file pair 2's readout (if the arms' outputs still exist) and run pair 3, or should the duty be retired? Given that spawns now point at named entries of `decisions.md` and not the whole file, what would a pair measure?
+               **Blockers:** none. Related: node 185 (open, scoping the decisions pointer), whose practice is already in use, and node 182, which waits on the same pairs.
+
+INVALIDATIONS: - **Node 165, `## Answer` §6 ("What is actually bought … The protocol"): narrowed.** It presents the protocol as the effort's general answer to "any argument about a file pushed into every worker's context". Node 181 keeps it as optional practice of this effort only, not shipped and not a standing procedure.
+               - **Node 165's standing duties (ii)-(iv): not changed, but found undischarged.** Pair 2's readout is unfiled and pair 3 is unrun. Reported on NEW NODES and not decided here.
+               - No resolved node is contradicted.
+
+CONDITIONS:    Searched every open node's `## Question` and `## Acceptance condition` for "shadow", "price"/"pricing", "fed file", "earns its place", "node 165"/"165-" and "181". Only node 182 matched in substance. Other hits for "price" were unrelated (merge conflicts, flag 47.2, reject pricing).
+               - **Node 182 (open grilling, "Whether map.md's sections are priced by the shadow instrument"): its question is changed in part.** The instrument it would use is now settled as optional effort practice, not shipped, so a per-section shadow run would be a local measurement and never a shipped procedure. Its stated blocker, the three pairs from node 165, is the same one this node was decided without, and now belongs to the NEW NODES entry above. Node 345 has also since moved the map's bulk out on retrospective evidence, which may make 182 unnecessary. Whether it does is for 182's worker, not me.
+               No acceptance condition was touched. No replacement clause is written.
+
+MISSING FROM MAP: map.md does not say whether node 165's shadow pairs had run, or where their readouts are filed. I found it by reading node 165's annotations and searching the record for "shadow" and "unfed". Nothing states that pair 2's readout is missing; I inferred that from the search returning nothing.
+
+RETROSPECTIVE:
+1. **What I had to hunt for.** The state of the blocker, meaning whether the three pairs had returned. Neither the node file nor the spawn said so. It lives only in node 165's trailing annotations, and I established that pair 2's readout is absent by searching the record for "unfed", "pair 2" and "shadow" and getting nothing back. I also ran `wc -c` to get `decisions.md`'s current size (76,348 bytes).
+2. **What arrived that this node did not need.** Very little. The scoped `decisions.md` instruction worked: the lines I grepped were all relevant. Of `map.md` (22 KB), I used the token-scarcity note, ground rules 1 and 4, and the standing preferences on shipped scope. The never-delete paragraph, the grouping-by-file paragraph, the naming and glossary paragraph and the graph-file-count paragraph bore on nothing here.
+3. **What would have made this easier.** A line in the node file, or in the spawn, stating the blocker's current state: "pair 1 read out null, pair 2 spawned and its readout not filed, pair 3 not run". The manager's note at filing says the node should not be claimed until the pairs exist, but nothing updated that note when the node was claimed anyway.
+4. **What was stale, wrong or contradictory.**
+   - The node's filing note ("should not be claimed until those three pairs exist") contradicts its being claimed. That is fine now that the human has decided, but the note was not updated.
+   - Node 165 ends with "the readout for this pair is fixed as before, and its result is filed when it returns", and nothing followed.
+   - Node 185 is open, but its scoping practice is already in use in spawns, including this one.
+   - `decisions.md` is at 76,348 bytes, well past the ~43,847-byte trigger in node 129 for offering the cut again. I found no sign that the offer was made.
+````
+
+## Flags
+
+`181.1` `ASSUMPTION` **· settled** — I decided the node without the three shadow pairs its author named as the blocker. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`181.2` `ASSUMPTION` **· settled** — I read "yes, don't ship it" as assent to the whole recommendation. *(The worker's full text is under its handover's `FLAGS`.)*
+
+*The manager's note, 2026-09-28:* flags 181.1 and 181.2 settle at the node closing report that closes this node.

@@ -42,3 +42,7 @@ ALTERNATIVES:  - Add one sentence to the Flag entry naming the three markers and
                - Give each of the three markers its own headword. That is three entries for words already defined in full, twice over.
                - Add a clause to the completeness paragraph saying that format tokens (markers, outcomes, field names) are out of scope. This settles the question for every token, not just these, at the cost of one line.
 ```
+
+#### The human's answer to questions 1 and 2, 2026-09-28
+
+The human, `verbatim`: *"ok"*. It takes the worker's recommendation on both: Q1 "Reword all 9, with no headword."; Q2 "No entries, and no change to the glossary text."

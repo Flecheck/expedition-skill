@@ -1,7 +1,7 @@
 # Point `map-manager-only.md` at the admission test that already binds it
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: 229
 
@@ -67,6 +67,12 @@ conditions do not disagree.
 *Written by [node 347](347-rename-sweep-of-a-file-to-a-word-the-glossary-does-not-own.md)'s worker under its `CONDITIONS`, and filed by the manager after that node landed as commit `4b538be`, whose `graph-conventions.md` text ("No pass over a whole file is owed under the test, and one is allowed.") fixes every word of it.*
 
 - **Clause 3's last sentence pair.** Where it reads "...does not state who applies the test or that no sweep is owed. A paragraph containing any of those is a restatement and fails this clause.", read "...does not state who applies the test, that no pass over a whole file is owed, or that one is allowed. A paragraph containing any of those is a restatement and fails this clause."
+
+## Answer
+
+`map-manager-only.md`'s opening gains one paragraph pointing at `graph-conventions.md`'s `## Writing the map` for what it admits, naming the manager as its reader, restating nothing.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `02cd41f`. Flags 230.1, 230.2 settle at the node closing report.
 
 ## Handover, attempt 1
 
@@ -180,6 +186,8 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`230.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 347's replacement for clause 3's last sentence pair was filed on this open, unclaimed node without asking the human first.
+`230.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above.* Node 347's replacement for clause 3's last sentence pair was filed on this open, unclaimed node without asking the human first.
 
-`230.2` `ASSUMPTION` — Clause 1 of the condition quotes the upper paragraph as beginning `**The manager is this file's reader** `, with the bold closing after "reader". The file actually reads `**The manager is this file's reader, and this file is part of the map.**`. There is exactly one such paragraph, and it sits directly above "Nothing below was reworded", so I read the quote as naming it and placed the new paragraph between the two. I did not raise this, because the position is unambiguous and nothing else in the condition depends on the exact quote.
+`230.2` `ASSUMPTION` **· settled** — Clause 1 of the condition quotes the upper paragraph as beginning `**The manager is this file's reader** `, with the bold closing after "reader". The file actually reads `**The manager is this file's reader, and this file is part of the map.**`. There is exactly one such paragraph, and it sits directly above "Nothing below was reworded", so I read the quote as naming it and placed the new paragraph between the two. I did not raise this, because the position is unambiguous and nothing else in the condition depends on the exact quote.
+
+*The manager's note, 2026-09-27:* flags 230.1, 230.2 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.

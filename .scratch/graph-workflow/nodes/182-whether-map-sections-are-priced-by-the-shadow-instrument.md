@@ -30,3 +30,5 @@ has not run.
 **Six workers have now reported reading `map.md` whole for a fraction of it**, on nodes 144, 163, 167, 171, 175 and
 165 — each naming different items as the ones that bore on nothing. The manager records the count as a fact and takes
 no view on what it implies, that being this node's question.
+
+*The manager's note, 2026-09-28:* [node 181](181-whether-the-workflow-ships-the-shadow-spawn-instrument.md)'s worker reports this node's question changed. Its words, pasted: **Node 182 (open grilling, "Whether map.md's sections are priced by the shadow instrument"): its question is changed in part.** The instrument it would use is now settled as optional effort practice, not shipped, so a per-section shadow run would be a local measurement and never a shipped procedure. Its stated blocker, the three pairs from node 165, is the same one this node was decided without, and now belongs to the NEW NODES entry above. Node 345 has also since moved the map's bulk out on retrospective evidence, which may make 182 unnecessary. Whether it does is for 182's worker, not me.

@@ -1,7 +1,7 @@
 # The landing section says the reset requires the sandbox off and also that it is not reliably inside it
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
