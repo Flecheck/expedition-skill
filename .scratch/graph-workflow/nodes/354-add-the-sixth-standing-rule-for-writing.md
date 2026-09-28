@@ -1,7 +1,7 @@
 # Add the sixth standing rule for writing: point at a heading of a file the reader already reads
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: 352
 
 ## Question
@@ -25,6 +25,12 @@ Write node 253's rule as the sixth standing rule for writing, in the list that h
 > 5. Every markdown link in the three files resolves to a path that exists.
 >
 > Scope search for clause 3: `grep -rn -i "rules for writing" .scratch/graph-workflow/map.md .scratch/graph-workflow/map-implementation-rules.md .scratch/graph-workflow/map-manager-only.md .claude/skills`. Run over the working tree on 2026-09-27, before node 352 landed, it returned 1 line in `map.md` (the paragraph beginning "The five standing rules for writing anything in this effort") and 3 matches in `map-implementation-rules.md` (the bar paragraph, and the review route paragraph twice). It returned none in `map-manager-only.md` or `.claude/skills`. Node 352 moves these lines, so the worker re-runs the command on the tree it starts from and edits every match in the three editable files. A match the search reaches in any other file is reported, not edited.
+
+## Answer
+
+Node 253's rule is now the sixth standing rule for writing in map.md's ground-rules block, and every count of those rules in the map now says six.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `a17a444`.
 
 ## Handover, attempt 1
 

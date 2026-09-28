@@ -1,7 +1,7 @@
 # Where the manager-read shipped files restate one another
 
 Type: research
-Status: open
+Status: claimed
 Blocked by: 354
 
 ## Question
