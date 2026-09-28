@@ -86,6 +86,60 @@ RETROSPECTIVE
 4. What was stale, wrong or contradictory: the condition's recorded search result (1 match in `map.md` "The five standing rules…", 3 in the rules file) was out of date after node 352, as the condition itself warned. The re-run found a lead-in with no count and the same three matches in the rules file. Node 284's clause 4 still says "four" and node 190's amendments say "five". Replacements for both are under CONDITIONS.
 ````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-09-27. The checker was resumed from node 230's check; the condition reached it as a verbatim copy in `$TMPDIR/c354.md`.*
+
+> PASS
+>
+> This is the check of node 354, "Add the sixth standing rule for writing: point at a heading of a file the reader already reads". The work is the uncommitted diff to three record files, `.scratch/graph-workflow/map.md`, `map-implementation-rules.md` and `map-history.md`. It sits in `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/354-sixth-rule`, on base 2490b5b. Under the rules file, I read these record files as the work. I read the whole condition in `/tmp/claude-1000/c354.md`.
+>
+> **Settled first:** the work adds an element to the writing rules, which are among my standards. Rules 1–5 and the ground rules are unchanged: all are context lines in the diff. I held the work against those. I did not hold the work against the rule it adds.
+>
+> **Parts of the condition**
+>
+> - **Scope:** met. `git status --short --untracked-files=all` shows only the three files. No node file, `decisions.md` or `flags.md` changed.
+> - **1:** met.
+>   - The list inside `map.md`'s ground-rules block now ends with rule 6.
+>   - `grep -qxF` matches the whole of that line against the condition's rule 6 text, character for character.
+>   - Rules 1–5 are unchanged context lines, in the same order.
+> - **2:** met.
+>   - The lead-in now reads "The first four were fixed by [node 53](…), the fifth by [node 289](…) and the sixth by [node 253](nodes/253-a-shipped-file-points-at-a-sibling-rather-than-restating-it.md)."
+>   - It gives no total count, so there is no number that would need to say six.
+> - **3:** met. I joined each file's wrapped lines into unbroken paragraphs. `grep -noiE '(four|five|4|5) (standing )?(rules|writing rules)'` over `map.md`, `map-implementation-rules.md` and `map-manager-only.md` then finds nothing. The rules file's three counts now read "six standing rules for writing":
+>   - the bar paragraph;
+>   - the review route;
+>   - the node-42 sentence.
+> - **4:** met.
+>   - The node-354 block in `map-history.md` appends the replaced lead-in and the three replaced rules-file sentences. Each sits under a heading that mirrors the section it came from.
+>   - Each of the four quoted lines matches HEAD's `map.md` or `map-implementation-rules.md` exactly under `grep -F`.
+>   - The diff of `map-history.md` removes 0 lines.
+> - **5:** met. Every `](path)` target outside fenced blocks in the three files exists: relative paths resolved from `.scratch/graph-workflow/`, and the one absolute path, `/home/mathieu/projects/Lang`, checked directly.
+> - **Scope search:** I re-ran `grep -rn -i "rules for writing"` over the four paths it names. It returns `map.md` line 68 (the lead-in) and `map-implementation-rules.md` lines 39 and 41, and nothing in `map-manager-only.md` or `.claude/skills`. Every hit is in an editable file and edited, so nothing outside needs reporting.
+>
+> **The bar**
+>
+> - The rules file records no build, tests, formatter or CI, and the repo confirms it.
+> - `git diff --check` is clean (exit 0).
+>
+> **Standards.** These bore on the work, and I found nothing against them:
+> - the ground rules;
+> - writing rules 1–5, including rule 4, since citations are by heading and link;
+> - `graph-conventions.md`'s `### Change the map`;
+> - the glossary's `_Avoid_` lines;
+> - `/writing-for-agents`.
+>
+> No reviewing skill is named, so I ran none.
+>
+> NOT COVERED:
+> - None of the condition's parts is uncovered. The ban on writes to the node, `decisions.md` and `flags.md` is established from the worktree diff.
+
+### Gate — approve, `standing yes`, 2026-09-27
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and its one NOT COVERED item is the worker's bookkeeping. This settles none of the node's flags; they settle at the node closing report.
+
 ## Flags
 
 none
