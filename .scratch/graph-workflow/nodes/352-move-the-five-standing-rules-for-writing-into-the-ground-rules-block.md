@@ -164,6 +164,10 @@ RETROSPECTIVE
 
 *The manager's note:* the checker handed back a question beside its `PASS`, so the human's standing yes does not cover this gate, and the gate goes to the human.
 
+### Gate — approve, 2026-09-28
+
+The human, `verbatim`: *"ok"*, in answer to the manager's gate payload, whose last line read "Please approve or correct node 352's gate. "approve" also accepts my plan for the `CONTEXT.md` mentions." The plan it accepts: once this lands, the manager updates rule 5's and the rules file's two mentions of `CONTEXT.md` to name `.claude/skills/expedition/glossary.md`, with the old text appended to `map-history.md`.
+
 ## Flags
 
 none
