@@ -1068,3 +1068,15 @@ That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **
 *The manager's own change. Replaced, and the paragraph stood as:*
 
 **How many implementation workers run at once is a setting of the effort, and for this effort it is two**, raised from one by the human while directing the manager at the shipping backlog, `verbatim`: *"should we do 2 implementer and 2 grilling to go through the shipping backlog ?"*. **What the manager carries with the second slot** is that two implementation workers may hold two worktrees over the same shipped file, so it picks nodes whose paths are disjoint; the integration conflicts that raises are resolved as the landing policy above states, settled at [node 115](nodes/115-two-writers-edit-the-map-at-once.md) and carried here at [node 160](nodes/160-carry-the-integration-conflict-rule-into-the-map.md), and how much of that rule ships is still open at [node 162](nodes/162-how-much-of-the-integration-rule-ships.md). The superseded sentence is also in [map-history.md](map-history.md). A code slot is therefore a count rather than a property, and raising the count changes a number and no part of the lifecycle above. **A slot's occupancy is discovered by counting the live worktrees** — one per claimed implementation node — rather than by inspecting the working tree for uncommitted changes, so the human's own edits no longer read as an occupied slot. Set at [Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md). Raising the count buys parallel implementation at the price of integration conflicts. The human sets the count. The manager does not raise it on its own judgement, and does not treat the effort's current value as a ceiling. The human's words, `verbatim`: *"but the framework should allow user to tell the manager to increase parallelization, at the expanse of odds of having to resolve merge conflicts"*. Settled at [node 115](nodes/115-two-writers-edit-the-map-at-once.md).
+
+### From `map-manager-only.md` — the item "When `decisions.md` stops being small enough", superseded at node 358, 2026-09-28
+
+*Replaced, and it stood as:*
+
+- **When `decisions.md` stops being small enough.** The human kept it on every worker's read-whole list, `verbatim`:
+  *"it's small enough"*, on the ground that a fed context is used where a search is not. That ground has two halves
+  and only one expires: the mechanism does not, but the size claim is about a file that grows by one capped line per
+  resolved node and never shrinks. **The anchor is this effort's own precedent — `map.md` was judged to need
+  splitting at 43,847 bytes** — and it is node 129's worker's number rather than the human's, flagged at `129.4`.
+  What would settle it: `decisions.md` approaching that size, at which point part (ii) of node 129's package is
+  re-offered.

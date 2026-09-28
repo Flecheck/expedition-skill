@@ -233,10 +233,4 @@ banked whole in [map-history.md](map-history.md).**
   worker reporting that it could not find a fact because it did not know the fact's wording** — the one thing `qmd`
   does that lexical search cannot. What would settle it: such a report, after the search-the-record instruction has
   landed. Held by nothing but this line and the manager reading it.
-- **When `decisions.md` stops being small enough.** The human kept it on every worker's read-whole list, `verbatim`:
-  *"it's small enough"*, on the ground that a fed context is used where a search is not. That ground has two halves
-  and only one expires: the mechanism does not, but the size claim is about a file that grows by one capped line per
-  resolved node and never shrinks. **The anchor is this effort's own precedent — `map.md` was judged to need
-  splitting at 43,847 bytes** — and it is node 129's worker's number rather than the human's, flagged at `129.4`.
-  What would settle it: `decisions.md` approaching that size, at which point part (ii) of node 129's package is
-  re-offered.
+- **`decisions.md`'s read-whole status is re-offered through [node 185](nodes/185-a-spawn-does-not-scope-the-decisions-index.md).** [Node 358](nodes/358-whether-decisions-mds-size-trigger-is-re-offered-or-retired.md) retired the size trigger that stood here: the file passed it unwatched, and spawns already name the lines a worker reads.

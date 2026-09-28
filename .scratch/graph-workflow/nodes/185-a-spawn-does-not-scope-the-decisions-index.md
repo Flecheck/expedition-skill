@@ -26,6 +26,8 @@ stopped me doing… A different arrangement that would have avoided it: the spaw
 answer is a heading structure in `decisions.md`, a per-spawn list of node numbers, or a declared label vocabulary this
 effort has so far refused; and whether any of it is this effort's practice or reaches a shipped file.
 
+*Added 2026-09-28 by the manager, the text written by [node 358](358-whether-decisions-mds-size-trigger-is-re-offered-or-retired.md)'s worker:* **`decisions.md` is 80,400 bytes**, past the ~43,847-byte anchor at which node 129's package said part (ii) would be re-offered, which is taking the file off every worker's read-whole list. The human's ground for keeping it read whole at node 129 was *"it's small enough"*, and it no longer holds. [Node 358](358-whether-decisions-mds-size-trigger-is-re-offered-or-retired.md) retired that size trigger and made this node the place where part (ii) is re-offered, in the scoped form spawns already use.
+
 ## The manager's note at filing
 
 *Not a change to anything above.*

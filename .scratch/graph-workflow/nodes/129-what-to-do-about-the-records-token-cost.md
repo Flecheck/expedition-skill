@@ -233,7 +233,7 @@ and no node is minted for it because nothing about it has been measured. Flag `1
 
 `129.3` `ASSUMPTION` — *Restated by the worker after re-reading it.* *For the node:* I left the manager's own reading of the record out of scope. **My first statement of this flag gave the ground as "the human approved a change to worker contracts, which is what I offered", and that ground is circular and I withdraw it** — they approved the scope because it was the only scope I showed them, and I chose it before asking. The honest statement is that **I scoped this to the worker contracts on my own judgement and the manager's own reading was never an option the human saw.** It matters more than I thought when I chose it: the manager reads these files more than any worker, its context is the one measured failure on this effort, and the human's revert ground — that a fed context is used naturally where a search is not — is a claim about an LLM reading a record, which is what the manager is. I minted no node because nothing about the manager's read has been measured, and this map forbids ranking an unmeasured saving.
 
-`129.4` `ASSUMPTION` — *For the node:* I chose both triggers in section 6 and put neither to the human. The `qmd` trigger — a worker reporting it could not find a fact because it did not know the fact's wording — is derived from the one capability node 128 established `qmd` has over lexical search. The size trigger for re-offering part (ii) is anchored at roughly **43,847 bytes**, which is the size at which this effort judged `map.md` to need splitting; the human said 24,345 bytes was *"small enough"* and gave no number, so **the number is mine and the only thing they said is that today's size is acceptable.**
+`129.4` `ASSUMPTION` **· settled** — *For the node:* I chose both triggers in section 6 and put neither to the human. The `qmd` trigger — a worker reporting it could not find a fact because it did not know the fact's wording — is derived from the one capability node 128 established `qmd` has over lexical search. The size trigger for re-offering part (ii) is anchored at roughly **43,847 bytes**, which is the size at which this effort judged `map.md` to need splitting; the human said 24,345 bytes was *"small enough"* and gave no number, so **the number is mine and the only thing they said is that today's size is acceptable.**
 
 ## Interview
 
@@ -404,3 +404,5 @@ words. Nothing above is changed.*
 **What survives untouched, in node 183's words:** *"Node 129's search-before-read property is confirmed and extended
 to the frontier"*, and its settlement that tooling is permitted in the record while barred from the shipped files is
 what let node 183 place the derivations where it did.
+
+*The manager's note, 2026-09-28:* flag 129.4 settles on [node 358](358-whether-decisions-mds-size-trigger-is-re-offered-or-retired.md)'s answer, which retired the size trigger its number anchored.
