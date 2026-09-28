@@ -74,3 +74,5 @@ manager acts on has no backstop when the manager does not act on it.**
 ## Flags
 
 `89.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 275's clean-up clauses were filed on this open, unclaimed node without asking the human first.
+
+*The manager's note, 2026-09-28:* [node 162](162-how-much-of-the-integration-rule-ships.md)'s worker reports this node's question changed. Its words, pasted: **Node 89** (open, implementation, "Carry the worktree lifecycle into the manager's contract") asks whether the worktree lifecycle is a rule of the workflow or a practice of one effort. This answer settles the conflict-handling part of that question as per-effort: the shipped files only require the policy to state it. The rest of node 89's question stays open.
