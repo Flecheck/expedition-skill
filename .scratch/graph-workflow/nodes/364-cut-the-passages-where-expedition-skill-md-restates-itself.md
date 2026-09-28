@@ -1,8 +1,14 @@
 # Cut the passages where `expedition/SKILL.md` restates itself
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+`expedition/SKILL.md` cut fourteen self-restatements (338 words, 9,409 to 9,071) into pointers or single statements, headings unchanged, triggers file untouched by condition.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1` and its correction round. The checker failed run 1 on the bar (one pronoun), and passed run 2. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `e50fe5c`. Flag 364.1 settles at the node closing report.
 
 ## Question
 
@@ -361,4 +367,4 @@ RETROSPECTIVE
 
 ## Flags
 
-`364.1` `ASSUMPTION` — In clause 10 I also cut two sentences the condition does not name, "Until it is there, it binds nobody." and "This holds for rules of conduct as well as for steering about what gets worked." Both sit in the section clause 10 says must state each thing once, and both restate that same paragraph's first sentence. In clause 2 I dropped the word "fixed" for all four queue kinds, because `## What is in front of the human, and when` fixes only tier 1. In clause 6 I dropped "Never infer one yourself" as covered by "only the human can add a kind to it". I left the rest of the checker-question paragraph ("so it needs no place in tier 1") as it was, since the condition asks only for "Tier 1 keeps its three kinds." to go. I did all this work alone, with no exchange with the human.
+`364.1` `ASSUMPTION` **· settled** — In clause 10 I also cut two sentences the condition does not name, "Until it is there, it binds nobody." and "This holds for rules of conduct as well as for steering about what gets worked." Both sit in the section clause 10 says must state each thing once, and both restate that same paragraph's first sentence. In clause 2 I dropped the word "fixed" for all four queue kinds, because `## What is in front of the human, and when` fixes only tier 1. In clause 6 I dropped "Never infer one yourself" as covered by "only the human can add a kind to it". I left the rest of the checker-question paragraph ("so it needs no place in tier 1") as it was, since the condition asks only for "Tier 1 keeps its three kinds." to go. I did all this work alone, with no exchange with the human.
