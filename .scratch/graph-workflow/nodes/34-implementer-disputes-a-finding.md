@@ -103,3 +103,5 @@ already has one acknowledged exception, and it is unsettled.
 Feeds [`expedition-implementation/SKILL.md`](../../../.claude/skills/expedition-implementation/SKILL.md),
 possibly [`expedition-checker/SKILL.md`](../../../.claude/skills/expedition-checker/SKILL.md), and the
 **manager's own skill**, which carries the findings between the two and may not answer either of them.
+
+*The manager's note, 2026-09-28:* [node 353](353-whether-implementer-becomes-a-glossary-headword.md)'s worker reports this node's question changed. Its words, pasted: Node 34 (open, grilling): a term is renamed in its title, "What an implementer does with a checker finding it believes is false". Its body already says "implementation worker". The shipped line it concerns (`.claude/skills/expedition/SKILL.md:830`) will read "a worker" or "the implementation worker" once the rename node lands. The title is record text and stays as it is under never-delete.

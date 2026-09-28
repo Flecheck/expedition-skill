@@ -35,3 +35,5 @@ condition — but what the condition must demand turns on a question the manager
 a fourth marker, a marker the flag section declares open-ended, or somewhere other than `## Flags` for a licence to
 live. Writing a condition that picked one would be a judgement of the manager's reaching the graph disguised as a
 standard. **That choice goes to the human**, and until it is made this node is not startable.
+
+*The manager's note, 2026-09-28:* [node 353](353-whether-implementer-becomes-a-glossary-headword.md)'s worker reports this node's question changed. Its words, pasted: Node 170 (open, implementation, no condition yet): the question is partly answered. Whichever repair the human picks for a licence, a new marker such as `LICENCE` owes no glossary entry. Whoever writes its condition must not demand one.

@@ -1,7 +1,7 @@
 # How much of the integration-conflict rule reaches the shipped files
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 
