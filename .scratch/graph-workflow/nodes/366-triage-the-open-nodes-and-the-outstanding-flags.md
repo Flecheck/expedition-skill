@@ -1,7 +1,7 @@
 # Triage the open nodes and the outstanding flags
 
 Type: grilling
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
