@@ -1,7 +1,7 @@
 # Nothing in the record says the auto-loaded trigger file exists
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
 
@@ -133,6 +133,12 @@ RETROSPECTIVE
 
 The human, `verbatim`: *"ok"*. It takes the worker's recommendation: "Replace both clauses with the text below." The replacement clauses are filed under `## Amendment by the human, 2026-09-27 (from raise 1)`.
 
+## Answer
+
+`map-implementation-rules.md` now states when the harness loads `.claude/rules/expedition-triggers.md` and what it holds. It says the governing statement is in `/expedition`'s `SKILL.md`, the map wins where they differ, and editing either duty's statement means editing both.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `4ef7f95`. Flags 226.1 settle at the node closing report.
+
 ## Handover, attempt 1
 
 *Filed by the manager as handed back, 2026-09-27. The worker's own text, pasted.*
@@ -229,4 +235,6 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`226.1` `ASSUMPTION` — I placed the paragraph right before the "effort's own record" paragraph, so the one paragraph that node 352 leaves alone sits between it and node 352's edits. Node 352 rewords the review-route paragraph just above, with an unchanged blank line between, and removes the writing-rules block below the record paragraph. I also cited `SKILL.md` under two headings, `## The order you act in` for the priority and `## What is in front of the human, and when` for the never-ask trigger. The clause names only the file, and the headings were picked by reading the headings of `SKILL.md` and `map-manager-only.md`'s pointers to it.
+`226.1` `ASSUMPTION` **· settled** — I placed the paragraph right before the "effort's own record" paragraph, so the one paragraph that node 352 leaves alone sits between it and node 352's edits. Node 352 rewords the review-route paragraph just above, with an unchanged blank line between, and removes the writing-rules block below the record paragraph. I also cited `SKILL.md` under two headings, `## The order you act in` for the priority and `## What is in front of the human, and when` for the never-ask trigger. The clause names only the file, and the headings were picked by reading the headings of `SKILL.md` and `map-manager-only.md`'s pointers to it.
+
+*The manager's note, 2026-09-27:* flags 226.1 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.

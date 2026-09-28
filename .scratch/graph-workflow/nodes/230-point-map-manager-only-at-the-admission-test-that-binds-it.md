@@ -1,7 +1,7 @@
 # Point `map-manager-only.md` at the admission test that already binds it
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: 229
 
