@@ -102,6 +102,12 @@ so the two are disjoint in fact though not by any written edge. The manager hold
 
 - Node 190 (open, unclaimed): clause 1 "`CONTEXT.md`'s `_Avoid_` lines" should read "`.claude/skills/expedition/glossary.md`'s `_Avoid_` lines". Clause 2 "that `CONTEXT.md`'s refused words return false positives" should read "that `.claude/skills/expedition/glossary.md`'s refused words return false positives". The path is fixed by this node's work in the tree, the human's 2026-09-25 choice of name.
 
+## Amendment, 2026-09-28 (from node 354)
+
+*Written by [node 354](354-add-the-sixth-standing-rule-for-writing.md)'s worker under its `CONDITIONS`, and filed by the manager. Pasted as it wrote it. It binds once node 354 lands.*
+
+- Node 190 (open, unclaimed). Node 349's amendment of its clause 1 contains the phrase "this effort's five standing rules for writing, stated as held in `map.md`'s `## Notes` inside the ground-rules block and received by a checker as text in its spawn". Replacement: "this effort's six standing rules for writing, stated as held in `map.md`'s `## Notes` inside the ground-rules block and received by a checker as text in its spawn". Node 349's amendment of its clause 4 reads "4. The file states neither the five ground rules nor the five standing rules for writing as a numbered list. Where it names them, it names `map.md`'s `## Notes` as holding them." Replacement: "4. The file states neither the five ground rules nor the six standing rules for writing as a numbered list. Where it names them, it names `map.md`'s `## Notes` as holding them." In both, "six" is fixed by this node's work landed in the tree: `map.md`'s list ends at rule 6, and `map-implementation-rules.md` says "six standing rules for writing". There are still five ground rules in `map.md`. Node 190's original clauses 1 and 4, which say "four", were already replaced by earlier amendments.
+
 ## Flags
 
 `190.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 168's replacement for clause 4 was filed on this open, unclaimed node, and the node was made to wait on node 348.
@@ -115,3 +121,5 @@ so the two are disjoint in fact though not by any written edge. The manager hold
 `190.4` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 56 above.* Node 56's replacement naming `.claude/skills/expedition/glossary.md` in place of `CONTEXT.md` was filed on this open, unclaimed node without asking the human first.
 
 *The manager's note, 2026-09-27:* edge to [node 354](354-add-the-sixth-standing-rule-for-writing.md) added. [Node 253](253-a-shipped-file-points-at-a-sibling-rather-than-restating-it.md)'s worker reports that once node 354 lands, the "five standing rules for writing" in clause 1 (as amended by node 348) and clause 4 becomes wrong, and that the replacement is owed then, since "six" is fixed by no landed work yet.
+
+`190.5` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 354 above.* Node 354's replacement of "five" (or "four") with "six" standing rules for writing was filed on this open, unclaimed node without asking the human first.

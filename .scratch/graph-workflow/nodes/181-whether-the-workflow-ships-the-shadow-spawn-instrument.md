@@ -65,3 +65,7 @@ ALTERNATIVES:  - Ship it now as a manager procedure in graph-conventions.md. The
                - Wait for pairs 2 and 3 first, as the node's author wanted. The evidence would be better, but it is blocked on work the manager has not done, and the pairs now measure a scoped pointer instead of the flat feed they were designed for.
                - Drop it entirely, including as effort practice. This loses the one instrument that measures waste rather than self-report, at no saving, since running it is optional.
 ```
+
+#### The human's answer to question 1, 2026-09-28
+
+The human, `verbatim`: *"yes, don't ship it"*. It takes the worker's recommendation: "Keep it as this effort's own practice and ship nothing. The node then stops waiting on the missing pairs."

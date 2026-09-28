@@ -109,6 +109,14 @@ claims this node picks, and says which it took.**
 
 - Node 284 (open, unclaimed): in its bar sentence, "`CONTEXT.md`'s `_Avoid_` lines" should read "`.claude/skills/expedition/glossary.md`'s `_Avoid_` lines". Same source for the path.
 
+## Amendment, 2026-09-28 (from node 354)
+
+*Written by [node 354](354-add-the-sixth-standing-rule-for-writing.md)'s worker under its `CONDITIONS`, and filed by the manager. Pasted as it wrote it. It binds once node 354 lands.*
+
+- Node 284 (open, unclaimed). Clause 4's bar sentence says "this effort's ground rules and four standing rules for writing". The manager's note of 2026-09-23 on that node already records that this is stale. Replacement for that phrase: "this effort's ground rules and six standing rules for writing". It is fixed by the same landed work.
+
 ## Flags
 
 `284.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 56 above.* Node 56's replacement naming `.claude/skills/expedition/glossary.md` in place of `CONTEXT.md` was filed on this open, unclaimed node without asking the human first.
+
+`284.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 354 above.* Node 354's replacement of "five" (or "four") with "six" standing rules for writing was filed on this open, unclaimed node without asking the human first.
