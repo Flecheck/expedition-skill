@@ -187,6 +187,90 @@ RETROSPECTIVE
 
 *The manager's note:* the raise the human approved gave the repair as `git diff --quiet <branch> -- <path>`, then `git checkout -- <path>`, then re-merge. The landed text uses `git show … | cmp`, `git checkout HEAD --`, deletes a file `HEAD` does not hold, and adds the clean case. The worker gives its reasons above but raised no flag for the difference; the manager puts it in the gate.
 
+## Review
+
+### Checker run 1 — `FAIL` (acceptance condition, and the bar)
+
+*The checker's own text, pasted, 2026-09-28. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c234.md`, with the human's settlement of how clauses 1 and 2 are read.*
+
+> FAIL: acceptance condition
+>
+> This is the check of "Rewrite the manager contract's second part in plain English". The worktree is `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/297-rewrite-the-manager-contract-part-2`.
+> - The before-text is `git show 6745f37:.claude/skills/expedition/SKILL.md`, which is also the merge-base.
+> - The rewritten range G2 is before-text lines 146–437 and after-text lines 146–419, from `## Spawning a worker` up to `## What is in front of the human, and when`.
+> - I walked clauses 1 and 2 separately, and built the rule-change list myself.
+>
+> **The bar holds.** The repo root holds only `.claude`, `CONTEXT.md`, `.gitignore` and `.scratch`. There is no build, test suite, formatter or CI, so there is no command to run. The non-command half is met:
+> - the ground rules and the five standing rules for writing
+> - `CONTEXT.md`'s `_Avoid_` lines
+> - `graph-conventions.md`
+> - `/writing-for-agents`
+>
+> These standards come from `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md`. That file names no reviewing skill, so I ran none. The changed path is a shipped skill file, not a record file.
+>
+> **Clause by clause:**
+> - **Clauses 1 and 2:** walked. The results are in RULE CHANGES below. None of them fails the work.
+> - **Clause 1a:** two before-text terms that `CONTEXT.md` does not define are dropped as terms. For each, the meaning is still stated in plain words where it was defined, so neither is a rule change.
+>   - "licence" is now "A permission the human gave in answer to a raise of yours". "Licence" appears nowhere else in the file.
+>   - The "**handles** its own work fixes" is now "what its own work fixes: each word it refuses, each path…, and each phrase it supersedes".
+> - **Clause 3:** holds. Every generalisation that changes an outcome or decides an open case is listed as a rule change.
+> - **Clause 4:** holds. The frontmatter is byte-identical, and G2 has no code fences in either the before-text or the after-text.
+> - **Clause 5:** holds. All G2 headings are byte-identical.
+> - **Clause 6:** holds. These references resolve: "listed below", "the limit on notes above", "described in the next section", "the payload's first line", "the moments this section names", and "under the raise above". "The raise above" resolves to "A worker that judges the condition wrong raises it". The unchanged part's reference to "`### A flag in a payload` above" also resolves.
+> - **Clause 7:** holds. My scan of `_Avoid_` words found only uses outside the refused concept: "discarded" in the prototype entry, "each word it refuses", and "correction round". I also checked by hand. `CONTEXT.md` terms are spelled as it defines them, and no new term is coined.
+> - **Clause 8:** fails 8c, as below. 8a, 8b, 8d, 8e and 8f hold:
+>   - Each prohibition sits beside its positive.
+>   - G2 has no bold.
+>   - I found no slogan.
+>   - I checked every pronoun.
+>   - No sentence has more than one dash aside or more than one semicolon.
+>   - No line is longer than 106 characters.
+> - **Clause 9 (reported, not enforced):** `wc -w` of G2 is 3147 before and 2749 after, which is 87%. The target is at most 2098, so it was missed.
+> - **Clauses 10 and 11:** hold. `.claude/skills/expedition/SKILL.md` is the only changed path, and nothing is untracked. Everything before `## Spawning a worker` and everything from `## What is in front of the human, and when` onward is byte-identical to the before-text (`cmp`, both parts).
+>
+> **Finding: clause 8c, a figure of speech or coined phrase in G2 prose that is not a term defined in `CONTEXT.md`.**
+> - Line 116, "The checker's runs, laid end to end, oldest first." "Laid end to end" is an idiom for placing one after another.
+> - Lines 38–39, "such a direction is the only way past it". This is a spatial figure, of the same kind as run 1's "in reach". The plain meaning is that it is the only way to go on.
+> - Line 184, "settled at the first human moment its close reaches". "Human moment" is a coined phrase, and a close "reaching" a moment is a figure. The next sentence explains it, but the phrase remains. `CONTEXT.md`'s Flag entry uses the same wording, but it is not a defined term there.
+> - Form: a phrase in G2 prose outside code fences that says an idea by figure or coinage rather than in plain words, where the idea is not a `CONTEXT.md` term.
+> - Extent: none. I found these by reading, and they are not proven exhaustive.
+> - Borderline passages I did not count as breaches: lines 227–228, "reach only a node nobody holds yet"; line 246, "never reaches any of the following three things"; and line 228, "goes over as written". In each, "reach" means "applies to", which is close to the ruled-out "neither pen reaches" but without the pen.
+>
+> RULE CHANGES
+>
+> Clause 1. For each entry: the before-text statement in G2, then its counterpart.
+> 1. **When a contract blocks the node.** Before: "nothing you send a worker may widen what that worker is permitted to write". After: "Keep what a worker may write within what its contract allows, in every message you send it, a resume included."
+>    - The limit moves from what the worker is permitted, which includes a permission the human granted, to what its contract allows.
+>    - `### Two things that travel in a spawn and are not yours` lets you carry such a permission. A message carrying one that lets the worker write beyond its contract was allowed before, and is outside the after-text rule.
+> 2. **Changing a contract.** Before: "Amending a contract is its own piece of work against that file, and never something you do mid-flight." After: "Changing a contract is a separate piece of work on that file. You never change one while the node it blocks is being worked."
+>    - "Mid-flight" was not tied to any one node. The counterpart ties the ban to the blocked node, which narrows it where another node under the same contract is being worked.
+> 3. **A flag in a payload.** Before: "*(This is one effort's standing instruction from its human rather than a rule of the workflow — see* Standing steering *below. Where an effort's human has not said it, ask.)*" After: "That settling rule is one effort's standing instruction from its human, and is not a rule of the workflow. Where an effort's human has not given it, ask them whether their approval settles the node's flags."
+>    - The before-text left open two things: whether "This" meant "every flag the node holds is in the payload" or the settling statement, and what to ask. The after-text decides both.
+>    - It now states that the settling rule is not a rule of the workflow. That sits against the same file's `## Flags`: "A node's flags are settled at the first human moment its close reaches … Every kind of node follows this rule."
+> 4. **Which amendments reach only unclaimed nodes.** Before: "Everything here reaches a node nobody holds yet." After: "The amendments in this section, by the party that established a fact and by you, reach only a node nobody holds yet."
+>    - "Everything here" covered the whole section. That includes the search, which the same section says covers "every open node's condition, claimed or not".
+>    - The after-text limits the unclaimed-only rule to those two kinds of amendment. That settles a contradiction the before-text left open.
+> 5. **Where an amendment is named.** Before, item 5 of the things that accompany an amendment: "or, where the amendment is made after the node is claimed, in that node's closing report instead". After: "Where the amendment is made after the node is claimed, it is named in the report that closes that node instead."
+>    - Under the before-text's own line-25 import, "closing report" is `CONTEXT.md`'s effort-level Closing report. The after-text names the report that closes the node.
+>
+> Clause 2. A statement the after-text makes that the whole before-text does not.
+> 6. **When a flag may be settled.** Line 190: "Settle a flag only at the moments this section names, never on your own judgement or on the passage of time." The before-text said only "You never settle a flag on your own judgement or on the passage of time." The word "only" adds a ban on settling a flag at any moment other than those `## Flags` names.
+>
+> **Checked and not counted as rule changes:**
+> - **What the checker may be pointed at.** "It is the one agent whose payload cannot be a pointer" became "its spawn never points it at the node file". Combined with "receives nothing from the effort's own record", and the condition and ground rules going as text, the outcome is the same.
+> - **The ban on quantifying over the record.** "may not quantify over the record" became "makes no demand about the record as a whole". This is the wording of the landed `graph-conventions.md`: "A demand about the record as a whole belongs on the handover and in no condition".
+> - **Departing from a worker contract.** "You may not depart … on your own authority" became "Depart … only with the human's permission". The outcome is the same.
+> - **Extraction as scribe work.** "Extraction is copying, so it is scribe work" is now carried by the unchanged part's scribe section: "extracting a block of text to hand to somebody else".
+> - **Dropped rationale sentences.** Each one's rule remains.
+>
+> **Extent of the list:** a bounding set, every statement in G2 before and after, walked paragraph by paragraph. Each G2 statement was held against the whole after-text including `CONTEXT.md` through its import, and each after-text G2 statement against the whole before-text.
+>
+> **Not re-raised:** run 6's open question about ground rule 1 and `CONTEXT.md` concerns lines outside G2, which this work does not change. G2 adds no new dependence on this repo.
+>
+> File: `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/297-rewrite-the-manager-contract-part-2/.claude/skills/expedition/SKILL.md`
+
+*The manager's note:* a `FAIL` is outside the standing yes. Finding 1 turns on whether the worker may depart from wording the human approved "as worded", which only the human can say; it goes to the human. Finding 2 goes back to the worker with the human's answer, in one correction round.
+
 ## Flags
 
 `234.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 160 above.* Node 160's replacement for clause 4's second sentence was filed on this open, unclaimed node without asking the human first.
