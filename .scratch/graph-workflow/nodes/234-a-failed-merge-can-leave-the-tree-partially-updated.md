@@ -114,6 +114,79 @@ RETROSPECTIVE
 4. What was stale, wrong or contradictory: clause 1's "two sentences" and the Question's two quotes were already out of date when the node was minted. The node-160 amendment is accurate. The manager's filing note ("the record's line as written" for node 229's clean case) points at the single combined sentence, without saying that it is now the only one.
 ```
 
+#### The human's answer to raise 1, 2026-09-28
+
+The human, `verbatim`: *"ok"*. It takes the worker's recommendation: "Go ahead on that reading." — clause 1 covers the one surviving combined sentence, the two sentences node 229 already banked (Edit 13 and Edit 14 in `map-history.md`) count as done for clause 2, and the shape (a) to (d) the raise gives is approved as worded.
+
+## Handover, attempt 1
+
+*Filed by the manager as handed back, 2026-09-28. The worker's own text, pasted.*
+
+````
+HANDOVER:      234, "A failed `git merge --ff-only` can leave the tree partially updated, and the record says it cannot"
+
+ANSWER:        Per the human's "ok" to Raise 1, clause 1 is taken to cover the one sentence that still stated the claim, and clause 2 to be already met for the two earlier statements. Node 229 had moved those two, word for word, to `map-history.md` (Edit 13 and Edit 14) before this node was minted.
+               In `map-manager-only.md`, under `## Landing an implementation node's work`, in the bullet "One sandbox restriction bites this lifecycle", sub-bullet "What it hits": the sentence "`HEAD` does not move and nothing is lost in either case; both succeed outside the sandbox." is replaced. The new text:
+               - keeps "`HEAD` does not move in either case";
+               - keeps the reset's old claim (it loses nothing and succeeds outside the sandbox), because nothing has shown it false and the reset is a step of no route since node 265;
+               - states the partial-write case for the merge: it may write some of the changed files before it fails, which leaves the main tree dirty, and a retry outside the sandbox then refuses with `Your local changes to the following files would be overwritten by merge`;
+               - states the clean case (the merge fails having written nothing, and the retry succeeds), because node 229's landing hit that case and the partial write is a case rather than the rule.
+               The repair follows in the same sub-bullet, as one pass in order:
+               1. Establish byte-identity for each dirty file with `git show worktree-<NN>-<name>:<path> | cmp - <path>`.
+               2. Outside the sandbox, discard the files: `git checkout HEAD -- <path>` for a file `HEAD` holds, and delete a file it does not hold.
+               3. Re-run the merge outside the sandbox.
+               The text states that byte-identity comes first. Where any dirty file differs from the branch's version, the manager stops and discards nothing.
+               Three choices a later reader would otherwise have to re-derive:
+               - The repair goes inside the existing sub-bullet, not in a fourth one, so that the lead-in "The three sub-bullets below are measurements" stays true.
+               - The discard runs outside the sandbox because a dirty file under `.claude/skills/` cannot be rewritten inside it.
+               - The discard uses `git checkout HEAD --` rather than `git checkout --`, so it also undoes any index write the failed merge made.
+               The replaced sentence is appended word for word to `map-history.md` under `## Superseded from map-manager-only.md at node 234 — the claim that a merge failed in the sandbox loses nothing`, subheading `### From *Landing an implementation node's work* — the sandbox restriction's sub-bullet on what it hits`. The introduction under that heading points at Edit 13 and Edit 14 for the two earlier statements.
+
+INDEX LINE:    The landing section now says a sandbox-failed merge may partially write the tree and block a retry, and gives the repair: confirm byte-identity first, discard, re-merge unsandboxed.
+
+FLAGS:         none
+
+NEW NODES:     none
+
+INVALIDATIONS: Node 229 (the landing section's accounts banked): no contradiction. Its Edit 13 and Edit 14 text is now cited from the new history section as the two earlier statements of the claim this node supersedes. Node 140 (Edit 14's measurement, "the merge succeeds on a retry outside the sandbox"): narrowed. That retry is clean only where the failed merge wrote nothing.
+
+CONDITIONS:    What I searched for: the open and claimed nodes' conditions and questions, for "nothing is lost", "succeeds outside the sandbox", "What it hits", "overwritten by merge", "partially written", "ff-only" and "One sandbox restriction bites". Apart from this node, it matched node 251 (line 34: the ff-only merge listed as not retested) and node 80 (line 64: the landing-policy sequence naming `git merge --ff-only`). My work makes neither wrong. There are no replacements and no changed questions.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:  Checker findings: none yet.
+               Paths touched, both in worktree `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/234-failed-merge`:
+               - `.scratch/graph-workflow/map-manager-only.md`
+               - `.scratch/graph-workflow/map-history.md` (appended only; you integrate this against node 186 at landing)
+               The node file is not edited. The worktree copy predates the `## Interview` record in the main checkout.
+               Checks run against the condition:
+               - The `**Landing policy**` paragraph is byte-identical to HEAD (md5 matches).
+               - The node-160 rebase-conflict span is untouched.
+               - The `## Notes` heading count in both files is unchanged.
+               - Every relative markdown link in both files resolves.
+               - Only the two files are modified.
+               The bar: the repo has no build, tests, formatter or CI. That matches `map-implementation-rules.md`'s record, so there is no difference to report.
+               Proposed commit message:
+               State that a sandbox-failed merge can partially write the tree, and its repair
+
+               The landing section said a merge failed in the sandbox loses nothing and
+               succeeds on a retry outside it. The merge may instead write some changed
+               files first, leaving the tree dirty and the retry refused. The section now
+               states that case and the one-pass repair: confirm byte-identity with the
+               branch first, discard, and re-merge outside the sandbox. The replaced
+               sentence is banked in map-history.md.
+
+               Node: graph-workflow/234
+
+RETROSPECTIVE
+1. What I had to hunt for: whether the second sentence had been banked or deleted, and when. It took `git log -S` and an ancestry check against the node's minting commit. For the repair, I had to check that git's error message reads "Your local changes to the following files would be overwritten by merge".
+2. What arrived that this node did not need: node 186's parallel run and node 364's (relevant only at integration), and the decisions.md lines on worktree routes.
+3. What would have made this easier: the node file noting that node 229 had landed shortly before, or a check at minting that the sentences a condition counts actually exist. Either would have made the raise unnecessary.
+4. What was stale, wrong or contradictory: clause 1's "two sentences", out of date when the node was minted and settled by the raise. Also, the worktree's copy of the node file lacks the `## Interview` record the manager wrote in the main checkout. That is expected, and not a problem for this work.
+````
+
+*The manager's note:* the raise the human approved gave the repair as `git diff --quiet <branch> -- <path>`, then `git checkout -- <path>`, then re-merge. The landed text uses `git show … | cmp`, `git checkout HEAD --`, deletes a file `HEAD` does not hold, and adds the clean case. The worker gives its reasons above but raised no flag for the difference; the manager puts it in the gate.
+
 ## Flags
 
 `234.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 160 above.* Node 160's replacement for clause 4's second sentence was filed on this open, unclaimed node without asking the human first.
