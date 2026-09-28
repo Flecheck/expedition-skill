@@ -99,6 +99,71 @@ RETROSPECTIVE
 4. What was stale, wrong or contradictory: nothing in the three files. After this work, node 190's note saying the "Five standing rules…" heading is "in the tree" is no longer true. Nodes 284 and 80 still say "four standing rules", which was out of date before this node and is already noted on node 284.
 ````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-09-27. The checker was resumed from node 160's check; the condition reached it as a verbatim copy in `$TMPDIR/c352.md`.*
+
+> PASS
+>
+> This is the check of node 352, "Move the five standing rules for writing into `map.md`'s ground-rules block". The work is the uncommitted diff to three record files in `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/352-writing-rules`, on base 0b7f910: `.scratch/graph-workflow/map.md`, `map-implementation-rules.md` and `map-history.md`. Following the rules file, I read them as the work. I read the whole condition in `/tmp/claude-1000/c352.md`.
+>
+> **Settled first: the work moves a standard.** The five standing rules for writing leave `map-implementation-rules.md` for `map.md`'s ground-rules block.
+> - The five numbered lines added to `map.md` are the same text as the five removed from the rules file at HEAD. They match word for word in the diff, and each line `grep -F`-matches HEAD's rules file.
+> - So no element of the writing rules moved. I held the work against them, and against the ground rules in `/tmp/claude-1000/ground.md`.
+>
+> **Parts of the condition**
+>
+> - **Scope.** Met. `git status --short --untracked-files=all` shows only the three files. There is no node file, no `decisions.md` and no `flags.md`.
+> - **1.** Met.
+>   - Inside `map.md`'s ground-rules block, after ground rules 1–5, there is a new lead-in: "**This effort's standing rules for writing**, held against every prose deliverable. The first four were fixed by [node 53](nodes/53-what-token-findings-change.md) and the fifth by [node 289](nodes/289-a-plain-english-and-compaction-pass-over-the-shipped-files.md)."
+>   - The lead-in is followed by the five rules, word for word as the condition gives them, in order and with the same bolding.
+>   - Ground rules 1–5 are unchanged: they are context lines in the diff.
+> - **2.** Met.
+>   - The paragraph beginning "Every rule above" now follows both lists. It reads "Every rule above, in both lists, is **a standing constraint true of any node's work, rather than an account of what happened.**"
+>   - It no longer says the rules are "drawn from a standing preference".
+> - **3.** Met. `grep -n -i 'writing' map.md` finds only the new lead-in and ground rule 5's `/writing-for-agents`. The pointer "…are in [map-implementation-rules.md]…" is gone, and no sentence places the writing rules in that file.
+> - **4.** Met.
+>   - The paragraph "**Five standing rules for writing anything in this effort**" and its list are removed from `map-implementation-rules.md`.
+>   - The bar paragraph and the review-route list both now read: "which [`map.md`](map.md)'s `## Notes` holds inside the ground-rules block and which a checker receives as text in its spawn with the ground rules".
+>   - The node-42 sentence now reads "both held in `map.md`'s `## Notes` inside the ground-rules block and received by a checker as text in its spawn".
+>   - Joining the file's paragraphs and grepping them finds no remaining "held below in this file" or "this file holds below".
+> - **5.** Met.
+>   - The node-352 block in `map-history.md` appends every removed text under mirroring headings: the old "Every rule above" paragraph, the `map.md` pointer, the three replaced sentences of the rules file, and the removed lead-in with its five rules.
+>   - Each of the 11 non-heading lines `grep -F`-matches HEAD's `map.md` or `map-implementation-rules.md`, so all are verbatim.
+>   - The history diff removes 0 lines.
+> - **6.** Met. Every `](path)` target outside fences in the three files exists relative to `.scratch/graph-workflow/`. The one absolute link, `/home/mathieu/projects/Lang` in `map-history.md`, also exists (`ls -d`), and it predates this work.
+> - **Scope search.** It matches the recorded return.
+>   - I ran `git grep -c "rules for writing" HEAD --` over the named paths. It returns `map.md: 1` and `map-implementation-rules.md: 3`, with none in `map-manager-only.md`, `.claude/skills` or `CONTEXT.md`. That is what the condition records.
+>   - On the worked tree it returns `map.md: 1` (the new lead-in) and `map-implementation-rules.md: 2` (the bar and review-route lines, both saying `map.md` holds them). There is still nothing elsewhere.
+>
+> **The bar**
+>
+> - The rules file records no build, tests, formatter or CI, and the repo confirms that.
+> - `git diff --check` is clean (exit 0).
+>
+> **Standards.** These bore on the work, and I found nothing against them:
+> - the ground rules and the writing rules;
+> - `graph-conventions.md`'s `### Change the map`: verbatim history, mirroring headings, and a link to node 352 in the history entry;
+> - `CONTEXT.md` `_Avoid_` lines;
+> - `/writing-for-agents`.
+>
+> `/coding-principles` and `/naming` did not bear on the work. No reviewing skill is named, so I ran none.
+>
+> QUESTIONS:
+> - **Writing rule 5 names `CONTEXT.md`.** Clause 1 dictates the rule word for word, including "Say any idea that is not a term defined in `CONTEXT.md` in plain words".
+>   - In this tree, the root `CONTEXT.md` is now a superseded pointer ("# Superseded: the glossary has moved"), and the glossary is `.claude/skills/expedition/glossary.md`.
+>   - The rule's reference therefore names the stale file. The wording is the condition's own, so it was not the worker's to change.
+>   - The same stale name also appears, outside this work, in the rules file's review route ("[`CONTEXT.md`](../../CONTEXT.md)'s `_Avoid_` lines") and bar list ("`CONTEXT.md`'s `_Avoid_` lines").
+>   - *Form:* a reference to the glossary by the root `CONTEXT.md` name in a map file.
+>   - *Extent:* `grep -n 'CONTEXT\.md' .scratch/graph-workflow/map.md .scratch/graph-workflow/map-implementation-rules.md`.
+>
+> NOT COVERED:
+> - None of the condition's parts is uncovered. The ban on node, `decisions.md` and `flags.md` writes is established from the worktree diff. What the main checkout's record holds is outside what I was given.
+
+*The manager's note:* the checker handed back a question beside its `PASS`, so the human's standing yes does not cover this gate, and the gate goes to the human.
+
 ## Flags
 
 none
