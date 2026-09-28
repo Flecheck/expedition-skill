@@ -1,7 +1,7 @@
 # Point the manager-read shipped files at the headings they restate
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
