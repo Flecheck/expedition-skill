@@ -94,6 +94,7 @@ ground it rested on, is in [map-history.md](map-history.md). What replaced it is
 whose carriage into the implementer's side is [node 214](nodes/214-a-condition-that-contradicts-a-standard-is-a-raise.md).
 
 **The steering that the manager never asks the human which waiting thing to take next is now in the shipped files**: `.claude/skills/expedition/SKILL.md`, under `## What is in front of the human, and when`, and the third trigger in `.claude/rules/expedition-triggers.md` — carried there by [The never-ask-which rule is stated for picking a node and not for what is already waiting](nodes/260-never-ask-which-is-stated-for-nodes-not-for-what-waits.md), which is where it stopped being this effort's own. The steering as the human gave it, in their words, is in [map-history.md](map-history.md).
+- **Fill a free code slot even with a small node, and keep improving while it pays.** The human's words, 2026-09-28, answering the manager's retrospective on how nodes were picked, `verbatim`: *"I think it's fine to fill it, we have a lot of implementation nodes to go through"* (on leaving a code slot empty rather than filling it with low-value work), and *"The goal is to have the skill working well with the different features. I guess if it doesn't converge, we might want to stop at some point with the small improvements, but I feel it has improved quite a bit recently still."*
 
 ## Landing an implementation node's work
 
