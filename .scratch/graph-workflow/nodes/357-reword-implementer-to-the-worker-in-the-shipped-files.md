@@ -1,7 +1,7 @@
 # Reword `implementer` to "the worker" in the shipped files
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
 
 ## Question
@@ -31,6 +31,12 @@ Carry node 353's answer into the shipped files: the 9 uses of `implementer` beco
 > 4. `.claude/skills/expedition/glossary.md` gains no headword and no `_Avoid_` line, and its entry and `_Avoid_` counts are unchanged by this work.
 > 5. No file other than `.claude/skills/expedition/glossary.md`, `.claude/skills/expedition/SKILL.md` and `.claude/skills/expedition-checker/SKILL.md` is changed, and nothing under `.scratch/` is changed.
 > 6. The working tree meets the bar.
+
+## Answer
+
+The 9 shipped uses of `implementer` now read "the worker" or "a worker", with no re-wrap and no glossary headword or `_Avoid_` line added.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `d1e6c52`. Flags 357.1 settle at the node closing report.
 
 ## Handover, attempt 1
 
@@ -142,6 +148,8 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`357.1` `ASSUMPTION` — The condition's grep still returns one line in the worktree: `.git:1:gitdir: /home/mathieu/projects/graph-agent/.git/worktrees/357-implementer`. That line is not shipped text. In a linked worktree `.git` is a file, not a directory, so `--exclude-dir=.git` does not exclude it. It matches only because this node's worktree name contains "implementer". In the main checkout `.git` is a directory, so the grep there returns nothing. Clause 1 routes an instance outside its list to being reported and not edited, so I reported it, did not edit it, and judged clause 1 met on the shipped files. I did not raise, because nothing in the shipped files is affected and the line goes away when the worktree is removed.
+`357.1` `ASSUMPTION` **· settled** — The condition's grep still returns one line in the worktree: `.git:1:gitdir: /home/mathieu/projects/graph-agent/.git/worktrees/357-implementer`. That line is not shipped text. In a linked worktree `.git` is a file, not a directory, so `--exclude-dir=.git` does not exclude it. It matches only because this node's worktree name contains "implementer". In the main checkout `.git` is a directory, so the grep there returns nothing. Clause 1 routes an instance outside its list to being reported and not edited, so I reported it, did not edit it, and judged clause 1 met on the shipped files. I did not raise, because nothing in the shipped files is affected and the line goes away when the worktree is removed.
 
 *The manager's note, 2026-09-28:* the stray match is the manager's doing: it named the worktree `357-implementer`, after the very word the condition's grep refuses.
+
+*The manager's note, 2026-09-27:* flags 357.1 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
