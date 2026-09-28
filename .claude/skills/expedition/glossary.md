@@ -131,7 +131,7 @@ worker for good.
 **Checker**:
 The second, independent, read-only agent that checks a finished implementation against its acceptance
 condition and the bar before the human sees it. It checks against something stated, so it is not a
-second opinion. The manager starts it, and the implementer never does, because whoever spawns it
+second opinion. The manager starts it, and the worker never does, because whoever spawns it
 chooses what it sees. Its outcomes are `PASS` and `FAIL`, and a `FAIL` names which of the two was
 not met. It may raise instead, and then it gives no outcome at all. The typical reason it raises is an
 acceptance condition that is incoherent or unmeasurable. The checker is the only agent that reads the

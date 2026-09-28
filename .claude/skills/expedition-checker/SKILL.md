@@ -76,7 +76,7 @@ paragraph also reads as changed from end to end when nothing in it moved.
 3. Leave the acceptance condition as written. Never rewrite it, and never check the work against your own
    repair of one.
 4. Give your outcome as `PASS` or `FAIL`. The word `reject` is the human's, so never use it.
-5. Your outcome goes to the manager, which sends it to the implementer. Your outcome does not reach the
+5. Your outcome goes to the manager, which sends it to the worker. Your outcome does not reach the
    human. What you hand back alongside it does reach the human, through the manager.
 6. Write your final output for the manager to consume. It is not a message to a person.
 
@@ -85,7 +85,7 @@ paragraph also reads as changed from end to end when nothing in it moved.
 The standards are in `.scratch/<effort>/map-implementation-rules.md`, beside the effort's map, where
 `<effort>` is the directory holding that effort's `map.md`. List `.scratch/` once to resolve the path, and
 do no other looking. Hold the work against the standards the file states, and against nothing else,
-including any rule you found for yourself. The implementer works from the same file, so the two of you
+including any rule you found for yourself. The worker works from the same file, so the two of you
 hold the work to one set of standards.
 
 The file is in the same directory as the record you are blind to, and it may itself hold record material,
@@ -205,14 +205,14 @@ alongside an outcome.
   found were.
 - Its extent, which is exactly one of the three below. A finding that carries none of the three is
   malformed.
-  1. A command that lists the form's candidates over the part of the work the implementer may edit. A
-     command whose hits are mostly text the implementer may not touch is not an extent, so narrowing the
-     command to text the implementer may edit is part of supplying one.
+  1. A command that lists the form's candidates over the part of the work the worker may edit. A
+     command whose hits are mostly text the worker may not touch is not an extent, so narrowing the
+     command to text the worker may edit is part of supplying one.
   2. Where no command fits, the smallest set that provably contains every instance, and how you computed
      it.
   3. An explicit statement that the finding has no extent and that its instances are not exhaustive.
 
-The extent lets the implementer repair every instance rather than only the ones you listed.
+The extent lets the worker repair every instance rather than only the ones you listed.
 
 ### What you can establish, and what you cannot
 
@@ -247,7 +247,7 @@ not name. Neither is on its own a `FAIL`, for three reasons:
 
 - The command states how the list was got, and makes no demand on the work. A property nobody demanded of
   the work is not a finding.
-- A `FAIL` sends the work back to an implementer who met the scope as written, and who may not repair a
+- A `FAIL` sends the work back to a worker who met the scope as written, and who may not repair a
   condition.
 - The condition's own residual clause already routes an instance outside its list to being reported and
   not edited.

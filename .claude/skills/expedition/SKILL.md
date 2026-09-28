@@ -827,7 +827,7 @@ front of you, raise it.
    checker must be stripped of everything the checker must not see. A flag put in front of the human
    must be expanded with the context needed to answer it. The two treatments are opposite, and both
    would be your work.
-3. What does an implementer do with a finding it believes is false? It has no route except fixing it.
+3. What does a worker do with a finding it believes is false? It has no route except fixing it.
    You cannot settle the dispute, because you are a scribe and answer nothing. So a worker sure that a
    finding is wrong must either edit code that is not broken or depart from its contract.
 4. Does anything tell a worker to look at the record when it reports what its work invalidates? Nothing
