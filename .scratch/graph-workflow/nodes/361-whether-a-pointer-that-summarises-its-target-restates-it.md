@@ -44,3 +44,7 @@ ALTERNATIVES:  - Only stating a rule's content counts as restating. A list of th
                - A plain one-sentence cap per pointer, with no test on what the sentence says. It is easy to check, but a long sentence can still carry the whole list.
                - A summary is not restating. The four passages stay as they are, and Tier 2's pointer items are dropped.
 ```
+
+#### The human's answer to question 1, 2026-09-28
+
+The human, `verbatim`: *"361 ok"*. It takes the worker's recommendation: "Yes, it counts as restating. A pointer names the heading and, in one clause at most, what the reader goes there for. It lists none of the target's items and states none of its rules."
