@@ -1,7 +1,7 @@
 # Which copy stays where the glossary and a contract state the same rule
 
 Type: grilling
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
