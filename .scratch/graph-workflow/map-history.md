@@ -972,3 +972,49 @@ The graph's own files are *not* committed per node; they are committed periodica
 *Replaced, and it stood as:*
 
 **What the manager carries with the second slot** is that two implementation workers may hold two worktrees over the same shipped file, so it picks nodes whose paths are disjoint; the integration-conflict question that raises is [node 115](nodes/115-two-writers-edit-the-map-at-once.md)'s, still open at [node 160](nodes/160-carry-the-integration-conflict-rule-into-the-map.md) and [node 162](nodes/162-how-much-of-the-integration-rule-ships.md).
+
+## Superseded from `map.md` and `map-implementation-rules.md` at node 352 — the five standing rules for writing placed in the rules file
+
+*Moved verbatim under the `Change the map` procedure at [Move the five standing rules for writing into `map.md`'s ground-rules block](nodes/352-move-the-five-standing-rules-for-writing-into-the-ground-rules-block.md), carrying out [node 349](nodes/349-whether-the-five-standing-rules-for-writing-reach-other-workers.md)'s answer: the five standing rules for writing sit inside the ground-rules block in `map.md`'s `## Notes`, which every worker reads and which the manager copies into every checker spawn. The five numbered rules themselves moved unchanged, and are appended below with the paragraph that introduced them. Each sentence shown alone is shown without the rest of its paragraph, which is unchanged.*
+
+### From `map.md`'s `## Notes` — the paragraph that followed the ground rules
+
+*Replaced, its claim that every rule above is drawn from a standing preference not being true of the rules for writing, and it stood as:*
+
+Every rule above is drawn from a standing preference, and every one passes the test [The checker's spawn carries the effort's ground rules](nodes/42-checker-spawn-carries-ground-rules.md) shipped for what may travel to a blind checker: **a standing constraint true of any node's work, rather than an account of what happened.** That test is what keeps the rest of this file out of the block, and the block is appended to like any other part of this map.
+
+### From `map.md`'s `## Notes` — the pointer to the five standing rules for writing
+
+*Removed, the list it pointed at standing inside the ground-rules block in its place, and it stood as:*
+
+**The five standing rules for writing anything in this effort are in [map-implementation-rules.md](map-implementation-rules.md)**, held against every prose deliverable and fixed by [node 53](nodes/53-what-token-findings-change.md) and, for the fifth, [node 289](nodes/289-a-plain-english-and-compaction-pass-over-the-shipped-files.md) — moved by [node 144](nodes/144-make-the-rules-file-stand-alone.md).
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the bar's list of its non-command half
+
+*Replaced, and it stood as:*
+
+So the bar here is entirely its non-command half: the project criteria (the human's global coding principles and `/naming`); this effort's ground rules, which [`map.md`](map.md) holds in its `## Notes` and which a checker receives as text in its spawn; this effort's five standing rules for writing, which this file holds below; `CONTEXT.md`'s `_Avoid_` lines; [`graph-conventions.md`](../../.claude/skills/expedition/graph-conventions.md); `/writing-for-agents`; and the node's acceptance condition — the last two added at [node 184](nodes/184-the-bar-and-the-standards-are-two-different-lists.md).
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the review route's list of the standards
+
+*Replaced, and it stood as:*
+
+**The standards to hold work against:** `/coding-principles` and `/naming`; [`CONTEXT.md`](../../CONTEXT.md)'s `_Avoid_` lines; this effort's ground rules, which [`map.md`](map.md) holds in its `## Notes` and which a checker receives as text in its spawn, placed there at [node 348](nodes/348-keep-the-ground-rules-in-map-md-and-strike-the-sibling-file-allowance.md); this effort's five standing rules for writing, which this file holds below; [`graph-conventions.md`](../../.claude/skills/expedition/graph-conventions.md); and `/writing-for-agents`, which is the standard that bites on prose deliverables and which `/coding-principles` barely touches.
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the two blocks that pass node 42's test
+
+*Replaced, and it stood as:*
+
+That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **ground rules**, held in `map.md`, and the **five standing rules for writing**, held below in this file, are the two blocks that pass it.
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the five standing rules for writing
+
+*Removed, the list now standing inside the ground-rules block in `map.md`'s `## Notes`, and it stood as:*
+
+**Five standing rules for writing anything in this effort**, the first four fixed by [What the token findings change in the workflow and its skills](nodes/53-what-token-findings-change.md) and the fifth by [node 289](nodes/289-a-plain-english-and-compaction-pass-over-the-shipped-files.md) and held against every prose deliverable. They are rules of writing, where this effort's ground rules, held in [`map.md`](map.md)'s `## Notes`, are rules of scope.
+
+1. **Compress the prose that explains why; never compress the shapes.**
+2. **An item states its current form and cites the nodes that shaped it; it does not restate what they hold.**
+3. **A long answer is navigable by heading**, so a reader following a link for one fact reads one section.
+4. **Cite a file by heading or by a quoted phrase, never by line number.** Append-in-place shifts every line below the append, so a line number decays without anything reporting it.
+5. **Write plain English.** State a rule as what to do; use a prohibition only where the rule cannot be said as what to do, and then beside the positive. Bold a term only where it is defined. Say any idea that is not a term defined in `CONTEXT.md` in plain words, with no figure of speech and no coined phrase. Make statements directly rather than as slogan-shaped contrasts. Write every sentence grammatically, with one clear referent for each pronoun. Put one idea in each sentence.

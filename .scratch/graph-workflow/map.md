@@ -65,9 +65,15 @@ later like any other map item, by the `Change the map` procedure.
 4. Prefer short, simple prose that can be changed later over machinery built for predicted needs. Reserve heavy design for the hard-to-reverse core.
 5. Prose deliverables are held against the `/writing-for-agents` standard, which is specific to this repo, is never shipped, and is located by name in the `mattpocock-skills` plugin rather than by path.
 
-Every rule above is drawn from a standing preference, and every one passes the test [The checker's spawn carries the effort's ground rules](nodes/42-checker-spawn-carries-ground-rules.md) shipped for what may travel to a blind checker: **a standing constraint true of any node's work, rather than an account of what happened.** That test is what keeps the rest of this file out of the block, and the block is appended to like any other part of this map.
+**This effort's standing rules for writing**, held against every prose deliverable. The first four were fixed by [node 53](nodes/53-what-token-findings-change.md) and the fifth by [node 289](nodes/289-a-plain-english-and-compaction-pass-over-the-shipped-files.md).
 
-**The five standing rules for writing anything in this effort are in [map-implementation-rules.md](map-implementation-rules.md)**, held against every prose deliverable and fixed by [node 53](nodes/53-what-token-findings-change.md) and, for the fifth, [node 289](nodes/289-a-plain-english-and-compaction-pass-over-the-shipped-files.md) — moved by [node 144](nodes/144-make-the-rules-file-stand-alone.md).
+1. **Compress the prose that explains why; never compress the shapes.**
+2. **An item states its current form and cites the nodes that shaped it; it does not restate what they hold.**
+3. **A long answer is navigable by heading**, so a reader following a link for one fact reads one section.
+4. **Cite a file by heading or by a quoted phrase, never by line number.** Append-in-place shifts every line below the append, so a line number decays without anything reporting it.
+5. **Write plain English.** State a rule as what to do; use a prohibition only where the rule cannot be said as what to do, and then beside the positive. Bold a term only where it is defined. Say any idea that is not a term defined in `CONTEXT.md` in plain words, with no figure of speech and no coined phrase. Make statements directly rather than as slogan-shaped contrasts. Write every sentence grammatically, with one clear referent for each pronoun. Put one idea in each sentence.
+
+Every rule above, in both lists, is **a standing constraint true of any node's work, rather than an account of what happened.** That is the test [The checker's spawn carries the effort's ground rules](nodes/42-checker-spawn-carries-ground-rules.md) shipped for what may travel to a blind checker. That test is what keeps the rest of this file out of the block, and the block is appended to like any other part of this map.
 
 ## Decisions so far
 
