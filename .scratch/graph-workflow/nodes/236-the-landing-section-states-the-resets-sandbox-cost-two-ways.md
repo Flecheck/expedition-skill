@@ -1,9 +1,15 @@
 # The landing section says the reset requires the sandbox off and also that it is not reliably inside it
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+Discharged with no edit, per the human: node 268 had already removed and banked both contradictory reset statements, and node 265 removed the reset from the worktree route.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. No work landed and no gate was held: the human's answer to raise 1 discharged the node. Its worktree and branch were removed with nothing on them. The node raised no flags.
 
 ## Question
 
@@ -85,3 +91,31 @@ RETROSPECTIVE
 3. What would have made this easier: a check at claim time that the condition's quoted phrase still exists in the file it names, which is one grep. Also a note on the node or in the spawn that node 268 banked the `EnterWorktree`-then-reset route. The node was filed at node 229 and outlived its subject.
 4. What was stale, wrong or contradictory: the node's acceptance condition and its `## Question` both quote text that node 268 (`8933f1d`) removed. The manager's filing note ("has run the reset on five worktrees today") describes a route that no longer resets. The manager's notes say node 160 and node 230 might have moved quotes; in fact the change came earlier, at node 268.
 ```
+
+#### The human's answer to raise 1, 2026-09-28
+
+The human, `verbatim`: *"ok"*. It takes the worker's recommendation: "Discharge with no edit."
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+````
+HANDOVER:      The landing section says the reset requires the sandbox off and also that it is not reliably inside it (236)
+ANSWER:        Discharged with no edit. The human answered "ok" to the raise recommending discharge. The contradiction this node asked about ended before the node was claimed. Node 268 (commit `8933f1d`, "Carry the plain-git worktree route into the map") removed both statements from `map-manager-only.md`'s `## Landing an implementation node's work`: the flat "the reset **requires the sandbox off**, failing inside it with `Could not reset index file`" and "**The reset is not reliably inside the sandbox**". It banked both verbatim in `map-history.md`, under `## Superseded from map-manager-only.md at node 268 — the EnterWorktree-then-reset route`, in the sub-sections `### From *How the worktree is made* — the route bullet` and `### From *How the worktree is made* — the manager needing EnterWorktree for neither the base check nor the reset`. Node 265 had already removed the base reset from the route. The route is now `git worktree add`, and the section's `Base.` bullet says "no base reset is performed". The section now mentions the reset only inside the measurement sub-bullets under "One sandbox restriction bites this lifecycle", which already say the reset and an entered worktree "are steps of no route any longer". Those sub-bullets still hold `Could not reset index file to revision` and `Read-only file system`, byte-identical.
+
+So on the tree at `26ae202`, three of the condition's clauses were already done or already true: the replacement, the banking, and the two error strings being kept. Its one remaining clause, that the section state a "run it sandboxed" rule for the reset, would have stated a rule for a step no route performs. That is why no edit was made. What triggers the read-only overlay on one tree and not another stays open at node 180, as the manager's filing note already said. The lesson: a condition that quotes text in a live section should be re-checked against the file when the node is claimed, because this one outlived its subject by a whole route change.
+INDEX LINE:    Discharged with no edit, per the human: node 268 had already removed and banked both contradictory reset statements, and node 265 removed the reset from the worktree route.
+FLAGS:         none
+NEW NODES:     none
+INVALIDATIONS: none. The work changes no resolved node. Node 229, which filed this node, described a section text that node 268 later superseded, so that description is now outdated. This is not a contradiction of anything node 229 decided.
+CONDITIONS:    I searched every open and claimed node file (`Status: open` or `Status: claimed`) in the worktree's `nodes/` for `requires the sandbox off`, `not reliably inside`, `Could not reset index file` and `reset --hard`. The matches were node 236 itself and node 251. Node 251's match (`git reset --hard` on a stale-base worktree) is in its `## The manager's note at filing` and not in its `## Question` or any `## Acceptance condition`, so no clause needs replacing. No open node's question is changed by this work.
+MISSING FROM MAP: none. `map.md` points to `map-manager-only.md` and `map-history.md`, and those plus `git log -S` held what I needed.
+GATE PAYLOAD:  No checker ran and nothing was found. Paths touched: none. The worktree `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/236-resets` (branch `worktree-236-resets`) is clean, and the manager removes it and the branch. No commit is proposed because there is no diff. For the manager's record commit, if it wants a message: "Graph state: node 236 discharged with no edit, its target text superseded at node 268" with trailer `Node: graph-workflow/236`.
+
+RETROSPECTIVE
+1. What I had to hunt for: whether the quoted phrase still existed, and where it went. `grep` plus `git log -S` answered both.
+2. What arrived that this node did not need: most of `map.md` and `map-implementation-rules.md`, and most of the `decisions.md` lines on landing. Only the node 265 and node 268 lines were decisive.
+3. What would have made this easier: one grep at claim time for the condition's quoted phrase in the file it names, or a note that node 268 had banked the `EnterWorktree`-then-reset route.
+4. What was stale, wrong or contradictory: node 236's `## Question` and condition quote text that node 268 removed. The filing note's account of resetting five worktrees describes a route that no longer resets. The spawn named nodes 160 and 230 as the edits that might have moved quotes, but node 268 removed the text before either.
+````
