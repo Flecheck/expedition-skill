@@ -28,10 +28,10 @@ of this contract states a rule about one of those terms, and the rule differs fr
 the section. The statements below add what those terms demand of you in particular.
 
 - You are the manager, and you own and write the graph's files.
-- You own the map. The effort's ground rules and the standing steering the human has given live in it
-  and nowhere else. `## The seven files` in `graph-conventions.md` says where the map records the bar's
-  commands. That record is confirmed against the repo before use, because a repo's own live statement
-  of its commands is authoritative.
+- You own the map. `### Standing steering, and standing instructions of one effort` says which of the
+  human's rules and steering the map holds. `## The seven files` in `graph-conventions.md` says where the
+  map records the bar's commands. That record is confirmed against the repo before use, because a
+  repo's own live statement of its commands is authoritative.
 - A dead attempt is resumed where you can resume it, and replaced only where you cannot. An attempt
   stopped from the human's side is replaced only on the human's answer. A replacement is a new
   attempt, recorded after the one it replaces.
@@ -78,17 +78,15 @@ every lower item still owed: take it later in the same turn, and never skip it.
      theirs still unanswered, or one you send as you stop. A message that awaits no answer leaves them
      nothing to do however long it is, so a node closing report, a notice that an agent died and the
      effort closing report never pass the check.
-   - Nothing is waiting when there is no gate assembled and unsent, no worker blocked on a raise, no
-     raise of your own, and no relayed question. Those four are the whole, fixed membership of the
-     pending queue under `## What is in front of the human, and when`, so you can prove that nothing is
-     waiting and say which of them you checked. A gate whose check will not pass is still waiting.
+   - Nothing is waiting when the pending queue under `## What is in front of the human, and when`
+     holds nothing. Say which of its kinds you checked. A gate whose check will not pass is still
+     waiting.
    - The test that nothing an agent handed back is still unfiled looks at what has come back, and never
      at whether each agent is alive. If an agent handed back anything you have not filed, relayed or
      acted on, item 1 or item 3 applies, so you were never at item 5 at all.
 
 A turn that ends with the human idle while something waits is your defect, and the human asking for
-work you were already holding shows it. So make the last line of what you send say what the human is
-to act on, and run item 5's check before you write that nothing is expected of them.
+work you were already holding shows it. End what you send as `### The last line of a report` says.
 
 Items 1 to 3 are ordered by cost: a write is one edit, a resume is one message, and spawning needs its
 node found first. Item 3 comes before item 4 because spawning late delays parallel work. The limits on
@@ -281,10 +279,6 @@ nothing. A part left off is a missing part, and does not tell you whether the wo
 Raise the gate once the checker passes. The one exception is a check that will not pass. Raise the gate
 on the failing tree anyway, and say so in the payload's first line.
 
-A gate that a standing yes covers is handled by the skill `expedition-standing-yes`, and you do not put
-it to the human. That skill says which gates a standing yes can cover, and what you do in place of
-raising one.
-
 ### The payload
 
 You assemble the gate payload out of text other people wrote. It holds the following:
@@ -316,7 +310,7 @@ A flag that reaches the human carries what was done, why, and the context needed
 answering never requires opening a file.
 
 The human's approval of a node's end settles that node's flags, so a flag left out of the payload is
-settled without the human seeing it. A gate taken under a standing yes settles no flag.
+settled without the human seeing it.
 
 ### Three outcomes, and no fourth
 
@@ -417,10 +411,9 @@ Five parties may change a condition after it is written:
 
 The amendments in this section, by the party that established a fact, by a worker reporting a related
 defect and by you, apply only to a node nobody holds yet. You make or file each of them without first
-asking the human. Where a worker already holds the node, its condition is handed over as written. The
-worker holding the node works to meet the condition as written, and never rewrites it. A worker
-that judges the condition wrong raises it, and the human answers. The human may also amend a condition
-of their own accord at any time.
+asking the human. Where a worker already holds the node, its condition is handed over as written. A
+worker that judges the condition wrong raises it, and the human answers. The human may also amend a
+condition of their own accord at any time.
 
 Where a node resolving or work landing establishes a fact that makes a clause of an unclaimed node's
 condition wrong, the party that established the fact writes the replacement as text on its handover. You
@@ -503,20 +496,17 @@ the moment you record their reply. Three consequences follow:
 
 Send the human a question that is already waiting. Never make one up to give them something to do.
 
-The queue has two tiers, and tier 1 goes ahead of tier 2. Tier 1 holds exactly three kinds of thing, and
-its membership is fixed:
+The queue has two tiers, and tier 1 goes ahead of tier 2. Tier 1 holds exactly three kinds of thing. Its
+membership is fixed, and only the human can add a kind to it:
 
 1. A gate.
 2. A worker blocked on a raise.
 3. Your own raise.
 
-Tier 2 holds relayed interview questions. Within a tier, take things in the order they arrived. Only the
-human can add a fourth kind to tier 1. Never infer one yourself.
+Tier 2 holds relayed interview questions. Within a tier, take things in the order they arrived.
 
-A gate waits in arrival order like the other two kinds in tier 1. Send a gate after every older thing in
-tier 1, such as an older raise from a blocked worker or an older raise of your own. Keep a gate at its
-place in arrival order even though it holds a code slot while it waits. Never move a gate ahead on your
-own judgement.
+Keep a gate at its place in arrival order even though it holds a code slot while it waits. Never move a
+gate ahead on your own judgement.
 
 The human may ask for a waiting gate to be sent first. That gate then goes ahead of everything else in
 the queue. It is still sent only when nothing is in front of the human. The request applies once and
@@ -536,13 +526,12 @@ That rule leaves two things unchanged:
 
 Three things never enter the queue:
 
-- Settling a flag. It happens at a moment that already exists: an implementation node's gate, or the
-  node closing report of any other node.
+- Settling a flag. `## Flags` says when it happens.
 - Telling the human an agent died. That notice awaits no answer.
 - The effort closing report. It ends an effort and takes no turn in it.
 
 A checker's question never enters the queue either. It travels inside the gate payload, so it needs no
-place in tier 1. Tier 1 keeps its three kinds.
+place in tier 1.
 
 An item that a standing yes covers is handled by the skill `expedition-standing-yes`, and you do not put
 it to the human. Such an item never enters the queue. That skill says which items a standing yes can
@@ -575,9 +564,8 @@ node in one line. You then stop or redirect what you started, and you perform su
 `TaskStop`, as `## Stopping a running worker` says. Start a pick without waiting for permission.
 
 A node closing report for a node holding flags carries every one of those flags, in the fuller form
-under `### A flag in a payload` above. Those flags settle at the node closing report, so a flag it
-leaves out is settled without the human seeing it. Where a standing yes covered an item on that node,
-the node closing report also carries what `expedition-standing-yes` says it carries.
+under `### A flag in a payload` above. Where a standing yes covered an item on that node, the node
+closing report also carries what `expedition-standing-yes` says it carries.
 
 Two counts, each a setting of the effort, limit how much you start:
 
@@ -609,9 +597,6 @@ One kind of pick waits on the human instead of on a count: a pick you cannot sta
 first, such as a node whose acceptance condition you cannot write in full. Starting it is a question to
 the human, so it waits until nothing is in front of them.
 
-An implementation node is startable when its acceptance condition can be written in full, with nothing
-in it waiting on an open question.
-
 ### Standing steering, and standing instructions of one effort
 
 Steering from the human takes two forms, and you handle them differently:
@@ -625,18 +610,11 @@ rule of this workflow. Record it as theirs, in their words, and never present it
 workflow. The next effort starts without it.
 
 A standing rule the human gives, whether about what to work on or about how work is done, binds an
-effort only once it is written into that effort's map. Write it there when the human states it. Until
-it is there, it binds nobody. This holds for rules of conduct as well as for steering about what gets
-worked.
+effort only once it is written into that effort's map. Write it there when the human states it.
 
-The map is a rule's ordinary home, and usually its only one. On most efforts the workflow's own skill
-files are not changed at all, so a rule the human gives lives in the map and nowhere else, and the next
-effort starts without it.
-
-A rule reaches a shipped skill file only where the human says so, and it does so as a node. Carry a
-rule into a shipped file only on the human's word, and never on your own judgement, even where you
-judge the rule to be about the workflow rather than about the effort. Where the human says nothing
-about a rule's scope, the rule is the effort's alone.
+A rule reaches a shipped skill file only on the human's word, and it does so as a node. Never carry one
+there on your own judgement, even where you judge the rule to be about the workflow rather than about
+the effort. Where the human says nothing about a rule's scope, the rule is the effort's alone.
 
 Every worker on an effort is bound by everything in that effort's map, whatever a rule's origin. So no
 rule needs a scope marking for a worker's sake, and the map has no field for a rule's scope.
@@ -695,12 +673,11 @@ what you do where the mark is set.
 An agent that stopped before handing back is not gone for that reason. It may have died, by a harness
 error or a usage quota, or it may have been stopped. Resume its attempt wherever you can resume it,
 rather than replacing it. Replacement is the fallback where the resume fails, with one exception: an
-attempt whose agent was stopped from the human's side is never replaced without the human's answer. An
-attempt recorded as a final stop is never resumed.
+attempt whose agent was stopped from the human's side is never replaced without the human's answer.
 
 You resume an agent by sending it a message. Find out whether a resume is possible by attempting it
 and acting on what the harness answers, and never decide it in advance. A failed resume starts no agent
-and costs nothing, so test whether a resume is possible, and never predict it.
+and costs nothing.
 
 Resuming is limited to your own session. You can resume an attempt spawned in your current session,
 unless its agent carries the mark of a stop from the human's side. You cannot resume any attempt from
@@ -718,11 +695,11 @@ human can still revive it. A manager that reads only three outcomes files that a
 resumable, and both are wrong. The third outcome leads to the question below. Where a resume fails for
 any other reason, the agent is gone: mark its attempt dead, and do not retry the resume.
 
-Where an attempt's agent carries the mark of a stop from the human's side, do not replace the attempt on
-your own, and do not retry the resume. Keep the node claimed and put one question to the human. The
-question names the node and says that you cannot resume the attempt. It says what would be lost: the
-worker's own work, and not the human's answers, which are recorded. It offers two choices: the human
-revives the agent by typing to it, or you replace the attempt and replay the human's answers.
+Where an attempt's agent carries the mark of a stop from the human's side, do not retry the resume. Keep
+the node claimed and put one question to the human. The question names the node and says that you
+cannot resume the attempt. It says what would be lost: the worker's own work, and not the human's
+answers, which are recorded. It offers two choices: the human revives the agent by typing to it, or you
+replace the attempt and replay the human's answers.
 
 Read a dead agent's state from its transcript's record count and byte size, and never from the one-line
 summary the harness shows as its result. Its cause of death is the last record of its own transcript.
