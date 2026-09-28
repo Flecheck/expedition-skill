@@ -77,6 +77,43 @@ permitted files, so these two must not run in one slot pair. No blocking edge is
 Node 234, clause 4, second sentence. Current text: "The sentence beginning `**A rebase conflict is resolved by nobody in the moment**` is not edited, struck, moved or deleted by this node." That sentence no longer exists, so the clause is vacuously true and no longer protects anything. Replacement: "The text in that paragraph beginning `A rebase conflict is resolved, and the rebase is not aborted.` and ending `the manager runs `git rebase --abort` and the node takes a correction round.` is not edited, struck, moved or deleted by this node." What fixes these words: this node's work, once landed in the tree.
 Clause 4's first sentence, "The paragraph beginning `**Landing policy**` is byte-identical to its state at `HEAD`", still holds against whatever HEAD is when node 234 runs.
 
+## Interview
+
+#### Raise 1, relayed 2026-09-28
+
+*Pasted as the worker handed it back. The worker is stopped until the human answers.*
+
+```
+NODE:          234, "A failed `git merge --ff-only` can leave the tree partially updated, and the record says it cannot"
+ABOUT:         Replace the record's claim that a merge failed in the sandbox loses nothing and retries cleanly, bank the old text, and write the repair down. I stopped at the check you asked for, before any edit. Nothing in the worktree is touched.
+SO FAR:        I read the contract, the node file (with its node-160 amendment), map.md, map-implementation-rules.md, and the landing, merge and sandbox lines in decisions.md. Then I searched the worktree (`7093c67`) for the passages the condition names.
+               - Clause 1 says "each of the **two** sentences" claiming that a sandbox-failed merge loses nothing and succeeds on a retry outside the sandbox. Only **one** such sentence is left in `.scratch/graph-workflow/map-manager-only.md` under `## Landing an implementation node's work`, in the "One sandbox restriction bites this lifecycle" bullet, sub-bullet "What it hits": "`HEAD` does not move and nothing is lost in either case; both succeed outside the sandbox." It covers two operations: the merge, and `git reset --hard` inside an entered worktree. That reset is a step of no route any more (node 265).
+               - The two sentences node 216's worker quoted ("`HEAD` does not move and nothing is lost; the merge succeeds outside the sandbox" and "the merge succeeds on a retry outside the sandbox") are already gone. Node 229 (`38709b7`, 2026-09-13 09:49) moved them to `map-history.md`, word for word, under `## Superseded from map-manager-only.md — the landing section's accounts`, as Edit 13 and Edit 14. That was 14 minutes before this node was minted (`5d8507c`, 10:03). At minting, `git show 5d8507c:` already shows only the one combined sentence. So the condition was out of date from the day it was written, which is the kind of case you told me to raise.
+               - Everything else checks out. Clause 4's `**Landing policy**` paragraph is there. The node-160 replacement span ("A rebase conflict is resolved, and the rebase is not aborted." … "the manager runs `git rebase --abort` and the node takes a correction round.") is there too. Clauses 5 to 8 raise no problem. The bar for this repo is entirely non-command (no build, tests, formatter or CI), and I confirmed there is no manifest to contradict that record.
+               Settled on my own authority: nothing.
+ASK:           Clause 1's "two sentences" no longer exist as two. Do I go ahead by treating clause 1 as covering the one surviving combined sentence, with the other two counted as already banked by node 229?
+RECOMMENDED:   Go ahead on that reading. This is the concrete shape, which you can approve as worded:
+               (a) Replace the surviving sentence with the following. "`HEAD` does not move in either case. The reset loses nothing and succeeds outside the sandbox. The merge may instead write some of the changed files before it fails. That leaves the main tree dirty, and a retry outside the sandbox then refuses with `Your local changes to the following files would be overwritten by merge`." The reset keeps its old claim because nothing has falsified it, and the partial write has only been seen on the merge. The wording keeps "may" because node 229's own landing hit the clean case.
+               (b) Right after it, add a repair line for clause 3. "The repair is one pass, in this order: first establish that every dirty file is byte-identical to the branch's version (`git diff --quiet <branch> -- <path>`); then discard the dirt (`git checkout -- <path>`); then re-run the merge outside the sandbox. Where any dirty file differs from the branch, stop and discard nothing."
+               (c) Append the replaced sentence, word for word, to `map-history.md` under a new heading "Superseded from `map-manager-only.md` at node 234", with a "### From *Landing an implementation node's work*" subheading. That follows the node-160 and node-336 pattern.
+               (d) Clause 2 is then met for the other two sentences, because Edit 13 and Edit 14 already hold them word for word. I would not append them a second time.
+               This rests on the node's purpose, which is that the record stops promising a clean retry. That purpose is fully served by fixing the one place that still makes the promise. The claims node 216 quoted now live only in the history file, which holds superseded text.
+ALTERNATIVES:  - Rewrite clause 1 (and clause 2) so they name the one surviving sentence, then continue. This is cleaner for the checker, which reads only the condition and will count "two sentences". But the condition would change after the node was claimed.
+               - Also correct the reset's half of the sentence, or drop it since the reset belongs to no route. This goes beyond the node's scope and nothing measured supports it.
+               - Stop the node as already partly done by node 229 and file a smaller replacement. More bookkeeping for the same edit.
+
+Manager-facing notes (not part of the raise):
+- Touched paths: none. The worktree is exactly as it was cut.
+- I have not appended anything to `map-history.md`. If I continue, I will append only the one new section described in (c).
+- Whichever way you answer, the checker's copy of the condition needs to show how "two sentences" was settled, or the checker will FAIL clause 1 by counting.
+
+RETROSPECTIVE
+1. What I had to hunt for: whether the second sentence had been moved to history or deleted outright. It took `git log -S` together with reading Edit 13 and Edit 14 in map-history.md, then an ancestry check to learn it predated this node's minting.
+2. What arrived that this node did not need: the landing-merge-sandbox fact (merges run with the sandbox off), and node 186's parallel run on the rules file. Both only matter once the edit happens.
+3. What would have made this easier: the node file recording that node 229 landed shortly before minting and banked Edit 13 and Edit 14. Better still, a check at minting that the condition's premises hold against the tree.
+4. What was stale, wrong or contradictory: clause 1's "two sentences" and the Question's two quotes were already out of date when the node was minted. The node-160 amendment is accurate. The manager's filing note ("the record's line as written" for node 229's clean case) points at the single combined sentence, without saying that it is now the only one.
+```
+
 ## Flags
 
 `234.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 160 above.* Node 160's replacement for clause 4's second sentence was filed on this open, unclaimed node without asking the human first.

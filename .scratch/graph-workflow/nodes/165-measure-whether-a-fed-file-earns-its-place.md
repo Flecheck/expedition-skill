@@ -275,3 +275,11 @@ manager records the confound rather than concealing it, and has not adjusted the
 part (ii) says the next three grilling nodes, and this was the next one.
 
 *The readout for this pair is fixed as before, and its result is filed when it returns.*
+
+## Annotation: the shadow-pair duty is retired, 2026-09-28
+
+*Filed by the manager from [node 356](356-whether-node-165s-remaining-shadow-pairs-still-run.md), whose answer the human took. Nothing above is changed.*
+
+- **Section 4's "Parts (ii), (iii) and (iv) are standing duties on the manager" no longer binds.** Node 356 retired all three.
+- **Pair 2 was left unread.** Both arms' first questions survive only outside the record, in this machine's session transcripts for manager session `0e2d7caf-7b86-4009-bb71-5e76adb6ec22`: the fed arm is subagent `agent-a6ed2b26586ca6d17` (the real node 176 worker), the unfed arm `agent-ad2ef0a8c6df218a6`. Nothing guarantees those transcripts are kept.
+- **Pair 3 was never run.** This closes the annotation above that says the pair's result "is filed when it returns".

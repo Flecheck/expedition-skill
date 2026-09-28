@@ -53,3 +53,5 @@ changed, the count being the manager's error and not this node's subject.*
 **The two reports named above are real and are not withdrawn**; what is wrong is *"a second time"*, and it is the
 manager's sentence. **This node's subject and its urgency both go up rather than down**: an item at roughly
 seventeen reports is the most-reported item on the effort after `map.md`'s whole-file read.
+
+*The manager's note, 2026-09-28:* [node 356](356-whether-node-165s-remaining-shadow-pairs-still-run.md)'s worker reports this node's question changed. Its words, pasted: **Node 185 (open grilling):** a premise in its filing note is overtaken. That note calls node 165 a "live measurement" that the scoping practice "bears directly on". The measurement is retired, so node 185 need not protect a protocol any more. The new node above is related to it.

@@ -89,3 +89,37 @@ annotation above records, and this adds a second defect rather than replacing th
 > map-implementation-rules.md` returns only the `.worktrees/` mention inside the bar paragraph). The destination is
 > still right — node 186's bullet instructs the *worker*, so the admission test puts it in the rules file — but it
 > now has no list to join and needs a new anchor.
+
+## Interview
+
+#### Raise 1, relayed 2026-09-28
+
+*Pasted as the worker handed it back. The worker is stopped until the human answers.*
+
+```
+RAISE (trigger 1: the acceptance condition is not mine to change, and as written it cannot be met and part of it is already known to be false). I made no edits. The worktree is untouched and the code slot is held.
+
+NODE:          An implementation worker tests the worktree it was handed before it starts work (186)
+ABOUT:         Would add one bullet to `.scratch/graph-workflow/map-implementation-rules.md` telling an implementation worker to write-probe its worktree with a shell command before starting, and to raise if the probe fails. I stopped at the manager's "check first" step, before any edit.
+SO FAR:        I read the contract, the node file (it has no `## Amendment` section) and the rules file in the worktree. I searched `decisions.md` for the worktree lines. What I found:
+               (a) **The anchor is gone.** The condition says the bullet goes "in the same list that already holds that file's sandbox material". `grep -in 'sandbox' map-implementation-rules.md` finds no such list. The file is now prose paragraphs plus one `## What the work is held against` section. The only sandbox mentions are inside the worktree-route paragraph ("need no harness tool call and no sandbox override", and "the removal ... runs with the sandbox off"). Node 188 moved the old sandbox material out, which the node's own second annotation already records.
+               (b) **Clause 3 is known to give a false alarm.** Clause 3 says: raise on `Read-only file system` and never retry with the sandbox off. The node's first annotation (from node 184's retrospective) says this probe fired falsely on a writable tree. The cause was that worker's sandbox allow-set naming another node's worktree. So a failed probe can be a sandbox denial and not an unwritable tree, and clause 3 as written tells the worker to throw the node away on a good tree.
+               (c) **The premise has partly changed.** The Question rests on "the harness cutting the tree at the spawn itself". Since nodes 265 and 268, the manager cuts the tree with plain `git worktree add` at `.scratch/graph-workflow/worktrees/<NN>-<name>`. The worker "writes that tree by absolute path, calls no tool to reach or leave it ... there is no first act to get wrong". Creating and writing the tree "need no ... sandbox override". The underlying risk still exists (node 175: file-editing tools keep succeeding where the shell cannot write, and the first failure is a git write at the end). The harness-cut case the Question names no longer happens.
+               (d) For what it is worth, the probe the condition describes, `touch <worktree>/.probe && rm <worktree>/.probe`, succeeded here with the sandbox on. So this tree is writable and nothing about my own environment is blocking.
+               On my own authority I settled only this: I would not repair the condition quietly, and I would not choose an anchor or reword clause 3 myself.
+ASK:           How should node 186's acceptance condition be repaired, or should the node be dropped?
+RECOMMENDED:   Rewrite the condition and keep the node, because the silent-loss risk node 175 measured is still real under the plain-git route. The rewrite has three parts: (1) anchor the new text right after the paragraph **"An implementation node's worktree is made with plain git, and a worker reaches it by path."** in `map-implementation-rules.md`, as a new paragraph and not a bullet in a list; (2) keep clauses 1, 2 and 4 as they stand; (3) replace clause 3 with: "Where the shell write fails with `Read-only file system`, the worker reruns the same probe once with the sandbox off. If it then succeeds, the failure was a sandbox denial and not a property of the tree: the worker carries on and flags it, naming the path. If it fails again, the tree is unwritable: the worker does no work and raises immediately, naming the path." Also change "No file other than ... changes" so it allows nothing beyond that same file. This rests on annotation 1's measured false alarm, on node 188's removal of the old anchor, and on the route text now in force.
+ALTERNATIVES:  - Drop node 186 on the grounds that the plain-git route ("no first act to get wrong") removed the case it guards. I set this aside because the route text says nothing about a worker's allow-set failing to cover its tree, which is exactly the failure node 184 hit.
+               - Keep clause 3 as written and only change the anchor. I set this aside because it would land a rule whose only real use so far was wrong.
+               - Put the probe in the manager's spawn rather than in the worker's rules file. I set this aside because the harness gives the manager no view of the worker's sandbox region (node 179), and the manager has already stopped carrying the instruction.
+
+Notes for the manager: I did not append to `map-history.md`. No files were touched.
+
+RETROSPECTIVE
+1. What I had to hunt for: only whether an `## Amendment` existed and whether the rules file still held any sandbox list. One grep answered each.
+2. What arrived that this node did not need: the reading list's `decisions.md` worktree lines were mostly struck history (nodes 150 and 243). Only the node 265, 277 and 281 lines mattered.
+3. What would have made this easier: the node already carried two annotations saying the condition is broken and unamended. The spawn could have said "this node's condition is known defective (see its two annotations); confirm and raise, or claim it only once amended". Better still, the condition could have been repaired before the node was claimed.
+4. What was stale, wrong or contradictory: the condition's anchor (gone since node 188), its clause 3 (a known false alarm, annotation 1), and the Question's "harness cutting the tree at the spawn" (superseded by node 265's plain-git route).
+```
+
+*The manager's note:* the node's two annotations already said its condition was broken and unamended; the manager claimed it without reading them. That is the manager's defect, and the same one as nodes 226 and 236.
