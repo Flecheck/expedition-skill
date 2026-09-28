@@ -1,7 +1,7 @@
 # Whether a pointer that summarises its target restates it
 
 Type: grilling
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
