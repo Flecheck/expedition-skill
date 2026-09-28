@@ -1034,3 +1034,31 @@ That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **
 **In `map-implementation-rules.md`:**
 
 **The review route for this repo, discovered on first use** and recorded here so no later checker re-derives it, on the same ground as the bar's commands above. Two checker runs spent their largest single cost finding this, and one of them nearly reported the prose standard absent. **The standards to hold work against:** `/coding-principles` and `/naming`; [`CONTEXT.md`](../../CONTEXT.md)'s `_Avoid_` lines; this effort's ground rules, which [`map.md`](map.md) holds in its `## Notes` and which a checker receives as text in its spawn, placed there at [node 348](nodes/348-keep-the-ground-rules-in-map-md-and-strike-the-sibling-file-allowance.md); this effort's five standing rules for writing, which [`map.md`](map.md)'s `## Notes` holds inside the ground-rules block and which a checker receives as text in its spawn with the ground rules; [`graph-conventions.md`](../../.claude/skills/expedition/graph-conventions.md); and `/writing-for-agents`, which is the standard that bites on prose deliverables and which `/coding-principles` barely touches. **`map.md`'s standing preferences are not among the standards, as a whole.** A standing preference may be an account of what happened or a steer about what gets worked, and only a standing constraint true of any node's work may be held against a piece of work by a reader blind to the record. That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **ground rules** and the **five standing rules for writing**, both held in `map.md`'s `## Notes` inside the ground-rules block and received by a checker as text in its spawn, are the two blocks that pass it. **No reviewing skill is named for this repo, and a checker does not go looking for one.** The standards above are the whole of what work is held against, and they reach a checker as text rather than as something it discovers — the human's standing direction below. The superseded naming of `mattpocock-skills:code-review`, and the account of how much of it could run, are in [map-history.md](map-history.md). **One trap, measured:** `CONTEXT.md`'s refused words are largely unusable as a grep list, about a third being ordinary English refused only for one concept — `report`, `run`, `session`, `index`, `plan`, `item` and `question` — so a scan for them returns false positives and the distinctive refusals are checked by hand instead. **`where` was on this list and is not refused by any `_Avoid_` line**, found at node 114's check; the superseded wording is in [map-history.md](map-history.md).
+
+## Superseded from `map.md` and `map-implementation-rules.md` at node 354 — the standing rules for writing counted as five
+
+*Replaced under the `Change the map` procedure at [Add the sixth standing rule for writing: point at a heading of a file the reader already reads](nodes/354-add-the-sixth-standing-rule-for-writing.md), which adds [node 253](nodes/253-a-shipped-file-points-at-a-sibling-rather-than-restating-it.md)'s rule as the sixth standing rule for writing. Rules 1 to 5 are unchanged. Each sentence shown alone is shown without the rest of its paragraph, which is unchanged.*
+
+### From `map.md`'s `## Notes` — the lead-in to the standing rules for writing
+
+*Replaced, naming node 253 as the node that fixed the sixth rule, and it stood as:*
+
+**This effort's standing rules for writing**, held against every prose deliverable. The first four were fixed by [node 53](nodes/53-what-token-findings-change.md) and the fifth by [node 289](nodes/289-a-plain-english-and-compaction-pass-over-the-shipped-files.md).
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the bar's list of its non-command half
+
+*Replaced, counting six rules, and the sentence stood as:*
+
+So the bar here is entirely its non-command half: the project criteria (the human's global coding principles and `/naming`); this effort's ground rules, which [`map.md`](map.md) holds in its `## Notes` and which a checker receives as text in its spawn; this effort's five standing rules for writing, which [`map.md`](map.md)'s `## Notes` holds inside the ground-rules block and which a checker receives as text in its spawn with the ground rules; `glossary.md`'s `_Avoid_` lines; [`graph-conventions.md`](../../.claude/skills/expedition/graph-conventions.md); `/writing-for-agents`; and the node's acceptance condition — the last two added at [node 184](nodes/184-the-bar-and-the-standards-are-two-different-lists.md).
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the review route's list of the standards
+
+*Replaced, counting six rules, and the sentence stood as:*
+
+**The standards to hold work against:** `/coding-principles` and `/naming`; [`glossary.md`](../../.claude/skills/expedition/glossary.md)'s `_Avoid_` lines; this effort's ground rules, which [`map.md`](map.md) holds in its `## Notes` and which a checker receives as text in its spawn, placed there at [node 348](nodes/348-keep-the-ground-rules-in-map-md-and-strike-the-sibling-file-allowance.md); this effort's five standing rules for writing, which [`map.md`](map.md)'s `## Notes` holds inside the ground-rules block and which a checker receives as text in its spawn with the ground rules; [`graph-conventions.md`](../../.claude/skills/expedition/graph-conventions.md); and `/writing-for-agents`, which is the standard that bites on prose deliverables and which `/coding-principles` barely touches.
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the two blocks that pass node 42's test
+
+*Replaced, counting six rules, and the sentence stood as:*
+
+That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **ground rules** and the **five standing rules for writing**, both held in `map.md`'s `## Notes` inside the ground-rules block and received by a checker as text in its spawn, are the two blocks that pass it.
