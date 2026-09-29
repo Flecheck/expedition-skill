@@ -1,7 +1,7 @@
 # Carry node 162's integration answer into the shipped files
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
 
 ## Question
@@ -22,6 +22,12 @@ Carry node 162's answer into the shipped files. Each landing policy must state w
 > 6. `.claude/skills/expedition/glossary.md`, entry `**Correction round**:`: its first sentence, `One cycle of the human saying what is wrong and the worker fixing it, while the node stays claimed.`, becomes `One cycle of being told what is wrong, by the human at the gate or by the manager when integrating the work conflicts, and the worker fixing it, while the node stays claimed.` The entry's other sentences and its `_Avoid_` line are unchanged.
 > 7. No other file under `.claude/skills/` changes, and no file under `.scratch/` changes.
 > 8. Scope. The command `grep -rn -E 'saying what is wrong|your node resolves|until the human has approved your work|You receive the human.s words exactly' .claude/skills/`, run over the working tree before this node, returned exactly five lines: `expedition-implementation/SKILL.md` for the code-slot sentence, the correction-round entry, the approve line and the correction-round bullet, and `glossary.md` for the `Correction round` entry. Clauses 2 to 6 cover all five. The `graph-conventions.md` clause came from no search, because the place is the work. After the work, the same command returns no line saying that only the human starts a correction round or that the node resolves at approval. An instance the command reaches outside this list is reported and not edited.
+
+## Answer
+
+The implementation contract, glossary and graph-conventions now say that a correction round may be started by the manager when integration conflicts, and that the code slot is held until landing or reject.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `2cf3730`. The node it surfaced is [node 371](371-say-what-a-review-entry-records-for-a-manager-started-round.md). Its worker reports that node 34's question quotes the approve line this work replaced; the manager noted that on node 34 on 2026-09-28.
 
 ## Handover, attempt 1
 
