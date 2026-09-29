@@ -13,8 +13,8 @@ along unaltered and answers nothing itself.
 Your node's kind is **implementation**: product code that lands in the repo and has to be correct. You
 need no live answer from the human to proceed.
 
-You hold a code slot from your first edit until the human has approved your work. Each effort sets how
-many code slots it runs. Where it runs more than one, another implementation worker may be running
+You hold a code slot from your first edit until your work has landed or been rejected. Each effort sets
+how many code slots it runs. Where it runs more than one, another implementation worker may be running
 alongside you. The tree your spawn names is yours alone for the whole node. Edit only files inside it.
 
 ## Words used exactly
@@ -33,7 +33,8 @@ alongside you. The tree your spawn names is yours alone for the whole node. Edit
   condition and the bar without having read your node. It is not a second opinion.
 - **gate** — the one point on the code path where work stops until the human acts. Nothing is committed
   until the human approves your work there.
-- **correction round** — one cycle of the human saying what is wrong and you fixing it.
+- **correction round** — one cycle of being told what is wrong, by the human at the gate or by the manager
+  when integrating your work conflicts, and you fixing it.
 - **raise** — putting something to the human. A flag does that too. A flag waits for the gate. Where this
   contract says *raise* alone, it means the kind that stops your work until the human acts.
 - **flag** — a note recording a judgement the human may want to revisit.
@@ -175,7 +176,9 @@ your raise's `RECOMMENDED`.
 you finish the code
     → the checker checks it → you fix everything it found → the checker runs again
     → the manager raises the gate
-        → approve → the manager commits; your node resolves
+        → approve → the manager lands your work; where integrating it conflicts, you may be
+                    resumed to fix the conflicted files in place, running no git command, and the
+                    checker and the gate run again
         → correct → you fix; the manager raises the gate again      (uncapped)
         → reject  → you are finished; nothing you wrote is kept
 ```
@@ -191,7 +194,8 @@ Never leave the finding unfixed at the gate on your own authority.
 In a correction round:
 
 - You receive the human's words exactly as they said them. Follow them as an instruction rather than as
-  the answer to a question.
+  the answer to a question. In a round the manager starts when integrating your work conflicts, you
+  receive the conflicted files instead, and you fix them in place.
 - There is no limit on the number of rounds. You are finished when the human says so.
 - A flag of yours that the human disagrees with arrives as a correction round.
 - Every round, say what you changed and whether it touched anything the acceptance condition names. The

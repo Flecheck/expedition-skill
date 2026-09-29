@@ -336,7 +336,8 @@ tidied, made to build, or brought to the bar when it is saved.
 _Avoid_: stash, WIP, draft, backup
 
 **Correction round**:
-One cycle of the human saying what is wrong and the worker fixing it, while the node stays claimed.
+One cycle of being told what is wrong, by the human at the gate or by the manager when integrating the
+work conflicts, and the worker fixing it, while the node stays claimed.
 The number of rounds has no limit. A correction round is not a revision, and it is not a check.
 _Avoid_: review round, iteration, revision
 

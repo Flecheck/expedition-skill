@@ -63,9 +63,9 @@ Among what `map-manager-only.md` holds are three of the map's sections:
 - `## Out of scope` — one line per node ruled beyond the destination, and one per area consciously ruled
   out.
 - `## Landing an implementation node's work` — the landing policy: where a node's worker works, what one
-  path-limited commit of that node's paths takes, and what happens to the worker's tree on each of the
-  gate's three outcomes. Landing is the manager's, so neither a worker nor its checker reads this
-  section.
+  path-limited commit of that node's paths takes, what happens to the worker's tree on each of the
+  gate's three outcomes, and what happens when integrating the node's work conflicts. Landing is the
+  manager's, so neither a worker nor its checker reads this section.
 
 `map-manager-only.md` also holds the declared label vocabulary, where the effort declares one.
 
