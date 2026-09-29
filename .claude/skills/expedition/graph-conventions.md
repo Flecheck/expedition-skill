@@ -579,10 +579,7 @@ Use this when a note or standing preference in `map.md`, or a fog item in `map-m
 longer says what holds. Use it too when a rule in a sibling of `map.md` that states rules that currently
 bind no longer holds. A new item is written straight into its file, with no other change.
 
-The manager runs this procedure, except in one case. Where a node's work changes a file the workflow
-ships, and would otherwise leave a map file contradicting what that node ships, that node's worker runs
-this procedure inside that node. That case is the third branch of the test under `## Writing the graph`
-in `SKILL.md`.
+`## Writing the graph` in `SKILL.md` says who runs this procedure.
 
 1. `map-history.md`: append the item's existing text verbatim, under the heading mirroring the map
    section it came from. Struck-through text stays struck through.

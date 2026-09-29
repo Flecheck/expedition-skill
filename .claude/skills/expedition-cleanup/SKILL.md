@@ -10,11 +10,9 @@ finished part of the effort no longer needs.
 
 ## The rule this skill is an exception to
 
-An edit to a file of the effort's record never deletes. Superseded text is marked and left where it
-stands. That rule guards against removal that is unannounced. An act that is invoked and whose declared
-purpose is removal is announced by being invoked, so the rule does not reach it. Such an act leaves an
-entry in place of what it removed. The entry names what was removed and records that the text remains
-recoverable from the effort's version control history.
+The opening paragraph of `graph-conventions.md`, which begins "No edit deletes.", states the
+never-delete rule and the exception this skill falls under. In place of what you remove, leave the
+entry that paragraph describes.
 
 Remove only text that the effort's version control history already holds, so the entry's claim is true.
 
@@ -66,8 +64,7 @@ whose flag is not yet settled.
 3. Leave every node file unchanged.
 
 Nothing is lost. A flag's prose and its `settled` marking both live on the node that raised it, and this
-operation does not modify that node. A settled flag whose line has been removed is not a mismatch under
-the mechanical check that joins a node's `## Flags` entry to its line in `flags.md`.
+operation does not modify that node.
 
 ## Reporting
 

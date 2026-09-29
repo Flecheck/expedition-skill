@@ -1,13 +1,9 @@
 # Adoption
 
-This file tells the manager how to start an effort from a directory of work that already exists. Read
-`## Starting an effort` in `SKILL.md` and `### Start an effort` in `graph-conventions.md` first. This
-file holds only the steps adoption adds to them. Terms are used exactly as the glossary (`glossary.md`)
-defines them.
-
-Adoption is a way of starting an effort, and not a kind of node. You perform it, before the graph
-exists. It produces the same files as starting from a conversation, and its input is a directory of
-work that already exists. This file calls that directory's existing files the foreign record.
+This file tells the manager how to start an effort from a directory of work that already exists. This
+file calls that directory's existing files the foreign record. Read `## Starting an effort` in
+`SKILL.md` and `### Start an effort` in `graph-conventions.md` first. This file holds only the steps
+adoption adds to them. Terms are used exactly as the glossary (`glossary.md`) defines them.
 
 Your own part is bounded. You read the foreign record only as far as your steps need, and you
 transcribe none of its entries. Your part ends when you mint the bulk import as the graph's first

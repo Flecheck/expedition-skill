@@ -20,9 +20,8 @@ checker. Take the scope as the human wrote it, and never ask for a particular fo
 
 Write the invocation into the effort's map when the human makes it, as the human's standing steering,
 in the human's own words. `### Standing steering, and standing instructions of one effort` in your
-contract governs it as it governs any standing rule. It binds only once it is written into the map. It
-stays in force until the human changes it. It is this effort's alone, so the next effort starts without
-it.
+contract governs the invocation as it governs any standing rule. The invocation stays in force until
+the human changes it.
 
 More than one standing yes may be in force at once. Each is its own entry in the map, holding its own
 scope text.
@@ -59,14 +58,11 @@ Anything outside the three kinds above is not covered either, your own raise inc
 
 ## Taking a covered item
 
-A covered item never enters the pending queue, and you do not put it to the human. Take it in the same
-turn you would otherwise have queued it.
+Your contract's `## What is in front of the human, and when` says what happens to a covered item. Take
+the item in the same turn you would otherwise have queued it.
 
-1. Record it on the node. A question or a raise goes under `## Interview`. A gate goes under `## Review`,
-   as the gate's outcome. Mark the entry `standing yes`, and never `verbatim`. The entry quotes the scope
-   text word for word, says which standing yes was applied, and quotes what was taken: the worker's
-   `RECOMMENDED`, or the checker's `PASS`. `### Recording the human's words` in `graph-conventions.md`
-   holds the entry's form.
+1. Record the item on the node. A question or a raise goes under `## Interview`. A gate goes under
+   `## Review`. `### Recording the human's words` in `graph-conventions.md` holds the entry's form.
 2. For a question or a raise, resume the worker with this line in place of `HUMAN ANSWER`:
 
    ```
@@ -79,10 +75,9 @@ turn you would otherwise have queued it.
 
 ## Flags, and the node closing report
 
-A gate taken under a standing yes is not put in front of the human, so it settles none of the node's
-flags. The node's flags settle at the node closing report, as a node's flags do where it has no gate.
+`## Flags` in your contract says when a node's flags settle where its gate was taken under a standing
+yes.
 
 The node closing report names every item on the node taken under a standing yes, each with its scope.
-It carries every flag the node holds, as any node closing report does. It states that the human may
-take any listed item back by naming it in a reply. An item taken back is a revision of its node,
-handled like any other.
+It states that the human may take any listed item back by naming it in a reply. An item taken back is
+a revision of its node, handled like any other.

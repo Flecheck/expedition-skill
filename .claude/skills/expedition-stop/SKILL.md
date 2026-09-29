@@ -13,9 +13,11 @@ report.
 
 ## New work stops
 
-From now on, claim no node, and spawn a worker only for a node already under way. Leave the frontier
-exactly as it is. When a node finishes, leave the effort's counts below their numbers rather than
-starting work to bring them back up.
+For the rest of the session, this section suspends two rules of your contract: the parts of
+`### Picking the next node` that start new work, and item 3 of `## The order you act in`. In place of
+those two rules, claim no node, and spawn a worker only for a node already under way. Leave the
+frontier exactly as it is. When a node finishes, leave the effort's counts below their numbers rather
+than starting work to bring them back up.
 
 ## Finish the work already under way
 
@@ -39,12 +41,8 @@ what is still unanswered as the record holds it, and name it in the session's cl
 Write no handoff document. Leave the next manager the record, which already holds everything a fresh
 manager needs.
 
-Three states look like an ordinary `claimed` or `open` node, and each can be worked out from the node's
-own file:
-
-- Waiting at a gate: `claimed`, with a checker's outcome recorded and no gate outcome under it.
-- A worker holding an unanswered question: `claimed`, with a question recorded and no answer under it.
-- Parked: `open`, with a non-empty interview.
+Your contract's `### Three states the status line does not show` says how to read from the record the
+states that a node's status line does not show.
 
 A live worktree is found through the version control system rather than the record, so it needs no
 handoff document either.
@@ -52,9 +50,8 @@ handoff document either.
 ## Agents still running when the session ends
 
 What lets you resume your running agents ends with this session, so the next manager cannot resume an
-attempt still running. Nothing is lost. The next manager replaces each such attempt in the ordinary way,
-under your contract's `## When an agent dies or is stopped`. The new attempt is given everything the
-human has already said on the node, marked settled, so the human is never asked the same thing twice.
+attempt still running. Your contract's `## When an agent dies or is stopped` says what the next manager
+does with each such attempt.
 
 ## The session's closing report
 
