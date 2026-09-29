@@ -1,7 +1,7 @@
 # The checker has no form for two clauses of one condition that cannot both hold
 
 Type: grilling
-Status: open
+Status: claimed
 
 ## Question
 
