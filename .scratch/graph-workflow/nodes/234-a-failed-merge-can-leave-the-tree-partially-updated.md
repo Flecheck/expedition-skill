@@ -1,9 +1,15 @@
 # A failed `git merge --ff-only` can leave the tree partially updated, and the record says it cannot
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+The landing section now says a sandbox-failed merge may partially write the tree and block a retry, and gives the repair: confirm byte-identity first, discard, re-merge unsandboxed.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1` and its correction round. Run 1 failed on the condition and the bar; the human kept the worker's text and the bold was fixed; run 2 passed; the human approved at the gate. The work landed as commit `753a175`, after the landing rebase met the usual two-block conflict at the end of `map-history.md`, resolved by keeping both. The node it surfaced is [node 369](369-the-landing-merge-runs-with-the-sandbox-off-from-the-start.md). Flags 234.1 settle at this gate.
 
 ## Question
 
@@ -414,4 +420,4 @@ RETROSPECTIVE
 
 ## Flags
 
-`234.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 160 above.* Node 160's replacement for clause 4's second sentence was filed on this open, unclaimed node without asking the human first.
+`234.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment from node 160 above.* Node 160's replacement for clause 4's second sentence was filed on this open, unclaimed node without asking the human first.
