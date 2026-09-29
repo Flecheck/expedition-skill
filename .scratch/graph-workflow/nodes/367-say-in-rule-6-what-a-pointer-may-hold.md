@@ -22,3 +22,59 @@ Can standing rule for writing 6 in `map.md` say that a pointer names the heading
 > 3. The list's bold lead-in names `nodes/361-whether-a-pointer-that-summarises-its-target-restates-it.md` as a markdown link, as a node that shaped the sixth rule.
 > 4. The text rule 6 held before this change is appended verbatim to `map-history.md`, under a heading that mirrors the section it came from. `map-history.md` gains text and loses none.
 > 5. Every markdown link in the two files resolves to a path that exists.
+
+## Handover, attempt 1
+
+*The worker's own text, pasted, 2026-09-29.*
+
+````
+HANDOVER:      Say in rule 6 what a pointer may hold
+
+ANSWER:        Standing rule for writing 6 in `map.md`'s `## Notes` now says what a pointer may hold. Directly after its first sentence it gains two sentences, word for word as the condition gives them: "A pointer names the heading and says, in one clause at most, what the reader goes there for. It lists none of the items that heading holds and states none of its rules." Its four existing sentences are unchanged and stay in their order after the new two. Rules 1 to 5 are unchanged. The list's bold lead-in now ends "...and the sixth by [node 253](...) and [node 361](nodes/361-whether-a-pointer-that-summarises-its-target-restates-it.md)." This carries node 361's ruling into the rule, so a checker is held to it by the rule's own text and no longer needs it passed alongside as "the node 361 ruling".
+
+The change followed `graph-conventions.md`'s `### Change the map`. `map-history.md` gained one section at its end, `## Superseded from `map.md` at node 367 — the sixth standing rule for writing, before it said what a pointer may hold`. It has two `###` subsections, each holding one replaced line verbatim: the lead-in and rule 6. Both came from `map.md`'s `## Notes`, and the shape follows node 354's section. Banking the lead-in was not required by clause 4. It was banked because the lead-in is also rule-stating text that this change replaced.
+
+Checks run over the touched material:
+- Check 11 passes: the old `map-history.md` is a byte-exact prefix of the new one (+1,729 bytes), and both removed `map.md` lines appear byte-identically in the appended text.
+- Check 4 does not apply, since no `Labels:` line was touched.
+- Check 10 reports rule 6's item at 750 bytes, against the 500-byte soft target. It was about 590 bytes before. The lead-in is 449 bytes. Check 10 reports and never fails.
+- Every relative markdown link in both files resolves, with 0 broken.
+- Rule 6 was compared by script against the expected full text and matches exactly. Rules 1 to 5 are byte-identical before and after.
+
+The bar: the repo states no build, test, format or CI commands. The worktree root holds only `.claude`, `.scratch`, `CONTEXT.md`, `CONTEXT-MAP.md` and `.gitignore`, with no manifest and no `.github`. This matches `map-implementation-rules.md`'s record, so the bar is its non-command half.
+
+INDEX LINE:    Rule 6 now says a pointer names the heading and, in one clause at most, what the reader goes there for, listing none of its items and stating none of its rules.
+
+FLAGS:         none
+
+NEW NODES:     none
+
+INVALIDATIONS: Extension of [node 253](nodes/253-a-shipped-file-points-at-a-sibling-rather-than-restating-it.md)'s rule and of [node 354](nodes/354-add-the-sixth-standing-rule-for-writing.md)'s landed text of rule 6: the rule gains two sentences on what a pointer may hold. No contradiction: node 361's answer is carried as written, and rule 6's count, number and position are unchanged.
+
+CONDITIONS:    Searched the `## Acceptance condition` and `## Question` sections of every open or claimed node for "rule 6", "sixth", "standing rule(s) for writing", "one clause" and "Point at a heading of another shipped". Matches:
+- Nodes 190 and 284: their clauses count the standing rules for writing. This work keeps the count at six, so no clause is made wrong.
+- Node 359, claimed: its review text cites "rule 6 with the node 361 ruling". That stays true once this lands, since the ruling becomes part of rule 6. No change.
+- Node 368: its condition states the same pointer definition in its own text. It is consistent with this work and not made wrong.
+- Nodes 104, 40, 30 and 84: matched on unrelated uses of "sixth" or "one clause".
+No replacement clause is written, and no open question changes.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:  Checker findings: none received yet. Paths touched: `.scratch/graph-workflow/map.md` and `.scratch/graph-workflow/map-history.md`, both in the worktree `.scratch/graph-workflow/worktrees/367-rule6`. Nothing is committed. Proposed commit message:
+
+    Rule 6 says what a pointer may hold
+
+    Standing rule for writing 6 in map.md gains two sentences after its
+    first: a pointer names the heading and, in one clause at most, what the
+    reader goes there for, and lists none of its items and states none of
+    its rules. The lead-in names node 361 beside node 253. The replaced
+    lead-in and rule 6 are appended verbatim to map-history.md.
+
+    Node: graph-workflow/367
+
+RETROSPECTIVE:
+1. What I had to hunt for: the exact heading shape `map-history.md` uses for a supersession from `map.md`'s `## Notes`. I found it by grepping the file's headings and copying node 354's section. I also had to find which checks the `Change the map` procedure makes the changer run (4, 10 and 11), which are in `graph-conventions.md`.
+2. What arrived that this node did not need: nearly all of `decisions.md` (about 270 lines). Only the node 253, 354 and 361 lines bore on this work. Most of `map-implementation-rules.md` did not bear on it either (the worktree route, the trigger file, the record-reading rule).
+3. What would have made this easier: a pointer in the node or the spawn to the precedent `map-history.md` section to mirror (node 354's). Also a note that clause 4 banks only rule 6, while the lead-in change in clause 3 is also a replaced rule text, so the worker need not decide whether to bank it.
+4. What was stale, wrong or contradictory: nothing contradictory. The condition's clause 4 names only rule 6's old text for banking, although clause 3 also replaces the lead-in. I banked both. This adds text and removes none, so clause 4 still holds.
+````
