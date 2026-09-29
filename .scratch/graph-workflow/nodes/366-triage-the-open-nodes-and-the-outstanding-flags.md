@@ -99,3 +99,9 @@ ALTERNATIVES:  Fold it into node 365's question only: that catches stale nodes o
                Make it a third operation of expedition-cleanup: that skill's job is to remove record, while triage changes node statuses.
                Ship nothing and keep it as this effort's practice: the next effort in another repo meets the same backlog with no route.
 ```
+
+#### The human's answer to questions 1 to 5, 2026-09-29
+
+`verbatim`: *"ok"*
+
+The manager had put the questions with the line "Please answer Q1 to Q5. "ok for recommended" takes all five, with 89's clause going to node 371." So the reply takes the worker's `RECOMMENDED` on all five, with one change the manager had put in that line: on Q3, node 89's remaining clause goes to [node 371](371-say-what-a-review-entry-records-for-a-manager-started-round.md), not node 363. The manager's reason, given to the human with the questions: node 363 was claimed after the worker wrote Q3, and its work has since landed as commit `2cf3730`. Node 371 edits the same file.
