@@ -277,6 +277,51 @@ The manager put finding 1 of checker run 1 to the human, recommending that the w
 
 *The manager's note, from context it already holds:* on the first point, an `--ff-only` merge that fails leaves no merge in progress, so `git merge --abort` has nothing to abort. On the second, the partial write comes from running the merge inside the sandbox, where `.claude/skills` is read-only. Every landing merge this session ran with the sandbox off from the start, and none partially wrote, so under that practice the case does not arise, as the worktree case no longer does. The read-only overlay on `.claude/skills` in the main checkout still exists; it bites only a merge run inside the sandbox.
 
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-09-29, after correction round 1.*
+
+> PASS
+>
+> This is a re-check after one correction round, against `/tmp/claude-1000/c234.md` under the reading the manager relayed: the human's "ok" keeps the worker's text for (a) and (b) as it now stands, not the raise's wording. I held the work against the ground rules and the six standing rules for writing as they stand in `/tmp/claude-1000/ground.md`, re-read, and I did not read `map.md`. I read only the standards section of `map-implementation-rules.md` ("What the work is held against"). I read the two changed paths as the work, under that file's rule on record files as work.
+>
+> What changed since my last outcome:
+> - `map-history.md` still has blob `a40514e`, so it is unchanged since my last outcome.
+> - `map-manager-only.md` went from blob `b7571b0` to `4e7116b`.
+> - I compared its new diff hunk with last round's hunk, word by word. The only change is removing `**…**` from three sentences: "The merge may instead write some of the changed files before it fails.", "The repair for a partially written merge is one pass, in this order.", and "Establishing byte-identity comes first." No word moved and the line breaks are unchanged.
+> - The work shows no change that the statement does not mention.
+>
+> Last round's findings:
+> - Finding 1 (acceptance condition): settled by the human's "ok". The worker's text for (a) and (b) is now the approved text, and the work carries it unchanged.
+> - Finding 2 (the bar, writing rule 5): fixed. I unwrapped `map-manager-only.md` at HEAD and in the worktree, listed every `**…**` span on each side and diffed the two lists. `diff` printed nothing: the work adds no bold span. The one added diff line that contains `**` is the existing span "The manager must expect this rather than discover it", which moved only because the lines around it were rewrapped.
+>
+> Parts of the condition:
+> - **Scope and clause 7: met.** `git status --porcelain --untracked-files=all` lists only `.scratch/graph-workflow/map-history.md` and `.scratch/graph-workflow/map-manager-only.md`. There is no change to a node status line, `decisions.md` or `flags.md`.
+> - **Clause 1, as settled: met.** Established last round and unmoved except for the bold removal. The surviving combined sentence is replaced by the worker's text, which states the partial write, the dirty main tree, and the retry refusing with `Your local changes to the following files would be overwritten by merge`.
+> - **Clause 2 with (c) and (d): met.** Established last round, and `map-history.md` is unchanged.
+>   - The replaced sentence is appended word for word: "`HEAD` does not move and nothing is lost in either case; both succeed outside the sandbox."
+>   - It sits under the new node-234 `## Superseded from …` heading and its `### From *Landing an implementation node's work* — …` subheading. The addition is appended only.
+>   - Edit 13 and Edit 14 are present (`grep -n 'Edit 1[34]' map-history.md`).
+> - **Clause 3: met.** The worker's repair text runs in order: establish byte-identity, then discard, then re-run the merge outside the sandbox. It states "Establishing byte-identity comes first." and "the manager stops and discards nothing" where a file differs.
+> - **Clause 4, with node 160's amendment: met.**
+>   - The unwrapped `**Landing policy**` paragraph has md5 `6088403e…` at HEAD and in the worktree.
+>   - The amended span "A rebase conflict is resolved, and the rebase is not aborted. … the manager runs `git rebase --abort` and the node takes a correction round." matches once in the unwrapped file.
+>   - No added or removed diff line contains "rebase". The one hit for `git diff HEAD | grep -i -e rebase -e '## Notes'` is a context line.
+> - **Clause 5: met.** No added line contains `## Notes`.
+> - **Clause 6: met.** From `.scratch/graph-workflow/`, every relative `](…)` target in both files, with its anchor stripped, passes `[ -e ]`. The loop reported nothing missing.
+> - **Clause 8:** covered by the bar below.
+>
+> The bar:
+> - The repo has no build, tests, formatter or CI, and its root holds only `CONTEXT.md` and `CONTEXT-MAP.md`, which agrees with `map-implementation-rules.md`. There was no command to run, so the bar is its non-command half.
+> - I held the changed passages against the five ground rules, the six standing rules for writing (rule 5's bold clause now holds), `/writing-for-agents`, and the glossary's `_Avoid_` refusals, checked by hand. None found a defect.
+> - No reviewing skill is named, so I ran none.
+>
+> I did not check the questions the human raised to the manager in the same answer: `git merge --abort` after a merge failure, the likeness to the worktree issue, and whether the read-only restriction still applies. They are not part of the acceptance condition or the bar. My only writes were two scratch files in `$TMPDIR` for the bold comparison.
+
+### Gate — approve, 2026-09-29
+
+The human's approval is the answer recorded under `## Interview` as "The human's answer at the gate, 2026-09-29": *"… Otherwise ok."*, taking the manager's recommendation to keep the worker's text, fix the bold, and have the checker run again. Run 2 passed.
+
 ## Handover, attempt 1, correction round 1
 
 *Filed by the manager as handed back, 2026-09-29. The worker's own text, pasted.*
