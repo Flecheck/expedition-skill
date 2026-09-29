@@ -387,3 +387,5 @@ contradicting its decision: discarding is now `git worktree remove --force` with
 that also holds the human's bookkeeping, and **keeping costs nothing** — the work is committed onto the unmerged
 worktree branch and the directory removed, so a kept reject cannot be miscounted as an occupied slot. Node 68 notes
 that keeping was defaulted against partly because it meant a standing directory of dead work, and it no longer does.
+
+*The manager's note, 2026-09-29:* this node's flags carry no ids, so none can be marked in place. They are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*), by their lines in `flags.md`.

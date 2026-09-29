@@ -572,7 +572,7 @@ reach the verdict checks, which is why this node existed.
 
 ## The manager's own flag, against itself
 
-`213.4` `MANAGER-WRONG` — **This node's handover sat unfiled for the length of the session.** Its worker handed
+`213.4` `MANAGER-WRONG` **· settled** — **This node's handover sat unfiled for the length of the session.** Its worker handed
 back all five parts and a retrospective; the manager filed nothing, left the node `claimed`, and carried on
 starting and landing other nodes — eight of them. **The node was finished work the whole time**, so it also read as
 an occupied grilling slot that the manager was counting against its own target. The handover was recovered verbatim
@@ -581,3 +581,11 @@ nodes this worker specified going unminted while the manager minted others**, an
 record defect the manager itself created.
 
 *This flag is the manager's about the manager, and is outstanding.*
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.
+
+`213.1` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.
+
+`213.2` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.
+
+`213.3` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.

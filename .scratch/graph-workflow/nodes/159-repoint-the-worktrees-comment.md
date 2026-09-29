@@ -1,11 +1,14 @@
 # Repoint the `.worktrees/` comment at the file that now holds the landing policy
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 249
 
 Blocked by: 158
 
 ## Question
+
+*Superseded 2026-09-29: this question no longer needs doing here. See `## Superseded, 2026-09-29` below.*
 
 *Surfaced by [Ignore the harness's worktree directory](158-ignore-the-harness-worktree-directory.md)'s worker, and
 pasted as it wrote it.*
@@ -36,3 +39,7 @@ one small file.
 **Its author declined to raise this and said why**, at flag `158.2`: the pointer still resolves in one hop, and a
 raise would have spent the human's single live question on it. The manager records that it agrees, and that the
 judgement is the worker's rather than the manager's.
+
+## Superseded, 2026-09-29
+
+*The manager's note:* superseded by [node 249](249-gitignores-two-comments-point-at-files-that-moved.md), under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q1 (`verbatim`: *"ok"*, recorded on node 366). Node 366's worker's reason: the `.gitignore` comment already points at `map-manager-only.md`, "Landing an implementation node's work" (node 249).

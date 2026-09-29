@@ -31,6 +31,8 @@ twice.**
 
 ## Acceptance condition
 
+*Superseded whole 2026-09-29 by node 366's replacement; see `## Amendment, 2026-09-29 (from node 366)`.*
+
 *Written by node 74's worker.*
 
 `.scratch/graph-workflow/map.md` is edited, together with `.scratch/graph-workflow/map-history.md` where the map's
@@ -116,3 +118,14 @@ against its own bookkeeping and not against any worker.
 `80.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
 
 *The manager's note, 2026-09-27:* node 345's map pass carried out this node's clause 2 ("worktrees" is gone from the firstmate list in the fog item, old text in `map-history.md`) and found clause 1 already met. Clause 3, re-describing the async-landing seam and the price of a reject against today's landing lifecycle, is new analysis and stays open. The fog items sit in `map-manager-only.md`, which this node's condition does not name.
+
+## Amendment, 2026-09-29 (from node 366)
+
+*Written by [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s worker and filed by the manager, under the human's answer to node 366's Q3 (`verbatim`: *"ok"*). The worker's own text, pasted:*
+
+Block 6 (node 80's condition, replaced whole, since it is unclaimed):
+  > The work is `.scratch/graph-workflow/map-manager-only.md` and `.scratch/graph-workflow/map-history.md`, and no other file is edited.
+  > 1. The item under `## Not yet specified` beginning "When to flip landing to asynchronous" no longer says that the seam is one step, and no longer says that reject becomes a forward revert rather than a cleaned tree. It describes the seam and what a reject costs against the landing policy that the same file's `## Landing an implementation node's work` states: on approval, a path-limited commit, a rebase onto the branch the manager thread is on, a re-run of the bar's commands, and `git merge --ff-only`; on reject, the worktree is removed and its branch deleted.
+  > 2. The item's replaced text is appended verbatim to `map-history.md` under a heading mirroring the section it came from. `map-history.md` gains text and loses none.
+  > 3. No other item of `map-manager-only.md` changes.
+  > 4. Scope came from no search: the item named is the place of the work.

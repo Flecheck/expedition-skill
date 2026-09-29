@@ -285,7 +285,7 @@ actual cost.
 
 ## Flags
 
-`52.1` `ASSUMPTION` — **Every local token figure is `chars/4`, not a tokenizer count.** The node asked it to
+`52.1` `ASSUMPTION` **· settled** — **Every local token figure is `chars/4`, not a tokenizer count.** The node asked it to
 measure rather than estimate; it could not — no `python3` and no tokenizer in the sandbox — and the one external
 study publishing a per-line ratio measured skills averaging ~28 chars/line against this corpus's ~100. It
 applied `chars/4` uniformly and **left every character count beside its estimate**, so any figure can be
@@ -293,7 +293,7 @@ recomputed without re-reading the corpus. Its own statement of what this means: 
 … and none of the findings turns on a figure being exact. The **absolute** numbers are ±20% and should not be
 quoted as measurements without a tokenizer run. The character counts are exact."*
 
-`52.2` `ASSUMPTION` — **It ruled that a search engine's summary of an unfetched page is evidence rather than
+`52.2` `ASSUMPTION` **· settled** — **It ruled that a search engine's summary of an unfetched page is evidence rather than
 authority.** `map.md` declares no source hierarchy, so *"every source you are pointed at is authoritative"* —
 but it was pointed at four sources and found several dozen. It split the material three ways: **primary and
 fetched** carries facts on its own; **fetched secondary** carries facts with its setup named; and
@@ -336,3 +336,5 @@ conversation's hour. The defect is an inference drawn from a true fact, not a fa
 
 The manager confirms the propagation: it wrote that inference into [node 68's own
 question](68-implementation-in-a-worktree.md) and into two spawns, in each case as settled fact.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

@@ -120,7 +120,7 @@ files that had moved. Losing information from them would undo landed work.
 
 ## Flags
 
-`269.1` `ASSUMPTION` — *The worker's own text, pasted.*
+`269.1` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > The condition fixes what the new comment must say but not where the pattern goes or how the now-three patterns
 > relate to each other. I appended below the two existing entries and added one sentence marking the new path as the
@@ -322,3 +322,5 @@ git**, and neither command was refused.
 **Verified after landing rather than assumed**: `git check-ignore -v .scratch/graph-workflow/worktrees/probe` on
 `master` returns `.gitignore:19:.scratch/graph-workflow/worktrees/` with exit 0, and `git worktree list` shows node
 268's live worktree sitting under the now-ignored path.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

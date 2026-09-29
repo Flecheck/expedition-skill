@@ -240,25 +240,25 @@ of the five is an assent**, and each `ALTERNATIVE` is a named refusal of it.
 
 *All four are the worker's own text, pasted.*
 
-`264.1` `ASSUMPTION` — Read the five instances as one question rather than several, without asking. The spawn made
+`264.1` `ASSUMPTION` **· settled** — Read the five instances as one question rather than several, without asking. The spawn made
 establishing this part of the work and offered no default. They have four different causes — work migrated to the
 manager (203, 245), subject removed from the route (261), condition gone vacuously true (262), and finished work
 obsoleted before landing (250) — but one consequence each: leave the frontier, satisfy no edge, carry no answer,
 point somewhere. I decided that the consequence is what a status names and the cause is not, so one rule covers all
 five. **If the completed-and-obsoleted case was to be held separate, this is where it was merged.**
 
-`264.2` `ASSUMPTION` — Decided that this answer reaches node 250, which the spawn left to me and asked me to state
+`264.2` `ASSUMPTION` **· settled** — Decided that this answer reaches node 250, which the spawn left to me and asked me to state
 either way. Ground: node 250 already qualified for `superseded` under the rule as written, holding an interview, two
 review runs and a commit, so excluding it would have made this answer narrower than the rule it widens. What I did
 not decide is the fate of its branch.
 
-`264.3` `ASSUMPTION` — Held the node-250 branch question out of the payload rather than numbering it as a second
+`264.3` `ASSUMPTION` **· settled** — Held the node-250 branch question out of the payload rather than numbering it as a second
 question. The contract permits a payload to carry several independent questions and this one was independent;
 `map.md`'s standing preference that exactly one question is in front of the human, and the human's two recorded
 corrections about stacked questions, decided it the other way. **The cost is that the branch's disposal waits for a
 fresh node rather than riding this exchange.**
 
-`264.4` `ASSUMPTION` — Discharged node 263's duty by searching the open and claimed nodes' `## Acceptance condition`
+`264.4` `ASSUMPTION` **· settled** — Discharged node 263's duty by searching the open and claimed nodes' `## Acceptance condition`
 sections for the handles this work changes, and chose the handle list myself: `superseded`, `Supersedes:`,
 `out-of-scope`/`out of scope`, plus `statuses`/`five status`, `Blocked by` and `graph-conventions`. **Result: nothing
 breaks.** Almost every hit uses *superseded* in the never-delete sense — text marked superseded in place — which this
@@ -349,3 +349,5 @@ once.
 - **The spawn asserting node 262 was *"shrunk rather than dead"*** → the manager's own framing, wrong, and marked as
   material which is what let the worker discard it. **Not filed as a flag**: the worker reports the marking worked
   here, where at `263.4` it did not. That difference is worth the human's eye and is named for them.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

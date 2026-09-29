@@ -155,7 +155,7 @@ to the node rather than to the agent is for. **Attempt 2 went on to finish the n
 
 ## Flags
 
-`255.1` `ASSUMPTION` — *The worker's own text, pasted.*
+`255.1` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > Flag `248.2` was left open on whether *"the rule will ship as optional"* named the rules file or the priority list,
 > and clause 3's deletions are unsafe under the second reading. I settled it as the first, on the human's later
@@ -165,7 +165,7 @@ to the node rather than to the agent is for. **Attempt 2 went on to finish the n
 > its presence in the skill to explain. The optional thing is the vehicle; the skill copy governs. I wrote the rules
 > file's closing section to say this in the file itself, so the finding does not rest on the flag surviving.
 
-`255.2` `ASSUMPTION` — *The worker's own text, pasted.*
+`255.2` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > The shipped section retains attempt 1's phrase *"and so the one a later editor will get wrong"*, a prediction about
 > a future reader rather than a statement of what holds or of the trigger by which the rule fires. I twice tried to
@@ -317,3 +317,5 @@ half empty, so nothing to re-run; `git merge --ff-only` onto `master`, which **f
 `unable to unlink old '.claude/skills/expedition/SKILL.md': Read-only file system` and succeeded with the sandbox
 off — the case the map already records for a range crossing a shipped file, and the only command run that way.
 Worktree removed, branch deleted. **Commit `4598672`**, carrying the trailer `Node: graph-workflow/255`.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

@@ -2,6 +2,7 @@
 
 Type: implementation
 Status: open
+Supersedes: 208
 
 Blocked by: none
 
@@ -30,6 +31,8 @@ premise intact because the clause was satisfiable; the checker's contract routes
 question that does not wait. **Nothing in either file says that a clause which cannot be honoured together with a
 standard is itself a broken premise.** What this node decides is the wording that says so, in both contracts, and
 what the trigger is precisely enough that it does not fire on every hard clause.
+
+*Amended 2026-09-29 by node 366; see `## Amendment, 2026-09-29 (from node 366)` below.*
 
 ## Acceptance condition
 
@@ -77,3 +80,9 @@ an outcome the checker is able to give, so a rule that makes a collision raisabl
 outcome. Second, **the manager's gloss in that spawn was wrong** and is flagged at `200.3`: a checker's raise does
 stop the check, and only a question handed back alongside an outcome does not. **Whoever writes this node's rule
 should assume the manager's summary of the raise mechanics cannot be trusted and read the two contracts.**
+
+## Amendment, 2026-09-29 (from node 366)
+
+*Written by [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s worker and filed by the manager, under the human's answer to node 366's Q3 (`verbatim`: *"ok"*). The worker's own text, pasted:*
+
+Block 3 (defect joined to open node 214, from node 208). Node 214 has no condition, so this is an addition to its question: "This includes the case where a condition quotes a phrase containing a word the glossary refuses for the very concept the condition means. The worker cannot ship the condition's word without breaking the bar, and cannot know whether a checker will accept a substitute. Nodes 196, 197 and 200 each met this, as flags 196.1, 197.1 and 200.x record."

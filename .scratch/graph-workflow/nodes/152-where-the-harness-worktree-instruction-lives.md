@@ -1,11 +1,14 @@
 # Where the harness-worktree standing instruction lives, now that the landing policy has left `map.md`
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 265
 
 Blocked by: 140
 
 ## Question
+
+*Superseded 2026-09-29: this question no longer needs doing here. See `## Superseded, 2026-09-29` below.*
 
 *Surfaced by [Move the implementer's and checker's material out of the map](140-move-the-implementers-and-checkers-material-out-of-the-map.md)'s worker, and pasted as it wrote it.*
 
@@ -78,3 +81,7 @@ here.** This node's condition is also the one [node
 250](250-state-how-an-implementation-worker-reaches-its-worktree.md) was told to preserve the exact phrases of, and
 node 250's work is uncommitted at a gate; whoever amends this condition must quote the section's form **after** that
 gate settles, not before.
+
+## Superseded, 2026-09-29
+
+*The manager's note:* superseded by [node 265](265-should-the-worktree-route-drop-enterworktree-for-git.md), under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q1 (`verbatim`: *"ok"*, recorded on node 366). Node 366's worker's reason: node 265 replaced the paragraph 152 would have moved.

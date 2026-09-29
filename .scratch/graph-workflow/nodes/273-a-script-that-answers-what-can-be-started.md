@@ -272,19 +272,19 @@ carry-through rather than starting work.
 
 *All three are the worker's own text, pasted.*
 
-`273.1` `ASSUMPTION` — **Slot occupancy was read as inside the question rather than as an extension of it.** The
+`273.1` `ASSUMPTION` **· settled** — **Slot occupancy was read as inside the question rather than as an extension of it.** The
 manager's spawn treated *"a slot emptied and nothing was started in it"* as a different question and asked that
 coverage be established rather than assumed. **I settled it myself rather than spending a payload on it**: nothing
 can be started when no slot is free, and it is three lines on the same read. I also set the default when no counts
 are passed to 2 and 2, matching `SKILL.md`'s stated default, **so the script bakes in nothing of this effort's own
 settings.**
 
-`273.2` `ASSUMPTION` — **The script ranks nothing and carries no consistency check.** Two scope choices made rather
+`273.2` `ASSUMPTION` **· settled** — **The script ranks nothing and carries no consistency check.** Two scope choices made rather
 than asked. It does not order the frontier beyond grouping by kind, the failure being *"nothing is waiting on you"*
 rather than a bad pick, and ground rule 4 preferring simple prose over machinery for predicted needs. It carries
 none of the ten mechanical checks, on node 213's ground.
 
-`273.3` `ASSUMPTION` — **Node 270 was judged separable and only this node was answered.** They can be decided apart:
+`273.3` `ASSUMPTION` **· settled** — **Node 270 was judged separable and only this node was answered.** They can be decided apart:
 **ground rule 1 lands differently on each.** This script reads only the expedition's own markdown; node 270's drives
 git against the host repository, makes worktrees in it and deletes branches from it. **So the common question —
 does this effort ship executables at all — is answered yes here without carrying a yes there.**
@@ -360,3 +360,5 @@ does this effort ship executables at all — is answered yes here without carryi
   purpose.** Node 65 is open, in the frontier, and now partly answered by a resolved node — **the shape this effort
   has repaired four times this week.** Named in the closing report as outstanding.
 - **`map.md`'s `## Notes`, tenth report**, with a sharper cut than node 246's: **preference from account.** Named.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

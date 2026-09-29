@@ -594,20 +594,20 @@ as `29.3`.
 
 ## Flags
 
-`29.1` `ASSUMPTION` — **What part 1 claims, and where the rest of it was routed.** *"The glossary becoming a
+`29.1` `ASSUMPTION` **· settled** — **What part 1 claims, and where the rest of it was routed.** *"The glossary becoming a
 shipped file makes it reachable inside the shipped set; it does not make it reachable by a worker, and I settled
 myself that only the first is this node's to claim… I routed worker-reachability to the manager's own skill as a
 requirement — on the ground that what a worker is pointed at is the spawn's content, which node 12 made that
 skill's — rather than minting a node for it. If that routing is wrong, the property has no owner and needs one,
 because the last file written is the one nothing checks."*
 
-`29.2` `ASSUMPTION` — **The new completeness rule does not go in the ground-rules block.** *"Once the glossary
+`29.2` `ASSUMPTION` **· settled** — **The new completeness rule does not go in the ground-rules block.** *"Once the glossary
 states its own completeness, the bar carries that statement to the checker by the route the bar already travels,
 so putting it in the ground rules as well would give one rule two homes — which is the drift this node exists to
 stop, arriving inside its own answer. The cost if I am wrong is that a checker whose spawn carries the block but
 which never finds the glossary is told nothing about it."*
 
-`29.3` `ASSUMPTION` — **The unstated permission to edit a product file is left as a gap.** *"I settled that this
+`29.3` `ASSUMPTION` **· settled** — **The unstated permission to edit a product file is left as a gap.** *"I settled that this
 needs no repair for a **checker**, which cannot fault what nobody stated, and that whether a **worker** needs it
 stated is a different reader and not this node's question. I minted nothing for it. The judgement is that a gap
 which produces no wrong action today is better recorded than filled by me."*
@@ -618,3 +618,5 @@ which produces no wrong action today is better recorded than filled by me."*
 handover, so *"ok for the recommandations"* could not have reached flags that did not yet exist. All three are
 outstanding and presented rather than settled silently. `29.1` is the load-bearing one — it names a property
 that may have **no owner**, and the worker says so against its own routing.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

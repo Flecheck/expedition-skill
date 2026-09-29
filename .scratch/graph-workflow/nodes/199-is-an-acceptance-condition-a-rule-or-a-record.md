@@ -250,7 +250,7 @@ than a change to what the clause requires.
 *The worker's own text, pasted. The ids are the manager's bookkeeping. **Outstanding** — this is a grilling node, so
 its flags reach the human at the pick report that closes it rather than at a gate.*
 
-`199.1` `ASSUMPTION` — **I wrote the answer as two tests in sequence, and that structure is mine rather than the
+`199.1` `ASSUMPTION` **· settled** — **I wrote the answer as two tests in sequence, and that structure is mine rather than the
 human's.** They approved the rule-vs-record test's wording at Q2 and the *"a node file is its own history file"*
 ground at Q1, as two separate answers. Joining them into *what is this text?* then *does its file archive its own
 subject?* is my reading of how the two fit, and it is what makes Q1 and Q2 stop looking contradictory. Ground: node
@@ -258,13 +258,13 @@ subject?* is my reading of how the two fit, and it is what makes Q1 and Q2 stop 
 condition is the first case where they come apart. Whoever carries this into `graph-conventions.md` writes that
 structure, so it is worth their eye before it ships.
 
-`199.2` `ASSUMPTION` — **I decided what happens to the nine existing amendments, and it was not asked.** The human
+`199.2` `ASSUMPTION` **· settled** — **I decided what happens to the nine existing amendments, and it was not asked.** The human
 settled the standing form at Q4 and said nothing about the instances already written in the unsafe shape. I derived
 the sweep: repair open and claimed nodes, leave resolved ones, on the ground that a condition is only ever handed to
 a worker or a checker while its node is live, so a resolved node's shape can no longer cause the failure the rule
 exists to stop.
 
-`199.3` `ASSUMPTION` — **The approved test reaches flag `198.1`'s two passages and I did not re-adjudicate them.**
+`199.3` `ASSUMPTION` **· settled** — **The approved test reaches flag `198.1`'s two passages and I did not re-adjudicate them.**
 Node 198's worker judged two stale pointers in `map.md` to be facts rather than rule statements, reasoning that *"a
 pointer saying what a file contains records a fact rather than states a binding rule"*, and struck them in place.
 Under the test the human has now approved, a pointer telling an agent which file holds the rules is something an
@@ -413,3 +413,5 @@ turn, which is the scarce thing.
 > what it landed is not false: its `## Writing the map` paragraph puts the node files on the record side, which is
 > the right outcome for an acceptance condition by the wrong route. It is incomplete rather than wrong, and the
 > second node above completes it rather than reversing it.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

@@ -188,26 +188,26 @@ advised.*
 *The worker's own text, pasted. The ids are the manager's bookkeeping and nothing else. **Outstanding** — this is a
 grilling node, so its flags reach the human at the pick report that closes it rather than at a gate.*
 
-`225.1` `ASSUMPTION` — **On the one live clause inside a struck bullet.** The bullet the sweep node deletes is
+`225.1` `ASSUMPTION` **· settled** — **On the one live clause inside a struck bullet.** The bullet the sweep node deletes is
 struck in full, but the unstruck sentence after it says *"the commit trailer stays the join key regardless"* — so
 the commit trailer `Node: <effort>/<NN>` being the join key is a live fact whose only statement anywhere in the
 section sits inside struck text. I decided it survives, and wrote the one-sentence replacement into the acceptance
 condition myself rather than leaving the worker to judge it. If the trailer is stated elsewhere in the record, that
 replacement is a duplication; if it is not live at all, the sweep node preserves something dead.
 
-`225.2` `ASSUMPTION` — **On the account I kept.** The sentence explaining that the landing policy was added beside
+`225.2` `ASSUMPTION` **· settled** — **On the account I kept.** The sentence explaining that the landing policy was added beside
 rather than rewritten, *"because node 152 and node 144 hold conditions quoting that paragraph's exact phrases"*, is
 an account of how the file came to be arranged and fails the shipped test by its letter. I excluded it from the
 removal list because node 152 is open and its condition still quotes that paragraph, so the sentence is what stops a
 future editor breaking it. If node 152 is re-conditioned off those phrases, this sentence becomes bankable and
 nothing will notice.
 
-`225.3` `ASSUMPTION` — **On the two sub-bullets left byte-identical.** The `**What it hits.**` and `**What it does
+`225.3` `ASSUMPTION` **· settled** — **On the two sub-bullets left byte-identical.** The `**What it hits.**` and `**What it does
 not hit, established by experiment rather than inferred.**` sub-bullets carry error strings and measured behaviour
 that are the rule, so I left them out of the removal list — but *"established by experiment rather than inferred"*
 is history by the test's letter. I traded a few bytes for a bounded edit list with no judgement calls left in it.
 
-`225.4` `ASSUMPTION` — **On where the pointer sentence goes.** I fixed its position in the condition — second
+`225.4` `ASSUMPTION` **· settled** — **On where the pointer sentence goes.** I fixed its position in the condition — second
 paragraph of the opening, directly below the one declaring the file's reader and necessarily above *"Nothing below
 was reworded on the way here"*, which claims a property of everything after it that a new paragraph would falsify.
 That is node 196's own placement argument, applied to a different file by me rather than by the human.
@@ -326,3 +326,5 @@ filing repeated the framing rather than testing it. Nothing was wrong to write; 
 and stopped being true when node 197 landed, with no mechanism noticing. That is the same failure mode
 `map-manager-only.md`'s own fog item names — *nothing watches a standard that lives outside this repository* — one
 step inward, where **the thing unwatched is this effort's own shipped file**.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

@@ -105,7 +105,7 @@ a code slot's occupancy is counted from.
 
 ## Flags
 
-`281.1` `ASSUMPTION` — *The worker's own text, pasted.*
+`281.1` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > The condition's clause 2 protects *"the rest of that paragraph"*, and the pre-existing sentence *"The route is
 > stated in full in `map-manager-only.md` under `How the worktree is made`"* falls inside that protection while now
@@ -114,7 +114,7 @@ a code slot's occupancy is counted from.
 > illustrates rather than bounds. The narrower reading — that only the path, the branch name and the worker half are
 > protected — would have licensed the tidier edit, and I did not take it.
 
-`281.2` `MANAGER-WRONG` — ***Filed by the manager against itself, and it was live in the repository when the worker
+`281.2` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself, and it was live in the repository when the worker
 found it.*** **The manager created this node's worktree, and node 267's, at a doubled path** —
 `.scratch/graph-workflow/.scratch/graph-workflow/worktrees/<NN>-<name>` — by running `git worktree add` with a
 **relative** path from a working directory that was not the repository root. **The spawn then named a path that did
@@ -133,7 +133,7 @@ pre-empted** — and verified both that `git check-ignore` now matches and that 
 comment saying why it is there and that it goes when those worktrees land. **The route repair is [node
 284](284-the-worktree-create-command-names-a-relative-path.md).**
 
-`281.3` `MANAGER-WRONG` — ***Filed by the manager against itself.*** The condition's clause 3 and the spawn both
+`281.3` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself.*** The condition's clause 3 and the spawn both
 said **two** other open nodes expect to append to `map-history.md`, naming 234 and 276. **The worker measured at
 least fourteen** — 80, 97, 160, 190, 203, 211, 219, 232, 233, 234, 236, 237, 254, 256, 271, 276. **It did not break
 the work**, every one keying on a heading name rather than a position. **This is the fourth count in three days the
@@ -307,3 +307,5 @@ both independently, and **the condition that forced it is the manager's own.** I
 the manager created wrongly. The local `.git/info/exclude` entry that contained them **was removed in the same
 turn**, its own comment having said it goes when those worktrees land. **Node 284 is still the route repair and is
 still open.**
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

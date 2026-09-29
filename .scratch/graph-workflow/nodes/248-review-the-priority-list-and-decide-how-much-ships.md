@@ -388,7 +388,7 @@ point, and leaves one rule stated in two places that can drift apart.
 
 ## Flags
 
-`248.1` `MANAGER-WRONG` — ***Filed by the manager against itself.*** The manager told this worker, and told the
+`248.1` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself.*** The manager told this worker, and told the
 human twice, that **`.claude/rules/` does not exist inside a harness worktree** and that a worker therefore never
 sees it. **That is false.** This worker checked both live worktrees and reported the file present and tracked in
 each; the manager then verified it directly — `expedition-triggers.md` is present at 1,190 bytes in the worktrees
@@ -494,7 +494,7 @@ holds triggers only, and overrides nothing there"* — a sentence placed there d
 a trigger, and a priority that resolves a contradiction does override. Its title is also a truncation, left as
 `# For a manager acts on` by commit `a70fb82`.
 
-`248.2` `ASSUMPTION` — **what *"the rule will ship as optional"* names.** The human's qualification was `verbatim`
+`248.2` `ASSUMPTION` **· settled** — **what *"the rule will ship as optional"* names.** The human's qualification was `verbatim`
 *"Q2 ok but the rule will ship as optional"*, and this worker put three readings of *optional* to them — an effort
 may replace the ordering, the manager may depart from it in the moment, or the section binds nothing — because the
 three produce different standards for the implementation node. Their reply named none of the three and instead
@@ -509,7 +509,7 @@ consequence, which is what makes this worth checking:** the priority section shi
 the manager's contract, and the two clauses it absorbs lose no force. Had the other reading been meant, deleting
 those two clauses would have silently downgraded two requirements.
 
-`248.3` `ASSUMPTION` — **the count of clauses the list displaces was reported to the human as more than it is.**
+`248.3` `ASSUMPTION` **· settled** — **the count of clauses the list displaces was reported to the human as more than it is.**
 This worker told the human the list would absorb "four clauses", including "never to a tidy-up afterwards, said
 twice (raising a flag, settling a flag)". Verified against the file before writing the acceptance condition: that
 clause appears **once**, on raising a flag only; the settling sentence has no such clause. A third item named — the
@@ -520,13 +520,13 @@ count, and two deletions rather than three sits inside that shape and changes no
 demands only what was verified. **It sharpens the answer's central finding rather than softening it** — the deletion
 available in the shipped contract is smaller still.
 
-`248.4` `ASSUMPTION` — **items 2 and 3 of the list range over agents, not nodes.** The list says "resuming a task"
+`248.4` `ASSUMPTION` **· settled** — **items 2 and 3 of the list range over agents, not nodes.** The list says "resuming a task"
 and "spawning a new task". Resuming is something done to an agent rather than to a node, and a checker is spawned by
 the same act as a worker, so this worker read both items as ranging over **agents** — a worker or a checker — and
 the corrected wording says so. The alternative reading, that they range over nodes, would leave the spawning of a
 checker unranked.
 
-`248.5` `ASSUMPTION` — **`map-manager-only.md` was not read, so collisions with it are unchecked.** That file is one
+`248.5` `ASSUMPTION` **· settled** — **`map-manager-only.md` was not read, so collisions with it are unchecked.** That file is one
 of the two paths the rules file's frontmatter scopes itself to, so it is a plausible site for an ordering rule
 colliding with the list. `map.md` declares it a part of the map that no worker reads, and this worker did not open
 it. Any collision between the priority list and manager-only material is therefore unchecked by this node, and
@@ -603,10 +603,12 @@ checking it is available only to the manager.
 - **The multi-question payload shape** → minted as [node
   259](259-a-multi-question-payload-has-no-per-question-ground.md).
 
-`248.6` `MANAGER-WRONG` — ***Filed by the manager against itself.*** This node's `## Question`, written by the
+`248.6` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself.*** This node's `## Question`, written by the
 manager, said that commit `70ac77c` *"also added a third trigger bullet"*. **It did not.** That bullet came from the
 earlier commit `a70fb82`, and what `70ac77c` actually did to the trigger list was **delete** a bullet — the
 retrospective duty — which this node's answer then had to establish and put to the human as its correction (e). The
 manager described a diff instead of carrying it, described it wrongly, and pointed the worker at one of the file's
 two recent commits, so that the second was found only because the worker ran `git log` out of habit. Its words,
 `verbatim`: *"Reviewing a file on the strength of one of its two recent commits is reviewing half of it."*
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

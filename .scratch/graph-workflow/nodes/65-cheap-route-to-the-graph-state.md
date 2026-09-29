@@ -1,7 +1,7 @@
 # A worker has no cheap route to the graph's live state
 
 Type: grilling
-Status: open
+Status: out-of-scope
 
 ## Question
 
@@ -48,3 +48,7 @@ Reported by node 59's worker in the first retrospective filed under the human's 
 judged the other three answers of that retrospective actionable without a node — two were the manager's own filing
 discipline, one was a stale figure — and this one not: it is a gap with no owner, and deciding it means choosing
 between four places to put the fix.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

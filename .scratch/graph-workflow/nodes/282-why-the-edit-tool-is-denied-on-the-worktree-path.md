@@ -1,9 +1,15 @@
 # Why the `Edit` tool is denied on the worktree path, and what the route must say
 
 Type: research
-Status: open
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+Discharged with no edit at node 366's triage: the Edit denial no longer reproduces: about 78 of 79 recent Edit or Write calls on worktree paths succeeded.
+
+*The manager's note:* resolved rather than superseded because no node made it moot, under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q1 (`verbatim`: *"ok"*). See flag 366.1.
 
 ## Question
 

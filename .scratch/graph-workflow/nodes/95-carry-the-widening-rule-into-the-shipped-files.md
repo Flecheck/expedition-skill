@@ -167,7 +167,7 @@ is filing them unedited:*
 
 ## Flags
 
-`95.2` `ASSUMPTION` — *The worker's own text, pasted.* **Wrote clause 5's marking requirement in a wider form than
+`95.2` `ASSUMPTION` **· settled** — *The worker's own text, pasted.* **Wrote clause 5's marking requirement in a wider form than
 clause 5 states.** Clause 5 demands the section say an amendment is *"marked as the manager's own"*. Clause 1, as
 amended, admits an amender who is not the manager, so the literal wording would require a falsifying party's
 amendment to be marked as the manager's, which is false and would collide with clause 1 in the same section. I wrote
@@ -175,17 +175,17 @@ amendment to be marked as the manager's, which is false and would collide with c
 the wider one, and which is node 252's own restatement of node 82's guard 2. Not raised, because the condition is
 satisfiable as written by the wider form and the narrower one is contained in it.
 
-`95.3` `ASSUMPTION` — *The worker's own text, pasted.* **Added node 252's unclaimed-only boundary to both files,
+`95.3` `ASSUMPTION` **· settled** — *The worker's own text, pasted.* **Added node 252's unclaimed-only boundary to both files,
 which no clause names.** The new text opens in each file by saying it reaches a node nobody holds yet and that a
 condition under a live worker goes to the human by the raise and no other route. No clause asks for it; node 252's
 answer fixes it, and without it the new material reads as contradicting the manager contract's `What is never yours`
 row on rewriting a condition, which clause 8 forbids me to touch.
 
-`95.4` `ASSUMPTION` — *The worker's own text, pasted.* **Read clause 5's *"beside the search that justified it"* as
+`95.4` `ASSUMPTION` **· settled** — *The worker's own text, pasted.* **Read clause 5's *"beside the search that justified it"* as
 adding a place rather than fixing one.** Written as *"beside the search or the fact that justified it"*, node 82's
 pen being fired by a search and node 252's by a fact.
 
-`95.5` `MANAGER-WRONG` — ***Filed by the manager against itself, and the worker's diagnosis is the repair.*** **When
+`95.5` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself, and the worker's diagnosis is the repair.*** **When
 the manager amended clauses 1 and 2 of this condition under node 252's rule, it did not sweep clause 5, which
 transcribes the same source — node 82's guard 2 — and which the amendment of clause 1 falsified.** The condition
 therefore shipped to its worker carrying **two statements of one rule at two different dates**, and the worker paid
@@ -194,7 +194,7 @@ shortfalls"*; it had in fact opened a fourth. **The worker's generalisable form,
 carry forward:** *"an amendment that repairs one clause should say whether it checked the clauses that transcribe
 the same source."*
 
-`95.6` `MANAGER-WRONG` — ***Filed by the manager against itself.*** The spawn asserted that **nineteen** open nodes
+`95.6` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself.*** The spawn asserted that **nineteen** open nodes
 edit `graph-conventions.md`. The worker measured **27** whose `## Acceptance condition` names that path. **The two
 numbers do not measure the same thing** — the manager's came from node 264's worker counting nodes that edit the
 file, the worker's from counting conditions that name it — but **the manager passed a number on as a fact of its own
@@ -551,3 +551,7 @@ and it is named for the human in node 252's pick report. **This node is also the
 answer** that a permission can be granted and never exercised.
 
 *The manager's note, 2026-09-26:* [node 311](311-may-the-human-amend-a-held-nodes-condition-of-their-own-accord.md) reports that it contradicts part of this node's landed work: flag 95.3's unclaimed-only boundary was applied in `graph-conventions.md` to the human as well as to the two agents, and it holds only for the agents. The fix is [node 321](321-remove-graph-conventions-limit-on-the-human-amending-a-held-nodes-condition.md). The rest of this node's work stands.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.
+
+`95.1` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.

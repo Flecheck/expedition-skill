@@ -1,7 +1,7 @@
 # Twenty legacy flags have no ids, and the check reports a false failure every run
 
 Type: implementation
-Status: open
+Status: out-of-scope
 
 ## Question
 
@@ -58,3 +58,7 @@ work, stated wherever it is stated now. The working tree meets the bar.
 The manager, at [Write the first version of the manager's skill](76-write-the-manager-skill.md)'s close, having
 watched the same false failure print on every check run for a day and having told the human twice that it was noise
 to ignore. **Telling someone to ignore a check's output twice is the reason this is a node.**
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

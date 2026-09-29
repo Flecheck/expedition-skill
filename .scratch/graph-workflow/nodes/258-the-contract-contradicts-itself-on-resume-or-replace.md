@@ -49,7 +49,7 @@ record of it is on that node, corrected from an earlier entry that called the at
 
 - **Clause 1.** Its target, "the vocabulary entry for `attempt`" in `SKILL.md`, no longer exists. Replacement: "**1.** In `.claude/skills/expedition/SKILL.md`, the `## Words used exactly` section, which today states *"A worker is resumed in place rather than replaced."*, states instead that a dead attempt is resumed where the harness allows and replaced only where it does not, and that a replacement is a new attempt recorded after the one it replaces." Clauses 2 and 3 are unchanged. Clause 2 is now where most of the fix lands, because `SKILL.md` takes its `attempt` definition from `CONTEXT.md`.
 
-`258.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 296](296-rewrite-the-manager-contract-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6745f37` or by `CONTEXT.md`.
+`258.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 296](296-rewrite-the-manager-contract-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6745f37` or by `CONTEXT.md`.
 
 *The manager's note, 2026-09-26:* [node 328](328-group-the-open-nodes-against-the-glossary.md)'s C8, taken by the human's "ok", leaves the conflict on the **Attempt** entry (this node's rewrite says "replaced only where it does not", while node 123 sends a user-stopped worker to the human) to the manager-contract grouping, [node 330](330-group-the-open-nodes-against-the-manager-contract.md).
 
@@ -58,3 +58,5 @@ record of it is on that node, corrected from an earlier entry that called the at
 ## Superseded, 2026-09-26
 
 *The manager's note.* Replaced by [node 124](124-a-procedure-for-stopping-a-running-worker.md), whose condition, drafted by [node 341](341-draft-one-condition-for-nodes-120-124-and-258.md)'s worker and approved by the human's "ok", carries this node's demands tagged with its number.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

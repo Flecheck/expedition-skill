@@ -1,7 +1,7 @@
 # Whether the AFK passes move to the dynamic-workflow runtime
 
 Type: grilling
-Status: open
+Status: out-of-scope
 
 ## Question
 
@@ -34,3 +34,7 @@ with a known constraint, which is the threshold for a node."*
 **If it resolves in favour, it invalidates [Cascade pass mechanics](15-cascade-pass-mechanics.md)**, whose answer
 specifies a per-resolution triage agent fanning out to node-minting agents — the exact shape that runtime would
 host differently.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

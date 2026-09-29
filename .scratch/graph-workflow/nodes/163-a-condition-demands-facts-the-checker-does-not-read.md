@@ -148,7 +148,7 @@ instruction is right, and it was surfaced by a worker that could see the collisi
 *All three are the worker's own text, pasted. The ids and the links are the manager's bookkeeping and nothing else.
 The round that produced them is `## Interview`, attempt 2.*
 
-`163.1` `ASSUMPTION` — **which map file carries the rule.** The human said *"the rules in the map
+`163.1` `ASSUMPTION` **· settled** — **which map file carries the rule.** The human said *"the rules in the map
 somewhere"* and left the file open; the map is more than one file. I settled it as
 `map-implementation-rules.md` rather than `map.md` or its ground-rules block, on three
 things already written: it is the one map file node 143's contract sends the checker
@@ -159,7 +159,7 @@ it is copied into every checker spawn on every node, so a rule needed by record 
 only would be paid for by all of them, and node 42's test for that route is a standing
 constraint on *the work*, which this is not.
 
-`163.2` `ASSUMPTION` — **the shipped "open no other file beside it" reads as governing the
+`163.2` `ASSUMPTION` **· settled** — **the shipped "open no other file beside it" reads as governing the
 standards route only.** Node 143 landed that sentence inside `## The standards you hold
 the work against`, while given 3 hands the checker the changed paths by a separate
 route. I read the sentence as bounded by its section, which makes this effort's rule a
@@ -168,7 +168,7 @@ of it. Read the other way — as a genuine ban on opening any file in the effort
 directory — the map could not lift it and every record node would owe a raise. I
 believe the bounded reading and I have not put it to the human.
 
-`163.3` `ASSUMPTION` — **the guard became a check-time rule instead of a duty on the condition's
+`163.3` `ASSUMPTION` **· settled** — **the guard became a check-time rule instead of a duty on the condition's
 writer.** My question to the human recommended requiring every writer of such a
 condition to exclude the node's status line, `decisions.md` and `flags.md` in the
 condition's own text. A condition is written by a worker of any kind, and none but the
@@ -426,3 +426,5 @@ and the worker's own contract forbids it to write a graph file.*
 **(3) What would have made this easier.** *In the spawn:* the manager's note said node 143 had landed and framed that as removing a **collision** on a file. Its real effect was to **falsify the previous attempt's central finding** — that the blindfold was "against a second statement of intent, not a directory". A note that says what a landing changed in the text this node reasons about is worth much more than one saying a file is now free. *In the node file:* attempt 1's banked block is presented as durable measurement with no marker of when it was measured. A banked block from a dead attempt should carry the commit or date it was taken at, so the next attempt knows what to re-verify rather than having to suspect all of it. *In the record:* there is no index of the open frontier. `decisions.md` indexes what is resolved; nothing indexes what is open, so "how many live nodes does this bite" costs a read of the whole nodes directory — and that question is asked by every node whose subject is a rule. *In the contract:* the "If you are a replacement attempt" section says every question answered in the earlier record is a settled fact. Attempt 1 had no answered questions, only unverified findings, and the contract says nothing about how far to trust a dead attempt's *measurements*. One line distinguishing a settled answer from a banked finding would have told me directly what I spent the first third of this node working out.
 
 **(4) Stale, wrong, or contradictory.** Attempt 1's headline finding — "the blindfold is already narrower than it reads … not against a directory" — was true when written and is **false of the shipped text today**; node 143 made it a directory ban, and it sits on the node file unqualified. The node file's manager note asserts that 163 and 164 "do not overlap"; that was contingent on an answer nobody had — while my recommendation stood they would have collided on the same heading of the same file, and it is the human's answer that made the note true. Inside the shipped checker contract, given 3 ("the paths that changed") and "open no other file beside it" contradict each other on a record node; that is this node's whole subject, but it is a live contradiction in a shipped file right now. And `map-implementation-rules.md` warns that a paragraph saying *below* may point into `map.md`, then does exactly that in its review-route paragraph — "the human's standing direction below" resolves nowhere in the file node 143 now sends the checker to. I checked before surfacing it: node 144 is claimed and is that repair, so I raised no node for it.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

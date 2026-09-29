@@ -52,7 +52,7 @@ shipped contract may assume one; anything built on this answer is this effort's 
 
 *The worker's own text, pasted. The id is the manager's bookkeeping and nothing else.*
 
-`217.1` **· outstanding** `ASSUMPTION` — **SessionStart source field contains "compact" vs other values without further subdivision.** The matcher values `startup`, `resume`, `clear`, `compact`, `fork` are stated as mutually exclusive options, and no subdivision of "compact" into manual/auto is documented for SessionStart, though PreCompact and PostCompact matchers do support `manual`/`auto`. The SessionStart event schema input does not specify a field that would allow a hook to determine whether "compact" compaction was manual or automatic.
+`217.1` **· settled** `ASSUMPTION` — **SessionStart source field contains "compact" vs other values without further subdivision.** The matcher values `startup`, `resume`, `clear`, `compact`, `fork` are stated as mutually exclusive options, and no subdivision of "compact" into manual/auto is documented for SessionStart, though PreCompact and PostCompact matchers do support `manual`/`auto`. The SessionStart event schema input does not specify a field that would allow a hook to determine whether "compact" compaction was manual or automatic.
 
 ## Answer
 
@@ -384,3 +384,5 @@ silence"*. **The manager has marked neither finding as a correction to the answe
 answer did not draw rather than about what it got wrong, and a resolved node's answer is not the manager's to
 rewrite. Whether `.claude/rules/` in fact reloads across a compaction is what the human's own condition —
 *"if the rules don't work"* — leaves to observation.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

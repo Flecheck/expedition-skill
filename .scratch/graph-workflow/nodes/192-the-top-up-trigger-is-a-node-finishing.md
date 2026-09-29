@@ -86,3 +86,7 @@ effort**, after the one that minted this node and one during the shipping backlo
 ## Superseded, 2026-09-26
 
 *The manager's note.* Made unnecessary by [node 100](100-the-manager-starts-the-next-node-rather-than-proposing-it.md)'s landed work (`47703bb`): `### Picking the next node` already says "When a node finishes, pick the next one, spawn its worker" and "When a node finishes, start enough work to bring every count back up". Node 330's worker recommended superseding it and the human took that with their "ok".
+
+`192.1` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

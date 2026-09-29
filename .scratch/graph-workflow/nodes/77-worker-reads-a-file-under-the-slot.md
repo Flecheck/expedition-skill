@@ -1,9 +1,12 @@
 # What a worker does when a file it must read is held by the code slot
 
 Type: grilling
-Status: open
+Status: superseded
+Superseded by: 68
 
 ## Question
+
+*Superseded 2026-09-29: this question no longer needs doing here. See `## Superseded, 2026-09-29` below.*
 
 The code slot is separate from the interview slots, so a non-code worker runs alongside an implementation node.
 **Nothing says what that worker does when a file it must read is being edited by the slot's occupant.**
@@ -30,3 +33,7 @@ territory of several open nodes, so it must be **sequenced** against them rather
 
 Reported by node 75's worker, in the answer that gathered the manager's duties — item 179 of §Q2, *practice the
 manager adopted on its own authority*.
+
+## Superseded, 2026-09-29
+
+*The manager's note:* superseded by [node 68](68-implementation-in-a-worktree.md), under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q1 (`verbatim`: *"ok"*, recorded on node 366). Node 366's worker's reason: with worktrees, every worker reads a consistent snapshot (node 68).

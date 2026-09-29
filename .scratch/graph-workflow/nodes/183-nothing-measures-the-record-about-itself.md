@@ -213,7 +213,7 @@ statement that currently binds.
 
 **None of them is settled.** The human's `ok` closed this node's two questions before these flags existed, so no human moment has reached them; they reach the human at the pick report.
 
-`183.1` **· outstanding** `ASSUMPTION`
+`183.1` **· settled** `ASSUMPTION`
 
 **I settled that the two reported problems separate, and that one remedy serves both,
 rather than putting the split to the human.** The spawn left the separation to me. I read the six
@@ -228,7 +228,7 @@ measurement.
   *Index:* Node 183 settled on its own that the measurement and retrieval halves of the reported item
   are two problems with one remedy, and treated both, the item's wording naming only measurement.
 
-`183.2` **· outstanding** `ASSUMPTION`
+`183.2` **· settled** `ASSUMPTION`
 
 **I dissolved the "no index of open nodes" gap by measurement instead of asking whether
 one was wanted.** The node's `## Question` carried it as a finding needing an answer. Listing the
@@ -240,7 +240,7 @@ standing frontier index for its own sake rather than for cost, that was not aske
   *Index:* Node 183 refused an index of open nodes on measured cost — 4,381 bytes to derive the
   frontier against roughly 24,500 to maintain an index that would itself go stale.
 
-`183.3` **· outstanding** `ASSUMPTION`
+`183.3` **· settled** `ASSUMPTION`
 
 **I settled that the mint-a-node-on-the-second-report rule does not work, by its own
 stated test, without putting it to the human.** Flag `141.3` wrote the falsifier itself: *"a later
@@ -252,7 +252,7 @@ in the index.
   *Index:* Node 183 found the mint-on-second-report rule defeated by the falsifier flag 141.3 wrote for
   itself, the item having now been reported six times with three missed.
 
-`183.4` **· outstanding** `ASSUMPTION`
+`183.4` **· settled** `ASSUMPTION`
 
 **I placed the derivations outside the seven graph files on my own judgement, where node
 141 had refused a seventh file for a related purpose.** The derivations are a tool for reading the
@@ -265,7 +265,7 @@ the effort's directory as an eighth file whatever it is called.**
   *Index:* Node 183 placed the derivations in the effort directory outside the seven enumerated graph
   files, to avoid an eighth graph file forcing a change to a shipped file's structure.
 
-`183.5` **· outstanding** `ASSUMPTION`
+`183.5` **· settled** `ASSUMPTION`
 
 **I applied the map's default that a rule binds this effort only, rather than spending a
 question on whether the two properties ship.** I had that question drafted and never asked it, because
@@ -278,7 +278,7 @@ was not asked.
   *Index:* Node 183 left the derive-don't-store and dated-number properties binding this effort only
   under the map's default, without asking, noting the human has twice recently shipped against it.
 
-`183.6` **· outstanding** `ASSUMPTION`
+`183.6` **· settled** `ASSUMPTION`
 
 **I did not treat the mechanical checks having no trigger as this node's to fix.** I found
 that `graph-conventions.md` lists ten checks, that *"Mechanical checks"* appears nowhere else under
@@ -532,3 +532,5 @@ exists to catch and nothing runs.
 
 **On the contract, as it requires me to report:** I invoked no method skill, so I left no part of one
 unrun. Nothing in this node put the hard rules in tension with anything else.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

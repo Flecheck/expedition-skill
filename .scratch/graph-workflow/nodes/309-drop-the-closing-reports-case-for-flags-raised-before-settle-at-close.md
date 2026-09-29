@@ -102,4 +102,6 @@ The human, `verbatim`: *"approve"*
 
 ## Flags
 
-`309.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 312](312-cut-the-rules-both-the-manager-contract-and-graph-conventions-state.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `e64b3de`.
+`309.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 312](312-cut-the-rules-both-the-manager-contract-and-graph-conventions-state.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `e64b3de`.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

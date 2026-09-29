@@ -1,7 +1,7 @@
 # Which trees get the read-only `.claude/skills` overlay
 
 Type: research
-Status: open
+Status: out-of-scope
 
 Blocked by: none
 
@@ -28,3 +28,7 @@ worktree was outside the session's region. So the rule as recorded predicts the 
 this node is what would make the prediction sound.
 
 **The sources are this machine's own mount table and the harness's behaviour**, both readable without the human.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

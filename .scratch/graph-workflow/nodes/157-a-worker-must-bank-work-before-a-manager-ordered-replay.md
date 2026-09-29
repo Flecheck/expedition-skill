@@ -1,11 +1,14 @@
 # A worker has no permitted way to bank its work when the manager orders a replay
 
 Type: grilling
-Status: open
+Status: superseded
+Superseded by: 265
 
 Blocked by: none
 
 ## Question
+
+*Superseded 2026-09-29: this question no longer needs doing here. See `## Superseded, 2026-09-29` below.*
 
 *Minted by the manager as the permanent fix its own contract requires after a licence. The question below is the
 manager's own.*
@@ -32,3 +35,7 @@ departure at all, which its contract already answers — it may not, it raises i
 produces two things, always both: a flag on the node, and a node for the permanent fix. The flag is `140.8`. This is
 the node. **The licence itself was never granted** — the manager acted without asking — so this node is filed late
 and against a breach rather than against a licence.
+
+## Superseded, 2026-09-29
+
+*The manager's note:* superseded by [node 265](265-should-the-worktree-route-drop-enterworktree-for-git.md), under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q1 (`verbatim`: *"ok"*, recorded on node 366). Node 366's worker's reason: under node 265's landing route the manager banks the work, so a worker never needs to commit.

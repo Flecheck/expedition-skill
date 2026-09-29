@@ -247,3 +247,16 @@ banked whole in [map-history.md](map-history.md).**
   does that lexical search cannot. What would settle it: such a report, after the search-the-record instruction has
   landed. Held by nothing but this line and the manager reading it.
 - **`decisions.md`'s read-whole status is re-offered through [node 185](nodes/185-a-spawn-does-not-scope-the-decisions-index.md).** [Node 358](nodes/358-whether-decisions-mds-size-trigger-is-re-offered-or-retired.md) retired the size trigger that stood here: the file passed it unwatched, and spawns already name the lines a worker reads.
+- [Node 62](nodes/62-afk-passes-on-the-workflow-runtime.md) — moving the AFK passes onto the workflow runtime. Speculative, with no measured failure behind it; ruled out at node 366. *(Node 366's worker's text.)*
+- [Node 63](nodes/63-cost-accounting-out-of-scope.md) — narrowing this effort's own cost-accounting out-of-scope line. It concerns this effort's scope wording only; node 366. *(Node 366's worker's text.)*
+- [Node 83](nodes/83-periodic-open-ended-review.md) — a periodic open-ended review. The human marked it low priority, and it is ruled out at node 366. *(Node 366's worker's text.)*
+- [Node 84](nodes/84-check-your-own-diff-against-the-glossary.md) — checking one's own diff against the glossary headwords. It pays off mostly on this self-hosting effort; node 366. *(Node 366's worker's text.)*
+- [Node 104](nodes/104-recovered-directory-is-a-sixth-file-kind.md) — whether `recovered/` is a file kind. A single use, now finished; node 366. *(Node 366's worker's text.)*
+- [Node 125](nodes/125-checker-baseline-rerun-of-an-enumerator.md) — a checker re-running an enumerator's baseline. It would only improve diagnosis; node 366. *(Node 366's worker's text.)*
+- [Node 180](nodes/180-which-trees-get-the-read-only-skills-overlay.md) — which trees get the read-only skills overlay. Now predictable from the sandbox settings; node 366. *(Node 366's worker's text.)*
+- [Node 182](nodes/182-whether-map-sections-are-priced-by-the-shadow-instrument.md) — pricing map sections with the shadow instrument. The instrument never shipped, and node 345 already cut the map; node 366. *(Node 366's worker's text.)*
+- [Node 251](nodes/251-the-managers-own-session-cannot-write-parts-of-the-record.md) — what the manager's own session cannot write. Measured piecemeal by later landings; node 366. *(Node 366's worker's text.)*
+- [Node 232](nodes/232-state-the-two-never-delete-tests-in-the-map.md) — stating the two never-delete tests in `map.md`. The shipped `graph-conventions.md` already states them; node 366. *(Node 366's worker's text.)*
+- [Node 88](nodes/88-twenty-legacy-flags-have-no-ids.md) — twenty legacy flags with no ids. The check that produced the false failure no longer exists; node 366. *(Node 366's worker's text.)*
+- [Node 65](nodes/65-cheap-route-to-the-graph-state.md) — a cheap route to the graph state. `frontier.sh` ships; node 366. *(Node 366's worker's text.)*
+- [Node 221](nodes/221-file-the-ten-retrospectives-never-written-down.md) — filing ten missing retrospectives. Of little use now. The text is recoverable from the worker transcripts under `~/.claude/projects/-home-mathieu-projects-graph-agent/0e2d7caf-7b86-4009-bb71-5e76adb6ec22/subagents/`, so the loss the node assumed did not happen; node 366. *(Node 366's worker's text.)*

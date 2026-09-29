@@ -1,7 +1,7 @@
 # File the ten retrospectives that were returned and never written down
 
 Type: implementation
-Status: open
+Status: out-of-scope
 
 Blocked by: none
 
@@ -73,3 +73,7 @@ and recorded the void ground in the answer instead.
 
 **Its clause 2's second branch is the honest form of a loss**: one line saying a retrospective was returned, was not
 filed, and does not survive — rather than a silent gap.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

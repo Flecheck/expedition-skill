@@ -254,7 +254,7 @@ manager is recording that limit rather than letting the fit read as a proof.
 
 ## Flags
 
-`277.1` `ASSUMPTION` — *The worker's own text, pasted.*
+`277.1` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > The acceptance condition's clause 2 fixes the rule's trigger as *"the sandbox holds two bind mounts per live
 > worktree"*. Three live worktrees and two throwaway probes measured that claim false, so the bullet states the
@@ -263,7 +263,7 @@ manager is recording that limit rather than letting the fit read as a proof.
 > both times and directed the wording, and the departure from clause 2 is filed against the condition rather than
 > against the work. Every other clause is met as written.
 
-`277.2` `CONDITION-WRONG` — ***Filed by the manager against its own condition, as it told the worker it would.***
+`277.2` `CONDITION-WRONG` **· settled** — ***Filed by the manager against its own condition, as it told the worker it would.***
 **Clause 2 of this condition asserts a mechanism the manager had measured badly and stated as fact.** The worker
 refuted it, raised rather than shipping it, and was right both times. **The manager's own note at filing already
 held the doubt** — it recorded that node 269's removal succeeded sandboxed *"for a reason nobody has established"*
@@ -470,3 +470,5 @@ node's own finding**. Commit recorded in the gate line below.
 **Neither of the checker's two questions is settled by the approval**, and both stay open: whether clause 2's
 condition wording should be amended, and whether a seven-observation tally belongs in a binding map file or in
 `map-history.md`.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

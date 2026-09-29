@@ -272,3 +272,7 @@ record side: node 207 carried `Status: superseded` with no `Superseded by:` fiel
 `Supersedes:`. Both edges are now written, per the field forms in `graph-conventions.md`. That was caught by [node
 213](213-nothing-triggers-the-ten-mechanical-checks.md)'s first-ever live run of the mechanical checks, not by this
 node.
+
+`207.1` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

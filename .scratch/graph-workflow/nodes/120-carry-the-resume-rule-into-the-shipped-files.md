@@ -117,7 +117,7 @@ after this node on its own author's instruction.
 
 - **Clause 4.** It quotes the `CONTEXT.md` `attempt` entry as "…a new attempt recorded after it." That wording was only `SKILL.md`'s, and this work removes it. Replacement for the quoted sentence: "`CONTEXT.md`: the `attempt` entry reads "A node outlives its attempts: a dead worker is replaced, and the replacement is a new attempt."" The rest of clause 4 is unchanged.
 
-`120.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 296](296-rewrite-the-manager-contract-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6745f37` or by `CONTEXT.md`.
+`120.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 296](296-rewrite-the-manager-contract-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6745f37` or by `CONTEXT.md`.
 
 ## Amendment, 2026-09-26 (from node 302)
 
@@ -125,7 +125,7 @@ after this node on its own author's instruction.
 
 - **Clause 4, as amended from node 296.** "`CONTEXT.md`: the `attempt` entry reads "A node outlives its attempts: a dead worker is replaced, and the replacement is a new attempt."" becomes "`CONTEXT.md`: the `Attempt` entry reads "A node lasts longer than any of its attempts: a worker that dies is replaced, and the replacement is a new attempt."" The rest of clause 4 is unchanged and still applies.
 
-`120.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 302](302-rewrite-the-glossary.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `de347dc`.
+`120.2` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 302](302-rewrite-the-glossary.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `de347dc`.
 
 *The manager's note, 2026-09-26:* [node 123](123-who-performs-a-stop.md) decided that where a resume fails because the human stopped the agent, the fallback is a question to the human, not an automatic replacement. Its worker's words on this node: "The two do not conflict if node 120's worker does not write "replace" as the unconditional fallback for the user-stopped case."
 
@@ -136,3 +136,5 @@ after this node on its own author's instruction.
 ## Superseded, 2026-09-26
 
 *The manager's note.* Replaced by [node 124](124-a-procedure-for-stopping-a-running-worker.md), whose condition, drafted by [node 341](341-draft-one-condition-for-nodes-120-124-and-258.md)'s worker and approved by the human's "ok", carries this node's demands tagged with its number.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

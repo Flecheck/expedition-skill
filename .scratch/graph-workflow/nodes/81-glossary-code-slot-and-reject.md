@@ -119,7 +119,7 @@ ended at the human for a decision neither needed.
 
 ## Flags
 
-`81.1` `ASSUMPTION` — **The manager amended a condition written by another node's worker.** Licensed by the human in
+`81.1` `ASSUMPTION` **· settled** — **The manager amended a condition written by another node's worker.** Licensed by the human in
 one line, *"For 81, fix it"*, for this node only. The departure is from node 39's rule that a worker-minted node's
 condition stays the minting worker's; the amendment's content decides nothing, being node 74's already-shipped
 wording copied across, so what is at risk is the precedent rather than this node's standard. The alternative on the
@@ -141,7 +141,7 @@ be a second departure to cover the first.*
 
 *The manager's note:* the worker reported that the sentence *"You do not hold the code slot."* is byte-identical in the after-text, and that the rest of hard rule 1 now reads "Put everything you build in `prototypes/NN-<name>/`. Keep all of it out of the product tree, and make none of it product code."
 
-`81.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 293](293-rewrite-the-prototype-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6d26be1`.
+`81.2` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 293](293-rewrite-the-prototype-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6d26be1`.
 
 ## Amendment, 2026-09-26 (from node 302)
 
@@ -154,10 +154,12 @@ be a second departure to cover the first.*
 
 *The manager's note:* the worker reported that the quoted *"The word is the human's alone; the checker's outcomes are `PASS` and `FAIL`"*, the `Code slot` entry, and both `_Avoid_` lines are byte-identical, so entries 1 and 3 need nothing.
 
-`81.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 302](302-rewrite-the-glossary.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `de347dc`.
+`81.3` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 302](302-rewrite-the-glossary.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `de347dc`.
 
 *The manager's note, 2026-09-26:* the human's "ok" to [node 328](328-group-the-open-nodes-against-the-glossary.md)'s C1(a) splits this node: its entries 1 and 2 are carried by [node 332](332-repair-the-glossarys-code-slot-reject-kinds-grilling-and-closed-text.md), and its entry 3 (the prototype contract's `code slot` line) goes to the worker-contracts merge proposed by [node 329](329-group-the-open-nodes-against-the-worker-contracts.md), which is still before the human. This node is superseded by both once that merge is filed.
 
 ## Superseded, 2026-09-26
 
 *The manager's note.* Its entries 1 and 2 are replaced by [node 332](332-repair-the-glossarys-code-slot-reject-kinds-grilling-and-closed-text.md) (node 328's C1(a)), and its entry 3 by [node 333](333-land-the-open-repairs-to-the-five-worker-contracts-in-one-change.md) (node 329's option O4), both on the human's "ok".
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

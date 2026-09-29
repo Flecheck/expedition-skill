@@ -203,7 +203,7 @@ region a session actually holds is wider than the text it is shown.
 
 ## Flags
 
-`250.1` `MANAGER-WRONG` — ***Filed by the manager against itself.*** The manager told the human twice that it had
+`250.1` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself.*** The manager told the human twice that it had
 changed its spawns to set each worker's working directory, and wrote the same claim into this node's own
 `## The manager's note at filing`. **It had not, and it cannot as a parameter**: the spawning tool takes no working
 directory. What actually determines a worker's working directory is **the manager's own shell working directory at
@@ -222,13 +222,13 @@ before every single spawn, and any account of it as a thing arranged once is wro
 the routing key for this node's worker, and it is the third statement the manager has made about this mechanism
 that measurement has corrected.
 
-`250.2` `ASSUMPTION` — *The worker's own text, pasted.*
+`250.2` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > The condition names "the section headed `How the worktree is made`". That is a bold lead-in paragraph inside
 > `## Landing an implementation node's work`, not a markdown heading, and I treated it as the section it names — the
 > only candidate in the file. A checker searching for a markdown heading of that name will not find one.
 
-`250.3` `ASSUMPTION` — *The worker's own text, pasted. **Widened by its author after the checker's run 1**, to cover
+`250.3` `ASSUMPTION` **· settled** — *The worker's own text, pasted. **Widened by its author after the checker's run 1**, to cover
 the repair as well; the original stands struck beside it and nothing is removed.*
 
 > ~~I judged the condition's supersession clause not to fire, on the ground that it reaches text stating a
@@ -240,14 +240,14 @@ the repair as well; the original stands struck beside it and nothing is removed.
 > clause removed at the checker's finding is not banked either: it was never in the map, and that file holds
 > superseded text only.
 
-`250.5` `ASSUMPTION` — *The worker's own text, pasted. Raised at the repair, on a disagreement the manager invited.*
+`250.5` `ASSUMPTION` **· settled** — *The worker's own text, pasted. Raised at the repair, on a disagreement the manager invited.*
 
 > The `EnterWorktree` doc disclaimer — *"read as a rule about workers it predicts the opposite of what node 250
 > measured"* — **I judge a trigger and it stays.** It is not how the rule was learned; it is a live warning about a
 > live source the worker is told to call and will therefore read, telling it the condition under which the doc's
 > sentence does not apply. That is the convention's own definition of a trigger.
 
-`250.4` `CONDITION-WRONG` — ***Filed by the manager, whose text this is.*** The worker asked for it by name and did
+`250.4` `CONDITION-WRONG` **· settled** — ***Filed by the manager, whose text this is.*** The worker asked for it by name and did
 not write it, that being the manager's to file. **Three of this condition's six clauses are measured false and the
 work departs from them deliberately**: clause 2's second half (the `EnterWorktree` call is what gives the worker
 permission to write the tree), clause 6 (only the most recently entered worktree is writable to a worker that has
@@ -649,3 +649,5 @@ answer's own test, so a reader can check it rather than take it:
 meets a condition the work already satisfies, rather than the trap two checkers independently failed the work
 against. **Flag `250.4` stays open**: the amendment settles the text, not the judgement the human may still want to
 revisit.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

@@ -140,20 +140,20 @@ are edited by node 258 and by node 260's gated work. **Two workers must not hold
 
 *All three are the worker's own text, pasted.*
 
-`267.1` `ASSUMPTION` — The condition's clause 3 says *"every agent in flight is still working"*. Taken literally
+`267.1` `ASSUMPTION` **· settled** — The condition's clause 3 says *"every agent in flight is still working"*. Taken literally
 that is a liveness check, and the same contract states that death is discovered only by a resume that fails — so a
 literal reading would oblige the manager to attempt a resume against every running agent before every stop. I
 shipped the condition's phrase and immediately rendered it as *what an agent handed back that you have not filed,
 relayed or acted on*, closing with *"never whether each agent is alive"*. **The operational content is the same and
 the cost is not.**
 
-`267.2` `ASSUMPTION` — Clause 4 asks for the two additions *"in the file's own terse register"*, which reads as
+`267.2` `ASSUMPTION` **· settled** — Clause 4 asks for the two additions *"in the file's own terse register"*, which reads as
 licence to word the rules file's copy differently. **I kept them word for word identical instead.** Node 255
 established that the rules file is a copy of the skill's governing statement, and that file's own closing section
 says so, so divergence would have broken a property a resolved node set and the file advertises — **and the
 compaction-survival copy is exactly where the enumeration must survive.**
 
-`267.3` `ASSUMPTION` — The closing sentence — *"the last line of what you send says what they are to act on"* — is
+`267.3` `ASSUMPTION` **· settled** — The closing sentence — *"the last line of what you send says what they are to act on"* — is
 the shipping of a rule that **open node 96** owns. I wrote it anyway: it is the human's own mechanism in this node's
 question, and **without it the check has no moment at which it fires**, leaving a fifth statement of a state the
 manager is supposed to believe. It is scoped to the check rather than stated as a general duty on every report, so
@@ -210,7 +210,7 @@ unchanged in meaning is met, that section being cited and not edited.
 - **`map.md`'s `## Notes`, tenth report; the review-route paragraph, seventh** → node 246 holds the first; the
   second is still unheld and the manager has now named it seven times.
 
-`267.4` `MANAGER-WRONG` — ***Filed by the manager against itself.*** **It minted this node from the human's
+`267.4` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself.*** **It minted this node from the human's
 direction without establishing whether the rule was already settled.** It was: [node
 108](108-what-leaves-the-channel-free.md) resolved it, and [node
 118](118-offer-a-written-question-the-moment-the-channel-is-free.md) has held the shipping, open and unclaimed,
@@ -319,3 +319,5 @@ still holds node 108's unshipped answer, open and unclaimed, and its clauses 2 a
 node landed. **Its condition wants re-reading against the landed text before anyone claims it**, which is this
 node's worker's own warning and is not discharged by the gate. Flag `267.4` records that the manager built this
 second route without checking for the first.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

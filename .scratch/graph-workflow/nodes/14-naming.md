@@ -298,3 +298,5 @@ through both, for the first time.
 
 **Where the glossary sits is now the only part of this node's answer that has moved.** The vocabulary itself, the
 forty refusals, and the rule that the glossary is authoritative are all untouched.
+
+*The manager's note, 2026-09-29:* this node's flags carry no ids, so none can be marked in place. They are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*), by their lines in `flags.md`.

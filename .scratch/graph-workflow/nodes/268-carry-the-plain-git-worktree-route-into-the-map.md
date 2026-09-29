@@ -155,7 +155,7 @@ names it is the narrow path.
 
 ## Flags
 
-`268.1` `ASSUMPTION` — *The worker's own text, pasted.*
+`268.1` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > Two passages that clause 1 does not literally name were amended anyway, because removing the route made them
 > false. The first is the landing policy's path, `.worktrees/NN-<name>/`: clause 1 names *"created by the harness
@@ -167,7 +167,7 @@ names it is the narrow path.
 > what the condition demands and both are the condition's own consequence rather than a decision reaching past this
 > node.**
 
-`268.2` `ASSUMPTION` — *The worker's own text, pasted.*
+`268.2` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > The bullet *"What the reset costs in practice, settled by the human"* was replaced and banked rather than marked
 > in place, although it carries three sentences of the human's verbatim words. Clause 5 sorts by the text's job, and
@@ -432,3 +432,7 @@ sandbox off — a cost the old route paid at a different step, the reset.
 **Filed as flag `268.3`, and the repair is a node** rather than a manager note, because
 [map-manager-only.md](../map-manager-only.md)'s `How the worktree is made` was written by this very node and now
 states a removal step that does not work as written.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.
+
+`268.3` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.

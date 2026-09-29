@@ -1,9 +1,15 @@
 # The dogfood link in `map-manager-only.md` names a path on another machine
 
 Type: grilling
-Status: open
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+Discharged with no edit at node 366's triage: `/home/mathieu/projects/Lang` now exists on this machine, so the link resolves.
+
+*The manager's note:* resolved rather than superseded because no node made it moot, under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q1 (`verbatim`: *"ok"*). See flag 366.1.
 
 ## Question
 

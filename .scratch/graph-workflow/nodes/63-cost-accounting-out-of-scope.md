@@ -1,7 +1,7 @@
 # Whether the out-of-scope line on cost accounting still holds
 
 Type: grilling
-Status: open
+Status: out-of-scope
 
 ## Question
 
@@ -25,3 +25,7 @@ skills reduce their own token cost](52-token-cost-of-a-workflow.md).
 **Why it is a node rather than settled at node 53 with the human present**, in that worker's words: *"narrowing
 an out-of-scope line is a scoping act, and that section's own rule is that nothing in it becomes fog without the
 destination being redrawn. So it is not this node's even with the human present."*
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

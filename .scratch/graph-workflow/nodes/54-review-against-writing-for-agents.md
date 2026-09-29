@@ -192,7 +192,7 @@ index — so nobody is reading `graph-conventions.md`, and that is an argument t
 
 ## Flags
 
-`54.1` `ASSUMPTION` — **It read the upstream standard by downloading it into `$TMPDIR`**, outside the repo and
+`54.1` `ASSUMPTION` **· settled** — **It read the upstream standard by downloading it into `$TMPDIR`**, outside the repo and
 outside the graph, judging that hard rule 1's *"no other file"* governs artifacts rather than the mechanics of
 reading a remote source. In its words: *"rule 1's neighbours — no graph file, the manager as the graph's only
 writer — are all about what a worker produces, and the alternative reading forbids a research node from reading
@@ -202,7 +202,7 @@ bare prohibition with no positive beside it, the positive sitting ~30 lines away
 the same defect node 48's clause 2 repairs for two other sentences, **and that clause names exactly two, not
 this one.**
 
-`54.2` `ASSUMPTION` — **It declined to mint nodes for the two shipped-file findings with no existing home**,
+`54.2` `ASSUMPTION` **· settled** — **It declined to mint nodes for the two shipped-file findings with no existing home**,
 routing the leading-word refactor to node 53 and the bare-prohibition finding to node 48's clause 2. Its
 reasons: whether to spend edits on a leading-word refactor is exactly node 53's judgement; its largest instance
 sits inside the blocks node 50 is deciding; flag `47.2` already priced multiple nodes contending for the same
@@ -249,3 +249,5 @@ whether to prefer a local copy — is settled by the copies being the same bytes
 3. **The store path is machine-specific and changed twice today**, which is the map's own *prefer properties
    that are discovered over commands that are declared* earning its keep for the third time on this one skill.
    Nothing should ever carry that path.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

@@ -324,3 +324,5 @@ three-word restriction on the relay was holding shut.
 - **The scribe rule reaches one more place.** A raise lands under `## Interview` on an implementation node,
   which previously could not have one, and the manager files the human's answer there unaltered like any
   other.
+
+*The manager's note, 2026-09-29:* this node's flags carry no ids, so none can be marked in place. They are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*), by their lines in `flags.md`.

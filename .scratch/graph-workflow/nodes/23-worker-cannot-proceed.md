@@ -431,3 +431,5 @@ is changed.*
 > at risk from this** — the human had already reversed the exclusion of `research` from the raise channel on their
 > own reasoning, and [Give a research node the cannot-proceed raise](57-research-can-raise.md) carries it — but the
 > argument's premise is no longer true as written, and a later reader would otherwise take it as standing.
+
+*The manager's note, 2026-09-29:* this node's flags carry no ids, so none can be marked in place. They are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*), by their lines in `flags.md`.

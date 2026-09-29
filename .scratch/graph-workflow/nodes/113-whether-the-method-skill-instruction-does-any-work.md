@@ -2,6 +2,7 @@
 
 Type: grilling
 Status: resolved
+Supersedes: 51
 
 ## Question
 
@@ -464,7 +465,7 @@ is the party that wrote both texts.*
 
 ## Flags
 
-`113.1` `ASSUMPTION` — **What the human's assent landed on, where its author had retracted a clause in the
+`113.1` `ASSUMPTION` **· settled** — **What the human's assent landed on, where its author had retracted a clause in the
 interval.** Their *"For 113 ok"* reached payload 1; payload 2, carrying my withdrawal of the `## Notes` clause, was
 never delivered to them. I read the assent as settling payload 1 as written, all four clauses included, on the
 contract's rule that an assent makes the offered option theirs and on hard rule 1's bar against answering for them. I
@@ -472,7 +473,7 @@ also judged my own withdrawal overstated: its stated ground was conditional on t
 today and merely expires. I therefore asked nothing back and implemented the clause as endorsed. The human may want
 the reading back, since it is the one place their word and their worker's later judgement diverged.
 
-`113.2` `ASSUMPTION` — **Both method skills were invoked in full, and the parts left unrun are named.** Reading them
+`113.2` `ASSUMPTION` **· settled** — **Both method skills were invoked in full, and the parts left unrun are named.** Reading them
 was this node's own subject, so I invoked rather than declined. From `/grilling` I ran the dependency ordering, the
 recommendation-per-question, and the rule that finding facts is mine; I left unrun its `❓ Q1` round format (the
 contract mandates `ASK:`/`RECOMMENDED:`/`ALTERNATIVES:`), its instruction to wait in-turn for a reply and not act
@@ -480,18 +481,18 @@ until the human confirms (hard rules 2 and 5), and its use of *frontier* (the gl
 `/domain-modeling` I ran only the glossary challenge, leaving unrun the two instructions that write files and the
 four written as speech to the human.
 
-`113.3` `ASSUMPTION` — **`CONTEXT.md` miscounts the contracts that name a method skill.** Its `## The five kinds of
+`113.3` `ASSUMPTION` **· settled** — **`CONTEXT.md` miscounts the contracts that name a method skill.** Its `## The five kinds of
 node` says *"three of them name a skill the worker invokes"*; four do — grilling, research, prototype and
 implementation — and only `precondition` names none, its contract saying so explicitly. I read this as a stale count
 rather than as counting something I could not see. Found by running `/domain-modeling`'s one usable instruction.
 
-`113.4` `ASSUMPTION` — **`CONTEXT.md`'s grilling entry contradicts node 117 and no node covers it.** It still reads
+`113.4` `ASSUMPTION` **· settled** — **`CONTEXT.md`'s grilling entry contradicts node 117 and no node covers it.** It still reads
 *"reached by interviewing them one question at a time"*, which node 117 superseded by adopting several questions in
 one payload. Node 126's acceptance condition names exactly one file,
 `.claude/skills/expedition-grilling/SKILL.md`, so the glossary sits outside its scope. I judged this an uncovered
 cascade miss rather than surviving prose under the never-delete rule, because the glossary is declared authoritative.
 
-`113.5` `ASSUMPTION` — **Payload-2 Q1 was redundant and I treated it as moot rather than asking it.** It asked
+`113.5` `ASSUMPTION` **· settled** — **Payload-2 Q1 was redundant and I treated it as moot rather than asking it.** It asked
 whether research, prototype and implementation owe shipped replacement text; payload 1's endorsed recommendation
 already answered it by making their existing discipline the whole discipline and giving new text to grilling alone. My
 own recommendation on it had been to add nothing, so the reading costs nothing either way.
@@ -542,3 +543,5 @@ were wrong at the moment they were written: the flags had settled with the human
 was five instances rather than four. **That is the third and fourth instance this session of the manager stating more
 in a spawn than the record supported**, after flags `103.8` and the per-question-overhead conflation on node 117.
 The worker corrected both from the files.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

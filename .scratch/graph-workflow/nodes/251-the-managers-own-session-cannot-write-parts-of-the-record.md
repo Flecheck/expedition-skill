@@ -1,7 +1,7 @@
 # The manager's own session cannot write parts of the record or land code without disabling the sandbox
 
 Type: precondition
-Status: open
+Status: out-of-scope
 
 Blocked by: none
 
@@ -37,3 +37,7 @@ claimants to an exception.
 
 **This node is a `precondition` and decides nothing.** Its worker establishes by measurement what is actually
 refused and what route succeeds; what the manager should then do about it is a decision that node does not make.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

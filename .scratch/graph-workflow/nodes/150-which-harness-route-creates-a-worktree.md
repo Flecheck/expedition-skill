@@ -175,13 +175,13 @@ than a risk.
 
 *Each entry is the worker's own prose, pasted. The manager added the id and the marker and nothing else.*
 
-`150.1` `ASSUMPTION` — **The manager entering the worktree was eliminated by this worker rather than put to the human.** Both of its costs are facts rather than preferences: the manager writes the graph to the main tree, so it would be writing every node file, `decisions.md` and `flags.md` from inside a branch that is not `master`; and a session occupies one worktree at a time, so the route would cap the code-slot count at one permanently, undoing the settable count node 68 established. I judged these dispositive and spent the human's one question on the route that remained.
+`150.1` `ASSUMPTION` **· settled** — **The manager entering the worktree was eliminated by this worker rather than put to the human.** Both of its costs are facts rather than preferences: the manager writes the graph to the main tree, so it would be writing every node file, `decisions.md` and `flags.md` from inside a branch that is not `master`; and a session occupies one worktree at a time, so the route would cap the code-slot count at one permanently, undoing the settable count node 68 established. I judged these dispositive and spent the human's one question on the route that remained.
 
-`150.2` `ASSUMPTION` — **`.claude/worktrees/` needs a `.gitignore` entry, and I settled that rather than asking.** Measured: `git status --short` in the main tree shows `?? .claude/worktrees/`, and a repo-wide search traverses it and returns a second copy of every graph file. The manager reports the same pollution reaching its own context — all seven `expedition*` skills surfaced a second time, scoped to the live worktree path. The landing policy already requires worktrees inside the repository to be ignored; the harness moved the directory and the ignore rule did not follow. I treated this as a defect to repair rather than a choice to offer.
+`150.2` `ASSUMPTION` **· settled** — **`.claude/worktrees/` needs a `.gitignore` entry, and I settled that rather than asking.** Measured: `git status --short` in the main tree shows `?? .claude/worktrees/`, and a repo-wide search traverses it and returns a second copy of every graph file. The manager reports the same pollution reaching its own context — all seven `expedition*` skills surfaced a second time, scoped to the live worktree path. The landing policy already requires worktrees inside the repository to be ignored; the harness moved the directory and the ignore rule did not follow. I treated this as a defect to repair rather than a choice to offer.
 
-`150.3` `ASSUMPTION` — **A correction round after an unresumable worker is spawned with its working directory set to the surviving worktree, not with worktree isolation.** Isolation demonstrably creates a fresh tree at a fresh base, which would strand the work; the harness's own refusal message names the `cwd` route as the alternative. **I could not verify it** — a subagent cannot set a child's working directory — so this rests on the harness's documentation of itself plus the measured behaviour of isolation, and the manager should confirm it the first time it is needed rather than at the moment it is needed.
+`150.3` `ASSUMPTION` **· settled** — **A correction round after an unresumable worker is spawned with its working directory set to the surviving worktree, not with worktree isolation.** Isolation demonstrably creates a fresh tree at a fresh base, which would strand the work; the harness's own refusal message names the `cwd` route as the alternative. **I could not verify it** — a subagent cannot set a child's working directory — so this rests on the harness's documentation of itself plus the measured behaviour of isolation, and the manager should confirm it the first time it is needed rather than at the moment it is needed.
 
-`150.4` `ASSUMPTION` — **The `head` half of the base-ref setting is documented, not measured.** Every measurement in this answer was taken with the setting at its `fresh` default; I could not change the harness's configuration and did not try. That `head` cuts from local `HEAD` rests on the harness's own statement of the setting and on the two values it exposes. This is why the answer carries a one-command verification duty on the first implementation node spawned after the change.
+`150.4` `ASSUMPTION` **· settled** — **The `head` half of the base-ref setting is documented, not measured.** Every measurement in this answer was taken with the setting at its `fresh` default; I could not change the harness's configuration and did not try. That `head` cuts from local `HEAD` rests on the harness's own statement of the setting and on the two values it exposes. This is why the answer carries a one-command verification duty on the first implementation node spawned after the change.
 
 ## Interview
 
@@ -444,7 +444,7 @@ implementation node spawned gets the base check as its first step after the spaw
 rather than only in the map, the map edit being held behind node 140's landing under [node
 115](115-two-writers-edit-the-map-at-once.md)'s not-yet-settled rule.
 
-`150.5` `ASSUMPTION` — *The worker's own prose, pasted.* **The manager verifies the base at every spawn, and a wrong
+`150.5` `ASSUMPTION` **· settled** — *The worker's own prose, pasted.* **The manager verifies the base at every spawn, and a wrong
 base stops the worker rather than being repaired in place.** The human settled the setting, not the failure
 procedure. I chose verification over trust because the setting cannot be passed per call, does not travel to another
 machine, and announces nothing when absent; and I chose stop-and-restart over resetting the tree because a base
@@ -508,3 +508,5 @@ either way. **None is withdrawn**: they were correct about the route this node a
 > worker. This is the sentence most likely to have produced the belief that the worker's route was impossible, and
 > it is repeated as *"The worker calls `EnterWorktree` itself. Measured and impossible."* in the same node's
 > `## Interview`.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

@@ -76,7 +76,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 ## Flags
 
-`148.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
+`148.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
 
 ## The manager's note, 2026-09-24
 
@@ -88,7 +88,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 - **Clause 2.** Replace "the sentence beginning `A **path** may say where`" with "the sentence beginning `A path may say where:`". The reason "because the checker has the repo" is now cut. Node 148's own demand, adding the relative-path rule and its reason, is unaffected.
 
-`148.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
+`148.2` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
 
 ## Amendment, 2026-09-25 (from node 294)
 
@@ -96,7 +96,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 - **Clause 1**, as amended by node 290. Replace it with: "the bullet beginning `A path may say where, because the checker has the repo` in `.claude/skills/expedition-research/SKILL.md` and `.claude/skills/expedition-implementation/SKILL.md`, and in any of the five not yet rewritten, the bullet beginning `a **path** may say where`".
 
-`148.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 294](294-rewrite-the-implementation-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `724c361`.
+`148.3` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 294](294-rewrite-the-implementation-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `724c361`.
 
 ## Amendment, 2026-09-25 (from node 291)
 
@@ -104,7 +104,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 - **Clause 1**, as amended by node 294. Replace it with: "the bullet beginning `A path may say where, because the checker has the repo` in `.claude/skills/expedition-research/SKILL.md`, `.claude/skills/expedition-implementation/SKILL.md` and `.claude/skills/expedition-grilling/SKILL.md`, and in any of the five not yet rewritten, the bullet beginning `a **path** may say where`".
 
-`148.4` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 291](291-rewrite-the-grilling-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0a3e68b`.
+`148.4` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 291](291-rewrite-the-grilling-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0a3e68b`.
 
 ## Amendment, 2026-09-25 (from node 292)
 
@@ -112,7 +112,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 - **Clause 1**, as amended by node 291. In the list of files where the bullet begins `A path may say where, because the checker has the repo`, add `.claude/skills/expedition-precondition/SKILL.md`.
 
-`148.5` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 292](292-rewrite-the-precondition-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `ede2c76`.
+`148.5` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 292](292-rewrite-the-precondition-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `ede2c76`.
 
 ## Amendment, 2026-09-25 (from node 293)
 
@@ -122,7 +122,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 *The manager's note:* the worker reported that the absolute-path grep of clause 3 returns 0.
 
-`148.6` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 293](293-rewrite-the-prototype-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6d26be1`.
+`148.6` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 293](293-rewrite-the-prototype-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6d26be1`.
 
 ## Superseded, 2026-09-26
 
@@ -131,3 +131,5 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 ## Superseded, 2026-09-26
 
 *The manager's note.* Its `graph-conventions.md` sentence, held on node 329 as remainder R1, is now carried by [node 338](338-say-in-graph-conventions-md-which-file-of-the-map.md) as clause 17a or 17b, on the human's "ok" to node 330's merge.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

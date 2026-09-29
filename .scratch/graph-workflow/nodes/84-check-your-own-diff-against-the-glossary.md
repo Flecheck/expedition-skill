@@ -1,7 +1,7 @@
 # Whether a worker checks its own prose against the glossary's headwords before handing back
 
 Type: grilling
-Status: open
+Status: out-of-scope
 
 ## Question
 
@@ -85,3 +85,7 @@ headword scan guards the **shared vocabulary** against a file that borrows a wor
 its own needs the second more than the first.
 
 *The manager's note, 2026-09-27:* [node 56](56-ship-the-glossary-into-the-skill-set.md)'s worker reports this node's question is changed, once node 56 lands. Its words, pasted: Nodes 84 and 208 (open), questions: `CONTEXT.md` becomes `.claude/skills/expedition/glossary.md`. This is a rename only.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

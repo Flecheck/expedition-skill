@@ -2,6 +2,7 @@
 
 Type: grilling
 Status: resolved
+Supersedes: 152, 237, 157
 
 Blocked by: none
 
@@ -64,7 +65,7 @@ which route it automates, and it is only worth building for whichever route surv
 
 ## Flags
 
-`265.1` `MANAGER-WRONG` — ***Filed by the manager against itself.*** The manager's note at filing said *"The manager
+`265.1` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself.*** The manager's note at filing said *"The manager
 needs it for nothing"*, citing the map's line that the base check and the reset both run read-only from the main
 tree. **That is too strong and the worker corrected it**: the manager needs `EnterWorktree` for nothing *after* the
 tree exists, and needs it to **create** the tree at all. The map's line is about the base check and the reset
@@ -688,3 +689,5 @@ Whoever sequences should run this node before either, or instead of them."*
   the new path, preceded by `test -w .scratch/graph-workflow`.
 - **Flag `265.2` is the one the human should see first.** A worker knowingly performed an act their standing
   instruction forbade, said so, bounded it, and cleaned up — and it is the act that produced the answer they took.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

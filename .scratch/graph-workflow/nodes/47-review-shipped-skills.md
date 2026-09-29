@@ -248,13 +248,13 @@ human's steering before the dogfood rather than with it, so the criterion is dis
 Two, both `ASSUMPTION`. This node holds no round, so each entry carries its own account, per
 `graph-conventions.md`'s rule for an AFK node with no round.
 
-`47.1` `ASSUMPTION` — **The worker declined to invoke `/research`, which its own contract's `## How you
+`47.1` `ASSUMPTION` **· settled** — **The worker declined to invoke `/research`, which its own contract's `## How you
 research` instructs.** In its words: *"The only `/research` on this machine is defined as writing a Markdown
 file to the repo, which my hard rule 1 forbids outright. With no precedence rule in the contract I applied the
 checker contract's (`blindness wins`) by analogy and let the hard rule govern, then reported the collision as
 finding 1. A research node has no raise channel, so a flag was the only outlet."*
 
-`47.2` `ASSUMPTION` — **The worker bundled three determined wording repairs into one implementation node rather
+`47.2` `ASSUMPTION` **· settled** — **The worker bundled three determined wording repairs into one implementation node rather
 than three.** In its words: *"All three edit the same six contract files; the code slot is exclusive and four
 open nodes already contend for it, so three nodes would mean three checks and three gates for edits totalling a
 few dozen lines. Weighed against the map's per-node economics and node 41's own warning about nodes editing the
@@ -358,3 +358,5 @@ contract's hard rules](48-method-skill-conflicts-hard-rules.md), landed as commi
 worker meeting that same collision today has an action stated in its contract — leave the conflicting part
 unrun, run the rest, report which part and why — and after node 57 will also have a channel for the case where
 no action is available at all. Finding 1 of this node is discharged twice over.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

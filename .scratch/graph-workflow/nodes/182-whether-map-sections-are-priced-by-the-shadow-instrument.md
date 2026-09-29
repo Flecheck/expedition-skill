@@ -1,7 +1,7 @@
 # Whether `map.md`'s sections are priced by the shadow instrument
 
 Type: grilling
-Status: open
+Status: out-of-scope
 
 Blocked by: 165
 
@@ -34,3 +34,7 @@ no view on what it implies, that being this node's question.
 *The manager's note, 2026-09-28:* [node 181](181-whether-the-workflow-ships-the-shadow-spawn-instrument.md)'s worker reports this node's question changed. Its words, pasted: **Node 182 (open grilling, "Whether map.md's sections are priced by the shadow instrument"): its question is changed in part.** The instrument it would use is now settled as optional effort practice, not shipped, so a per-section shadow run would be a local measurement and never a shipped procedure. Its stated blocker, the three pairs from node 165, is the same one this node was decided without, and now belongs to the NEW NODES entry above. Node 345 has also since moved the map's bulk out on retrospective evidence, which may make 182 unnecessary. Whether it does is for 182's worker, not me.
 
 *The manager's note, 2026-09-28:* [node 356](356-whether-node-165s-remaining-shadow-pairs-still-run.md)'s worker reports this node's question changed. Its words, pasted: **Node 182 (open grilling):** its question is changed. Its stated blocker, "the three pairs from node 165 returning, and their readout", is removed: the pairs will not return. Its worker decides whether a per-section shadow is still worth running as optional practice, or whether node 345's cut makes the node unnecessary.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

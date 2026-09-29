@@ -262,7 +262,7 @@ being what makes an item identifiable and what a crossing earns rather than why 
 **None is settled.** The human's three `ok`s came before these flags existed, so no human moment has reached them;
 they reach the human at the pick report.
 
-`212.1` **· outstanding** `ASSUMPTION` — **I refused the word "label" for a standing item's name without asking.** The mechanism needs a
+`212.1` **· settled** `ASSUMPTION` — **I refused the word "label" for a standing item's name without asking.** The mechanism needs a
 word for the thing that makes two reports the same item, and `label` is the obvious one. `CONTEXT.md` gives
 `label` to *"the family or part a node belongs to"*, with `_Avoid_: tags, categories`, and the map records that
 this effort declares no label vocabulary — so reusing it would have made one word mean two things across the
@@ -270,7 +270,7 @@ same record. I used `name`, which the map's own phrase *"the same standing item"
 no term to the glossary. Not put to the human, a naming collision inside a settled vocabulary being a finding
 rather than a preference.
 
-`212.2` **· outstanding** `ASSUMPTION` — **A search I dispatched returned two lines of `flags.md`, which my contract tells me to leave
+`212.2` **· settled** `ASSUMPTION` — **A search I dispatched returned two lines of `flags.md`, which my contract tells me to leave
 unread.** I read no graph file I was not pointed at, and I opened `flags.md` at no point; a broad search I sent
 out for quotations of the mint rule came back with two of its lines in the result. Nothing in this answer rests
 on them beyond what my own node file already stated — that flag `141.3` is unchecked. I record it because the
@@ -279,7 +279,7 @@ clearest statement is node 107's: *"a worker forbidden to read a file will hit i
 forbids a file and a worker that must search the record are in tension, and dispatching the search does not
 resolve it.
 
-`212.3` **· outstanding** `ASSUMPTION` — **The volume figures behind the ranking answer are a reading of prose, not a count, and I
+`212.3` **· settled** `ASSUMPTION` — **The volume figures behind the ranking answer are a reading of prose, not a count, and I
 presented them to the human as approximate on that ground.** The "roughly 25 items at two or more reports" and
 the per-threshold figures come from an agent reading 168,456 bytes and clustering it by meaning. Node 141
 measured what phrase-matching this same corpus is worth — its own count of seven disclaimers was wrong and it
@@ -287,14 +287,14 @@ retracted it — so I hedged every figure in the payload and hedge them here. **
 clustering** is the decisive fact: node 185's provenance says "second" about an item plainly reported many times
 before, whichever way the boundaries are drawn.
 
-`212.4` **· outstanding** `ASSUMPTION` — **My own mechanical scan of the record was wrong twice, and I am handing over numbers derived by
+`212.4` **· settled** `ASSUMPTION` — **My own mechanical scan of the record was wrong twice, and I am handing over numbers derived by
 that same method.** Counting unfiled retrospectives by the heading `## Retrospective` returned eleven, then
 thirteen; the true figure is ten, and the manager's number was right where mine was not. I found the cause —
 five heading forms — and corrected every figure in this answer, and I put the requirement to match all forms
 into the derivation node's condition rather than trusting its worker to notice. The residual risk is that a form
 exists which none of my scans matched.
 
-`212.5` **· outstanding** `ASSUMPTION` — **I decided that the tenth derivation is its own node rather than an amendment to node 210's
+`212.5` **· settled** `ASSUMPTION` — **I decided that the tenth derivation is its own node rather than an amendment to node 210's
 condition, which the manager offered to put to the human.** Node 210 is open and unclaimed, so amending it is
 possible and only the human may do it. I chose against on three grounds: the derivation's text depends on the
 map edit landing, so it cannot be worked when node 210 can; node 210 is unblocked today and blocking it on my
@@ -302,7 +302,7 @@ map edit would stall nine derivations for one; and a condition written by node 1
 extend. **Node 210 is left untouched and unblocked.** If the human would rather amend it, that is one line and
 this node goes away.
 
-`212.6` **· outstanding** `ASSUMPTION` — **The two-branch form of the backfill condition is mine, and after the human's answer I found it
+`212.6` **· settled** `ASSUMPTION` — **The two-branch form of the backfill condition is mine, and after the human's answer I found it
 load-bearing rather than precautionary.** I wrote the condition to accept either the recovered text or a stated
 line saying the text does not survive, before I had established how many survive. Measurement afterwards found
 one partial copy for ten nodes. So the branch I added as insurance is now the expected outcome for nine of them,
@@ -310,7 +310,7 @@ and the human's `ok` was given on a payload that said several survived. **I did 
 183's precedent that an answer stands when one of its grounds is voided, and I recorded the void ground in the
 answer.
 
-`212.7` **· outstanding** `SPAWN-WRONG` — **The manager's own, against itself.** This node's spawn asked for a
+`212.7` **· settled** `SPAWN-WRONG` — **The manager's own, against itself.** This node's spawn asked for a
 handover of *"five parts, every part every time"* and listed them, twice, **omitting the retrospective** that the
 map places on every worker of this effort as its last part. The worker returned one anyway and said why: *"the
 manager's notes listed five parts twice, both times omitting the retrospective duty the map places on every
@@ -524,3 +524,5 @@ that requirement is now in Node B's condition rather than left to its worker.
 **Two of its flags are about the manager rather than about the work**, and both are recorded rather than answered
 here: `212.7`, the spawn omitting the retrospective duty, and `212.2`, a dispatched search returning lines of a
 file the worker's contract leaves unread — the sixth report of that standing item.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

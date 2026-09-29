@@ -178,20 +178,20 @@ already look.
 
 *Each entry is the worker's own prose, pasted. The manager added the id, the marker and the state.*
 
-`108.1` `ASSUMPTION` — **The rule is written as a ceiling plus a top-up rather than as the literal number one.** The
+`108.1` `ASSUMPTION` **· settled** — **The rule is written as a ceiling plus a top-up rather than as the literal number one.** The
 human said *"at most one question offered to the user"*, naming the number; I wrote §3 so that only the number moves
 if the ceiling is later changed, and so that §1 and §2 stand at any value. Decided because a node on sending
 questions in batches is already minted and would revisit exactly that number, and because the map already carries
 this shape for its other count — *"a count is a target to reach rather than a ceiling to stay under"*. The human
 named a number, not a shape.
 
-`108.2` `ASSUMPTION` — **The manager writes no forecast of when it will serve the queue.** §4 is mine and not the
+`108.2` `ASSUMPTION` **· settled** — **The manager writes no forecast of when it will serve the queue.** §4 is mine and not the
 human's: they stated the duty and said nothing about what the manager may write about it. Derived from the duty
 itself — where the answer to *when* is always *at once*, a sentence naming a future trigger is either redundant or
 false — and from the two recorded instances, one of which wrote a trigger no rule creates and was queried by the
 human for exactly that.
 
-`108.3` `ASSUMPTION` — **A duty to serve the queue is not a duty to keep the human busy.** The manager offers what is
+`108.3` `ASSUMPTION` **· settled** — **A duty to serve the queue is not a duty to keep the human busy.** The manager offers what is
 already waiting and never manufactures a question to fill the channel. Decided because what may be started is
 already bounded by the effort's two counts, so the queue's contents are governed there and not by the channel;
 without the line, a floor on the channel reads as pressure to generate questions.
@@ -319,3 +319,5 @@ condition's own enumerator](110-does-the-checker-rerun-the-enumerator.md), were 
 several turns, and this worker is the only reason it was found. Both files have since been made whole and the strays
 removed. **Nothing on this graph would have reported it**, which is the part worth keeping: a node file can lose a
 section to a mistyped path and read as complete, and no mechanical check covers that.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

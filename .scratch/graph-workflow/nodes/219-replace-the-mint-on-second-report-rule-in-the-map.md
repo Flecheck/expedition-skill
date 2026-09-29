@@ -76,3 +76,9 @@ nodes editing one bullet is node 115's two-writers collision."*
 **Its clause 3 protects the human's own words** — the quoted instruction that created the retrospective, and the
 four questions — character-for-character, and forbids a fifth question. What changes is what the manager does with
 the answers, not what a worker is asked.
+
+## Amendment, 2026-09-29 (from node 366)
+
+*Written by [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s worker under its `CONDITIONS`, and filed by the manager under the standing instruction that an unclaimed node's condition may be amended where every word of the replacement is already fixed. The worker's own text, pasted:*
+
+"Node 219: clauses 1 and 4 name `.scratch/graph-workflow/map.md` `## Notes`, but the retrospective bullet now lives in `map-manager-only.md` `## Notes`. `map.md`'s own pointer line says node 345 moved it there. Replacement: read `.scratch/graph-workflow/map-manager-only.md`, `## Notes`, wherever those clauses say `.scratch/graph-workflow/map.md` `## Notes`."

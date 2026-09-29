@@ -734,30 +734,30 @@ this effort's glossary refuses by name."*
 
 ## Flags
 
-`53.1` `ASSUMPTION` — **It treated the shipped worker contracts as a third document class on its own
+`53.1` `ASSUMPTION` **· settled** — **It treated the shipped worker contracts as a third document class on its own
 authority**, the preference naming node files only. Ground: the contracts are the only files that leave this
 repo, and node 31's discard shows the preference was already being applied to them. *"Had the human read the
 preference as covering exactly two classes, ruling 2 above would have no subject."*
 
-`53.2` `ASSUMPTION` — **It settled the resolved-research-node case itself** rather than spending a question.
+`53.2` `ASSUMPTION` **· settled** — **It settled the resolved-research-node case itself** rather than spending a question.
 *"cite, don't restate cannot apply, a research answer being original facts with sources rather than a
 restatement of another node, and what does apply — navigability — is already satisfied."* Turned into standing
 rule 3.
 
-`53.3` `ASSUMPTION` — **It made *cite by heading, never by line number* a standing rule without asking.**
+`53.3` `ASSUMPTION` **· settled** — **It made *cite by heading, never by line number* a standing rule without asking.**
 Ground: *"this is a correctness finding rather than a saving… and the effort's own new instruction forbids
 ranking a saving above a correctness finding, which would be an odd basis for leaving one unrecorded."*
 
-`53.4` `ASSUMPTION` — **It folded the checker-fan-out prefix candidate into another node instead of minting
+`53.4` `ASSUMPTION` **· settled** — **It folded the checker-fan-out prefix candidate into another node instead of minting
 one**, the mechanism being documented for the dynamic-workflow runtime and *"documented neither way"* for the
 `Agent`-tool spawns this effort uses, with the saving unmeasured.
 
-`53.5` `ASSUMPTION` — **It read ruling 1's *the two discards stay discarded* as not barring the leading-word
+`53.5` `ASSUMPTION` **· settled** — **It read ruling 1's *the two discards stay discarded* as not barring the leading-word
 work on the contracts**, one of those discards having been a leading-word finding against a **shipped contract**
 whose governing ground ruling 2 changed in the same answer. *"Acting conservatively on that reading, it scoped
 the refactor node to `scribe` alone and reported the `unwrap` half on `INVALIDATIONS` for the human to see."*
 
-`53.6` `ASSUMPTION` — **It left part of `/domain-modeling` unrun** — the instructions to update `CONTEXT.md`
+`53.6` `ASSUMPTION` **· settled** — **It left part of `/domain-modeling` unrun** — the instructions to update `CONTEXT.md`
 inline and create ADR files — against its contract's no-file rule. Recorded *"because that carve-out names
 `/research`, `/grilling` and `/prototype` and the collision here was with a fourth skill."*
 
@@ -767,3 +767,5 @@ A grilling node's flags arrive **after** the last answer, so no answer here reac
 `53.1` and `53.5` are the load-bearing pair: `53.1` because ruling 2 has no subject if the human read the
 preference as two classes, and `53.5` because it turns on how the human's *"discards stay discarded"* reads
 against a discard that was itself about a contract.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

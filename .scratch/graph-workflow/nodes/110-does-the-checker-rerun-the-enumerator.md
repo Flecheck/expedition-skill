@@ -145,7 +145,7 @@ checker's enumerator duty into the checker's contract](116-carry-the-enumerator-
 
 *Each entry is the worker's own prose, pasted. The manager added the id, the marker and the state.*
 
-`110.1` `ASSUMPTION` — **The rule reaches an enumerator whoever wrote it, including one the manager supplied at guard
+`110.1` `ASSUMPTION` **· settled** — **The rule reaches an enumerator whoever wrote it, including one the manager supplied at guard
 1.** The manager offered this as mine to say or to leave alone, and I said it rather than leaving it, because leaving
 it would put the question to the first checker that meets node 103's condition. I settled it as reaching every
 authorship case on three grounds: the checker is blind to the record and so cannot tell who wrote the command; the
@@ -156,7 +156,7 @@ both the author of the command and the recipient of the checker's report about i
 node 82's guard 2 already leaves open — my rule puts an independent party between the command and the record, and
 nothing puts one between the report and the manager's response to it.
 
-`110.2` `ASSUMPTION` — **The comparison target is the condition's recorded return, not its list of places.** This was
+`110.2` `ASSUMPTION` **· settled** — **The comparison target is the condition's recorded return, not its list of places.** This was
 forced by node 103 after the human had already answered, so they never saw it. That condition names six places across
 five files while its enumerator's recorded return is four files, the gap being `map.md`, excluded from the domain by
 name as the effort's record. Read the other way — return against place list — a checker would report a discrepancy
@@ -166,7 +166,7 @@ holds no before-state, so *falsity of a recorded claim* is establishable and *gr
 accepted: a condition can now record a return that is honest, current, and narrower than its own place list, and
 nothing checks that the excluded places were excluded for a stated reason rather than forgotten.
 
-`110.3` `ASSUMPTION` — **`/grilling` and `/domain-modeling` were not invoked.** My contract's `## How you grill` says
+`110.3` `ASSUMPTION` **· settled** — **`/grilling` and `/domain-modeling` were not invoked.** My contract's `## How you grill` says
 to invoke them where present, and both are present as `mattpocock-skills:grilling` and
 `mattpocock-skills:domain-modeling`. I ran the discipline the contract states in full — one question, a
 recommendation I believed, the alternatives named, every fact the files could give me read rather than asked — and
@@ -300,3 +300,5 @@ manager's: a question resting on a set of instances should carry the command tha
 such promotion the manager owes off a retrospective and has not made. The fourth point is now carried by [Whether the
 contracts' instruction to invoke a method skill is doing any
 work](113-whether-the-method-skill-instruction-does-any-work.md), and the map's contradicting line is named there.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

@@ -325,7 +325,7 @@ says more.
 
 ## Flags
 
-`39.1` `ASSUMPTION` — **The reading of the scribe rule and of node 33 that this whole answer rests on, decided
+`39.1` `ASSUMPTION` **· settled** — **The reading of the scribe rule and of node 33 that this whole answer rests on, decided
 alone.** In the worker's words: *"node 33 forbids text reaching the **checker's payload** that is nowhere on the
 graph, while a condition on the node file is read by the worker, handed to the checker, and auditable by anyone
 — the two differing in visibility rather than in authorship… The human endorsed the recommendation this premise
@@ -333,7 +333,7 @@ supports and was not asked to rule on the premise itself. If the premise is wron
 and the alternative on the record is the manager minting a smaller node whose worker writes the condition —
 which costs no human time and pays an extra node and worker per case."*
 
-`39.2` `ASSUMPTION` — **That a replacement node in a supersession is covered by the same rule, decided alone.**
+`39.2` `ASSUMPTION` **· settled** — **That a replacement node in a supersession is covered by the same rule, decided alone.**
 The only one of the three routes that has never arisen, so there is no evidence either way. Its ground: a
 replacement's condition is mostly the retired node's copied in, which is the copy rule every condition already
 obeys rather than fresh authoring. *"It was stated in what went to the human and their reply did not reach
@@ -373,3 +373,5 @@ applies all four of this node's constraints to an amendment unchanged.
 **The clause survives intact for every other edit to a worker-minted condition**, and three things stay outside the
 permission: a new demand at any place, an ambiguous demand at a place already listed, and a defect the condition does
 not describe.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

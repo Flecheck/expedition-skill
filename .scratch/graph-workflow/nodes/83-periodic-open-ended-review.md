@@ -1,7 +1,7 @@
 # A periodic review with nothing named to review
 
 Type: grilling
-Status: open
+Status: out-of-scope
 
 ## Question
 
@@ -89,3 +89,7 @@ review works without it.
 The human's own idea, unprompted, `verbatim`: *"I had the idea of having a periodic review of the state of the
 changes, to find improvement to architecture and other. A bit like the cascade worker but with no specific thing
 to review. Add a node with low priority"*.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

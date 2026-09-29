@@ -203,7 +203,7 @@ blocked. That is a `MANAGER-WRONG` flag, and it is filed below rather than left 
 
 ## Flags
 
-`216.1` `MANAGER-WRONG` — **The manager filed this node saying the policy was silent, and it was not.** This node's
+`216.1` `MANAGER-WRONG` **· settled** — **The manager filed this node saying the policy was silent, and it was not.** This node's
 question section states that *"the policy's silence means the manager decides"*, and the manager decided route 3 at
 node 200's landing on that basis. **Node 115's answer already covers the case node 200 hit** — a conflict in
 never-delete text, which the manager resolves by keeping both sides, and *"the work does not return to the checker or
@@ -391,3 +391,15 @@ rather than predicted: landing node 198, a sandboxed `git merge --ff-only` print
 read-only mount **having already written one of the changed files**, and left the tree partially updated so that the
 documented retry outside the sandbox refused with *"Your local changes would be overwritten by merge"*. The manager
 improvised, and the human's `ok` was given without that case in front of them.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.
+
+`216.2` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.
+
+`216.3` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.
+
+`216.4` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.
+
+`216.5` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.
+
+`216.6` **· settled** — *The manager's entry, 2026-09-29:* this flag's entry above is in a form the marker position does not fit, so its settling is recorded here. Settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4.

@@ -167,19 +167,19 @@ grounds.
 
 ## Flags
 
-`69.1` `ASSUMPTION` — **Decision 4 was settled by the worker without asking.** Whether the manager itself becomes a
+`69.1` `ASSUMPTION` **· settled** — **Decision 4 was settled by the worker without asking.** Whether the manager itself becomes a
 declared type was closed from `map.md` alone. In the worker's words: *"Filed rather than asked because the grilling
 contract requires any fact the files can tell to be read rather than put to the human, and this one is stated in the
 map's standing preferences."*
 
-`69.2` `ASSUMPTION` — **The worker recommended, and the human decided, without the spawn's stated crux ever being
+`69.2` `ASSUMPTION` **· settled** — **The worker recommended, and the human decided, without the spawn's stated crux ever being
 established.** The manager's spawn named the mid-session-reload question as the crux and asked for it to be
 verified. It is undocumented; the direct test requires writing a file, and an attempt to read the harness's own
 loading behaviour failed because the CLI ships as a compiled binary. In the worker's words: *"The enforcement motive
 fails upstream of the reload question, and every supporting ground is independent of it. Worth the human's eye
 because a crux the spawn named was left unestablished."*
 
-`69.3` `ASSUMPTION` — **The worker did not invoke the two method skills its contract names, and this is [What a
+`69.3` `ASSUMPTION` **· settled** — **The worker did not invoke the two method skills its contract names, and this is [What a
 contract may name as a method skill](51-what-a-contract-may-name.md)'s predicted failure observed live.** The
 grilling contract says *"Invoke `/grilling` and `/domain-modeling` if they are present."* Both are present but
 registered as `mattpocock-skills:grilling` and `mattpocock-skills:domain-modeling`, not under the bare names. The
@@ -223,3 +223,5 @@ conclusion had already closed. The worker had to unpick it before it could work,
 calls on a compiled binary, and a crux framed one level too low — both descend from that one move. **The rule the
 manager takes: a spawn states what is at stake and what is known; it does not state what the node is for deciding.**
 The two are easy to confuse when the manager has a view, and the manager had one.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

@@ -1,11 +1,14 @@
 # The landing policy says the worker's worktree is outside the repository and also inside it
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 276
 
 Blocked by: none
 
 ## Question
+
+*Superseded 2026-09-29: this question no longer needs doing here. See `## Superseded, 2026-09-29` below.*
 
 *Surfaced by [node 249](249-gitignores-two-comments-point-at-files-that-moved.md)'s worker, and pasted as it wrote
 it.*
@@ -63,3 +66,7 @@ conditions quote that paragraph's exact phrases. Two workers have now named that
 `grep` by a party permitted to read those two conditions — and it is the same shape as [node
 252](252-may-an-unclaimed-nodes-acceptance-condition-be-amended.md)'s subject, an unclaimed node's condition
 governing whether other work can proceed.
+
+## Superseded, 2026-09-29
+
+*The manager's note:* superseded by [node 276](276-the-landing-policy-says-the-work-sits-outside-the-repository.md), under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q1 (`verbatim`: *"ok"*, recorded on node 366). Node 366's worker's reason: node 276 repairs the same clause and carries the complete condition.

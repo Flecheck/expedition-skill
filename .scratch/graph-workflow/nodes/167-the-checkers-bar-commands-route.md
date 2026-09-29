@@ -103,7 +103,7 @@ recorded on its gate rather than here.
 *All three are the worker's own text, pasted. The ids and the links are the manager's bookkeeping and nothing else.
 The round that produced them is `## Interview`, attempt 1.*
 
-`167.1` `ASSUMPTION` — **I fixed that the repair names the repo's own instruction file by role and never as
+`167.1` `ASSUMPTION` **· settled** — **I fixed that the repair names the repo's own instruction file by role and never as
 `CLAUDE.md`, and the human's `ok` covered a recommendation carrying that constraint rather than
 stating it as the question.** The human's own words named `CLAUDE.md` literally. Ground rule 1 bars a
 shipped contract from assuming a file convention of one harness, and the map records that a worker
@@ -111,13 +111,13 @@ will eventually not be a Claude subagent at all — so the contract says *the re
 to an agent* and the checker finds whatever the repo has. The literal reading was available and I did
 not take it.
 
-`167.2` `ASSUMPTION` — **I reported the repair with no blocking edge on nodes 151 and 164, both of which
+`167.2` `ASSUMPTION` **· settled** — **I reported the repair with no blocking edge on nodes 151 and 164, both of which
 edit the same file.** I read both conditions: neither quotes nor protects the two sentences this
 repair changes, node 151's clause 12 forbids its own worker to reword anything outside its new
 section, and node 164's protective clauses name two different statements. So either order works, and
 I left the sequencing to the manager rather than spending an edge on it.
 
-`167.3` `ASSUMPTION` — **I reported the residual as a node although the human declined the invitation to ask
+`167.3` `ASSUMPTION` **· settled** — **I reported the residual as a node although the human declined the invitation to ask
 for it.** My question offered to report the rules-file-versus-repo precedence question separately if
 they said so; they answered the yes/no and said nothing about it. I judged that the residual is this
 node's own subject surviving in a narrowed case rather than a new topic, so leaving it unreported
@@ -322,3 +322,5 @@ worker's own contract forbids it to write a graph file.*
 - **Two open implementation conditions describe a mechanism node 143's amendment abolished.** Node 151's clause 4 speaks of *"the standards the spawn gives the checker"*; node 164's clause 3 requires its statements sit *"beside the two routes by which they reach it"*, and its clause 2 of *"a path it was given as a standard"*. Under the amendment nothing is fed and there is one route, which the landed contract states. Both workers will meet a condition naming something that does not exist. This is precisely the defect node 143's own file had to be repaired for at its gate — its checker's words, *"A later checker handed this node cold would read the file and fail work that meets the condition in force"* — and the repair was applied to node 143's file and not to the two downstream conditions that inherited the assumption.
 - **Node 164 may be substantially discharged already by node 143's landed text.** Its clauses 1 and 2 ask the contract to state what a standards path may hold and what the checker does where such a path also holds record material; the landed `## The standards you hold the work against` already says the file *"may itself carry material that is record rather than standard… Read the standards; leave the rest of that file unread, and open no other file beside it."* Its outcome-reporting half looks like the part still outstanding. Worth checking before that node is claimed as written.
 - Nothing I read was wrong on its facts.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

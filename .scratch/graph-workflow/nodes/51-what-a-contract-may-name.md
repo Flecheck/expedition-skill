@@ -1,9 +1,12 @@
 # What a contract may name as a method skill
 
 Type: grilling
-Status: open
+Status: superseded
+Superseded by: 113
 
 ## Question
+
+*Superseded 2026-09-29: this question no longer needs doing here. See `## Superseded, 2026-09-29` below.*
 
 The four plugin skills the contracts name by bare name — `/grilling`, `/domain-modeling`, `/prototype`,
 `/research` — are registered by this harness as `mattpocock-skills:<name>`, while `/coding-principles` and
@@ -35,3 +38,7 @@ between two of this effort's sessions**: `/writing-great-skills` became `/writin
 reference file was renamed, and its `disable-model-invocation` was dropped. So the fragility this node is about
 is not hypothetical — a bare name pointing into that plugin went stale on a rev bump, and only the human
 noticing told the workflow.
+
+## Superseded, 2026-09-29
+
+*The manager's note:* superseded by [node 113](113-whether-the-method-skill-instruction-does-any-work.md), under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q1 (`verbatim`: *"ok"*, recorded on node 366). Node 366's worker's reason: node 113 removed every plugin skill name from the contracts.

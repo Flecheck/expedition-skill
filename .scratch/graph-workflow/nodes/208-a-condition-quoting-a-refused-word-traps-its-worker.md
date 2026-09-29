@@ -1,11 +1,14 @@
 # An acceptance condition quoting a word the glossary refuses traps its own worker
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 214
 
 Blocked by: none
 
 ## Question
+
+*Superseded 2026-09-29: this question no longer needs doing here. See `## Superseded, 2026-09-29` below.*
 
 *Promoted by the manager from three workers' reports, the third being [node
 200](200-collapse-the-rules-files-two-map-history-statements.md)'s. Each worker's words are pasted below; the
@@ -51,3 +54,7 @@ survived its check. So the measured cost is three flags and three paragraphs of 
 node.
 
 *The manager's note, 2026-09-27:* [node 56](56-ship-the-glossary-into-the-skill-set.md)'s worker reports this node's question is changed, once node 56 lands. Its words, pasted: Nodes 84 and 208 (open), questions: `CONTEXT.md` becomes `.claude/skills/expedition/glossary.md`. This is a rename only.
+
+## Superseded, 2026-09-29
+
+*The manager's note:* superseded by [node 214](214-a-condition-that-contradicts-a-standard-is-a-raise.md), under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q3 (`verbatim`: *"ok"*, recorded on node 366). Node 366's worker's reason: merged: it joins node 214 as one case of it, a condition quoting a word the glossary refuses.

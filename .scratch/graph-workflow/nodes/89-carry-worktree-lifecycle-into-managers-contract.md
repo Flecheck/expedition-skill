@@ -1,11 +1,14 @@
 # Carry the worktree lifecycle into the manager's contract
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 371
 
 Blocked by: 68
 
 ## Question
+
+*Superseded 2026-09-29: this question no longer needs doing here. See `## Superseded, 2026-09-29` below.*
 
 *Reported by [Write the first version of the manager's skill](76-write-the-manager-skill.md)'s worker, in its
 handover, and pasted as it wrote it.*
@@ -76,3 +79,9 @@ manager acts on has no backstop when the manager does not act on it.**
 `89.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 275's clean-up clauses were filed on this open, unclaimed node without asking the human first.
 
 *The manager's note, 2026-09-28:* [node 162](162-how-much-of-the-integration-rule-ships.md)'s worker reports this node's question changed. Its words, pasted: **Node 89** (open, implementation, "Carry the worktree lifecycle into the manager's contract") asks whether the worktree lifecycle is a rule of the workflow or a practice of one effort. This answer settles the conflict-handling part of that question as per-effort: the shipped files only require the policy to state it. The rest of node 89's question stays open.
+
+## Superseded, 2026-09-29
+
+*The manager's note:* superseded by [node 371](371-say-what-a-review-entry-records-for-a-manager-started-round.md), under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q3 (`verbatim`: *"ok"*, recorded on node 366). Node 366's worker's reason: merged: its remaining clauses, from node 275, join node 371; node 363 had already landed as `2cf3730`.
+
+*The manager's note, 2026-09-29:* flag 89.1 is the exception: it judges the clauses that moved to [node 371](371-say-what-a-review-entry-records-for-a-manager-started-round.md), so it stays outstanding and settles at node 371's gate, as node 366's worker proposed. Otherwise, this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

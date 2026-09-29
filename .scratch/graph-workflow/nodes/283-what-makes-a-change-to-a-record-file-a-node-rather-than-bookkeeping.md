@@ -318,15 +318,15 @@ asked *"why would it die ?"*, the manager tested it, and it did not.
 
 *All three are the worker's own text, pasted.*
 
-`283.2` `ASSUMPTION` — Read the human's *"the map"* as the effort's whole record rather than `map.md` alone, on the
+`283.2` `ASSUMPTION` **· settled** — Read the human's *"the map"* as the effort's whole record rather than `map.md` alone, on the
 deliverable-versus-record split their own sentence draws. A narrower reading would make `map-manager-only.md` a
 node's work while `map.md` is the manager's, **which nothing supports.**
 
-`283.3` `ASSUMPTION` — Read the special case as the map edit **riding inside** the shipped-file node rather than
+`283.3` `ASSUMPTION` **· settled** — Read the special case as the map edit **riding inside** the shipped-file node rather than
 being minted as a node of its own, because *"to keep it in line"* is a simultaneity requirement and **a second node
 guarantees a window in which the two disagree.**
 
-`283.4` `ASSUMPTION` — **The two safeguards are the worker's own and were never put to the human**, this session
+`283.4` `ASSUMPTION` **· settled** — **The two safeguards are the worker's own and were never put to the human**, this session
 closing under `/expedition-stop` with no fresh payload permitted. Stated because *"an answer that removes the only
 review a class of edits had and does not say what replaces it is incomplete."* **Both are cheap and reversible;
 either can be struck without disturbing the file test.**
@@ -394,9 +394,11 @@ either can be struck without disturbing the file test.**
 - **This answer's own carriage is the answer's, not the manager's**: the `map.md` half is the manager's under
   branch 2 and is **not done**; the shipped half is node 287. **Both are named in the closing report.**
 
-`283.5` `MANAGER-WRONG` — ***Filed by the manager against itself.*** It told this worker, and the human, that a map
+`283.5` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself.*** It told this worker, and the human, that a map
 change with no skill near it *"has occurred three times"*. **It is at least ten** — 171, 188, 193, 196, 200, 229,
 244, 268, 277, 281, with nodes below 171 unenumerated. **The manager counted what it remembered from this session
 and reported it as the class.** Its worker's repair is the generalisable half: **a spawn should say *"here is the
 class and I have not enumerated it"* rather than list what it happens to recall, because a list that looks closed
 invites a worker to build on it.**
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

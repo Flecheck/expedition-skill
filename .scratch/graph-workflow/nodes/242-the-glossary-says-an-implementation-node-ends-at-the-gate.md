@@ -194,10 +194,12 @@ nothing leaves open.
 
 Filed as flag `242.3`.
 
-`242.3` `MANAGER-WRONG` — ***Filed by the manager against itself, after the human asked whether it had done this.***
+`242.3` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself, after the human asked whether it had done this.***
 The manager put node 248's worker's raise in front of the human while this node's gate was live and unanswered,
 giving the human two open things at once. The gate had arrived first, and a gate holds a code slot while it waits.
 The human noticed and asked; the manager had not reported it. **This is the second time this session the manager
 stated its own conduct rather than checking it** — the first being flag `250.1`, where it told the human twice it
 had changed the spawn's working directory when it had not. Raised after this node's approval, so it is **not**
 settled by that approval and stands open.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

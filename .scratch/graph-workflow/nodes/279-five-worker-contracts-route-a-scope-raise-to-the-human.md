@@ -76,8 +76,10 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 ## Flags
 
-`279.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
+`279.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
 
 ## Superseded, 2026-09-26
 
 *The manager's note.* Made unnecessary, on node 329's worker's recommendation taken by the human's "ok": its demand, that the manager may extend a short scope on a held node with no human turn, contradicts nodes 82 and [311](311-may-the-human-amend-a-held-nodes-condition-of-their-own-accord.md), where a held node's condition changes only by the human's answer; its clause 2 contradicts the byte-identical shared sections of the worker contracts.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

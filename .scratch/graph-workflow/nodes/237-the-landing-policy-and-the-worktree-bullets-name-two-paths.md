@@ -1,11 +1,14 @@
 # The landing policy and the worktree bullets name two different worktree paths
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 265
 
 Blocked by: none
 
 ## Question
+
+*Superseded 2026-09-29: this question no longer needs doing here. See `## Superseded, 2026-09-29` below.*
 
 *Surfaced by [node 229](229-bank-the-landing-sections-accounts-out-of-map-manager-only.md)'s worker, and pasted as
 it wrote it. Found outside its own fourteen spans and left there.*
@@ -51,3 +54,7 @@ written no acceptance condition, which is the same refusal it makes wherever a c
 at `.claude/worktrees/<name>/`, created by `EnterWorktree`, with the branch `worktree-<name>` — five of them. **The
 `.worktrees/NN-<name>/` path has not been used once.** So the stale statement is stale in fact as well as by
 record, and the only open question is the one its author named: whether an open condition quotes it.
+
+## Superseded, 2026-09-29
+
+*The manager's note:* superseded by [node 265](265-should-the-worktree-route-drop-enterworktree-for-git.md), under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q1 (`verbatim`: *"ok"*, recorded on node 366). Node 366's worker's reason: both passages now name `.scratch/graph-workflow/worktrees/<NN>-<name>` (node 265).

@@ -2,6 +2,7 @@
 
 Type: grilling
 Status: resolved
+Supersedes: 121
 
 ## Question
 

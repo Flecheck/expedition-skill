@@ -1,7 +1,7 @@
 # State the two never-delete tests, and the acceptance condition's place, in this effort's map
 
 Type: implementation
-Status: open
+Status: out-of-scope
 
 Blocked by: none
 
@@ -68,3 +68,7 @@ saying that.
 **Flag `199.1` bears on whoever claims this**, and its author said so: the two-test structure is the worker's own
 composition from two separately approved answers, and *"whoever carries this into `graph-conventions.md` writes
 that structure, so it is worth their eye before it ships."* That applies to this node too.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

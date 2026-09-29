@@ -571,14 +571,14 @@ be packaged the way the human asked node 130's to be. **Node 130 is not answered
 
 *Each in the worker's own words. The numbers are the manager's bookkeeping; the worker returned them unnumbered.*
 
-`138.1` — `ASSUMPTION`: **The implementer gets a pointer to the rules file, not its text.** The human's direction
+`138.1` **· settled** — `ASSUMPTION`: **The implementer gets a pointer to the rules file, not its text.** The human's direction
 says the rules *"should also be used by the implementer"* and does not say how they arrive. Settled as a pointer, on
 node 12's finding that inbound context travels as file pointers with the blind checker as the sole exception, and on
 node 136's answer that copying into spawns moves the cost into the manager's context, which this effort measures as
 its first-failing resource. The reading set aside: handing the implementer the text, which would make the same bytes
 uncached in the manager rather than in the worker.
 
-`138.2` — `ASSUMPTION`: **Where a spawn names no standards, a checker holds work against the acceptance condition and
+`138.2` **· settled** — `ASSUMPTION`: **Where a spawn names no standards, a checker holds work against the acceptance condition and
 the bar alone.** Removing discovery removes the contract's current fallback, *"where you find no reviewing skill at
 all, hold the work against whatever rules you did find"*, which only discovery made possible. Settled as the stated
 behaviour because a checker on a repo whose standards nobody has written down must still be able to return an
@@ -586,31 +586,31 @@ outcome, and because inventing standards would break the contract's rule that a 
 finding. The alternative set aside: making an unnamed standard set a raise, which would stop a check for a condition
 the work can perfectly well be held to.
 
-`138.3` — `ASSUMPTION`: **A reviewing skill may still be run where a spawn names one.** The human barred a generic
+`138.3` **· settled** — `ASSUMPTION`: **A reviewing skill may still be run where a spawn names one.** The human barred a generic
 skill by name and barred the checker going to find one; neither sentence reaches a discipline an effort declares.
 Settled as permitted-when-named so that the delegation-blindness rule, which is about any agent a skill spawns, keeps
 an object rather than being deleted with the discovery apparatus. The reading set aside: deleting the reviewing-skill
 machinery outright, which would also delete a rule nothing else states.
 
-`138.4` — `ASSUMPTION`: **The map's standing preferences are not among the standards work is held against.** The
+`138.4` **· settled** — `ASSUMPTION`: **The map's standing preferences are not among the standards work is held against.** The
 review route names them as a standard; node 42's test bars an account of what happened from reaching a blind checker,
 and several standing preferences are exactly that. Settled as: the two blocks that pass node 42's test move into the
 rules file and the wholesale reference to the standing preferences is retired. Decided from node 42's shipped test
 rather than from preference, and reported as a node's work rather than done here.
 
-`138.5` — `ASSUMPTION`: **The docs-packaging direction now binds node 130's output, reversing this node's own earlier
+`138.5` **· settled** — `ASSUMPTION`: **The docs-packaging direction now binds node 130's output, reversing this node's own earlier
 election.** An undelivered payload of this node proposed leaving it effort-only because the thing it constrains does
 not exist yet. Under the rule the human took, a direction about a thing the workflow ships reaches it, and a
 deliverable that does not exist yet is still a deliverable. Recorded as a flag because it reverses a position this
 node had put in writing, and because node 130 is open and unclaimed and its worker should not have to discover the
 reversal.
 
-`138.6` — `ASSUMPTION`: **The byte floor in node 140's acceptance condition is this node's number.** Node 139's
+`138.6` **· settled** — `ASSUMPTION`: **The byte floor in node 140's acceptance condition is this node's number.** Node 139's
 condition used a floor 931 bytes below what its move could remove; node 140's four bodies measure 4,376 bytes in the
 post-139 tree, so the same proportional headroom gives 3,900. It is a floor that cannot be reached by trimming, only
 by moving, which is what makes it a check rather than a target.
 
-`138.7` — `ASSUMPTION`: **A worker cannot tell a settled flag from an approved one.** This node asserted in a payload
+`138.7` **· settled** — `ASSUMPTION`: **A worker cannot tell a settled flag from an approved one.** This node asserted in a payload
 that the human had approved a default when the flag recording it was merely *settled* — it rode their next word. The
 distinction is load-bearing and a worker cannot check it, `flags.md` being closed to workers by every contract, so
 the error is reachable by any worker that reasons from a flag's state. Settled as: a worker states what a node's own
@@ -732,3 +732,5 @@ than settling it.*
 > point, both answers are still the same shape (a named thing handed over rather than discovered), and both are still
 > constrained by ground rule 2. This node's own `## The manager's note at filing` carries the same sentence and is
 > falsified with it.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

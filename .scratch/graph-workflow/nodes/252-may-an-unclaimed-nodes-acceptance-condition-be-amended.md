@@ -318,7 +318,7 @@ correct it**, and wrote the answer below from that assent.
 
 ## Flags
 
-`252.1` `ASSUMPTION` — *The worker's own text, pasted.*
+`252.1` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > **Read the node's two cases as one shape, found two more instances, and bounded the answer to unclaimed nodes, all
 > without asking.** The node file offered nodes 111 and 156 and the manager asked whether they were one question or
@@ -333,7 +333,7 @@ correct it**, and wrote the answer below from that assent.
 > human would have drawn the line at what falsified the clause rather than at what fixes it, one answer now covers
 > cases they would have split.
 
-`252.2` `ASSUMPTION` — *The worker's own text, pasted.*
+`252.2` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > **A quotation I had not verified reached the human inside a payload, and I checked it only afterwards.** My payload
 > attributed to node 199 the sentence *"the manager will amend the next condition without a rule to point at, and it
@@ -510,3 +510,5 @@ correct it**, and wrote the answer below from that assent.
   worker found two of them only by an unasked-for search. **Named for the human.**
 - **Node 199's unmeasured amendment rate** → **not minted**, the worker having said it cannot tell from what it
   holds whether the rate is a problem. Recorded here as the second report of it.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

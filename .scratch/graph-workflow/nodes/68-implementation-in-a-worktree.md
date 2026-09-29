@@ -2,6 +2,7 @@
 
 Type: grilling
 Status: resolved
+Supersedes: 77
 
 ## Question
 
@@ -200,19 +201,19 @@ leftovers the old heuristic suffered from.
 
 ## Flags
 
-`68.1` `ASSUMPTION` — **The checker contract needs no edit, and the worktree path travels in the spawn instead.**
+`68.1` `ASSUMPTION` **· settled** — **The checker contract needs no edit, and the worktree path travels in the spawn instead.**
 Its third given was already written without assuming which tree. *"I settled this rather than asking, because it is
 a fact the file states rather than a choice."*
 
-`68.2` `ASSUMPTION` — **The worktree lives outside the repository's working tree, defaulting to a sibling of the
+`68.2` `ASSUMPTION` **· settled** — **The worktree lives outside the repository's working tree, defaulting to a sibling of the
 repository root**, with a fallback under `git rev-parse --git-common-dir`. Chosen as a property rather than a fixed
 path, because no ignore rule may be assumed in a repository the workflow does not own.
 
-`68.3` `ASSUMPTION` — **On reject, the manager commits the work onto the unmerged worktree branch when the human
+`68.3` `ASSUMPTION` **· settled** — **On reject, the manager commits the work onto the unmerged worktree branch when the human
 asks to keep it, then removes the directory.** Node 20 settled the policy and only the mechanism was open; the
 branch was taken over a surviving directory *"so a kept reject cannot be miscounted as an occupied code slot."*
 
-`68.4` `ASSUMPTION` — **Worktree reuse is recorded as an unestablished belief and left out of the specification.**
+`68.4` `ASSUMPTION` **· settled** — **Worktree reuse is recorded as an unestablished belief and left out of the specification.**
 The human offered it as *"i belive"*; the harness's wording reads as per-agent creation; and it is moot for a
 manager-created worktree. Written as a remedy available against measurement rather than as a property.
 
@@ -284,3 +285,5 @@ own words, on the human's answer to that node's `Q1.` **This node stays `resolve
 **What supersedes it** is node 216's single test, which the human took as written: after an approval, **did anybody
 author content?** Nothing authored — the approval stands and the manager lands. Something authored — the work
 returns to the checker, then to the human for another approval. A post-rebase bar failure is the authored branch.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

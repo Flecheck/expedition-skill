@@ -2,6 +2,7 @@
 
 Type: implementation
 Status: open
+Supersedes: 271
 
 Blocked by: 184, 348, 349, 352, 354
 
@@ -123,3 +124,13 @@ so the two are disjoint in fact though not by any written edge. The manager hold
 *The manager's note, 2026-09-27:* edge to [node 354](354-add-the-sixth-standing-rule-for-writing.md) added. [Node 253](253-a-shipped-file-points-at-a-sibling-rather-than-restating-it.md)'s worker reports that once node 354 lands, the "five standing rules for writing" in clause 1 (as amended by node 348) and clause 4 becomes wrong, and that the replacement is owed then, since "six" is fixed by no landed work yet.
 
 `190.5` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 354 above.* Node 354's replacement of "five" (or "four") with "six" standing rules for writing was filed on this open, unclaimed node without asking the human first.
+
+## Amendment, 2026-09-29 (from node 366)
+
+*Written by [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s worker and filed by the manager, under the human's answer to node 366's Q3 (`verbatim`: *"ok"*). The worker's own text, pasted:*
+
+Block 2 (defect joined to open node 190, from node 271). Clauses to add to 190's acceptance condition:
+  - In `.scratch/graph-workflow/map-implementation-rules.md`, the sentence of the bar paragraph that states which patterns the repository's ignore file ignores is replaced by its current form, with no struck-through text in it. It names every pattern that `.gitignore` at the repository root then holds, which the worker verifies by opening `.gitignore` and quotes in its handover. The text it replaces is appended verbatim to `.scratch/graph-workflow/map-history.md` under a heading mirroring the section it came from, with struck-through text staying struck through.
+  - The same sentence still says that this repo has no build, no tests, no formatter and no CI, that `.gitignore` invokes nothing, and that the bar's command half being empty is a complete bar rather than a deficient one.
+  - `.gitignore` is not edited.
+  - Scope came from no search: the sentence named is the place of the work.

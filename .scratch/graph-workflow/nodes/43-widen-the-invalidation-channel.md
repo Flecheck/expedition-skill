@@ -66,7 +66,7 @@ Six files change, and no other file in the repository changes:
 
 ## Flags
 
-`43.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
+`43.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
 
 ## Amendment, 2026-09-25 (from node 312)
 
@@ -74,7 +74,7 @@ Six files change, and no other file in the repository changes:
 
 - **Clause 3**, as amended by node 299. Replace the quoted current text with: `` Such a demand goes in the handover's `INVALIDATIONS` part, which names which resolved node the work contradicts and how. `` It is still one sentence, so "That sentence is reworded" stays. Clause 4 still holds: `graph-conventions.md` still says "A demand about the record as a whole belongs on the handover and in no condition, whatever its wording."
 
-`43.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 312](312-cut-the-rules-both-the-manager-contract-and-graph-conventions-state.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `e64b3de`.
+`43.2` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 312](312-cut-the-rules-both-the-manager-contract-and-graph-conventions-state.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `e64b3de`.
 
 ## Superseded, 2026-09-26
 
@@ -83,3 +83,5 @@ Six files change, and no other file in the repository changes:
 ## Superseded, 2026-09-26
 
 *The manager's note.* Its `graph-conventions.md` sentence, held on node 329 as remainder R1, is now carried by [node 338](338-say-in-graph-conventions-md-which-file-of-the-map.md) as clause 17a or 17b, on the human's "ok" to node 330's merge.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

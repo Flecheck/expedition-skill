@@ -143,7 +143,7 @@ for review; it is the observation that motivates clause 1 being an imperative.
 
 ## Flags
 
-`260.1` `ASSUMPTION` — *The worker's own text, pasted.*
+`260.1` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > Clause 4 demands that a `map.md` paragraph be **replaced** by a pointer. That paragraph is **not in my worktree**:
 > it is an uncommitted change in the manager's main tree, and the worktree was reset to `4598672`, which predates it.
@@ -487,3 +487,5 @@ branch deleted. **Commit `db81330`**, carrying the trailer `Node: graph-workflow
 **This is the last worktree this effort will make under the old route.** It sat at
 `.claude/worktrees/260-never-ask-which-waits`; [node 269](269-ignore-the-new-worktree-path.md)'s, created while this
 one was at its gate, is the first under the plain-git route at `.scratch/graph-workflow/worktrees/`.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

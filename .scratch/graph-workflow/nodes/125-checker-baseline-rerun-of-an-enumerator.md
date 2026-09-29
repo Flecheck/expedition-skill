@@ -1,7 +1,7 @@
 # Whether a checker's baseline re-run of an enumerator belongs in its contract
 
 Type: grilling
-Status: open
+Status: out-of-scope
 
 Blocked by: none
 
@@ -35,3 +35,7 @@ this node is about**, whoever takes this node reads the file as it then stands r
 wording rather than the condition's: the condition mandated *"it holds no before-state"* and the worker wrote *"you
 were given no before-state"*, recorded as flag `116.1`. So the thing this node asks about is already a live
 disagreement between a condition and the work that met it.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.

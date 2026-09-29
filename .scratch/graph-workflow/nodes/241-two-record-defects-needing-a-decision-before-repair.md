@@ -223,14 +223,14 @@ work touched it.
 
 ## Flags
 
-`241.1` `ASSUMPTION` — **The duplicated pair of struck lines in `decisions.md` stays exactly as it is.** Node 150's
+`241.1` `ASSUMPTION` **· settled** — **The duplicated pair of struck lines in `decisions.md` stays exactly as it is.** Node 150's
 original index line appears struck twice, once carrying the node-175 supersession note and once carrying a
 *"superseded by the worker's reissued index line, immediately below"* note — the same sentence recorded twice with
 two different accounts of what replaced it. I settled this rather than asking. Never-delete forbids removing either;
 both are struck; both point forward; and the live line this node adds is what a reader now finds. Correcting it
 would be rewriting recorded text for no gain to any reader.
 
-`241.2` `ASSUMPTION` — **The two struck notes naming `map-implementation-rules.md` as where the replacement route
+`241.2` `ASSUMPTION` **· settled** — **The two struck notes naming `map-implementation-rules.md` as where the replacement route
 lives are left uncorrected.** That file held it when node 175's worker wrote the note; [Move the landing section out
 of the file an implementation worker reads](188-move-the-landing-section-out-of-the-workers-file.md) moved it to
 `map-manager-only.md` afterwards, so the pointer inside struck text now resolves to a file that no longer holds the
@@ -280,3 +280,5 @@ creates is real and documented, so I neutralised it the other way: the live line
 - **Node 13's copy of check 5's wording** → annotated onto node 13 rather than minted, node 238 already owning the shipped statement. The manager's reasoning is on that annotation.
 - **A node file's current position not being findable without reading to the end** → **not minted, and this is why**: it restates the open fog item *"What never-delete costs the reader of a node file"* in `map-manager-only.md`, which already names the same cost and says what would settle it. The manager has added nothing to that item, an unresolved fog item not being a node.
 - **`map-manager-only.md` saying node 144's condition quotes the worktree paragraph** → **not minted.** The worker reported it as low-confidence and did not chase it. The manager has not verified it either and is not minting a node on an unverified premise; it is recorded here so the next reader of that sentence knows it is doubted.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

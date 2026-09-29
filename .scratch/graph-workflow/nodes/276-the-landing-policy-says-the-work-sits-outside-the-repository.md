@@ -2,6 +2,7 @@
 
 Type: implementation
 Status: open
+Supersedes: 254
 
 Blocked by: none
 

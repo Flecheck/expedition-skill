@@ -82,7 +82,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 ## Flags
 
-`57.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
+`57.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
 
 ## Amendment, 2026-09-26 (from node 302)
 
@@ -92,8 +92,10 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 *The manager's note:* the worker added: "the `research` entry has no `_Avoid_` line, before or after, so "Its `_Avoid_` line is unchanged" holds trivially."
 
-`57.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 302](302-rewrite-the-glossary.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `de347dc`.
+`57.2` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 302](302-rewrite-the-glossary.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `de347dc`.
 
 ## Superseded, 2026-09-26
 
 *The manager's note.* Its research-contract part is replaced by [node 333](333-land-the-open-repairs-to-the-five-worker-contracts-in-one-change.md), and its `CONTEXT.md` part by [node 335](335-qualify-the-glossarys-research-entry-for-the-research-raise.md), the merge [node 329](329-group-the-open-nodes-against-the-worker-contracts.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

@@ -81,7 +81,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 ## Flags
 
-`155.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
+`155.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 290](290-rewrite-the-research-contract-as-the-pilot.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `4068519`.
 
 ## Amendment, 2026-09-25 (from node 294)
 
@@ -91,7 +91,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 *The manager's note:* the worker reported that in the implementation file the `flags.md` line ("Leave `flags.md` unread. It is not yours.") follows the list directly, and that the decisions bullet is byte-identical, so clauses 1, 3 and 4 still hold.
 
-`155.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 294](294-rewrite-the-implementation-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `724c361`.
+`155.2` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 294](294-rewrite-the-implementation-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `724c361`.
 
 ## Amendment, 2026-09-25 (from node 291)
 
@@ -99,7 +99,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 - **The sentence before its clauses**, as amended by node 294. Replace it with: "Each carries a `## What you read` section opening `Read each of these. Do not trust any summary of them.`, or, in `.claude/skills/expedition-research/SKILL.md`, `.claude/skills/expedition-implementation/SKILL.md` and `.claude/skills/expedition-grilling/SKILL.md`, `Read each of the following. Do not trust any summary of them.`, followed by a bulleted list of pointers and then a line stating that `flags.md` is not the worker's."
 
-`155.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 291](291-rewrite-the-grilling-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0a3e68b`.
+`155.3` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 291](291-rewrite-the-grilling-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0a3e68b`.
 
 ## Amendment, 2026-09-25 (from node 292)
 
@@ -109,7 +109,7 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 *The manager's note:* the worker reported that in the precondition file the `flags.md` line follows the list directly, that the list now has four bullets because the node-file bullet was split in two, and that the decisions bullet is byte-identical, so clauses 1, 3 and 4 still hold.
 
-`155.4` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 292](292-rewrite-the-precondition-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `ede2c76`.
+`155.4` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 292](292-rewrite-the-precondition-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `ede2c76`.
 
 ## Amendment, 2026-09-25 (from node 293)
 
@@ -119,8 +119,10 @@ Node 290's worker searched every open node's `## Acceptance condition` for quote
 
 *The manager's note:* the worker reported that in the prototype file the `flags.md` line ("Leave `flags.md` unread. It is not yours.") follows the list directly, and that the decisions bullet ("`decisions.md` — the sections the spawn names") is byte-identical, so clauses 1, 3 and 4 still hold.
 
-`155.5` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 293](293-rewrite-the-prototype-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6d26be1`.
+`155.5` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 293](293-rewrite-the-prototype-contract.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `6d26be1`.
 
 ## Superseded, 2026-09-26
 
 *The manager's note.* Replaced by [node 333](333-land-the-open-repairs-to-the-five-worker-contracts-in-one-change.md), the merge [node 329](329-group-the-open-nodes-against-the-worker-contracts.md)'s worker proposed, on the human's "ok". This node's demands are carried there, tagged with this node's number; the question and acceptance condition above are superseded as a whole.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

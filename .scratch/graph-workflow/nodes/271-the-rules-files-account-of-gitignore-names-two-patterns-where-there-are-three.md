@@ -1,11 +1,14 @@
 # The rules file's account of `.gitignore` names two patterns where there are three
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 190
 
 Blocked by: [node 269](269-ignore-the-new-worktree-path.md)
 
 ## Question
+
+*Superseded 2026-09-29: this question no longer needs doing here. See `## Superseded, 2026-09-29` below.*
 
 *Surfaced by [node 269](269-ignore-the-new-worktree-path.md)'s worker, and pasted as it wrote it.*
 
@@ -61,3 +64,7 @@ and the manager has not made it.
 **This is the second drift of one sentence**, the first corrected at node 114's check for claiming no ignore file
 existed after one had been added. **[Node 268](268-carry-the-plain-git-worktree-route-into-the-map.md) also holds
 `map-history.md`**, so two workers must not hold that file at once; the manager holds that sequencing.
+
+## Superseded, 2026-09-29
+
+*The manager's note:* superseded by [node 190](190-the-rules-file-states-one-list-twice.md), under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q3 (`verbatim`: *"ok"*, recorded on node 366). Node 366's worker's reason: merged: its clauses join node 190's condition, both editing the bar paragraph of `map-implementation-rules.md`.

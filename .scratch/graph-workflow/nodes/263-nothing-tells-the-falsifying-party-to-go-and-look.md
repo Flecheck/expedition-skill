@@ -315,7 +315,7 @@ it.**
 
 ## Flags
 
-`263.1` `ASSUMPTION` — *The worker's own text, pasted.*
+`263.1` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > **I priced the duty as a search rather than a read, and the number that decided the node was one I made myself.**
 > The node was minted on the premise that one of four instances is greppable and that reaching the other three *"is a
@@ -327,7 +327,7 @@ it.**
 > generalisation from four cases, that a clause can only be falsified by a change to something it names in words. I
 > believe it is a construction rather than an induction, and I have stated the one case it does not reach.
 
-`263.2` `ASSUMPTION` — *The worker's own text, pasted.*
+`263.2` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > **I widened the duty to claimed nodes, where node 252's permission stops at unclaimed ones.** Node 252 confined its
 > pen to unclaimed nodes, on the ground that amending under a live worker is a different act. I extended the duty to
@@ -338,7 +338,7 @@ it.**
 > What I accepted: a later reader meets two rules about acceptance conditions with different scopes, and nothing but
 > this paragraph explains why they differ.
 
-`263.3` `ASSUMPTION` — *The worker's own text, pasted.*
+`263.3` `ASSUMPTION` **· settled** — *The worker's own text, pasted.*
 
 > **I judged how this duty divides with the cascade without putting the division back to the human.** The human's
 > answer added, in their own words, that *"there was also the idea of the cascade agent that is relevant (but there
@@ -350,7 +350,7 @@ it.**
 > accepted: if they meant that this duty should have been written as part of the cascade rather than beside it, the
 > answer as written puts it in the wrong file, and the node I reported is where that would surface.
 
-`263.4` `MANAGER-WRONG` — ***Filed by the manager against itself.*** **The manager's note at filing, and the spawn
+`263.4` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself.*** **The manager's note at filing, and the spawn
 that carried it, asserted a false fact as the sharpest fork of this node's question**: *"of the four instances,
 exactly one is greppable. Node 111's turns on a refused word. The other three turn on a decision … and no string
 search finds those."* **All four are reachable by search**, by the path the falsifying change touched rather than by
@@ -488,3 +488,5 @@ shipped contract's open question 9 occurring live.
   shortfall recorded and the third time it has not been repaired. Node 95 is the standing evidence in two separate
   answers that a permission can be granted and never exercised, and **the manager is the hand it keeps stalling
   in.** Named for the human as a judgement they may want to take off the manager.
+
+*The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.

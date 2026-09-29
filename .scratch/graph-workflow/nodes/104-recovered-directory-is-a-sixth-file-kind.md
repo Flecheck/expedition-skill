@@ -1,7 +1,7 @@
 # The `recovered/` directory is a sixth file kind the graph's conventions do not define
 
 Type: grilling
-Status: open
+Status: out-of-scope
 
 ## Question
 
@@ -27,3 +27,7 @@ roughly 485k tokens scanning nodes 01–60, and its scan was written to
 `.scratch/graph-workflow/recovered/46-scan-nodes-01-60.md` so attempt 2 could verify it instead of re-running it.
 Attempt 2 did verify it, by twenty-two spot-checks, and reported the result — so the mechanism has one recorded use
 and it worked.
+
+## Ruled out of scope, 2026-09-29
+
+*The manager's note:* under the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q2 (`verbatim`: *"ok"*). Its line in `map-manager-only.md`'s `## Out of scope` is node 366's worker's text.
