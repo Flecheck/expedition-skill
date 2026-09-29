@@ -107,3 +107,39 @@ possibly [`expedition-checker/SKILL.md`](../../../.claude/skills/expedition-chec
 *The manager's note, 2026-09-28:* [node 353](353-whether-implementer-becomes-a-glossary-headword.md)'s worker reports this node's question changed. Its words, pasted: Node 34 (open, grilling): a term is renamed in its title, "What an implementer does with a checker finding it believes is false". Its body already says "implementation worker". The shipped line it concerns (`.claude/skills/expedition/SKILL.md:830`) will read "a worker" or "the implementation worker" once the rename node lands. The title is record text and stays as it is under never-delete.
 
 *The manager's note, 2026-09-28:* [node 162](162-how-much-of-the-integration-rule-ships.md)'s worker reports this node's question changed. Its words, pasted: **Node 34** (open, grilling) quotes the implementation contract's diagram, including `→ approve → the manager commits; your node resolves`, under "What is shipped today". Once the new node lands, that quotation is out of date. Its question, about a finding the implementer believes is false, is unchanged in substance.
+
+## Interview
+
+#### Questions 1 and 2, relayed 2026-09-29
+
+*Pasted as the worker handed it back.*
+
+```
+NODE:          What an implementer does with a checker finding it believes is false (node 34)
+ABOUT:         The implementation contract says the worker fixes every checker finding. It gives the worker no way to say a finding is wrong. You asked for "something" at node 28's close. This node decides what that is.
+SO FAR:        I read the node, map.md, the decisions.md lines for nodes 28, 160, 162 and 363, and the shipped contracts as they stand now.
+               - Implementation contract, `## After the code is written`: "Fix all of it before the gate." and "Never leave the finding unfixed at the gate on your own authority." The only exception is a fix that would be a new piece of work, which is raised under trigger 1. The GATE PAYLOAD part reads "for each thing the checker found, what you changed".
+               - The manager contract already names the referee. Its table of things that are never the manager's has the row "deciding between a worker and its checker | put that disagreement to the human, who alone settles it". `## The gate` already lets the manager raise a gate on a failing tree ("a check that will not pass"). Item 3 of `## What nothing here settles` lists this exact gap as open. So the human referee and the failing-tree gate both exist already. The only missing piece is the worker being allowed to leave a finding unfixed and say why.
+               - The checker's side of this (node 31 item 2) has already shipped. Its row "you can check it, the work complies, and complying is what produces the defect" hands back "your outcome, and a question". So the checker disagrees in its own report, and the manager carries that report to the gate. The same pattern fits the worker, without a new channel.
+               - Manager's note: in practice this session, a worker that disagreed said so in its correction-round handover, and the manager put it to you at the gate. My recommendation writes that practice down.
+               - Settled on my own authority: the checker still runs again after the other findings are fixed. It will fail again on the disputed finding, and that FAIL is the expected "check that will not pass" case. The checker contract is left unchanged.
+
+Q1. Which route
+ASK:           When the worker believes a checker finding is false, what does it do?
+RECOMMENDED:   It leaves that finding unfixed and says in GATE PAYLOAD why it believes the finding is false. You settle it at the gate, and if you uphold the finding it comes back to the worker as a correction round. The shipped edits are small and remove text overall:
+               (a) Implementation contract, `## After the code is written`, becomes: "Fix all of it before the gate, except a finding you believe is false. Leave that one unfixed and say why in `GATE PAYLOAD`. The human settles it at the gate, and a finding they uphold arrives as a correction round. Leave no other finding unfixed on your own authority." The diagram's "you fix everything it found" becomes "you fix what it found".
+               (b) GATE PAYLOAD part: "for each thing the checker found, what you changed, or why you left it unfixed".
+               (c) Manager contract, `### The payload`: "What the worker changed for each thing the checker found, or why it left it unfixed, in the worker's own words." Delete item 3 of `## What nothing here settles`. No other file cites it by number, which I checked by search.
+               This adds about 2 lines to the implementation contract and removes about 4 from the manager contract. Your attention is spent only at a gate you would review anyway. It also removes the harm the node names, a wrong fix shipping quietly: the finding reaches you as a decision you make at the gate rather than a footnote.
+ALTERNATIVES:  - Nothing changes: the checker contract's hard rule 2 ("A property nobody stated is not a finding") is the only protection, and a worker still edits code that is not broken.
+               - A fourth raise trigger: blocks mid-node and holds the code slot so you can decide something the gate would show you anyway.
+               - A rebuttal sent back to the checker: needs new text in the checker contract, and a checker ruling on its own finding is not independent of it.
+               - A flag for the disputed finding: a flag does not block, so the dispute would reach you as a footnote, which is why the contract forbids it today.
+
+---
+
+Q2. Scope
+ASK:           Does this go into the shipped skill files, or stay a rule for this effort only?
+RECOMMENDED:   Shipped files, as edits (a) to (c). The gap is in the contracts themselves, and the manager contract already lists it as open. This does not depend on Q1's answer: whichever route you choose, you still have to say where it goes.
+ALTERNATIVES:  - This effort's map only: the next effort starts with the gap back in place, and manager item 3 stays.
+```
