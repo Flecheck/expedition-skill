@@ -68,3 +68,9 @@ RETROSPECTIVE (partial; the full one comes with the handover)
 3. What would have made this easier: the node's question naming the heading of each of the four raises.
 4. What was stale, wrong or contradictory: nothing found yet. The node's claim that "node 186 already carried two annotations saying so" checks out.
 ```
+
+#### The human's answer to questions 1 to 3, 2026-09-29
+
+`verbatim`: *"ok"*
+
+The manager had put the questions with the line "Please answer Q1 to Q3. "ok for recommended" takes all three." So the reply takes the worker's `RECOMMENDED` on all three: the check covers the node's annotations and notes plus a search for each passage its condition quotes or names by heading; the manager runs it as part of claiming; the rule ships in `.claude/skills/expedition/SKILL.md`, next to "Re-derive an enumerated scope before the node is claimed".
