@@ -1,7 +1,7 @@
 # Say in rule 6 what a pointer may hold
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question

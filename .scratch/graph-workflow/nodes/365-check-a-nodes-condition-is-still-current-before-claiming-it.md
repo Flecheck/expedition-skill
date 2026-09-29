@@ -1,7 +1,7 @@
 # Check that a node's condition is still current before claiming it
 
 Type: grilling
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
