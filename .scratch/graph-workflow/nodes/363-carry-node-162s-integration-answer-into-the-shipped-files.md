@@ -88,3 +88,54 @@ RETROSPECTIVE
 3. What would have made this easier: a spawn naming only the `decisions.md` lines that bear on the node, which the contract already allows ("the sections the spawn names"). The spawn said "the index of decisions" without naming sections, so I read all of it.
 4. What was stale, wrong or contradictory: clause 8 says "after the work, the same command returns no line saying that only the human starts…". Clause 5 requires the bullet to keep its text, so the command still returns that bullet's first line. The clause holds only because it is worded as "no line saying…" rather than "no line". I report the wording but do not dispute the clause. Separately, `graph-conventions.md`'s `## Review` item 2 still assumes every correction round has human's words; it is reported under NEW NODES.
 ````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-09-29. A fresh checker, under the human's ruling that a checker is resumed within its own node only; the condition reached it as a verbatim copy in `$TMPDIR/c363.md`.*
+
+> PASS
+>
+> Node 363, "Carry node 162's integration answer into the shipped files". Worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/363-integration, uncommitted diff against 77c5b60.
+>
+> Method: I flattened each changed file into one line (`tr '\n' ' ' | tr -s ' '`) and ran `grep -cF` for each exact target string the condition dictates. I read the diff to confirm that nothing else moved. I read the three changed paths as the work under check.
+>
+> Condition, one line per clause:
+> 1. graph-conventions.md, Landing bullet. `grep -cF` on the flattened file for the whole new bullet, from "- `## Landing an implementation node's work` — the landing policy: where a node's worker works, ..." through "...and what happens when integrating the node's work conflicts. Landing is the manager's, so neither a worker nor its checker reads this section." returned 1. The diff's only hunk in this file is that bullet, rewrapped. The diff adds no version-control command.
+> 2. The correction round entry in the implementation SKILL.md. `grep -cF` for the exact new entry returned 1, and the old entry is gone per the diff.
+> 3. The approve line. `grep -cF` for "→ approve → the manager lands your work; where integrating it conflicts, you may be resumed to fix the conflicted files in place, running no git command, and the checker and the gate run again" returned 1. It wraps over indented continuation lines inside the block. `grep -cF` for the unwrapped "→ correct → ..." and "→ reject → ..." lines each returned 1, and the diff leaves them untouched.
+> 4. The code-slot sentence. `grep -cF` for "You hold a code slot from your first edit until your work has landed or been rejected." returned 1. Its paragraph was rewrapped, and a flat comparison shows no other word moved.
+> 5. The correction-round bullet. `grep -cF` for the old text plus "In a round the manager starts when integrating your work conflicts, you receive the conflicted files instead, and you fix them in place." returned 1.
+> 6. The glossary Correction round entry. `grep -cF` for the new first sentence, followed by the unchanged "The number of rounds has no limit. A correction round is not a revision, and it is not a check. _Avoid_: review round, iteration, revision", returned 1.
+> 7. No other file changed. `git status --short --ignored --untracked-files=all` in the worktree lists only the three modified paths, excluding the ignored worktrees directory. `git diff --stat 77c5b60` shows 3 files, 14 insertions and 9 deletions. Nothing under `.scratch/` changed, and none of the manager's bookkeeping files is among the work.
+> 8. Scope search. I ran the command as written. At 77c5b60, via `git grep` with the same regex over `.claude/skills/`, it returns exactly the five recorded lines: SKILL.md lines 16, 36, 178 and 193, and glossary.md line 339. That matches the recorded return. On the working tree it returns one line, expedition-implementation/SKILL.md:196, "- You receive the human's words exactly as they said them...". Clause 5 requires that bullet to keep this text. Unwrapped, the bullet now also covers the round the manager starts, so it does not say that only the human starts a correction round. No line says the node resolves at approval. The command reaches no instance outside the list.
+>
+> The bar:
+> - Commands: the repo has no build, no tests, no formatter and no CI. map-implementation-rules.md records this, and the worktree root holds no manifest or agent-instruction file. So the bar is its non-command half.
+> - `git diff --check` printed nothing, so there are no whitespace errors.
+> - Line widths of the added lines stay within each file's existing width (at most about 104 characters on added lines).
+>
+> Standards: I read only the standards in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md. They are:
+> - `/coding-principles` and `/naming`
+> - glossary.md's `_Avoid_` lines
+> - the ground rules and the six standing rules for writing, as I was given them
+> - graph-conventions.md
+> - `/writing-for-agents`
+> - the rule for record paths as work
+>
+> That file names no reviewing skill, so I invoked none and held the work against these standards by hand.
+>
+> The ones that bore on this work:
+> - `_Avoid_` lines. No refused term is introduced: "landing commit" is not used, and "rejected" is the human's gate outcome, which the Checker entry's `_Avoid_` reserves to the human.
+> - Ground rule 3. Nothing tells an agent to address the human.
+> - Ground rule 1. No repo, machine or toolchain is assumed. "running no git command" is a prohibition dictated by the condition.
+> - Writing rules 5 and 6 and `/writing-for-agents`. All added text is the condition's dictated wording, and there is no line-number citation.
+>
+> `/coding-principles` and `/naming` do not bear, since the change is prose only. I found no breach.
+>
+> Not checked: nothing in the condition was left uncovered.
+
+### Gate — approve, `standing yes`, 2026-09-29
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and left no part of the condition uncovered. The node raised no flags.
