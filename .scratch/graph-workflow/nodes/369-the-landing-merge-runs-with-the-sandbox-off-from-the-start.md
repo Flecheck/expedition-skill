@@ -1,7 +1,7 @@
 # The landing merge runs with the sandbox off from the start
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: ~~234~~
 
 ## Question
@@ -22,6 +22,12 @@ Should the landing policy say that `git merge --ff-only` into the main tree alwa
 > 4. Every markdown link in both files resolves to a path that exists, except a link to a path outside this repository.
 > 5. No file outside `.scratch/graph-workflow/` is modified.
 > Scope came from no search: the named places are the work.
+
+## Answer
+
+The landing policy now has the manager run `git merge --ff-only` with the sandbox off from the first attempt, since the sandbox's read-only `.claude/skills` can partially write a merge; the repair remains the fallback.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `7065249`. Flags 369.1 settle at the node closing report.
 
 ## Handover, attempt 1
 
@@ -121,4 +127,6 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`369.1` `ASSUMPTION` — *The worker's own text.* Clause 1 is met by adding sentences to the `**Landing policy**` paragraph, not by rewriting its existing sentence that lists the landing steps. So no binding rule text was replaced, and clause 2 (conditional, "Where a sentence ... is replaced") bound nothing, and `map-history.md` was not touched. Grounds: the existing sentence stays true as written, and adding to it is the smallest change that meets the clause.
+`369.1` `ASSUMPTION` **· settled** — *The worker's own text.* Clause 1 is met by adding sentences to the `**Landing policy**` paragraph, not by rewriting its existing sentence that lists the landing steps. So no binding rule text was replaced, and clause 2 (conditional, "Where a sentence ... is replaced") bound nothing, and `map-history.md` was not touched. Grounds: the existing sentence stays true as written, and adding to it is the smallest change that meets the clause.
+
+*The manager's note, 2026-09-29:* flags 369.1 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
