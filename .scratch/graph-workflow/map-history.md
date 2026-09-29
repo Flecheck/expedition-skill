@@ -1090,3 +1090,7 @@ That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **
 *Replaced, and it stood as:*
 
 `HEAD` does not move and nothing is lost in either case; both succeed outside the sandbox.
+
+## Not superseded, only narrowed, in `map-manager-only.md` on 2026-09-29 — the resume item
+
+*The manager's note:* the item beginning "**An agent is resumed wherever it can be resumed, a checker and a dead attempt included.**" gained one sentence after "So the manager's default is **resume**, …", narrowing the checker's case to resumes within one node, on the human's words recorded there. No sentence was removed, so no text is banked here.
