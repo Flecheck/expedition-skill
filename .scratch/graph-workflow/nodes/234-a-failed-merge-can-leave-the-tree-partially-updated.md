@@ -197,6 +197,8 @@ RETROSPECTIVE
 
 ### Checker run 1 — `FAIL` (acceptance condition, and the bar)
 
+*The manager's note, 2026-09-29:* the quoted text directly below is not this node's check. It is checker text for node 297, pasted here by mistake, and it does not bind. It is kept in place because a node file archives its own record. Node 369's worker reported the error. The true run 1 text follows under `#### Checker run 1, the true text`.
+
 *The checker's own text, pasted, 2026-09-28. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c234.md`, with the human's settlement of how clauses 1 and 2 are read.*
 
 > FAIL: acceptance condition
@@ -274,6 +276,77 @@ RETROSPECTIVE
 > **Not re-raised:** run 6's open question about ground rule 1 and `CONTEXT.md` concerns lines outside G2, which this work does not change. G2 adds no new dependence on this repo.
 >
 > File: `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/297-rewrite-the-manager-contract-part-2/.claude/skills/expedition/SKILL.md`
+
+#### Checker run 1, the true text
+
+*The checker's own text, pasted, 2026-09-29, from its hand-back of 2026-09-28. The manager's note below refers to the findings in this text.*
+
+> FAIL: acceptance condition
+> FAIL: the bar
+>
+> I read only the standards section of `map-implementation-rules.md` ("What the work is held against"). I also read the ground-rules block of the worktree `map.md` (the five ground rules and the six standing rules for writing), and only that block, as the spawn directed. I read the two changed paths as the work, under that file's rule on record files as work. I derived no intent from them.
+>
+> ### Finding 1 (acceptance condition): the replacement and repair text departs from the wording the human approved "as worded"
+>
+> - **Instances:**
+>   - **Part (b), the repair line.** The approved text is: "The repair is one pass, in this order: first establish that every dirty file is byte-identical to the branch's version (`git diff --quiet <branch> -- <path>`); then discard the dirt (`git checkout -- <path>`); then re-run the merge outside the sandbox. Where any dirty file differs from the branch, stop and discard nothing."
+>   - The work's text in `map-manager-only.md`, under `## Landing an implementation node's work`, "What it hits" sub-bullet, differs in several ways:
+>     - It is reworded into five sentences.
+>     - It swaps the check command for `git show worktree-<NN>-<name>:<path> | cmp - <path>`.
+>     - It swaps the discard command for `git checkout HEAD -- <path>`.
+>     - It adds "outside the sandbox" to the discard step.
+>     - It adds a new step, "delete a file `HEAD` does not hold".
+>     - It adds a stated reason, "because that difference is content the branch does not carry".
+>   - **Part (a), the replacement sentence.** The approved four sentences are present in order, word for word, except for two changes:
+>     - The third sentence is bolded.
+>     - A fifth sentence, which (a) does not contain, is added: "The merge can also fail having written nothing, and then the retry outside the sandbox succeeds."
+>   - Found by comparing the text in `git -C <worktree> diff` against (a) and (b) in `/tmp/claude-1000/c234.md`.
+>   - **Context for the manager.** Clause 3 as the condition originally words it is met: first/discard/re-run order, "Establishing byte-identity comes first", "stops and discards nothing". The departure is from the settlement's approved wording, not from clause 3's own words. Some of the changes, the handling of files `HEAD` does not hold and discarding outside the sandbox, may fix real gaps in (b). Whether that departure is allowed belongs to whoever approved (b).
+> - **Form:** added text in the changed passage that differs from the replacement or repair text the settlement approved as worded, taking the "What it hits" sub-bullet only.
+> - **Extent:** `git -C /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/234-failed-merge diff -- .scratch/graph-workflow/map-manager-only.md`. The hunk it prints is the whole candidate set.
+>
+> ### Finding 2 (the bar): bold on text that defines no term (standing writing rule 5, "Bold a term only where it is defined")
+>
+> - **Instances:** three bold spans added in `map-manager-only.md`, none of which defines a term:
+>   - `**The merge may instead write some of the changed files before it fails.**`
+>   - `**The repair for a partially written merge is one pass, in this order.**`
+>   - `**Establishing byte-identity comes first.**`
+> - **Form:** a `**…**` span that exists after the change, not before it, and does not define a term.
+> - **Extent:** unwrap the file before and after the change, list the `**…**` spans on each side, and diff the two lists:
+>   `git show HEAD:.scratch/graph-workflow/map-manager-only.md | tr '\n' ' ' | sed 's/  */ /g' | grep -o '\*\*[^*]*\*\*' | sort` against the same pipeline over the worktree file, then `diff`. The diff printed exactly these three. `map-history.md`'s added lines contain no bold.
+>
+> ### Parts of the condition established
+>
+> - **Scope and clause 7 (met).** `git status --porcelain --untracked-files=all` shows only the two permitted files changed. No node status, `decisions.md` or `flags.md` change appears.
+> - **Clause 1 as settled (met, apart from Finding 1).** The one surviving combined sentence is replaced. The new text states:
+>   - the partial write ("may instead write some of the changed files before it fails")
+>   - the dirty tree
+>   - the `Your local changes to the following files would be overwritten by merge` refusal on a retry outside the sandbox
+> - **Clause 2 and (c), (d) (met).**
+>   - `map-history.md` has a new `## Superseded from \`map-manager-only.md\` at node 234 — …` heading, with a `### From *Landing an implementation node's work* — …` subheading. Both carry a descriptive suffix in the style of the existing headings (`grep -n '^## Superseded from' map-history.md`).
+>   - The appended sentence matches the removed line exactly: "`HEAD` does not move and nothing is lost in either case; both succeed outside the sandbox."
+>   - Edit 13 and Edit 14 exist and hold the two earlier sentences (`grep -n 'Edit 1[34]' map-history.md`).
+>   - The new text is appended at the end of the file and replaces nothing (the diff hunk is additions only).
+> - **Clause 3 as originally worded (met).** The order is first/discard/re-run, "comes first" is stated, and the text says to stop and discard nothing on a mismatch. This is subject to Finding 1 on (b).
+> - **Clause 4 (met).**
+>   - The unwrapped `**Landing policy**` paragraph has the same md5 at HEAD and in the worktree (6088403e…).
+>   - The node-160 amended span "A rebase conflict is resolved, and the rebase is not aborted. … the manager runs `git rebase --abort` and the node takes a correction round." matches once in the unwrapped file.
+>   - The diff has no line containing "rebase".
+> - **Clause 5 (met).** `git diff HEAD | grep '^+.*## Notes'` finds nothing.
+> - **Clause 6 (met).** Every relative `](…)` target in both files, anchor stripped, exists: a loop with `[ -e ]` from `.scratch/graph-workflow/` reported no missing target.
+> - **Clause 8.** Covered under the bar below.
+>
+> ### The bar
+>
+> - The repo has no build, no tests, no formatter and no CI. I confirmed there is no manifest or task runner, as `map-implementation-rules.md` states, so there were no commands to run.
+> - The non-command half was held against:
+>   - the ground rules
+>   - the six standing rules for writing
+>   - `/writing-for-agents`
+>   - the glossary `_Avoid_` refusals, checked by hand
+> - Rule 5 failed (Finding 2). The other standards found no issue in the changed passage.
+> - No reviewing skill is named, so none was run.
+> - My only writes were two scratch files in `$TMPDIR` for the bold diff. Nothing in the repo was touched.
 
 *The manager's note:* a `FAIL` is outside the standing yes. Finding 1 turns on whether the worker may depart from wording the human approved "as worded", which only the human can say; it goes to the human. Finding 2 goes back to the worker with the human's answer, in one correction round.
 

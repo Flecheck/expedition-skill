@@ -56,3 +56,9 @@ ALTERNATIVES:  - Write it only as a rule in this effort's map.md. It then binds 
                - Make only the one-off cuts to the nine pairs, with no rule.
                - Add it to rule 6 in map.md next to node 367's pointer sentences. Rule 6 is about pointers, and this rule is about where a rule belongs, so it does not fit there cleanly.
 ```
+
+#### The human's answer to questions 1 and 2, 2026-09-29
+
+`verbatim`: *"ok for 360"*
+
+The manager had asked for "ok for recommended" to answer both, so this takes the worker's `RECOMMENDED` on each. Q1, the worker's words: "The contract keeps the rule and the glossary keeps the meaning. Each glossary entry drops its rule sentences and keeps its definition and its `_Avoid_` line. Each contract passage drops only the sentences that just define the term, which is mainly the first two paragraphs of `## Starting an effort` and the dead-attempt bullet's first two sentences." Q2, the worker's words: "Yes, as one sentence in the glossary's opening, which already states the glossary's rules for what gets in ("A term is added only once a node has settled it.")."
