@@ -1,8 +1,14 @@
 # Point the manager-read shipped files at the headings they restate
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The stop, standing-yes and cleanup skills, `graph-conventions.md` and `adoption.md` now point at ten headings they restated, and `## New work stops` names the two rules it suspends.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1` and its correction round. Run 1 failed on the bar, one pointer summarising its target; run 2 passed. The checker's question on clause 11 went to the human at the gate, who approved with clause 11 read as met. The work landed as commit `7cc7299`. Flag 359.1 settles at this gate; flag 359.2 was withdrawn by the worker.
 
 ## Question
 
@@ -397,6 +403,6 @@ RETROSPECTIVE
 
 ## Flags
 
-`359.1` `ASSUMPTION` — Clause 10 removes "Adoption is a way of starting an effort, and not a kind of node." `SKILL.md` `## Starting an effort`, which `adoption.md` points at, says adoption is one of the two ways an effort begins. It never says "not a kind of node". The glossary's **Adoption** entry does say it ("It is a way of starting an effort, not a kind of node"), and the manager is told to read the glossary. So I judged clause 11 met by the glossary and did not add the phrase to `SKILL.md`, which clause 13 keeps unchanged. What I did: searched every file under `.claude/skills/` for "kind of node". The glossary is the only place that still states it.
+`359.1` `ASSUMPTION` **· settled** — Clause 10 removes "Adoption is a way of starting an effort, and not a kind of node." `SKILL.md` `## Starting an effort`, which `adoption.md` points at, says adoption is one of the two ways an effort begins. It never says "not a kind of node". The glossary's **Adoption** entry does say it ("It is a way of starting an effort, not a kind of node"), and the manager is told to read the glossary. So I judged clause 11 met by the glossary and did not add the phrase to `SKILL.md`, which clause 13 keeps unchanged. What I did: searched every file under `.claude/skills/` for "kind of node". The glossary is the only place that still states it.
 
 `359.2` `ASSUMPTION` **· withdrawn by the worker in correction round 1** — Clauses 5 and 6 require that a statement appear "except by naming" a heading. I read that as allowing a one-sentence pointer that says what the heading governs, for example "Your contract's `## What is in front of the human, and when` keeps a covered item out of the pending queue" and "`## Flags` in your contract says when a node's flags settle where its gate was taken under a standing yes". A bare heading with no subject reads worse. What I did: wrote each pointer as one sentence, with no list of the target's contents. That is the narrow form node 361 is asking about.
