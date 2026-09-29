@@ -277,6 +277,96 @@ The manager put finding 1 of checker run 1 to the human, recommending that the w
 
 *The manager's note, from context it already holds:* on the first point, an `--ff-only` merge that fails leaves no merge in progress, so `git merge --abort` has nothing to abort. On the second, the partial write comes from running the merge inside the sandbox, where `.claude/skills` is read-only. Every landing merge this session ran with the sandbox off from the start, and none partially wrote, so under that practice the case does not arise, as the worktree case no longer does. The read-only overlay on `.claude/skills` in the main checkout still exists; it bites only a merge run inside the sandbox.
 
+## Handover, attempt 1, correction round 1
+
+*Filed by the manager as handed back, 2026-09-29. The worker's own text, pasted.*
+
+````
+HANDOVER:      234, "A failed `git merge --ff-only` can leave the tree partially updated, and the record says it cannot"
+
+WHAT CHANGED THIS ROUND: Only finding 2. I removed the bold from the three spans I had added in `map-manager-only.md`: "The merge may instead write some of the changed files before it fails.", "The repair for a partially written merge is one pass, in this order." and "Establishing byte-identity comes first." The words are unchanged. Nothing else changed, including the repair text the human kept. This round touched text that clauses 1 and 3 name, but only its markup, not its wording. I checked with the checker's method: I unwrapped the file at HEAD and in the worktree, listed the `**…**` spans on each side and diffed the two lists, and the lists are now identical. `**The manager must expect this rather than discover it**` was already there before my change, and is kept.
+
+ANSWER:        Per the human's "ok" to Raise 1, clause 1 is taken to cover the one sentence that still stated the claim, and clause 2 to be already met for the two earlier statements. Node 229 had moved those two, word for word, to `map-history.md` (Edit 13 and Edit 14) before this node was minted.
+               In `map-manager-only.md`, under `## Landing an implementation node's work`, in the bullet "One sandbox restriction bites this lifecycle", sub-bullet "What it hits": the sentence "`HEAD` does not move and nothing is lost in either case; both succeed outside the sandbox." is replaced. The new text:
+               - keeps "`HEAD` does not move in either case";
+               - keeps the reset's old claim (it loses nothing and succeeds outside the sandbox), because nothing has shown it false and the reset is a step of no route since node 265;
+               - states the partial-write case for the merge: it may write some of the changed files before it fails, which leaves the main tree dirty, and a retry outside the sandbox then refuses with `Your local changes to the following files would be overwritten by merge`;
+               - states the clean case (the merge fails having written nothing, and the retry succeeds), because node 229's landing hit that case and the partial write is a case rather than the rule.
+               The repair follows in the same sub-bullet, as one pass in order:
+               1. Establish byte-identity for each dirty file with `git show worktree-<NN>-<name>:<path> | cmp - <path>`.
+               2. Outside the sandbox, discard the files: `git checkout HEAD -- <path>` for a file `HEAD` holds, and delete a file it does not hold.
+               3. Re-run the merge outside the sandbox.
+               The text states that byte-identity comes first. Where any dirty file differs from the branch's version, the manager stops and discards nothing.
+               Three choices a later reader would otherwise have to re-derive:
+               - The repair goes inside the existing sub-bullet, not in a fourth one, so that the lead-in "The three sub-bullets below are measurements" stays true.
+               - The discard runs outside the sandbox because a dirty file under `.claude/skills/` cannot be rewritten inside it.
+               - The discard uses `git checkout HEAD --` rather than `git checkout --`, so it also undoes any index write the failed merge made.
+               The replaced sentence is appended word for word to `map-history.md` under `## Superseded from map-manager-only.md at node 234 — the claim that a merge failed in the sandbox loses nothing`, subheading `### From *Landing an implementation node's work* — the sandbox restriction's sub-bullet on what it hits`. The introduction under that heading points at Edit 13 and Edit 14 for the two earlier statements.
+
+THE HUMAN'S TWO QUESTIONS, and how they bear on the text (I have changed nothing for them):
+               1. "`git merge --abort` is not available because it's a merge fail and not a merge conflict": correct. A `--ff-only` merge that fails on an unlink never starts a merge, so there is no `MERGE_HEAD` and `git merge --abort` has nothing to undo. That is why the repair is a manual comparison and discard. The text does not say this. I judge it worth one clause, e.g. "`git merge --abort` does not apply: the failed fast-forward left no merge in progress". Adding it would not touch anything the condition fixes. I left it out because this round was scoped to finding 2.
+               2. "Similar to the worktree issue where the old way had problems, and now no read-only issues?": yes, it has the same shape. The bullet "A failed rebase leaves its partial checkout behind" in the same section records a git operation that wrote part of its result before failing, so the retry met the leftover changes. The worktree route got rid of its read-only problems by dropping the steps that hit the overlay: the reset, and entering a tree. The removal still runs with the sandbox off. The merge has not been fixed that way. The read-only overlay on the main checkout's `.claude/skills` still exists, and a merge run inside the sandbox still hits it. Your note says every landing merge this session ran with the sandbox off from the start and none partially wrote. That points to a simpler rule: always run the landing merge with the sandbox off. The partial write could then not happen, and the repair would become a fallback. I judge the text should gain that rule, but not in this node:
+                  - The rule belongs in the `**Landing policy**` paragraph, which clause 4 freezes.
+                  - Or it could sit in this sub-bullet, but it would change how landing is done, which goes beyond this node's own text (trigger 2).
+                  I propose it below as a new node.
+
+INDEX LINE:    The landing section now says a sandbox-failed merge may partially write the tree and block a retry, and gives the repair: confirm byte-identity first, discard, re-merge unsandboxed.
+
+FLAGS:         none
+
+NEW NODES:     Name: The landing merge runs with the sandbox off from the start
+               Kind: implementation
+               Question: Should the landing policy say that `git merge --ff-only` into the main tree always runs with the sandbox off? The sandbox mounts the main checkout's `.claude/skills` read-only, so a merge run inside it can fail after writing part of its result. Every landing merge on 2026-09-28 ran with the sandbox off from the start, and none partially wrote.
+               Blockers: none. It edits `.scratch/graph-workflow/map-manager-only.md`, which node 234 also edits, so the two must not run in the same pair of code slots.
+               Acceptance condition:
+                 The work is `.scratch/graph-workflow/map-manager-only.md` and `.scratch/graph-workflow/map-history.md`. The worker may edit those two files and no other.
+                 Done means every one of the following is true of the finished tree.
+                 1. In `map-manager-only.md`, under the heading `## Landing an implementation node's work`, the paragraph beginning `**Landing policy**` states that the manager runs `git merge --ff-only` with the sandbox off, and states the reason: the sandbox mounts `.claude/skills` in the main checkout read-only, so a merge run inside it can fail after writing some of the changed files.
+                 2. Where a sentence stating a rule that currently binds is replaced to meet clause 1, its text before the change is appended, unaltered, to `map-history.md` under a heading naming `map-manager-only.md` and this node, with a subheading naming *Landing an implementation node's work*. It is appended rather than replacing anything.
+                 3. The text in the same section that states the repair for a partially written merge (confirm that each dirty file is byte-identical to the branch's version, discard, then re-run the merge outside the sandbox, and stop without discarding where any file differs) is still present, and says it applies where a merge was run inside the sandbox.
+                 4. Every markdown link in both files resolves to a path that exists, except a link to a path outside this repository.
+                 5. No file outside `.scratch/graph-workflow/` is modified.
+                 Scope came from no search: the named places are the work.
+
+INVALIDATIONS: Node 229 (the landing section's accounts banked): no contradiction. Its Edit 13 and Edit 14 text is now cited from the new history section as the two earlier statements of the claim this node supersedes. Node 140 (Edit 14's measurement, "the merge succeeds on a retry outside the sandbox"): narrowed. That retry is clean only where the failed merge wrote nothing.
+
+CONDITIONS:    What I searched for: the open and claimed nodes' conditions and questions, for "nothing is lost", "succeeds outside the sandbox", "What it hits", "overwritten by merge", "partially written", "ff-only" and "One sandbox restriction bites". Apart from this node, it matched node 251 (line 34: the ff-only merge listed as not retested) and node 80 (line 64: the landing-policy sequence naming `git merge --ff-only`). My work makes neither wrong. There are no replacements and no changed questions. This round changed no words, so I did not search again.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:  Checker findings and what I changed:
+               - Finding 1 (repair text departs from the approved wording): the human kept my version, so nothing changed.
+               - Finding 2 (bold on text that defines no term): I removed the bold from the three added spans. The bold-span lists before and after my change now match exactly.
+               Paths touched, both in worktree `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/234-failed-merge`:
+               - `.scratch/graph-workflow/map-manager-only.md`
+               - `.scratch/graph-workflow/map-history.md` (appended only; you integrate this against node 186 at landing)
+               The node file is not edited.
+               Checks against the condition, re-run this round:
+               - The `**Landing policy**` paragraph is byte-identical to HEAD.
+               - The node-160 span is untouched.
+               - No `## Notes` heading was added.
+               - Every link resolves.
+               - Only the two files are modified.
+               The bar: the repo has no build, tests, formatter or CI. That matches the record.
+               Proposed commit message:
+               State that a sandbox-failed merge can partially write the tree, and its repair
+
+               The landing section said a merge failed in the sandbox loses nothing and
+               succeeds on a retry outside it. The merge may instead write some changed
+               files first, leaving the tree dirty and the retry refused. The section now
+               states that case and the one-pass repair: confirm byte-identity with the
+               branch first, discard, and re-merge outside the sandbox. The replaced
+               sentence is banked in map-history.md.
+
+               Node: graph-workflow/234
+
+RETROSPECTIVE
+1. What I had to hunt for: this round, nothing. The checker's instructions for measuring the extent were exact.
+2. What arrived that this node did not need: finding 1's details, since the human had already settled it.
+3. What would have made this easier: if the writing rules had been in front of me when I wrote the text. I read rule 5 in map.md and still bolded out of habit, following the style around it. The surrounding sub-bullets bold whole sentences that define nothing, so the local style works against the rule.
+4. What was stale, wrong or contradictory: the section's existing bold spans, such as "**The manager must expect this rather than discover it**", break rule 5 the same way mine did. I left them, since they fall outside this node's condition.
+````
+
 ## Flags
 
 `234.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 160 above.* Node 160's replacement for clause 4's second sentence was filed on this open, unclaimed node without asking the human first.
