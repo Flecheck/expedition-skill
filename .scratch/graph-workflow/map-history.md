@@ -1080,3 +1080,13 @@ That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **
   splitting at 43,847 bytes** — and it is node 129's worker's number rather than the human's, flagged at `129.4`.
   What would settle it: `decisions.md` approaching that size, at which point part (ii) of node 129's package is
   re-offered.
+
+## Superseded from `map-manager-only.md` at node 234 — the claim that a merge failed in the sandbox loses nothing
+
+*Replaced under the `Change the map` procedure at [node 234](nodes/234-a-failed-merge-can-leave-the-tree-partially-updated.md), which states that the merge may write some of the changed files before it fails, and states the repair. The two earlier statements of the same claim are already in this file, under Edit 13 and Edit 14 of `## Superseded from map-manager-only.md — the landing section's accounts`. The sentence is shown without the rest of its sub-bullet.*
+
+### From *Landing an implementation node's work* — the sandbox restriction's sub-bullet on what it hits
+
+*Replaced, and it stood as:*
+
+`HEAD` does not move and nothing is lost in either case; both succeed outside the sandbox.

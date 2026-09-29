@@ -179,9 +179,19 @@ banked whole in [map-history.md](map-history.md).**
   unchanged.
   - **What it hits.** `git merge --ff-only` in the main tree, of a branch that changed a file under `.claude/skills/`
     — `unable to unlink old …`. And `git reset --hard <ref>` inside an *entered* worktree, where the range crosses
-    such a file — `Could not reset index file to revision`. `HEAD` does not move and nothing is lost in either case;
-    both succeed outside the sandbox. **The manager must expect this rather than discover it**, most of the open
-    frontier touching `.claude/skills/`.
+    such a file — `Could not reset index file to revision`. `HEAD` does not move in either case. The reset loses
+    nothing and succeeds outside the sandbox. The merge may instead write some of the changed files before it
+    fails. That leaves the main tree dirty, and a retry outside the sandbox then refuses with `Your local changes
+    to the following files would be overwritten by merge`. The merge can also fail having written nothing, and then
+    the retry outside the sandbox succeeds. **The manager must expect this rather than discover it**, most of the
+    open frontier touching `.claude/skills/`. The repair for a partially written merge is one pass, in this
+    order. First, establish that every file the failed merge left dirty is byte-identical to the branch's version
+    of it: `git show worktree-<NN>-<name>:<path> | cmp - <path>` succeeds for each one. Then, outside the sandbox,
+    discard those files: `git checkout HEAD -- <path>` for a file `HEAD` holds, and delete a file `HEAD` does not
+    hold. Then re-run the merge outside the sandbox. Establishing byte-identity comes first. Where any dirty
+    file differs from the branch's version, the manager stops and discards nothing, because that difference is
+    content the branch does not carry.
+    Settled at [node 234](nodes/234-a-failed-merge-can-leave-the-tree-partially-updated.md).
   - **What it does not hit, established by experiment rather than inferred.** `git add` and `git commit` from inside
     an entered worktree both succeed. `.git/index` is writable in the main tree and in a worktree's admin directory.
     `git reset --hard` succeeds inside an entered worktree where the commit range touches no file under
