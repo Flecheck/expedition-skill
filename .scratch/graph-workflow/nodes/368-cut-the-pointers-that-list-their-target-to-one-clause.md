@@ -75,6 +75,60 @@ RETROSPECTIVE:
 4. What was stale, wrong or contradictory: the node file's worker note about joining node 359 is stale, as the manager said. The removed SKILL.md text claimed that `### Recording the human's words` holds "whether an entry goes under `## Interview` or `## Review`", which that section does not really state. So the old pointer's summary was slightly inaccurate.
 ````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-09-29. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c368.md`.*
+
+> PASS
+>
+> Worktree: /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/368-pointers. I produced the diff with `git -C <worktree> diff`. `git status --short` shows exactly two modified paths, `.claude/skills/expedition/SKILL.md` and `.claude/skills/expedition/graph-conventions.md`, and nothing else. So no other file was edited, and there is no bookkeeping path (node status line, `decisions.md`, `flags.md`). Under the rule in map-implementation-rules.md, I read the changed paths as the work.
+>
+> Scope statement: the condition states that its scope came from no search command, so there was no recorded command to run.
+>
+> One line per part:
+> - Part 1 (SKILL.md `### The human's words`, last paragraph): I read the section with `awk '/^### The human.s words/,/^### Two things/'`. The paragraph is now two sentences.
+>   - "`### Recording the human's words` in `graph-conventions.md` says what form each recorded entry takes."
+>   - "The same file's description of `## Interview` states the rule for the `DIVERGENCE` mark."
+>   - Each pointer has one clause. Neither names the three marks or the quoted option, and neither says which section an entry goes under. The DIVERGENCE pointer stays, in the finished form. Met.
+> - Part 2 (graph-conventions.md `### Recording the human's words`, first paragraph): it now reads "`### The human's words` in `SKILL.md` says when and how the manager records an answer." That is one clause, and the four listed items are gone. The sentence "The rules in this section cover `## Interview` and `## Review`, …" is unchanged, as the diff shows. Met.
+> - Part 3 (SKILL.md `## Acceptance conditions`, first paragraph): it now has two sentences over three cited headings (`## The node file`, `### Claim`, `## Acceptance condition`). That stays within "one sentence per heading it names".
+>   - Each pointer has one clause: "says which nodes carry…", "says when such a node may be claimed", "states the rules that bind every condition".
+>   - The self-contained rule, the demand about the whole record and the search rule are no longer stated.
+>   - The diff has no hunk touching the second paragraph ("Where an agent minted the node, …"). Met.
+> - Part 4 (`### The four constraints…`, item 2): it still says to read the condition back before the node is claimed and to record that reading on the node. It no longer names the three rules. It now points at "the description of `## Acceptance condition` under `## The node file` in `graph-conventions.md`". Met.
+> - Part 5 (no rule lost): I read graph-conventions.md `### `## Acceptance condition``. It still states all three rules: the self-contained rule ("A condition is self-contained text…"), the demand about the whole record ("A demand about the record as a whole belongs on the handover…") and the search rule ("Where a condition's scope was derived from a search…", with its three items).
+>   - SKILL.md `### The human's words` still states when the manager records an answer, pasting, the `paraphrase` mark, and the terse reply whose option is unclear.
+>   - `### Recording the human's words` still states the three marks and the quoted option.
+>   - `### `## Interview`` still states the DIVERGENCE rule.
+>   - Removed item "whether an entry goes under `## Interview` or `## Review`": at the cited heading, the only matching text is the retained sentence that the section's rules cover both sections. Part 2 explicitly preserves that sentence, and I held part 5 met on it. See the question below. Met.
+> - Part 6 (no heading renamed, cited headings exist): the diff changes no heading line; `git diff -U0 | grep '^+#'` finds nothing. `grep -n '^#'` over both files confirms every cited heading exists:
+>   - `### Recording the human's words`, `### `## Interview``, `## The node file`, `### Claim` and `### `## Acceptance condition`` in graph-conventions.md.
+>   - `### The human's words` in SKILL.md.
+>   - Met.
+> - Residual clause: I searched every `.md` under `.claude/skills/`, unwrapped into paragraphs, with the pattern `` `#+ …` (in|of) `….md` … (holds|says|states) …: ``. It returned nothing, so there are no other listing pointers to report from that search. The search is narrow, so this does not show that none exist.
+>
+> The bar: map-implementation-rules.md records that this repo has no build, no tests, no formatter and no CI. So there were no commands to run beyond:
+> - `git diff --check`, which printed nothing (no whitespace errors).
+> - A line-length check. The added lines are at most 103 columns, and graph-conventions.md's maximum is 105, so the file's wrap width is kept.
+>
+> Standards: I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md`. They are `/coding-principles`, `/naming`, glossary.md's `_Avoid_` lines, the ground rules, the six writing rules, graph-conventions.md and `/writing-for-agents`. No reviewing skill is named, so I ran none. I checked the standards by hand.
+> - Writing rules 4, 5 and 6 bore on this work. Every pointer cites by heading. Each new sentence has one idea, is grammatical and has a clear referent. The pointers point rather than restate.
+> - None of the new words appear in any `_Avoid_` line (checked against `grep -n -i avoid glossary.md`).
+> - None of the added text assumes this repo, this machine or a toolchain.
+> - The passages edited are not trigger-duties: `.claude/rules/expedition-triggers.md` has no hits for DIVERGENCE, self-contained or "Recording the human". So no companion edit is owed.
+> - `/coding-principles` and `/naming` did not bear on this prose-only change.
+>
+> QUESTIONS:
+> - About `### Recording the human's words` in graph-conventions.md. SKILL.md used to say this heading holds "whether an entry goes under `## Interview` or `## Review`". That clause is now removed, as part 1 demands. The heading itself says only that its rules cover both sections. It does not say which section a given entry goes under; that is stated under `### `## Review`` item 2 and `### `## Interview``.
+>   - This gap was already there before the change, and the work did not widen it. Part 2 of the condition explicitly keeps the sentence that covers both sections.
+>   - Should that heading also say which section an entry goes under, or point at the two section descriptions?
+>   - Form: a statement that an earlier pointer said its target heading held, which the target heading does not actually state.
+>   - Extent: this finding has no extent, and its instances are not exhaustive. This is the only instance I found, in the two changed files.
+
+*The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate; it goes to the human.
+
 ## Flags
 
 `368.1` `ASSUMPTION` — *The worker's own text.* Clause 1 removes the words saying that `### Recording the human's words` holds "whether an entry goes under `## Interview` or `## Review`". Clause 5 requires that each removed statement still be stated at the heading the pointer names. That heading's first sentence names the two sections as the ones that hold the human's words. Which kind of entry goes in which section is stated under the sibling descriptions `### \`## Review\`` and `### \`## Interview\`` in the same file, not under the named heading itself. I judged that no rule is lost: the removed words described the target, and the placement rule is still in `graph-conventions.md`. I did not edit the target to repeat it.
