@@ -280,6 +280,10 @@ RETROSPECTIVE
 
 *The manager's note:* run 1 handed back a question beside its outcome (clause 11's reading for the "carries every flag" sentence), so the standing yes does not cover this gate; it goes to the human.
 
+### Gate — approve, 2026-09-29
+
+The manager put the gate to the human, with checker run 1's question on clause 11 and flag 359.1, recommending that clause 11 be read as met, since the removed "It carries every flag the node holds" rule is stated at `### Picking the next node`. The human, `verbatim`: *"ok"*. The manager had said "ok" would mean clause 11 is read as met and the work is approved as it is. Flag 359.1 settles at this gate.
+
 ## Handover, attempt 1, correction round 1
 
 *Filed by the manager as handed back, 2026-09-28. The worker's own text, pasted.*
