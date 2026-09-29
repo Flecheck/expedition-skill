@@ -1,7 +1,7 @@
 # Cut the pointers that list their target to one clause
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
