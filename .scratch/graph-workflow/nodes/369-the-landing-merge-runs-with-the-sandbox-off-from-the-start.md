@@ -83,6 +83,42 @@ RETROSPECTIVE
 4. What was stale, wrong or contradictory: node 234's "Checker run 1 — FAIL" section holds the wrong checker text. It is the check of node 297 ("Rewrite the manager contract's second part in plain English", worktree 297-rewrite-the-manager-contract-part-2), not of node 234. The record of node 234's first check is therefore missing, and the manager's note under it refers to findings that text does not contain.
 ```
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-09-29. The checker was resumed from node 234's check; the condition reached it as a verbatim copy in `$TMPDIR/c369.md`.*
+
+> PASS
+>
+> Node 369, "The landing merge runs with the sandbox off from the start". This is a fresh check, and nothing from node 234 carries over. I read only the standards section of `map-implementation-rules.md` ("What the work is held against"), and nothing else in the effort's directory. The ground rules and the six standing rules for writing came as text from `/tmp/claude-1000/ground.md`. I read the one changed path as the work, under that file's rule on record files as work.
+>
+> Method: I unwrapped `map-manager-only.md` at HEAD (`1d30043`) and in the worktree, and diffed the two at word level with Python `difflib`. The work is two insertions, and no word was removed or replaced.
+> - Insertion 1, in the `**Landing policy**` paragraph, after "…then removes the worktree and deletes the branch.": "The manager runs `git merge --ff-only` with the sandbox off, on the first attempt as well as on any retry. The reason is that the sandbox mounts `.claude/skills` in the main checkout read-only, so a merge run inside the sandbox can fail after writing some of the changed files. The repair for a merge that was run inside the sandbox is in the bullet *One sandbox restriction bites this lifecycle* below. Settled at [node 369](…)."
+> - Insertion 2, in the "What it hits" sub-bullet, just before the repair: "The landing policy above has the manager run the merge with the sandbox off. The repair that follows applies where a merge was run inside the sandbox despite that rule."
+>
+> Parts of the condition:
+> - **Scope and clause 5: met.** `git status --porcelain --untracked-files=all` lists only ` M .scratch/graph-workflow/map-manager-only.md`. Filtering out `.scratch/graph-workflow/` leaves nothing.
+> - **Clause 1: met.** Insertion 1 is under `## Landing an implementation node's work`, in the paragraph beginning `**Landing policy**`. It states that the merge runs with the sandbox off. It states the reason: `.claude/skills` is mounted read-only in the main checkout, and a merge inside the sandbox can fail after writing some files. Found with `grep -n 'with the sandbox off'` on the file.
+> - **Clause 2: met, with nothing to do.** The word-level diff shows insertions only, so no sentence stating a binding rule was replaced. Nothing was owed to `map-history.md`, and it is unchanged.
+> - **Clause 3: met.** The repair text is still present with every element: byte-identity via `git show … | cmp`, discard, re-run outside the sandbox, and stop without discarding where a file differs. Insertion 2 says the repair applies "where a merge was run inside the sandbox". Checked by reading the sub-bullet after `grep -n 'One sandbox restriction bites this lifecycle'`.
+> - **Clause 4: met.** From `.scratch/graph-workflow/`, every relative `](…)` target in both files, with its anchor stripped, passes `[ -e ]`, including `nodes/369-the-landing-merge-runs-with-the-sandbox-off-from-the-start.md`. The loop reported nothing missing. The in-text pointer to the bullet *One sandbox restriction bites this lifecycle* resolves to that bullet, which starts `- **One sandbox restriction bites this lifecycle.**`.
+> - **The condition's "Scope came from no search":** it records no command, so there was nothing to re-run.
+>
+> The bar:
+> - The repo has no build, tests, formatter or CI. Its root holds only `CONTEXT.md` and `CONTEXT-MAP.md`, which agrees with `map-implementation-rules.md`. There were no commands to run.
+> - On the non-command half, I held both insertions against the five ground rules, the six standing rules for writing, `/writing-for-agents`, and the glossary's `_Avoid_` refusals, checked by hand. None found a defect.
+>   - Rule 5: neither insertion adds bold.
+>   - Rules 4 and 6: the cross-reference names the bullet by its heading and does not restate its content.
+> - No reviewing skill is named, so I ran none.
+> - One formatting observation, which is not a finding because no stated standard governs line wrapping: insertion 2 leaves a short line, "The repair for a partially written merge is one pass, in this", because the sub-bullet was not rewrapped. It renders identically in Markdown.
+>
+> My only writes were two scratch files in `$TMPDIR` for the unwrapped comparison.
+
+### Gate — approve, `standing yes`, 2026-09-29
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and left no part of the condition uncovered. This settles none of the node's flags; they settle at the node closing report.
+
 ## Flags
 
 `369.1` `ASSUMPTION` — *The worker's own text.* Clause 1 is met by adding sentences to the `**Landing policy**` paragraph, not by rewriting its existing sentence that lists the landing steps. So no binding rule text was replaced, and clause 2 (conditional, "Where a sentence ... is replaced") bound nothing, and `map-history.md` was not touched. Grounds: the existing sentence stays true as written, and adding to it is the smallest change that meets the clause.
