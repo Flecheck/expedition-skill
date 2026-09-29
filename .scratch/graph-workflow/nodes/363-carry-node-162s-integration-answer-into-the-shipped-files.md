@@ -1,7 +1,7 @@
 # Carry node 162's integration answer into the shipped files
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
