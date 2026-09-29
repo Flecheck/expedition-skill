@@ -1,7 +1,7 @@
 # What an implementer does with a checker finding it believes is false
 
 Type: grilling
-Status: open
+Status: claimed
 
 ## Question
 
