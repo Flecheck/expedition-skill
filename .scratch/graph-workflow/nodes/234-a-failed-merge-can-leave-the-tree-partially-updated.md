@@ -271,6 +271,12 @@ RETROSPECTIVE
 
 *The manager's note:* a `FAIL` is outside the standing yes. Finding 1 turns on whether the worker may depart from wording the human approved "as worded", which only the human can say; it goes to the human. Finding 2 goes back to the worker with the human's answer, in one correction round.
 
+#### The human's answer at the gate, 2026-09-29
+
+The manager put finding 1 of checker run 1 to the human, recommending that the worker's version be kept and only the three bold spans be fixed. The human, `verbatim`: *"for 234, I guess git merge --abort is not available because it's a merge fail and not a merge conflict. Also isn't it similar to the issue with worktrees where the old way of doing it had problems ? And now we don't have readonly issues ? Otherwise ok."* The "ok" takes the recommendation: keep the worker's version, and fix the bold.
+
+*The manager's note, from context it already holds:* on the first point, an `--ff-only` merge that fails leaves no merge in progress, so `git merge --abort` has nothing to abort. On the second, the partial write comes from running the merge inside the sandbox, where `.claude/skills` is read-only. Every landing merge this session ran with the sandbox off from the start, and none partially wrote, so under that practice the case does not arise, as the worktree case no longer does. The read-only overlay on `.claude/skills` in the main checkout still exists; it bites only a merge run inside the sandbox.
+
 ## Flags
 
 `234.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 160 above.* Node 160's replacement for clause 4's second sentence was filed on this open, unclaimed node without asking the human first.

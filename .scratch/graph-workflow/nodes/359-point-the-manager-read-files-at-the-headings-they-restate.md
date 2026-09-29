@@ -241,8 +241,158 @@ RETROSPECTIVE
 
 *The manager's note:* an unmet bar goes back to the worker. The checker's question on clause 11 goes to the human at the gate.
 
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-09-29, after correction round 1.*
+
+> PASS
+>
+> This is a re-check of node 359 after one correction round. Worktree: /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/359-pointers. The five changed paths are unchanged in number and name, and I read them as the work.
+>
+> What changed:
+> - `git diff --stat` matches last round exactly: 5 files, 28 insertions, 46 deletions.
+> - I re-ran the pointer-line listing, `git diff -U0 | grep -E '^\+\+\+|^\+.*(`#|No edit deletes)'`. It returns the same 12 added lines as last round, with one exception: in `.claude/skills/expedition-standing-yes/SKILL.md`, `## Taking a covered item`, the opening now reads "Your contract's `## What is in front of the human, and when` says what happens to a covered item. Take the item in the same turn you would otherwise have queued it."
+> - I compared the corrected passage word by word against last round's diff. The only words that moved are "keeps a covered item out of the pending queue" becoming "says what happens to a covered item". The rest of that sentence and the next sentence are the same words re-wrapped.
+> - I found no change the statement does not mention.
+>
+> Last round's finding is fixed. The pointer now names the heading and says in one clause what the reader goes there for. It states none of the target's rules, as the node 361 ruling on rule 6 requires. None of the 12 pointer lines is now out of form.
+>
+> Acceptance condition. Only clause 5 is touched by the change. The other clauses stand as I established them last round, since their words did not move.
+> - Clause 5, re-checked:
+>   - The opening of `## Taking a covered item` no longer states that a covered item never enters the pending queue or that it is not put to the human. It only names `## What is in front of the human, and when`, and that section of `SKILL.md` still states both.
+>   - The same-turn instruction stays.
+>   - Step 1 still names `### Recording the human's words` and keeps the `## Interview`/`## Review` placement.
+> - Clauses 1-4 and 6-10: met, as established last round.
+> - Clause 11: met under the reading I gave last round. My question on clause 6's "carries every flag" sentence is with you for the gate, so I do not repeat it.
+> - Clause 12: headings are identical to HEAD in all five changed files, checked with `diff <(git show HEAD:<f> | grep '^#') <(grep '^#' <f>)` for each. Every cited heading exists.
+> - Clause 13: `git status --short --untracked-files=all` lists only the five named files.
+>
+> Bar, re-run in full:
+> - The repo has no build, tests, formatter or CI, per `map-implementation-rules.md` and confirmed against the repo, so there are no commands to run.
+> - `git diff --check` printed nothing.
+> - No added line is over 107 characters.
+> - Standards: I read only the standards stated in the worktree's `.scratch/graph-workflow/map-implementation-rules.md`. The ones that bore on this work are `/writing-for-agents`, the ground rules, and the six standing rules for writing together with the node 361 ruling.
+>   - Ground rules 1-5 are met.
+>   - Rule 4: no line numbers were added.
+>   - Rule 5: the corrected sentence is grammatical, and "it" and "the item" each refer only to the covered item.
+>   - Rule 6: every pointer is in form, and no heading was renamed.
+> - No reviewing skill is named for this repo, and I ran none.
+
+*The manager's note:* run 1 handed back a question beside its outcome (clause 11's reading for the "carries every flag" sentence), so the standing yes does not cover this gate; it goes to the human.
+
+## Handover, attempt 1, correction round 1
+
+*Filed by the manager as handed back, 2026-09-28. The worker's own text, pasted.*
+
+````
+HANDOVER:      Point the manager-read shipped files at the headings they restate
+
+ANSWER:
+
+## Answer
+
+Carried out clauses 1 to 10 in the worktree `.scratch/graph-workflow/worktrees/359-pointers` (branch `worktree-359-pointers`, cut from `d1528a7`). Five files changed. `.claude/skills/expedition/SKILL.md` is cited and was not edited. Every passage the condition quotes still matched the file at `d1528a7` before it was edited.
+
+Each pointer written here names a heading and, in one clause at most, says what the reader goes there for. That is node 361's ruling.
+
+- `expedition-stop/SKILL.md`, `## New work stops` (clause 3): the section now names what it suspends, for the rest of the session: "the parts of `### Picking the next node` that start new work, and item 3 of `## The order you act in`". The change is then stated in the section's own words and does not restate the suspended rules. It names item 3 because that is the item of `## The order you act in` that spawns an agent.
+- `expedition-stop/SKILL.md`, `## What the next manager starts from` (clause 1): the introducing sentence and the three bullets are replaced by one sentence naming `### Three states the status line does not show`. "Write no handoff document" and the live-worktree sentence stay.
+- `expedition-stop/SKILL.md`, `## Agents still running when the session ends` (clause 2): the section keeps the sentence saying that the next manager cannot resume a running attempt. Its rest is one sentence naming `## When an agent dies or is stopped`, which holds the replacement rule and the replay of the human's words. "Nothing is lost." went with it.
+- `expedition-standing-yes/SKILL.md`, `## Recording the invocation` (clause 4): the sentences on binding once written and on being this effort's alone are removed. The pointer and the in-force sentence stay. The two uses of "it" with different referents in the kept sentence ("governs it as it governs") became "governs the invocation as it governs".
+- `expedition-standing-yes/SKILL.md`, `## Taking a covered item` (clause 5): the opening now reads "Your contract's `## What is in front of the human, and when` says what happens to a covered item." The same-turn instruction stays. Step 1 keeps the Interview/Review placement and the pointer to `### Recording the human's words`. It drops the marking and quoting rules, and it drops "as the gate's outcome", which that heading also states.
+- `expedition-standing-yes/SKILL.md`, `## Flags, and the node closing report` (clause 6): the first paragraph is now one sentence naming `## Flags`. "It carries every flag the node holds …" is removed. That rule is in `### Picking the next node`. The sentences on naming each item with its scope, and on taking an item back, stay.
+- `expedition-cleanup/SKILL.md`, `## The rule this skill is an exception to` (clause 7): the paragraph now points at the opening paragraph of `graph-conventions.md` by quoting its first words, "No edit deletes.". No heading was added. The pointer also tells the manager to leave the entry that paragraph describes, so the kept sentence's "the entry's claim" has something to refer to.
+- `expedition-cleanup/SKILL.md`, `## Flag cleanup` (clause 8): the mismatch sentence is removed. Check 6 in `graph-conventions.md` states the rule.
+- `graph-conventions.md`, `### Change the map` (clause 9): the four-sentence paragraph is now "`## Writing the graph` in `SKILL.md` says who runs this procedure."
+- `adoption.md`, opening (clause 10): the three sentences are removed. "This file calls that directory's existing files the foreign record." is unchanged and moved up to follow the first sentence, whose "a directory of work that already exists" is what "that directory" refers to.
+
+Clause 11 checks. Each removed statement was compared against the text at the target it now points to:
+- Three states: `SKILL.md` `### Three states the status line does not show`.
+- Replacement and replay: `## When an agent dies or is stopped`.
+- Binding only once written, and the effort's alone: `### Standing steering, and standing instructions of one effort`.
+- Mark, scope quote and what was taken: `graph-conventions.md` `### Recording the human's words`.
+- Never enters the queue: the last paragraph of `## What is in front of the human, and when`.
+- Flags settling: `## Flags`.
+- Flags carried in the report: `### Picking the next node`.
+- Never-delete rule, its exception and the entry: the "No edit deletes." paragraph.
+- Removed index line is not a mismatch: `## Mechanical checks` check 6.
+- Who runs the procedure: `## Writing the graph`.
+- Adoption facts: `## Starting an effort`.
+
+The one exception is "not a kind of node", which `## Starting an effort` implies but does not state. The glossary's **Adoption** entry states it word for word. See flag 1.
+
+Clause 12 checks. No heading was renamed or added. Every cited heading exists with its exact text, checked with `grep -x`. The phrase "No edit deletes." occurs once in `graph-conventions.md`.
+
+Clause 13 check: the only changes are to five of the six files the condition names.
+
+Other checks: lines wrap within each file's existing width of 103 to 105 columns, the frontmatter apart. No bold was added. Each pronoun in the added text has one referent.
+
+Passages found outside the list, reported and not edited:
+- `expedition-cleanup` `## Flag cleanup`: "The effort closing report is built from its lines whose flag is not yet settled." restates `SKILL.md` `## Closing an effort`.
+- `expedition-stop` `## New work stops`: it also suspends the first trigger in `.claude/rules/expedition-triggers.md`. Clause 13 keeps that file out of this change.
+
+INDEX LINE:    The stop, standing-yes and cleanup skills, `graph-conventions.md` and `adoption.md` now point at ten headings they restated, and `## New work stops` names the two rules it suspends.
+
+FLAGS:
+- ASSUMPTION: Clause 10 removes "Adoption is a way of starting an effort, and not a kind of node." `SKILL.md` `## Starting an effort`, which `adoption.md` points at, says adoption is one of the two ways an effort begins. It never says "not a kind of node". The glossary's **Adoption** entry does say it ("It is a way of starting an effort, not a kind of node"), and the manager is told to read the glossary. So I judged clause 11 met by the glossary and did not add the phrase to `SKILL.md`, which clause 13 keeps unchanged. What I did: searched every file under `.claude/skills/` for "kind of node". The glossary is the only place that still states it.
+  Index: Judged "not a kind of node", cut from `adoption.md`, as still stated because the glossary's Adoption entry holds it, although `## Starting an effort` only implies it.
+
+(The first attempt's second ASSUMPTION flag, on how far a pointer may describe its target, is withdrawn. Node 361's ruling now settles that question, and the checker's finding under it is fixed.)
+
+NEW NODES:     none
+
+INVALIDATIONS:
+- Node 166 (the stop skill), an extension. `## New work stops` now names `### Picking the next node` and `## The order you act in` item 3 as the rules it suspends.
+- Node 312, a narrowing that is now repaired for one of its two exceptions. `graph-conventions.md` `### Change the map` no longer restates who runs the procedure. The multi-sentence pointer paragraphs in `SKILL.md` are untouched.
+- Node 355: its Tier 1 items 1 to 11 are carried out, except the second half of item 9 and item 12, which the condition excluded. Its word counts for those passages describe text that no longer exists.
+
+CONDITIONS:    I searched the `## Acceptance condition` and `## Question` of all 65 open or claimed nodes for these terms: `expedition-stop`, `expedition-standing-yes`, `expedition-cleanup`, `adoption.md`, `graph-conventions.md`, "Change the map", "New work stops", "What the next manager starts from", "Agents still running", "Recording the invocation", "Taking a covered item", "Flags, and the node closing report", "rule this skill is an exception", "Flag cleanup", "No edit deletes", "foreign record", "standing yes", "cleanup", "stop skill", "who runs", "Three states", "not a kind of node", "mechanical check" and "check 6".
+- Apart from node 359 itself, the stop/standing-yes/cleanup/adoption terms matched nothing.
+- The `graph-conventions.md` matches in nodes 284, 190, 104, 232, 41, 210, 87, 40, 13, 80, 170, 234, 363 and 361 do not touch the passages changed here.
+- Node 365's "who runs" is about a check before a claim.
+- Node 88's "check 6" concerns check 6's own wording, which is unchanged.
+- Node 170's "three states" is about a different subject.
+No clause is made wrong, and I wrote no replacement. No open node's question changes.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:
+- This round's change, for checker Finding 1 (bar, rule 6 under the node 361 ruling):
+  - Where: `.claude/skills/expedition-standing-yes/SKILL.md`, `## Taking a covered item`, opening sentence.
+  - Before: "Your contract's `## What is in front of the human, and when` keeps a covered item out of the pending queue."
+  - After: "Your contract's `## What is in front of the human, and when` says what happens to a covered item."
+  - The next sentence, "Take the item in the same turn you would otherwise have queued it.", is unchanged and re-wrapped at 102 columns.
+  - Nothing else changed this round, and the change touches clause 5.
+  - I re-read the other added pointers against the ruling and changed none, in line with the checker finding this the only instance.
+- Paths touched, all relative to the worktree root `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/359-pointers`:
+  - `.claude/skills/expedition-stop/SKILL.md`
+  - `.claude/skills/expedition-standing-yes/SKILL.md`
+  - `.claude/skills/expedition-cleanup/SKILL.md`
+  - `.claude/skills/expedition/graph-conventions.md`
+  - `.claude/skills/expedition/adoption.md`
+- Bar: the repo's current state matches the rules file's record. There is no build, no tests, no formatter and no CI. `.gitignore` ignores `.worktrees/`, `.claude/worktrees/` and `.scratch/graph-workflow/worktrees/`, as recorded, and invokes nothing. So the bar is the non-command half, and no commands were run.
+- Method-skill parts skipped: none.
+- Proposed commit message:
+
+  Point the manager-read skill files at the headings they restate
+
+  The stop, standing-yes and cleanup skills, graph-conventions.md and
+  adoption.md restated rules held at headings the manager already reads.
+  Each passage now names that heading instead. The stop skill's
+  "New work stops" names the two rules of the manager contract it
+  suspends.
+
+  Node: graph-workflow/359
+
+RETROSPECTIVE
+1. What I had to hunt for: this round, nothing. In the first round I searched for where "not a kind of node" survives, and found it only in the glossary.
+2. What arrived that this node did not need: most of `map.md`, and node 355's Tiers 2 and 3.
+3. What would have made this easier: having node 361's ruling, "names the heading and says what the reader goes there for", in the spawn or the condition from the start. Clauses 5 and 6 say "except by naming" and leave that exact question open, which is how the finding came about.
+4. What was stale, wrong or contradictory: clause 13 says "the six named in clauses 1 to 10", but those clauses edit only five files, because `SKILL.md` is only cited. Nothing else.
+````
+
 ## Flags
 
 `359.1` `ASSUMPTION` — Clause 10 removes "Adoption is a way of starting an effort, and not a kind of node." `SKILL.md` `## Starting an effort`, which `adoption.md` points at, says adoption is one of the two ways an effort begins. It never says "not a kind of node". The glossary's **Adoption** entry does say it ("It is a way of starting an effort, not a kind of node"), and the manager is told to read the glossary. So I judged clause 11 met by the glossary and did not add the phrase to `SKILL.md`, which clause 13 keeps unchanged. What I did: searched every file under `.claude/skills/` for "kind of node". The glossary is the only place that still states it.
 
-`359.2` `ASSUMPTION` — Clauses 5 and 6 require that a statement appear "except by naming" a heading. I read that as allowing a one-sentence pointer that says what the heading governs, for example "Your contract's `## What is in front of the human, and when` keeps a covered item out of the pending queue" and "`## Flags` in your contract says when a node's flags settle where its gate was taken under a standing yes". A bare heading with no subject reads worse. What I did: wrote each pointer as one sentence, with no list of the target's contents. That is the narrow form node 361 is asking about.
+`359.2` `ASSUMPTION` **· withdrawn by the worker in correction round 1** — Clauses 5 and 6 require that a statement appear "except by naming" a heading. I read that as allowing a one-sentence pointer that says what the heading governs, for example "Your contract's `## What is in front of the human, and when` keeps a covered item out of the pending queue" and "`## Flags` in your contract says when a node's flags settle where its gate was taken under a standing yes". A bare heading with no subject reads worse. What I did: wrote each pointer as one sentence, with no list of the target's contents. That is the narrow form node 361 is asking about.
