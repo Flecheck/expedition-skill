@@ -1,7 +1,7 @@
 # The landing merge runs with the sandbox off from the start
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: ~~234~~
 
 ## Question
