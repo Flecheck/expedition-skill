@@ -78,3 +78,61 @@ RETROSPECTIVE:
 3. What would have made this easier: a pointer in the node or the spawn to the precedent `map-history.md` section to mirror (node 354's). Also a note that clause 4 banks only rule 6, while the lead-in change in clause 3 is also a replaced rule text, so the worker need not decide whether to bank it.
 4. What was stale, wrong or contradictory: nothing contradictory. The condition's clause 4 names only rule 6's old text for banking, although clause 3 also replaces the lead-in. I banked both. This adds text and removes none, so clause 4 still holds.
 ````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-09-29. The checker was resumed from node 369's check; the condition reached it as a verbatim copy in `$TMPDIR/c367.md`.*
+
+> PASS
+>
+> Node 367, "Say in rule 6 what a pointer may hold". This is a fresh check, and nothing from earlier nodes carries over. I read only the standards section of `map-implementation-rules.md` ("What the work is held against"). The ground rules and the six standing rules for writing came as text from `/tmp/claude-1000/ground.md`. I read the two changed paths as the work, under that file's rule on record files as work, including `map.md`'s `## Notes` as the spawn directed.
+>
+> **What moved in a standard, settled first.**
+> - The work edits standing rule for writing 6, which is one of the standards.
+> - I compared the elements rule 6 requires before and after the change. It gains two sentences, which are new elements, and every earlier element is kept word for word (the Python check under clause 1). So the change is purely additive.
+> - Under the contract, I held the work against the unmoved elements. I did not hold it against the two added sentences, which are part of the work and were checked against the acceptance condition instead. Rules 1 to 5 did not move.
+>
+> **Scope: met.**
+> - `git status --porcelain --untracked-files=all` lists only ` M .scratch/graph-workflow/map.md` and ` M .scratch/graph-workflow/map-history.md`.
+> - There is no change to a node status line, `decisions.md` or `flags.md`.
+>
+> **Clause 1: met.**
+> - In `map.md`, the rule-6 line sits under `## Notes`: `grep -n '^#' map.md` puts line 75 between `## Notes` (line 22) and `## Decisions so far` (line 79).
+> - A Python check split HEAD's `6. **` line after its bold first sentence and inserted the two mandated sentences word for word. The result is identical to the worktree's `6. **` line (`rule6 exact: True`). So the four existing sentences are unchanged, and the new pair comes directly after sentence one.
+>
+> **Clause 2: met.**
+> - For n = 1 to 5, the md5 of `grep "^$n\. \*\*"` is the same at HEAD and in the worktree.
+>
+> **Clause 3: met.**
+> - The lead-in now ends "…the sixth by [node 253](…) and [node 361](nodes/361-whether-a-pointer-that-summarises-its-target-restates-it.md)." The target exists (see clause 5).
+>
+> **Clause 4: met.**
+> - HEAD's old rule-6 line matches exactly one whole line in `map-history.md`: `grep -Fxc -f` returned 1.
+> - It sits under `## Superseded from \`map.md\` at node 367 — …` and `### From \`map.md\`'s \`## Notes\` — the sixth standing rule for writing`. That heading mirrors the section the rule came from.
+> - HEAD's old lead-in is also banked word for word, under its own subheading (count 1).
+> - `git diff --numstat` gives `16 0` for `map-history.md`. There are zero `^-` lines, so the file gains text and loses none.
+>
+> **Clause 5: met.**
+> - From `.scratch/graph-workflow/`, every relative `](…)` target in both files, with its anchor stripped, passes `[ -e ]`. The loop reported nothing missing.
+>
+> The condition says "The scope came from no search", so there was no recorded command to re-run.
+>
+> **The bar.**
+> - The repo has no build, tests, formatter or CI. Its root holds only `CONTEXT.md` and `CONTEXT-MAP.md`, which agrees with `map-implementation-rules.md`. There were no commands to run.
+> - On the non-command half, I held both files' added text against the five ground rules, the unmoved standing rules for writing, `/writing-for-agents`, and the glossary's `_Avoid_` refusals, checked by hand. None found a defect.
+>   - Rule 5: no bold was added except the existing heading-style lead-in.
+>   - Rule 4: the history file cites by heading.
+> - No reviewing skill is named, so I ran none.
+>
+> QUESTIONS:
+> - A possible defect that comes from complying with the condition. The wording and the placement are the condition's own, so they were not the worker's to depart from.
+>   - Rule 6's existing second sentence begins with the elliptical "Where the reader is not, …". It used to mean "where the reader is not already told to read that file", with its antecedent at the end of the first sentence.
+>   - Clause 1 requires the two new sentences to go directly between them, and requires the existing sentences to stay word for word. So "Where the reader is not" now follows "It lists none of the items that heading holds and states none of its rules". The nearest reading of "is not" becomes unclear, for example "not going there".
+>   - Standing rule for writing 5 asks for "one clear referent for each pronoun" and grammatical sentences.
+>   - Should the elided clause be restored in that sentence, for example as "Where the reader is not told to read that file, …"? That would amend clause 1's "word for word", which only the condition's owner can decide.
+>
+> My only writes were scratch files in `$TMPDIR` for the comparisons.
+
+*The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate; it goes to the human.
