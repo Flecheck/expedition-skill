@@ -1,7 +1,7 @@
 # Cut the glossary's Adoption entry to its meaning
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question

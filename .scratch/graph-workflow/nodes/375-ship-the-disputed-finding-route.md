@@ -1,7 +1,7 @@
 # Ship the disputed-finding route into the implementation and manager contracts
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
