@@ -1168,3 +1168,13 @@ The seam is one step — the manager committing before the gate rather than afte
 *Replaced, and it stood as:*
 
 **The gate payload names the worktree's path** ([node 231](nodes/231-a-gate-payload-stops-carrying-a-diff-command.md), [node 336](nodes/336-carry-the-rules-on-what-reaches-the-human-the-code.md)), because an implementation node's work is uncommitted in a checkout outside the repository and `git diff` where the human is standing does not show it — their words on being handed a gate without it: *"what are the changes ? I don't see them in git ?"*.
+
+## Superseded from `map.md`'s `## Notes` at node 211 — the item that a fact about the record is derived rather than stored
+
+*Replaced under the `Change the map` procedure at [State in the map what a number handed to another agent must carry](nodes/211-what-a-number-handed-to-another-agent-must-carry.md), which writes into the item the rule [node 183](nodes/183-nothing-measures-the-record-about-itself.md) settled: a number about the record that is handed on carries its date and is marked not authoritative and for scale only, and its receiver re-derives it. The item's sentence on `derivations.md` is unchanged. The item is shown whole.*
+
+### From *Notes* — the item that a fact about the record is derived rather than stored
+
+*Replaced, and it stood as:*
+
+- **A fact about the record is derived rather than stored.** [`.scratch/graph-workflow/derivations.md`](derivations.md) holds the means of deriving the facts this effort measures about its own record, holds no values, and is not one of the graph's files. A number a worker receives from anywhere, whether a spawn, a handover or a line of the record, is re-derived before it is relied on. Settled at [node 183](nodes/183-nothing-measures-the-record-about-itself.md).
