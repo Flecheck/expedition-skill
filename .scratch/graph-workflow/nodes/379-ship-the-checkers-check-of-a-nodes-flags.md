@@ -113,3 +113,72 @@ RETROSPECTIVE:
 `````
 
 *The manager's note:* the replacement clause for node 214 under `CONDITIONS` is filed on node 214 when this work lands. The point about node 37 goes to node 37's worker when it is next resumed.
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c379.md`.*
+
+> PASS
+> Work under check: uncommitted changes in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/379-flag-check (base 937fe6c9b). I compared the diff with `git diff`, and for clauses 2 and 5 I compared the files sentence by sentence. For that comparison I unwrapped each paragraph, split it into sentences, and set-diffed the sentences of the base (`git show 937fe6c9b:<path>`) against the work. I read the changed paths as the work under the rule in map-implementation-rules.md.
+>
+> Preamble. `git status --porcelain --untracked-files=all` lists only ` M .claude/skills/expedition-checker/SKILL.md` and ` M .claude/skills/expedition/SKILL.md`. No other file is edited, and nothing is untracked. In the work tree, no node file, `decisions.md`, `flags.md` or `map-history.md` changed. The diff contains no `~~` strike-through. (The part about the main checkout is under NOT COVERED.)
+>
+> 1. Item 7 is present: "The flags the work's node holds, as text: each one sentence, with its id. A flag is a judgement another agent recorded about this work. Where the node holds no flags, this given is absent." The intro now reads "You are given seven things. The spawn carries all of them except the sixth, which you read for yourself from one file this contract names." Both parts of that are correct: the spawn carries 1–5 and 7, and the checker reads 6. Established from the sentence set-diff.
+> 2. "six" is gone from the paragraph. The new first sentence is "The givens above are everything you are given, so that the record behind the work stays unread." It adds "A flag given under item 7 is a claim about the work, and not part of the record." Every other sentence of the paragraph appears unchanged in the set-diff, including the two quoted in the clause. The set-diff lists only the old "The six givens above are everything you are given." as removed.
+> 3. `### The flags, after your outcome` sits between `### Questions…` and `### A part you could not establish…`, under `## What you hand back`. Each sub-clause has its own sentence:
+>    - (a) "Check the flags only after reaching your `PASS` or `FAIL`, and change no outcome because of them."
+>    - (b) "establish one of three things: … true of the work, it is false, or it makes no claim the work can make true or false."
+>    - (c) "Judge only whether … Never judge whether the flag's judgement was right, and ignore any reason the flag gives."
+>    - (d) "Report only a false flag, under `QUESTIONS:`, naming the flag's id and the search that showed it false."
+>    Established from the set-diff and the headings diff.
+> 4. The count sentence reads "Three kinds of question reach the human this way, and none of them stops your check." It adds "The third is a false flag, …" and then points at the new section with "`### The flags, after your outcome` says when and how you check the flags." Established from the set-diff.
+> 5. Headings: `diff` of `grep '^#'` between base and work shows a single added line, `### The flags, after your outcome`, in the checker file and nothing in the expedition file. The set-diff shows no sentence changed outside clauses 1–4. The table under `### When what you check against is itself the problem` is byte-identical: I extracted it with `sed -n '/^| what you find/,/^$/p'` on both sides and diffed.
+> 6. `## The checker` gains "On the check of an implementation node, on every run, the flags the node holds: each as its sentence from `flags.md`, with its id and without the link to its node." Established by reading the section with `sed -n 220,250p` and from the set-diff.
+> 7. The sentence now reads "The checker receives nothing from the effort's own record except those flag sentences, so its spawn never points it at the node file." Established from the set-diff.
+> 8. The item "Does anything check a flag before the human settles it?" and its three following sentences are removed. The remaining items are numbered 1–4 in their existing order (`sed -n 780,824p`). The scribe-rule bullet under `## Conflicts this contract leaves open` does not appear in the diff.
+> 9. `wc -l`:
+>    - expedition-checker/SKILL.md went from 422 to 436 (+14, within the limit of 15).
+>    - expedition/SKILL.md went from 826 to 824 (no growth).
+> 10. A script extracted every `](…)` target in both files and found 0 markdown links in either. `grep -c ']('` also returns 0 for both, so no link can fail to resolve.
+> 11. The bar is met (see below).
+>
+> Recorded search: I ran `grep -n -w -i 'six\|five' .claude/skills/expedition-checker/SKILL.md` as written.
+> - On the finished tree it returns nothing.
+> - On the base (`git show 937fe6c9b:…`) it returns exactly the two lines the condition records, at lines 36 and 56. That matches the recorded return.
+> - The search reaches no count word outside those two lines.
+>
+> Bar: the repo has no agent-instruction file at its root (no CLAUDE.md or AGENTS.md; the root holds only CONTEXT.md, CONTEXT-MAP.md, .gitignore, .claude and .scratch). map-implementation-rules.md states that graph-agent has no build, no tests, no formatter and no CI. So no command was run for the command half of the bar, and the bar rests on its non-command half.
+> - `git diff --check` is clean.
+> - No trailing whitespace.
+> - Added lines are at most 106 columns, which matches the existing wrap width of non-table lines in both files.
+>
+> Standards: I read only the standards in .scratch/graph-workflow/map-implementation-rules.md. The main checkout's copy and the worktree's copy are byte-identical (cmp).
+> - Bore on this work: the glossary's `_Avoid_` lines, the ground rules, the six standing rules for writing, graph-conventions.md and `/writing-for-agents`.
+>   - `_Avoid_` lines: none of the new text uses a refused word for its refused concept. "Report" is used as a verb for handing back, as the existing "Report what you find" already does.
+>   - Writing rules: the prohibitions ("Never judge…", "change no outcome…") stand beside their positives. The Questions section points at the new heading rather than restating it. No line numbers are cited, and nothing is bolded.
+>   - `/writing-for-agents`: the new section is short and puts the positive instruction first.
+> - Barely touched: `/coding-principles` and `/naming`.
+> - No reviewing skill is named for this repo, so I ran none.
+> - No flags were given to me, so I checked none.
+>
+> NOT COVERED:
+> - "The worker may not mark this node, resolve it, or write a line in any index file." I established it for the work tree I was given: no node file or index file changed there. Whether anything was written to the record in the main checkout is outside the paths I was given.
+>
+> QUESTIONS:
+> - The work complies with clauses 2 and 7, and complying is what produces this defect. The wording is the condition's own, so departing from it was not the worker's call. The two shipped files now disagree about whether a flag is part of the record.
+>   - Instances:
+>     - expedition-checker/SKILL.md, `## What you are given`, as clause 2 dictates: "A flag given under item 7 is a claim about the work, and not part of the record."
+>     - expedition/SKILL.md, `## The checker`, as clause 7 dictates: "The checker receives nothing from the effort's own record except those flag sentences", which treats the flag sentences as record.
+>     - Outside the work, these sentences agree with the second reading:
+>       - glossary.md **Manager**: "The record is every answer, status, index line and flag".
+>       - graph-conventions.md `## The seven files`: "Text that records what happened, such as a line in `decisions.md` or an entry in `flags.md`".
+>       - The unchanged checker paragraph on ground rules: "An account of what happened, on this work or anywhere in the record, … is part of the record you are kept blind to".
+>   - Form: a sentence in a shipped file that places a flag, or a `flags.md` line, inside or outside the effort's record, where another shipped sentence places it on the other side.
+>   - Extent: unwrap each file under `.claude/` and list the sentences matching both `\bflag` and `\brecord\b`. I ran this as a perl one-liner over `git ls-files .claude`, splitting on sentence ends. It returns 6 sentences. Within the two editable files the candidates are exactly the two sentences quoted above. The graph-conventions instance uses "records", so it falls outside that pattern and is listed by hand.
+>   - A reader of both files gets opposite answers. The human might pick one reading, for example "a flag is part of the record, and given under item 7 it is the one exception to the checker's blindness".
+>
+> Temporary files were written only under $TMPDIR/chk379 and have been removed.
+
+*The manager's note on the part under `NOT COVERED`:* the manager established it. Between the cut at `937fe6c9b` and this run, master changed neither `decisions.md` nor `flags.md`. The only commits touching this node's file are the manager's own two, recording the stopped attempt and filing the handover. *The manager's note on the gate:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
