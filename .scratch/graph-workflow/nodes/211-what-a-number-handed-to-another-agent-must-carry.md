@@ -118,6 +118,54 @@ RETROSPECTIVE:
 4. What was stale, wrong or contradictory: the condition's "a report" goes against the glossary, which refuses "report" for a worker's return. I settled this as an ASSUMPTION and did not raise it, because naming both a handover and a report to the human meets the condition and the glossary together.
 ````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c211.md`. Its byte sizes are as measured on 2026-10-02 and are not authoritative.*
+
+> PASS
+>
+> Node: 211, "State in the map what a number handed to another agent must carry". The work is the uncommitted diff in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/211-dated-numbers (base 343e0c604). Three paths changed: .scratch/graph-workflow/map.md, map-implementation-rules.md and map-history.md. These are record files, and I read them as the work under check, following the implementation-rules paragraph that begins "An implementation node's work on this effort may be the effort's own record". I derived no intent from them.
+>
+> Settled what moved first. The work adds one paragraph to map-implementation-rules.md: "An acceptance condition that quotes a number about the record dates it...". That paragraph is an added element, so I held it against the acceptance condition as part of the work. It is not a standard I held the work against. The list of standards under "## What the work is held against" did not change. In map.md the diff touches only the Notes item "A fact about the record is derived...". The ground-rules block and the six standing rules for writing did not move. So nothing the work must be held against moved, and no raise was needed.
+>
+> Acceptance condition, part by part. Each search was run over the unwrapped text, using `git -C <worktree> diff` and grep:
+> 1. map.md now has one Notes item that states all three demands. Search: `grep -n '^## ' map.md` puts `## Notes` at line 22 and `## Decisions so far` at line 80, and `grep -n 'A fact about the record is derived' map.md` finds the item at line 47.
+>    - The date: "...written into a spawn, a handover, a report to the human, a node's question or an acceptance condition carries the date it was derived". The condition says "a report"; the glossary's `_Avoid_` line defines a report as what goes to the human, so "a report to the human" covers it, and handover is added.
+>    - Not authoritative, for scale only: "says plainly that the number is not authoritative and is for scale only".
+>    - The receiver re-derives: "Whoever receives such a number re-derives the value before relying on it, and does not rely on the value given".
+> 2. The ground is stated as such. Same item: "The ground for the rule: a number that is only approximate does no harm, and the harm comes from a reader who does not know that the number may have moved."
+> 3. The rules file states the same rule for the writer of a condition. The added paragraph says the writer "writes beside the number the date it was derived, and says there that the number is not authoritative and is for scale only. The condition states what it demands so that the work's correctness does not depend on that number still holding".
+> 4. Neither statement forbids giving a number. Search: `git diff -U0 | grep '^+' | grep -iE "may not|must not|never|no number|not give|not appear|forbid|do not|does not"` found no prohibition on giving a number. Both texts say outright that a number may be given: "A number may still be given" and "The condition may still give the number".
+> 5. Replaced text is appended verbatim. The old map.md item was extracted from `git show 343e0c604:.scratch/graph-workflow/map.md` and compared with `cmp` against the line in map-history.md; the result was VERBATIM. It sits under "## Superseded from `map.md`'s `## Notes` at node 211..." / "### From *Notes* — ...", and `grep '^###' map-history.md` shows that heading form already in use for earlier entries. The old item had no struck-through text. The rules-file change only adds text, so it owes no history entry.
+> 6. No file under .claude/ or .scratch/graph-workflow/nodes/ changed. Search: `git status --porcelain --untracked-files=all` lists only the three paths, and `git diff --stat 343e0c604 -- .claude .scratch/graph-workflow/nodes` is empty.
+> 7. The tree meets the bar. See below.
+>
+> The bar:
+> - Commands: the rules file's paragraph "The bar's commands for this repo" says the repo has no build, no tests, no formatter and no CI. I found none at the worktree root either; it holds only CONTEXT-MAP.md and CONTEXT.md and no agent-instruction file naming commands. There was nothing to run, so the command half of the bar is empty.
+> - Standards: I read only the standards in .scratch/graph-workflow/map-implementation-rules.md. They are:
+>   - /coding-principles and /naming;
+>   - glossary.md's `_Avoid_` lines;
+>   - the ground rules and the six standing rules for writing, received as text;
+>   - graph-conventions.md;
+>   - /writing-for-agents.
+> - Which standards bore on this work:
+>   - **Writing rules 2, 4, 5 and 6:** the work cites nodes by link and no file by line number. Prohibitions sit beside a positive statement ("re-derives ... and does not rely on the value given"). The rules file points at map.md's `## Notes` rather than restating it beyond what the condition demands.
+>   - **Glossary `_Avoid_` lines:** checked by hand, and no refused term is used for its refused concept.
+>   - **graph-conventions.md "## Writing the map":** the superseded text was replaced and appended verbatim.
+>   - **/writing-for-agents:** I read it from the mattpocock-skills plugin. On duplication, the rule is stated in two files only because the condition demands it, and the second points at the first. On negation, the positive form is stated.
+>   - **/coding-principles and /naming:** no code changed, so they did not apply.
+> - Links: node files 183 and 211, derivations.md and map-history.md all exist in the worktree.
+> - No reviewing skill is named for this repo, so I ran none.
+>
+> QUESTIONS:
+> - The new map.md Notes item is about 1,220 bytes; the item it replaced was about 466. graph-conventions.md, "## Writing the map", says: "Each item in the `## Notes` of `map.md` ... targets 500 bytes ... an item that needs more exceeds it and says why. No check below treats a breach as a defect." The new item does not say why it exceeds the target. The extra length mostly comes from content the condition requires. I did not treat this as a defect, because that convention explicitly says no check does. Should the item add a clause saying why it is over the target?
+>
+> I made no edits, staged nothing and committed nothing. The temporary files I wrote under $TMPDIR are removed.
+
+*The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate; it goes to the human.
+
 ## Flags
 
 `211.1` `ASSUMPTION` — *The worker's own text.* Clause 1 asks for "one item" in `map.md`'s `## Notes`. I did this by replacing a sentence in node 210's existing bullet, not by adding a second bullet next to it. Two bullets would have stated re-derivation twice, against standing rule for writing 2. Replacing the sentence made it a replace, so the old bullet was moved verbatim to `map-history.md` under clause 5. I also wrote "a handover, a report to the human" where the condition says "a report", because the glossary's Handover entry refuses "report" for a worker's return. I did all this alone, with no exchange with the human.
