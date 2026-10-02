@@ -1,7 +1,7 @@
 # Ship the check before a claim into the manager's contract
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
