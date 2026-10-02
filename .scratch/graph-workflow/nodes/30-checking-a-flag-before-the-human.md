@@ -1,7 +1,7 @@
 # Whether a flag is checked before the human settles it
 
 Type: grilling
-Status: open
+Status: claimed
 
 ## Question
 
