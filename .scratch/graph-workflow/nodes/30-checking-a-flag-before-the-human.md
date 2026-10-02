@@ -125,3 +125,41 @@ and both of these are re-authorings of a worker's flag for a specific reader. Re
 Feeds `expedition-checker/SKILL.md` and the **manager's own skill**, which is where flag-gathering lives.
 Sits directly beside [Whether a spawn may override a shipped worker contract](28-spawn-overriding-a-contract.md),
 whose answer decides how this one may be delivered.
+
+## Interview
+
+#### Question 1, relayed 2026-10-02
+
+*Pasted as the worker handed it back.*
+
+```
+NODE:          Whether a flag is checked before the human settles it (node 30)
+ABOUT:         This node decides what checks a flag against the work before the human settles it, when that happens, and what a false flag causes. Your direction at node 26's gate settled that a check happens ("It would be good to have a first check before the human check it. Maybe by simplifing the flag, only giving what was done and not the reason ?"). The answer is due now because node 28 ruled that this practice goes into expedition-checker/SKILL.md, and the manager contract still lists it as open: "Does anything check a flag before the human settles it? Nothing does."
+SO FAR:        I read my node, map.md, the decisions-index lines for nodes 26, 34, 366 and 372, the node-26 account of the one trial run, and the relevant sections of the checker, manager, implementation, standing-yes and triage skills.
+               - Today, nothing but the agent that raised a flag and the human ever reads it. There are 737 settled lines and 18 outstanding in flags.md (I counted with grep; the figures are not stored anywhere). Under your standing yes, gates auto-approve on a checker PASS. Most flags now reach you only as a line or two in the node closing report, and they settle on whatever you say next. Node 366 settled 237 in one batch, and the triage skill from node 372 proposes batch settling. So an unchecked flag that is false (the work does not do what the flag says) gets settled on a false premise, and nothing would ever catch it. Since the standing yes, that risk has gone up, not down.
+               - The trial on node 26 checked five of seven flags. It ran as a separate pass after the checker's outcome. It took 51 seconds and one tool call, and all five came back true. Two flags were left out because they made no claim the working tree could confirm or refute. Holding back the reason cost one wasted question. One flag (26.9) was already covered by the normal check.
+               - What already exists and can be reused: the standing yes never covers "a checker's raise, which includes a question a checker hands back beside its outcome". So if a false flag comes back as a question beside the outcome, the gate goes to you with no new standing-yes text. Node 34 already covers a worker disputing a checker finding: the worker gives its reason in GATE PAYLOAD and you settle it at the gate.
+               - Only implementation nodes have a checker and a working tree. Flags on grilling or research nodes are judgements about decisions, and nothing in the tree can make them true or false.
+               - What I settled myself: "valid" means "true of the work", and never "the call was reasonable". The checker's rule 2 and node 26's own framing already fix that reading, so I am not asking about it.
+ASK:           Should the first check be the checker, in the same run, under the design below?
+RECOMMENDED:   Yes, as one package:
+               (a) Who: the implementation node's checker. Nothing else checks flags.
+               (b) Scope: only the flags on the node at its gate. Flags on other kinds of node stay unchecked, because nothing in the tree can make them true or false.
+               (c) What it receives: the manager passes each flag's flags.md sentence unchanged, as a seventh given. That sentence is the raising agent's own text, written "for a reader who has not read your node", so nobody re-writes it. That also removes the manager's open scribe-rule conflict for this direction. Since nobody strips the reason, the checker is told to judge only whether what the flag says was done is true of the work, and never whether the call was right.
+               (d) When: the checker reaches its PASS or FAIL first and checks the flags afterwards, so they cannot change the outcome.
+               (e) Result: for each flag, true, false, or no claim about the work. Only a false flag is reported, as a question beside the outcome with the search that showed it. That takes the gate out of the standing yes through the existing rule, and the worker answers it as it answers any finding (node 34).
+               Why the checker: it already has the work open, its searches are reproducible, and the trial cost under a minute. The manager knows the reasons and files flags about its own conduct, so it is not an independent check. A separate pass costs an extra spawn and its own contract.
+               Size: about 10 lines in the checker contract, as one given plus one short section. That includes rewording the "six givens above are everything you are given" closing sentence so that it states what it protects, the record being kept unread, as node 28 asked. The manager contract gets about 2 lines in the gate-payload list and loses its open item 2, so the manager contract shrinks.
+ALTERNATIVES:  Manager checks flags while assembling the payload: no extra cost, but it is not independent, and it knows the reasons the check is meant to set aside.
+               A separate flag-check spawn after the outcome, as in the trial: the cleanest ordering, but an extra spawn per gate and its own instructions to ship.
+               The manager strips each flag to "what was done" before handing it over: your original suggestion. It costs a manager re-write per flag and keeps the scribe-rule conflict, and in the trial withholding the reason cost a wasted question.
+               A false flag forces a correction round (treated like a FAIL): more machinery, and the condition is met either way.
+               A false flag is only marked as a warning in the closing report: cheapest, but under the standing yes the work would be committed before you see it.
+               Ship nothing and rely on triage: the trial shows false flags are possible, and batch settling is exactly where nobody would notice them.
+
+RETROSPECTIVE (interim, so far in this attempt):
+1. Hunted for: what currently happens to a checker question under the standing yes (found in expedition-standing-yes "What a standing yes never covers"), and the trial run's details (node 26, around "Five of the seven flags").
+2. Arrived but not needed: most of map.md (ground rules, the heterogeneous-model note).
+3. Would have helped: the node naming the current skill sections it would change (checker "## What you are given", manager item 2 under "What nothing here settles").
+4. Stale: the node's "forty-nine flags" count, now 755 lines in flags.md. The node also predates the standing yes, which changes where flags reach the human.
+```
