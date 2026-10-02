@@ -164,6 +164,50 @@ RETROSPECTIVE:
 4. What was stale, wrong or contradictory: the node's `## Question` still describes three map.md items and a licence to edit map.md. Both are moot, because the amendment replaced the condition whole. The node's `## Annotation` and the 2026-09-24 amendment are likewise about clauses that no longer exist. Nothing in the files I edited was contradictory.
 ````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the replacement condition reached it as a verbatim copy in `$TMPDIR/c80.md`.*
+
+> PASS
+>
+> Scope: I read the two changed paths, `.scratch/graph-workflow/map-manager-only.md` and `.scratch/graph-workflow/map-history.md`, as the work under check, following the rule in map-implementation-rules.md that an implementation node's work may be the effort's own record. I took no statement of intent from them. I unwrapped all text before searching it. Worktree: /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/80-fog-item. Base commit: 4d1e6b34.
+>
+> Condition, part by part:
+> - Preamble (the work is these two files and no others are edited): `git -C <wt> status --short` and `git diff --numstat` show only these two paths. map-history.md is +10/-0 and map-manager-only.md is +1/-1. Neither the node status line, `decisions.md` nor `flags.md` is touched.
+> - Part 1 (the item no longer says the seam is one step or that reject becomes a forward revert rather than a cleaned tree, and describes the seam and reject cost against the landing policy):
+>   - Running `grep -c 'seam is one step\|forward revert\|cleaned tree'` over the item's line in the worktree returns 0.
+>   - The new text names `## Landing an implementation node's work`. It lists the four steps on approval: a path-limited commit, a rebase onto the branch the manager thread is on, a re-run of the bar's commands, and `git merge --ff-only`.
+>   - It states the reject today: the worktree is removed and its branch deleted. It states the reject after the flip: a revert commit, so reject becomes the costliest outcome.
+>   - I checked these against that section's text in the same file, extracted with awk between `## Landing an implementation node's work` and the next `## `. They agree, including "with the sandbox off".
+>   - The item also claims that `.claude/skills/expedition/SKILL.md` fixes "approval before any commit". That phrase is in SKILL.md under `### Three outcomes, and no fourth`.
+> - Part 2 (the replaced text is appended verbatim under a heading mirroring the section it came from, and map-history.md loses nothing):
+>   - I extracted the removed sentence from `git show 4d1e6b34:.scratch/graph-workflow/map-manager-only.md` with `grep -o 'The seam is one step.*marks history\.'`. `grep -Fxc` of it in the worktree's map-history.md returns 1, so it is byte-identical.
+>   - It sits under `## Superseded from map-manager-only.md at node 80 …` / `### From ## Not yet specified — the item beginning "When to flip landing to asynchronous"`. That matches the heading pattern of the earlier entries in the file (`grep -n '^## \|^### '`).
+>   - `git diff -U0 | grep -c '^-[^-]'` returns 0, so nothing was removed.
+>   - The links in the intro resolve to node files that exist: nodes/80-… and nodes/366-….
+> - Part 3 (no other item of map-manager-only.md changes): the diff of that file is one hunk changing one line, the "When to flip" bullet. Its opening "What is unspecified…" and "Shaped by…" text is unchanged; I compared it against the base.
+> - Part 4 (scope came from no search): the condition records no command, so there was nothing to run.
+>
+> The bar:
+> - The repo has no build, tests, formatter or CI. `git ls-files` finds no manifest, runner or lint config, as map-implementation-rules.md's `## What the work is held against` states. So the bar is the standards half alone.
+> - `git diff --check` printed nothing (rc=0).
+>
+> Standards: I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md` (`## What the work is held against` and the record-as-work rule). The work did not change that file. The standards that bore on this work:
+> - The ground rules and the six standing rules for writing from the spawn. The new text cites by heading and not by line number. It has no bold except defined terms (it actually drops the old bold), puts one idea in each sentence, and has clear referents. The item states its current form and cites the nodes that shaped it.
+> - `glossary.md`'s `_Avoid_` lines, checked by hand. "review", "reject" and "gate payload" are each used for the concept the glossary assigns them.
+> - `graph-conventions.md`'s rule that superseded map text is appended verbatim to `map-history.md` under a heading mirroring the section. This is met.
+> - `/coding-principles`, `/naming` and `/writing-for-agents` bore on nothing beyond the above, since the work is prose only.
+>
+> No reviewing skill is named for this repo, so I ran none.
+>
+> A note that is not a finding: the item's sentence "An implementation node superseded after its work has merged costs the same, because it is cleaned up in a reject's order" goes beyond SKILL.md's rule. That rule covers a node superseded "before its work has landed". The sentence reads as a projection of the rule onto the after-flip case. The condition neither asks for nor forbids this.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and its closing note is marked by it as not a finding. This settles none of the node's flags; they settle at the node closing report.
+
 ## Flags
 
 `80.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
