@@ -65,3 +65,44 @@ RETROSPECTIVE:
 3. What would have made this easier: a condition that states the target wrap width. Clause 2 says "the width the file already uses", which means measuring it.
 4. What was stale, wrong or contradictory: nothing. The manager's note that node 214 is unclaimed is consistent with what I saw (Status: open).
 ````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c376.md`.*
+
+> PASS
+>
+> Node 376, "Let the four no-file contracts permit a removed temporary directory". Worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/376-tempdir, uncommitted diff against HEAD 4d1e6b34.
+>
+> Acceptance condition, one line per part:
+> - 1, the sentence appears exactly once in each file. For each of the four files I unwrapped the text (`perl -0pe 's/\n(?!\n)/ /g; s/ +/ /g' <file> | grep -o -F "$S" | wc -l`, with $S set to the sentence word for word). The count was 1 in every file.
+> - 1, the sentence is the last one of the named item under `## Hard rules`. I ran `awk '/^## /{h=$0} /temporary file is not/{print h}'` on each file, and every hit sits under `## Hard rules`. `git diff` shows the sentence closing these items:
+>   - checker item 1, "Leave everything as you found it"
+>   - grilling item 3, "Put your work in what you hand back"
+>   - research item 1, "Put all your work in your handover"
+>   - cascade item 2, "Write no file, in either role"
+> - 2, no other text changes and widths are kept. `git diff --numstat` gives 3 lines added and 1 removed per file. The only removed line in each file is the last line of the receiving item, and its words come back unchanged at the start of the new text. Every new line is 105 characters or less (`git diff -U0 | awk '{print length}'`: 103/102/13, 102/105/24, 101/101/39, 101/101/39). The wrap is greedy at 105: the next word would not fit on any of the new lines. That matches the 105-column wrap the files use for prose. The longest line in each file is the same before and after (180/189/149/105). The cascade lines that say "write no file" in its `### What you do` sections (now lines 69 and 118) are not in the diff.
+> - 3, no other file changes. `git status --porcelain --untracked-files=all` lists only the four paths, and nothing is untracked.
+> - 4, the recorded scope search. I ran `grep -rn -i 'write no file' .claude/skills/` as written, over the worktree. It returned six lines in four files: cascade lines 45, 69 and 118, research line 56, checker line 72 and grilling line 70. That matches the recorded return of six lines and its breakdown, and finds nothing outside the four files.
+>
+> The bar:
+> - The repo root has no agent-instruction file: no CLAUDE.md, AGENTS.md or manifest, only `.claude`, CONTEXT.md, CONTEXT-MAP.md and `.gitignore`. The standards file also records that the repo has no build, tests, formatter or CI. So there were no commands to run, and the bar is its non-command half.
+> - I read only the standards in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md. I opened no other file in that directory.
+> - The standards it names are `/coding-principles`, `/naming`, the `_Avoid_` lines in glossary.md, the ground rules, the six standing rules for writing, graph-conventions.md and `/writing-for-agents`. No reviewing skill is named, so I ran none and held the work against these standards by hand.
+> - Bearing on this work:
+>   - Ground rule 1: "the system's temporary directory" assumes no repo, machine or toolchain.
+>   - Ground rule 3: nothing in the change addresses the human.
+>   - Writing rule 5: the sentence is plain English with a clear referent. It joins two clauses with a colon, but the condition dictates the wording word for word.
+>   - Glossary: grepping the `_Avoid_` lines for the sentence's words ("temporar", "director", "hand back", "contract", "sense", "file", "remove", "system") found nothing. Nothing in glossary.md or graph-conventions.md touches temporary files.
+>   - `/coding-principles` and `/naming` have nothing to act on, since there is no code.
+> - I found no breach.
+> - The "Where the work moved one of them" section does not apply. The changed files are worker contracts, and none of them is among the standards I hold the work against.
+> - The record-as-work rule in the standards file does not apply. None of the changed paths is a record file.
+>
+> I followed the checker contract in the main checkout and read the worktree's copy only as the work. I wrote no file.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and left no part of the condition uncovered. The node raised no flags.
