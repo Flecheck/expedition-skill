@@ -1,9 +1,15 @@
 # Replace the mint-on-second-report rule in the map's retrospective item
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+The map-manager-only.md retrospective bullet now has the worker name and count each standing item, ranks a repeat instead of minting a node, and files retrospectives in the resolving edit.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1` and its two correction rounds. Run 1 failed on the bar, with two questions; run 2 passed; the human amended the condition at the gate; run 3 passed, and the gate was taken under the standing yes. The work landed as commit `381c7b502`, after the landing rebase met the usual two-block conflict at the end of `map-history.md`, resolved by keeping both. Flags 219.1, 219.2 settle at the node closing report.
 
 ## Question
 
@@ -446,9 +452,9 @@ RETROSPECTIVE (this round)
 
 ## Flags
 
-`219.1` `ASSUMPTION` — *The worker's own text.* I rewrote the old filing sentence as well as the mint sentence, even though it did not strictly contradict clause 1(d). It said the manager "files it … placed last" but did not say when. I replaced it rather than adding a second sentence beside it, so the bullet states the filing once. Under clause 2, its old text went verbatim to map-history.md.
+`219.1` `ASSUMPTION` **· settled** — *The worker's own text.* I rewrote the old filing sentence as well as the mint sentence, even though it did not strictly contradict clause 1(d). It said the manager "files it … placed last" but did not say when. I replaced it rather than adding a second sentence beside it, so the bullet states the filing once. Under clause 2, its old text went verbatim to map-history.md.
 
-`219.2` `ASSUMPTION` — *The worker's own text.* The naming passage tells the worker to search retrospective sections "whatever heading each section was filed under". Node 212 measured five heading forms, and a search for `## Retrospective` alone undercounts. This adds no new rule: it stops clause 1(a)'s search from missing sections.
+`219.2` `ASSUMPTION` **· settled** — *The worker's own text.* The naming passage tells the worker to search retrospective sections "whatever heading each section was filed under". Node 212 measured five heading forms, and a search for `## Retrospective` alone undercounts. This adds no new rule: it stops clause 1(a)'s search from missing sections.
 
 ## Amendment, 2026-10-02 (from the human, at the gate)
 
@@ -457,3 +463,5 @@ RETROSPECTIVE (this round)
 - **The opening line and clause 2.** Wherever they name `.scratch/graph-workflow/map.md`, read `.scratch/graph-workflow/map-manager-only.md`, as node 366's amendment already reads clauses 1 and 4.
 - **Clause 1(c).** The bullet states the manager's separate duty to dispose of each item naming the record, and does not state that the duty "is unchanged".
 - **Clause 1(d).** The bullet states that the manager writes the retrospective in the same edit that writes the node's answer, flags and `decisions.md` line, and does not add "rather than as a later separate act".
+
+*The manager's note, 2026-10-02:* flags 219.1, 219.2 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
