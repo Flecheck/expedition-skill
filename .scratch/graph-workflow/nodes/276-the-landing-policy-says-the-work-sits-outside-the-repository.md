@@ -1,10 +1,16 @@
 # The landing policy says an implementation node's work sits outside the repository
 
 Type: implementation
-Status: claimed
+Status: resolved
 Supersedes: 254
 
 Blocked by: none
+
+## Answer
+
+The landing policy now says the gate payload names the worktree's path because the work is uncommitted and the path is how it is found, not because it sits outside the repository.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1` and its correction round. Run 1 failed on the bar; run 2 passed, and the gate was taken under the standing yes. The work landed as commit `b3aa39dad`. Flag 276.1 settles at the node closing report.
 
 ## Question
 
@@ -246,4 +252,6 @@ RETROSPECTIVE:
 
 ## Flags
 
-`276.1` `ASSUMPTION` — *The worker's own text.* Clause 3 of the condition writes the node 68 link target as `68-implementation-in-a-worktree.md`, which is relative to `nodes/`. From `map-manager-only.md` that target would not resolve, so I wrote `nodes/68-implementation-in-a-worktree.md` with the condition's link text, the same form the paragraph already uses for node 68 at its end. I made the change by direct edit, with no interview and no gate before this handover.
+`276.1` `ASSUMPTION` **· settled** — *The worker's own text.* Clause 3 of the condition writes the node 68 link target as `68-implementation-in-a-worktree.md`, which is relative to `nodes/`. From `map-manager-only.md` that target would not resolve, so I wrote `nodes/68-implementation-in-a-worktree.md` with the condition's link text, the same form the paragraph already uses for node 68 at its end. I made the change by direct edit, with no interview and no gate before this handover.
+
+*The manager's note, 2026-10-02:* flag 276.1 settles at the node closing report that closes this node, which names its gate as taken under the standing yes.
