@@ -113,6 +113,57 @@ against its own bookkeeping and not against any worker.
 
 - **Item 1.** Replace the first quote with *"So a map file is rewritten as it changes, rather than grown by appending. The text that replaces an item stands alone."*. That quote had already stopped matching the before-text, which said "So a map file", not "So the map". Replace the second with *"Moving the superseded text out deletes nothing. Text moved to `map-history.md` is moved verbatim, without summarising, paraphrasing or shortening it. Text already struck through moves struck through."*
 
+## Handover, attempt 1
+
+*The worker's own text, pasted, 2026-10-02.*
+
+````
+HANDOVER:      Update the map items that nodes 64 and 68 left stale
+
+ANSWER:        The work follows the condition in `## Amendment, 2026-09-29 (from node 366)`, Block 6. In `.scratch/graph-workflow/map-manager-only.md`, under `## Not yet specified`, the item beginning "When to flip landing to asynchronous" had one sentence replaced: "The seam is one step — … only one that marks history." That sentence described a landing policy with no worktree. The new sentences describe the flip against the policy as it stands in this tree under `## Landing an implementation node's work`:
+- Today the manager lands work only after approval, in four steps: a path-limited commit, a rebase onto the manager thread's branch, a re-run of the bar's commands, and `git merge --ff-only` run with the sandbox off (node 369). The flip moves those four steps to before the gate, so the human reviews work that has already merged.
+- The gate payload would then point at the merged commit. The worktree's uncommitted changes it names today would be gone.
+- A reject today removes the worktree and deletes its branch, leaving nothing on the manager thread's branch. After the flip it needs a revert commit on that branch, which makes it the costliest gate outcome.
+- An implementation node superseded after its work has merged costs the same. SKILL.md, as changed by node 371, cleans such a node up in a reject's order.
+- The flip also breaks the order `.claude/skills/expedition/SKILL.md` fixes ("approval before any commit"). So it changes the shipped manager contract, not only this effort's landing policy.
+The item's title, its "What is unspecified…" sentence, its trigger sentence and its "Shaped by" citations are unchanged. The replaced sentence is appended verbatim to the end of `.scratch/graph-workflow/map-history.md` under the new heading `## Superseded from `map-manager-only.md` at node 80 — the asynchronous-landing item's seam and reject`, with the sub-heading `### From `## Not yet specified` — the item beginning "When to flip landing to asynchronous"`, in the same shape as node 336's entry. Calls a later reader would otherwise re-derive:
+- Only the stale sentence was replaced, not the whole item. So only that sentence is banked.
+- "Forward revert" and "cleaned tree" no longer appear. A revert commit is still named, because under any policy that merges before the gate, that is what a reject costs.
+- The old claim "the only one that marks history" was dropped. After the flip an approval also leaves a commit, so the claim would be untrue.
+
+INDEX LINE:    The async-landing item in map-manager-only.md now prices the flip against today's four landing steps: the gate points at a merged commit, reject needs a revert, and SKILL.md's approval-before-commit order breaks.
+
+FLAGS:         ASSUMPTION: The condition names only the seam and the cost of a reject. I added two consequences that follow directly from the current policy: the gate payload can no longer point at uncommitted changes, and SKILL.md's fixed order "approval before any commit" breaks. I also added the case of a node superseded after its work has merged. I judged these to be part of "describing the seam" against the policy as it stands, not new items. I did not say what the flip does to a correction round, because the policy gives no ground for it. Index: Node 80's rewrite of the async-landing item names the broken approval-before-commit order in SKILL.md and the superseded-node case, beyond what its condition listed.
+
+NEW NODES:     none
+
+INVALIDATIONS: none. Node 11's settled "seam is a single step" framing was already history text. The current form of the item now states the seam differently. That is an extension of the account, not a change to a resolved answer.
+
+CONDITIONS:    Searched the 30 open or claimed node files for "forward revert", "flip landing", "seam is one step", "cleaned tree" and "asynchronous". Only node 80 matched. No replacement clauses and no changed questions.
+
+MISSING FROM MAP: none. map.md points to map-manager-only.md and map-history.md. I found how a superseded node is cleaned up (node 371) by searching decisions.md and then SKILL.md's "Three outcomes, and no fourth".
+
+GATE PAYLOAD:  No checker findings yet. Bar: the repo has no build, test or formatter (confirmed: no manifest. map-implementation-rules.md records the same). So the bar is the standards half alone. I checked the new words against the glossary's `_Avoid_` lines: none apply ("landing commit" and "bookkeeping commit" are not used). Paths touched, in worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/80-fog-item:
+- .scratch/graph-workflow/map-manager-only.md (1 line changed: the one item)
+- .scratch/graph-workflow/map-history.md (10 lines appended, none removed)
+Proposed commit message:
+  Re-describe the async-landing seam against today's landing lifecycle
+
+  The fog item in map-manager-only.md priced the flip against a landing
+  policy with no worktree. It now names the four landing steps, the gate
+  pointing at a merged commit, reject needing a revert, and the shipped
+  approval-before-commit order the flip would break. The replaced
+  sentence is banked verbatim in map-history.md.
+
+  Node: graph-workflow/80
+
+RETROSPECTIVE:
+1. What I had to hunt for: where node 371's superseded-node cleanup lives. The manager's notes named it, but neither map file cites node 371. I found it through decisions.md and then SKILL.md. I also had to look up the exact heading shape of map-history.md entries for map-manager-only.md, using node 336's entry as the model.
+2. What arrived that this node did not need: node 160's decisions line and the note about node 376. The whole map.md read was also mostly unneeded for a one-item edit to a manager-only file.
+3. What would have made this easier: a condition that quoted the exact sentence to replace, and named the map-history.md heading convention to use.
+4. What was stale, wrong or contradictory: the node's `## Question` still describes three map.md items and a licence to edit map.md. Both are moot, because the amendment replaced the condition whole. The node's `## Annotation` and the 2026-09-24 amendment are likewise about clauses that no longer exist. Nothing in the files I edited was contradictory.
+````
+
 ## Flags
 
 `80.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
@@ -129,3 +180,5 @@ Block 6 (node 80's condition, replaced whole, since it is unclaimed):
   > 2. The item's replaced text is appended verbatim to `map-history.md` under a heading mirroring the section it came from. `map-history.md` gains text and loses none.
   > 3. No other item of `map-manager-only.md` changes.
   > 4. Scope came from no search: the item named is the place of the work.
+
+`80.2` `ASSUMPTION` — *The worker's own text.* The condition names only the seam and the cost of a reject. I added two consequences that follow directly from the current policy: the gate payload can no longer point at uncommitted changes, and SKILL.md's fixed order "approval before any commit" breaks. I also added the case of a node superseded after its work has merged. I judged these to be part of "describing the seam" against the policy as it stands, not new items. I did not say what the flip does to a correction round, because the policy gives no ground for it.
