@@ -1,7 +1,7 @@
 # Replace the mint-on-second-report rule in the map's retrospective item
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
