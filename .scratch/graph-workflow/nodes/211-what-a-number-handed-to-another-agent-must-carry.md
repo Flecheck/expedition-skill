@@ -166,6 +166,12 @@ RETROSPECTIVE:
 
 *The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate; it goes to the human.
 
+### The gate, 2026-10-02
+
+`verbatim`: *"ok"*
+
+The manager had offered "Recommended: approve as is" and the alternative "a correction round to add a short clause saying why the item is over the target", closing with "Please answer node 211's gate: "ok" to approve as is, or "correct" for the round." The reply takes the approval as is. The checker's question is answered by it: the item stays as written. Flag `211.1` was in the payload and settles here.
+
 ## Flags
 
-`211.1` `ASSUMPTION` — *The worker's own text.* Clause 1 asks for "one item" in `map.md`'s `## Notes`. I did this by replacing a sentence in node 210's existing bullet, not by adding a second bullet next to it. Two bullets would have stated re-derivation twice, against standing rule for writing 2. Replacing the sentence made it a replace, so the old bullet was moved verbatim to `map-history.md` under clause 5. I also wrote "a handover, a report to the human" where the condition says "a report", because the glossary's Handover entry refuses "report" for a worker's return. I did all this alone, with no exchange with the human.
+`211.1` `ASSUMPTION` **· settled** — *The worker's own text.* Clause 1 asks for "one item" in `map.md`'s `## Notes`. I did this by replacing a sentence in node 210's existing bullet, not by adding a second bullet next to it. Two bullets would have stated re-derivation twice, against standing rule for writing 2. Replacing the sentence made it a replace, so the old bullet was moved verbatim to `map-history.md` under clause 5. I also wrote "a handover, a report to the human" where the condition says "a report", because the glossary's Handover entry refuses "report" for a worker's return. I did all this alone, with no exchange with the human.
