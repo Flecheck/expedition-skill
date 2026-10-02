@@ -1,7 +1,7 @@
 # The rules file states one list of standards twice
 
 Type: implementation
-Status: open
+Status: claimed
 Supersedes: 271
 
 Blocked by: 184, 348, 349, 352, 354
