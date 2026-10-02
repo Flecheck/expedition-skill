@@ -23,12 +23,12 @@ test](212-the-mint-on-second-report-rule-is-defeated.md)'s worker, and pasted as
 
 *Written by node 212's worker. Pasted as it wrote it, and not the manager's.*
 
-> The work is edits to two files, `.scratch/graph-workflow/map.md` and `.scratch/graph-workflow/map-history.md`.
+> The work is edits to two files, `.scratch/graph-workflow/map.md` and `.scratch/graph-workflow/map-history.md`. *Amended 2026-10-02 by the human; see `## Amendment, 2026-10-02 (from the human, at the gate)`.*
 > Nothing else changes.
 >
 > Done means every one of the following is true of the finished tree.
 >
-> 1. In `.scratch/graph-workflow/map.md`, under `## Notes`, the bullet beginning **"Every worker returns a
+> 1. In `.scratch/graph-workflow/map.md`, under `## Notes`, the bullet beginning **"Every worker returns a *Amended 2026-10-02 by the human; see `## Amendment, 2026-10-02 (from the human, at the gate)`.*
 >    retrospective as the last handover part, on this effort only"** states all four of the following, and every
 >    statement that bullet previously carried which contradicts them is no longer in it:
 >
@@ -41,19 +41,19 @@ test](212-the-mint-on-second-report-rule-is-defeated.md)'s worker, and pasted as
 >    (b) **The word is "name".** That field is called a name throughout the bullet, and the bullet does not call
 >        it a label.
 >
->    (c) **A count ranks and mints nothing.** The bullet states that a repeated standing item is not minted as a
+>    (c) **A count ranks and mints nothing.** The bullet states that a repeated standing item is not minted as a *Amended 2026-10-02 by the human; see `## Amendment, 2026-10-02 (from the human, at the gate)`.*
 >        node on reaching any count; that the count ranks that item among what the manager picks next, so
 >        repetition orders work rather than triggering it; and that the manager's separate duty to dispose of each
 >        item naming the record in the report closing that node — by acting on it, minting a node, or saying why
 >        not — is unchanged.
 >
->    (d) **Filing is part of resolving.** The bullet states that the worker hands the retrospective back as text
+>    (d) **Filing is part of resolving.** The bullet states that the worker hands the retrospective back as text *Amended 2026-10-02 by the human; see `## Amendment, 2026-10-02 (from the human, at the gate)`.*
 >        and the manager writes it into the node file in the same edit that writes that node's answer, its flags
 >        and its line in `decisions.md`, rather than as a later separate act; that it is written last in the file
 >        so the mandatory section order is untouched; and that it is written under the heading `## Retrospective`
 >        and under no other heading.
 >
-> 2. Every statement clause 1 replaced is appended verbatim to `.scratch/graph-workflow/map-history.md`, under a
+> 2. Every statement clause 1 replaced is appended verbatim to `.scratch/graph-workflow/map-history.md`, under a *Amended 2026-10-02 by the human; see `## Amendment, 2026-10-02 (from the human, at the gate)`.*
 >    heading naming the section of `map.md` it came from, with any struck-through text left struck through.
 >    Nothing already in `map-history.md` is changed, reordered or removed.
 >
@@ -260,6 +260,10 @@ RETROSPECTIVE
 
 *The manager's note:* run 1's two questions beside its outcome are still open, so the standing yes does not cover this gate; it goes to the human.
 
+#### The human's answer at the gate, 2026-10-02
+
+The manager put checker run 1's two questions to the human, recommending (Q1) that node 366's amendment be widened to the condition's opening line and clause 2, and (Q2) that clauses 1(c) and 1(d) be amended to drop the phrases "is unchanged" and "rather than as a later separate act", with one small correction round to remove them. The alternative offered was approval as is. The human, `verbatim`: *"ok"*. The manager had said "ok for recommended" would mean both amendments. So the gate's outcome is **correct**, and the node goes to correction round 2.
+
 ## Handover, attempt 1, correction round 1
 
 *The worker's own text, pasted, 2026-10-02.*
@@ -331,3 +335,11 @@ RETROSPECTIVE (this round)
 `219.1` `ASSUMPTION` — *The worker's own text.* I rewrote the old filing sentence as well as the mint sentence, even though it did not strictly contradict clause 1(d). It said the manager "files it … placed last" but did not say when. I replaced it rather than adding a second sentence beside it, so the bullet states the filing once. Under clause 2, its old text went verbatim to map-history.md.
 
 `219.2` `ASSUMPTION` — *The worker's own text.* The naming passage tells the worker to search retrospective sections "whatever heading each section was filed under". Node 212 measured five heading forms, and a search for `## Retrospective` alone undercounts. This adds no new rule: it stops clause 1(a)'s search from missing sections.
+
+## Amendment, 2026-10-02 (from the human, at the gate)
+
+*The manager's rendering of the human's "ok" to the two recommendations recorded under `## Review`; the human's words are recorded there, `verbatim`.*
+
+- **The opening line and clause 2.** Wherever they name `.scratch/graph-workflow/map.md`, read `.scratch/graph-workflow/map-manager-only.md`, as node 366's amendment already reads clauses 1 and 4.
+- **Clause 1(c).** The bullet states the manager's separate duty to dispose of each item naming the record, and does not state that the duty "is unchanged".
+- **Clause 1(d).** The bullet states that the manager writes the retrospective in the same edit that writes the node's answer, flags and `decisions.md` line, and does not add "rather than as a later separate act".
