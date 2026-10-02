@@ -1,10 +1,16 @@
 # The rules file states one list of standards twice
 
 Type: implementation
-Status: claimed
+Status: resolved
 Supersedes: 271
 
 Blocked by: 184, 348, 349, 352, 354
+
+## Answer
+
+The rules file's `## What the work is held against` now lists the standards once, under its own lead-in, and both paragraphs point at it. The struck ignore-file wording and the duplicate lists moved to `map-history.md`.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1 with a question on writing rule 5, which the human settled at the gate by approving as is. The work landed as commit `a66424328`, after the landing rebase met the usual two-block conflict at the end of `map-history.md`, resolved by keeping both. Flags 190.1 to 190.8 settle at this gate.
 
 ## Question
 
@@ -211,25 +217,25 @@ The manager put the gate to the human with checker run 1's question on writing r
 
 ## Flags
 
-`190.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 168's replacement for clause 4 was filed on this open, unclaimed node, and the node was made to wait on node 348.
+`190.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above.* Node 168's replacement for clause 4 was filed on this open, unclaimed node, and the node was made to wait on node 348.
 
-`190.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 348 above.* Node 348's replacement for clause 1 was filed on this open, unclaimed node without asking the human first.
+`190.2` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment from node 348 above.* Node 348's replacement for clause 1 was filed on this open, unclaimed node without asking the human first.
 
 *The manager's note, 2026-09-27:* edge to [node 349](349-whether-the-five-standing-rules-for-writing-reach-other-workers.md) added. Node 349's worker found that clause 4, and node 348's amendment to clause 1, both assume the five standing rules for writing stay in the rules file. Node 349's question is whether they move, so this node waits on it.
 
-`190.3` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 349 above.* Node 349's replacements for clauses 1 and 4 were filed on this open, unclaimed node without asking the human first, and the node was made to wait on [node 352](352-move-the-five-standing-rules-for-writing-into-the-ground-rules-block.md).
+`190.3` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment from node 349 above.* Node 349's replacements for clauses 1 and 4 were filed on this open, unclaimed node without asking the human first, and the node was made to wait on [node 352](352-move-the-five-standing-rules-for-writing-into-the-ground-rules-block.md).
 
-`190.4` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 56 above.* Node 56's replacement naming `.claude/skills/expedition/glossary.md` in place of `CONTEXT.md` was filed on this open, unclaimed node without asking the human first.
+`190.4` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment from node 56 above.* Node 56's replacement naming `.claude/skills/expedition/glossary.md` in place of `CONTEXT.md` was filed on this open, unclaimed node without asking the human first.
 
 *The manager's note, 2026-09-27:* edge to [node 354](354-add-the-sixth-standing-rule-for-writing.md) added. [Node 253](253-a-shipped-file-points-at-a-sibling-rather-than-restating-it.md)'s worker reports that once node 354 lands, the "five standing rules for writing" in clause 1 (as amended by node 348) and clause 4 becomes wrong, and that the replacement is owed then, since "six" is fixed by no landed work yet.
 
-`190.5` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 354 above.* Node 354's replacement of "five" (or "four") with "six" standing rules for writing was filed on this open, unclaimed node without asking the human first.
+`190.5` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment from node 354 above.* Node 354's replacement of "five" (or "four") with "six" standing rules for writing was filed on this open, unclaimed node without asking the human first.
 
-`190.6` `ASSUMPTION` — *The worker's own text.* The condition's opening says "The work is `.scratch/graph-workflow/map-implementation-rules.md`, and no other file may be edited". Clause 3 as amended, and node 271's clauses added from node 366, both require appending to `map-history.md`. I read the later amendments, which carry the human's decisions at nodes 189 and 366, as overriding that opening sentence, and I edited `map-history.md`. I did not raise this as a contradiction.
+`190.6` `ASSUMPTION` **· settled** — *The worker's own text.* The condition's opening says "The work is `.scratch/graph-workflow/map-implementation-rules.md`, and no other file may be edited". Clause 3 as amended, and node 271's clauses added from node 366, both require appending to `map-history.md`. I read the later amendments, which carry the human's decisions at nodes 189 and 366, as overriding that opening sentence, and I edited `map-history.md`. I did not raise this as a contradiction.
 
-`190.7` `ASSUMPTION` — *The worker's own text.* Removing node 158's strike made the opening sentence "The struck rule statements below predate this and are not licence to add another." false, so I removed it and banked it verbatim in `map-history.md`. It sits outside the two paragraphs the condition names.
+`190.7` `ASSUMPTION` **· settled** — *The worker's own text.* Removing node 158's strike made the opening sentence "The struck rule statements below predate this and are not licence to add another." false, so I removed it and banked it verbatim in `map-history.md`. It sits outside the two paragraphs the condition names.
 
-`190.8` `ASSUMPTION` — *The worker's own text.* Under the rules file's own *What this file admits* rule, the rewritten bar and review-route paragraphs leave out their accounts of how they were learned (node 158/297/114 corrections, the dogfood comparison, the checker-cost sentence). The full old text is banked verbatim.
+`190.8` `ASSUMPTION` **· settled** — *The worker's own text.* Under the rules file's own *What this file admits* rule, the rewritten bar and review-route paragraphs leave out their accounts of how they were learned (node 158/297/114 corrections, the dogfood comparison, the checker-cost sentence). The full old text is banked verbatim.
 
 ## Amendment, 2026-09-29 (from node 366)
 
