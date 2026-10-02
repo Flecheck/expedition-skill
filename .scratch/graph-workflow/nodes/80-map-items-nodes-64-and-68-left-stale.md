@@ -1,7 +1,13 @@
 # Update the map items that nodes 64 and 68 left stale
 
 Type: implementation
-Status: claimed
+Status: resolved
+
+## Answer
+
+The async-landing item in map-manager-only.md now prices the flip against today's four landing steps: the gate points at a merged commit, reject needs a revert, and SKILL.md's approval-before-commit order breaks.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`, under the replacement condition of `## Amendment, 2026-09-29 (from node 366)`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `766efd77`. Flags 80.1, 80.2 settle at the node closing report.
 
 ## Question
 
@@ -210,11 +216,11 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`80.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
+`80.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above as the amendment rule requires.* The acceptance condition was amended from [node 299](299-rewrite-graph-conventions-part-1.md)'s re-pointing list, on the ground that every word of the replacement is fixed by commit `0d406b7`.
 
 *The manager's note, 2026-09-27:* node 345's map pass carried out this node's clause 2 ("worktrees" is gone from the firstmate list in the fog item, old text in `map-history.md`) and found clause 1 already met. Clause 3, re-describing the async-landing seam and the price of a reject against today's landing lifecycle, is new analysis and stays open. The fog items sit in `map-manager-only.md`, which this node's condition does not name.
 
-`80.2` `ASSUMPTION` — *The worker's own text.* The condition names only the seam and the cost of a reject. I added two consequences that follow directly from the current policy: the gate payload can no longer point at uncommitted changes, and SKILL.md's fixed order "approval before any commit" breaks. I also added the case of a node superseded after its work has merged. I judged these to be part of "describing the seam" against the policy as it stands, not new items. I did not say what the flip does to a correction round, because the policy gives no ground for it.
+`80.2` `ASSUMPTION` **· settled** — *The worker's own text.* The condition names only the seam and the cost of a reject. I added two consequences that follow directly from the current policy: the gate payload can no longer point at uncommitted changes, and SKILL.md's fixed order "approval before any commit" breaks. I also added the case of a node superseded after its work has merged. I judged these to be part of "describing the seam" against the policy as it stands, not new items. I did not say what the flip does to a correction round, because the policy gives no ground for it.
 
 ## Amendment, 2026-09-29 (from node 366)
 
@@ -226,3 +232,5 @@ Block 6 (node 80's condition, replaced whole, since it is unclaimed):
   > 2. The item's replaced text is appended verbatim to `map-history.md` under a heading mirroring the section it came from. `map-history.md` gains text and loses none.
   > 3. No other item of `map-manager-only.md` changes.
   > 4. Scope came from no search: the item named is the place of the work.
+
+*The manager's note, 2026-10-02:* flags 80.1, 80.2 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
