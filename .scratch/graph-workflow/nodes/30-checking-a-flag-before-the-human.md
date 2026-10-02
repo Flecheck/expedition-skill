@@ -1,7 +1,13 @@
 # Whether a flag is checked before the human settles it
 
 Type: grilling
-Status: claimed
+Status: resolved
+
+## Answer
+
+The implementation checker checks each flag's index sentence, after its outcome, only for truth about the work. A false flag returns as a question, which takes the gate out of a standing yes.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. It surfaced [node 379](379-ship-the-checkers-check-of-a-nodes-flags.md), which ships the answer. Its `INVALIDATIONS` narrow node 26 and extend node 42; the manager notes them here and edits neither. Flags 30.1, 30.2, 30.3, 30.4 settle at the node closing report.
 
 ## Question
 
@@ -169,3 +175,83 @@ RETROSPECTIVE (interim, so far in this attempt):
 `verbatim`: *"yes"*
 
 The manager had put the question as "Should the checker do the first check, in the same run, under this design?", closing with "Please answer: "ok for recommended", or name an alternative." The reply "yes" answers that question and names no alternative, so it takes the worker's `RECOMMENDED`, the package (a) to (e).
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      Whether a flag is checked before the human settles it (node 30)
+ANSWER:        **The implementation node's checker makes the first check, in the same run as its outcome. It checks the flags the node holds at its gate, and it checks only whether each one is true of the work.** The human answered "yes" to the recommended package, and the five parts below are that package.
+
+               (a) **Who.** The checker of an implementation node. Nothing else checks flags. The manager is not independent of the flags, since it holds their reasons and files flags about its own conduct. A separate pass would cost an extra spawn and a contract of its own.
+               (b) **Scope.** The flags the node holds when its check runs. Flags on grilling, research, prototype and precondition nodes stay unchecked: they record judgements about decisions, and nothing in a working tree makes them true or false.
+               (c) **What the checker receives.** The flag's sentence from `flags.md`, as the raising agent wrote it, with the flag's id and without the link to its node. Nobody rewrites it, so the manager re-authors nothing. That settles, for the checker's direction, the manager contract's open question about checking flags. The scribe-rule conflict over the fuller form put to the human stays open. Nobody strips the reason, so the checker is told to judge only whether what the flag says was done is true of the work, and never whether the call was right. That is what "valid" means here.
+               (d) **When.** The checker reaches its `PASS` or `FAIL` first and checks the flags afterwards. Nothing it finds about a flag changes the outcome.
+               (e) **What a false flag does.** For each flag the checker establishes one of three things: it is true, it is false, or it makes no claim about the work. Only a false flag is reported. It goes under `QUESTIONS:` beside the outcome, with the search that showed it false. This uses rules already shipped. A question a checker hands back is never covered by a standing yes, so the gate goes to the human. A checker's question is something it found, so the worker fixes the work or the flag, or says in `GATE PAYLOAD` why it believes the finding false, under node 34's rule.
+
+               **Delivery.** `expedition-checker/SKILL.md` gains the flags as a seventh given and a short section on checking them. The closing sentence of its givens ("The six givens above are everything you are given") is restated as what it protects, the unread record. That carries out node 28's flag `28.3`. `expedition/SKILL.md` gains the flags in the checker's spawn and loses item 2 of `## What nothing here settles`. Both changes are kept small, because the human wants the skills compacted. The work is the new implementation node below.
+INDEX LINE:    The implementation checker checks each flag's index sentence, after its outcome, only for truth about the work. A false flag returns as a question, which takes the gate out of a standing yes.
+FLAGS:         ASSUMPTION: The checker gets each flag's `flags.md` sentence with the flag's id and without the link to the node. The link would point a blind checker at the record, and the id lets the manager match a question back to its flag. Index: The checker gets a flag's index sentence with its id but not its node link, because the link would lead it into the record it is kept blind to.
+               ASSUMPTION: The manager hands the node's flags on every run of the check, re-checks included, because a correction round can change a flag or add one. Index: Flags are handed to the checker on every run, re-checks included, because a correction round can change or add a flag.
+               ASSUMPTION: Removing item 2 of the manager contract's `## What nothing here settles` renumbers the items after it. I searched the shipped files with `grep -rn -E 'item [0-9]'` and found no citation of those items by number. Index: Removing the settled item from the manager's list of unsettled duties renumbers the rest, and no shipped file cites them by number.
+               ASSUMPTION: The implementation contract does not change. Its rule to fix what the checker found, or say why a finding is false, already covers a question about a false flag, because the checker contract counts questions handed back beside an outcome among what it found. Index: The implementation contract is unchanged, because its existing rule for checker findings already covers a flag the checker reports as false.
+NEW NODES:     Name: Ship the checker's check of a node's flags
+               Kind: implementation
+               Question: Carry node 30's answer into the checker contract and the manager contract.
+               Blockers: none
+               Acceptance condition:
+               > The work is `.claude/skills/expedition-checker/SKILL.md` and `.claude/skills/expedition/SKILL.md`, and no other file may be edited. These are files the workflow ships, so superseded wording is removed rather than struck, and nothing is moved to any history file. The worker may not mark this node, resolve it, or write a line in any index file.
+               >
+               > Done means all of the following are true of the finished tree.
+               >
+               > In `.claude/skills/expedition-checker/SKILL.md`:
+               >
+               > 1. Under `## What you are given`, the numbered list gains a seventh item: the flags the work's node holds, each as one sentence with its id, given as text by the spawn. The item says that a flag is a judgement another agent recorded about this work, and that this given is absent where the node holds no flags. The sentence introducing the list states the new count, and states correctly which givens the spawn carries and which one the checker reads for itself.
+               > 2. The paragraph beginning "The six givens above are everything you are given" no longer says "six". It states its closure as protection of the record: the record stays unread, and a flag given under item 7 is a claim about the work, not part of the record. The paragraph's other sentences keep their words. That includes "The one exception is `map-implementation-rules.md`, and only for the standards in it." and "A path you were given as the work is the work wherever it sits, and you read it."
+               > 3. A section headed `### The flags, after your outcome` is added under `## What you hand back`. It states all of the following:
+               >    (a) Check the flags only after reaching your `PASS` or `FAIL`, and change no outcome because of them.
+               >    (b) For each flag, establish one of three things: what it says was done is true of the work, it is false, or it makes no claim the work can make true or false.
+               >    (c) Judge only whether what the flag says was done is true of the work, never whether the judgement was right, and ignore any reason the flag gives.
+               >    (d) Report a false flag, and only a false flag, under `QUESTIONS:`, naming the flag's id and the search that showed it false.
+               > 4. In `### Questions, alongside a \`PASS\` or a \`FAIL\``, the sentence that counts the kinds of question states the new count, and a false flag is described there as one kind. The section points at `### The flags, after your outcome` rather than restating it.
+               > 5. No heading of the file is renamed. No sentence outside clauses 1 to 4 changes in content. The table under `### When what you check against is itself the problem` is not changed by this work.
+               >
+               > In `.claude/skills/expedition/SKILL.md`:
+               >
+               > 6. In `## The checker`, the list after "The checker receives the following:" gains one item: on the check of an implementation node, every run, the flags the node holds, each as its sentence from `flags.md` with its id and without the link to its node.
+               > 7. The sentence "The checker receives nothing from the effort's own record, so its spawn never points it at the node file." is changed so that it makes the flag sentences of clause 6 its only exception, and it still says that the spawn never points the checker at the node file.
+               > 8. In `## What nothing here settles`, the item beginning "Does anything check a flag before the human settles it?" is removed, and the items after it are renumbered in their existing order. The bullet "The scribe rule against the fuller form of a flag." under `## Conflicts this contract leaves open` is not changed.
+               >
+               > Both files:
+               >
+               > 9. Compared with the commit the work starts from, `.claude/skills/expedition-checker/SKILL.md` grows by no more than 15 lines, and `.claude/skills/expedition/SKILL.md` does not grow. Line counts are those printed by `wc -l`.
+               > 10. Every markdown link in both files resolves to a path that exists.
+               > 11. The working tree meets the bar.
+               >
+               > Scope: the places named are the work, not instances of a defect. One search was run to find the count words a seventh given would make wrong: `grep -n -w -i 'six\|five' .claude/skills/expedition-checker/SKILL.md` returned two lines, "You are given six things. The spawn carries the first five, and you read the sixth for yourself from one" and "The six givens above are everything you are given.", which clauses 1 and 2 cover. A count word that this search reaches outside those two lines is reported, not edited.
+INVALIDATIONS: Node 26: narrowed. Its trial ran the flag check as a separate pass, after the outcome, on flags the manager stripped to what was done. The standing form is the same checker run, after the outcome, on the flag's `flags.md` sentence unchanged, with the checker told to ignore any reason it gives. The human's tentative "only giving what was done and not the reason" now means the checker ignores the reason; nobody removes it from the text.
+               Node 28: no change. Its flag `28.3`, restating "That is everything" as what it protects, is carried out by clause 2 of the new node.
+               Node 42: extended. Besides ground rules, one other kind of text now travels to the blind checker: a flag's index sentence, given as a claim about the work. It is not a ground rule and is not tested as one.
+               Node 34: no change. Its rule is reused for a false flag.
+CONDITIONS:    I listed open and claimed nodes with `grep -l -E '^Status: (open|claimed)'` (22 nodes). In their files I searched for "six givens", "everything you are given", "six things", "Does anything check a flag", "What nothing here settles", "The checker receives", "nothing from the effort", "What you are given", "check a flag", "flag pass" and `expedition-checker/SKILL.md`. Apart from node 30 itself, only two matched, both on `expedition-checker/SKILL.md`. Node 214 changes the table under `### When what you check against is itself the problem`, and its clause 3 forbids other sentences changing to carry its own clauses, so the two do not conflict. Clause 5 of the new node leaves that table alone. Node 41 states the checker file is not changed by its work, which is also no conflict. The open implementation nodes on `expedition/SKILL.md` are nodes 317 and 87. Neither condition matched `## What nothing here settles`, `## The checker` or item numbering. No replacement clause is owed, and no open node's question changes.
+MISSING FROM MAP: The map does not say that a standing yes is in force or that it changes where flags reach the human. That came from the manager's notes and `expedition-standing-yes/SKILL.md`. I re-derived the size of flags.md (737 settled lines, 18 outstanding) with grep, rather than relying on node 30's stale "forty-nine".
+
+RETROSPECTIVE:
+1. What I had to hunt for: how the standing yes treats a checker's question, which is the rule that made (e) cost almost nothing to ship, found in `expedition-standing-yes/SKILL.md` under "What a standing yes never covers". Whether a checker's question counts as something the worker must answer ("What every finding carries" in the checker contract). The trial run's details in node 26. And the manager contract's own checker spawn list, which needed the exception to "receives nothing from the effort's own record". Node 30 did not mention that list.
+2. What arrived that this node did not need: most of map.md (the heterogeneous-model note, the never-delete boundaries, the glossary counts), and the decisions-index line for node 366 beyond its batch figure.
+3. What would have made this easier: the node naming the exact sections its answer changes (checker `## What you are given` and `### Questions…`, manager `## The checker` and `## What nothing here settles`). It would also help if a mid-attempt resume like this one said which files had changed since the payload. The manager did say so, and that saved a re-search.
+4. What was stale, wrong or contradictory: node 30's "forty-nine flags" (the tree now holds 755 lines in flags.md). The node predates the standing yes, so its idea of where the human sees flags is out of date. The manager contract says the checker "receives nothing from the effort's own record", which this answer has to change. The node's framing that both new forms are the manager's to write no longer holds for the checker's direction: under this answer nobody writes the checker's form.
+`````
+
+## Flags
+
+`30.1` `ASSUMPTION` **· settled** — The checker gets each flag's flags.md sentence with its id and without the node link. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`30.2` `ASSUMPTION` **· settled** — Flags are handed on every run of the check, re-checks included. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`30.3` `ASSUMPTION` **· settled** — Removing item 2 of the manager contract's What nothing here settles renumbers the rest; no shipped file cites them by number. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`30.4` `ASSUMPTION` **· settled** — The implementation contract does not change. *(The worker's full text is under its handover's `FLAGS`.)*
+
+*The manager's note, 2026-10-02:* flags 30.1, 30.2, 30.3, 30.4 settle at the node closing report that closes this node.
