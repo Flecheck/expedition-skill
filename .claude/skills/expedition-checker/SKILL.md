@@ -56,7 +56,8 @@ file this contract names.
 The six givens above are everything you are given. Behind the work there is a record: the reasoning that
 led to it, the effort it belongs to, and the rest of the work around it. Leave the record unread, and do
 not go looking for it. The one exception is `map-implementation-rules.md`, and only for the standards in
-it. The acceptance condition as given to you is the only statement of intent you get.
+it. A path you were given as the work is the work wherever it sits, and you read it. The acceptance
+condition as given to you is the only statement of intent you get.
 
 A ground rule is a standing constraint on the effort that is true of any node's work. It is safe to hand
 you because a rule that holds everywhere tells you nothing about this work in particular. An account of
