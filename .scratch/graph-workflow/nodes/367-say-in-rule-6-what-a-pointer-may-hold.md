@@ -140,3 +140,52 @@ RETROSPECTIVE:
 #### The human's answer at the gate, 2026-10-02
 
 The manager put checker run 1's question to the human, recommending one correction: restore the elided words so the sentence reads "Where the reader is not told to read that file, restate what the reader needs…". The alternative offered was to approve as is. The human, `verbatim`: *"ok"*. The manager had said "ok for recommended" would mean that correction. So the gate's outcome is **correct**, and the node goes to correction round 1.
+
+## Handover, attempt 1, correction round 1
+
+*The worker's own text, pasted, 2026-10-02.*
+
+````
+HANDOVER:      Say in rule 6 what a pointer may hold (correction round 1)
+
+ANSWER:        Standing rule for writing 6 in `map.md`'s `## Notes` now says what a pointer may hold. Directly after its first sentence it gains two sentences: "A pointer names the heading and says, in one clause at most, what the reader goes there for. It lists none of the items that heading holds and states none of its rules."
+
+Rule 6's existing second sentence now opens "Where the reader is not told to read that file, restate what the reader needs…". The words "told to read that file" were restored by the human's decision at the gate. With the new sentences between them, the shorter "Where the reader is not" no longer pointed back at the first sentence, which goes against rule 5's one clear referent per pronoun. Clause 1 asked for that sentence to be kept word for word, and this is the one departure from it. Rule 6's other three existing sentences are unchanged, and so are rules 1 to 5.
+
+The list's bold lead-in names [node 361](nodes/361-whether-a-pointer-that-summarises-its-target-restates-it.md) beside node 253 as a node that fixed the sixth rule. The replaced lead-in and the old rule 6 are appended verbatim to `map-history.md`, under `## Superseded from `map.md` at node 367 — the sixth standing rule for writing, before it said what a pointer may hold`. That section's italic note now records the second sentence's change too.
+
+INDEX LINE:    Rule 6 now says a pointer names the heading and, in one clause at most, what the reader goes there for, listing none of its items and stating none of its rules.
+
+FLAGS:         none
+
+NEW NODES:     none
+
+INVALIDATIONS: Extension of [node 253](nodes/253-a-shipped-file-points-at-a-sibling-rather-than-restating-it.md)'s rule and of [node 354](nodes/354-add-the-sixth-standing-rule-for-writing.md)'s landed rule 6: two sentences are added, and the second sentence's elided words are restated. The meaning of that sentence is unchanged. No contradiction.
+
+CONDITIONS:    Unchanged from attempt 1. I searched every open or claimed node's acceptance condition and question for "rule 6", "sixth", "standing rule(s) for writing", "one clause", "Point at a heading of another shipped" and "Where the reader is not". No clause is made wrong and no open question changes.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:  For the checker's question (the elided "is not" lost its antecedent once the new sentences came before it), and the human's "ok" taking the manager's recommendation:
+- In `map.md`, rule 6's second existing sentence now opens "Where the reader is not told to read that file, restate".
+- `map-history.md` already held that sentence's old text, inside the old rule 6 banked in attempt 1. Nothing new was banked.
+- In `map-history.md`, the italic note of this node's own appended section, written in attempt 1 and not yet committed, was corrected. It said rule 6's four existing sentences were unchanged, and it now names the second sentence's change and that the human made it at the gate.
+- The pre-change `map-history.md` is still a byte-exact prefix of the new one, so check 11 holds.
+- This touches clause 1: the one departure from "word for word" was decided by the human. No other clause is affected.
+
+Paths touched, in the worktree `.scratch/graph-workflow/worktrees/367-rule6`: `.scratch/graph-workflow/map.md` and `.scratch/graph-workflow/map-history.md`. Nothing is committed.
+
+Proposed commit message:
+
+    Rule 6 says what a pointer may hold
+
+    Standing rule for writing 6 in map.md gains two sentences after its
+    first: a pointer names the heading and, in one clause at most, what the
+    reader goes there for, and lists none of its items and states none of
+    its rules. Its second sentence's elided "told to read that file" is
+    restored so it keeps its referent. The lead-in names node 361 beside
+    node 253. The replaced lead-in and rule 6 are appended verbatim to
+    map-history.md.
+
+    Node: graph-workflow/367
+````
