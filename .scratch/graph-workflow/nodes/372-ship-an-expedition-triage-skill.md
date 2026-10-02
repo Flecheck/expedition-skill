@@ -237,6 +237,68 @@ RETROSPECTIVE
 4. What was stale, wrong or contradictory: the spawn said the old entries had "no marker position". The manager's note says they "carry no ids", so the gap is a missing id. Otherwise nothing.
 ````
 
+## Handover, attempt 1, correction round 2
+
+*The worker's own text, pasted, 2026-10-02.*
+
+````
+HANDOVER:      Ship an `expedition-triage` skill (372) — correction round 2
+
+ANSWER:
+A new invoked skill, `.claude/skills/expedition-triage/SKILL.md`, writes down the triage that node 366 ran by hand. It is about 3 KB and follows the form of `expedition-cleanup` and `expedition-standing-yes`. Its front matter carries `name: expedition-triage` and a description saying the human invokes it in an expedition's manager thread to triage the open nodes and outstanding flags. It has four sections.
+- `## Check each open node`: check against the current working tree and the current shipped files, and not against the record. The checking may go to read-only agents, and each one quotes the current text its finding rests on. The section defines the four classes moot, dropped, merged and kept. For a kept implementation node, the proposal says whether its condition quotes text that no longer exists.
+- `## Check the outstanding flags`: one batch proposes settling the flags on `resolved` or `superseded` nodes. Flags on `open` or `claimed` nodes stay outstanding. The section names `## Flags` in SKILL.md and changes it for this case: the human's approval of the batch is the moment its flags settle. It also states the node 89.1 case, as a second named change to `## Flags`: a merged node's flag that judges the clauses that move stays outstanding, and settles at the gate of the node that receives those clauses.
+- `## The proposal`: one payload, with one numbered question per class and one for the flag batch. Each question lists its nodes or flags with a one-line reason. No status or flag state changes before the human answers.
+- `## After the human answers`: each act points by heading at `### Supersede`, `### Resolve`, `### Rule out of scope`, `### Amend an acceptance condition` and `### Settle a flag` in `graph-conventions.md`, and restates none of their steps. It also points at `### Changing one after it is written` in SKILL.md for which nodes may be amended. The no-id case is stated as a named change to step 2 of `### Settle a flag`: the flag is settled by its `flags.md` line alone, and the manager writes a note of its own on the node.
+The skill's opening says it runs only when the human invokes it, and never on a schedule or on the manager's judgement.
+Calls a later reader would otherwise re-derive:
+- `kept` is defined as "none of the three above".
+- The flag batch is one question, because clause 5 says "one batch".
+- The H1 heading is "Triaging the open nodes and the outstanding flags", because the cascade contract already uses "triage" as a role name.
+- The triage batch's settling moment is a change made for this one case in the skill. `SKILL.md`'s `## Flags` is left unedited, on the human's "ok for recommended" in correction round 2.
+
+INDEX LINE:    Ships `expedition-triage`, an invoked skill: check open nodes against the tree, sort them into moot, dropped, merged or kept, propose with flag settling in one payload, then act by graph-conventions procedures.
+
+FLAGS:
+ASSUMPTION: The name the condition fixes, `expedition-triage`, shares the word "triage" with the cascade contract's triage role (`.claude/skills/expedition-cascade/SKILL.md`, `## Triage`, `ROLE: triage`). Node 87's question also speaks of a "triage agent". I kept the name the condition fixes and titled the H1 "Triaging the open nodes and the outstanding flags", so that the skill's heading does not read as the cascade role. — Index: Node 372 kept the condition's name `expedition-triage` though the cascade contract already names a "triage" role, and titled the skill's heading to tell the two apart.
+ASSUMPTION: I added two rules the condition does not demand, both from the cases the manager met while carrying out node 366's answer. First, a flag on a merged node that judges the clauses that move stays outstanding and settles at the receiving node's gate (the flag 89.1 case). Second, a flag entry with no id is settled by its `flags.md` line alone, plus a note from the manager on the node (as in commit 44588fca). Each is stated as a named change to the rule it alters. — Index: Node 372's skill adds two cases node 366's carrying-out met, a flag that travels with merged clauses and a flag entry with no id, beyond what its condition demands.
+
+NEW NODES:     none
+
+INVALIDATIONS: none. Three passages change a shipped rule for the triage's own case, and each names that rule by heading: the batch's settling moment and the merged-flag case change `## Flags` in SKILL.md, and the no-id case changes step 2 of `### Settle a flag`. No shipped file is edited.
+
+CONDITIONS:    I searched the 37 open or claimed nodes' conditions and questions for `triage`, `invoked skill`, `expedition-cleanup`, `expedition-standing-yes` and `expedition-triage`. Matches outside node 372:
+- Nodes 41, 214, 219, 190, 80 and 371 only cite node 366 as a provenance line.
+- Node 370's match was incidental.
+- Node 87's question speaks of the cascade's "triage agent", a different thing, and this work does not change it.
+No replacement clauses, and no open node's question changed.
+
+MISSING FROM MAP: How the manager settled flags with no id during node 366's carrying-out was not in the map or in node 366. I found it in commit 44588fca's manager notes. The 89.1 case was found on nodes 89 and 371.
+
+GATE PAYLOAD:
+Correction round 2, on the human's "ok for recommended":
+- The batch sentence under `## Check the outstanding flags` gains "This changes the rule under `## Flags` in your contract for this one case: the human's approval of the batch is the moment its flags settle."
+- Clause 5's content is unchanged: one batch for flags on `resolved` or `superseded` nodes, and flags on `open` or `claimed` nodes left outstanding.
+- This touches clause 5's passage only, and does not alter what clause 5 demands. Clause 6 stays met, and no other file is changed (clause 8).
+Earlier rounds, kept:
+- F1 (run 1): the merged-flag and no-id sentences name the rule they change.
+- F2 (run 1): the pronoun is unambiguous.
+- Bar: the repo has no build, tests, formatter or CI. No line other than the description exceeds 110 characters. `git status` shows only the new file.
+- Paths touched: `.claude/skills/expedition-triage/SKILL.md` (new). Nothing else.
+- Proposed commit message:
+  Ship the expedition-triage skill
+
+  An invoked skill for the manager: check open nodes against the working tree, sort them into moot, dropped, merged or kept, propose them and the flag batch in one payload, then act by the graph-conventions procedures. The human's approval of the flag batch is its settling moment, named as a change to SKILL.md's `## Flags` for this case.
+
+  Node: graph-workflow/372
+
+RETROSPECTIVE
+1. What I had to hunt for: in this round, nothing.
+2. What arrived that this node did not need: in this round, nothing.
+3. What would have made this easier: in round 1, reading rule 6's last sentence as applying to every sentence that departs from a shipped rule, including one the condition dictates.
+4. What was stale, wrong or contradictory: clause 5 of the condition alone conflicted with `## Flags` in SKILL.md. The named change for this case resolves that, without editing SKILL.md.
+````
+
 ## Flags
 
 `372.1` `ASSUMPTION` — *The worker's own text.* The name the condition fixes, `expedition-triage`, shares the word "triage" with the cascade contract's triage role (`.claude/skills/expedition-cascade/SKILL.md`, `## Triage`, `ROLE: triage`). Node 87's question also speaks of a "triage agent". I kept the name the condition fixes and titled the H1 "Triaging the open nodes and the outstanding flags", so that the skill's heading does not read as the cascade role. The glossary defines neither use.
