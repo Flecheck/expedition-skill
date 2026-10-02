@@ -1,7 +1,7 @@
 # Ship an `expedition-triage` skill
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
