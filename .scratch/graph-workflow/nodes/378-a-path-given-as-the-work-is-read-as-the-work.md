@@ -1,7 +1,7 @@
 # Say in the shipped checker contract that a path given as the work is read as the work
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
