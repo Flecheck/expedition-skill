@@ -1,7 +1,7 @@
 # Ship the checker's check of a node's flags
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
