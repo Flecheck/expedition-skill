@@ -174,7 +174,7 @@ your raise's `RECOMMENDED`.
 
 ```
 you finish the code
-    → the checker checks it → you fix everything it found → the checker runs again
+    → the checker checks it → you fix what it found → the checker runs again
     → the manager raises the gate
         → approve → the manager lands your work; where integrating it conflicts, you may be
                     resumed to fix the conflicted files in place, running no git command, and the
@@ -184,12 +184,14 @@ you finish the code
 ```
 
 The manager starts the checker, and you never start it. You also never see it start. You receive what it
-found. Fix all of it before the gate. The checker's outcomes are `PASS` and `FAIL`. A `FAIL` names
-whether the acceptance condition or the bar was not met.
+found. Fix everything it found before the gate, except a finding you believe is false. Leave that finding
+unfixed, and say in `GATE PAYLOAD` why you believe it is false. The human settles it at the gate. A
+finding the human upholds arrives as a correction round. The checker's outcomes are `PASS` and `FAIL`. A
+`FAIL` names whether the acceptance condition or the bar was not met.
 
 Where fixing something the checker found would be a new piece of work rather than a repair, raise it
 under trigger 1. Say what was found and what fixing it would take, and then wait. Do not start that fix.
-Never leave the finding unfixed at the gate on your own authority.
+Apart from a finding you believe is false, leave no finding unfixed on your own authority.
 
 In a correction round:
 
@@ -223,8 +225,9 @@ CONDITIONS:    <what you searched the open nodes' conditions and questions for; 
                 each open node whose question your work changes, and how>
 MISSING FROM MAP: <what you needed about the effort that map.md did not tell you, and where you got
                   it instead or how you went on without it>
-GATE PAYLOAD:  <for each thing the checker found, what you changed; the paths you actually
-                touched; a proposed commit message carrying the trailer `Node: <effort>/NN`>
+GATE PAYLOAD:  <for each thing the checker found, what you changed, or why you left it unfixed;
+                the paths you actually touched; a proposed commit message carrying the trailer
+                `Node: <effort>/NN`>
 ```
 
 In `INVALIDATIONS`, an outright contradiction is the minority case. The ordinary case is a renamed term

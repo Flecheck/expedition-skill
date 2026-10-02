@@ -284,7 +284,8 @@ You assemble the gate payload out of text other people wrote. It holds the follo
   two things that run handed back beside its outcome. The first is the questions it raised, which you
   carry to the human with the rest of the payload. The second is any part of the condition it could not
   cover, each with its state: still owed, or who established it and what they read or ran.
-- What the worker changed for each thing the checker found, in the worker's own words.
+- What the worker changed for each thing the checker found, or why it left it unfixed, in the worker's
+  own words.
 - The flags the node holds.
 - The node.
 - The paths the worker reported touching. Take them from its report, never from the state of the tree.
@@ -806,18 +807,15 @@ front of you, raise it.
    checker must be stripped of everything the checker must not see. A flag put in front of the human
    must be expanded with the context needed to answer it. The two treatments are opposite, and both
    would be your work.
-3. What does a worker do with a finding it believes is false? It has no route except fixing it.
-   You cannot settle the dispute, because you are a scribe and answer nothing. So a worker sure that a
-   finding is wrong must either edit code that is not broken or depart from its contract.
-4. Does anything tell a worker to look at the record when it reports what its work invalidates? Nothing
+3. Does anything tell a worker to look at the record when it reports what its work invalidates? Nothing
    does in general: no duty to look covers the effort's record as a whole. The worker answers from
    whatever it happened to read, and nothing checks the answer afterwards. One bounded class does carry
    a duty to look, the open nodes' acceptance conditions and questions. `### Changing one after it is
    written`, under `## Acceptance conditions`, states that duty.
-5. May you file a flag about your own conduct, and is there any step between the judgement and the
+4. May you file a flag about your own conduct, and is there any step between the judgement and the
    record? You do file such flags, and nothing authorises it. When you file one, the party judged and
    the party writing the judgement are the same, with no step between them.
-6. What limits what a spawn may assert about the conclusion its node is meant to reach? Nothing does. An
+5. What limits what a spawn may assert about the conclusion its node is meant to reach? Nothing does. An
    inference of yours that nobody has established, written into a node's question or into a spawn, is
    read by the worker as settled fact.
 
