@@ -1,7 +1,13 @@
 # A human edit lands in a worker's tree while the node is claimed
 
 Type: grilling
-Status: claimed
+Status: resolved
+
+## Answer
+
+A human edit to a claimed node's tree is a supported review channel: the contract sentence says "yours alone among the agents"; the worker keeps the human's text and raises conflicts; the checker is unchanged.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The human took both recommendations. The node it surfaced is [node 377](377-ship-the-human-edits-a-claimed-tree-rule.md). The node raised no flags.
 
 ## Question
 
@@ -116,3 +122,71 @@ RETROSPECTIVE (attempt so far):
 `verbatim`: *"ok"*
 
 The manager had put the questions with the line "Please answer Q1 and Q2. "ok for recommended" takes both." So the reply takes the worker's `RECOMMENDED` on both: the package (a) to (d) is accepted, and it goes into the shipped files.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      A human edit lands in a worker's tree while the node is claimed
+
+ANSWER:        **The human editing a tree while its node is claimed is a review channel the workflow supports. It is not prevented.** What was missing was the bookkeeping around it. The human approved the whole package and its shipping at `## Interview` attempt 1, with "ok" given to "ok for recommended takes both".
+
+**(a) The contract sentence is made true.** The implementation contract now reads: "The tree your spawn names is yours alone among the agents for the whole node. The human may also edit it. Edit only files inside it." No other agent edits the tree, and that guarantee is unchanged.
+
+**(b) The worker keeps the human's text.** Where the human has edited the worker's tree, the worker keeps what they wrote. Where that text conflicts with the acceptance condition or with something the checker found, the worker raises it and does not change it. Node 76 used this practice once and it held: the human settled the collision at the raise.
+
+**(c) The checker is unchanged.** It holds every changed path against the condition, whoever wrote it, because the condition is the standard either way. A `FAIL` caused by the human's text reaches the worker, and (b) turns it into a raise rather than a rewrite. Nothing new travels to the checker, so node 42's rule stands.
+
+**(d) The manager does not ask the human what changed.** Where the human says they edited a claimed node's tree, the manager passes their words to that node's worker at its next resume. The worker reads the tree itself. This authorises, with node 76's ad-hoc additions dropped, the remedy the manager invented at node 76.
+
+**The rule ships**, because the false sentence was shipped and the human edits trees on other projects too. It cannot rest on this machine's global instructions. The cost is about three lines.
+
+INDEX LINE:    A human edit to a claimed node's tree is a supported review channel: the contract sentence says "yours alone among the agents"; the worker keeps the human's text and raises conflicts; the checker is unchanged.
+
+FLAGS:         none
+
+NEW NODES:     **Name:** Ship the human-edits-a-claimed-tree rule
+**Kind:** implementation
+**Question:** Carry node 85's answer into the implementation contract and the manager's skill.
+**Blockers:** none
+
+**Acceptance condition:**
+
+Done when all of the following hold.
+
+1. In `.claude/skills/expedition-implementation/SKILL.md`, the sentence "The tree your spawn names is yours alone for the whole node." is replaced. The new text states three things, in this order: the tree the spawn names is the worker's alone among the agents for the whole node; the human may also edit it; and "Edit only files inside it." stays.
+2. In the same file, the bulleted list that follows the line "In a correction round:" gains one bullet. The bullet states two things. First, where the human has edited the worker's tree, the worker keeps what the human wrote. Second, where the human's text conflicts with the acceptance condition or with something the checker found, the worker raises it and does not change that text.
+3. In `.claude/skills/expedition/SKILL.md`, the section headed `### Three outcomes, and no fourth`, or the text directly under it, gains at most two sentences. They state that where the human says they edited a claimed node's tree, the manager passes the human's words to that node's worker at the worker's next resume, and asks the human nothing about what changed.
+4. `.claude/skills/expedition-checker/SKILL.md` is not changed by this work.
+5. Scope search: `grep -rn "yours alone" .claude/skills` was run over the working tree on 2026-10-02. It returned exactly one line: `.claude/skills/expedition-implementation/SKILL.md:18`. An instance the same search reaches outside the files this condition names is reported and not edited.
+6. Each added passage follows the writing rules in `map.md`'s `## Notes`: plain English, one idea per sentence, stated as what to do. The whole change adds no more than five lines across the two files.
+7. The working tree meets the bar.
+
+INVALIDATIONS: **Node 68, a narrowing.** Its answer says that at check time "everything modified or untracked in it is this node's work and nothing else", and that `git status` in the worktree is the list of paths that changed. That stays true of agents only. The human's edits may also appear there, and they are kept and checked like any other content.
+
+**Node 76, an extension.** The manager's remedy there had no node behind it. It is now authorised, in the reduced form above: keep the human's text, have the worker raise collisions, and do not ask the human what changed. The part where the manager checks the structure mechanically is not part of the rule.
+
+CONDITIONS:    **Searched for:** "yours alone"; "In a correction round"; "Three outcomes, and no fourth"; human edits in a tree or worktree; and the path `expedition-implementation/SKILL.md`. These were run over the `## Acceptance condition` and `## Question` sections of all 27 open or claimed nodes.
+
+**Matches:** only node 85 itself, plus two nodes that name the implementation contract for an unrelated concern.
+- Node 32 is about the flags.md clause.
+- Node 41 is about the `FRICTION` marker.
+
+Neither clause is made wrong, and neither is the same concern, so nothing is joined to them. No replacements, and no open node's question changes.
+
+MISSING FROM MAP: map.md does not say that implementation work stays uncommitted through the checker and the gate, or that worktrees sit inside the repo. Both were load-bearing here. I got them from `map-manager-only.md`'s `## Landing an implementation node's work`, which I opened on the manager's pointer.
+
+**What I skipped from method skills:** none was invoked.
+
+RETROSPECTIVE:
+1. **What I had to hunt for:**
+   - The landing facts (uncommitted until the gate, worktrees inside the repo), which are in `map-manager-only.md`.
+   - How node 76's collision actually ended, which is in node 76's `## Interview` attempt 1.
+   - Whether any other shipped file restates the contract sentence. A grep found none.
+2. **What arrived that this node did not need:** the decisions.md lines for nodes 160 and 363.
+3. **What would have made this easier:** a link from node 85 to node 76's `## Interview` attempt 1, which shows "keep it and raise it" already tried once.
+4. **What was stale, wrong or contradictory:**
+   - Node 85 quotes the older contract sentence ("every file you edit is inside it").
+   - Since the question round, nodes 375 and 376 changed parts of the contracts. I wrote the condition against the tree as it stands at 3418de9e8. I anchored it on "In a correction round:" and `### Three outcomes, and no fourth`, both of which still exist, rather than on `## After the code is written`, which node 375 changed.
+`````
