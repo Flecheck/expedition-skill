@@ -1,7 +1,7 @@
 # Update the map items that nodes 64 and 68 left stale
 
 Type: implementation
-Status: open
+Status: claimed
 
 ## Question
 

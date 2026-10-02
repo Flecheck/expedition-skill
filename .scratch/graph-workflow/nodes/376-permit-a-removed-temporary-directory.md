@@ -1,7 +1,7 @@
 # Let the four no-file contracts permit a removed temporary directory
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
