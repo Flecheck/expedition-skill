@@ -189,3 +189,68 @@ Proposed commit message:
 
     Node: graph-workflow/367
 ````
+
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02, after correction round 1. The same checker, resumed within this node.*
+
+> PASS
+>
+> This is a re-check of node 367, "Say in rule 6 what a pointer may hold", after correction round 1. I held it against `/tmp/claude-1000/c367.md` under the human's gate decision as the manager relayed it. That decision removes "word for word" for rule 6's second existing sentence only, so that its opening "Where the reader is not, restate" becomes "Where the reader is not told to read that file, restate". "Word for word" still binds every other part of clause 1.
+> - I read only the standards section of `map-implementation-rules.md`.
+> - The ground rules and the six standing rules for writing came as text from `/tmp/claude-1000/ground.md`.
+> - I read the two changed paths as the work, under that file's rule on record files as work.
+>
+> **What changed since the last check.**
+> - The worker's handover names two changes: rule 6's second sentence, and the italic note in `map-history.md`.
+> - I re-ran every clause check against the tree rather than relying on that statement.
+> - Base `a19c84f` is unchanged.
+> - `git diff --numstat` is still `16 0` for `map-history.md` and `2 2` for `map.md`.
+> - The only change the tree shows beyond the two the handover names is none.
+> - The bar was re-run in full.
+>
+> **Settled first: rule 6 is a standard, and this work moves it.**
+> - Rule 6 gains two sentences, which are new elements.
+> - One existing sentence moves under the human's decision: "the reader is not told to read that file" says out loud what the old wording left implied, and requires nothing new.
+> - Every other element of rule 6, and all of rules 1 to 5, is unmoved. I held the work against those and not against the added sentences.
+>
+> **Scope: met.**
+> - `git status --porcelain --untracked-files=all` lists only ` M .scratch/graph-workflow/map.md` and ` M .scratch/graph-workflow/map-history.md`.
+> - There is no change to a node status line, `decisions.md` or `flags.md`.
+>
+> **Clause 1, as the decision reads it: met.**
+> - A Python check built the expected line from three pieces:
+>   - HEAD's rule-6 line;
+>   - the two mandated sentences, inserted word for word directly after its first sentence;
+>   - the single substitution "Where the reader is not, restate" → "Where the reader is not told to read that file, restate".
+> - The result equals the worktree's `6. **` line exactly (`True`). So sentences 1, 3 and 4 are unchanged, and sentence 2 differs only by the decided words.
+> - The line is under `## Notes`, between `## Notes` (line 22) and `## Decisions so far` (line 79).
+>
+> **Clause 2: met.**
+> - For n = 1 to 5, the md5 of `grep "^$n\. \*\*" map.md` is identical at HEAD and in the worktree.
+>
+> **Clause 3: met.**
+> - The lead-in still names `[node 361](nodes/361-whether-a-pointer-that-summarises-its-target-restates-it.md)` beside node 253 as a node that shaped the sixth rule. `grep -c 'node 361' map.md` returns 1.
+>
+> **Clause 4: met.**
+> - HEAD's rule-6 line matches one whole line in `map-history.md` (`grep -Fxc -f`, count 1), under the node-367 `## Superseded from \`map.md\` …` heading with its `### From \`map.md\`'s \`## Notes\` — the sixth standing rule for writing` subheading.
+> - HEAD's lead-in is banked word for word too (count 1).
+> - The diff has 0 `^-` lines, so the file gains text and loses none.
+> - The rewritten italic note states the second-sentence change and attributes it to the human's gate decision. It is added text only.
+> - Nothing more had to be banked: HEAD's full rule 6, including the old second sentence, is already appended.
+>
+> **Clause 5: met.**
+> - From `.scratch/graph-workflow/`, every relative `](…)` target in both files, with its anchor stripped, passes `[ -e ]`. The loop reported nothing missing.
+>
+> **The bar.**
+> - The repo has no build, tests, formatter or CI, so there were no commands to run.
+> - I held the added text in both files against the five ground rules, the unmoved standing rules for writing, `/writing-for-agents`, and the glossary's `_Avoid_` refusals, checked by hand. None found a defect.
+> - Rule 5's one-referent concern from last round is gone now that the clause names what the reader is not told.
+> - The only bold spans on added lines are the existing lead-in and rule 6's first sentence, plus their banked copies. The work introduces no new bold.
+> - No reviewing skill is named, so I ran none.
+>
+> My only writes were scratch files in `$TMPDIR` for the comparisons.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 2 outcome, `PASS`. No exclusion applies: run 2 handed back no question and no raise, and left no part of the condition uncovered. Run 1's question was settled by the human at the gate above. The node raised no flags.
