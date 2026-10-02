@@ -1,8 +1,14 @@
 # Cut the glossary's Adoption entry to its meaning
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The glossary's Adoption entry is cut to its meaning, because adoption.md's opening, its steps and its bulk-import section state every step and the import nodes' `precondition` kind.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `8e692b54`. The node raised no flags.
 
 ## Question
 
