@@ -7,7 +7,7 @@ Status: resolved
 
 When two condition parts cannot both hold on one reading but can on another, the checker checks under that reading and hands back a question; no raise, and no new verdict.
 
-*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The human took both recommendations. Its shipped change joins [node 214](214-a-condition-that-cannot-be-honoured-with-a-standard-is-a-raise.md) as clauses for that node's future condition. The node raised no flags.
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The human took both recommendations. Its shipped change joins [node 214](214-a-condition-that-contradicts-a-standard-is-a-raise.md) as clauses for that node's future condition. The node raised no flags.
 
 ## Question
 
