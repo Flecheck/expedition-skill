@@ -1,7 +1,7 @@
 # Four resolved nodes have no line in the effort's index of decisions
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
