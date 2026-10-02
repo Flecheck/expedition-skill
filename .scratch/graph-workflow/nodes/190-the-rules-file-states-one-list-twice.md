@@ -246,3 +246,5 @@ Block 2 (defect joined to open node 190, from node 271). Clauses to add to 190's
   - The same sentence still says that this repo has no build, no tests, no formatter and no CI, that `.gitignore` invokes nothing, and that the bar's command half being empty is a complete bar rather than a deficient one.
   - `.gitignore` is not edited.
   - Scope came from no search: the sentence named is the place of the work.
+
+*The manager's note, 2026-10-02:* `flags.md` holds two lines for id `190.1`. One is a settled `CONDITION-WRONG` line ("The manager replaced clause 3 of this open node's condition, …") with no entry on this node. The other is the `ASSUMPTION` entry above. The id was reused when the later flag was filed. Both lines are settled, and neither is changed.
