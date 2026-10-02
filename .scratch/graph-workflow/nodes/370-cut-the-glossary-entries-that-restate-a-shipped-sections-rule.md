@@ -127,6 +127,50 @@ RETROSPECTIVE:
 4. What was stale, wrong or contradictory: clause 15's named place for Adoption is too narrow to hold the rule clause 8 removes, so clauses 8 and 15 cannot both be fully met. Clause 15's own fallback settles the conflict. Node 317's note still refers to `CONTEXT.md`'s Flag entry, which now lives in `glossary.md`.
 ````
 
+## Review
+
+### Checker run 1 — `FAIL` (acceptance condition)
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c370.md`.*
+
+> FAIL: acceptance condition
+>
+> Scope of reading: I read the changed paths `.claude/skills/expedition/glossary.md` and `.claude/skills/expedition/SKILL.md` in worktree `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/370-glossary` as the work, under the map-implementation-rules rule for record paths. Neither path is a record path. I also read the places that clause 15 names: SKILL.md sections, `adoption.md` `## Your steps, in order`, and the `graph-conventions.md` `## Destination` bullet. In `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md` I read only the standards and opened no other file in that directory.
+>
+> ### Finding 1: a removed sentence states something its named place does not (clause 15, Node closing report)
+> - Instances: the old `**Node closing report**:` text had the sentence "It carries in full every flag that node holds, because those flags settle there." The work removed it to meet clause 9. Clause 15 names `### Picking the next node` as this entry's place. That section states that the report carries every one of the node's flags ("A node closing report for a node holding flags carries every one of those flags, in the fuller form ..."). It never states that those flags settle at the node closing report. Search: unwrap `### Picking the next node` and grep it for `settle`. It returns nothing:
+>   `awk '/^### Picking the next node/{f=1;next} f&&/^##/{f=0} f' .claude/skills/expedition/SKILL.md | tr '\n' ' ' | grep -o -i '[^.]*settle[^.]*\.'`
+>   The fact is stated only under `## Flags`, which is the Flag entry's place and not this one's. Clause 15 says such a sentence "stays in the entry, and the worker reports it rather than moving it". The worker did exactly that for Adoption. The two other removed sentences of this entry are stated in the named place: "names the node that just closed, and the node and kind you started" and "awaits no answer and takes no place in the queue above".
+> - Form: a sentence removed under clauses 2 to 14 that contains a statement with no counterpart, in any wording, in the section clause 15 names for that entry.
+> - Extent: the smallest set that provably contains every instance is the sentences that `git -C <worktree> diff -- .claude/skills/expedition/glossary.md .claude/skills/expedition/SKILL.md` shows as removed. I compared each of them against its named place, entry by entry. This was the only one with no counterpart. Checked and held: Attempt plus the clause 14 bullet against `## When an agent dies or is stopped`. Handover against the handover bullet and `### You write as a scribe`. Scribe against `### You write as a scribe`. Closed against `## Closing an effort` and `## Starting an effort`. Effort closing report against `## Closing an effort`. Starting an effort against `## Starting an effort`. Flag against `## Flags`. Stop and Final stop against `## Stopping a running worker`. Destination against the graph-conventions `## Destination` bullet. One judgement call: the Final stop sentence "The record makes a stop final, because no stop from either side removes a worker for good." I counted it as stated in substance, from step 5 together with the resumability and revivability of both kinds of stop.
+>
+> ### What held, part by part
+> - Scope and no other file edited: `git status --porcelain --untracked-files=all` lists only the two allowed paths, both modified.
+> - Clause 1: the unwrapped opening paragraph contains "A term is added only once a node has settled it. An entry says what the term means; a rule about the term is stated in the contract section that acts on it, and not here. The reasoning" (substring check in Python).
+> - Clauses 2 to 6 and 9 to 12: each entry's unwrapped text, between the bold line and the `_Avoid_` line, equals the dictated text exactly (Python parse of the glossary, string equality). This covers Attempt, Handover, Scribe, Closed, Effort closing report, Node closing report, Flag, Stop and Final stop.
+> - Clause 7: the old Starting an effort text with only that sentence deleted equals the new text.
+> - Clause 13: the new Destination text equals the old text cut at " Where the effort is not expected".
+> - Clause 8 (Adoption): the text is unchanged and does not equal the dictated text. This is legitimate under clause 15's carve-out. `adoption.md` `## Your steps, in order` never states that the bulk import is minted "as `precondition` nodes" (grep finds `precondition` only at lines 10 and 68 of `adoption.md`, outside that section). It also never states the contrast with starting from a conversation. So the sentence stays.
+> - Clause 14: the SKILL.md diff is the one bullet replaced by "- A replacement is a new attempt, recorded after the one it replaces." The "A handover has seven parts every time" bullet is untouched.
+> - Clause 16: all 58 entries are in the same order with the same names, and every `_Avoid_` line is identical to HEAD (Python comparison against `git show HEAD:...`). No `#` heading lines were added or removed in the diff. SKILL.md changes only as clause 14 says.
+>
+> ### The bar
+> The repo has no build, no tests, no formatter and no CI (recorded in map-implementation-rules.md; the worktree root has only `CONTEXT.md` and `CONTEXT-MAP.md`, with no CLAUDE.md or AGENTS.md giving commands). `git diff --check` printed nothing (rc=0). The longest added line is 102 characters, within the files' existing wrap width.
+>
+> Standards read: `/coding-principles`, `/naming`, the glossary's `_Avoid_` lines, the ground rules, the six standing rules for writing, `graph-conventions.md` and `/writing-for-agents`. No reviewing skill is named for this repo, so I ran none.
+> - Bore on the work: the `_Avoid_` lines (no refused word in the new text, checked by hand), writing rules 5 and 6 (no heading renamed, no new restatement), and ground rules 1 and 4 (nothing repo-specific added).
+> - Did not bear on this deletion-only prose change: coding-principles and naming.
+> - The `.claude/rules/expedition-triggers.md` sync rule does not apply, because the edited bullet is outside `## The order you act in` and `## What is in front of the human, and when`.
+> - No standard was moved by the work.
+>
+> NOT COVERED:
+> - "Where a sentence those clauses name states something its place does not, that sentence stays in the entry, and the worker reports it rather than moving it." Whether the worker reported the retained Adoption sentence, and the Node closing report sentence once it is restored, is in its handover. That is outside the paths I hold.
+>
+> QUESTIONS:
+> - Is the "because those flags settle there" sentence still correct to keep in the Node closing report entry? Flags on an implementation node that has a gate settle at the gate, not at the node closing report (`## Flags`). Clause 15's wording, which is the condition's and not the worker's to depart from, makes the sentence stay in the entry when it fails the check. Keeping it would keep a statement the glossary's new opening sentence says belongs in a contract section.
+
+*The manager's note:* a `FAIL` is outside the standing yes. Finding 1 and the checker's question turn on whether clause 15's named place for the Node closing report entry is to be widened to `## Flags`, which only the human can amend; it goes to the human.
+
 ## Flags
 
 `370.1` `ASSUMPTION` — *The worker's own text.* For the Scribe entry, I read "join them into one continuous text" as stated by `### You write as a scribe`, whose list of what assembling is includes "placing runs one after another". Placing pieces one after another is joining them into one continuous text. So the sentence was removed under clause 4 rather than kept under clause 15. If the human reads it as a broader permission than the section's, the fix is to restore that one sentence to the Scribe entry.
