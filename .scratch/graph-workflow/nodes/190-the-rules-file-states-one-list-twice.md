@@ -205,6 +205,10 @@ RETROSPECTIVE:
 
 *The manager's note:* the NOT COVERED item is established from the worker's handover, which quotes `.gitignore`'s patterns ("Its patterns are exactly `.worktrees/`, `.claude/worktrees/` and `.scratch/graph-workflow/worktrees/`"). The checker handed back a question beside its outcome, so the standing yes does not cover this gate; it goes to the human.
 
+### Gate — approve, 2026-10-02
+
+The manager put the gate to the human with checker run 1's question on writing rule 5 and flags 190.1 to 190.8, recommending approval as is: rule 5 binds what a work writes, the carried bold is earlier text, and the new bold sentence follows the file's bold lead-sentence convention that clause 1 asks for. The alternative offered was one correction round removing the bold from the one new sentence. The human, `verbatim`: *"ok"*. The manager had said "ok for recommended" would mean approval as is. Flags 190.1 to 190.8 settle at this gate.
+
 ## Flags
 
 `190.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 168's replacement for clause 4 was filed on this open, unclaimed node, and the node was made to wait on node 348.
