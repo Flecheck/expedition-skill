@@ -1,9 +1,15 @@
 # Write the derivations this effort has been deriving by hand
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+`derivations.md` holds nine runnable derivations of facts about the record and no values; map.md gains one Notes line saying facts are derived, and received numbers re-derived.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `e3411c88f`. Flags 210.1, 210.2, 210.3 settle at the node closing report.
 
 ## Question
 
@@ -218,8 +224,10 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`210.1` `ASSUMPTION` — *The worker's own text.* Clause 2 requires entry (h) to state the node-header rule, but (h) reads `map.md` and no node file. The entry states the rule as it applies to any derivation reading a node file, and says (h) itself reads none. It obeys the part that does apply: it skips fenced code blocks. The clause holds for (h) with nothing to apply it to, so it is not incoherent, and I did not raise.
+`210.1` `ASSUMPTION` **· settled** — *The worker's own text.* Clause 2 requires entry (h) to state the node-header rule, but (h) reads `map.md` and no node file. The entry states the rule as it applies to any derivation reading a node file, and says (h) itself reads none. It obeys the part that does apply: it skips fenced code blocks. The clause holds for (h) with nothing to apply it to, so it is not incoherent, and I did not raise.
 
-`210.2` `ASSUMPTION` — *The worker's own text.* The condition leaves several measured quantities undefined, so `derivations.md` defines them in its text: - struck-through text: per-block, markers excluded, headings included, code spans masked; - the human's quotation in `map.md`: the `*"…"*` span, which covers all 11 such spans under `## Notes`, every one of them the human's; - a Notes item: a paragraph or a list item; - "the directory": every file except `worktrees/`, non-markdown files included; - the node-count series: one line per day, counting `issues/` before the rename.
+`210.2` `ASSUMPTION` **· settled** — *The worker's own text.* The condition leaves several measured quantities undefined, so `derivations.md` defines them in its text: - struck-through text: per-block, markers excluded, headings included, code spans masked; - the human's quotation in `map.md`: the `*"…"*` span, which covers all 11 such spans under `## Notes`, every one of them the human's; - a Notes item: a paragraph or a list item; - "the directory": every file except `worktrees/`, non-markdown files included; - the node-count series: one line per day, counting `issues/` before the rename.
 
-`210.3` `ASSUMPTION` — *The worker's own text.* The new `map.md` line is a list item appended to the standing-preferences list, so that the diff is exactly one added line. A free-standing paragraph would also need a blank line, which makes two.
+`210.3` `ASSUMPTION` **· settled** — *The worker's own text.* The new `map.md` line is a list item appended to the standing-preferences list, so that the diff is exactly one added line. A free-standing paragraph would also need a blank line, which makes two.
+
+*The manager's note, 2026-10-02:* flags 210.1, 210.2, 210.3 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
