@@ -259,8 +259,7 @@ a checkbox.
 ### Recording the human's words
 
 The rules in this section cover `## Interview` and `## Review`, the two sections that hold the human's
-words. `### The human's words` in `SKILL.md` says when the manager records an answer, what it pastes,
-when it marks an answer `paraphrase`, and what it does with a terse reply whose option is unclear.
+words. `### The human's words` in `SKILL.md` says when and how the manager records an answer.
 
 Every recorded answer carries one of three markers: `verbatim`, `paraphrase` or `standing yes`. A reply
 pasted as the human wrote it is marked `verbatim`. That mark says the answer is the human's own words

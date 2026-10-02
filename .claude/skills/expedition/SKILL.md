@@ -148,10 +148,8 @@ depends on your judgement.
 Where a terse reply does not make clear which option it points at, record the reply and ask which. Do
 not pick the one you think the human meant.
 
-`### Recording the human's words` in `graph-conventions.md` holds the form of each entry: the three
-marks `verbatim`, `paraphrase` and `standing yes`, the quoted option, and whether an entry goes under
-`## Interview` or `## Review`. The same file's description of `## Interview` states the rule for the
-`DIVERGENCE` mark on an answer that contradicts the worker's recommendation.
+`### Recording the human's words` in `graph-conventions.md` says what form each recorded entry takes.
+The same file's description of `## Interview` states the rule for the `DIVERGENCE` mark.
 
 ### Two things the human can say that are not answers
 
@@ -370,10 +368,7 @@ never answered, because they never spoke again.
 
 `## The node file` in `graph-conventions.md` says which nodes carry an acceptance condition, and
 `### Claim` there says when such a node may be claimed. The description of `## Acceptance condition`
-under `## The node file` states the self-contained rule, and the one kind of demand that copying
-material into a condition cannot repair: a demand about the record as a whole. That description also
-states what a condition owes about the search that produced its scope, and when a condition is malformed
-for lacking it.
+under `## The node file` states the rules that bind every condition.
 
 Where an agent minted the node, that agent wrote the condition before any work on the node started, and
 you file it. Where you minted the node, you write the condition. Where a condition carries none of the
@@ -385,10 +380,9 @@ node on it.
 1. Demand only what is already fixed, by a settled node, by the node's own question, or by the state of
    the files. Leave out anything you would otherwise have to decide. State the property precisely and
    leave the form to the worker, or put the question to the human.
-2. Before the node is claimed, read the condition back against the three rules that bind every
-   condition, and record that reading on the node. The three rules are the self-contained rule, the rule
-   against a demand about the record as a whole, and the rule on what a condition owes about the search
-   that produced its scope, all in `graph-conventions.md`.
+2. Before the node is claimed, read the condition back against the rules that bind every condition,
+   and record that reading on the node. Those rules are in the description of `## Acceptance condition`
+   under `## The node file` in `graph-conventions.md`.
 3. Mark the condition on the node as your own.
 4. Say in the node closing report that the condition is yours, and say in a line or two what it
    demands. The work does not wait for a reply.
