@@ -1,7 +1,7 @@
 # Nothing bounds what a spawn may assert about the answer its node is meant to reach
 
 Type: grilling
-Status: open
+Status: claimed
 
 ## Question
 
