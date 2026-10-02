@@ -78,6 +78,55 @@ RETROSPECTIVE
 4. What was stale, wrong or contradictory: node 32's question cites a contract line by number ("line 54"), and that number was already wrong. The quote in node 85's question ("yours alone for the whole of the node, and every file you edit is inside it") no longer matched the shipped wording. Both manager claims checked out: one grep hit at line 18, and both anchors exist.
 ````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c377.md`.*
+
+> PASS
+>
+> Worktree: /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/377-human-edits. Base is 0f4c45044. Changed paths: .claude/skills/expedition-implementation/SKILL.md and .claude/skills/expedition/SKILL.md, both uncommitted. `git status --porcelain --untracked-files=all` shows only these two files, so no other path is touched.
+>
+> 1. Sentence replaced. `grep -rn "yours alone" .claude/skills` returns one line, `expedition-implementation/SKILL.md:18`. The diff replaces "The tree your spawn names is yours alone for the whole node." with three sentences, in this order: "The tree your spawn names is yours alone among the agents for the whole node." / "The human may also edit it." / "Edit only files inside it." The third is kept unchanged. Met.
+>
+> 2. Correction-round bullet. In `git diff`, the list under "In a correction round:" gains one bullet: "Where the human has edited your tree, keep what they wrote. Where their text conflicts with the acceptance condition or with something the checker found, raise it. Leave that text unchanged." Both demanded things are present, in order. The bullet uses `raise`, which the contract defines in `## Words used exactly` as the kind of raise that stops work. Met.
+>
+> 3. Manager rule. `grep -n "^### "` places the addition under `### Three outcomes, and no fourth`, directly after the line "...touched something the condition names." It is two sentences: "Where the human says they edited a claimed node's tree, pass their words to that node's worker when you next resume it." / "Ask the human nothing about what changed." Both demanded things are present. Met.
+>
+> 4. Checker contract untouched. `git diff --quiet 0f4c45044 -- .claude/skills/expedition-checker/SKILL.md` exits 0 (unchanged). Met.
+>
+> 5. Scope search. I ran `grep -rn "yours alone" .claude/skills` as written over the worktree. It returned exactly one line, `.claude/skills/expedition-implementation/SKILL.md:18`, which matches the recorded return. No instance falls outside the named files.
+>
+> 6. Writing rules and size.
+>    - Writing rules: I held each added sentence against the six standing writing rules received in the ground-rules text, which the rules file says are the rules in `map.md`'s `## Notes`. Every added sentence carries one idea and is stated as what to do. The condition's "does not change that text" became the positive "Leave that text unchanged." There are no figures of speech, coined phrases or slogan contrasts, and nothing new is bolded.
+>    - Size, measured with `wc -l` at the base and in the worktree: implementation 338 -> 341 and expedition 824 -> 826, so a net gain of 5 lines. The diff shows 6 `+` lines and 1 `-` line, because the replaced sentence was rewrapped from one line into two. I read "adds no more than five lines" as the net gain, which is 5. Met under that reading.
+>
+> 7. The bar.
+>    - The rules file records that this repo has no build, no tests, no formatter and no CI. The command half of the bar is therefore empty, and that is a complete bar.
+>    - I confirmed the worktree has no CLAUDE.md or AGENTS.md at its root.
+>    - `git diff --check` printed nothing, so there are no whitespace errors.
+>    - All added lines are at most 102 characters wide.
+>    - The non-command half is the standards (below). Met.
+>
+> Standards: I read only the standards in .scratch/graph-workflow/map-implementation-rules.md, and opened no other file in the effort's directory.
+> - The list is: /coding-principles and /naming; the glossary's `_Avoid_` lines; the ground rules; the six writing rules; graph-conventions.md; /writing-for-agents.
+> - These bore on the work:
+>   - Glossary `_Avoid_` lines. "tree" is refused only as a name for the graph, and here it means the working tree. No other added word appears in an `_Avoid_` line.
+>   - The writing rules (see part 6).
+>   - Ground rule 3. No added text has an agent address the human. The manager rule tells the manager to ask the human nothing.
+>   - /writing-for-agents. I read it from the mattpocock-skills plugin (nix store, skills/productivity/writing-for-agents/SKILL.md). The additions state the positive target, and they duplicate no meaning held elsewhere.
+> - The rules file's co-edit rule for .claude/rules/expedition-triggers.md does not apply. The addition sits under `## The gate`, not under `## The order you act in` or `## What is in front of the human, and when`.
+> - /coding-principles, /naming and graph-conventions.md did not bear on this prose-only change.
+>
+> Review route: the rules file names no reviewing skill, so I ran none. Ground rule 5 makes /writing-for-agents a standard, so I held the work against it by hand. I ran no subagent.
+>
+> I read the changed paths as the work under check. Neither is a record file, and no bookkeeping paths appear. I wrote no files and made no temporary directory.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and left no part of the condition uncovered. This settles none of the node's flags; they settle at the node closing report.
+
 ## Flags
 
 `377.1` `ASSUMPTION` — *The worker's own text.* Clause 6 says the change "adds no more than five lines across the two files". I read that as the net growth in line count, which is five here. Rewrapping the replaced sentence also rewrites one existing line, so `git diff --numstat` reports 6 insertions and 1 deletion. Making the insertion count five as well would have meant one manager-skill line far past the file's wrap width of about 105 characters, or cutting words the condition requires. No exchange with the human took place. I made the edits, measured the diff, and chose the net reading.
