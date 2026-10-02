@@ -129,6 +129,10 @@ RETROSPECTIVE:
 
 *The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate; it goes to the human.
 
+### Gate — approve, 2026-10-02
+
+The manager put the gate to the human, with checker run 1's question and flag 368.1, recommending approval with nothing added: the placement rule is stated under `graph-conventions.md`'s descriptions of `## Review` and `## Interview`, the manager is told to read that file, and adding a line runs against the compacting. The alternative offered was approval plus a small node for a one-clause pointer from `### Recording the human's words` to those two descriptions. The human, `verbatim`: *"ok for recommended"*. Flag 368.1 settles at this gate.
+
 ## Flags
 
 `368.1` `ASSUMPTION` — *The worker's own text.* Clause 1 removes the words saying that `### Recording the human's words` holds "whether an entry goes under `## Interview` or `## Review`". Clause 5 requires that each removed statement still be stated at the heading the pointer names. That heading's first sentence names the two sections as the ones that hold the human's words. Which kind of entry goes in which section is stated under the sibling descriptions `### \`## Review\`` and `### \`## Interview\`` in the same file, not under the named heading itself. I judged that no rule is lost: the removed words described the target, and the placement rule is still in `graph-conventions.md`. I did not edit the target to repeat it.
