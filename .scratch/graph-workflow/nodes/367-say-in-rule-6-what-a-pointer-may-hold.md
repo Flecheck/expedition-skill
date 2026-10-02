@@ -1,8 +1,14 @@
 # Say in rule 6 what a pointer may hold
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+Rule 6 now says a pointer names the heading and, in one clause at most, what the reader goes there for, listing none of its items and stating none of its rules.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1` and its correction round. Run 1 passed with a question on rule 6's elided "is not"; the human chose the correction at the gate; run 2 passed, and the gate was taken under the standing yes. The work landed as commit `d0559a3`, after the landing rebase met the usual two-block conflict at the end of `map-history.md`, resolved by keeping both. The node raised no flags.
 
 ## Question
 
