@@ -1110,3 +1110,13 @@ That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **
 *Replaced, and it stood as:*
 
 6. **Point at a heading of another shipped file instead of restating what it holds, where the reader is already told to read that file.** Where the reader is not, restate what the reader needs when the file pointed at is mostly text that reader does not need, so the reader is not sent to read it. A passage that changes a rule for its own case names that rule by heading and states the change in its own words. Rename a heading that another shipped file cites only in the change that updates every citation of it, found by searching the shipped files for the heading's exact text.
+
+## Superseded from `map-manager-only.md` at node 80 — the asynchronous-landing item's seam and reject
+
+*Replaced under the `Change the map` procedure at [Update the map items that nodes 64 and 68 left stale](nodes/80-map-items-nodes-64-and-68-left-stale.md), whose condition node 366 replaced. The sentence described the flip to asynchronous landing against a landing policy with no worktree, where approval was one commit and a reject cleaned the working tree. What replaces it describes the flip against the four landing steps and the worktree removal that `## Landing an implementation node's work` now states. The rest of the item is unchanged and is not reproduced here.*
+
+### From `## Not yet specified` — the item beginning "When to flip landing to asynchronous"
+
+*Replaced, and it stood as:*
+
+The seam is one step — the manager committing before the gate rather than after — but one gate outcome does not survive it: **reject** becomes a forward revert rather than a cleaned tree, so the cheapest of the three becomes the most expensive and the only one that marks history.
