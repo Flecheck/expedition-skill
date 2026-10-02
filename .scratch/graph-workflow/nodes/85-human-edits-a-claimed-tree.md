@@ -110,3 +110,9 @@ RETROSPECTIVE (attempt so far):
 3. What would have made this easier: a link in the node from the event to node 76's Attempt 1, which shows that "keep it and raise it" was already tested once.
 4. What was stale, wrong or contradictory: the node quotes the older wording of the contract sentence ("every file you edit is inside it"). It also assumes a correction round that the manager starts only from the gate. Node 363 added correction rounds started by the manager on integration conflicts, which leaves this node unaffected.
 ```
+
+#### The human's answer to questions 1 and 2, 2026-10-02
+
+`verbatim`: *"ok"*
+
+The manager had put the questions with the line "Please answer Q1 and Q2. "ok for recommended" takes both." So the reply takes the worker's `RECOMMENDED` on both: the package (a) to (d) is accepted, and it goes into the shipped files.
