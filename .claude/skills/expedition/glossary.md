@@ -348,11 +348,7 @@ work is", rather than anything this workflow performs), kickoff, onboarding, boo
 
 **Adoption**:
 Starting an effort from a directory of work that already exists. It is a way of starting an effort,
-not a kind of node. It carries steps that starting from a conversation does not: taking the effort's
-name from the directory that already exists, resolving any reserved graph name the directory already
-uses for something else, deriving the map from the record the effort already wrote rather than from a
-conversation, declaring the label vocabulary from the foreign label families, and minting the bulk
-import as `precondition` nodes.
+not a kind of node.
 _Avoid_: migration (which names moving data, not taking on an effort), import (importing is one step
 inside adoption, not the act itself), onboarding, port
 
