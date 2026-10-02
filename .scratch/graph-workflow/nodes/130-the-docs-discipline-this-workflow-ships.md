@@ -1,7 +1,7 @@
 # The docs discipline this workflow ships instead of depending on one
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 
