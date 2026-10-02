@@ -1,7 +1,7 @@
 # Whether a checker may write scratch files outside the work
 
 Type: grilling
-Status: open
+Status: claimed
 
 ## Question
 
