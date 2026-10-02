@@ -159,6 +159,44 @@ RETROSPECTIVE:
 
 *The manager's note:* an unmet bar goes back to the worker, with the finding, in one correction round. The checker handed back no question.
 
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02, after correction round 1. The same checker, resumed within this node.*
+
+> PASS
+>
+> Node 276, "The landing policy says the work sits outside the repository". This is a re-check after one correction round on run 1's Finding 1. I re-ran the bar in full and re-checked every part. The changed paths are still only `.scratch/graph-workflow/map-manager-only.md` and `.scratch/graph-workflow/map-history.md`, and `git status --porcelain --ignored` (worktrees excluded) shows nothing else.
+>
+> What changed: I did not rely on the worker's statement. I re-derived the change with `git diff --word-diff=plain -- .scratch/graph-workflow/map-manager-only.md`. The only added text that differs from run 1 is the named sentence, which now reads: "The worktree being inside the repository, where [Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md) placed it, does not make its changes visible where the human is standing." The map-history diff is still 10 added lines and has no removed lines. I found no other change.
+>
+> Run 1 Finding 1 is cleared:
+> - (a) The new sentence no longer repeats the paragraph's first sentence ("inside the repository and ignored there"). It uses the location only as the subject of a different claim: that the location does not make the changes visible. The repeated "ignored there" is gone.
+> - (b) The sentence carries one idea.
+> - (c) The doubtful "so", which tied visibility to the ignore rule, is gone. The new claim is accurate.
+>
+> Each part of the condition, with how I established it (unwrapped substring searches over the section, from the heading to the next `## `):
+> 1. Met. "outside the repository" has one hit in the section, the historical "after a worktree outside the repository made a gate's diff invisible to them", which grounds no rule. "checkout outside" has no hits.
+> 2. Met. "**The gate payload names the worktree's path**" is present. "uncommitted, so it appears in no commit the human can read, and the path is how the work is found at all" is present.
+> 3. Met. `[Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md)` is present and resolves to an existing node file. As in run 1, the condition wrote the link target without `nodes/`. The work's path is the one that resolves from this file, and it is the same node.
+> 4. Met. The removed sentence, taken from `git show 343e0c604:` from "**The gate payload names the worktree's path**" through `git ?"*.`, appears byte-identically in the text appended to `map-history.md`. The old `map-history.md` is a byte-exact prefix of the new one, and the history diff has no `-` lines. This is graph-conventions check 11, both halves. The headings mirror the section ("### From *Landing an implementation node's work* — …"), following the node 234 entry. No struck-through text was involved.
+> 5. Met. "## Landing an implementation node's work" and "How the worktree is made" are both present. `.gitignore` lines 10 and 18 cite the latter.
+> 6. Met. Only the two named files are modified. `.gitignore`, `.claude/skills/`, `decisions.md`, `flags.md` and the node files are untouched.
+> 7. Met, see the bar below.
+>
+> Bar:
+> - The repo has no root CLAUDE.md or AGENTS.md. `map-implementation-rules.md` records no build, no tests, no formatter and no CI, so the command half of the bar is empty and I ran no commands.
+> - For the standards, I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md`. They are `/coding-principles`, `/naming`, the glossary `_Avoid_` lines, the ground rules, the six standing rules for writing, `graph-conventions.md`, and `/writing-for-agents`.
+> - These bore on this work: the writing rules (rules 1 and 5 are now met by the revised sentence, and rule 4 is met because citations are by heading or quoted phrase), `/writing-for-agents` (the duplication is removed), `graph-conventions.md` (`Change the map` and check 11 pass), and the glossary (no refused word is introduced).
+> - The coding principles and naming rules did not bear on this prose.
+> - The work moved no standard, and the standards name no reviewing skill.
+> - I read the changed record paths as the work under check, under the record-files rule in `map-implementation-rules.md`.
+>
+> The condition records no search command. I wrote no temporary files this round.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 2 outcome, `PASS`. No exclusion applies: run 2 handed back no question and no raise, and left no part of the condition uncovered. This settles none of the node's flags; they settle at the node closing report.
+
 ## Handover, attempt 1, correction round 1
 
 *The worker's own text, pasted, 2026-10-02.*
