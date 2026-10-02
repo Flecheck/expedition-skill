@@ -203,6 +203,63 @@ RETROSPECTIVE
 
 *The manager's note:* an unmet bar goes back to the worker, with both findings, in one correction round. The checker's two questions go to the human at the gate.
 
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02, after correction round 1. The same checker, resumed within this node.*
+
+> PASS
+>
+> This is the re-check of node 219 after one correction round. The contract, condition, worktree, bar and ground rules are the same as in run 1.
+>
+> How I worked:
+> - I read the changed paths as the work under check, under the rule in map-implementation-rules.md that lets an implementation node's work be the effort's own record.
+> - I read only the standards in .scratch/graph-workflow/map-implementation-rules.md. The work does not touch that file. Which standards bore on the work is unchanged from run 1: writing rules 2, 5 and 6, graph-conventions.md `## Writing the map`, glossary.md `**Labels**` / `_Avoid_`, and /writing-for-agents. The standards name no reviewing skill, and none was run.
+> - I re-ran the bar in full, re-checked every clause of the condition, and re-checked both run 1 findings. I did not rely on the worker's statement of what changed. I re-derived the whole diff against HEAD (37fb17c48), as a word-diff of both added and removed segments.
+> - The work still changes only the one bullet line in map-manager-only.md. map-history.md still shows the same 16 appended lines. Its modification time, 17:53:48, is earlier than map-manager-only.md's, 17:58:22. Its content checks below pass again.
+>
+> Run 1 findings, re-checked:
+> - Finding 1, bold on text that is not a term being defined: fixed. I diffed the list of `\*\*[^*]*\*\*` spans in the bullet at HEAD against the same list in the worktree. The worktree list equals the HEAD list minus three spans: "Two duties on the manager come with them", "on the second report of the same standing item it mints a node", and "The worker hands it back as text and the manager files it". No bold span is added, and every remaining bold is untouched pre-existing text.
+> - Finding 2, sentences carrying more than one idea: fixed. I read each sentence in the added segments (`git diff --word-diff=plain -- .scratch/graph-workflow/map-manager-only.md | grep -o '{+[^}]*+}'`). Each states one rule or fact. The three sentences named in run 1 are now split. One example is "It is written last in the file, so the mandatory section order is untouched. It is written under the heading `## Retrospective` and under no other heading."
+> - Something I did not count as a finding: in "The worker hands it back as text.", the pronoun "it" points back to a retrospective named far earlier in the bullet. That wording is unchanged from HEAD and was not written by this work.
+>
+> Each part of the condition, and how I established it:
+> - Scope and clause 4: `git status --porcelain --untracked-files=all` shows only map-history.md and map-manager-only.md modified, nothing untracked, and nothing under `.claude/`.
+> - Clause 1, location: the bullet is still under `## Notes` of map-manager-only.md. It sits between `## Notes` and `## Landing an implementation node's work` (`grep -n '^## '`).
+> - 1(a), the worker names the item, found in the added segments:
+>   - "the worker gives that item a short name"
+>   - "reuses a name … where one fits" and "mints a new name where none fits"
+>   - "states how many earlier retrospectives carry that name, and lists their node ids"
+>   - "searching the retrospective sections of the files under `.scratch/graph-workflow/nodes/` … and not from memory or from any list held elsewhere"
+>   - "under any of the four questions", so it is a duty covering all four and adds no fifth question.
+> - 1(b), the word is "name": `grep -ci label` on the bullet returns 0.
+> - 1(c), a count ranks and mints nothing, found in the added segments:
+>   - "A repeated standing item is not minted as a node on reaching any count."
+>   - "the manager ranks each named standing item among what it picks next by that name's count"
+>   - "Repetition therefore orders work rather than triggering it."
+>   - The disposal duty is stated, followed by "That duty is unchanged."
+>   - The contradicting mint-on-second-report wording is in the removed segments (`grep -o '\[-[^]]*-\]'`).
+> - 1(d), filing is part of resolving, found in the added segments:
+>   - "The manager writes it into the node file in the same edit that writes that node's answer, its flags and its line in `decisions.md`, rather than as a later separate act."
+>   - "It is written last in the file, so the mandatory section order is untouched."
+>   - "It is written under the heading `## Retrospective` and under no other heading."
+>   - The old "files it in a section of its own …" wording is removed.
+> - Clause 2, the replaced wording moved verbatim:
+>   - I extracted both replaced sentences from the HEAD bullet with `grep -o`. `grep -cxF` finds each exactly once as a whole line in map-history.md, returning 1 and 1.
+>   - `git diff -- map-history.md | grep -c '^-[^-]'` returns 0, so the change only appends.
+>   - The replaced text held no struck-through text.
+> - Clause 3, the human's words untouched: the quote "Could you, for this effort only …" and the span from "(1) what did you have to hunt" through "(4) … contradicted something else." are byte-identical between HEAD and the worktree (`cmp` on `grep -o` extracts).
+> - Clause 5, the bar: see below.
+>
+> The bar:
+> - The repo has no build, tests, formatter or CI, so the bar is the standards half alone.
+> - `git diff --check` printed nothing, so it is clean.
+> - Against the standards: there is no new bold, each new sentence carries one idea, and no glossary `_Avoid_` word is used for its refused concept.
+> - The bullet is far over graph-conventions.md's 500-byte target. That file says no check treats a breach as a defect, so it is not a finding.
+>
+> As instructed, I am not repeating the two run 1 questions. Temporary files were made in a mktemp directory and removed.
+
+*The manager's note:* run 1's two questions beside its outcome are still open, so the standing yes does not cover this gate; it goes to the human.
+
 ## Handover, attempt 1, correction round 1
 
 *The worker's own text, pasted, 2026-10-02.*
