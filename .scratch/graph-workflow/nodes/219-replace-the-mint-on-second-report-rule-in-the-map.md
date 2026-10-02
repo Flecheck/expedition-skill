@@ -135,6 +135,74 @@ RETROSPECTIVE
 4. What was stale, wrong or contradictory: the node's question and clause 1 describe the bullet as saying the retrospective is "filed as an annotation after the node resolves". The bullet had already been reworded after node 340 to "a section of its own headed `## Retrospective`". It also never stated that the worker names no item. The condition's paths named map.md, which node 345 made stale; the amendment fixed that.
 ````
 
+## Review
+
+### Checker run 1 — `FAIL` (the bar)
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition and its amendment reached it as a verbatim copy in `$TMPDIR/c219.md`.*
+
+> FAIL: the bar
+>
+> The acceptance condition is met, read under the amendment as given. The bar fails only on this effort's standing rule for writing number 5. Findings are below, then how the condition was established, then the questions.
+>
+> How I worked:
+> - I read the changed paths as the work under check, under the rule in map-implementation-rules.md that lets an implementation node's work be the effort's own record. I drew no statement of intent from them.
+> - I read only the standards in .scratch/graph-workflow/map-implementation-rules.md. The work does not touch that file (`git diff --quiet` on it).
+> - The standards are: /coding-principles, /naming, glossary.md's `_Avoid_` lines, the ground rules and the six writing rules (given in the spawn), graph-conventions.md, and /writing-for-agents (read from the mattpocock-skills plugin in the nix store).
+> - The ones that bore on this work: writing rules 2, 5 and 6, graph-conventions.md `## Writing the map` (verbatim move to map-history.md, heading mirroring the section, the 500-byte target), glossary `**Labels**` / `_Avoid_`, and /writing-for-agents on duplication and negation.
+> - The standards name no reviewing skill, so none was run.
+>
+> ### Finding 1: bold on text that is not a term being defined (writing rule 5, "Bold a term only where it is defined")
+> - Instances, in the retrospective bullet of map-manager-only.md `## Notes`:
+>   - `**The worker names each standing item it reports.**` is newly added.
+>   - `**Two duties on the manager come with the four questions**` was rewritten by this work.
+>   - `**The worker hands it back as text, and the manager writes it into the node file in the same edit that writes that node's answer, its flags and its line in `decisions.md`**` was rewritten by this work and is now a bolded clause of about 30 words.
+>   - None of them defines a term.
+>   - Found by diffing the list of `\*\*[^*]*\*\*` spans in the bullet at HEAD against the same list in the worktree.
+> - Form: a `**...**` span in text this work added or rewrote that does not mark a term at the place it is defined.
+> - Extent: `git -C <worktree> diff --word-diff=plain -- .scratch/graph-workflow/map-manager-only.md | grep -o '{+[^}]*+}' | grep -o '\*\*[^*]*'`. Its hits, together with the two rewritten spans whose `**` markers sit outside the added segments, are all the instances. Bold spans the work did not touch are pre-existing and not part of this finding.
+>
+> ### Finding 2: sentences carrying more than one idea, or with a strained construction (writing rule 5, "Put one idea in each sentence", "Write every sentence grammatically")
+> - Instances, in text this work wrote in the same bullet:
+>   - "It is written last in the file, so the mandatory section order is untouched, and under the heading `## Retrospective` and under no other heading." This holds two ideas (where it goes, which heading), and "and under the heading" hangs off "is written" across the "so" clause.
+>   - "The manager disposes of each item naming the record in the report that closes that node, by acting on it, minting a node, or saying why not, and that duty is unchanged." This holds two ideas.
+>   - "A repeated standing item is not minted as a node on reaching any count, so repetition orders work rather than triggering it." This holds two ideas.
+> - Clause 1 dictates the content of these sentences but not how they are split, so the split was the worker's choice.
+> - Form: a sentence in text this work added that states more than one rule or fact.
+> - Extent: no command can decide "one idea". The smallest containing set is the added segments listed by `git -C <worktree> diff --word-diff=plain -- .scratch/graph-workflow/map-manager-only.md | grep -o '{+[^}]*+}'`, which come to about 10 sentences. The instances above are not exhaustive.
+>
+> ### Acceptance condition (each part met)
+> - Scope and clause 4: `git status --porcelain --untracked-files=all` shows only the two modified files and nothing untracked. Nothing under `.claude/` changed.
+> - Clause 1 location: the bullet sits at line 80 of map-manager-only.md, between `## Notes` (line 15) and the next heading (line 99), found by `grep -n '^## '`.
+> - 1(a): the added segment states all of the following, found by word-diff over added segments:
+>   - "the worker gives that item a short name"
+>   - reuse "where one fits", and mint "where none does"
+>   - "states how many earlier retrospectives carry that name, and lists their node ids"
+>   - "searching the retrospective sections of the files under `.scratch/graph-workflow/nodes/` … and not from memory or from any list held elsewhere"
+>   - "under any of the four questions", which makes it a duty covering all four with no fifth question
+> - 1(b): `grep -ci label` on the bullet returns 0.
+> - 1(c): the bullet states "A repeated standing item is not minted as a node on reaching any count", "ranks each named standing item among what it picks next by that name's count", "repetition orders work rather than triggering it", and the disposal duty "is unchanged". The removed segments, `grep -o '\[-[^]]*-\]'` on the word-diff, include "on the second report of the same … mints … node".
+> - 1(d): the bullet states that the manager "writes it into the node file in the same edit that writes that node's answer, its flags and its line in `decisions.md`, rather than as a later separate act", that "It is written last in the file, so the mandatory section order is untouched", and that it goes "under the heading `## Retrospective` and under no other heading". The old "files it in a section of its own …" was removed.
+> - Clause 2 (verbatim move):
+>   - I extracted both replaced sentences from the HEAD bullet with `grep -o`. Each is found exactly once as a whole line in map-history.md (`grep -cxF` returns 1 and 1).
+>   - The replaced text held no struck-through text.
+>   - `git diff -- map-history.md | grep -c '^-[^-]'` returns 0, so the change only appends at the end of the file.
+>   - The headings name `map-manager-only.md`'s `## Notes` (see question 1).
+> - Clause 3: the human's quote ("Could you, for this effort only …") and the span from "(1) what did you have to hunt" through "(4) … contradicted something else." are byte-identical between HEAD and the worktree (`cmp` on `grep -o` extracts).
+> - Clause 5: this is the bar, reported above.
+> - The condition records no search command, so there was none to re-run.
+>
+> ### Bar
+> - The repo has no build, tests, formatter or CI (no manifest, no agent-instruction file at the root, as the rules file states). So the bar is its non-command half: the standards listed above.
+> - `git diff --check` is clean, and map-history.md ends with a newline.
+> - The bullet is far over the 500-byte target in graph-conventions.md, but that file says no check treats a breach as a defect, so it is not a finding.
+>
+> QUESTIONS:
+> - The amendment moves only clauses 1 and 4 to map-manager-only.md. The preamble ("The work is edits to two files, `map.md` and `map-history.md`. Nothing else changes.") and clause 2 ("a heading naming the section of `map.md`") still name map.md. I read them under the amendment's evident scope: the work edited map-manager-only.md and named it in the map-history.md headings. Read word for word, the preamble forbids the very edit amended clause 1 requires. Should the amendment be widened to cover the preamble and clause 2?
+> - Clause 1(c) requires the bullet to say the disposal duty "is unchanged", and 1(d) requires "rather than as a later separate act". Both describe what the map used to say. graph-conventions.md `## Writing the map` keeps "what the file said before" out of a map item and sends it to map-history.md. The wording is the condition's own, so departing from it was not the worker's choice. Should these phrases stay in the bullet?
+
+*The manager's note:* an unmet bar goes back to the worker, with both findings, in one correction round. The checker's two questions go to the human at the gate.
+
 ## Flags
 
 `219.1` `ASSUMPTION` — *The worker's own text.* I rewrote the old filing sentence as well as the mint sentence, even though it did not strictly contradict clause 1(d). It said the manager "files it … placed last" but did not say when. I replaced it rather than adding a second sentence beside it, so the bullet states the filing once. Under clause 2, its old text went verbatim to map-history.md.
