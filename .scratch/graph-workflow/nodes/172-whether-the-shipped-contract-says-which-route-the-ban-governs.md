@@ -62,3 +62,9 @@ RETROSPECTIVE:
 3. What would have made this easier: being told that the ban appears in two places in the shipped file, and the location of this effort's map rule (which file and heading). I found it by searching for "record file".
 4. What was stale, wrong or contradictory: the node's `## Question` quotes sentences no longer in the shipped file ("The implementation-rules file is the single exception, and only for the standards in it"; "open no other file beside it"). Its stated blocker, node 164, is superseded; the manager's note already re-points it to node 334. The human's verbatim "relevant only for this project" sits in tension with the fact that the shipped implementation contract permits graph-file work in any repo. That tension is why I am asking this question.
 ```
+
+#### The human's answer to question 1, 2026-10-02
+
+`verbatim`: *"ok"*
+
+The manager had put the question with the line "Please answer node 172: "ok for recommended" adds to the checker contract "A path you were given as the work is the work wherever it sits, and you read it."; or name an alternative." So the reply takes the worker's `RECOMMENDED`: that one sentence ships in `.claude/skills/expedition-checker/SKILL.md` after "The one exception is `map-implementation-rules.md`, and only for the standards in it.", and the project-specific part stays in `map-implementation-rules.md`.
