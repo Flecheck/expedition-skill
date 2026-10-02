@@ -1,9 +1,15 @@
 # Say what a `## Review` entry records for a correction round the manager starts at integration
 
 Type: implementation
-Status: claimed
+Status: resolved
 Supersedes: 89
 Blocked by: none
+
+## Answer
+
+graph-conventions.md's `## Review` item 2 now records the conflicted files' paths for a manager-started integration round; SKILL.md cleans up a superseded unlanded implementation node in a reject's order.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `4bce1411`. Flag 89.1, carried here from node 89, settles at the node closing report. The worker reports that the glossary's Reject entry says "deletes its branch", a git-specific term outside this node's scope.
 
 ## Question
 
