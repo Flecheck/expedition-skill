@@ -1,7 +1,7 @@
 # Ship the human-edits-a-claimed-tree rule
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
