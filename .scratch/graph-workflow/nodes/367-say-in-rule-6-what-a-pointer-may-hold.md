@@ -136,3 +136,7 @@ RETROSPECTIVE:
 > My only writes were scratch files in `$TMPDIR` for the comparisons.
 
 *The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate; it goes to the human.
+
+#### The human's answer at the gate, 2026-10-02
+
+The manager put checker run 1's question to the human, recommending one correction: restore the elided words so the sentence reads "Where the reader is not told to read that file, restate what the reader needs…". The alternative offered was to approve as is. The human, `verbatim`: *"ok"*. The manager had said "ok for recommended" would mean that correction. So the gate's outcome is **correct**, and the node goes to correction round 1.
