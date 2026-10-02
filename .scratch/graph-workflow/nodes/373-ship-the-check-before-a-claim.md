@@ -50,6 +50,39 @@ RETROSPECTIVE:
 4. What was stale, wrong or contradictory: node 365's draft of "about 65 words" came out at about 75 words, so the label in its answer was low. Nothing else.
 ````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c373.md`.*
+
+> PASS
+>
+> Context. The work is one uncommitted path in worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/373-claim-check (HEAD 5c858081): .claude/skills/expedition/SKILL.md, with 6 added lines and 0 removed. I read the changed path as the work. I read only the standards in .scratch/graph-workflow/map-implementation-rules.md and opened no other file in the effort's directory. I did not read the node file.
+>
+> Parts of the acceptance condition:
+> 1. Placement. The diff has one hunk, under `### Changing one after it is written`. It inserts one paragraph directly after the paragraph that begins "Re-derive an enumerated scope before the node is claimed." and before "Every amendment, whoever wrote it, comes with five things." Established by `git -C <wt> diff` and `awk '/^### Changing one after it is written/,/^## /' SKILL.md`.
+> 2. The two acts before a claim. The added text, unwrapped (`git diff -U0 | grep '^+[^+]' | tr '\n' ' '`), reads: "Before you claim an implementation node, read everything written on its file after its acceptance condition: its annotations, its amendments and your own notes. Then search the working tree for each passage the condition quotes or names by heading." Both acts are present, in that order.
+> 3. When to amend or put the node to the human. The text says: "Where such a passage is gone, or an annotation or note says the condition is wrong, amend the condition under this section's rules or put the node to the human. Claim the node only once neither is true." This matches the part.
+> 4. No new route. The only routes named are "this section's rules" and the human. Established from the same unwrapped text.
+> 5. Length, plain English and terms. `wc -w` gives 77 words, so it is within 80. There are four sentences, each with one idea, and no figure of speech. "claim", "implementation node", "acceptance condition" and "annotation" are glossary terms or are defined in graph-conventions.md `### ## Annotation`. "amendments", "notes", "passage", "working tree" and "heading" are plain words. "put ... to the human" is phrasing used elsewhere in the shipped files. I checked the `_Avoid_` lines (`grep -n "_Avoid_" glossary.md`) by hand against the 77 words, and no refused word appears.
+> 6. Nothing else changed. `git status --porcelain --untracked-files=all` lists only SKILL.md. `git diff --stat` shows 1 file, 6 insertions, and the count of '-' lines is 0. So no heading was added, removed or renamed, no other paragraph changed, and no other file changed.
+> 7. The condition records no command, so there was nothing to re-run. The diff confirms the work adds one paragraph at the one place named.
+>
+> The bar. map-implementation-rules.md records that this repo has no build, no tests, no formatter and no CI. The worktree root holds only .claude, CONTEXT.md, CONTEXT-MAP.md, .gitignore and .scratch. There is no agent-instruction file and nothing to invoke, so I ran no commands. The bar is therefore its non-command half, all checked by hand:
+> - The ground rules and the six standing rules for writing hold. The text cites no line numbers, assumes no toolchain, has no agent address the human, and is plain English.
+> - The glossary `_Avoid_` lines hold, with no hits.
+> - graph-conventions.md holds. "annotations" uses that file's meaning.
+> - /writing-for-agents holds. The text is short, direct and in imperative form, and wraps at the width of the surrounding text.
+> - /coding-principles and /naming do not apply, since the work is prose only.
+> - The trigger-file rule (edit .claude/rules/expedition-triggers.md together with `## The order you act in` / `## What is in front of the human, and when`) does not apply. The paragraph sits under `## Acceptance conditions`, and the trigger file has no claim duty (`grep -i claim` returned nothing).
+>
+> The standards say no reviewing skill is named for this repo, so I ran none.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and left no part of the condition uncovered. This settles none of the node's flags; they settle at the node closing report.
+
 ## Flags
 
 `373.1` `ASSUMPTION` — *The worker's own text.* Clause 2 asks for "the manager's own notes". The glossary's **Manager note** means the manager's annotation on a relayed question, which is a narrower thing. I wrote "your own notes" as plain words for any note the manager wrote on the node, and did not use the glossary term.

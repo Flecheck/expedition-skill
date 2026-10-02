@@ -1,8 +1,14 @@
 # Cut the glossary entries that restate a shipped section's rule to their meaning
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+Nine glossary entries and Starting an effort are cut to their meaning. The glossary's opening says rules live in contract sections. Adoption is kept whole, because its named place omits `precondition`.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. Run 1 failed on clause 15 for the Node closing report entry; the human amended clause 15; run 2 passed, and the gate was taken under the standing yes. The work landed as commit `71ff1a24`. The node it surfaced is [node 374](374-cut-the-glossarys-adoption-entry.md). Flags 370.1, 370.2 settle at the node closing report.
 
 ## Question
 
@@ -221,6 +227,8 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`370.1` `ASSUMPTION` — *The worker's own text.* For the Scribe entry, I read "join them into one continuous text" as stated by `### You write as a scribe`, whose list of what assembling is includes "placing runs one after another". Placing pieces one after another is joining them into one continuous text. So the sentence was removed under clause 4 rather than kept under clause 15. If the human reads it as a broader permission than the section's, the fix is to restore that one sentence to the Scribe entry.
+`370.1` `ASSUMPTION` **· settled** — *The worker's own text.* For the Scribe entry, I read "join them into one continuous text" as stated by `### You write as a scribe`, whose list of what assembling is includes "placing runs one after another". Placing pieces one after another is joining them into one continuous text. So the sentence was removed under clause 4 rather than kept under clause 15. If the human reads it as a broader permission than the section's, the fix is to restore that one sentence to the Scribe entry.
 
-`370.2` `ASSUMPTION` — *The worker's own text.* For the Adoption entry, I held clause 15 to the place it names, `## Your steps, in order` in `adoption.md`. That place does not state the `precondition` kind of the import nodes, or that starting from a conversation lacks these steps. So the whole sentence stays, clause 8 is not applied, and the residue is proposed as a new node. The kind is stated elsewhere in the same file, so no rule would have been lost by cutting it. Holding to the place named was the reading the condition's own fallback sentence asks for.
+`370.2` `ASSUMPTION` **· settled** — *The worker's own text.* For the Adoption entry, I held clause 15 to the place it names, `## Your steps, in order` in `adoption.md`. That place does not state the `precondition` kind of the import nodes, or that starting from a conversation lacks these steps. So the whole sentence stays, clause 8 is not applied, and the residue is proposed as a new node. The kind is stated elsewhere in the same file, so no rule would have been lost by cutting it. Holding to the place named was the reading the condition's own fallback sentence asks for.
+
+*The manager's note, 2026-10-02:* flags 370.1, 370.2 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
