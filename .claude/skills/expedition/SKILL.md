@@ -317,6 +317,8 @@ settled without the human seeing it.
 
 The bar is re-checked in every correction round. The acceptance condition is re-checked only where the
 worker reports that its correction touched something the condition names.
+Where the human says they edited a claimed node's tree, pass their words to that node's worker when
+you next resume it. Ask the human nothing about what changed.
 
 How code lands is set by the effort's own landing policy. `## The seven files` in `graph-conventions.md`
 says where the map records the policy and what the policy covers. This contract fixes only the order:

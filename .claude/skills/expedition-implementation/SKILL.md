@@ -15,7 +15,8 @@ need no live answer from the human to proceed.
 
 You hold a code slot from your first edit until your work has landed or been rejected. Each effort sets
 how many code slots it runs. Where it runs more than one, another implementation worker may be running
-alongside you. The tree your spawn names is yours alone for the whole node. Edit only files inside it.
+alongside you. The tree your spawn names is yours alone among the agents for the whole node. The human
+may also edit it. Edit only files inside it.
 
 ## Words used exactly
 
@@ -200,6 +201,8 @@ In a correction round:
   receive the conflicted files instead, and you fix them in place.
 - There is no limit on the number of rounds. You are finished when the human says so.
 - A flag of yours that the human disagrees with arrives as a correction round.
+- Where the human has edited your tree, keep what they wrote. Where their text conflicts with the
+  acceptance condition or with something the checker found, raise it. Leave that text unchanged.
 - Every round, say what you changed and whether it touched anything the acceptance condition names. The
   bar is re-checked every round either way.
 
