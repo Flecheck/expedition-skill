@@ -48,3 +48,87 @@ Can each glossary entry in the nine pairs node 355 found be cut to its meaning a
 > 16. No glossary entry is added, removed, renamed or reordered, and no `_Avoid_` line changes. No heading in any file under `.claude/skills/` is added, removed or renamed. `.claude/skills/expedition/SKILL.md` changes only as clause 14 says.
 
 *The worker's note for the manager, pasted:* "node 363 edits `glossary.md`'s **Correction round** entry, and node 368 edits pointer paragraphs in `SKILL.md`. Neither touches the entries or the bullet named here, but they share files, so check before you fill a second code slot. The condition uses a quoted opening phrase rather than a line number throughout."
+
+## Handover, attempt 1
+
+*The worker's own text, pasted, 2026-10-02.*
+
+````
+HANDOVER:      Cut the glossary entries that restate a shipped section's rule to their meaning
+
+ANSWER:        The glossary's opening paragraph now says, directly after "A term is added only once a node has settled it.", "An entry says what the term means; a rule about the term is stated in the contract section that acts on it, and not here." Clauses 2 to 7 and 9 to 13 of the condition are applied word for word. Attempt, Handover, Scribe, Closed, Effort closing report, Node closing report, Flag, Stop and Final stop are cut to the exact text the condition gives. Starting an effort loses "The manager performs it, and it happens before the graph exists." and keeps the rest of its text, rewrapped only. Destination loses its last sentence. In `.claude/skills/expedition/SKILL.md`, under `## Words used exactly`, the dead-attempt bullet now reads "- A replacement is a new attempt, recorded after the one it replaces." The handover bullet is unchanged.
+
+**Adoption is not cut. Clause 15 kept it.** The sentence clause 8 would remove ("It carries steps that starting from a conversation does not: ... and minting the bulk import as `precondition` nodes.") states the node kind `precondition`. The place clause 15 names for it, `## Your steps, in order` in `adoption.md`, does not state that kind. Step 7 says only "Mint the import nodes" and points at `## The bulk import`. The kind is stated elsewhere in `adoption.md`: in its opening paragraph ("Their kind is `precondition`") and in `## The bulk import`. That place also never says that starting from a conversation lacks these steps. So, as clause 15 directs, the Adoption entry is left whole and reported here. A NEW NODES block below proposes the cut.
+
+How each other removed sentence was matched against its named place, under clause 15:
+- Attempt, and the clause 14 bullet: `## When an agent dies or is stopped` says "Resume its attempt wherever you can resume it, rather than replacing it. Replacement is the fallback ... an attempt whose agent was stopped from the human's side is never replaced without the human's answer."
+- Handover: the seven parts and the eighth are in the handover bullet. "The manager files it unaltered" is in `### You write as a scribe` ("Paste each part ... as the agent wrote it").
+- Scribe: never re-author/shorten/re-order/re-render, your own words beside it as a marked note, and no gloss are all stated in `### You write as a scribe`. "join them into one continuous text" was read as the same thing as the section's "placing runs one after another" (see the flag).
+- Closed: `## Closing an effort` says "Only the human closes an effort. Report that the conditions hold, and nothing more. A frontier that never empties is a legitimate steady state." That last sentence, unqualified, covers the narrower glossary sentence.
+- Effort closing report: `## Closing an effort` holds the "covers only what the human has not already seen" sentence and the five carried items.
+- Starting an effort: `## Starting an effort` has "You perform it, and it happens before the graph exists."
+- Node closing report: `### Picking the next node` names the closed node and the node started, says the report awaits no answer and takes no place in the queue, and says it carries every flag. "because those flags settle there" is a reason, and `## Flags` states it as a rule.
+- Flag: `## Flags` gives the gate, or else the node closing report, as the moment flags settle, and gives the one case in which flags reach the effort closing report.
+- Stop and Final stop: `## Stopping a running worker` holds every removed sentence. It says the manager performs every stop with `TaskStop` at the human's word, that a stopped worker can be resumed within the session, and how a stop from the human's side differs, including revival by typing. It says a message is not a stop, being received late and possibly declined. Its step 5 says the attempt is recorded as not to be resumed and that no manager resumes it. Its statement that both stops can be revived covers "no stop from either side removes a worker for good".
+- Destination: the `## Destination` bullet in `graph-conventions.md` says "Where the effort is not expected to, this line is where a manager reads that a non-empty frontier is that effort's steady state rather than a defect."
+
+Clause 16 was checked by diffing the old and new files: the bold term lines, the `_Avoid_` lines and the headings of `glossary.md` are unchanged, and the headings of `SKILL.md` are unchanged.
+
+Other glossary entries that state a rule a shipped section also states, reported and not edited, under the condition's scope sentence. These were spotted while reading and only spot-checked, not verified exhaustively:
+- Checker: "The manager starts it, and the worker never does, because whoever spawns it chooses what it sees" is also in `## The checker` in `SKILL.md`.
+- Gate: "does not render the diff into the conversation" is also in `### The payload`.
+- Manager: "never answers one on the human's behalf" is also in `## What is never yours`.
+- Acceptance condition: the raise and `CONDITION-WRONG` sentences are also in the implementation contract's `## The acceptance condition` and `## What you hand back`. Not checked against SKILL.md.
+- Reject: the worktree removal, branch deletion and keep-by-commit sentences may also be stated in `graph-conventions.md`. Not checked.
+- Code slot: occupancy is counted from live worktrees. Not checked against a section.
+
+INDEX LINE:    Nine glossary entries and Starting an effort are cut to their meaning. The glossary's opening says rules live in contract sections. Adoption is kept whole, because its named place omits `precondition`.
+
+FLAGS:         ASSUMPTION: For the Scribe entry, I read "join them into one continuous text" as stated by `### You write as a scribe`, whose list of what assembling is includes "placing runs one after another". Placing pieces one after another is joining them into one continuous text. So the sentence was removed under clause 4 rather than kept under clause 15. If the human reads it as a broader permission than the section's, the fix is to restore that one sentence to the Scribe entry.
+Index: Node 370 read the Scribe entry's "join them into one continuous text" as the same thing as "placing runs one after another" in `### You write as a scribe`, and cut it.
+ASSUMPTION: For the Adoption entry, I held clause 15 to the place it names, `## Your steps, in order` in `adoption.md`. That place does not state the `precondition` kind of the import nodes, or that starting from a conversation lacks these steps. So the whole sentence stays, clause 8 is not applied, and the residue is proposed as a new node. The kind is stated elsewhere in the same file, so no rule would have been lost by cutting it. Holding to the place named was the reading the condition's own fallback sentence asks for.
+Index: Node 370 kept the glossary's whole Adoption sentence, because `## Your steps, in order` in `adoption.md` does not state that import nodes are `precondition` nodes.
+
+NEW NODES:     Name: Cut the glossary's Adoption entry to its meaning
+Kind: implementation
+Question: Can the glossary's **Adoption** entry lose its sentence listing adoption's steps, now that `adoption.md` states those steps and the kind of the import nodes?
+Blockers: none
+Acceptance condition:
+> The work is `.claude/skills/expedition/glossary.md`, and no other file may be edited. Scope: no search produced it. The one place named is the work itself, not an instance of a defect.
+> 1. In `.claude/skills/expedition/glossary.md`, the text between the line `**Adoption**:` and its `_Avoid_` line is exactly: "Starting an effort from a directory of work that already exists. It is a way of starting an effort, not a kind of node." The bold term line and the `_Avoid_` line stay word for word.
+> 2. No rule is lost. Every part of the removed sentence ("It carries steps that starting from a conversation does not: taking the effort's name from the directory that already exists, resolving any reserved graph name the directory already uses for something else, deriving the map from the record the effort already wrote rather than from a conversation, declaring the label vocabulary from the foreign label families, and minting the bulk import as `precondition` nodes.") is stated in `.claude/skills/expedition/adoption.md`, read as a whole: its opening paragraphs, `## Your steps, in order` and `## The bulk import`. Where a part is stated nowhere in that file, the sentence stays and the worker reports it.
+> 3. No other glossary entry, `_Avoid_` line or heading in any file under `.claude/skills/` changes.
+
+INVALIDATIONS: Node 360 is narrowed in application. Its answer is that the section keeps the rule and the entry keeps the meaning, and the glossary's opening now says so. That answer is applied to every pair except Adoption, which keeps its rule sentence until the new node above lands. Nothing it says is contradicted.
+
+CONDITIONS:    I searched the open nodes' `## Question` and `## Acceptance condition` sections for: glossary; the headwords Attempt, Handover, Scribe, Closed, Effort closing report, Node closing report, Starting an effort, Adoption, Flag, Stop, Final stop and Destination; "dead attempt"; "seven parts"; and the new opening sentence. Node 317 (open, unclaimed, no condition yet) has a changed question. Its manager's note says its work "keeps `CONTEXT.md`'s `**Flag**:` entry in line with whatever it decides". The glossary's Flag entry no longer states when a flag reaches the effort closing report. That part of node 317's work is now unnecessary, and only `## Flags` and `## Closing an effort` in `SKILL.md` remain to reconcile. No other open node's condition or question matched in a way this work makes wrong. I wrote no replacement clauses.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:  Checker findings: none yet, because no check has run.
+Paths touched: `.claude/skills/expedition/glossary.md` and `.claude/skills/expedition/SKILL.md`. Worktree: /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/370-glossary
+Bar: the repo has no manifest, build, tests, formatter or CI, which agrees with `map-implementation-rules.md`. So the bar is its non-command half. The edited lines keep the file's wrap width, with no line over 105 characters.
+Proposed commit message:
+Cut glossary entries that restate a contract section's rule
+
+The glossary's opening now says that an entry states meaning, and that rules live in
+the contract section that acts on the term. Attempt, Handover, Scribe, Closed,
+Effort closing report, Node closing report, Flag, Stop, Final stop, Destination and
+Starting an effort drop the sentences their sections already state. The manager
+contract's dead-attempt bullet keeps only the replacement sentence. Adoption is kept
+whole, because the steps section it points at does not name the import nodes' kind.
+
+Node: graph-workflow/370
+
+RETROSPECTIVE:
+1. What I had to hunt for: where `adoption.md` states the `precondition` kind. It is in the file's opening and in `## The bulk import`, not in the section clause 15 names. Also the exact wording of each named section, which meant reading the whole of the 818-line `SKILL.md`.
+2. What arrived that this node did not need: most of `map.md` (worktree history, the v2 model note, the never-delete account) and most of `map-implementation-rules.md` (the trigger-file rule, the record-as-work rule). The `.claude/rules/expedition-triggers.md` auto-load was not needed either.
+3. What would have made this easier: if the condition named every place a removed sentence is stated, for example "adoption.md as a whole" for Adoption, the clause 15 judgement would have been mechanical. A section-scoped read list would also have helped, since only about 8 sections of `SKILL.md` mattered.
+4. What was stale, wrong or contradictory: clause 15's named place for Adoption is too narrow to hold the rule clause 8 removes, so clauses 8 and 15 cannot both be fully met. Clause 15's own fallback settles the conflict. Node 317's note still refers to `CONTEXT.md`'s Flag entry, which now lives in `glossary.md`.
+````
+
+## Flags
+
+`370.1` `ASSUMPTION` — *The worker's own text.* For the Scribe entry, I read "join them into one continuous text" as stated by `### You write as a scribe`, whose list of what assembling is includes "placing runs one after another". Placing pieces one after another is joining them into one continuous text. So the sentence was removed under clause 4 rather than kept under clause 15. If the human reads it as a broader permission than the section's, the fix is to restore that one sentence to the Scribe entry.
+
+`370.2` `ASSUMPTION` — *The worker's own text.* For the Adoption entry, I held clause 15 to the place it names, `## Your steps, in order` in `adoption.md`. That place does not state the `precondition` kind of the import nodes, or that starting from a conversation lacks these steps. So the whole sentence stays, clause 8 is not applied, and the residue is proposed as a new node. The kind is stated elsewhere in the same file, so no rule would have been lost by cutting it. Holding to the place named was the reading the condition's own fallback sentence asks for.
