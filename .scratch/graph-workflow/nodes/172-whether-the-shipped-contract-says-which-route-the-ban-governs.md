@@ -1,7 +1,7 @@
 # Whether the shipped checker contract says which route "open no other file beside it" governs
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: 334
 
