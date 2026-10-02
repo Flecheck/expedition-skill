@@ -1,7 +1,13 @@
 # What an implementer does with a checker finding it believes is false
 
 Type: grilling
-Status: claimed
+Status: resolved
+
+## Answer
+
+A worker leaves a checker finding it believes false unfixed and gives its reason in GATE PAYLOAD. The human settles it at the gate. This ships in the implementation and manager contracts.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The human took both recommendations. The node it surfaced is [node 375](375-ship-the-disputed-finding-route.md). Flags 34.1 settle at the node closing report.
 
 ## Question
 
@@ -149,3 +155,66 @@ ALTERNATIVES:  - This effort's map only: the next effort starts with the gap bac
 `verbatim`: *"ok"*
 
 The manager had put the questions with the line "Please answer node 34's Q1 and Q2: a disputed finding is left unfixed with the reason in the gate payload, and that ships in the contracts. "ok for recommended" takes both." So the reply takes the worker's `RECOMMENDED` on both: the worker leaves a finding it believes false unfixed and says why in `GATE PAYLOAD`, the human settles it at the gate, and the change ships as the worker's edits (a) to (c) in the shipped contracts.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      What an implementer does with a checker finding it believes is false
+
+ANSWER:        ## Answer
+
+**A worker that believes a checker finding is false leaves it unfixed and says why in its `GATE PAYLOAD`. The human settles the dispute at the gate. A finding the human upholds comes back as a correction round. This ships in the contracts.** The human's reply was "ok" to the manager's line "Please answer node 34's Q1 and Q2: a disputed finding is left unfixed with the reason in the gate payload, and that ships in the contracts. "ok for recommended" takes both." That takes Q1 and Q2 as recommended.
+
+**Why this route.** The shipped files already had every other piece. The manager contract names the human as the only referee: "deciding between a worker and its checker | put that disagreement to the human, who alone settles it". Its `## The gate` lets a gate be raised on a tree whose check will not pass. Its `### The payload` already carries the worker's own words for each finding. The only missing piece was the worker being allowed to leave a finding unfixed. The worker's dispute reaches the human as part of a gate they review anyway. It arrives as a decision rather than a footnote, which is why the flag route stays closed. It needs no raise mid-node and does not hold the code slot longer. It also removes the harm the question named, a fix nobody wanted shipping quietly.
+
+**What is set aside.** Changing nothing would leave the checker contract's hard rule 2 ("A property nobody stated is not a finding") as the only protection, and a worker would still edit code that is not broken. A fourth raise trigger costs a mid-node stop for a decision the gate shows anyway. A rebuttal to the checker would make the checker judge its own finding, and the checker contract would need new text. A flag does not block.
+
+**The symmetry with node 31.** Each end of the check loop disagrees inside its own report, and the manager carries both reports to the gate. The checker does it as "your outcome, and a question". The worker does it with the reason it left a finding unfixed. No new channel is needed and the checker contract is unchanged.
+
+**Size.** About two lines are added to the implementation contract and four removed from the manager contract (item 3 of `## What nothing here settles`, which this answer settles).
+
+**After a dispute, the checker still runs again** on the other fixes. Its repeated FAIL on the disputed finding is the "check that will not pass" case the manager contract already covers.
+
+INDEX LINE:    A worker leaves a checker finding it believes false unfixed and gives its reason in GATE PAYLOAD. The human settles it at the gate. This ships in the implementation and manager contracts.
+
+FLAGS:         ASSUMPTION: The checker contract is not changed. After a dispute the checker runs again as usual, and its repeated FAIL on the disputed finding is the "check that will not pass" case the manager contract already covers, so the gate is raised on the failing tree. I settled this myself because the shipped gate rule already covers it, and a separate rule for disputed findings would only add text.
+               Index: Node 34 assumed a disputed finding needs no checker-contract change, since the checker's repeated FAIL is the existing failing-tree gate case.
+
+NEW NODES:     Name: Ship the disputed-finding route into the implementation and manager contracts
+               Kind: implementation
+               Question: Carry node 34's answer into the shipped files.
+               Blockers: none
+               Acceptance condition:
+               1. In `.claude/skills/expedition-implementation/SKILL.md`, under `## After the code is written`, the diagram line `    → the checker checks it → you fix everything it found → the checker runs again` reads `    → the checker checks it → you fix what it found → the checker runs again`. No other line of the diagram changes.
+               2. In the same section, the sentence "Fix all of it before the gate." is replaced by text saying all of the following, in plain English: fix everything the checker found before the gate, except a finding you believe is false; leave that finding unfixed and say in `GATE PAYLOAD` why you believe it is false; the human settles it at the gate; a finding the human upholds arrives as a correction round.
+               3. In the same section, the sentence "Never leave the finding unfixed at the gate on your own authority." is replaced by a sentence saying that no other finding is left unfixed on the worker's own authority. The paragraph about a fix that would be a new piece of work, raised under trigger 1, otherwise stays as it is.
+               4. In the same file, under `## What you hand back`, the `GATE PAYLOAD` part of the handover shape starts `<for each thing the checker found, what you changed, or why you left it unfixed;` and the rest of that part is unchanged.
+               5. In `.claude/skills/expedition/SKILL.md`, under `### The payload`, the bullet "What the worker changed for each thing the checker found, in the worker's own words." reads "What the worker changed for each thing the checker found, or why it left it unfixed, in the worker's own words."
+               6. In `.claude/skills/expedition/SKILL.md`, under `## What nothing here settles`, the numbered item that begins "What does a worker do with a finding it believes is false?" is removed. The items after it are renumbered so the list is numbered consecutively from 1. No other item's text changes.
+               7. `.claude/skills/expedition-checker/SKILL.md` and `.claude/skills/expedition/glossary.md` are not changed by this work.
+               8. Scope: no search was run to find these places. They are the work itself, not instances of a defect. A search of `.claude/skills` for the phrases "Fix all of it", "fix everything it found" and "for each thing the checker found" returned only the lines named above (2026-10-02). If the checker or worker finds another place outside this list that needs the same change, it reports that place and does not edit it.
+
+INVALIDATIONS: Node 28 (Whether a spawn may override a shipped worker contract) is extended. Its close raised this question and this node answers it. Nothing node 28 says is contradicted.
+               Node 20 (Human review of landed code): its outstanding flag says "a checker that will not pass still reaches the gate, qualifying the human's statement that its findings are fixed first". This answer adds a second, deliberate case where findings reach the gate unfixed: a finding the worker disputes. That narrows "its findings are fixed first" further. It does not settle node 20's flag.
+               Node 31 (What the checker contract owes to having been run), item 2: this answer gives the worker the same pattern the checker already has, disagreeing inside its own report to the gate. Node 31 is unchanged.
+
+CONDITIONS:    In every open node, claimed or not, I searched `## Acceptance condition` and `## Question` sections for "for each thing the checker found", "fix all of it", "fix everything it found", "What nothing here settles", "believes is false", "believe is false", "unfixed", "After the code is written", "### The payload" and "GATE PAYLOAD". I also searched the open nodes' conditions for the path `.claude/skills/expedition-implementation/SKILL.md`. Only node 41 (Ship the FRICTION flag and the self-edit disclosure duty) matched the path. Its concern is the FRICTION flag, so the defect is not joined to it, and its clause that leaves `expedition-checker/SKILL.md` unchanged does not conflict with clause 7 above. The "gate payload" matches in nodes 30 and 276 concern other parts of the payload, so they are unaffected. No clause needs a replacement, and this work changes no open node's question.
+
+MISSING FROM MAP: none
+
+Skipped: no method skill was invoked, so nothing was skipped.
+
+RETROSPECTIVE
+1. What I had to hunt for: whether the manager contract already had a referee and a gate for a check that will not pass. Both were there (the "deciding between a worker and its checker" row, and `## The gate`), plus item 3 of `## What nothing here settles`. These were the deciding facts, and none of them was in the node file or the spawn's read list. The manager's note pointed me there.
+2. What arrived that this node did not need: the decisions.md lines for nodes 160, 162 and 363 (integration conflicts). The only relevant fact from them was the new diagram line, and I read that from the shipped file anyway. Most of map.md was also not needed.
+3. What would have made this easier: a node question that quoted the shipped text by heading, and that named the manager contract's existing referee row and failing-tree gate exception. Most of the question body argued a gap that had already half-closed.
+4. What was stale, wrong or contradictory: the node's "What is shipped today" cites line numbers (136-152, 158), which have drifted to 175-200, and the map's writing rule 4 forbids citing by line number. It quotes the old approve line that node 363 replaced. Its quotations ("What reaches you is what it found, and you fix all of it before the gate"; "do not carry the finding past the gate unfixed") are not the current wording ("Fix all of it before the gate."; "Never leave the finding unfixed at the gate on your own authority."). Node 353's manager note cites `.claude/skills/expedition/SKILL.md:830`, which no longer exists; that file is now about 820 lines and the item sits near line 801.
+`````
+
+## Flags
+
+`34.1` `ASSUMPTION` **· settled** — Node 34 assumed a disputed finding needs no checker-contract change, since the checker's repeated FAIL is the existing failing-tree gate case. *(The worker's full text is under its handover's `FLAGS`.)*
+
+*The manager's note, 2026-10-02:* flags 34.1 settle at the node closing report that closes this node.
