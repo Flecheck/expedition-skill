@@ -43,3 +43,7 @@ Carry node 30's answer into the checker contract and the manager contract.
 > 11. The working tree meets the bar.
 >
 > Scope: the places named are the work, not instances of a defect. One search was run to find the count words a seventh given would make wrong: `grep -n -w -i 'six\|five' .claude/skills/expedition-checker/SKILL.md` returned two lines, "You are given six things. The spawn carries the first five, and you read the sixth for yourself from one" and "The six givens above are everything you are given.", which clauses 1 and 2 cover. A count word that this search reaches outside those two lines is reported, not edited.
+
+## Attempts
+
+*The manager's note, 2026-10-02:* attempt 1 was stopped by the manager seconds after its spawn, because the spawn was malformed: it went out without the acceptance condition's text. The worktree was still clean when it stopped. Attempt 2 is a fresh spawn in the same worktree.
