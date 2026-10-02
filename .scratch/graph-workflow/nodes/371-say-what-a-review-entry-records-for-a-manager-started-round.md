@@ -1,7 +1,7 @@
 # Say what a `## Review` entry records for a correction round the manager starts at integration
 
 Type: implementation
-Status: open
+Status: claimed
 Supersedes: 89
 Blocked by: none
 
