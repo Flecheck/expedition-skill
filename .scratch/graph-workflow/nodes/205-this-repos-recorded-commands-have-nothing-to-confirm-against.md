@@ -39,9 +39,9 @@ instructions disagree](174-which-statement-of-the-bars-commands-wins.md)'s worke
 >    there is nothing to confirm the record against and it stands as it is.
 > 2. That paragraph keeps every factual claim it already makes about this repo: no build, no tests, no
 >    formatter and no CI; no manifest and no task runner; and one ignore file, which invokes nothing.
-> 3. That paragraph keeps its statement that the bar here is entirely its non-command half and that
+> 3. ~~That paragraph keeps its statement that the bar here is entirely its non-command half and that
 >    this is a complete bar rather than a deficient one, and its enumeration of that non-command half
->    is unchanged.
+>    is unchanged.~~ *Superseded 2026-10-02 by node 190's replacement; see `## Amendment, 2026-10-02 (from node 190)`. It binds once node 190 lands.*
 > 4. Nothing already in that file is deleted. Where the work supersedes text already there, that text
 >    is marked as superseded and left where it is, and the new text is added around it.
 > 5. No section of that file other than the one named in clause 1 is modified, and within that section
@@ -58,3 +58,13 @@ instructions disagree](174-which-statement-of-the-bars-commands-wins.md)'s worke
 **What it buys is measured rather than guessed.** Its author counted three checkers this session that spent a look re-verifying the absence of a build, a test runner and a formatter from this tree — a fourth did so on node 197, after this node was written.
 
 **A collision the manager noticed and did not repair.** Clause 4 says superseded text *"is marked as superseded and left where it is"*, and clause 6 forbids touching any other file. [Node 189](189-where-the-never-delete-rule-stops.md) settled the opposite for exactly this kind of text: a passage stating a rule that currently binds is **replaced** and its old text banked verbatim to `map-history.md` — which clause 6 puts out of reach. The condition was written by node 174's worker, so the manager hands it over as written; where the work turns out to supersede a live rule statement, that goes to the human rather than to a rewrite of the condition.
+
+## Amendment, 2026-10-02 (from node 190)
+
+*Written by [node 190](190-the-rules-file-states-one-list-twice.md)'s worker under its `CONDITIONS`, and filed by the manager under the standing instruction that an open, unclaimed node's condition may be amended where every word of the replacement is already fixed. The worker's words: "Fixed by this node's work once it lands (\"the standards listed at the head of this section\" is in the tree)." It binds once node 190 lands. The worker's own text, pasted:*
+
+- **Clause 3.** "3. That paragraph keeps its statement that the bar here is entirely its non-command half and that this is a complete bar rather than a deficient one, and its pointer to the standards listed at the head of that section, together with the node's acceptance condition, is unchanged."
+
+## Flags
+
+`205.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 190's replacement for clause 3 was filed on this open, unclaimed node without asking the human first.

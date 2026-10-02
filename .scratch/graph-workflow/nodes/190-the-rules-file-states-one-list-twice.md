@@ -109,6 +109,61 @@ so the two are disjoint in fact though not by any written edge. The manager hold
 
 - Node 190 (open, unclaimed). Node 349's amendment of its clause 1 contains the phrase "this effort's five standing rules for writing, stated as held in `map.md`'s `## Notes` inside the ground-rules block and received by a checker as text in its spawn". Replacement: "this effort's six standing rules for writing, stated as held in `map.md`'s `## Notes` inside the ground-rules block and received by a checker as text in its spawn". Node 349's amendment of its clause 4 reads "4. The file states neither the five ground rules nor the five standing rules for writing as a numbered list. Where it names them, it names `map.md`'s `## Notes` as holding them." Replacement: "4. The file states neither the five ground rules nor the six standing rules for writing as a numbered list. Where it names them, it names `map.md`'s `## Notes` as holding them." In both, "six" is fixed by this node's work landed in the tree: `map.md`'s list ends at rule 6, and `map-implementation-rules.md` says "six standing rules for writing". There are still five ground rules in `map.md`. Node 190's original clauses 1 and 4, which say "four", were already replaced by earlier amendments.
 
+## Handover, attempt 1
+
+*The worker's own text, pasted, 2026-10-02.*
+
+````
+HANDOVER:      The rules file states one list of standards twice (node 190)
+
+ANSWER:        `map-implementation-rules.md`'s `## What the work is held against` now states the standards once. The section opens with a lead-in in bold, **The standards an implementation node's work is held against.**, followed by one bulleted list: `/coding-principles` and `/naming`; `.claude/skills/expedition/glossary.md`'s `_Avoid_` lines; this effort's ground rules (held in `map.md`'s `## Notes`, received by a checker as text in its spawn); its six standing rules for writing (held in `map.md`'s `## Notes` inside the ground-rules block, received by a checker as text in its spawn); `graph-conventions.md`; and `/writing-for-agents`. The paragraph saying that `map.md`'s standing preferences are not among the standards (node 42's test) now follows the list, because it applies to both readers. It used to sit in the review route.
+                The bar paragraph and the review route paragraph still begin with their bold lead-ins and both point at "the standards listed at the head of this section". The bar paragraph keeps: no build, no tests, no formatter, no CI; that the node's acceptance condition binds too; and the "complete bar rather than a deficient one" statement. The review route keeps: no reviewing skill is named; the `glossary.md` trap with false positives; the note on `where`; and the phrases "on the same ground as the bar's commands above" and "the human's standing direction below", so the file's *Nothing below was reworded* paragraph stays accurate.
+                The ignore-file sentence (node 271's clauses) is now one sentence with no struck-through text: "`graph-agent` has **no build, no tests, no formatter and no CI** — no manifest, no task runner, nothing to invoke; the one ignore file, `.gitignore`, ignores `.worktrees/`, `.claude/worktrees/` and `.scratch/graph-workflow/worktrees/` and invokes nothing, so the bar's command half is empty, and under the *"if relevant"* clause that is a **complete** bar rather than a deficient one." I opened `.gitignore` at the worktree root. Its patterns are exactly `.worktrees/`, `.claude/worktrees/` and `.scratch/graph-workflow/worktrees/`, and the rest is comments. `.gitignore` was not edited.
+                Decisions inside the work that a later reader would otherwise have to work out again:
+                (a) The file's own *What this file admits* rule says whoever edits a passage applies the history test to it. Under that rule I left these accounts out of the rewritten paragraphs: "the second added at node 158"; "whose absence here node 297's worker reported"; "Corrected at node 114's check, having claimed no ignore file…"; "the same shape the dogfood target has, one step thinner"; "Two checker runs spent their largest single cost finding this…"; and the sentence on the two enumerations being one set.
+                (b) Node 169's strike on the standing preferences, which clause 3 names, was no longer in the tree at 6259c2c1. The only strike left in the file was node 158's on the ignore file, and it moved.
+                (c) Once that strike moved, the opening sentence "**The struck rule statements below predate this and are not licence to add another.**" in *How a rule in this file is superseded* became false. I removed it and banked it.
+                (d) All three superseded texts were appended verbatim to `map-history.md` under a new heading at its end: "## Superseded from `map-implementation-rules.md` at node 190 — the standards stated twice, and the struck ignore-file wording". It has three `###` subsections and shows both old paragraphs whole. The file now contains no `~~`.
+                Clause 4, as amended by node 354, held before the work started and still holds, as the manager anticipated. The file states neither list of rules as a numbered list, and where it names them it names `map.md`'s `## Notes` as holding them.
+                Clause 5: every relative link in the rules file and in the new history entry resolves. I checked each one with a script.
+                Clause 6: only the two files under `.scratch/graph-workflow/` were modified.
+
+INDEX LINE:    The rules file's `## What the work is held against` now lists the standards once, under its own lead-in, and both paragraphs point at it. The struck ignore-file wording and the duplicate lists moved to `map-history.md`.
+
+FLAGS:         ASSUMPTION: The condition's opening says "The work is `.scratch/graph-workflow/map-implementation-rules.md`, and no other file may be edited". Clause 3 as amended, and node 271's clauses added from node 366, both require appending to `map-history.md`. I read the later amendments, which carry the human's decisions at nodes 189 and 366, as overriding that opening sentence, and I edited `map-history.md`. I did not raise this as a contradiction. Index: Node 190 edited `map-history.md` despite its condition's opening "no other file may be edited", reading the later amendments that require the move to `map-history.md` as overriding it.
+                ASSUMPTION: Removing node 158's strike made the opening sentence "The struck rule statements below predate this and are not licence to add another." false, so I removed it and banked it verbatim in `map-history.md`. It sits outside the two paragraphs the condition names. Index: Node 190 removed the rules file's sentence about struck rule statements below, since none remained, and banked it in `map-history.md`.
+                ASSUMPTION: Under the rules file's own *What this file admits* rule, the rewritten bar and review-route paragraphs leave out their accounts of how they were learned (node 158/297/114 corrections, the dogfood comparison, the checker-cost sentence). The full old text is banked verbatim. Index: Node 190 left the bar and review-route paragraphs' accounts of how they were learned out of the rewrite, under the file's own admission test, and banked the old paragraphs whole.
+
+NEW NODES:     none
+
+INVALIDATIONS: Node 184 (resolved). Its answer that "the two enumerations are one list" is extended: the list is now stated once, and the bar paragraph's own copy of it no longer exists. Node 271 (superseded into this node): its defect is fixed. Node 189: applied, not changed.
+
+CONDITIONS:    Searched every node not resolved, superseded or out-of-scope (status open or claimed), in both `## Acceptance condition` and `## Question`, for: "struck rule statements", "two enumerations", "standards to hold work against", "non-command half", "ignores `.worktrees", "Two checker runs", "one step thinner", "review route", "bar paragraph", "bar's commands for this repo", "What the work is held against". The only open node that matched was 205 (open, unclaimed). Its clause 3 says the bar paragraph's "enumeration of that non-command half is unchanged", and that paragraph no longer holds an enumeration. Replacement for node 205's clause 3: "3. That paragraph keeps its statement that the bar here is entirely its non-command half and that this is a complete bar rather than a deficient one, and its pointer to the standards listed at the head of that section, together with the node's acceptance condition, is unchanged." Fixed by this node's work once it lands ("the standards listed at the head of this section" is in the tree). Node 205's clause 2 ("one ignore file, which invokes nothing") still holds. Its clause 4 (strike in place, never delete) still collides with node 189's rule, which the manager has already noted. No open node's question is changed.
+
+MISSING FROM MAP: none. map.md does not say that the rules file's own opening rules (*What this file admits*, *How a rule in this file is superseded*) bind the worker who edits that file. I took them as binding because the file states the standards.
+
+GATE PAYLOAD:  No checker findings yet.
+                Paths touched (both in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/190-standards-once):
+                  .scratch/graph-workflow/map-implementation-rules.md
+                  .scratch/graph-workflow/map-history.md (appended only, at the end; expect it to meet node 80's append at integration)
+                The bar: the repo root holds `.claude`, `CONTEXT.md`, `CONTEXT-MAP.md`, `.gitignore` and `.scratch`. It has no manifest, task runner, tests, formatter or CI, so the recorded "no commands" matches the repo and the bar is its non-command half. Note that `CONTEXT-MAP.md` exists at the root and no record names it. It is not a build file.
+                Proposed commit message:
+                  State the implementation standards once in the rules file
+
+                  The bar paragraph and the review route now point at one list
+                  under its own lead-in. The ignore-file sentence names .gitignore's
+                  three patterns without struck text, and the superseded paragraphs
+                  move verbatim to map-history.md.
+
+                  Node: graph-workflow/190
+
+RETROSPECTIVE:
+1. What I had to hunt for: the state of node 169's strike, which clause 3 names but which was already gone; whether open node conditions quote the paragraphs (only node 205 does); the history-entry format, which I copied from node 354's entry.
+2. What arrived that this node did not need: most of the 1112-line map-history.md (only the tail format mattered), and the long worktree paragraph in map.md.
+3. What would have made this easier: a consolidated, amended acceptance condition on the node. I had to fold six amendments, two of them nested replacements of earlier replacements, plus an opening sentence that the later amendments contradict.
+4. What was stale, wrong or contradictory: the condition's "no other file may be edited" against amended clause 3 and node 271's clauses requiring `map-history.md`; clause 3's "two strikes already standing", of which only one still stood; the manager's 2026-09-23 note about "four" and "five", superseded by later amendments; and node 205's clause 3, which this work makes wrong (replacement given above).
+````
+
 ## Flags
 
 `190.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 168's replacement for clause 4 was filed on this open, unclaimed node, and the node was made to wait on node 348.
@@ -124,6 +179,12 @@ so the two are disjoint in fact though not by any written edge. The manager hold
 *The manager's note, 2026-09-27:* edge to [node 354](354-add-the-sixth-standing-rule-for-writing.md) added. [Node 253](253-a-shipped-file-points-at-a-sibling-rather-than-restating-it.md)'s worker reports that once node 354 lands, the "five standing rules for writing" in clause 1 (as amended by node 348) and clause 4 becomes wrong, and that the replacement is owed then, since "six" is fixed by no landed work yet.
 
 `190.5` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 354 above.* Node 354's replacement of "five" (or "four") with "six" standing rules for writing was filed on this open, unclaimed node without asking the human first.
+
+`190.6` `ASSUMPTION` — *The worker's own text.* The condition's opening says "The work is `.scratch/graph-workflow/map-implementation-rules.md`, and no other file may be edited". Clause 3 as amended, and node 271's clauses added from node 366, both require appending to `map-history.md`. I read the later amendments, which carry the human's decisions at nodes 189 and 366, as overriding that opening sentence, and I edited `map-history.md`. I did not raise this as a contradiction.
+
+`190.7` `ASSUMPTION` — *The worker's own text.* Removing node 158's strike made the opening sentence "The struck rule statements below predate this and are not licence to add another." false, so I removed it and banked it verbatim in `map-history.md`. It sits outside the two paragraphs the condition names.
+
+`190.8` `ASSUMPTION` — *The worker's own text.* Under the rules file's own *What this file admits* rule, the rewritten bar and review-route paragraphs leave out their accounts of how they were learned (node 158/297/114 corrections, the dogfood comparison, the checker-cost sentence). The full old text is banked verbatim.
 
 ## Amendment, 2026-09-29 (from node 366)
 
