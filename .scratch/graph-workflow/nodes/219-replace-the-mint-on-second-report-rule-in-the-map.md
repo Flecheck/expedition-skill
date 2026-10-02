@@ -330,6 +330,61 @@ RETROSPECTIVE (this round)
 4. What was stale, wrong or contradictory: the surrounding bullet text is heavily bolded. That pre-existing style pulls new text toward bold, which rule 5 forbids for text that is not a term being defined.
 ````
 
+## Handover, attempt 1, correction round 2
+
+*The worker's own text, pasted, 2026-10-02.*
+
+````
+CORRECTION ROUND 2 (the human's "ok" at the gate, on the manager's recommendation)
+
+What I changed: I removed two sentences or phrases from the retrospective bullet in `.scratch/graph-workflow/map-manager-only.md` `## Notes`. This is the bullet clause 1 names, read under the amendments.
+- I removed the sentence "That duty is unchanged.". The statement of the disposal duty stays as it was: "The first duty is that the manager disposes of each item naming the record in the report that closes that node, by acting on it, minting a node, or saying why not."
+- I removed the phrase ", rather than as a later separate act" from the filing sentence. It now reads: "The manager writes it into the node file in the same edit that writes that node's answer, its flags and its line in `decisions.md`."
+
+This round edited text that clause 1(c) and clause 1(d) name, as amended on 2026-10-02 at the gate. I banked nothing new in map-history.md, as instructed: the removed phrases never stood in the landed map. `git diff --check` is clean.
+
+HANDOVER:      Replace the mint-on-second-report rule in the map
+
+ANSWER:        The retrospective bullet in `.scratch/graph-workflow/map-manager-only.md` `## Notes` states three rules.
+- Naming: the worker gives each standing item it reports a short name. It reuses an existing name where one fits and mints one where none does. It states how many earlier retrospectives carry the name, with their node ids. It finds existing names by searching the retrospective sections under `.scratch/graph-workflow/nodes/`, whatever heading each section was filed under, and not from memory or from a list.
+- Ranking: the manager disposes of each item naming the record in the closing report, by acting on it, minting a node, or saying why not. It ranks each named standing item among what it picks next by that name's count. A count mints no node.
+- Filing: the manager writes the retrospective in the same edit that writes the node's answer, flags and `decisions.md` line. It goes last in the file, under `## Retrospective` only.
+
+The two sentences these rules replace are banked verbatim at the end of `.scratch/graph-workflow/map-history.md`, under "## Superseded from `map-manager-only.md` at node 219 — …". The added text follows writing rule 5: no bold except on a term being defined, and one idea in each sentence. At the gate the human amended clauses 1(c) and 1(d). Under that amendment the bullet does not say the disposal duty is unchanged, and it does not contrast the filing with a later separate act.
+
+INDEX LINE:    The map-manager-only.md retrospective bullet now has the worker name and count each standing item, ranks a repeat instead of minting a node, and files retrospectives in the resolving edit.
+
+FLAGS:         Unchanged. These are the two ASSUMPTION flags from the first handover: the old filing sentence was replaced and banked rather than added to, and the naming search covers every heading form.
+
+NEW NODES:     none
+
+INVALIDATIONS: Unchanged. The work contradicts flag 141.3 and node 141 §4's second-report trigger.
+
+CONDITIONS:    Unchanged. Neither removed phrase appears in any open node's condition or question. Node 220's blocker on this node is still discharged when this lands.
+
+MISSING FROM MAP: Unchanged. The map does not give the heading format for map-history.md entries, so I copied it from recent entries.
+
+GATE PAYLOAD:  Checker run 1 Findings 1 and 2: fixed in round 1. Checker Q1 and Q2: settled by the human's amendment, and Q2 is carried out in this round.
+Paths touched: .scratch/graph-workflow/map-manager-only.md and .scratch/graph-workflow/map-history.md, in the worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/219-retrospective-names. This round changed only map-manager-only.md. No file under `.claude/` was touched.
+Bar: the repo has no build, test or format commands, and `git diff --check` is clean.
+Integration: node 190 also appends to the end of map-history.md. Keep both appended blocks.
+Proposed commit message:
+  Replace the mint-on-second-report rule in the retrospective bullet
+
+  The worker names and counts each standing item it reports, a count
+  ranks work rather than minting a node, and the manager files the
+  retrospective in the edit that resolves the node. The replaced
+  sentences are banked verbatim in map-history.md.
+
+  Node: graph-workflow/219
+
+RETROSPECTIVE (this round)
+1. What I had to hunt for: nothing.
+2. What arrived that this node did not need: nothing.
+3. What would have made this easier: nothing. The instruction named the exact text to remove.
+4. What was stale, wrong or contradictory: nothing new.
+````
+
 ## Flags
 
 `219.1` `ASSUMPTION` — *The worker's own text.* I rewrote the old filing sentence as well as the mint sentence, even though it did not strictly contradict clause 1(d). It said the manager "files it … placed last" but did not say when. I replaced it rather than adding a second sentence beside it, so the bullet states the filing once. Under clause 2, its old text went verbatim to map-history.md.
