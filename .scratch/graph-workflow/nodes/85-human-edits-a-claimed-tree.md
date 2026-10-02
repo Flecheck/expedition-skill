@@ -1,7 +1,7 @@
 # A human edit lands in a worker's tree while the node is claimed
 
 Type: grilling
-Status: open
+Status: claimed
 
 ## Question
 
