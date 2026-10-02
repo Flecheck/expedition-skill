@@ -1,7 +1,7 @@
 # The landing policy says an implementation node's work sits outside the repository
 
 Type: implementation
-Status: open
+Status: claimed
 Supersedes: 254
 
 Blocked by: none

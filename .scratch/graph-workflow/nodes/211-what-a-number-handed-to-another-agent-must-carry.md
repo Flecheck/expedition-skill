@@ -1,7 +1,7 @@
 # State in the map what a number handed to another agent must carry
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
