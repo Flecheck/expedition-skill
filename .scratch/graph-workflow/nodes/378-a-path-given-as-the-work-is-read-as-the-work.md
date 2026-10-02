@@ -44,3 +44,56 @@ RETROSPECTIVE:
 3. What would have made this easier: a list of open node ids in the spawn, or a status-only index, so the CONDITIONS search does not need its own status derivation.
 4. What was stale, wrong or contradictory: nothing found. The manager's pre-claim checks held exactly.
 ````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c378.md`.*
+
+> PASS
+> I took the checker contract from the main checkout, /home/mathieu/projects/graph-agent/.claude/skills/expedition-checker/SKILL.md. Its content is the same at the base commit 5478a1376 and at master HEAD: `git diff 5478a1376 HEAD --stat` on that file printed nothing. I read the worktree's copy as the work. I compared text with its line breaks joined: each blank-line-separated paragraph joined into one line (awk RS="", gsub "\n" to " ") for the base (`git show HEAD:<file>`, where worktree HEAD = 5478a1376) and for the working copy, then diffed the two.
+>
+> Condition part 1, the sentence is present, under `## What you are given`, between the two named sentences, and was absent before:
+> - In the joined working copy, the exact string "The one exception is `map-implementation-rules.md`, and only for the standards in it. A path you were given as the work is the work wherever it sits, and you read it. The acceptance condition as given to you is the only statement of intent you get." matched once (`grep -o ... | wc -l` printed 1).
+> - The nearest heading above the new sentence is `## What you are given` (awk tracking the last `^## ` line before the match).
+> - Before the work, `grep -c` of the new sentence on the joined base printed 0. The joined base contains "...only for the standards in it. The acceptance condition as given to you is the only statement of intent you get." (`grep -c` printed 1), so both neighbouring sentences sat in that paragraph.
+>
+> Condition part 2, no other sentence changes and no heading is renamed:
+> - The diff of the joined base against the joined working copy shows exactly one changed paragraph, the "The six givens above..." paragraph.
+> - Its only difference is the inserted sentence. The re-wrap of its last two lines leaves the words otherwise unchanged.
+> - `diff` of the `^#` lines from base and work printed nothing, so the headings are identical.
+>
+> Condition part 3, no other file changes:
+> - `git -C <worktree> status --short --untracked-files=all` lists only ` M .claude/skills/expedition-checker/SKILL.md`.
+> - `git diff --stat` shows 1 file, 2 insertions and 1 deletion.
+>
+> Recorded search: the condition says its scope came from no search, so there was no command to re-run.
+>
+> The bar's commands: the repo has no root agent-instruction file (`ls -a` of the worktree shows .claude, CONTEXT-MAP.md, CONTEXT.md, .gitignore, .scratch). The standards file records that the repo has no build, no tests, no formatter and no CI, so the command half of the bar is empty. As formatting hygiene I ran:
+> - `git diff --check`, which printed nothing (no whitespace errors).
+> - A line-length check. Base and work both have a maximum line length of 180. The only lines over 110 are the existing table rows in "When what you check against is itself the problem", which the work did not touch.
+>
+> Standards: I listed `.scratch/` once, giving graph-workflow, and read only the standards in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md. I opened no other file in the effort's directory. Its list is:
+> - /coding-principles and /naming
+> - the `_Avoid_` lines of glossary.md
+> - the ground rules
+> - the six standing rules for writing
+> - graph-conventions.md
+> - /writing-for-agents
+>
+> These bore on the work:
+> - **The glossary's `_Avoid_` lines.** I grepped them for path, work, read, given, sits and wherever. No refused word is used for its refused concept. "subtask (which names the work...)" does not refuse "work".
+> - **Ground rules 1 and 3.** The sentence assumes no repo, machine or toolchain, and it addresses no human.
+> - **Writing rules 5 and 6.** The sentence is in plain English and states a positive rule. Its pronoun "it" has one referent, the path. It contains no slogan-shaped contrast. No heading was renamed, so rule 6's citation duty does not arise.
+> - **/writing-for-agents**, read from the mattpocock-skills plugin. The sentence is a positive statement and adds no duplicate meaning within this file.
+>
+> /coding-principles, /naming and graph-conventions.md did not bear: the change is one sentence of prose in a shipped skill, with no code and no graph file. The standards name no reviewing skill, so I ran none.
+>
+> The work did not move any standard I hold it against, since the checker contract is not among the standards listed. The rule in the standards file about record paths handed over as the work did not apply, because no record file is among the changed paths.
+>
+> I wrote two temporary files directly in $TMPDIR rather than in a new directory under it, which departs slightly from the contract's temporary-file rule. I removed both before handing back.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and left no part of the condition uncovered. Its closing remark reports its own departure from the new temporary-file rule, not a finding about the work. The node raised no flags.
