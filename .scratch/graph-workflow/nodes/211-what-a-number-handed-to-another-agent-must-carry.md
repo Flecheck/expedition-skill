@@ -1,9 +1,15 @@
 # State in the map what a number handed to another agent must carry
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+map.md's derivations item now says a number about the record handed on is dated, marked for scale only, and re-derived by its receiver; the rules file says the same for conditions.
+
+*The manager's note:* landed as commit `924156776`, approved at the gate on 2026-10-02. Flag 211.1 settled at the gate.
 
 ## Question
 
