@@ -75,3 +75,44 @@ RETROSPECTIVE
 3. What would have made it easier: the spawn or the amendment naming the section of SKILL.md where the supersession paragraph should go.
 4. Stale, wrong or contradictory: the glossary's **Reject** entry says the manager "deletes its branch". That is a git-specific term, it sits against ground rule 1, and it is worded differently from SKILL.md's tool-neutral "clean the working state". It is outside this node's scope (clause 2) and was not edited. The spawn said to read decisions.md's line for node 89, but decisions.md has no line for it.
 ````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition and its amendment reached it as a verbatim copy in `$TMPDIR/c371.md`.*
+
+> PASS
+>
+> Node 371, "Say what a `## Review` entry records for a correction round the manager starts at integration". Worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/371-review-entry, base 2fd65cdb, uncommitted. Changed paths: .claude/skills/expedition/graph-conventions.md and .claude/skills/expedition/SKILL.md.
+>
+> Acceptance condition, one line per part. The condition is the original clauses 1 and 3, the struck clause 2 replaced by the amendment's replacement, and the three clauses the amendment adds.
+> - Clause 1 (graph-conventions.md, `## Review`, item 2): met. `git -C <wt> diff --word-diff=plain -U0` shows that item 2 gained only "For a round the manager starts when integrating the node's work conflicts, the entry records the paths of the conflicted files in place of the human's words." The second sentence, "The human's words are recorded as `### The human's words` in `SKILL.md` says.", is unchanged word for word. Only its line break moved.
+> - Clause 2, as replaced by the amendment: met. `git -C <wt> status --short --untracked-files=all` and `--ignored` list only the two modified files, so nothing under `.scratch/` changed. The word-diff shows exactly two insertions and no removed or altered words. One insertion is the clause 1 sentence. The other is the new SKILL.md paragraph that the amendment's clauses require. No other sentence under `.claude/skills/` changed.
+> - Clause 3 (scope came from no search): this states how the scope was got and makes no demand on the work. There was no recorded command to run.
+> - Amendment clause 1 (SKILL.md states what happens to a superseded implementation node whose work has not landed): met. A paragraph was added under `### Three outcomes, and no fourth`: "An implementation node superseded before its work has landed is cleaned up in the same order as a reject. Edit the graph first. Then remove the node's working tree, and anything else that holds that work." Found by word-diff. It puts the graph edit first, then removal of the tree and anything else holding the work, and ties the order to the reject's. It is stated as properties. It names no version-control command, which I confirmed by reading the 3 added lines.
+> - Amendment clause 2 (the reject line is intact): met. `grep -n "reject: edit the graph first"` returns "- reject: edit the graph first, and clean the working state after." at the same line both in the worktree and in `git show 2fd65cdb:.claude/skills/expedition/SKILL.md`.
+> - Amendment clause 3 (scope came from no search): no demand on the work, and no recorded command.
+>
+> The bar:
+> - Commands: the repo has no build, no tests, no formatter and no CI, as map-implementation-rules.md records. There is no agent-instruction file at the repo root. So the bar is its non-command half.
+> - Whitespace: `git diff --check` printed nothing (rc=0).
+> - Line lengths: the added lines are 97, 100, 5, 99, 101 and 30 characters, consistent with how the files are wrapped.
+>
+> Standards:
+> - I read only the standards in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md: `/coding-principles`, `/naming`, glossary.md's `_Avoid_` lines, the ground rules and the six writing rules (received as text), graph-conventions.md, `/writing-for-agents`, the rule on edits to the trigger file, and the rule on record files as work.
+> - Bore on this work:
+>   - Glossary `_Avoid_` lines. Checked by hand: the new text uses "supersede", "correction round", "reject", "landed" and "integrating ... conflicts", which match the glossary's own wording, and none of the refused words.
+>   - Ground rule 1: no tool command is assumed.
+>   - Ground rule 3: nothing addresses the human.
+>   - Writing rules 5 and 6: one idea per sentence, plain words, and "that work" has a single referent. The reject order is pointed at in the same section rather than restated.
+>   - graph-conventions.md: the new text agrees with the glossary's "Correction round" entry, which names the manager integrating conflicting work.
+>   - `/writing-for-agents`: held by hand, not invoked.
+> - Did not apply:
+>   - Trigger-file rule: the SKILL.md edit sits under `## The gate`, not under `## The order you act in` or `## What is in front of the human, and when`, so `.claude/rules/expedition-triggers.md` was not owed an edit.
+>   - Record-file rule: none of the changed paths are record files.
+> - No standard was moved by the work. No reviewing skill is named for this repo, and I ran none.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and left no part of the condition uncovered. This settles no flag; flag 89.1, carried here from node 89, settles at the node closing report.
