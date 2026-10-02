@@ -75,3 +75,9 @@ RETROSPECTIVE
 ```
 
 *The manager's note:* the worker is right that the manager's spawn misquoted node 67's handover: it said node 375 "open" where the handover says "claimed".
+
+#### The human's answer to questions 1 and 2, 2026-10-02
+
+`verbatim`: *"ok"*
+
+The manager had closed the payload with "Please answer Q1 and Q2. "ok for recommended" takes both." The reply "ok" names no alternative, so it takes the worker's `RECOMMENDED` on both. Q1, the worker's: "Yes, a reader-side rule. Ship it by rewording the existing sentence in the five worker contracts, for example: "Read each of the following rather than any summary of them, and check each claim of fact in the manager's notes before you rely on it."" Q2, the worker's: "Yes, in the same sentence as Q1: "check each claim of fact in your node's `## Question` and in the manager's notes before you rely on it"."
