@@ -83,3 +83,53 @@ Added by [Cascade pass mechanics](15-cascade-pass-mechanics.md)'s worker, in its
 One sequencing fact for whoever claims this node: [Widen the invalidation channel from contradiction to
 change](43-widen-the-invalidation-channel.md) rewords the same part in the same five contracts this node's
 answer would reach, and the code slot is exclusive, so the two run in some order and never together.
+
+## Interview
+
+
+#### Question 1, relayed 2026-10-02
+
+*Pasted as the worker handed it back.*
+
+```
+NODE:          Nothing tells a worker to hold its work against the record (node 37)
+ABOUT:         Each worker's handover has an `INVALIDATIONS` part, which names the resolved nodes the work changes. No contract tells the worker to go and look for those nodes, so the part only reports what the worker happened to notice. This node decides whether the worker must check, and against what. It comes up now because node 36 left the record-wide demand with this part alone, and node 15 later sent most resolved-node propagation through it.
+
+SO FAR:        What I read: my node file, the grilling contract, map.md, decisions.md in full, and nodes 43, 185 and 263. I also searched the five worker contracts, the manager contract and graph-conventions.md.
+
+               Facts I checked:
+               - The manager's note is correct. Node 43 ("widen the invalidation channel") is superseded. Its wording landed through node 333 (part F, the five contracts) and node 338 (clause 17b, graph-conventions.md), and both are resolved. All five contracts now read `INVALIDATIONS: <which resolved node your {answer|facts|work} changes, and how: a rename, an extension, a narrowing or a contradiction of what it says>`. The node's sequencing note about 43 no longer applies, and the old line quoted in its question is out of date.
+               - The hole is still there. The manager contract's `## What nothing here settles` item 3 says so: "Does anything tell a worker to look at the record when it reports what its work invalidates? Nothing does in general..."
+               - One bounded case already has a duty to look. Node 263 made every worker search the open nodes' `## Acceptance condition` and `## Question` sections for the handles its work fixes (each word it refuses, each path it changes, each phrase it supersedes) and read only what matches. That paragraph is the same in all five contracts and opens "Before you write your handover". Node 263 kept resolved nodes out of its scope and left them to this node.
+               - The checker contract and the cascade contract have no `INVALIDATIONS` part.
+
+               What I measured: I ran node 263's handle search against resolved nodes instead of open ones. There are 275 resolved nodes.
+               - Searching the whole resolved node files (79,605 lines) is too costly. A broad handle such as `map-implementation-rules.md` matches 854 lines.
+               - Searching only their `## Answer` and `## Acceptance condition` sections (19,465 lines) costs 4 to 172 matching lines per handle across the eight handles I tried.
+               - The index (`decisions.md`, 298 lines) is cheap but misses things. For the handle `expedition-triggers`, the index finds 2 lines (nodes 218 and 226). The section search also finds nodes 255, 260 and 267, which changed that same file.
+               - The `## Acceptance condition` sections have to be included. 14 resolved implementation nodes have no `## Answer`, node 218 among them.
+               - The node asks whether an index is enough to judge a collision. A section search answers that: what matches is the decision's own text, so the worker can judge from what it has just read.
+
+               What I settled myself: node 43's sequencing note is moot, for the reasons above. I priced the duty with my own measurement, as node 263 did. I treated "what a resolved node says" as its Answer, or its condition where it has no Answer, and left landed code to the cascade under node 15 part 3.
+
+ASK:           Should `INVALIDATIONS` be a duty to search the resolved nodes, rather than a report of whatever the worker happened to see? If so, should it search their answer and condition sections, the index, or something the spawn hands over?
+
+RECOMMENDED:   Yes. Make it the same handle search node 263 shipped for open nodes, pointed at resolved nodes. The spawn hands over nothing more. It ships, as two small changes to existing text and no new section:
+               1. In each of the five worker contracts, add one sentence to the "Before you write your handover" paragraph, right after its open-question search: "Search the resolved nodes' `## Answer` and `## Acceptance condition` sections the same way, for the same words, paths and phrases, read only what matches, and report in `INVALIDATIONS` each one your work changes." The `INVALIDATIONS` line and its placeholder stay as they are. The handles are already named in `CONDITIONS`.
+               2. Remove item 3 from the manager contract's `## What nothing here settles`, because this answers it.
+               The accepted gap is the one node 263 accepted: a resolved node that describes the thing in different words will not match.
+               Why: the party that made the change already holds the handles, so the search is close to free in its context. It finds the nodes the index misses (3 of the 5 in the triggers-file test). It costs one sentence per contract and removes one item, which suits your wish for compact skills. Handing more of the record over in the spawn would spend the manager's context, which this effort has measured as what fails first.
+
+ALTERNATIVES:
+               - Search the index, then read only the matching nodes: cheapest, but in the triggers test it missed 3 of the 5 nodes that matter.
+               - Search the resolved node files whole: complete, but a broad handle matches up to 854 lines.
+               - Have the spawn name the resolved nodes that bear on the work (this ties into node 185's scoping question): spends the manager's context and depends on the manager guessing what the work will touch.
+               - Keep it a report and say so in the contracts: honest, but leaves node 15's main propagation channel unchecked.
+               - Put the duty on the manager when it resolves a node: one party, but node 263 found that repairs stall in the manager's hands.
+
+RETROSPECTIVE:
+               1. What I had to hunt for: whether node 43 had landed (its node file, then 333 and 338), the current `INVALIDATIONS` wording, and the fact that 14 resolved implementation nodes have no `## Answer`, which changed the search target.
+               2. What arrived that this node did not need: most of decisions.md (about 300 lines; I used about six), the node's "What the answer touches" sequencing over nodes 30, 32 and 35, and the map's worktree and landing items.
+               3. What would have made this easier: the node saying it is the manager contract's `## What nothing here settles` item 3, and node 263 being linked from my node file. Node 263 links to node 37, but node 37 does not link back.
+               4. What was stale, wrong or contradictory: the node's question quotes the old `INVALIDATIONS` line ("your work contradicts"). Its annotation treats node 43 as open future work, but node 43 is superseded and landed. Node 263's Answer also calls node 43 "open" and says decisions.md is "read whole by every worker", but the contract now reads "the sections the spawn names".
+```
