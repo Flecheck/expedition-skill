@@ -237,6 +237,33 @@ RETROSPECTIVE
 4. What was stale, wrong or contradictory: the spawn said the old entries had "no marker position". The manager's note says they "carry no ids", so the gap is a missing id. Otherwise nothing.
 ````
 
+### Checker run 3 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02, after correction round 2. The same checker, resumed within this node.*
+
+> PASS
+>
+> Node 372, "Ship an `expedition-triage` skill", run 3, after correction round 2. I re-ran the bar in full and re-checked part 5, the part the edit touches. I read the whole file and compared it with my run 2 reading myself. The only change is the one sentence the worker named. It was appended to the first paragraph under `## Check the outstanding flags` and reads: "This changes the rule under `## Flags` in your contract for this one case: the human's approval of the batch is the moment its flags settle."
+>
+> Condition:
+> 1–4, 6–7, 9. Met. Established in runs 1 and 2. The text they rest on did not change.
+> 5. Met, re-checked. Both sentences are unchanged: "Propose settling, in one batch, the outstanding flags whose node is `resolved` or `superseded`" and "Leave outstanding the flags whose node is `open` or `claimed`". The added sentence only names the rule the batch changes, and does not contradict part 5.
+> 8. Met, re-run. `git status --porcelain --ignored --untracked-files=all` printed only `?? .claude/skills/expedition-triage/SKILL.md`. `git diff 7fe98da3 --stat` printed nothing.
+>
+> Bar: the repo has no build, tests, formatter or CI, so the bar is the standards in map-implementation-rules.md. I read only the standards in that file.
+> - Writing rule 6: the batch sentence now names `## Flags`, the rule it changes, and states the change in its own words.
+> - Writing rule 5: "its flags" has one referent, "the batch". The sentence is grammatical and holds one idea.
+> - glossary `_Avoid_`: the sentence uses none of the avoided words.
+> - The other standards, `/writing-for-agents` and graph-conventions.md, were checked in runs 1 and 2. This sentence does not bear on them.
+>
+> My run 1 question is answered by the human's decision at the gate, and the work now follows the recommended option. I have no further questions.
+>
+> Not checked: nothing outside the one changed path. I read no part of the record.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 3 outcome, `PASS`. No exclusion applies: run 3 handed back no question and no raise, and left no part of the condition uncovered. Run 1's question was settled by the human at the gate above. This settles none of the node's flags; they settle at the node closing report.
+
 ## Handover, attempt 1, correction round 2
 
 *The worker's own text, pasted, 2026-10-02.*
