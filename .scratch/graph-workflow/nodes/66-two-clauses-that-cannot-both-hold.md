@@ -95,3 +95,9 @@ ASK:           Should this change join open node 214 as clauses of its future co
 RECOMMENDED:   Join node 214. Both are about a condition that cannot be honoured, in the same table of the same file. One change to the table avoids two edits of it that may disagree, and it follows your standing rule that a related defect goes into an existing node. The cost: this rule then waits until node 214 gets a condition.
 ALTERNATIVES:  - A separate implementation node for `.claude/skills/expedition-checker/SKILL.md` only: it can land now, but the table is edited twice.
 ```
+
+#### The human's answer to questions 1 and 2, 2026-10-02
+
+`verbatim`: *"ok"*
+
+The manager had put the questions with the line "Please answer Q1 and Q2. "ok for recommended" takes both." So the reply takes the worker's `RECOMMENDED` on both: the checker checks under the reading on which every part holds and hands back a question beside its outcome, with the worker's text (a) and (b); and the change joins open node 214.
