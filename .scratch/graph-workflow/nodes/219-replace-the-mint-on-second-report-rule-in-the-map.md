@@ -264,6 +264,65 @@ RETROSPECTIVE
 
 The manager put checker run 1's two questions to the human, recommending (Q1) that node 366's amendment be widened to the condition's opening line and clause 2, and (Q2) that clauses 1(c) and 1(d) be amended to drop the phrases "is unchanged" and "rather than as a later separate act", with one small correction round to remove them. The alternative offered was approval as is. The human, `verbatim`: *"ok"*. The manager had said "ok for recommended" would mean both amendments. So the gate's outcome is **correct**, and the node goes to correction round 2.
 
+### Checker run 3 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02, after correction round 2, under the condition as the human amended it. The same checker, resumed within this node.*
+
+> PASS
+>
+> This is the re-check of node 219 after correction round 2. The work changed, and so did the acceptance condition: I held the work against the condition as it now stands, with node 366's amendment and the 2026-10-02 gate amendment.
+>
+> How I worked:
+> - I read the changed paths as the work under check, under the rule in map-implementation-rules.md that lets an implementation node's work be the effort's own record.
+> - I read only the standards in .scratch/graph-workflow/map-implementation-rules.md. The work does not touch that file. Which standards bore on the work is unchanged from run 1: writing rules 2, 5 and 6, graph-conventions.md `## Writing the map`, glossary.md `**Labels**` / `_Avoid_`, and /writing-for-agents. The standards name no reviewing skill, and none was run.
+> - I re-ran the bar in full and re-established every clause of the condition against the amended words.
+> - I did not rely on the worker's statement of what changed. I re-derived the word-diff against HEAD (37fb17c48) and compared its added segments with the ones I reviewed in round 2. Only two places differ: "not. That duty is unchanged. The" is now "not. The", and ", rather than as a later separate act" is gone from the sentence ending "its line in `decisions.md`". That matches the worker's statement.
+> - map-history.md's modification time is still 17:53:48, before this round, and its content checks pass again.
+>
+> Each part of the condition, and how I established it:
+> - Opening line and clause 4, under both amendments: `git status --porcelain --untracked-files=all` shows only .scratch/graph-workflow/map-manager-only.md and .scratch/graph-workflow/map-history.md modified, nothing untracked, and nothing under `.claude/`.
+> - Clause 1, location: the bullet is at line 80 of map-manager-only.md, under `## Notes` (line 15) and before `## Landing an implementation node's work` (line 99), found by `grep -n '^## '`.
+> - 1(a), the worker names the item, found in the added segments:
+>   - "the worker gives that item a short name"
+>   - "reuses a name … where one fits" and "mints a new name where none fits"
+>   - "states how many earlier retrospectives carry that name, and lists their node ids"
+>   - "searching the retrospective sections of the files under `.scratch/graph-workflow/nodes/` … and not from memory or from any list held elsewhere"
+>   - "under any of the four questions", so it is a duty covering all four and adds no fifth question.
+> - 1(b), the word is "name": `grep -ci label` on the bullet returns 0.
+> - 1(c) as amended, a count ranks and mints nothing:
+>   - "A repeated standing item is not minted as a node on reaching any count."
+>   - "the manager ranks each named standing item among what it picks next by that name's count"
+>   - "Repetition therefore orders work rather than triggering it."
+>   - The disposal duty is stated: "The first duty is that the manager disposes of each item naming the record in the report that closes that node, by acting on it, minting a node, or saying why not."
+>   - `grep -c 'is unchanged'` on the bullet returns 0.
+>   - The contradicting mint-on-second-report wording is in the removed segments (`grep -o '\[-[^]]*-\]'`).
+> - 1(d) as amended, filing is part of resolving:
+>   - "The worker hands it back as text. The manager writes it into the node file in the same edit that writes that node's answer, its flags and its line in `decisions.md`."
+>   - "It is written last in the file, so the mandatory section order is untouched."
+>   - "It is written under the heading `## Retrospective` and under no other heading."
+>   - `grep -c 'later separate act'` on the bullet returns 0.
+> - Clause 2 as amended:
+>   - I extracted both replaced sentences from the HEAD bullet with `grep -o`. `grep -cxF` finds each exactly once as a whole line in map-history.md, returning 1 and 1.
+>   - The new headings name `map-manager-only.md` and its `## Notes` section. Found by `git diff -- map-history.md | grep '^+#'`.
+>   - The replaced text held no struck-through text.
+>   - `git diff -- map-history.md | grep -c '^-[^-]'` returns 0, so nothing already there changed.
+>   - The two phrases removed this round were text this work had added, not statements the bullet previously carried, so nothing more was owed to map-history.md.
+> - Clause 3, the human's words untouched: the quote "Could you, for this effort only …" and the span from "(1) what did you have to hunt" through "(4) … contradicted something else." are byte-identical between HEAD and the worktree (`cmp` on `grep -o` extracts).
+> - Clause 5, the bar: see below.
+>
+> The bar:
+> - The repo has no build, tests, formatter or CI, so the bar is the standards half alone.
+> - `git diff --check` printed nothing, so it is clean.
+> - No bold is added. The worktree's list of bold spans in the bullet equals HEAD's list minus three removed spans.
+> - Each sentence in the added segments carries one idea, and no glossary `_Avoid_` word is used for its refused concept.
+> - The bullet is over graph-conventions.md's 500-byte target. That file says no check treats a breach as a defect, so it is not a finding.
+>
+> Temporary files were made in a mktemp directory and removed.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 3 outcome, `PASS`. No exclusion applies: run 3 handed back no question and no raise, and left no part of the condition uncovered. Run 1's questions were settled by the human's amendment at the gate above. This settles none of the node's flags; they settle at the node closing report.
+
 ## Handover, attempt 1, correction round 1
 
 *The worker's own text, pasted, 2026-10-02.*

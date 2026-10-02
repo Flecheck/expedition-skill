@@ -1,8 +1,14 @@
 # Say in the shipped checker contract that a path given as the work is read as the work
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The shipped checker contract's `## What you are given` now says a path given as the work is the work wherever it sits and is read, placed right after the implementation-rules exception.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `d942b1f9f`. The node raised no flags.
 
 ## Question
 
