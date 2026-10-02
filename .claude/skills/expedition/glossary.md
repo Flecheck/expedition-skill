@@ -3,8 +3,9 @@
 This glossary defines the words the skill files are written in. It is complete over the vocabulary
 of the files that declare it authoritative, so a term those files use in this vocabulary has an entry
 here. Coining such a term and writing its entry are one change. A term used with no entry is a defect
-in the change that introduced it. A term is added only once a node has settled it. The reasoning
-behind each term is in the node that settled it.
+in the change that introduced it. A term is added only once a node has settled it. An entry says what
+the term means; a rule about the term is stated in the contract section that acts on it, and not here.
+The reasoning behind each term is in the node that settled it.
 
 Expedition is a workflow that takes a loose idea all the way to finished code. One manager thread
 owns a graph of nodes and spawns one worker per node. The human talks only to the manager.
@@ -51,8 +52,7 @@ does not read the map. An account of what happened is never a ground rule.
 **Destination**:
 What the end of an effort looks like. It fixes the scope, so work beyond the destination is out of
 scope and is not fog. It also says, in one line, whether the effort is expected to reach its
-destination. Where the effort is not expected to reach it, that line tells a manager that a frontier
-that is not empty is the effort's steady state and not a defect.
+destination.
 _Avoid_: goal, objective, definition of done
 
 **Frontier**:
@@ -88,10 +88,7 @@ _Avoid_: orchestrator, first mate, coordinator, main thread
 
 **Scribe**:
 How the manager writes. It pastes what an agent handed back under the right heading, as it was
-handed back. It never re-authors, shortens, re-orders or re-renders that text. Anything of its own
-goes beside that text, as its own marked note. The manager may assemble pasted pieces: put them in
-order, join them into one continuous text, and extract a block of text to hand to somebody else. It
-may not rewrite the pieces into a gloss.
+handed back.
 _Avoid_: editor, curator, secretary
 
 **Worker**:
@@ -109,24 +106,16 @@ words. Both are properties of the node's kind, not of the harness that runs it.
 _Avoid_: autonomous, unattended, automatic, interactive
 
 **Attempt**:
-One worker instance on one node. A node lasts longer than any of its attempts. A worker that dies is
-resumed where the manager can resume it, and replaced only where it cannot. A worker stopped from the
-human's side is replaced only on the human's answer. A resumed worker continues the same attempt, and
-a replacement is a new attempt.
+One worker instance on one node. A node lasts longer than any of its attempts. A resumed worker
+continues the same attempt, and a replacement is a new attempt.
 _Avoid_: retry, run, session
 
 **Stop**:
-Ending a running worker's work before it hands back. The manager performs every stop, at the human's
-word, with the harness's own tool for it, and the stopped attempt stays resumable within the manager's
-session. A stop from the human's side is a different act: it marks the agent as stopped by the user,
-and the manager can no longer resume it, though the human can revive it by typing to it. A message
-asking a worker to stop is not a stop, because the worker receives it late and may decline it.
+Ending a running worker's work before it hands back.
 _Avoid_: kill (the harness's status word for a stop, not this workflow's), cancel
 
 **Final stop**:
-A stop the human says is final. The manager records on the node that the attempt is not to be resumed,
-and no manager resumes it. The record makes a stop final, because no stop from either side removes a
-worker for good.
+A stop the human says is final.
 
 **Checker**:
 The second, independent, read-only agent that checks a finished implementation against its acceptance
@@ -176,10 +165,7 @@ worker), chore, setup
 Taking a node off the frontier before any work starts, so that a concurrent session skips it.
 
 **Handover**:
-What a worker returns when it has finished, in seven parts: its node's answer written as the node
-will hold it, the index line, its flags, the new nodes it found, which resolved node its work changes,
-the open conditions it searched and any replacement clauses it wrote, and what `map.md` did not tell
-it. An implementation worker returns an eighth part, the gate payload. The manager files it unaltered.
+What a worker returns when it has finished.
 _Avoid_: report (a report goes to the human; a handover goes to the manager), return, payload,
 deliverable
 
@@ -209,10 +195,7 @@ _Avoid_: audit, full cascade
 **Flag**:
 A note recording a judgement that an agent made on its own and that the human may want to revisit.
 The agent is usually a worker, and it is the manager where a judgement of the manager's own went into
-the graph. Raising a flag blocks nothing. A flag is settled at the first moment, after its node's
-worker has handed back, at which the node is put in front of the human. That moment is an
-implementation node's gate where the node has one, and otherwise the node closing report. A flag
-goes into the effort closing report only where the human never spoke again.
+the graph. Raising a flag blocks nothing.
 _Avoid_: TODO, warning
 
 **Promote**:
@@ -300,11 +283,9 @@ invoking `/expedition-standing-yes`, and it is recorded in the effort's map.
 _Avoid_: auto-approve (in Claude Code the word means approving tool-permission prompts)
 
 **Node closing report**:
-The message the manager sends the human the moment a node closes. It names the node that closed. It
-carries in full every flag that node holds, because those flags settle there. It names the work the
-manager started in response. It awaits no answer and takes no place in the queue of things waiting
-for the human. An unqualified "closing report" means this report. Prose written before this term was
-settled uses "closing report" for the effort closing report.
+The message the manager sends the human the moment a node closes. An unqualified "closing report"
+means this report. Prose written before this term was settled uses "closing report" for the effort
+closing report.
 
 ## Landing code
 
@@ -358,10 +339,9 @@ carries the effort because `NN` restarts at `01` for every new effort a repo hos
 ## Starting an effort
 
 **Starting an effort**:
-The act that creates an effort. The manager performs it, and it happens before the graph exists. It
-produces the effort's files and its first nodes. It has two inputs: a conversation with the human, or
-a directory of work that already exists. The input is the only thing the two ways of starting differ
-in.
+The act that creates an effort. It produces the effort's files and its first nodes. It has two
+inputs: a conversation with the human, or a directory of work that already exists. The input is the
+only thing the two ways of starting differ in.
 _Avoid_: charting (this workflow's cartographic metaphor stops at the map, and every act beneath it is
 described plainly; and the word names what the workflow's ancestor does when it "works out what the
 work is", rather than anything this workflow performs), kickoff, onboarding, bootstrap, setup, init
@@ -379,14 +359,9 @@ inside adoption, not the act itself), onboarding, port
 ## Closing an effort
 
 **Closed**:
-The human's declaration that an effort is over. Only the human closes one; the manager reports that
-the conditions hold and nothing more. An effort whose destination says it is not expected to end, and
-whose frontier never empties, is in a legitimate steady state rather than a stalled one, and is not to
-be treated as a defect.
+The human's declaration that an effort is over.
 _Avoid_: done, finished, complete
 
 **Effort closing report**:
-What the manager hands the human once the frontier empties. It covers only what the human has not
-already seen. It carries what landed, the supersession chains, the state of the bar, every flag still
-outstanding, what the sweep found, and every sweep round.
+What the manager hands the human once the frontier empties.
 _Avoid_: completion report, summary

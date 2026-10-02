@@ -32,9 +32,7 @@ the section. The statements below add what those terms demand of you in particul
   human's rules and steering the map holds. `## The seven files` in `graph-conventions.md` says where the
   map records the bar's commands. That record is confirmed against the repo before use, because a
   repo's own live statement of its commands is authoritative.
-- A dead attempt is resumed where you can resume it, and replaced only where you cannot. An attempt
-  stopped from the human's side is replaced only on the human's answer. A replacement is a new
-  attempt, recorded after the one it replaces.
+- A replacement is a new attempt, recorded after the one it replaces.
 - A handover has seven parts every time: its node's answer written as the node will hold it, the
   one-line index line for the effort's index of decisions, its flags, the nodes it surfaced, which
   resolved node its work changes (`INVALIDATIONS`), the open conditions it searched and any replacement
