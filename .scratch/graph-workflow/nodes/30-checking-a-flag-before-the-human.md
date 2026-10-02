@@ -163,3 +163,9 @@ RETROSPECTIVE (interim, so far in this attempt):
 3. Would have helped: the node naming the current skill sections it would change (checker "## What you are given", manager item 2 under "What nothing here settles").
 4. Stale: the node's "forty-nine flags" count, now 755 lines in flags.md. The node also predates the standing yes, which changes where flags reach the human.
 ```
+
+#### The human's answer to question 1, 2026-10-02
+
+`verbatim`: *"yes"*
+
+The manager had put the question as "Should the checker do the first check, in the same run, under this design?", closing with "Please answer: "ok for recommended", or name an alternative." The reply "yes" answers that question and names no alternative, so it takes the worker's `RECOMMENDED`, the package (a) to (e).
