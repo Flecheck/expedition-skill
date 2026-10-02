@@ -136,6 +136,36 @@ RETROSPECTIVE
 
 *The manager's note:* an unmet bar goes back to the worker, with both findings, in one correction round. The checker's question on part 5 against `SKILL.md`'s `## Flags` goes to the human at the gate.
 
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02, after correction round 1. The same checker, resumed within this node.*
+
+> PASS
+>
+> Node 372, "Ship an `expedition-triage` skill", run 2, after a correction round. I re-ran the bar in full, re-checked the two run 1 findings, and re-checked parts 5 and 6 of the condition, which the edits touch. I read the whole changed file and diffed it against my run 1 reading myself; I did not rely on the handover. The only changes are the two passages the handover names.
+>
+> Condition, one line per part. I searched the text with line breaks removed (`tr '\n' ' ' < F | tr -s ' '`, then `grep -oE '<phrase>' | wc -l`).
+> 1. Met. Established in run 1 and not touched by this round. Front matter has `name: expedition-triage` and a description reading "The human invokes it in an expedition's manager thread" to triage open nodes and outstanding flags.
+> 2. Met. Established in run 1, untouched.
+> 3. Met. Established in run 1, untouched.
+> 4. Met. Established in run 1, untouched.
+> 5. Met. Re-checked. "is `resolved` or `superseded`" (proposed for settling in one batch) and "is `open` or `claimed`" (left outstanding) each match once. The new merged-node paragraph also leaves those flags outstanding, so it agrees with this part. At triage time a merged node is still open.
+> 6. Met. Re-checked. `### Supersede` (2), `### Resolve` (1), `### Rule out of scope` (1), `### Amend an acceptance condition` (1) and `### Settle a flag` (2) are named, and all five headings exist in .claude/skills/expedition/graph-conventions.md. "discharged with no edit, and why" is present. The no-id sentence states a change to step 2 of `### Settle a flag` and does not restate the procedure's steps.
+> 7. Met. Established in run 1, untouched.
+> 8. Met. Re-run. `git status --porcelain --ignored --untracked-files=all` printed only `?? .claude/skills/expedition-triage/SKILL.md`, and `git diff 7fe98da3 --stat` printed nothing.
+> 9. Met. The condition records no search, so there is nothing to run.
+>
+> Bar. The repo has no build, tests, formatter or CI. map-implementation-rules.md records this, and the repo root has no agent-instruction file. So the bar is the standards in that file. I read only the standards in it.
+> - F1 (writing rule 6) is cleared. "This changes the rule under `## Flags` in your contract for this one case: ..." matches once. "this changes step 2 of `### Settle a flag`" matches once.
+> - F2 (writing rule 5) is cleared. The sentence now reads "Where a merged node holds a flag, and the flag judges the clauses that move, leave the flag outstanding." I listed every " that " and " which " in the file with `grep -oE '.{40} (that|which) .{30}'` and read the seven hits by hand. Each has one clear referent.
+> - The standards that bore on this work are writing rules 5 and 6, graph-conventions.md, the glossary's `_Avoid_` lines, and `/writing-for-agents`. No reviewing skill is named for this repo, so none was run.
+>
+> My run 1 question, on part 5 against `## Flags`, is still open. On the coordinator's instruction I have not repeated it here. It goes to the human at the gate.
+>
+> Not checked: nothing outside the one changed path. I read no part of the record.
+
+*The manager's note:* run 1's question beside its outcome is still open, so the standing yes does not cover this gate; it goes to the human.
+
 ## Handover, attempt 1, correction round 1
 
 *The worker's own text, pasted, 2026-10-02.*
