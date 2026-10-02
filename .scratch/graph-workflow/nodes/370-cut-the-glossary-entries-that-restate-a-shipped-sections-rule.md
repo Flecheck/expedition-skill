@@ -39,7 +39,8 @@ Can each glossary entry in the nine pairs node 355 found be cut to its meaning a
 >     - Closed: `## Closing an effort` and `## Starting an effort`.
 >     - Effort closing report: `## Closing an effort`.
 >     - Starting an effort: `## Starting an effort`.
->     - Node closing report: `### Picking the next node`.
+>     - ~~Node closing report: `### Picking the next node`.~~ *Superseded 2026-10-02 by the human's amendment; see `#### The human's answer to checker run 1, 2026-10-02`.*
+>     - Node closing report: `### Picking the next node` and `## Flags`, both in `.claude/skills/expedition/SKILL.md`.
 >     - Flag: `## Flags`.
 >     - Stop and Final stop: `## Stopping a running worker`.
 >     - Adoption: `## Your steps, in order` in `.claude/skills/expedition/adoption.md`.
@@ -170,6 +171,10 @@ RETROSPECTIVE:
 > - Is the "because those flags settle there" sentence still correct to keep in the Node closing report entry? Flags on an implementation node that has a gate settle at the gate, not at the node closing report (`## Flags`). Clause 15's wording, which is the condition's and not the worker's to depart from, makes the sentence stay in the entry when it fails the check. Keeping it would keep a statement the glossary's new opening sentence says belongs in a contract section.
 
 *The manager's note:* a `FAIL` is outside the standing yes. Finding 1 and the checker's question turn on whether clause 15's named place for the Node closing report entry is to be widened to `## Flags`, which only the human can amend; it goes to the human.
+
+#### The human's answer to checker run 1, 2026-10-02
+
+The manager put finding 1 and the checker's question to the human, recommending that clause 15 be amended for the Node closing report entry so that its places are `### Picking the next node` and `## Flags`, and that the cut be kept. The alternative offered was to keep the condition and restore the sentence. The human, `verbatim`: *"ok"*. The manager had said "ok for recommended" would mean that amendment. So clause 15's Node closing report line is amended where it stands, the work stands as written, and the same checker re-checks under the amended condition.
 
 ## Flags
 
