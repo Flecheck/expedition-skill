@@ -1,8 +1,14 @@
 # Ship the disputed-finding route into the implementation and manager contracts
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The implementation and manager contracts now let a worker leave a checker finding it believes false unfixed, give its reason in GATE PAYLOAD, and have the human settle it at the gate.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `0f8401da`. Flag 375.1 settles at the node closing report.
 
 ## Question
 
@@ -104,4 +110,6 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`375.1` `ASSUMPTION` — *The worker's own text.* Condition clause 3 asks for a sentence saying no other finding is left unfixed on the worker's own authority. Node 34's draft said "Leave no other finding unfixed on your own authority." That sentence sits in the paragraph about a fix that would be a new piece of work, so there "other" would seem to mean "other than the new-work finding" rather than "other than a finding you believe is false". I wrote "Apart from a finding you believe is false, leave no finding unfixed on your own authority." It says the same thing with one clear referent, which follows standing writing rule 5. I also dropped "at the gate" from the old sentence, because the new sentence covers the whole time before the gate. The `GATE PAYLOAD` part was reflowed across three lines, and its words after the new opening are unchanged.
+`375.1` `ASSUMPTION` **· settled** — *The worker's own text.* Condition clause 3 asks for a sentence saying no other finding is left unfixed on the worker's own authority. Node 34's draft said "Leave no other finding unfixed on your own authority." That sentence sits in the paragraph about a fix that would be a new piece of work, so there "other" would seem to mean "other than the new-work finding" rather than "other than a finding you believe is false". I wrote "Apart from a finding you believe is false, leave no finding unfixed on your own authority." It says the same thing with one clear referent, which follows standing writing rule 5. I also dropped "at the gate" from the old sentence, because the new sentence covers the whole time before the gate. The `GATE PAYLOAD` part was reflowed across three lines, and its words after the new opening are unchanged.
+
+*The manager's note, 2026-10-02:* flag 375.1 settles at the node closing report that closes this node, which names its gate as taken under the standing yes.
