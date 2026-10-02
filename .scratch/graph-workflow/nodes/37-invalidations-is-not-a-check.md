@@ -1,7 +1,7 @@
 # Nothing tells a worker to hold its work against the record
 
 Type: grilling
-Status: open
+Status: claimed
 
 ## Question
 
