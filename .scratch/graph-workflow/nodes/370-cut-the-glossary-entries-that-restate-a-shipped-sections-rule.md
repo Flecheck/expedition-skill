@@ -176,6 +176,49 @@ RETROSPECTIVE:
 
 The manager put finding 1 and the checker's question to the human, recommending that clause 15 be amended for the Node closing report entry so that its places are `### Picking the next node` and `## Flags`, and that the cut be kept. The alternative offered was to keep the condition and restore the sentence. The human, `verbatim`: *"ok"*. The manager had said "ok for recommended" would mean that amendment. So clause 15's Node closing report line is amended where it stands, the work stands as written, and the same checker re-checks under the amended condition.
 
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02, under the condition as the human amended it. The same checker, resumed within this node.*
+
+> PASS
+>
+> This is a re-check after the human amended the condition. The work is unchanged: `git diff --stat` still shows the same two paths with 20 insertions and 47 deletions, the same as run 1. `git status --porcelain --untracked-files=all` lists only `.claude/skills/expedition/SKILL.md` and `.claude/skills/expedition/glossary.md`. Both files were last modified before run 1. I read the changed paths as the work under the map-implementation-rules rule for record paths; neither is a record path. In `map-implementation-rules.md` I read only the standards. No standard moved.
+>
+> **What the amendment affects, re-established:**
+> - Clause 15, Node closing report, against the amended places `### Picking the next node` and `## Flags`. This is the part I failed in run 1.
+>   - "It names the node that closed." Picking says it "names the node that just closed".
+>   - "It carries in full every flag that node holds, because those flags settle there." Picking says the report "carries every one of those flags, in the fuller form". `## Flags` says "Otherwise, settle them at the node closing report" and "that node's flags settle at its node closing report too".
+>   - "It names the work the manager started in response." Picking says it names "the node and kind you started".
+>   - "It awaits no answer and takes no place in the queue of things waiting for the human." Picking says it "awaits no answer and takes no place in the queue above".
+>   - Search used for `## Flags`: `awk '/^## Flags/{f=1;next} f&&/^##/{f=0} f' .claude/skills/expedition/SKILL.md | tr '\n' ' ' | grep -o '[^.]*node closing report[^.]*\.'`
+>   - Every removed sentence now has a counterpart in its places, so the cut is correct.
+>
+> **What the amendment does not affect, standing from run 1:**
+> - Scope: only the two allowed files changed.
+> - Clause 1: the new sentence is in the opening paragraph, word for word, directly after "A term is added only once a node has settled it." (substring check over the unwrapped paragraph).
+> - Clauses 2 to 6 and 9 to 12: each entry's unwrapped text equals the dictated text exactly (Python parse of the glossary, string equality).
+> - Clauses 7 and 13: only the named sentence was removed from Starting an effort and from Destination.
+> - Clause 8, Adoption: the text is unchanged. That is legitimate under clause 15, because `adoption.md`'s `## Your steps, in order` never says the import nodes are `precondition` nodes and never contrasts adoption with starting from a conversation.
+> - Clause 14: the SKILL.md diff is only the one bullet, and the handover bullet is untouched.
+> - Clause 16: all 58 entries keep their names and order, every `_Avoid_` line matches HEAD, and no heading line changed.
+> - Clause 15, the other entries: each removed sentence has a counterpart in its place.
+>
+> **The bar, re-run in full:** the repo has no build, no tests, no formatter and no CI. `git diff --check` printed nothing (rc=0). The standards I read:
+> - Bore on the work, and still hold: the `_Avoid_` lines, writing rules 5 and 6, and ground rules 1 and 4.
+> - Did not bear on this prose change: `/coding-principles` and `/naming`.
+> - Read with them: `graph-conventions.md` and `/writing-for-agents`.
+>
+> No reviewing skill is named for this repo, so I ran none.
+>
+> NOT COVERED:
+> - "Where a sentence those clauses name states something its place does not, that sentence stays in the entry, and the worker reports it rather than moving it." Whether the worker reported the retained Adoption sentence is in its handover, which is outside the paths I hold. This PASS covers every other part.
+
+*The manager's note:* the one NOT COVERED item is established from the worker's handover, which reports the retained Adoption sentence ("**Adoption is not cut. Clause 15 kept it.**") and proposes [node 374](374-cut-the-glossarys-adoption-entry.md) for it.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 2 outcome, `PASS`. No exclusion applies: run 2 handed back no question and no raise, and its one uncovered part is established above. Run 1's `FAIL` was settled by the human's amendment above. This settles none of the node's flags; they settle at the node closing report.
+
 ## Flags
 
 `370.1` `ASSUMPTION` — *The worker's own text.* For the Scribe entry, I read "join them into one continuous text" as stated by `### You write as a scribe`, whose list of what assembling is includes "placing runs one after another". Placing pieces one after another is joining them into one continuous text. So the sentence was removed under clause 4 rather than kept under clause 15. If the human reads it as a broader permission than the section's, the fix is to restore that one sentence to the Scribe entry.
