@@ -1,8 +1,14 @@
 # Cut the pointers that list their target to one clause
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+Four pointers in `SKILL.md` and `graph-conventions.md` now name their target heading and one clause of purpose, and no longer list the marks, rules or duties those headings hold.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1 with a question, which the human settled at the gate by approving with nothing added. The work landed as commit `ad2c6fe9`. Flag 368.1 settles at this gate.
 
 ## Question
 
@@ -135,4 +141,4 @@ The manager put the gate to the human, with checker run 1's question and flag 36
 
 ## Flags
 
-`368.1` `ASSUMPTION` — *The worker's own text.* Clause 1 removes the words saying that `### Recording the human's words` holds "whether an entry goes under `## Interview` or `## Review`". Clause 5 requires that each removed statement still be stated at the heading the pointer names. That heading's first sentence names the two sections as the ones that hold the human's words. Which kind of entry goes in which section is stated under the sibling descriptions `### \`## Review\`` and `### \`## Interview\`` in the same file, not under the named heading itself. I judged that no rule is lost: the removed words described the target, and the placement rule is still in `graph-conventions.md`. I did not edit the target to repeat it.
+`368.1` `ASSUMPTION` **· settled** — *The worker's own text.* Clause 1 removes the words saying that `### Recording the human's words` holds "whether an entry goes under `## Interview` or `## Review`". Clause 5 requires that each removed statement still be stated at the heading the pointer names. That heading's first sentence names the two sections as the ones that hold the human's words. Which kind of entry goes in which section is stated under the sibling descriptions `### \`## Review\`` and `### \`## Interview\`` in the same file, not under the named heading itself. I judged that no rule is lost: the removed words described the target, and the placement rule is still in `graph-conventions.md`. I did not edit the target to repeat it.
