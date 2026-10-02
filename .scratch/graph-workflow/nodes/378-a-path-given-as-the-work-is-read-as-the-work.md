@@ -18,3 +18,29 @@ Add the one sentence node 172 decided to `.claude/skills/expedition-checker/SKIL
 > 2. No other sentence of `.claude/skills/expedition-checker/SKILL.md` changes, and no heading in it is renamed. Re-wrapping the lines of the one paragraph that holds the new sentence is allowed, provided that paragraph's words are otherwise unchanged when compared with line breaks joined into single spaces.
 > 3. No file other than `.claude/skills/expedition-checker/SKILL.md` changes.
 > Scope: this came from no search. The named sentence and file are the work, not instances of a defect.
+
+## Handover, attempt 1
+
+*The worker's own text, pasted, 2026-10-02.*
+
+````
+HANDOVER:      Say in the shipped checker contract that a path given as the work is read as the work
+ANSWER:        `.claude/skills/expedition-checker/SKILL.md`, under `## What you are given`, now has the sentence "A path you were given as the work is the work wherever it sits, and you read it." It sits between "The one exception is `map-implementation-rules.md`, and only for the standards in it." and "The acceptance condition as given to you is the only statement of intent you get." Only the last two lines of that one paragraph were re-wrapped, and they stay within the paragraph's 104-column width. No other sentence or heading changed. Before the edit I checked at 5478a1376 that, with line breaks joined, the two neighbouring sentences stood next to each other exactly once, and that "wherever it sits" was not in the file. Both held. After the edit, the three sentences in order match exactly once on the joined text.
+INDEX LINE:    The shipped checker contract's `## What you are given` now says a path given as the work is the work wherever it sits and is read, placed right after the implementation-rules exception.
+FLAGS:         none
+NEW NODES:     none
+INVALIDATIONS: No resolved node is contradicted. This carries out node 172's answer. One extension: the rule in `map-implementation-rules.md` that begins "An implementation node's work on this effort may be the effort's own record" says the contract's "open no other file" instruction governs the route standards take, not the changed paths. The shipped contract now says the general part of that itself, for any path handed over as the work. The parts specific to this effort's record stay in the map: derive no intent from record files, the bookkeeping FAIL, and saying so in the outcome. Node 163 placed that record rule in the map rather than the skill, and that placement still stands, because the sentence added here is the general route statement node 172 decided, not the record rule.
+CONDITIONS:    I searched every open node's file (107 files whose Status is not resolved, dropped, moot or merged) for: "expedition-checker/SKILL.md", "The one exception is", "only statement of intent", "given as the work", "wherever it sits", "## What you are given", "open no other file", "Leave the record unread", "six givens", "map-implementation-rules.md`, and only", "changed paths". Outside node 378 itself, nothing matched in any `## Acceptance condition` or `## Question` in a way this work makes wrong. "expedition-checker/SKILL.md" matched 15 other open nodes by path. None of their matched text quotes the edited paragraph. Node 214 (open) shares the file, and its condition concerns the table under `### When what you check against is itself the problem`. The other matches were in a superseded node (250) or in handover and review text (219, 30), not in conditions or questions. One scheduling note for the manager, outside the search sections: node 30 (claimed) records in its `## Interview` a plan to reword the "six givens above are everything you are given" sentence. That is the first sentence of the same paragraph this node edited, so the two edits may overlap when integrated. No replacement clauses written.
+MISSING FROM MAP: none
+GATE PAYLOAD:  Checker findings: none received yet. Bar: the repo states no build, test or format commands. There is no CLAUDE.md or AGENTS.md at the root and no manifest, which matches the record in map-implementation-rules.md ("no build, no tests, no formatter and no CI"), so there was no difference to report. The bar is its non-command half: the standards plus the acceptance condition. Paths touched: .claude/skills/expedition-checker/SKILL.md (in worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/378-work-path). Method-skill parts skipped: none invoked.
+Proposed commit message:
+  Checker contract: a path given as the work is read as the work
+
+  Node: graph-workflow/378
+
+RETROSPECTIVE:
+1. What I had to hunt for: which open nodes are open (no index of status, so I derived it with a grep on Status lines), and whether "six givens" in node 30 sat in a condition or only in interview text.
+2. What arrived that this node did not need: most of map.md and map-implementation-rules.md. Of map-implementation-rules.md only the bar's commands paragraph and the record-rule paragraph bore on this one-sentence edit.
+3. What would have made this easier: a list of open node ids in the spawn, or a status-only index, so the CONDITIONS search does not need its own status derivation.
+4. What was stale, wrong or contradictory: nothing found. The manager's pre-claim checks held exactly.
+````
