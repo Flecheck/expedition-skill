@@ -1,8 +1,14 @@
 # Ship the check before a claim into the manager's contract
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+SKILL.md's `### Changing one after it is written` now tells the manager to read a node's annotations, amendments and notes and search for each quoted passage before claiming it.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `88e5f7d6`. Flag 373.1 settles at the node closing report.
 
 ## Question
 
@@ -85,4 +91,6 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`373.1` `ASSUMPTION` — *The worker's own text.* Clause 2 asks for "the manager's own notes". The glossary's **Manager note** means the manager's annotation on a relayed question, which is a narrower thing. I wrote "your own notes" as plain words for any note the manager wrote on the node, and did not use the glossary term.
+`373.1` `ASSUMPTION` **· settled** — *The worker's own text.* Clause 2 asks for "the manager's own notes". The glossary's **Manager note** means the manager's annotation on a relayed question, which is a narrower thing. I wrote "your own notes" as plain words for any note the manager wrote on the node, and did not use the glossary term.
+
+*The manager's note, 2026-10-02:* flag 373.1 settles at the node closing report that closes this node, which names its gate as taken under the standing yes.
