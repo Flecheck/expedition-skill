@@ -166,6 +166,10 @@ RETROSPECTIVE
 
 *The manager's note:* run 1's question beside its outcome is still open, so the standing yes does not cover this gate; it goes to the human.
 
+#### The human's answer at the gate, 2026-10-02
+
+The manager put checker run 1's question to the human, recommending one correction round: the skill's batch sentence names `## Flags` and states that, for this case, the human's approval of the batch is the settling moment, as rule 6 says a passage changes a rule for its own case. The alternative offered was approval as is, with a node adding the triage batch to `## Flags` as a settling moment. The human, `verbatim`: *"ok for recommended"*. So the gate's outcome is **correct**, and the node goes to correction round 2.
+
 ## Handover, attempt 1, correction round 1
 
 *The worker's own text, pasted, 2026-10-02.*
