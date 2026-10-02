@@ -203,6 +203,72 @@ RETROSPECTIVE
 
 *The manager's note:* an unmet bar goes back to the worker, with both findings, in one correction round. The checker's two questions go to the human at the gate.
 
+## Handover, attempt 1, correction round 1
+
+*The worker's own text, pasted, 2026-10-02.*
+
+````
+CORRECTION ROUND 1 (checker run 1: FAIL on the bar, writing rule 5)
+
+What I changed: I edited one passage, the retrospective bullet in `.scratch/graph-workflow/map-manager-only.md` `## Notes`, which is the bullet the acceptance condition names (clause 1, read under node 366's amendment). The wording changed and what it says did not. Clause 1's content is all still there, including the phrases "is unchanged" and "rather than as a later separate act". The quoted instruction and the four questions are untouched, so clause 3 still holds. `map-history.md` did not change in this round. The verbatim text it banks is the bullet's old wording from before this node, so it needed no change.
+
+- Finding 1 (bold on text that is not a term being defined): fixed.
+  - I removed the bold from "The worker names each standing item it reports" by dropping that sentence. It only repeated the sentence after it.
+  - I removed the bold from "Two duties on the manager come with the four questions".
+  - I removed the bold from the 30-word filing clause.
+  - Check: `git diff --word-diff=plain -- .scratch/graph-workflow/map-manager-only.md | grep -o '{+[^}]*+}' | grep -c '\*\*'` now returns 0.
+- Finding 2 (more than one idea in a sentence, strained construction): fixed by splitting sentences, across all text this work added, not only the three instances named.
+  - "It reuses a name … where one fits." / "It mints a new name where none fits."
+  - "The first duty is that the manager disposes of each item … or saying why not." / "That duty is unchanged."
+  - "The second duty is that the manager ranks each named standing item among what it picks next by that name's count." / "A repeated standing item is not minted as a node on reaching any count." / "Repetition therefore orders work rather than triggering it."
+  - "The worker hands it back as text." / "The manager writes it into the node file in the same edit that writes that node's answer, its flags and its line in `decisions.md`, rather than as a later separate act." / "It is written last in the file, so the mandatory section order is untouched." / "It is written under the heading `## Retrospective` and under no other heading."
+  - The citation is now two sentences: "… were settled at [node 212](…)." / "The wording they replaced is in [map-history.md](map-history.md)."
+- The checker's question on whether to keep "is unchanged" and "rather than as a later separate act": I did not act on it, as instructed. Both phrases stand. It is for the human at the gate.
+
+HANDOVER:      Replace the mint-on-second-report rule in the map
+
+ANSWER:        Unchanged from the first handover in substance. The retrospective bullet in `.scratch/graph-workflow/map-manager-only.md` `## Notes` now states three things:
+- The worker gives each standing item it reports a short name. It reuses an existing name where one fits and mints one where none does. It states how many earlier retrospectives carry the name, with their node ids. It finds existing names by searching the retrospective sections under `.scratch/graph-workflow/nodes/`, whatever heading each section was filed under, and not from memory or from a list.
+- A count ranks the item among what the manager picks next and mints no node. The manager's duty to dispose of each item in the closing report is unchanged.
+- The manager writes the retrospective in the same edit that resolves the node, last in the file, under `## Retrospective` only.
+
+The two sentences these replace are banked verbatim at the end of `.scratch/graph-workflow/map-history.md`, under "## Superseded from `map-manager-only.md` at node 219 — …". In this round the bullet's added text was also brought to writing rule 5: no bold on text that is not a term being defined, and one idea in each sentence.
+
+INDEX LINE:    The map-manager-only.md retrospective bullet now has the worker name and count each standing item, ranks a repeat instead of minting a node, and files retrospectives in the resolving edit.
+
+FLAGS:         Unchanged from the first handover. Both are ASSUMPTION flags:
+- I replaced the old filing sentence and banked it, rather than adding a second filing sentence beside it.
+- The naming search covers every heading form a retrospective section was filed under.
+
+NEW NODES:     none
+
+INVALIDATIONS: Unchanged. Flag 141.3 and node 141 §4's second-report trigger are contradicted. Node 212 already recorded this.
+
+CONDITIONS:    Unchanged. This round changed no wording an open node's condition or question depends on. Node 220's blocker on this node is still discharged when this lands.
+
+MISSING FROM MAP: Unchanged. The map does not give the heading format for map-history.md entries, so I copied it from recent entries.
+
+GATE PAYLOAD:  Checker findings: Finding 1 and Finding 2 are both fixed, as described above. I left no finding unfixed. The checker's question on the two phrases is open for the human.
+Paths touched: .scratch/graph-workflow/map-manager-only.md and .scratch/graph-workflow/map-history.md, in the worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/219-retrospective-names. Only map-manager-only.md changed in this round. No file under `.claude/` was touched.
+Bar: there is no build, test or format command in the repo, and `git diff --check` is clean.
+Integration: node 190 also appends to the end of map-history.md, so expect a conflict there and keep both appended blocks.
+Proposed commit message:
+  Replace the mint-on-second-report rule in the retrospective bullet
+
+  The worker names and counts each standing item it reports, a count
+  ranks work rather than minting a node, and the manager files the
+  retrospective in the edit that resolves the node. The replaced
+  sentences are banked verbatim in map-history.md.
+
+  Node: graph-workflow/219
+
+RETROSPECTIVE (this round)
+1. What I had to hunt for: nothing. The findings file gave the instances and a command to measure the extent.
+2. What arrived that this node did not need: nothing in this round.
+3. What would have made this easier: rule 5's "one idea per sentence" and "bold only where defined" are rules I was given in the first round. Checking added text against them before handing back, for example with the checker's grep for `**` in added segments, would have avoided this round.
+4. What was stale, wrong or contradictory: the surrounding bullet text is heavily bolded. That pre-existing style pulls new text toward bold, which rule 5 forbids for text that is not a term being defined.
+````
+
 ## Flags
 
 `219.1` `ASSUMPTION` — *The worker's own text.* I rewrote the old filing sentence as well as the mint sentence, even though it did not strictly contradict clause 1(d). It said the manager "files it … placed last" but did not say when. I replaced it rather than adding a second sentence beside it, so the bullet states the filing once. Under clause 2, its old text went verbatim to map-history.md.
