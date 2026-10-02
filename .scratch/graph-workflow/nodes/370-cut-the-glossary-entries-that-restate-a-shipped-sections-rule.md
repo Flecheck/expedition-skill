@@ -1,7 +1,7 @@
 # Cut the glossary entries that restate a shipped section's rule to their meaning
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
