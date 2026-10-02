@@ -1,8 +1,14 @@
 # Ship the human-edits-a-claimed-tree rule
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The implementation contract now says the tree is the worker's alone among the agents and the human may edit it. The worker keeps human text and raises conflicts. The manager passes the human's words on at the next resume.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `df8357334`. Flag 377.1 settles at the node closing report.
 
 ## Question
 
@@ -129,4 +135,6 @@ Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, sc
 
 ## Flags
 
-`377.1` `ASSUMPTION` — *The worker's own text.* Clause 6 says the change "adds no more than five lines across the two files". I read that as the net growth in line count, which is five here. Rewrapping the replaced sentence also rewrites one existing line, so `git diff --numstat` reports 6 insertions and 1 deletion. Making the insertion count five as well would have meant one manager-skill line far past the file's wrap width of about 105 characters, or cutting words the condition requires. No exchange with the human took place. I made the edits, measured the diff, and chose the net reading.
+`377.1` `ASSUMPTION` **· settled** — *The worker's own text.* Clause 6 says the change "adds no more than five lines across the two files". I read that as the net growth in line count, which is five here. Rewrapping the replaced sentence also rewrites one existing line, so `git diff --numstat` reports 6 insertions and 1 deletion. Making the insertion count five as well would have meant one manager-skill line far past the file's wrap width of about 105 characters, or cutting words the condition requires. No exchange with the human took place. I made the edits, measured the diff, and chose the net reading.
+
+*The manager's note, 2026-10-02:* flag 377.1 settles at the node closing report that closes this node, which names its gate as taken under the standing yes.
