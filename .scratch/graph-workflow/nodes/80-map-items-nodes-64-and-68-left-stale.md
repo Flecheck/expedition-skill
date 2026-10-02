@@ -170,6 +170,8 @@ RETROSPECTIVE:
 
 *The manager's note, 2026-09-27:* node 345's map pass carried out this node's clause 2 ("worktrees" is gone from the firstmate list in the fog item, old text in `map-history.md`) and found clause 1 already met. Clause 3, re-describing the async-landing seam and the price of a reject against today's landing lifecycle, is new analysis and stays open. The fog items sit in `map-manager-only.md`, which this node's condition does not name.
 
+`80.2` `ASSUMPTION` — *The worker's own text.* The condition names only the seam and the cost of a reject. I added two consequences that follow directly from the current policy: the gate payload can no longer point at uncommitted changes, and SKILL.md's fixed order "approval before any commit" breaks. I also added the case of a node superseded after its work has merged. I judged these to be part of "describing the seam" against the policy as it stands, not new items. I did not say what the flip does to a correction round, because the policy gives no ground for it.
+
 ## Amendment, 2026-09-29 (from node 366)
 
 *Written by [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s worker and filed by the manager, under the human's answer to node 366's Q3 (`verbatim`: *"ok"*). The worker's own text, pasted:*
@@ -180,5 +182,3 @@ Block 6 (node 80's condition, replaced whole, since it is unclaimed):
   > 2. The item's replaced text is appended verbatim to `map-history.md` under a heading mirroring the section it came from. `map-history.md` gains text and loses none.
   > 3. No other item of `map-manager-only.md` changes.
   > 4. Scope came from no search: the item named is the place of the work.
-
-`80.2` `ASSUMPTION` — *The worker's own text.* The condition names only the seam and the cost of a reject. I added two consequences that follow directly from the current policy: the gate payload can no longer point at uncommitted changes, and SKILL.md's fixed order "approval before any commit" breaks. I also added the case of a node superseded after its work has merged. I judged these to be part of "describing the seam" against the policy as it stands, not new items. I did not say what the flip does to a correction round, because the policy gives no ground for it.
