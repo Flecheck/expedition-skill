@@ -1,8 +1,14 @@
 # Ship an `expedition-triage` skill
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+Ships `expedition-triage`, an invoked skill: check open nodes against the tree, sort them into moot, dropped, merged or kept, propose with flag settling in one payload, then act by graph-conventions procedures.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1` and its two correction rounds. Run 1 failed on the bar; run 2 passed with run 1's question still open; the human chose the correction at the gate; run 3 passed, and the gate was taken under the standing yes. The work landed as commit `3196288d`. Flags 372.1, 372.2 settle at the node closing report.
 
 ## Question
 
@@ -328,6 +334,8 @@ RETROSPECTIVE
 
 ## Flags
 
-`372.1` `ASSUMPTION` — *The worker's own text.* The name the condition fixes, `expedition-triage`, shares the word "triage" with the cascade contract's triage role (`.claude/skills/expedition-cascade/SKILL.md`, `## Triage`, `ROLE: triage`). Node 87's question also speaks of a "triage agent". I kept the name the condition fixes and titled the H1 "Triaging the open nodes and the outstanding flags", so that the skill's heading does not read as the cascade role. The glossary defines neither use.
+`372.1` `ASSUMPTION` **· settled** — *The worker's own text.* The name the condition fixes, `expedition-triage`, shares the word "triage" with the cascade contract's triage role (`.claude/skills/expedition-cascade/SKILL.md`, `## Triage`, `ROLE: triage`). Node 87's question also speaks of a "triage agent". I kept the name the condition fixes and titled the H1 "Triaging the open nodes and the outstanding flags", so that the skill's heading does not read as the cascade role. The glossary defines neither use.
 
-`372.2` `ASSUMPTION` — *The worker's own text.* I added two rules the condition does not demand, both from the cases the manager met while carrying out node 366's answer. First, a flag on a merged node that judges the clauses that move stays outstanding and settles at the receiving node's gate (the flag 89.1 case). Second, a flag entry with no id is settled by its `flags.md` line plus a note from the manager on the node (the same note the manager wrote in commit 44588fca). Both are short, and neither contradicts a clause.
+`372.2` `ASSUMPTION` **· settled** — *The worker's own text.* I added two rules the condition does not demand, both from the cases the manager met while carrying out node 366's answer. First, a flag on a merged node that judges the clauses that move stays outstanding and settles at the receiving node's gate (the flag 89.1 case). Second, a flag entry with no id is settled by its `flags.md` line plus a note from the manager on the node (the same note the manager wrote in commit 44588fca). Both are short, and neither contradicts a clause.
+
+*The manager's note, 2026-10-02:* flags 372.1, 372.2 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
