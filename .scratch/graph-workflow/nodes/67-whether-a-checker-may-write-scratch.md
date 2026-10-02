@@ -83,3 +83,9 @@ RETROSPECTIVE
 3. What would have made this easier: a list in the node of which contracts carry an absolute no-file rule, with their rule numbers.
 4. What was stale, wrong or contradictory: the node's decision 4 implies node 59's implementer took a licence its rule denied. The implementation contract has no such ban, so that worker broke no written rule. The node also quotes "/tmp", while the checkers' later reports say $TMPDIR; I treated both as the same thing.
 ```
+
+#### The human's answer to question 1, 2026-10-02
+
+`verbatim`: *"ok"*
+
+The manager had put the question with the line "Please answer: "ok for recommended", or name an alternative." So the reply takes the worker's `RECOMMENDED`: the checker, grilling, research and cascade contracts each gain the one sentence "A temporary file is not a file in this contract's sense: you may write one in a new directory under the system's temporary directory, and you remove that directory before you hand back.", and nothing more.
