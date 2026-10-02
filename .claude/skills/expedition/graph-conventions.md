@@ -282,7 +282,9 @@ one node. It holds three kinds of entry and nothing else:
    or the bar was not met. A checker may raise instead of judging. Its entry then gives no verdict and
    says what it raised.
 2. Each correction round, numbered, with the human's words and what the worker changed. The human's
-   words are recorded as `### The human's words` in `SKILL.md` says.
+   words are recorded as `### The human's words` in `SKILL.md` says. For a round the manager starts
+   when integrating the node's work conflicts, the entry records the paths of the conflicted files in
+   place of the human's words.
 3. The gate's outcome: approve, correct or reject. For a reject, the entry also records what
    implementing the node surfaced, and which of the three routes under `### What reject means` in
    `SKILL.md` the node then took.

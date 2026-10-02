@@ -324,6 +324,10 @@ says where the map records the policy and what the policy covers. This contract 
 approval before any commit, and the graph before the cleanup. The one other thing that permits a commit
 is a standing yes covering the gate, which `expedition-standing-yes` takes as the human's approval.
 
+An implementation node superseded before its work has landed is cleaned up in the same order as a
+reject. Edit the graph first. Then remove the node's working tree, and anything else that holds that
+work.
+
 ### What reject means
 
 A reject means that implementing the node showed this code should not exist. It says nothing about the
