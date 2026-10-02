@@ -1158,3 +1158,13 @@ The seam is one step — the manager committing before the gate rather than afte
 *Replaced, and it stood as:*
 
 **The worker hands it back as text and the manager files it** in a section of its own headed `## Retrospective`, placed last in the node file.
+
+## Superseded from `map-manager-only.md` at node 276 — the landing policy's ground for naming the worktree's path
+
+*Replaced under the `Change the map` procedure at [The landing policy says the work sits outside the repository](nodes/276-the-landing-policy-says-the-work-sits-outside-the-repository.md). The sentence grounded the rule that the gate payload names the worktree's path on the work sitting in a checkout outside the repository, and the worktree has been inside the repository since [Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md). What replaces it keeps the rule and grounds it on the work being uncommitted, so that the path is how the work is found. The rest of the paragraph is unchanged and is not reproduced here.*
+
+### From *Landing an implementation node's work* — the landing policy's sentence on what the gate payload names
+
+*Replaced, and it stood as:*
+
+**The gate payload names the worktree's path** ([node 231](nodes/231-a-gate-payload-stops-carrying-a-diff-command.md), [node 336](nodes/336-carry-the-rules-on-what-reaches-the-human-the-code.md)), because an implementation node's work is uncommitted in a checkout outside the repository and `git diff` where the human is standing does not show it — their words on being handed a gate without it: *"what are the changes ? I don't see them in git ?"*.
