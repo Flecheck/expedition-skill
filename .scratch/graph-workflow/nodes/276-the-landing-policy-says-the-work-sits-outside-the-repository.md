@@ -104,6 +104,61 @@ RETROSPECTIVE:
 4. What was stale, wrong or contradictory: clause 3's link target does not resolve from map-manager-only.md, as flagged above. Node 209's question still calls the landing section part of "the rules file", but it moved to map-manager-only.md at node 188. The manager's notes checked out: the phrase was present, and the second mention of "outside" is in an account.
 ````
 
+## Review
+
+### Checker run 1 — `FAIL` (the bar)
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c276.md`.*
+
+> FAIL: the bar
+>
+> Node 276, "The landing policy says the work sits outside the repository". Worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/276-landing-ground, base 343e0c604, diff from `git -C <worktree> diff`.
+>
+> ### Finding 1 (the bar: writing rules 1 and 5, and the `/writing-for-agents` rule on duplication)
+>
+> - Instances: the change adds this sentence to the `## Landing an implementation node's work` section of `.scratch/graph-workflow/map-manager-only.md`: "The worktree is inside the repository, placed there by [Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md), and it is ignored there, so its changes do not show in the human's `git status` or `git diff`."
+>   (a) It repeats a meaning the same paragraph already states in its first sentence, "placed at `.scratch/graph-workflow/worktrees/<NN>-<name>` **inside** the repository and ignored there". This breaks the `/writing-for-agents` pruning rule (keep one meaning in one place, because duplication is a defect) and writing rule 1 ("Compress the prose that explains why").
+>   (b) It puts several ideas in one sentence: where the worktree is, which node placed it there, that it is ignored, and what follows from that. Writing rule 5 says "Put one idea in each sentence."
+>   (c) This one is an observation and not a ground for the FAIL. The word "so" says the changes are hidden because the directory is ignored. The ignore rule only keeps the directory from showing as untracked. Uncommitted changes in a separate worktree never show in another checkout's `git diff`, whether or not anything is ignored.
+>   - Found with `git diff --word-diff=plain -- .scratch/graph-workflow/map-manager-only.md`, then by comparing the added sentence with the paragraph's first sentence.
+>   - The repair has a constraint. This sentence holds the only link to node 68 in the replacement, and part 3 needs that link. Whatever replaces the sentence must keep the link.
+> - Form: a sentence this change added to `map-manager-only.md` that restates something the same paragraph already says, or that carries more than one idea.
+> - Extent (type 2): the text this change added to `map-manager-only.md`. That is the three sentences between "([node 231]…, [node 336]…))." and "One of the human's two interfaces is the diff". The first of the three is worded by the acceptance condition itself. Run `git diff --word-diff=plain -- .scratch/graph-workflow/map-manager-only.md` and read the `{+…+}` segments to list them. The rest of the paragraph was not changed and is not part of the work.
+>
+> ### Acceptance condition: each part established
+>
+> 1. Part 1 is met. I unwrapped the section from its heading to the next `## ` and searched it for "outside the repository". There is one hit: "after a worktree outside the repository made a gate's diff invisible to them". That describes a past event and is not the ground for any rule. A search for "checkout outside" finds nothing.
+> 2. Part 2 is met. The rule sentence "**The gate payload names the worktree's path**" is still present. A substring search for "uncommitted, so it appears in no commit the human can read, and the path is how the work is found at all" returns true.
+> 3. Part 3 is met, with one detail. The link `[Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md)` is present. The condition wrote the target without `nodes/`. The work's `nodes/…` path is the one that resolves from `map-manager-only.md`, matches how every other link in the paragraph is written, and points at the same node. `ls nodes/` confirms the file exists.
+> 4. Part 4 is met.
+>    - I took the removed sentence from `git show 343e0c604:…/map-manager-only.md`, from "**The gate payload names the worktree's path**" to `git ?"*.`. That sentence occurs byte-identically in `map-history.md` and ends the file.
+>    - The old `map-history.md` is a byte-exact prefix of the new one, and the diff has no `-` lines. That is check 11 of graph-conventions.md, both halves.
+>    - The headings "## Superseded from `map-manager-only.md` at node 276 — …" and "### From *Landing an implementation node's work* — …" follow the existing node 234 entry.
+>    - No struck-through text was involved.
+>    - The links in the new history entry to nodes 276 and 68 resolve to files in `nodes/`.
+> 5. Part 5 is met. "## Landing an implementation node's work" and "How the worktree is made" are both present in the new file. The two `.gitignore` pointers I found cite "How the worktree is made", at lines 10 and 18.
+> 6. Part 6 is met. `git status --porcelain --ignored`, leaving out the worktrees directory, shows only the two named files. `.gitignore` and `.claude/skills/` are untouched. Nothing in `decisions.md`, `flags.md` or any node file changed.
+> 7. Part 7, the bar: fails, as stated above.
+>
+> ### The bar
+>
+> - Commands: the repo has no CLAUDE.md or AGENTS.md at its root. `map-implementation-rules.md` records that the repo has no build, no tests, no formatter and no CI, so the command half of the bar is empty and I ran nothing for it. The bar here is its non-command half: the standards.
+> - Standards: from `.scratch/graph-workflow/map-implementation-rules.md` I read only the standards. These are `/coding-principles` and `/naming`, the glossary's `_Avoid_` lines, the ground rules, the six standing rules for writing, `graph-conventions.md`, and `/writing-for-agents`. I read the last from the mattpocock-skills plugin.
+> - Which bore on this work: the writing rules, `/writing-for-agents` and `graph-conventions.md` (`Change the map`, check 11). The glossary bore too, and the new text uses none of its refused words. "Gate payload" was already in the file. The coding principles and naming rules did not apply, since this is prose.
+> - Unchanged standards: the work did not change any standard.
+> - Reviewing skills: the standards name none, and I ran none.
+> - Record files: I read the changed paths as the work under check, following the record-files rule in `map-implementation-rules.md`. I opened no other record file, except to confirm that the cited node files exist.
+>
+> ### Searches the condition records
+>
+> The condition records no search command.
+>
+> ### Housekeeping
+>
+> I wrote two temporary comparison files directly in `$TMPDIR`, not in a new directory under it, and removed them. Nothing in the repository was written.
+
+*The manager's note:* an unmet bar goes back to the worker, with the finding, in one correction round. The checker handed back no question.
+
 ## Flags
 
 `276.1` `ASSUMPTION` — *The worker's own text.* Clause 3 of the condition writes the node 68 link target as `68-implementation-in-a-worktree.md`, which is relative to `nodes/`. From `map-manager-only.md` that target would not resolve, so I wrote `nodes/68-implementation-in-a-worktree.md` with the condition's link text, the same form the paragraph already uses for node 68 at its end. I made the change by direct edit, with no interview and no gate before this handover.
