@@ -159,6 +159,53 @@ RETROSPECTIVE:
 
 *The manager's note:* an unmet bar goes back to the worker, with the finding, in one correction round. The checker handed back no question.
 
+## Handover, attempt 1, correction round 1
+
+*The worker's own text, pasted, 2026-10-02.*
+
+````
+CORRECTION ROUND 1 (checker run 1, Finding 1). The fix rewrites the one sentence in .scratch/graph-workflow/map-manager-only.md that the finding named. Nothing else changed in this round.
+
+Changed: in `## Landing an implementation node's work`, this sentence
+  "The worktree is inside the repository, placed there by [Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md), and it is ignored there, so its changes do not show in the human's `git status` or `git diff`."
+is now
+  "The worktree being inside the repository, where [Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md) placed it, does not make its changes visible where the human is standing."
+How this answers the finding:
+(a) The sentence no longer repeats "and ignored there" or the location detail from the paragraph's first sentence. Its point is the one thing the first sentence does not say: being inside the repository does not let the human see the changes, which is why the path is still needed.
+(b) It now carries one idea, plus the citation that clause 3 requires.
+(c) The wrong cause is gone. The sentence no longer says the ignore rule hides the changes.
+The node 68 link is kept, so clause 3 still holds. The edit touches clause 3's sentence and nothing that clauses 1, 2, 4, 5 or 6 name. The map-history.md append is unchanged. `git diff --check` is clean.
+
+HANDOVER:      The landing policy says an implementation node's work sits outside the repository
+
+ANSWER:        In `.scratch/graph-workflow/map-manager-only.md`, under `## Landing an implementation node's work`, the landing policy paragraph had one sentence that grounded the gate-payload rule on a false claim: "because an implementation node's work is uncommitted in a checkout outside the repository and `git diff` where the human is standing does not show it". That sentence is replaced, and the rest of the paragraph is unchanged. The new text keeps the rule (**The gate payload names the worktree's path**) and keeps its citations of nodes 231 and 336. It now gives this ground: the work is uncommitted, so it appears in no commit the human can read, and the path is how the work is found at all. One more sentence follows: "The worktree being inside the repository, where [Run an implementation node's work in a worktree](nodes/68-implementation-in-a-worktree.md) placed it, does not make its changes visible where the human is standing." The human's quoted words ("what are the changes ? I don't see them in git ?") stay as the evidence. The paragraph's first sentence also contains "a worktree outside the repository". That is part of an account of what led to the human's instruction, it grounds no rule, and it was left alone. The displaced sentence was appended verbatim to the end of `.scratch/graph-workflow/map-history.md` under `## Superseded from map-manager-only.md at node 276 — the landing policy's ground for naming the worktree's path` / `### From *Landing an implementation node's work* — the landing policy's sentence on what the gate payload names`. It has no struck-through text. map-history.md only gained text. The section heading is still present, and `How the worktree is made` still occurs 3 times in map-manager-only.md.
+
+INDEX LINE:    The landing policy now says the gate payload names the worktree's path because the work is uncommitted and the path is how it is found, not because it sits outside the repository.
+
+FLAGS:         ASSUMPTION: Clause 3 of the condition writes the node 68 link target as `68-implementation-in-a-worktree.md`, which is relative to `nodes/`. From `map-manager-only.md` that target would not resolve, so I wrote `nodes/68-implementation-in-a-worktree.md` with the condition's link text, the same form the paragraph already uses for node 68 at its end. I made the change by direct edit, with no interview, and it is now in correction round 1 after checker run 1. — Index: The node-68 link in the landing policy uses the `nodes/` path that resolves from map-manager-only.md, not the bare filename the condition wrote.
+
+NEW NODES:     none
+
+INVALIDATIONS: none
+
+CONDITIONS:    I searched the `## Acceptance condition` and `## Question` sections of every open and claimed node for "outside the repository", "uncommitted in a checkout", "names the worktree's path", "gate payload", "where the human is standing" and "Landing an implementation node". The only match is this node. Nodes 231, 237 and 254 also name the sentence, and all three are superseded. Node 209's question mentions "The rules file's `## Landing an implementation node's work` section", which this work does not touch, and it needs no change from this node. I wrote no replacement clauses.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:  Checker run 1, Finding 1: fixed as described above. Paths touched: `.scratch/graph-workflow/map-manager-only.md` and `.scratch/graph-workflow/map-history.md`, in worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/276-landing-ground. Nothing is committed. Bar: the repo has no build, tests, formatter or CI. The root holds only `.claude`, `CONTEXT-MAP.md`, `CONTEXT.md`, `.gitignore` and `.scratch`, which matches what map-implementation-rules.md records. `git diff --check` is clean. My append goes at the very end of map-history.md and will meet node 211's append there. Both sides are text held under the never-delete rule, so the merge keeps both. Proposed commit message:
+  "Ground the gate payload's worktree path on the work being uncommitted
+
+  The landing policy said the work sits in a checkout outside the repository; it has been inside since node 68. The displaced sentence is banked in map-history.md.
+
+  Node: graph-workflow/276"
+
+RETROSPECTIVE:
+1. What I had to hunt for: where node 68 says the worktree moved inside the repository (its section `### 1. The worktree moves inside the repository`), and whether nodes 231 and 254 were still open. Both are superseded.
+2. What arrived that this node did not need: most of map.md and map-implementation-rules.md. Of the decisions.md lines for nodes 68 and 265, only node 68's was used.
+3. What would have made this easier: a condition that wrote the link target relative to the file being edited. Also knowing in advance that clause 3's citation has to sit in a sentence of its own, which led to the duplication the checker found.
+4. What was stale, wrong or contradictory: clause 3's link target does not resolve from map-manager-only.md. Node 209's question still calls the landing section part of "the rules file", but it moved to map-manager-only.md at node 188. My first version also stated a wrong cause (the ignore rule hiding the changes), which the checker caught.
+````
+
 ## Flags
 
 `276.1` `ASSUMPTION` — *The worker's own text.* Clause 3 of the condition writes the node 68 link target as `68-implementation-in-a-worktree.md`, which is relative to `nodes/`. From `map-manager-only.md` that target would not resolve, so I wrote `nodes/68-implementation-in-a-worktree.md` with the condition's link text, the same form the paragraph already uses for node 68 at its end. I made the change by direct edit, with no interview and no gate before this handover.
