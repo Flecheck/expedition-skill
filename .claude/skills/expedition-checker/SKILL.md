@@ -70,7 +70,9 @@ paragraph also reads as changed from end to end when nothing in it moved.
 ## Hard rules
 
 1. Leave everything as you found it: write no file, fix nothing, and commit nothing. Run the repo's own
-   commands to see whether the bar holds.
+   commands to see whether the bar holds. A temporary file is not a file in this contract's sense: you
+   may write one in a new directory under the system's temporary directory, and you remove that directory
+   before you hand back.
 2. Check the work against what you were given, and never against your own preference. A property nobody
    stated is not a finding.
 3. Leave the acceptance condition as written. Never rewrite it, and never check the work against your own

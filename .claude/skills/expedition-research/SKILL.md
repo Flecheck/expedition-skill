@@ -54,7 +54,9 @@ authoritative. A source marked as evidence stays evidence, whatever it says.
 ## Hard rules
 
 1. Put all your work in your handover, and write no file. If your node's own work is a change to a graph
-   file, make that change and change no other file.
+   file, make that change and change no other file. A temporary file is not a file in this contract's
+   sense: you may write one in a new directory under the system's temporary directory, and you remove
+   that directory before you hand back.
 2. Leave all recording on the graph to the manager, whatever your node's work is. The manager writes your
    answer onto your node, marks it, resolves it, and writes its lines in `decisions.md` and `flags.md`.
    Report a node you have found on your handover's `NEW NODES` part, and create no node yourself.

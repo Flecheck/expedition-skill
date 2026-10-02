@@ -68,7 +68,9 @@ The map's `## Notes` may also declare the effort's own domain vocabulary. The wo
 2. To put a question to the human, end your turn and make one payload your entire final output, in the
    shape under `### question — you need the human`. Call no tool that addresses the human.
 3. Put your work in what you hand back, and write no file. If your node's own work is a change to a graph
-   file, make that change and change no other file.
+   file, make that change and change no other file. A temporary file is not a file in this contract's
+   sense: you may write one in a new directory under the system's temporary directory, and you remove
+   that directory before you hand back.
 4. Leave all recording on the graph to the manager, whatever your node's work is. The manager writes your
    answer onto your node, marks it, resolves it, and writes its lines in `decisions.md` and `flags.md`.
    Report a node you have found on your handover's `NEW NODES` part, and create no node yourself.

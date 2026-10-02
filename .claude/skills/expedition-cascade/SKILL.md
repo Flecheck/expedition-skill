@@ -43,7 +43,9 @@ What you hand back is text, and the manager writes it. You reach the human only 
 
 1. Edit no product code, in either role.
 2. Write no file, in either role. Your whole output is the handover, which is text, and the manager
-   writes it onto the graph.
+   writes it onto the graph. A temporary file is not a file in this contract's sense: you may write one
+   in a new directory under the system's temporary directory, and you remove that directory before you
+   hand back.
 3. Leave every act on the graph to the manager: creating a node, resolving one and superseding one.
 4. Raise no flag. Where you cannot judge, say so in your handover, and report no node for what you
    could not judge.
