@@ -143,3 +143,9 @@ ASK:           Does this go into the shipped skill files, or stay a rule for thi
 RECOMMENDED:   Shipped files, as edits (a) to (c). The gap is in the contracts themselves, and the manager contract already lists it as open. This does not depend on Q1's answer: whichever route you choose, you still have to say where it goes.
 ALTERNATIVES:  - This effort's map only: the next effort starts with the gap back in place, and manager item 3 stays.
 ```
+
+#### The human's answer to questions 1 and 2, 2026-10-02
+
+`verbatim`: *"ok"*
+
+The manager had put the questions with the line "Please answer node 34's Q1 and Q2: a disputed finding is left unfixed with the reason in the gate payload, and that ships in the contracts. "ok for recommended" takes both." So the reply takes the worker's `RECOMMENDED` on both: the worker leaves a finding it believes false unfixed and says why in `GATE PAYLOAD`, the human settles it at the gate, and the change ships as the worker's edits (a) to (c) in the shipped contracts.
