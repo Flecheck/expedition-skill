@@ -1,8 +1,14 @@
 # Let the four no-file contracts permit a removed temporary directory
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The checker, grilling, research and cascade contracts each end their no-file hard rule with one sentence permitting temporary files in a new directory under the system temp directory, removed before handback.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `35ce19d1`. The node raised no flags.
 
 ## Question
 
