@@ -1094,3 +1094,19 @@ That test is [node 42](nodes/42-checker-spawn-carries-ground-rules.md)'s; the **
 ## Not superseded, only narrowed, in `map-manager-only.md` on 2026-09-29 — the resume item
 
 *The manager's note:* the item beginning "**An agent is resumed wherever it can be resumed, a checker and a dead attempt included.**" gained one sentence after "So the manager's default is **resume**, …", narrowing the checker's case to resumes within one node, on the human's words recorded there. No sentence was removed, so no text is banked here.
+
+## Superseded from `map.md` at node 367 — the sixth standing rule for writing, before it said what a pointer may hold
+
+*Replaced under the `Change the map` procedure at [Say in rule 6 what a pointer may hold](nodes/367-say-in-rule-6-what-a-pointer-may-hold.md), which adds two sentences after rule 6's first sentence, carrying [node 361](nodes/361-whether-a-pointer-that-summarises-its-target-restates-it.md)'s ruling. Rules 1 to 5 are unchanged. Of rule 6's four existing sentences, only the second changed, its words "Where the reader is not" becoming "Where the reader is not told to read that file" by the human's decision at the gate.*
+
+### From `map.md`'s `## Notes` — the lead-in to the standing rules for writing
+
+*Replaced, naming node 361 beside node 253 as a node that shaped the sixth rule, and it stood as:*
+
+**This effort's standing rules for writing**, held against every prose deliverable. The first four were fixed by [node 53](nodes/53-what-token-findings-change.md), the fifth by [node 289](nodes/289-a-plain-english-and-compaction-pass-over-the-shipped-files.md) and the sixth by [node 253](nodes/253-a-shipped-file-points-at-a-sibling-rather-than-restating-it.md).
+
+### From `map.md`'s `## Notes` — the sixth standing rule for writing
+
+*Replaced, and it stood as:*
+
+6. **Point at a heading of another shipped file instead of restating what it holds, where the reader is already told to read that file.** Where the reader is not, restate what the reader needs when the file pointed at is mostly text that reader does not need, so the reader is not sent to read it. A passage that changes a rule for its own case names that rule by heading and states the change in its own words. Rename a heading that another shipped file cites only in the change that updates every citation of it, found by searching the shipped files for the heading's exact text.
