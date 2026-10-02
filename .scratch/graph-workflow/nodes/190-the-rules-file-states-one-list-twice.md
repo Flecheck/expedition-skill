@@ -164,6 +164,47 @@ RETROSPECTIVE:
 4. What was stale, wrong or contradictory: the condition's "no other file may be edited" against amended clause 3 and node 271's clauses requiring `map-history.md`; clause 3's "two strikes already standing", of which only one still stood; the manager's 2026-09-23 note about "four" and "five", superseded by later amendments; and node 205's clause 3, which this work makes wrong (replacement given above).
 ````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition and all six amendments reached it as a verbatim copy in `$TMPDIR/c190.md`.*
+
+> PASS
+>
+> Node: 190, "The rules file states one list twice". Worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/190-standards-once, base 6259c2c1. The work is the uncommitted diff to .scratch/graph-workflow/map-implementation-rules.md and .scratch/graph-workflow/map-history.md. I read both changed paths as the work under check, under that file's rule on record files handed over as the work. I read nothing else in the effort's directory, except the standards in map-implementation-rules.md.
+>
+> Condition as amended. I applied 348 then 349 then 354 to clause 1, 349 then 354 to clause 4, 56 to the glossary paths, and replaced clause 3 by its own amendment. Node 366's three clauses are added. All searches ran over the unwrapped text.
+>
+> - Preamble scope. `git status --short --untracked-files=all` shows only the two paths. Editing map-history.md is required by clause 3 and node 366. Neither decisions.md nor flags.md nor any node file is touched.
+> - Clause 1. `## What the work is held against` now opens with the bold lead-in "**The standards an implementation node's work is held against.**" followed by one 6-item bullet list. The list names `/coding-principles` and `/naming`; `.claude/skills/expedition/glossary.md`'s `_Avoid_` lines; the ground rules "which map.md holds in its ## Notes and which a checker receives as text in its spawn"; "six standing rules for writing, which map.md's ## Notes holds inside the ground-rules block and which a checker receives as text in its spawn"; graph-conventions.md; and /writing-for-agents. Established by a python regex over the unwrapped file for each standard's name. Every occurrence falls in that list, except the standing-preferences paragraph, which names the two blocks and is no list of standards. "Once" therefore holds.
+> - Clause 2. The bar paragraph says "the standards listed at the head of this section". It keeps "no build, no tests, no formatter and no CI" and that the "node's acceptance condition ... binds too". The review route says "A checker holds the finished work against the standards listed at the head of this section". It keeps "No reviewing skill is named for this repo" and the `.claude/skills/expedition/glossary.md` false-positives trap. Established by reading the unwrapped lines from the same search.
+> - Clause 3 (amended). Base lines 39 and 41, the two old paragraphs, appear verbatim in map-history.md (`grep -qxF` on each base line: yes, yes). The ~~ignores `.worktrees/`~~ strike is kept inside the moved text. The removed opening sentence "The struck rule statements below predate this..." is appended verbatim too (`grep -c -F`: 1). Each sits under a `### From ...` heading inside a new `## Superseded from map-implementation-rules.md at node 190` section, matching the pattern of the earlier history entries. `grep -n '~~'` on the new rules file: no hits. Node 158's strike moved. Base line 39 holds no node-169 strike, so nothing else was left to move.
+> - Clause 4 (354's wording). `grep -nE '^\s*[0-9]+\.'` on the new file: no hits. Every mention of the ground rules or the standing rules for writing names map.md's `## Notes` (same mention search as clause 1).
+> - Clause 5. A python check resolved every relative markdown link against the file's directory: map-implementation-rules.md, 35 links, 0 unresolved. Also map-history.md, 431 links, 0 unresolved.
+> - Clause 6. Nothing outside .scratch/graph-workflow/ is modified (git status above).
+> - Node 366, clause a. The ignore-file sentence now reads "ignores `.worktrees/`, `.claude/worktrees/` and `.scratch/graph-workflow/worktrees/`". That matches all three patterns in the worktree's .gitignore (cat .gitignore). It contains no `~~`. The replaced text is appended verbatim under a mirroring heading (the line-39 check).
+> - Node 366, clause b. The same sentence keeps "no build, no tests, no formatter and no CI", "invokes nothing", and "the bar's command half is empty, and under the "if relevant" clause that is a **complete** bar rather than a deficient one".
+> - Node 366, clause c. `git diff --name-only 6259c2c1 -- .gitignore` is empty.
+> - Node 366, clause d ("Scope came from no search"). There is no recorded command to re-run.
+>
+> NOT COVERED:
+> - From node 366: "which the worker verifies by opening `.gitignore` and quotes in its handover". The handover is outside what I was given. This PASS does not cover that part.
+>
+> The bar:
+> - Commands: none to run. The worktree root holds only .claude, CONTEXT.md, CONTEXT-MAP.md, .gitignore and .scratch. There is no manifest, no task runner and no .github. The rules file states the repo has no build, no tests, no formatter and no CI. So there was nothing to build, warn, format or test. The command half is empty, and the bar is its standards half.
+> - Standards: I read only the standards in map-implementation-rules.md. All six bore on this work: /coding-principles with /naming, the glossary's `_Avoid_` lines, the ground rules, the six standing rules for writing, graph-conventions.md and /writing-for-agents. The ground rules and the six standing rules I held as received in the spawn text.
+> - The work moved the standard: I settled what moved first. The set of standards in the two old lists, plus the acceptance condition the bar added, is identical to the set in the new list plus the bar paragraph. Only the wording around them changed, so the check was unaffected.
+> - No reviewing skill is named, so I ran none and held the work by hand.
+> - Glossary check: I compared the new text by hand against the glossary's `_Avoid_` lines. "CI", "complete" and "review route" occur, but in senses the condition itself demands or the file already uses. No line numbers are cited (writing rule 4). The list cites the nodes that shaped it (writing rule 2).
+>
+> QUESTIONS:
+> - Standing rule for writing 5 says "Bold a term only where it is defined." The new bar paragraph keeps the bolded term "**node's acceptance condition**" from the replaced text. The paragraph split out of the review route keeps "**ground rules**" and "**six standing rules for writing**", both unchanged from the base. The work also adds the new bolded sentence "**A checker holds the finished work against the standards listed at the head of this section**", which is a sentence rather than a term. I did not treat any of these as a breach. Every bolded term is carried verbatim from the base, and the condition itself asks for a bold lead-in, which shows the file's own bold-lead-sentence convention. Does rule 5 bind bold that is carried verbatim into a rewritten paragraph, or bold used on a whole sentence for emphasis? This is about the bar paragraph and the review route in map-implementation-rules.md. To list the candidates: `git -C <worktree> diff -U0 -- .scratch/graph-workflow/map-implementation-rules.md | grep '^+[^+]' | grep -oE '\*\*[^*]+\*\*'`. It returns 13 spans: the 12 base spans that remain after the move plus the new review-route sentence.
+>
+> I wrote nothing in the repo. The temporary directories I used are removed.
+
+*The manager's note:* the NOT COVERED item is established from the worker's handover, which quotes `.gitignore`'s patterns ("Its patterns are exactly `.worktrees/`, `.claude/worktrees/` and `.scratch/graph-workflow/worktrees/`"). The checker handed back a question beside its outcome, so the standing yes does not cover this gate; it goes to the human.
+
 ## Flags
 
 `190.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 168's replacement for clause 4 was filed on this open, unclaimed node, and the node was made to wait on node 348.
