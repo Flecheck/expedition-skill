@@ -66,6 +66,42 @@ RETROSPECTIVE
 4. What was stale, wrong or contradictory: nothing stale. In clause 3, "no other finding" would have had an unclear referent once placed in the trigger-1 paragraph. I worded around it and flagged it.
 ````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c375.md`.*
+
+> PASS
+>
+> Work: the uncommitted diff in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/375-disputed (`git -C <worktree> diff`). The worktree is based on e6114e45. I read the two changed paths as the work.
+>
+> 1. The diagram line. `grep -n "the checker checks it →" .claude/skills/expedition-implementation/SKILL.md` returns only line 177, `    → the checker checks it → you fix what it found → the checker runs again`. Running `git diff -U0` on that file shows the diagram's only -/+ pair is this line, so no other diagram line changed. Met.
+> 2. The "Fix all of it" sentence is replaced. The diff hunk at lines 186-190 reads: "Fix everything it found before the gate, except a finding you believe is false. Leave that finding unfixed, and say in `GATE PAYLOAD` why you believe it is false. The human settles it at the gate. A finding the human upholds arrives as a correction round." I unwrapped it and checked it against the four required elements. All four are present. The sentences that follow it ("The checker's outcomes are `PASS` and `FAIL`...") are unchanged in wording and only rewrapped. Met.
+> 3. The "Never leave..." sentence is replaced by "Apart from a finding you believe is false, leave no finding unfixed on your own authority." This says that no other finding is left unfixed. The `-U0` diff shows the trigger-1 paragraph's other sentences are untouched. Met.
+> 4. GATE PAYLOAD. The diff shows the part now starts `<for each thing the checker found, what you changed, or why you left it unfixed;`. I unwrapped the rest ("the paths you actually touched; a proposed commit message carrying the trailer `Node: <effort>/NN`>"). It matches the old wording word for word and was only rewrapped. Met.
+> 5. The `### The payload` bullet in .claude/skills/expedition/SKILL.md line 287 unwraps to "What the worker changed for each thing the checker found, or why it left it unfixed, in the worker's own words." It matches exactly. Met.
+> 6. `## What nothing here settles`. The diff removes the three lines of the "What does a worker do with a finding it believes is false?" item. Old items 4, 5 and 6 changed only their number prefix, to 3, 4 and 5. `sed -n 795,825p` shows the list now runs 1 to 5 with no gaps. No other item's text changed. Met.
+> 7. `git status --porcelain` lists only the two changed SKILL.md files, so expedition-checker/SKILL.md and expedition/glossary.md are unchanged. Met.
+> 8. The scope search the condition records. I ran `git grep -n -E "Fix all of it|fix everything it found|for each thing the checker found" e6114e45 -- .claude/skills` against the base. It returned 4 lines: the impl diagram line, the impl "Fix all of it" line, the impl GATE PAYLOAD line, and the expedition payload bullet. That matches the condition's claim that the search returned only the places it names. The same grep on the worktree returns only the two new "for each thing the checker found" lines. Nothing outside the list needed the same change: `grep -rn -i -E "\bfix(es|ed)? (all|every)|unfixed|all of it" .claude/` found nothing else relevant. The work edited no file outside the condition's list.
+>
+> The bar:
+> - Build, warnings, formatting and tests: the repo has no agent-instruction file at its root (no CLAUDE.md or AGENTS.md) and no manifest, test suite or formatter. That matches the bar's commands recorded in map-implementation-rules.md. The bar is therefore its non-command half.
+> - Formatting consistency: the added lines are 12 to 106 characters wide (`git diff -U0 | grep '^+[^+]' | awk ...`), within the files' existing wrap widths.
+> - Standards: I read only the standards in .scratch/graph-workflow/map-implementation-rules.md. They are /coding-principles, /naming, glossary.md's `_Avoid_` lines, the ground rules, the six standing rules for writing, graph-conventions.md and /writing-for-agents. Three bore on this work, and none is breached:
+>   - The writing rules: plain English, one idea per sentence, and the rule stated as what to do.
+>   - The ground rules. Rule 3 holds because "The human settles it at the gate" tells no agent to address the human. Rules 1, 2 and 4 hold.
+>   - The `_Avoid_` lines. `grep -n -i '_Avoid_' glossary.md | grep -E 'find|uphold|unfix|settle|false|authority|dispute|fix'` returned no refusal that touches the new wording.
+> - Trigger-mirror rule: the edits are under `## The gate` / `### The payload` and `## What nothing here settles`. Neither is `## The order you act in` or `## What is in front of the human, and when`, so .claude/rules/expedition-triggers.md owed no change.
+> - No reviewing skill is named for this repo, so I ran none. I held /writing-for-agents and /coding-principles by hand rather than invoking them.
+> - The work does not move any standard: none of the changed paths is a standards file.
+>
+> What I left unread: the node file and the rest of the record. In the rules file I read only the standards.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and left no part of the condition uncovered. This settles none of the node's flags; they settle at the node closing report.
+
 ## Flags
 
 `375.1` `ASSUMPTION` — *The worker's own text.* Condition clause 3 asks for a sentence saying no other finding is left unfixed on the worker's own authority. Node 34's draft said "Leave no other finding unfixed on your own authority." That sentence sits in the paragraph about a fix that would be a new piece of work, so there "other" would seem to mean "other than the new-work finding" rather than "other than a finding you believe is false". I wrote "Apart from a finding you believe is false, leave no finding unfixed on your own authority." It says the same thing with one clear referent, which follows standing writing rule 5. I also dropped "at the gate" from the old sentence, because the new sentence covers the whole time before the gate. The `GATE PAYLOAD` part was reflowed across three lines, and its words after the new opening are unchanged.
