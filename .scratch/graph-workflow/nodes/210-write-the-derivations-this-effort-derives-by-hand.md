@@ -162,6 +162,60 @@ RETROSPECTIVE
 4. What was stale, wrong or contradictory: clause 2 applies the node-header rule to (h), which reads no node file. The node's Question still names the fog item in `map-manager-only.md`, which is no longer there, as the manager noted.
 ````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-02. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c210.md`. Its numbers are as measured on 2026-10-02 and are not authoritative.*
+
+> PASS
+>
+> I read the changed paths as the work under check, as `map-implementation-rules.md` requires. The work is the untracked `.scratch/graph-workflow/derivations.md` and the one-line diff to `.scratch/graph-workflow/map.md`, both in the worktree `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/210-derivations`. I ran every derivation from that worktree's `.scratch/graph-workflow/`, where no `worktrees/` subdirectory exists, under `sh` with GNU awk 5.4.1. I compared each result with a measurement I made separately, with Python or plain git, at the same moment.
+>
+> Condition, one line per part:
+> 1. All nine entries are present, each under its own heading from `## (a)` to `## (i)`, and each has a one-line question followed by an `sh` block. Established with `grep -n '^## ' derivations.md`, then by reading each question line.
+> 2. (c), (d) and (h) each state the header-block-above-the-first-`##` rule and the fence-skipping rule in their own text. (h) states both and adds that it reads no node file.
+>    - Obedience: (c) and (d) stop at the first `^## ` line and skip fenced lines. They match the field only at the start of a line and take its first occurrence.
+>    - The trap is real: a naive whole-file `^Status:` scan gives 376 hits for 375 node files. The derivations give 375, which matches the header-only count in Python.
+>    - Edge case, not a finding: the `^## ` test runs before the fence test, so a fenced `## ` line inside a header would end the header early. That would only undercount, never count body prose. No node has a fence in its header (checked in Python).
+> 3. Every one of the nine matched the direct measurement:
+>    - (a) map.md at 2026-09-01: 35442 = `git show <last rev by --until>:… | wc -c`. Also matched for `issues/01-destination.md` on 2026-08-13 (928) and for node 183 on 2026-09-20 (38818). It exits non-zero with nothing on standard output when there is no commit or no file, as the file states.
+>    - (b) All 32 day/count lines matched a Python walk over every commit's tree. Days with no node change carried the previous count.
+>    - (c) resolved 265, superseded 70, open 23, out-of-scope 13, claimed 4. Equal in Python.
+>    - (d) implementation 225, grilling 127, precondition 12, research 10, prototype 1. Equal in Python.
+>    - (e) The same 27 file names in the same order as Python.
+>    - (f) 734 checked, 11 unchecked. A raw grep gives 12 unchecked; the 12th is the fenced Format example at flags.md line 31, which the file rightly skips.
+>    - (g) 20361 of 8898780 bytes, 0.23%. Equal from a separate Python version that follows the same block and code-span rules.
+>    - (h) 38 items. The same 16 items exceed 500 bytes, with equal sizes and start lines, in Python using `re.sub(r'\*".*?"\*','',…)`. The `*"` and `"*` markers in Notes are balanced, 11 of each.
+>    - (i) 375 files, 8163699 bytes, mean 21769.9. Equal to os.path.getsize.
+>    - No numbers are recorded: digits in the prose outside code are only `UTF-8` and the threshold `500`, and inside code only the example input date and the threshold. The file has no tables (`grep -c '^|'` = 0) and no recorded series.
+> 4. Its first paragraph says, in its own voice, that it holds no numbers, that a value is obtained by running the derivation when the value is wanted, and that a number written elsewhere is a historical statement.
+> 5. `git diff` changes only one line, an insertion under `## Notes`, so the "The graph is ~~six~~ seven files" sentence is unchanged. `git status --short --ignored` shows nothing under `.claude/`.
+> 6. `git diff --stat` shows 1 insertion and 0 deletions, at line 47, inside `## Notes` (Notes runs from line 22 to `## Decisions so far` at line 80). The line names `.scratch/graph-workflow/derivations.md` by path and says "A fact about the record is derived rather than stored." It also says a received number "is re-derived before it is relied on." Its link to node 183 resolves to a file in the tree.
+> 7. `git status --short --ignored` lists only those two paths.
+> 8. The bar: see below.
+>
+> Bar:
+> - The repo has no build, no tests, no formatter and no CI, per `map-implementation-rules.md`, so there were no commands to run.
+> - derivations.md ends with a newline and has no trailing whitespace (`grep -nE ' +$'` found nothing).
+> - I held the work by hand against the standards I read. None was breached:
+>   - `/coding-principles`: the blocks fail loudly or report a documented non-zero exit.
+>   - `/naming`.
+>   - glossary.md `_Avoid_` lines: "item" and "tree" are used for a map Notes item and the working tree, not for a node or the graph.
+>   - graph-conventions.md `## Writing the map`: the new item measures 465 bytes, under the 500-byte target, and cites its node.
+>   - Mechanical checks 4, 10 and 11: the change is a pure addition and map-history.md is untouched.
+>   - `## Reading the graph`: the field-reading rules are followed.
+>   - `/writing-for-agents`, read from the mattpocock-skills plugin in the nix store.
+>   - The ground rules and the six writing rules from the spawn: derivations.md is not a shipped file, and it cites no line numbers. The line numbers in (h)'s output are computed at run time.
+>
+> Standards: I read `map-implementation-rules.md` for its standards only, and opened no other file in the effort's directory apart from the changed paths and the tree the derivations measure. Those standards bore on this work as listed above. No reviewing skill is named, so none was run. The derivations themselves read node files, flags.md and git history when run, as clause 3 requires. That is all I read of them. I read no node file's prose. One command did run `sed` on node 210's header, but its output went to /dev/null and nothing was read.
+>
+> The temporary directory /tmp/claude-1000/chk210 has been removed. I wrote and changed nothing in the repository.
+
+### Gate — approve, `standing yes`, 2026-10-02
+
+Taken under the standing yes recorded in `map-manager-only.md` on 2026-09-27, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and left no part of the condition uncovered. This settles none of the node's flags; they settle at the node closing report.
+
 ## Flags
 
 `210.1` `ASSUMPTION` — *The worker's own text.* Clause 2 requires entry (h) to state the node-header rule, but (h) reads `map.md` and no node file. The entry states the rule as it applies to any derivation reading a node file, and says (h) itself reads none. It obeys the part that does apply: it skips fenced code blocks. The clause holds for (h) with nothing to apply it to, so it is not incoherent, and I did not raise.
