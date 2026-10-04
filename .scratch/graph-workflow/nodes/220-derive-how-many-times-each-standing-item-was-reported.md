@@ -417,3 +417,72 @@ RETROSPECTIVE (correction round 1):
 ## Flags, correction round 1
 
 `220.4` `ASSUMPTION` — Entry (j) treats each RETROSPECTIVE opening line outside a heading section as a new retrospective, so a correction round's part counts separately from the first. *(The worker's full text is under correction round 1's `FLAGS`.)*
+
+## Review, continued
+
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. The run 1 checker, resumed for this node's re-check.*
+
+> PASS
+>
+> Re-check after the correction round. The work is still the one changed path, .scratch/graph-workflow/derivations.md, in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/220-retro-derivation.
+>
+> **What changed since run 1.** `git status --short` shows only that file. `git diff` is a single hunk of added lines (`@@ -268,0 +269,111 @@`) with zero removed lines. I read the whole of entry (j) again. The changes I found against run 1:
+> - the count is now per retrospective, through a `retrospective` counter and a `carried[name, retrospective]` dedupe, with node files listed once each through `listed[name, file]`;
+> - new prose: "Each retrospective section, and each handover part outside a section, is one retrospective" and "A line that starts a part while another part is open ends that part and starts a new one";
+> - the fenced-part start no longer requires `part == ""`;
+> - `read_name()` now admits `([ \t]*>)*` before the list marker, with prose: "The list item may sit inside a blockquote, behind one or more `>` markers";
+> - the fence-open regex is now `^ ? ? ?(```|~~~)` instead of `^ {0,3}`. The diff to the fence regex was not mentioned to me, so I checked it too: it accepts the same 0 to 3 spaces.
+>
+> I read the changed path as the work, under the rules file's paragraph on record files. The node files under nodes/ are unchanged in the worktree (`git status --short nodes` is empty), and I read them only as the measurement target.
+>
+> **Clause by clause:**
+>
+> - **Clause 1: met.** Entry (j) has its own name, sits alongside (a) to (i), and states its question on one line. The means now answers that question: the count is the number of retrospectives carrying the name. Synthetic test under $TMPDIR, the same tree as run 1 plus cases:
+>   - a name in three retrospectives across two files printed `3 alpha-one: 1-a.md 2-b.md`;
+>   - a name repeated within one retrospective counted once;
+>   - two plain correction-round parts in one file printed `2 kappa-ten: 2-b.md`.
+>
+>   Run 1's finding 1 is resolved.
+> - **Clause 2: met.**
+>   - The prose names the same eight heading forms, the fenced part ending where its fenced block ends, and the unfenced, emphasised and blockquoted forms.
+>   - I instrumented the corrected block to print each place it opens a retrospective: 77 sections, 91 fenced parts and 74 plain or quoted parts. These are the same totals as run 1, and they match my independent enumeration. The 77 sections are the heading counts 61+5+5+1+1+3+1. The other 167 starting lines split into 91 fenced and 76 unfenced, of which 2 sit inside open sections.
+>   - The stderr check printed nothing.
+>   - Blockquoted items are now read: ``> - `lam-da` `` and the nested ``> > 2. `nu-nu` `` were both reported in the synthetic test. Run 1's finding 2 is resolved.
+> - **Clause 3: met.** Both statements are still present: "A retrospective section's body ends at the next heading of the same or higher level." and "A heading inside a fenced code block is skipped".
+>   - Synthetic test: a `###` kept the section open, the next `##` closed it (`gamma-three` not reported), a `#` closed it (`eps-five` not reported), and a `##` inside a 4-backtick fence neither opened nor closed it (`delta-four` reported).
+>   - Run 1's note still applies: node 86's level-2 annotation section runs on through `### The manager's note`, which holds no qualifying item today.
+> - **Clause 4: met.**
+>   - The candidate search `grep -cE '^[[:space:]>]*([0-9]+[.)]|[-*+])[[:space:]]+`[a-z0-9]+(-[a-z0-9]+)+`' nodes/*.md` returns the same files and counts as run 1: 178:6, 212:4, 289:7, 350:1, 355:3, 359:7.
+>   - I placed each hit as in run 1. Only the hits in 178 and 212 sit inside a retrospective, each node having a single `## Retrospective` holding all of its names. The blockquoted hits in 359 sit under `## Review`, not in a retrospective, and the block does not count them.
+>   - Direct measurement: 2 stale-number-in-the-record (178, 212); 2 record-is-not-mechanically-scannable (178, 212); 1 each for one-rule-stated-at-several-sites, map-read-whole-for-a-few-items, rules-file-read-whole-for-one-section and nothing-pointed-me-at-it (all 178); 1 each for manager-owes-a-promotion-and-has-not-made-it and worker-forbidden-a-file-reaches-it-by-search (both 212).
+>   - The block's output under gawk 5.4.1 is identical.
+>   - Nothing is written into the file: `grep -c` gives 0 for each of the 8 names in derivations.md. The added digits are only regex ranges, `attempt 1` and sort keys, so no count, table or measurement is written.
+> - **Clause 5: met.** The sentence "A name carried by only one retrospective is reported too, so that a name minted once is visible…" is still present, and six names print with count 1.
+> - **Clause 6: met.** Only derivations.md changed, with additions only. No existing entry and nothing under `.claude/` or elsewhere in `.scratch/graph-workflow/` changed.
+> - **Clause 7: met.** The bar holds, as the next section shows.
+>
+> **The bar.** It has no commands to run here: the repo root holds no CLAUDE.md or AGENTS.md, no manifest, no CI and no formatter. `git diff --check` printed nothing and exited 0. The block gives identical output under gawk `--posix`, mawk 1.3.4-20240819, nawk 20260426 and busybox awk 1.37.0. Run 1's mawk panic is gone.
+>
+> **Standards.** I read only the standards in .scratch/graph-workflow/map-implementation-rules.md.
+> - They bore on the work as follows:
+>   - the six writing rules and /writing-for-agents, held against the new prose: no line numbers, one idea per sentence, stated positively;
+>   - the glossary's _Avoid_ lines: no breach;
+>   - /coding-principles and /naming, held against the block by hand: clear names, and uncovered headings are reported on stderr, so nothing fails silently;
+>   - the ground rules.
+>
+>   None is breached.
+> - graph-conventions.md did not bear on the work. No reviewing skill is named for this repo, so I ran none.
+>
+> QUESTIONS:
+> - None of the three flags is false.
+>   - **220.2** is true of the work. The text and code read unfenced, emphasised and blockquoted parts, ending them at the next heading or at a line not beginning with `>`. In the synthetic test, `mu-mu` after the quote was not read.
+>   - **220.3** is true of the work. The instrumented run opens neither node 70's annotation nor any disposal heading. Its clause about node 178's count makes no claim the work can make true or false.
+>   - **220.4** is true of the work. Each RETROSPECTIVE opening line outside a section increments `retrospective`, and two plain correction-round parts in one file counted 2.
+>
+> Temporary files were under $TMPDIR/chk220b and have been removed.
+
+### The gate, 2026-10-04 — standing yes
+
+`standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` (run 2) is taken as the human's approval. The run covered every part and handed back no question, and found flags 220.2 to 220.4 true. A gate taken under a standing yes settles no flag, so they settle at the node closing report.
