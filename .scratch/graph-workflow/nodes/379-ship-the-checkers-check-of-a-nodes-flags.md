@@ -382,3 +382,59 @@ RETROSPECTIVE (correction round 2):
 3. What would have made this easier: the amendment could have said whether the line cap still had to be met with the longer sentence, or what to shorten if it did not fit. As it happened, nothing needed shortening.
 4. What was stale, wrong or contradictory: nothing new. The tension I flagged in round 1 is resolved by this amendment.
 `````
+
+## Review, continued
+
+### Checker run 3 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. The same checker, resumed for this node's re-check, given amendment 2 as text.*
+
+> PASS
+> Re-check (run 3) of the uncommitted changes in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/379-flag-check (base 937fe6c9b). I checked them against the condition as amended twice, the second amendment made at the gate on 2026-10-04. I read the changed paths as the work under the rule in map-implementation-rules.md.
+>
+> What changed since run 2. I established this from the work, not from the statement.
+> - expedition/SKILL.md is byte-identical to runs 1 and 2: `git hash-object` gives d0ceec2babf57174f2d463b52a90a164e4e9dbc3.
+> - In expedition-checker/SKILL.md, the only change is one sentence of the paragraph beginning "The givens above". "The one exception is `map-implementation-rules.md`, and only for the standards in it." became "The one file you go and read for yourself is `map-implementation-rules.md`, and only for the standards in it." The paragraph is rewrapped. I compared it by unwrapping both sides into sentences and set-diffing them against the base. The set-diff shows nothing else new compared with run 2.
+> - `git status --porcelain --untracked-files=all` still lists only the two named files.
+>
+> Clause by clause:
+> 1. Unchanged since run 2, and the set-diff confirms it. The intro reads "You are given seven things. The spawn carries all of them except the sixth…". Item 7 carries its text, its id, the definition of a flag, and the case where the given is absent.
+> 2. Established against the twice-amended words.
+>    - "six" is gone. The paragraph opens "The givens above are everything you are given, so that the record behind the work stays unread."
+>    - It contains "A flag given under item 7 is the one part of the record you are given, and you read it as a claim about the work."
+>    - The replaced sentence matches the amendment word for word: "The one file you go and read for yourself is `map-implementation-rules.md`, and only for the standards in it."
+>    - The set-diff lists as removed only the old "six givens" sentence and the old "one exception" sentence, which is now replaced. The other frozen sentences keep their words, as the set-diff shows: "Behind the work there is a record: …", "Leave the record unread, and do not go looking for it.", "A path you were given as the work is the work wherever it sits, and you read it." and "The acceptance condition as given to you is the only statement of intent you get."
+> 3. and 4. Unchanged since run 2, and the set-diff confirms it. `### The flags, after your outcome` covers (a) to (d) under `## What you hand back`. The Questions section reads "Three kinds…" and "The third is a false flag…", and it points at the new heading.
+> 5. The headings diff against the base shows one added line, `### The flags, after your outcome`, and the expedition file's headings are identical. The table, extracted with `sed -n '/^| what you find/,/^$/p'`, is identical on both sides. The set-diff shows no other sentence changed. The replaced sentence was the only shipped citation of the old wording: `grep -rn` over `.claude/` for the old "one exception is `map-implementation…" text returns nothing.
+> 6. to 8. The expedition file is byte-identical to run 1, so they stand as established then.
+> 9. `wc -l`:
+>    - expedition-checker/SKILL.md went from 422 to 437, which is +15, exactly the cap.
+>    - expedition/SKILL.md went from 826 to 824.
+> 10. `grep -c ']('` returns 0 for both files. Neither file has a markdown link, so none can fail to resolve.
+> 11. The bar is met (see below).
+>
+> The preamble constraints hold: only the two files are edited, there is no `~~` in the diff, and no history, index or node file changed in the work tree.
+>
+> Recorded search: `grep -n -w -i 'six\|five' .claude/skills/expedition-checker/SKILL.md` returns nothing on the finished tree. In run 1 it returned exactly the two recorded lines on base 937fe6c9b, which matches the condition's recorded return.
+>
+> Bar, re-run in full. map-implementation-rules.md states that this repo has no build, tests, formatter or CI, and there is no agent-instruction file at the root, so I ran no command for the command half.
+> - `git diff --check` is clean.
+> - No trailing whitespace in either file.
+> - The longest added line is 106 columns, which matches the files' existing wrap width.
+>
+> Standards: I read only the standards in .scratch/graph-workflow/map-implementation-rules.md, as in run 1.
+> - Bore on this work: the glossary's `_Avoid_` lines, the ground rules, the six standing rules for writing, graph-conventions.md and `/writing-for-agents`.
+> - The replaced sentence uses no refused word. It also resolves the run-2 question: the paragraph now separates the one part of the record the checker is given (the flags) from the one file it goes and reads for itself (the rules file).
+> - No reviewing skill is named, so I ran none.
+> - No flags were given to me, so I checked none.
+>
+> NOT COVERED:
+> - "The worker may not mark this node, resolve it, or write a line in any index file." I established it for the work tree: no node or index file changed there. Whether anything was written to the record in the main checkout is outside the paths I was given.
+>
+> Temporary files were written only under $TMPDIR/chk379c and have been removed.
+
+*The manager's note on the part under `NOT COVERED`:* established by the manager. On master, `decisions.md` and `flags.md` name node 379 nowhere, the main checkout holds no uncommitted change, and every master commit touching this node's file is the manager's own.
+
+### The gate, third time, 2026-10-04 — standing yes
+
+`standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` (run 3) is taken as the human's approval. The one part it could not cover was established by the manager, above, and the run handed back no question. The node's flags, 379.1 to 379.3, were settled at the human's two earlier gates.
