@@ -284,3 +284,89 @@ RETROSPECTIVE (correction round 1):
 `verbatim`: *"ok for 380"*
 
 The manager had offered "Recommended: a short correction round to use "whether they arrive in your spawn or on a resume". It's already within the condition as amended, so no amendment is needed, and the same checker re-checks." and the alternative "approve as is", closing with "Please answer: "ok for recommended", or "approve as is"." The reply takes the correction round. Flag `380.1` was in the payload and settles here.
+
+## Handover, correction round 2
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      Ship the check on a spawn's claims into the five worker contracts
+
+ANSWER:        In each of the five worker contracts (`.claude/skills/expedition-grilling/SKILL.md`, `-research`, `-prototype`, `-precondition`, `-implementation`), one paragraph now stands at the head of `## What you read` where "Read each of the following. Do not trust any summary of them." used to be. The paragraph is identical in all five files:
+
+               "Read each of the following yourself rather than any summary of them. Before you rely on a claim of fact in the manager's notes, whether they arrive in your spawn or on a resume, or in your node's `## Question` outside any text marked as the human's own words, check it."
+
+               It is wrapped over three lines at the files' usual width, and no other line changes.
+
+               Word count against the removed sentence:
+               - 38 added words if `## Question` counts as one word, which is the checker's count.
+               - 39 if the backticked `##` counts as a separate word.
+               - Either way it is within the cap of 40.
+
+               Correction round 2 replaced "in your spawn or on a resume" with the amended clause 1(b)'s own wording, "whether they arrive in your spawn or on a resume". The clause that starts "whether they arrive" attaches to "the manager's notes", and "they" can refer only to those notes. So the spawn and the resume are where the notes arrive, not two more places whose every claim the worker checks. That closes the reading checker run 2 found, under which a worker would have checked every claim in its spawn or on a resume.
+
+               Clause 4 still holds:
+               - On a resume, the human's words arrive in their own field.
+               - A direction from the human, a permission the human granted, and the acceptance condition each travel as a separate part of a spawn and are not the manager's notes.
+
+               Round 1 settled what "on a resume" covers: the `MANAGER NOTES:` resume field in the grilling, prototype and precondition contracts, and in the research and implementation contracts the notes a manager sends when resuming a worker.
+
+               The condition's scope search, `grep -n 'Do not trust any summary of them' .claude/skills/*/SKILL.md`, returns nothing.
+
+INDEX LINE:    The five worker contracts' `## What you read` tells the worker to read sources, not summaries, and to check claims of fact in manager's notes (spawn or resume) and its `## Question`.
+
+FLAGS:         ASSUMPTION: The condition said "claim of fact" and gave the example "outside the human's quoted words". I kept "claim of fact". It is the condition's own phrase, and "of fact" keeps it apart from the glossary term **Claim** (taking a node off the frontier). For the carve-out I wrote "outside any text marked as the human's own words", because that is clause (c)'s wording and matches how the record marks the human's words (`verbatim`). The glossary refuses "summary" only as another name for the effort closing report. The kept phrase "any summary of them" uses it in its ordinary sense, which node 22 had already judged acceptable. The round-1 choice of the shorter "in your spawn or on a resume" was reversed in correction round 2, which used the amended clause 1(b)'s own wording to remove a misreading the checker found.
+               Index sentence: Node 380 kept "claim of fact", phrased the carve-out as "text marked as the human's own words", and in the end used clause 1(b)'s own "whether they arrive" wording.
+
+NEW NODES:     none
+
+INVALIDATIONS: none. This carries out node 78's answer and extends it to notes that arrive on a resume, as the human's amendment to this node's condition asks. Nothing node 78 says is contradicted.
+
+CONDITIONS:    Same search as rounds 1 and 2, over the `## Question` and `## Acceptance condition` sections of every open or claimed node. I searched for:
+               - "summary of"
+               - "manager's notes"
+               - "What you read"
+               - "claim of fact"
+               - "MANAGER NOTES"
+               - "on a resume"
+               - the phrases "Read each of the following", "Read each of these" and "Do not trust any summary"
+               - the five contract paths
+               This round adds no new term, so the results are unchanged:
+               - Nodes 41 and 382 edit other paragraphs of the same files, and their clauses still hold.
+               - Node 32's `## Question` cites line numbers for the `flags.md` line. They were already stale on master, and this work moves each down by two lines.
+               I replaced no clause and changed no question.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:  Checker run 1: PASS, with one question about notes that arrive on a resume. Settled by the human's amendment to clause 1(b) and carried out in round 1.
+               Checker run 2: PASS, with one finding. "in the manager's notes, in your spawn or on a resume" could be read as a flat list of three places, which would reach an acceptance condition or a direction from the human and break clause 4. Fixed in round 2: the phrase is now "in the manager's notes, whether they arrive in your spawn or on a resume". It is identical in all five files and adds 38 or 39 words depending on how `## Question` is counted, under the cap of 40.
+               Paths touched (all uncommitted, in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/380-spawn-claims, on branch worktree-380-spawn-claims):
+                 .claude/skills/expedition-grilling/SKILL.md
+                 .claude/skills/expedition-research/SKILL.md
+                 .claude/skills/expedition-prototype/SKILL.md
+                 .claude/skills/expedition-precondition/SKILL.md
+                 .claude/skills/expedition-implementation/SKILL.md
+               Against master, `git diff` shows the same one removed line and the same three added lines in each file, five times. No other file changed.
+               Did the change touch anything the acceptance condition names? Yes. It changes only the replacement text that clauses 1 to 4 govern.
+               The bar: the repo states no build, test or format commands, the same as in rounds 1 and 2. That command half is empty and complete. On the other half: one idea per sentence, "they" has the single referent "the manager's notes", and the text adds no bold and no prohibition.
+               Proposed commit message:
+                 Tell workers to check the claims of fact in manager's notes and their node question
+
+                 The five worker contracts' `## What you read` now opens by telling the
+                 worker to read each listed source rather than a summary of it, and to
+                 check each claim of fact in the manager's notes, whether they arrive in
+                 its spawn or on a resume, and in its node's `## Question` outside the
+                 human's own words, before relying on it.
+
+                 Node: graph-workflow/380
+
+RETROSPECTIVE (correction round 2):
+1. What I had to hunt for: nothing. I only checked the word count myself.
+2. What arrived that this node did not need: nothing.
+3. What would have made this easier: in round 1, using the amended clause's own wording instead of shortening it. I shortened it to keep a margin under the cap that turned out not to be needed, and the shorter form is what caused the misreading.
+4. What was stale, wrong or contradictory: the checker's count of 38 added words depends on how it is counted. Counting whitespace-separated tokens gives 39, because the backticked `##` becomes a separate token. Both counts are under the cap, so nothing changes.
+`````
+
+## Flags
+
+`380.1` `ASSUMPTION` **· settled** — Node 380 kept "claim of fact", phrased the carve-out as "text marked as the human's own words", and in the end used clause 1(b)'s own "whether they arrive" wording. *(The worker's full text is under each handover's `FLAGS`; the flag was put to the human at both gates.)*
