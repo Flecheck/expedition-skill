@@ -1,8 +1,14 @@
 # The rules file reserves `decisions.md` to the manager even where a node's own work is that file
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The rules file now lets a node change `decisions.md` or `flags.md` where its acceptance condition requires it, and keeps the node's own status line reserved to the manager.
+
+*The manager's note:* landed as commit `633c40636`, the gate taken under the standing yes on 2026-10-04. Flag 381.1 settles at the node closing report. Its `INVALIDATIONS` narrow node 163's rule; the manager notes it here and edits nothing.
 
 ## Question
 
@@ -82,7 +88,7 @@ RETROSPECTIVE:
 
 ## Flags
 
-`381.1` `ASSUMPTION` — Node 381's worker added a one-sentence citation of node 381 to the replacement text in the rules file, beyond the (a) and (b) the condition demanded. *(The worker's full text is under its handover's `FLAGS`.)*
+`381.1` `ASSUMPTION` **· settled** — Node 381's worker added a one-sentence citation of node 381 to the replacement text in the rules file, beyond the (a) and (b) the condition demanded. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 
@@ -123,3 +129,5 @@ RETROSPECTIVE:
 ### The gate, 2026-10-04 — standing yes
 
 `standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` is taken as the human's approval. The run covered every part, handed back no question, and found flag 381.1 true. Flag 381.1 settles at the node closing report.
+
+*The manager's note, 2026-10-04:* flag 381.1 settles at the node closing report that closes this node.
