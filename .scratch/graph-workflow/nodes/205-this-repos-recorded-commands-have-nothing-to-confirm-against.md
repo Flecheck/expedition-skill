@@ -1,7 +1,7 @@
 # Say in the rules file that this repo's recorded bar commands are a copy with nothing to confirm them against
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
