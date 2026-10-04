@@ -1178,3 +1178,31 @@ The seam is one step — the manager committing before the gate rather than afte
 *Replaced, and it stood as:*
 
 - **A fact about the record is derived rather than stored.** [`.scratch/graph-workflow/derivations.md`](derivations.md) holds the means of deriving the facts this effort measures about its own record, holds no values, and is not one of the graph's files. A number a worker receives from anywhere, whether a spawn, a handover or a line of the record, is re-derived before it is relied on. Settled at [node 183](nodes/183-nothing-measures-the-record-about-itself.md).
+
+## Superseded from `map-implementation-rules.md` at node 381 — the sentence reserving `decisions.md` and `flags.md` to the manager in every case
+
+*Replaced under the `Change the map` procedure at [The rules file reserves `decisions.md` to the manager even where a node's own work is that file](nodes/381-the-rules-file-reserves-decisions-md-even-where-it-is-the-work.md). The sentence made any change to the node's own status line, to `decisions.md` or to `flags.md` bookkeeping reserved to the manager, and had the checker fail it, even where the node's acceptance condition required that change. What replaces it keeps the status line reserved in every case and reserves `decisions.md` and `flags.md` except where the acceptance condition requires a change to that file, which is then the node's work. The paragraph's other sentences are unchanged. The paragraph is shown whole.*
+
+### From `## What the work is held against` — the paragraph beginning "An implementation node's work on this effort may be the effort's own record"
+
+*Replaced, and it stood as:*
+
+**An implementation node's work on this effort may be the effort's own record** — the files in the directory that
+holds `map.md`, this file and `map.md` among them, `decisions.md`, `flags.md`, and the node files under `nodes/`.
+Where it is, the checker reads **the changed paths it was given as the work under check**, whatever directory those
+paths sit in, and holds them against the acceptance condition and the standards exactly as it would hold product
+code. **It derives no statement of intent or decision from them**: their content is material under check rather than
+something to reason from, so a resolved node's `## Answer`, a line in `decisions.md`, or a passage in `map.md`
+appearing among the changed paths tells it nothing about what this work was meant to be, and **the acceptance
+condition stays the only statement of intent the checker has**. The checker's own contract tells it to read the
+implementation-rules file for its standards and to open no other file beside it; **that instruction governs the
+route by which standards reach the checker, and not the changed paths it was given as the work** — a record file
+handed to it as the work is read as the work, and a record file it was not handed stays unread. **A change to the
+node's own status line, to `decisions.md`, or to `flags.md` is bookkeeping reserved to the manager**: where one
+appears among the work the checker's outcome is `FAIL` on the acceptance condition, and that holds whether or not
+the acceptance condition itself excluded those paths. **The checker says in its outcome that it read the changed
+paths as the work under this rule.** This rule stands beside the standards named above rather than in place of any
+of them, and supersedes no wording in this file. Surfaced by [node
+163](nodes/163-a-condition-demands-facts-the-checker-does-not-read.md) and placed here rather than in the shipped
+checker contract by the human, `verbatim`: *"I would say add it to the rules in the map somewhere, not the skill at
+it is relevant only for this project"*; the citation carries no part of what the rule demands.

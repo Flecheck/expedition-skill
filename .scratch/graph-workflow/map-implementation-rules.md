@@ -72,9 +72,14 @@ condition stays the only statement of intent the checker has**. The checker's ow
 implementation-rules file for its standards and to open no other file beside it; **that instruction governs the
 route by which standards reach the checker, and not the changed paths it was given as the work** — a record file
 handed to it as the work is read as the work, and a record file it was not handed stays unread. **A change to the
-node's own status line, to `decisions.md`, or to `flags.md` is bookkeeping reserved to the manager**: where one
-appears among the work the checker's outcome is `FAIL` on the acceptance condition, and that holds whether or not
-the acceptance condition itself excluded those paths. **The checker says in its outcome that it read the changed
+node's own status line is bookkeeping reserved to the manager in every case**: where one appears among the work the
+checker's outcome is `FAIL` on the acceptance condition, and that holds whether or not the acceptance condition
+itself excluded that path. **A change to `decisions.md` or to `flags.md` is also bookkeeping reserved to the
+manager, with the same `FAIL`, except where the node's acceptance condition requires a change to that file.** Such a
+required change is the node's work, and the checker holds it against the acceptance condition like any other work.
+The exception was added at [node
+381](nodes/381-the-rules-file-reserves-decisions-md-even-where-it-is-the-work.md). **The checker
+says in its outcome that it read the changed
 paths as the work under this rule.** This rule stands beside the standards named above rather than in place of any
 of them, and supersedes no wording in this file. Surfaced by [node
 163](nodes/163-a-condition-demands-facts-the-checker-does-not-read.md) and placed here rather than in the shipped
