@@ -266,3 +266,114 @@ set -- nodes/[0-9]*-*.md
 total=$(cat "$@" | wc -c)
 awk -v total="$total" -v files="$#" 'BEGIN { printf "%d files, %d bytes in total, a mean of %.1f bytes\n", files, total, total / files }'
 ```
+
+## (j) Item names carried by the retrospectives
+
+For each standing item named in a retrospective, how many retrospectives carry that name, and in which node files?
+
+A retrospective is written into a node file in one of two ways: as a section under a heading of its own, or as the
+`RETROSPECTIVE` part of a worker's handover pasted into the file. The block reads every form of both.
+
+The headings under which a retrospective section sits are `## Retrospective`, `### Retrospective`,
+`## RETROSPECTIVE`, `## Retrospective — attempt 1`, `## Retrospective — what the two correction rounds added`,
+`## Annotation: the retrospective`, `## Annotation: the retrospective, and the manager's note on filing this node`,
+and `### The retrospective`. The block matches a heading of any level whose text is `Retrospective`,
+`RETROSPECTIVE` or `The retrospective`, or begins with `Retrospective — ` or `Annotation: the retrospective`. A
+retrospective section's body ends at the next heading of the same or higher level. A retrospective heading inside a
+section that is already open starts no second section. Some headings name a retrospective without holding one, and
+the block does not read them: a node file's title,
+`## The manager's disposal of the retrospective's record items`, and
+`## Annotation: this node's retrospective claim is refined, and its own number has moved`, which is a later node's
+note about one retrospective's claim.
+
+A handover's `RETROSPECTIVE` part starts at a line that begins with the word `RETROSPECTIVE`. The word stands alone,
+or is followed by a colon, by a suffix in parentheses such as `RETROSPECTIVE (this round)`, or by `ADDITION:`. Where
+that line is inside a fenced code block, the part ends where its fenced block ends. Where it is outside every fenced
+block, the part ends at the next heading. Outside a fenced block, the line may also open with `*` or `_` emphasis
+markers, as in `**RETROSPECTIVE**` and `*RETROSPECTIVE, addition to …:*`, and the word may be written
+`Retrospective`, as in the correction-round paragraphs `**Retrospective, added:**` and
+`**Retrospective, changed:**`. Where the line opens with a blockquote marker, as in `> RETROSPECTIVE`, the part ends
+at the first line that does not begin with `>`. A part that starts inside a retrospective section belongs to that
+section. A line that starts a part while another part is open ends that part and starts a new one.
+
+A fenced code block opens at a run of three or more backticks or tildes, indented by at most three spaces. It closes
+at a line holding only a run of the same character at least as long as the opening run. A pasted handover may be
+fenced with a long run and hold shorter fences of its own, and a closing run shorter than the opening one closes
+nothing. A heading inside a fenced code block is skipped, and it neither opens nor ends a section.
+
+An item name is recognised in one written form: a numbered or bulleted list item inside a retrospective, whose text
+opens with a code span. The list item may sit inside a blockquote, behind one or more `>` markers. The code span
+holds two or more words of lowercase letters and digits joined by hyphens. The name is the text of that code span. A
+name written in any other form, in bold or in running prose, is not recognised, because no other form can be told
+apart from ordinary emphasis and code spans.
+
+Each retrospective section, and each handover part outside a section, is one retrospective. Each output line is a
+count, a name, and the node files whose retrospectives carry that name. The count is the number of retrospectives
+that carry the name. A node file holding several of them, such as a first attempt and a correction round, adds one
+to the count for each, and is listed once. A name carried by only one retrospective is reported too, so that a
+name minted once is visible to the next worker looking for an existing name to reuse.
+
+A heading that names a retrospective, and that the block neither reads nor excludes as above, is a form this entry
+does not yet cover. The block prints each such heading on its standard error, and prints none while the forms above
+are complete.
+
+```sh
+LC_ALL=C awk '
+function is_retrospective_heading(text) {
+	return text == "Retrospective" || text == "RETROSPECTIVE" || text == "The retrospective" ||
+		index(text, "Retrospective — ") == 1 || index(text, "Annotation: the retrospective") == 1
+}
+function is_excluded_heading(level, text) {
+	return level == 1 || index(text, "disposal of the retrospective") || index(text, "retrospective claim is refined")
+}
+function read_name(    name, file) {
+	if (!match($0, /^([ \t]*>)*[ \t]*([0-9]+\.|[-*+])[ \t]+`[a-z0-9]+(-[a-z0-9]+)+`/)) return
+	name = substr($0, RSTART, RLENGTH)
+	sub(/^[^`]*`/, "", name)
+	sub(/`$/, "", name)
+	if ((name, retrospective) in carried) return
+	carried[name, retrospective] = 1
+	count[name]++
+	file = FILENAME
+	sub(/.*\//, "", file)
+	if ((name, file) in listed) return
+	listed[name, file] = 1
+	files[name] = files[name] " " file
+}
+FNR == 1 { fence = ""; section = 0; part = "" }
+fence != "" {
+	run = $0
+	sub(/^ +/, "", run)
+	sub(/[ \t]+$/, "", run)
+	if (run ~ /^(`+|~+)$/ && substr(run, 1, 1) == substr(fence, 1, 1) && length(run) >= length(fence)) {
+		fence = ""
+		if (part == "fenced") part = ""
+		next
+	}
+	if (!section && /^RETROSPECTIVE/) { part = "fenced"; retrospective++ }
+	if (section || part != "") read_name()
+	next
+}
+/^ ? ? ?(```|~~~)/ {
+	match($0, /`+|~+/)
+	fence = substr($0, RSTART, RLENGTH)
+	if (part == "quoted") part = ""
+	next
+}
+/^#+ / {
+	level = index($0, " ") - 1
+	text = substr($0, level + 2)
+	if (section && level <= section) section = 0
+	part = ""
+	if (section) next
+	if (is_retrospective_heading(text)) { section = level; retrospective++ }
+	else if (tolower(text) ~ /retrospective/ && !is_excluded_heading(level, text))
+		print "heading not covered: " FILENAME ": " $0 > "/dev/stderr"
+	next
+}
+part == "quoted" && !/^>/ { part = "" }
+!section && /^(> ?)?[*_]*(RETROSPECTIVE|Retrospective)/ { part = /^>/ ? "quoted" : "plain"; retrospective++ }
+section || part != "" { read_name() }
+END { for (name in count) print count[name], name ":" files[name] }
+' nodes/[0-9]*-*.md | sort -k1,1rn -k2,2
+```
