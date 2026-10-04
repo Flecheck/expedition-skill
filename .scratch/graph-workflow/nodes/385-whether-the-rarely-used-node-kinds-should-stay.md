@@ -76,3 +76,78 @@ RETROSPECTIVE
 `verbatim`: *"Q2 I think we should keep prototyping Q3 what is the status of the cascade, what was it supposed to do, it is already done by anyther way ? When should it be used ? Q1 I think we could do that ? I am not sure what's better"*
 
 *The manager's note:* **Q2 is a divergence.** It takes the alternative "Keep prototype as its own kind", not the `RECOMMENDED` merge. **Q3 is not answered.** The human asks four things back: what the cascade's status is, what it was meant to do, whether that is already done another way, and when it should be used. **Q1 is not settled.** The reply leans to the merge ("I think we could do that ?") and says it is unsure which is better. The manager does not take it as an "ok". All three go back to the worker holding the interview.
+
+#### Questions 1 and 3 again, relayed 2026-10-04
+
+*Pasted as the worker handed it back. The manager rebuilt the first two lines, the `NODE:` line and the `ABOUT:` label, which its extraction key cut; every other word is the worker's.*
+
+`````
+NODE:          Whether the rarely used node kinds and the cascade should stay
+ABOUT:         This node decides whether research, precondition, prototype and the cascade pass each stay, merge into something else, or leave the shipped skills. You asked because some kinds are rarely used and you want the skills compacted.
+SO FAR:        Settled by your reply: prototype stays as its own kind ("Q2 I think we should keep prototyping"). Precondition stays in every outcome, because adoption.md imports an existing corpus on precondition nodes. Two questions are still open: Q1 is the research decision, which you leaned to but were unsure about, and Q3 is the cascade, which you asked about. Below, each question first gives the explanation and then asks again. Counts were derived 2026-10-04 and are for scale only: 12 precondition nodes, 10 research nodes and 1 prototype node in about 385.
+               Settled on my own authority: removing something from the shipped skills changes only the shipped files. This effort's record keeps its existing research nodes as they are.
+
+Q1. Research and precondition
+CONTEXT:       How to choose. Whichever you pick, what you see changes very little: both kinds run without you, and both reach you only when their premise is broken. The choice mostly affects the files and the manager.
+               - Arguments for merging:
+                 - One fewer contract to keep in step. At least six past nodes (109, 333, 343, 348, 350, 380) each had to make the same edit in all five worker contracts, and node 382 is about to be the seventh. The research contract is about 2,560 words, and three-quarters of its lines also appear in other contracts.
+                 - The manager stops having to choose between two kinds it has treated as interchangeable. Gathering the manager's duties went to precondition (nodes 46 and 75). Finding where the skills restate themselves went to research (nodes 355 and 362). Both are the same kind of work.
+               - Arguments for keeping research separate:
+                 - "Research" is the clearer English word for "go and find out".
+                 - Its contract is built entirely around reporting facts honestly. The three rules that matter would move into the precondition contract: say where each fact came from, report "could not establish" rather than guess, and mark your own inference separately.
+                 - The precondition contract allows writing setup files. Research nodes would inherit that allowance, which is harmless.
+               - What stays the same either way: a fact needed for one of your decisions is still found inside that grilling node, as now. Only a fact that stands on its own needs a node of either kind.
+ASK:           Should research merge into precondition?
+RECOMMENDED:   Merge, and keep the name `precondition`. The fact-reporting rules move into the precondition contract in about five lines, and the research contract is deleted. This is the kind of compaction you asked for. It removes no capability, only a duplicate contract and a choice the manager was making inconsistently. If "research" reads better to you, merge under that name instead. That is a naming choice, not a different design.
+ALTERNATIVES:  Keep both kinds as they are: no compaction, and the manager keeps choosing between two kinds that do the same work.
+               Merge under the name `research`: clearer for fact-finding, though it fits adoption's import nodes and setup chores less well.
+               Merge research into grilling: a standalone fact would then wait on you with nothing for you to decide.
+
+---
+
+Q3. The cascade pass
+CONTEXT:       Your questions, answered.
+               - What it was meant to do. When a node is decided, earlier work can become stale, and the cascade was meant to find that and queue fixes without interrupting you. The original design (node 15) split this into three targets:
+                 1. Decided nodes whose answer the new decision changes.
+                 2. Open nodes whose question or acceptance condition the new decision changes.
+                 3. Code that already landed and now disagrees with the new decision. In this effort, that means the shipped skill files.
+               - Is it already done another way? Targets 1 and 2, yes. Target 3, partly.
+                 - Target 1: every worker reports it in its handover's `INVALIDATIONS` part. Node 382, open and ready, adds a duty to search the decided nodes' answers and conditions before handing back.
+                 - Target 2: every worker already searches the open nodes' conditions and questions before handing back (the `CONDITIONS` part). The manager then updates those nodes.
+                 - Target 3 is the only part that needed a separate pass. Here is how it actually gets done today:
+                   - The worker that makes a decision proposes the "carry this into the shipped files" implementation node itself.
+                   - Later workers notice stale text while reading files for their own work. Nodes 304, 307, 242 and 198 were all found that way.
+                   - The checker catches some of it.
+                   - You catch it at gates. Node 87 came from your own question at a gate.
+                   - Once node 382 lands, the deciding worker's search of decided implementation nodes' conditions also reaches the code they landed, because each condition describes its code.
+               - Status: the per-target design was settled (node 15). The pass's worker contract shipped (node 44, .claude/skills/expedition-cascade/SKILL.md). But nothing tells the manager to start it: the manager's contract never mentions the cascade. The node that would add that trigger, node 87, has been open since about node 76. So the pass has never run.
+               - When it would be used: if wired as designed, after every node is decided. The manager would start a cheap triage agent with the new answer and a list of every node that landed code. That agent picks the landed nodes worth a closer look, and its usual result is "none". Each pick then gets its own agent, which compares that code with the new answer and proposes fix nodes. The end-of-effort sweep would use the same machinery over every answer. That means one extra agent for every decided node, even when it finds nothing.
+               - Where it would pay most: an effort with a lot of landed product code whose decisions keep changing after the code lands, such as Lang. That is the honest case for keeping it.
+ASK:           Should the cascade pass and its contract be removed, with node 87 dropped as unnecessary?
+RECOMMENDED:   Remove it. Delete .claude/skills/expedition-cascade/, mark node 87 superseded as no longer needed, and reword the glossary's `Cascade` and `Sweep` entries, since `Sweep` is defined as "the same work as a cascade". The deciding worker's search under node 382 then covers target 3, as a search inside a worker that already holds the context instead of an extra agent for every decided node. Grounds:
+               - Targets 1 and 2 already have working routes.
+               - Target 3 is caught today by the routes listed above.
+               - Wiring the pass spends Claude credits on every node for a benefit nobody has measured, which ground rule 4 advises against.
+               - Removal is reversible: the contract can be restored from commit c64a0e32c if a product effort shows drift that the workers' searches miss.
+               The risk: a decision worded differently from an old condition will not match a text search, and on Lang that kind of miss is likelier than here.
+ALTERNATIVES:  Keep it and wire it by working node 87: the designed mechanism runs, at one extra agent for every decided node.
+               Keep the contract unwired until a product effort needs it: it costs nothing to run, but readers mistake the unwired contract for something the manager runs.
+               Remove the pass but add one named step to every worker: search landed code by its commit trailer for what the decision changes. More precise than relying on conditions, but it adds a duty to every worker.
+
+RETROSPECTIVE
+1. What I had to hunt for:
+   - The resolving worker's search for each Q3 point you asked about. I looked first at glossary.md's `Cascade` entry, then node 15's `## Answer`, and found the actual catchers by grepping who reported nodes 304, 307, 242, 198 and 87.
+   - The retrospective name registry. Names are in two forms: kebab-case names in nodes 178, 212 and 243, and bold names in node 215. They were found only by extracting every retrospective section, including those pasted inside handovers in later nodes.
+   - Standing item `nothing-pointed-me-at-it`. 1 earlier retrospective carries the name: 178.
+2. What arrived that this node did not need: on this resume, nothing; the resume was short and all of it bore on the work. From the first spawn: most of decisions.md, read whole, of which about 10 lines bore on the work.
+   - Standing item `read-and-unused`. 2 earlier retrospectives carry it: 141, 215.
+3. What would have made this easier:
+   - A spawn note naming node 87 and node 15's "never run" finding.
+   - In the record, one list of the retrospective names, so that finding them takes one read instead of extracting every retrospective section. The rule says to search instead of keeping such a list, and this is what that search costs.
+   - Standing item `nothing-pointed-me-at-it`. 1 earlier retrospective carries it: 178.
+4. What was stale, wrong or contradictory:
+   - The first spawn's note placed the kinds' definitions in SKILL.md `## Words used exactly`. The manager has acknowledged this. Standing item `unestablished inference`: 1 earlier retrospective carries it, 215.
+   - Node 87's question says `cascade` appears twice in SKILL.md; it now appears 0 times. Standing item `stale-number-in-the-record`: 2 earlier retrospectives carry it, 178 and 212.
+   - The glossary defines research as facts "from outside the working directory", but 6 of the 10 research nodes audited this repo's own text. Standing item `kind-definition-drifted-from-use`, a new name: 0 earlier retrospectives carry it.
+   - This resume's claims checked out against node 385's `## Interview`: the reply is verbatim, the divergence is on Q2, and Q1 and Q3 are open.
+`````
