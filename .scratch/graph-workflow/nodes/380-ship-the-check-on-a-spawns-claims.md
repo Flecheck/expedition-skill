@@ -1,7 +1,7 @@
 # Ship the check on a spawn's claims into the five worker contracts
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
