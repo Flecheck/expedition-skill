@@ -1,8 +1,14 @@
 # Ship the check on a spawn's claims into the five worker contracts
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The five worker contracts' `## What you read` tells the worker to read sources, not summaries, and to check claims of fact in manager's notes (spawn or resume) and its `## Question`.
+
+*The manager's note:* landed as commit `bd288b452`. The gate was put to the human twice, each time answered with a correction: the first amended clause 1(b) to cover notes on a resume, and the second used that clause's own wording. Run 3's `PASS` was taken under the standing yes. Flag 380.1 settled at the human's gates.
 
 ## Question
 
