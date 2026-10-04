@@ -95,3 +95,9 @@ Paths touched: .scratch/graph-workflow/worktrees/156-index-lines/.scratch/graph-
 ```
 
 *The manager's note:* the manager's spawn said hard rule 1 of the contract allows this node to write `decisions.md`, without checking the rules-file sentence the checker follows. The worker's raise is right that the two disagree.
+
+#### The human's answer to raise 1, 2026-10-04
+
+`verbatim`: *"ok"*
+
+The manager had closed the payload with "Please answer node 156's raise: "ok for recommended", or name an alternative." The reply takes the worker's `RECOMMENDED`: "Yes. Keep the work as it stands and tell the checker in its spawn that this node's acceptance condition makes `decisions.md` the work itself, under contract hard rule 1. Then file a small node to add that exception to the rules-file sentence."
