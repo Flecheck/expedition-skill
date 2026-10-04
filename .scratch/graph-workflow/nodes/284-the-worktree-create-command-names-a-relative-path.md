@@ -1,7 +1,7 @@
 # The worktree route's create command names a relative path and never says from where
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: none
 
