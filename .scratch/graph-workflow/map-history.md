@@ -1206,3 +1206,36 @@ of them, and supersedes no wording in this file. Surfaced by [node
 163](nodes/163-a-condition-demands-facts-the-checker-does-not-read.md) and placed here rather than in the shipped
 checker contract by the human, `verbatim`: *"I would say add it to the rules in the map somewhere, not the skill at
 it is relevant only for this project"*; the citation carries no part of what the rule demands.
+
+## Superseded from `map-manager-only.md` at node 284 — the create command's relative path, and the writability check's
+
+*Replaced under the `Change the map` procedure at [The worktree route's create command names a relative path and
+never says from where](nodes/284-the-worktree-create-command-names-a-relative-path.md). Each passage gave a path
+relative to the shell's working directory. The create bullet said only that the manager works from the main tree,
+which names the tree and not the directory, and the writability check named no directory at all. Each stated a
+rule that currently binds, so it took this route rather than strike-in-place, on [Where the never-delete rule
+stops](nodes/189-where-the-never-delete-rule-stops.md)'s test, and each is reproduced byte-identical to the text it
+had under *How the worktree is made*. What replaces the create bullet runs the command as `git -C <repo root>`,
+`<repo root>` being the main tree's absolute path. What replaces the writability check prefixes its path with
+`<repo root>`. The rest of the section is unchanged and is not reproduced here.*
+
+### From *How the worktree is made* — the create bullet
+
+*Replaced, and it stood as:*
+
+- **Create.** The manager makes each implementation node's worktree from the main tree with one plain git command:
+  `git worktree add -b worktree-<NN>-<name> .scratch/graph-workflow/worktrees/<NN>-<name>`, where `<NN>` is the
+  node's id — so the id is in the path and in the branch. Settled at [node
+  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+
+### From *How the worktree is made* — the bullet on the route's one failure mode
+
+*Replaced, and it stood as:*
+
+- **The route's one failure mode, and the read-only command that catches it.** The route works because
+  `.scratch/graph-workflow` is inside the manager's sandbox writable region, and **that has not always been so** —
+  in one session the manager's own shell could not append to `flags.md` in that directory while it could write the
+  node files one level below. **So the manager runs `test -w .scratch/graph-workflow` before creating a worktree.**
+  Where that check fails the worktree can be **neither created nor written** and there is no fallback, no tool call
+  being able to widen the region for that path, so it is **raised to the human** rather than worked around. Settled
+  at [node 265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).

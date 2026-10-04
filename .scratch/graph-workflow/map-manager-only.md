@@ -112,10 +112,17 @@ phrase *How the worktree is made*, and [node
 144](nodes/144-make-the-rules-file-stand-alone.md) hold conditions quoting its phrases. **The route this replaces is
 banked whole in [map-history.md](map-history.md).**
 
-- **Create.** The manager makes each implementation node's worktree from the main tree with one plain git command:
-  `git worktree add -b worktree-<NN>-<name> .scratch/graph-workflow/worktrees/<NN>-<name>`, where `<NN>` is the
-  node's id — so the id is in the path and in the branch. Settled at [node
-  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+- **Create.** The manager makes each implementation node's worktree with one plain git command:
+  `git -C <repo root> worktree add -b worktree-<NN>-<name> .scratch/graph-workflow/worktrees/<NN>-<name>`.
+  `<repo root>` is the main tree's absolute path, which is the first path `git worktree list` prints. `<NN>` is the
+  node's id, so the id is in the path and in the branch. Git resolves the relative path against `<repo root>`, so
+  the command creates the same worktree whatever the shell's working directory is. Run from a working directory
+  below the repository root without `-C`, the command creates the worktree at a doubled path such as
+  `.scratch/graph-workflow/.scratch/graph-workflow/worktrees/<NN>-<name>`. The repository's `.gitignore` does not
+  match that path, so `git add .scratch/graph-workflow` stages the worktree as one embedded repository entry and
+  warns `adding embedded git repository`. Settled at [node
+  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md), with the working directory fixed at [node
+  284](nodes/284-the-worktree-create-command-names-a-relative-path.md).
 - **Base.** That command lands the worktree on the manager's current `HEAD` by git's own default, so **no base reset
   is performed** and **no `worktree.baseRef` setting is relied on**: it is git's own semantics rather than a
   configuration, so it holds on a machine nobody has configured. Settled at [node
@@ -151,10 +158,11 @@ banked whole in [map-history.md](map-history.md).**
 - **The route's one failure mode, and the read-only command that catches it.** The route works because
   `.scratch/graph-workflow` is inside the manager's sandbox writable region, and **that has not always been so** —
   in one session the manager's own shell could not append to `flags.md` in that directory while it could write the
-  node files one level below. **So the manager runs `test -w .scratch/graph-workflow` before creating a worktree.**
-  Where that check fails the worktree can be **neither created nor written** and there is no fallback, no tool call
-  being able to widen the region for that path, so it is **raised to the human** rather than worked around. Settled
-  at [node 265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+  node files one level below. **So the manager runs `test -w <repo root>/.scratch/graph-workflow` before creating a
+  worktree**, with `<repo root>` as in the *Create* bullet. Where that check fails the worktree can be **neither
+  created nor written** and there is no fallback, no tool call being able to widen the region for that path, so it
+  is **raised to the human** rather than worked around. Settled at [node
+  265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
 - **A failed rebase leaves its partial checkout behind, and every retry then meets the dirt its predecessor made.**
   Measured at node 143. `git rebase` reported only `could not
   detach HEAD`; the underlying `git checkout --detach` reports the real cause, which was local changes and untracked
