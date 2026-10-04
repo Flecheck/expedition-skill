@@ -1,7 +1,7 @@
 # Derive how many times each standing item has been reported
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: 210, 219
 

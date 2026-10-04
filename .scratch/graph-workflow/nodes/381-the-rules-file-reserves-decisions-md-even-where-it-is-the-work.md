@@ -1,7 +1,7 @@
 # The rules file reserves `decisions.md` to the manager even where a node's own work is that file
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
