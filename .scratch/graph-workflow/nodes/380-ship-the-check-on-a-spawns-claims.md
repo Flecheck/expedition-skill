@@ -102,3 +102,44 @@ RETROSPECTIVE:
 3. What would have made this easier: nothing much. The condition was precise and its example wording met it. A one-line pointer to where the manager contract defines a spawn's notes would have saved one search.
 4. What was stale, wrong or contradictory: both of the manager's notes checked out. Node 32's `## Question` cites line numbers and a `flags.md` wording that were already stale on master. It breaks writing rule 4, which says to cite by heading or quoted phrase rather than line number. This work moves those lines down by two more.
 `````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c380.md`.*
+
+> PASS
+>
+> Read as the work: the five changed paths in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/380-spawn-claims. HEAD is the base 4f8925a46, so nothing is committed on the branch and all of the work is uncommitted.
+>
+> Acceptance condition, one line per part:
+> - Scope and residual clause: I ran the recorded search `grep -n 'Do not trust any summary of them' .claude/skills/*/SKILL.md` over the finished tree. It returns nothing (exit 1). The condition records five lines, one in each listed file. The difference is explained by the work itself, which removed the sentence. To test the recorded claim, I ran the same search on the base commit: `git grep -n 'Do not trust any summary of them' 4f8925a46 -- '.claude/skills/*/SKILL.md'`. It returns exactly one line in each of the five listed files and no other file, so the recorded claim holds. A search over unwrapped text in every `.claude/skills/*/SKILL.md` also finds no instance in the finished tree, so there is no instance outside the list to report.
+> - 1 (sentence gone, replaced in the same spot with (a), (b) and (c)): `git diff` shows one line removed and three lines added at the same spot under `## What you read` in each file. The new text is: "Read each of the following yourself rather than any summary of them. Before you rely on a claim of fact in the manager's notes in your spawn, or in your node's `## Question` outside any text marked as the human's own words, check it." It covers (a) "yourself rather than any summary", (b) "manager's notes in your spawn … check it" and (c) "`## Question` outside any text marked as the human's own words … check it".
+> - 2 (said as what to do, no prohibition, no heading, at most 40 words added): the new text has no "not", "never" or "do not", and the diff adds no `#` line. `wc -w` gives 12 words for the removed sentence and 44 for the new text, so 32 words were added.
+> - 3 (same text in all five files): I ran `git diff -U0 <file> | grep '^[+-][^+-]' | md5sum` on each file. All five give the same hash, 6c8fe4c43c2de7bfec0c85e471cbcf4c.
+> - 4 (nothing tells the worker to check a direction from the human, a permission or an acceptance condition): I read the new text. It tells the worker to check only claims of fact, and only those in the manager's notes and in `## Question`, with the human's marked words exempt. The shipped `.claude/skills/expedition/SKILL.md` (spawn list and "### Two things that travel in a spawn and are not yours") carries the human's direction and the acceptance condition as separate items, not as the manager's notes.
+> - 5 (no other sentence changes): `git diff --word-diff=porcelain` shows changes only inside the replaced sentence, the same five removed or added spans in each file. `git diff --stat` shows 3 lines added and 1 removed per file, with no rewrap elsewhere.
+> - 6 (no other file changes): `git status --short --ignored --untracked-files=all` lists only the five files: no untracked file, no ignored file, nothing under `.scratch/graph-workflow/`, and none of the expedition, checker or cascade SKILL.md files.
+> - 7 (the bar): see below.
+>
+> The bar:
+> - Commands: I found no agent-instruction file at the repo root and no manifest, build, test, formatter or CI config. The root holds only `.claude`, `CONTEXT.md` (a stub), `CONTEXT-MAP.md`, `.gitignore` and `.scratch`. The standards file also states that this repo has no build, tests, formatter or CI, so the command half of the bar is empty and the bar is complete without it. `git diff --check` prints nothing (exit 0). The new lines are at most 103 characters, within the files' existing wrap width.
+> - Standards: I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md`, under "What the work is held against", and opened no other file in the effort's directory. The list is `/coding-principles` and `/naming`, the glossary's `_Avoid_` lines, the ground rules, the six standing rules for writing, `graph-conventions.md` and `/writing-for-agents`. The file names no reviewing skill, so I ran none.
+> - Standards that bore on this work:
+>   - The ground rules: the text assumes no repo or toolchain, invokes no skill, and does not address the human.
+>   - Writing rules 5 and 6: the rule is said as what to do, with no bold, no figure of speech and no slogan-shaped contrast. Each pronoun has one referent ("them" is the listed sources, "it" is the claim of fact).
+>   - The glossary's `_Avoid_` lines: I searched them unwrapped. "summary" is refused only for the "Effort closing report" concept, which does not apply here. No other word of the new text is refused.
+>   - `graph-conventions.md`: `## Question` is a node-file heading it defines.
+>   - `/writing-for-agents` (located by name in the mattpocock-skills plugin): it prefers a positive instruction over negation, and the change turns a prohibition into a positive instruction.
+>   - `/coding-principles` and `/naming` did not bear on this prose change.
+> - Under the rules file's record-as-work rule, I read the changed paths as the work. None of them is a status line, `decisions.md` or `flags.md`.
+>
+> QUESTIONS:
+> - Is the clash between "the manager's notes" and the glossary's "Manager note" intended? The phrase comes from the condition's clauses 1(b) and 2. The glossary defines **Manager note** as "The manager's own annotation on a relayed question". The grilling, prototype and precondition contracts also have a `MANAGER NOTES:` field in their resume shape ("the manager's own, never the human's"). The new text limits the duty to check claims to the notes "in your spawn". So a manager note that comes back on resume, the glossary sense, is not covered, and "manager's notes" now means two different things in the same file. The wording is the condition's own, so departing from it was not the worker's call. Should notes that arrive on resume be checked too, and should the spawn notes get a different name?
+>   - Form: a passage in a worker contract that says "manager's notes" for a spawn's notes while the glossary's "Manager note" names something else.
+>   - Extent: `grep -n "manager's notes\|MANAGER NOTES" .claude/skills/expedition-{grilling,research,prototype,precondition,implementation}/SKILL.md`.
+>
+> I wrote no temporary files.
+
+*The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
