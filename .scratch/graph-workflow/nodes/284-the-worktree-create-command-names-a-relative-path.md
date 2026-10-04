@@ -273,3 +273,9 @@ RETROSPECTIVE:
 > The temporary directory under $TMPDIR has been removed, and the working tree is as I found it.
 
 *The manager's note:* the checker handed back two findings beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
+### The gate, 2026-10-04
+
+`verbatim`: *"ok"*
+
+The manager had offered "Recommended: a short correction round to fix both sentences, and the same checker re-checks." and the alternative "approve as is", closing with "Please answer: "ok for recommended", or "approve as is"." The reply takes the correction round. Flags `284.1` to `284.4` were in the payload and settle here.
