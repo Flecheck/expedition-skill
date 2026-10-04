@@ -313,3 +313,19 @@ RETROSPECTIVE (correction round 1):
 > Temporary files were written only under $TMPDIR/chk379b and have been removed.
 
 *The manager's note on the part under `NOT COVERED`:* established by the manager again. On master, `decisions.md` and `flags.md` name node 379 nowhere, the main checkout holds no uncommitted change, and every master commit touching this node's file since the cut is the manager's own. *On the gate:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
+### The gate, second time, 2026-10-04
+
+`verbatim`: *"ok"*
+
+The manager had offered "Recommended: one more short correction round. Amend clause 2 so that sentence may become "The one file you go and read for yourself is `map-implementation-rules.md`, and only for the standards in it." It's a reword in place, so the line count doesn't grow." and the alternative "approve as is", closing with "Please answer: "ok for recommended", or "approve as is"." The reply takes the correction round. Flag `379.3`, the worker's round-1 flag, was in the payload and settles here.
+
+## Amendment 2, 2026-10-04
+
+*The human's amendment at the second gate. The human's reply, `verbatim`: "ok". It took the correction the manager offered, so the words are the manager's and the decision is the human's. Its ground is checker run 2's question: the frozen sentence "The one exception is `map-implementation-rules.md`, and only for the standards in it." sits beside "the one part of the record you are given" with nothing saying the two exceptions differ.*
+
+**Clause 2's list of sentences that keep their words no longer includes** "The one exception is `map-implementation-rules.md`, and only for the standards in it." That sentence becomes, word for word:
+
+> The one file you go and read for yourself is `map-implementation-rules.md`, and only for the standards in it.
+
+Every other sentence the clause freezes still keeps its words, and clause 9's caps stand.
