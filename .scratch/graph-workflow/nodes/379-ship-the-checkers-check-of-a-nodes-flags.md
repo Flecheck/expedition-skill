@@ -21,7 +21,7 @@ Carry node 30's answer into the checker contract and the manager contract.
 > In `.claude/skills/expedition-checker/SKILL.md`:
 >
 > 1. Under `## What you are given`, the numbered list gains a seventh item: the flags the work's node holds, each as one sentence with its id, given as text by the spawn. The item says that a flag is a judgement another agent recorded about this work, and that this given is absent where the node holds no flags. The sentence introducing the list states the new count, and states correctly which givens the spawn carries and which one the checker reads for itself.
-> 2. The paragraph beginning "The six givens above are everything you are given" no longer says "six". It states its closure as protection of the record: the record stays unread, and a flag given under item 7 is a claim about the work, not part of the record. The paragraph's other sentences keep their words. That includes "The one exception is `map-implementation-rules.md`, and only for the standards in it." and "A path you were given as the work is the work wherever it sits, and you read it."
+> 2. The paragraph beginning "The six givens above are everything you are given" no longer says "six". It states its closure as protection of the record: the record stays unread, and ~~a flag given under item 7 is a claim about the work, not part of the record~~ *(this part superseded 2026-10-04 by the human's amendment under `## Amendment, 2026-10-04`)*. The paragraph's other sentences keep their words. That includes "The one exception is `map-implementation-rules.md`, and only for the standards in it." and "A path you were given as the work is the work wherever it sits, and you read it."
 > 3. A section headed `### The flags, after your outcome` is added under `## What you hand back`. It states all of the following:
 >    (a) Check the flags only after reaching your `PASS` or `FAIL`, and change no outcome because of them.
 >    (b) For each flag, establish one of three things: what it says was done is true of the work, it is false, or it makes no claim the work can make true or false.
@@ -182,3 +182,19 @@ RETROSPECTIVE:
 > Temporary files were written only under $TMPDIR/chk379 and have been removed.
 
 *The manager's note on the part under `NOT COVERED`:* the manager established it. Between the cut at `937fe6c9b` and this run, master changed neither `decisions.md` nor `flags.md`. The only commits touching this node's file are the manager's own two, recording the stopped attempt and filing the handover. *The manager's note on the gate:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
+### The gate, 2026-10-04
+
+`verbatim`: *"ok"*
+
+The manager had offered "Recommended: a correction round that amends clause 2. A flag is part of the record, and the flags given under item 7 are the one part of it the checker is given, as claims about the work. The checker contract's sentence becomes something like "A flag given under item 7 is the one part of the record you are given, and you read it as a claim about the work."" and the alternative "approve as is", closing with "Please answer node 379's gate: "ok for recommended", or "approve as is"." The reply takes the correction round. Flags `379.1` and `379.2` were in the payload and settle here.
+
+## Amendment, 2026-10-04
+
+*The human's amendment at the gate. The human's reply, `verbatim`: "ok". It took the correction the manager offered, so the words are the manager's and the decision is the human's. Its ground is checker run 1's question: clause 2 as written made the two contracts disagree on whether a flag is part of the record, and the glossary and `graph-conventions.md` place a flag inside it.*
+
+**Clause 2's struck part is replaced by:**
+
+> a flag given under item 7 is the one part of the record the checker is given, and the checker reads it as a claim about the work.
+
+Clause 7 is unchanged: it already treats the flag sentences as the one exception to what the checker receives from the record.
