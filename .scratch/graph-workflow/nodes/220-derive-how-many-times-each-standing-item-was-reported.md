@@ -263,7 +263,7 @@ RETROSPECTIVE:
 
 ## Flags
 
-`220.1` `ASSUMPTION` — Entry (j) in derivations.md counts the node files carrying a standing-item name, not the retrospective sections, so one node's repeated rounds count once. *(The worker's full text is under its handover's `FLAGS`.)*
+`220.1` `ASSUMPTION` **· withdrawn by its worker in correction round 1** — Entry (j) in derivations.md counts the node files carrying a standing-item name, not the retrospective sections, so one node's repeated rounds count once. *(The worker's full text is under its handover's `FLAGS`.)*
 
 `220.2` `ASSUMPTION` — Entry (j) reads unfenced, emphasised and blockquoted RETROSPECTIVE parts too, ending them at the next heading or the end of the blockquote, which clause 2 did not list. *(The worker's full text is under its handover's `FLAGS`.)*
 
@@ -357,3 +357,63 @@ RETROSPECTIVE:
 > Temporary files were under $TMPDIR/chk220 and have been removed.
 
 *The manager's note:* a `FAIL` goes back to the worker for a correction round, under "Raise the gate once the checker passes". The human sees it at the gate as one of the checker's runs.
+
+## Handover, correction round 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      220, Derive how many times each standing item was reported. Correction round 1, for checker run 1 (FAIL, acceptance condition)
+
+ANSWER:        As first returned, with these changes to entry (j) in `.scratch/graph-workflow/derivations.md`. Everything else in the entry is as before.
+               - **The count is now retrospectives, not node files.** Each retrospective section, and each handover part outside a section, is one retrospective. Each output line is a count, a name and the node files whose retrospectives carry it. The count is the number of retrospectives carrying the name. A node file holding several, such as a first attempt and a correction round, adds one for each and is listed once. To make that count well defined, a line that starts a part while another part is open now ends that part and starts a new one, for example a second `RETROSPECTIVE (correction round 1):` inside the same fenced handover. Inside a heading section, a part still belongs to the section.
+               - **A name may sit in a blockquoted list item, behind one or more `>` markers.** Without this, the blockquoted form the entry names, `> RETROSPECTIVE`, could never yield a name.
+               - **The fence-opening pattern no longer uses an interval expression.** It was `^ {0,3}`; it is now `^ ? ? ?`. The block now runs under mawk 1.3.4 as well as gawk, with identical output.
+
+INDEX LINE:    derivations.md gains entry (j). It lists each standing-item name, written as a kebab-case code span opening a list item, with how many retrospectives carry it and in which node files.
+
+FLAGS:         Flag 220.1 (counting node files rather than retrospectives) is withdrawn. The work now follows clause 1's literal question, so there is no judgement left to flag. Flags 220.2 and 220.3 stand as first returned.
+
+               ASSUMPTION: **A part-opening line met while another part is open starts a new retrospective.** Counting retrospectives needs each one to have an identity. A pasted handover sometimes holds a second `RETROSPECTIVE (…)` line for a later round in the same fenced block, or a bold `**Retrospective, added:**` paragraph after an unfenced part. Each of those is now its own retrospective, ending the previous part. Inside a retrospective heading section, such a line still belongs to the section, which counts once. I decided this without asking because it only fixes the unit that clause 1 names. Index: Entry (j) treats each RETROSPECTIVE opening line outside a heading section as a new retrospective, so a correction round's part counts separately from the first.
+
+NEW NODES:     As first returned (State in the retrospective bullet the form a standing item's name is written in), with one change. In its clause 1, after "joined by hyphens", add: "The list item may sit inside a blockquote." This keeps it matched to entry (j).
+
+INVALIDATIONS: As first returned.
+
+CONDITIONS:    As first returned. This round changes no word, path or phrase that open conditions quote.
+
+MISSING FROM MAP: As first returned. Also: `derivations.md`'s preamble says each block uses only sh, awk, find, wc, sort, grep and git. It does not say which awk the blocks must run under. I went on by making the block run under mawk as well as gawk.
+
+GATE PAYLOAD:  - **Finding 1 (clause 1: the count was node files).** Fixed, not disputed. The paragraph beginning "Each output line is a count" now defines one retrospective and counts retrospectives. In `read_name()`, `carried` is now keyed by name and a retrospective counter. That counter increases at each section start and each part start. A separate `listed` keeps each file once in the list. On a synthetic tree of two files, the block prints `4 alpha-one: 1-a.md 2-b.md`. File 1 holds `## Retrospective` and `## Retrospective — attempt 1`, each carrying the name. File 2 holds a fenced `RETROSPECTIVE:` part and a `RETROSPECTIVE (correction round 1):` part in the same fenced block, each carrying it. That is four retrospectives in two files. A list item inside an indented fence before the part is not read.
+               - **Finding 2 (clause 2: blockquoted form unreadable).** Fixed. `read_name()`'s pattern now admits leading `>` markers: `^([ \t]*>)*[ \t]*([0-9]+\.|[-*+])[ \t]+` followed by the code span. The entry's text says a list item may sit inside a blockquote. On the synthetic tree, `> RETROSPECTIVE (quoted)` followed by ``> - `lam-da` quoted`` prints `1 lam-da: 2-b.md`, and a list item after the blockquote ends is not read.
+               - **The checker's mawk note.** Fixed as above. Under mawk 1.3.4 the block's output is identical to gawk's, on the synthetic tree and on this worktree's `nodes/`.
+               - **Verification.** I rewrote the independent Python measurement for the new unit, the restart rule and blockquoted names. Its output is byte-identical to the block's over this worktree's `nodes/`, over the main tree's current `nodes/`, and on the synthetic tree. Run on the main tree, the block prints nothing on stderr. On today's trees the counts are unchanged in this worktree. The main tree now also carries node 220's and node 284's filed retrospectives.
+               - **Touches the acceptance condition:** yes, clauses 1, 2 and 4, through the paragraphs and the block of entry (j). No existing entry is changed.
+               - **Paths touched:** `.scratch/graph-workflow/derivations.md` only, additions only. `git diff --check` is clean, and `git status --short` shows only that file. Worktree: /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/220-retro-derivation.
+               - **The bar:** unchanged from the first handover. The repo has no build, test or format commands, so the bar is the standards and the condition.
+               - **Proposed commit message:**
+                 Derive how many retrospectives carry each standing-item name
+
+                 derivations.md gains entry (j). It reads every form a retrospective takes
+                 in a node file (the heading forms, and a handover's RETROSPECTIVE part,
+                 fenced, unfenced, emphasised or blockquoted) with CommonMark fence
+                 lengths, and lists each item name written as a kebab-case code span
+                 opening a list item, with how many retrospectives carry it and in which
+                 node files.
+
+                 Node: graph-workflow/220
+
+RETROSPECTIVE (correction round 1):
+1. What I had to hunt for: nothing new about the record. The work was re-reading clause 1's literal question against the unit I had chosen, and checking whether mawk was reachable to confirm the checker's note. It was, through `nix shell nixpkgs#mawk`.
+   - `cross-check-shares-the-blind-spot` — new name; no earlier retrospective carries it. My independent Python check was written from my own reading. It reproduced both of my misses, the unit and the blockquote, so the agreement between the two implementations proved nothing about them. A synthetic tree with one instance of each named form would have caught finding 2 before the checker did.
+2. What arrived that this node did not need: nothing. The two findings came with instances, extent commands and synthetic cases, which is all a fix needs.
+3. What would have made this easier: a line in `derivations.md`'s preamble naming the awk dialects every block must run under. The existing entries avoid interval expressions only by habit.
+   - `rules-file-read-whole-for-one-section` — 2 earlier retrospectives carry it (nodes 178, 220). Not this round: no file was reread.
+4. What was stale, wrong or contradictory: my own flag 220.1. I settled a question clause 1 had already answered in plain words, and recorded it as a judgement.
+   - `stale-number-in-the-record` — 3 earlier retrospectives carry it (nodes 178, 212, 220). Not this round: no number was handed to me.
+   Counts are from entry (j) as fixed, run 2026-10-04 over the main tree's `nodes/`; they are not authoritative and are for scale only.
+`````
+
+## Flags, correction round 1
+
+`220.4` `ASSUMPTION` — Entry (j) treats each RETROSPECTIVE opening line outside a heading section as a new retrospective, so a correction round's part counts separately from the first. *(The worker's full text is under correction round 1's `FLAGS`.)*

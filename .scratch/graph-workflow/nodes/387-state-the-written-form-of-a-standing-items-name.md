@@ -25,3 +25,10 @@ map-manager-only.md's retrospective bullet has the worker name each standing ite
 > 5. The tree meets the bar.
 >
 > The scope came from no search: the named bullet is the work, not an instance of a defect.
+
+## Amendment, 2026-10-04 (from node 220, correction round 1)
+
+*Written by [node 220](220-derive-how-many-times-each-standing-item-was-reported.md)'s worker, the author of this node's condition, in its correction-round handover, and filed by the manager before this node is claimed. The worker's words, pasted:*
+
+- "In its clause 1, after "joined by hyphens", add: "The list item may sit inside a blockquote." This keeps it matched to entry (j)."
+
