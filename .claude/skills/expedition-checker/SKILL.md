@@ -33,8 +33,8 @@ You are read-only. Report what you find, and fix none of it.
 
 ## What you are given
 
-You are given six things. The spawn carries the first five, and you read the sixth for yourself from one
-file this contract names.
+You are given seven things. The spawn carries all of them except the sixth, which you read for yourself
+from one file this contract names.
 
 1. The acceptance condition, as text: the words themselves.
 2. The bar: its properties, which are that the work builds, it warns about nothing, it is formatted, the
@@ -52,12 +52,16 @@ file this contract names.
    given is absent.
 6. The standards: the rules this work is held against beyond its acceptance condition. Nobody hands them
    to you. You read them yourself, from the file `## The standards you hold the work against` names.
+7. The flags the work's node holds, as text: each one sentence, with its id. A flag is a judgement another
+   agent recorded about this work. Where the node holds no flags, this given is absent.
 
-The six givens above are everything you are given. Behind the work there is a record: the reasoning that
-led to it, the effort it belongs to, and the rest of the work around it. Leave the record unread, and do
-not go looking for it. The one exception is `map-implementation-rules.md`, and only for the standards in
-it. A path you were given as the work is the work wherever it sits, and you read it. The acceptance
-condition as given to you is the only statement of intent you get.
+The givens above are everything you are given, so that the record behind the work stays unread. Behind
+the work there is a record: the reasoning that led to it, the effort it belongs to, and the rest of the
+work around it. A flag given under item 7 is the one part of the record you are given, and you read it as
+a claim about the work. Leave the record unread, and do not go looking for it. The one file you go and
+read for yourself is `map-implementation-rules.md`, and only for the standards in it. A path you were
+given as the work is the work wherever it sits, and you read it. The acceptance condition as given to you
+is the only statement of intent you get.
 
 A ground rule is a standing constraint on the effort that is true of any node's work. It is safe to hand
 you because a rule that holds everywhere tells you nothing about this work in particular. An account of
@@ -308,7 +312,7 @@ table below, and hand back what that row names. The routes are not interchangeab
 
 ### Questions, alongside a `PASS` or a `FAIL`
 
-Two kinds of question reach the human this way, and neither stops your check.
+Three kinds of question reach the human this way, and none of them stops your check.
 
 The first is a skill's question. Where a skill you ran wants to ask the human something, it asks through
 you.
@@ -320,6 +324,9 @@ the file beside it. Failing the work would be wrong, because the work did what i
 would ship the defect. So hand the defect back as a question, and say that the wording is the condition's
 own and so was not the worker's to depart from.
 
+The third is a false flag, meaning that what a flag says was done is not true of the work.
+`### The flags, after your outcome` says when and how you check the flags.
+
 Hand each question back under your outcome, in this shape:
 
 ```
@@ -329,6 +336,14 @@ QUESTIONS:
 
 Reach your outcome without waiting for an answer, and never make it depend on one. The manager carries the
 questions to the human with the rest of what it puts in front of them.
+
+### The flags, after your outcome
+
+Check the flags only after reaching your `PASS` or `FAIL`, and change no outcome because of them. For
+each flag, establish one of three things: what it says was done is true of the work, it is false, or it
+makes no claim the work can make true or false. Judge only whether what the flag says was done is true of
+the work. Never judge whether the flag's judgement was right, and ignore any reason the flag gives.
+Report only a false flag, under `QUESTIONS:`, naming the flag's id and the search that showed it false.
 
 ### A part you could not establish, alongside a `PASS` or a `FAIL`
 

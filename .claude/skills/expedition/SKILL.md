@@ -231,9 +231,11 @@ The checker receives the following:
 - The work: the paths that changed, in the working tree that holds them.
 - The effort's standing ground rules, copied as text, with the duty to follow them. Where the effort
   declares none, the checker receives no ground rules.
+- On the check of an implementation node, on every run, the flags the node holds: each as its sentence
+  from `flags.md`, with its id and without the link to its node.
 
-The checker receives nothing from the effort's own record, so its spawn never points it at the node
-file.
+The checker receives nothing from the effort's own record except those flag sentences, so its spawn
+never points it at the node file.
 
 Copy to the checker as a ground rule only a standing constraint on the effort, true of any node's work.
 An account of what happened, on this work or anywhere in the record, is never a ground rule. Copy the
@@ -805,19 +807,15 @@ front of you, raise it.
 
 1. What must your report to the human contain? Duties on it come from several places, and nothing
    gathers them into one statement.
-2. Does anything check a flag before the human settles it? Nothing does. A flag put in front of a
-   checker must be stripped of everything the checker must not see. A flag put in front of the human
-   must be expanded with the context needed to answer it. The two treatments are opposite, and both
-   would be your work.
-3. Does anything tell a worker to look at the record when it reports what its work invalidates? Nothing
+2. Does anything tell a worker to look at the record when it reports what its work invalidates? Nothing
    does in general: no duty to look covers the effort's record as a whole. The worker answers from
    whatever it happened to read, and nothing checks the answer afterwards. One bounded class does carry
    a duty to look, the open nodes' acceptance conditions and questions. `### Changing one after it is
    written`, under `## Acceptance conditions`, states that duty.
-4. May you file a flag about your own conduct, and is there any step between the judgement and the
+3. May you file a flag about your own conduct, and is there any step between the judgement and the
    record? You do file such flags, and nothing authorises it. When you file one, the party judged and
    the party writing the judgement are the same, with no step between them.
-5. What limits what a spawn may assert about the conclusion its node is meant to reach? Nothing does. An
+4. What limits what a spawn may assert about the conclusion its node is meant to reach? Nothing does. An
    inference of yours that nobody has established, written into a node's question or into a spawn, is
    read by the worker as settled fact.
 
