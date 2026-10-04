@@ -1,9 +1,15 @@
 # Derive how many times each standing item has been reported
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: 210, 219
+
+## Answer
+
+derivations.md gains entry (j). It lists each standing-item name, written as a kebab-case code span opening a list item, with how many retrospectives carry it and in which node files.
+
+*The manager's note:* landed as commit `6149fbca3` after one correction round on a `FAIL`; run 2's `PASS` was taken under the standing yes on 2026-10-04. It surfaced [node 387](387-state-the-written-form-of-a-standing-items-name.md), now unblocked. Flags 220.2, 220.3 and 220.4 settle at the node closing report; 220.1 was withdrawn by its worker.
 
 ## Question
 
@@ -265,9 +271,9 @@ RETROSPECTIVE:
 
 `220.1` `ASSUMPTION` **· withdrawn by its worker in correction round 1** — Entry (j) in derivations.md counts the node files carrying a standing-item name, not the retrospective sections, so one node's repeated rounds count once. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`220.2` `ASSUMPTION` — Entry (j) reads unfenced, emphasised and blockquoted RETROSPECTIVE parts too, ending them at the next heading or the end of the blockquote, which clause 2 did not list. *(The worker's full text is under its handover's `FLAGS`.)*
+`220.2` `ASSUMPTION` **· settled** — Entry (j) reads unfenced, emphasised and blockquoted RETROSPECTIVE parts too, ending them at the next heading or the end of the blockquote, which clause 2 did not list. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`220.3` `ASSUMPTION` — Entry (j) treats node 70's refining annotation and the manager's disposal headings as not retrospectives, contrary to node 178's count of six heading forms. *(The worker's full text is under its handover's `FLAGS`.)*
+`220.3` `ASSUMPTION` **· settled** — Entry (j) treats node 70's refining annotation and the manager's disposal headings as not retrospectives, contrary to node 178's count of six heading forms. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 
@@ -416,7 +422,7 @@ RETROSPECTIVE (correction round 1):
 
 ## Flags, correction round 1
 
-`220.4` `ASSUMPTION` — Entry (j) treats each RETROSPECTIVE opening line outside a heading section as a new retrospective, so a correction round's part counts separately from the first. *(The worker's full text is under correction round 1's `FLAGS`.)*
+`220.4` `ASSUMPTION` **· settled** — Entry (j) treats each RETROSPECTIVE opening line outside a heading section as a new retrospective, so a correction round's part counts separately from the first. *(The worker's full text is under correction round 1's `FLAGS`.)*
 
 ## Review, continued
 
