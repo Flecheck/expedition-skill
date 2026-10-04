@@ -198,3 +198,59 @@ The manager had offered "Recommended: a correction round that amends clause 2. A
 > a flag given under item 7 is the one part of the record the checker is given, and the checker reads it as a claim about the work.
 
 Clause 7 is unchanged: it already treats the flag sentences as the one exception to what the checker receives from the record.
+
+## Handover, correction round 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      Ship the checker's check of a node's flags (node 379), correction round 1
+ANSWER:        Node 30's answer is now in the checker contract and the manager contract. The text below is attempt 2's answer, changed only where the amendment of 2026-10-04 to clause 2 reached it.
+
+               `.claude/skills/expedition-checker/SKILL.md` (422 lines before, 437 after by `wc -l`, which is exactly the cap of 15 added lines):
+               - `## What you are given` has a seventh item. It gives the flags the work's node holds, as text, each as one sentence with its id. It says that a flag is a judgement another agent recorded about this work, and that this given is absent where the node holds no flags. The sentence that opens the list reads "You are given seven things. The spawn carries all of them except the sixth, which you read for yourself from one file this contract names."
+               - The paragraph after the list opens "The givens above are everything you are given, so that the record behind the work stays unread." After the sentence that defines the record comes the sentence the amendment dictates: "A flag given under item 7 is the one part of the record you are given, and you read it as a claim about the work." Every other sentence of the paragraph keeps its words. The paragraph was rewrapped, and no word in it moved.
+               - In `### Questions, alongside a `PASS` or a `FAIL``, the counting sentence reads "Three kinds of question reach the human this way, and none of them stops your check." A paragraph is added after "The second is…": "The third is a false flag, meaning that what a flag says was done is not true of the work. `### The flags, after your outcome` says when and how you check the flags."
+               - A new section, `### The flags, after your outcome`, comes right after `### Questions…`. It says five things. Check the flags only after reaching `PASS` or `FAIL`, and change no outcome because of them. For each flag, establish one of three things: true of the work, false, or no claim the work can make true or false. Judge only whether what the flag says was done is true. Never judge whether the flag's judgement was right, and ignore any reason the flag gives. Report only a false flag, under `QUESTIONS:`, naming its id and the search that showed it false.
+               - No heading was renamed, and the table under `### When what you check against is itself the problem` is unchanged.
+
+               `.claude/skills/expedition/SKILL.md` (826 lines before, 824 after), unchanged since attempt 2:
+               - The list in `## The checker` has a new item: "On the check of an implementation node, on every run, the flags the node holds: each as its sentence from `flags.md`, with its id and without the link to its node."
+               - The sentence about the record reads "The checker receives nothing from the effort's own record except those flag sentences, so its spawn never points it at the node file."
+               - The item "Does anything check a flag before the human settles it?" is removed from `## What nothing here settles`, and the items after it are renumbered 2 to 4 in their existing order.
+
+               The two contracts now agree that a flag is part of the record, and that the flag sentences are the one part of it the checker receives. That is also what the glossary says: "The record is every answer, status, index line and flag".
+INDEX LINE:    The checker contract gains a seventh given, the node's flags as id-tagged sentences and the one part of the record it receives, and checks them after its outcome. The manager's checker spawn carries them.
+FLAGS:         ASSUMPTION: In correction round 1 I changed only the one sentence the amendment supersedes. I left the paragraph's opening sentence as it was: "…so that the record behind the work stays unread". Clause 2 still requires the paragraph to say that the record stays unread, and the next sentences already introduce exceptions to that general statement: the flag sentence, and then "Leave the record unread… The one exception is `map-implementation-rules.md`". That "one exception" sentence is locked by clause 2, and I read it as the one file the checker opens for itself. The flags are handed to it rather than opened, so "one exception" stays true beside "the one part of the record you are given". One reading is left for the human. The standards file, `map-implementation-rules.md`, sits beside the map, and the checker reads given 6 from it. That file could be counted as a second part of the record the checker receives. The amended wording "the one part of the record … you are given" is the condition's own. Index: Round 1 changed only the superseded flag sentence; the opening sentence and the locked "one exception" sentence stay, read as covering what the checker opens rather than what it is handed.
+               The two flags from attempt 2 still stand unchanged: where the new section and sentence go, and the one-clause definition of a false flag in the Questions section.
+NEW NODES:     none
+INVALIDATIONS: none beyond what node 30 already reported: node 26 narrowed, node 42 extended, and node 28's flag 28.3 carried out. The amendment brings the checker contract into line with the glossary's definition of the record, so it contradicts no resolved node.
+CONDITIONS:    No new search this round. The only new phrase is "the one part of the record", and it supersedes nothing that an open node quotes. What attempt 2's CONDITIONS said still holds. Node 214 still needs the replacement clause 2 given there ("Three kinds…" becomes "Four kinds…", and its paragraph goes after "The third is a false flag"). Node 37's "item 3" is item 2 after this work.
+MISSING FROM MAP: none
+GATE PAYLOAD:  Checker run 1's question: clause 2's dictated sentence contradicted clause 7, the glossary and `graph-conventions.md`. The human settled it by amending clause 2 on 2026-10-04. I replaced the sentence "A flag given under item 7 is a claim about the work, and not part of the record." with "A flag given under item 7 is the one part of the record you are given, and you read it as a claim about the work." I checked the rest of the paragraph against it; see the round-1 flag above.
+               Did this touch anything the acceptance condition names: yes, clause 2 as amended, and clause 9's line count. The checker contract is now at 437 lines, which is the cap of +15 exactly, so there is no margin left for any further correction. The manager contract is unchanged this round, at 824 lines.
+               Checks run this round:
+               - The heading count is 21, with only `### The flags, after your outcome` added.
+               - `git diff --check` is clean.
+               - `grep -n -w -i 'six\|five'` returns no line.
+               - Neither file contains a markdown link.
+               - The repo still states no build, test or format commands, so the command half of the bar is empty.
+               Claims in the manager's message that I checked: the `## Amendment, 2026-10-04` text on the node matches the message word for word. The glossary line, "The record is every answer, status, index line and flag", is present in `glossary.md`.
+               Paths touched: `.claude/skills/expedition-checker/SKILL.md` and `.claude/skills/expedition/SKILL.md`, in `.scratch/graph-workflow/worktrees/379-flag-check`. Both are uncommitted.
+               Proposed commit message:
+               Ship the checker's check of a node's flags
+
+               The checker contract gains a seventh given, the node's flags as id-tagged
+               sentences and the one part of the record the checker receives, and a
+               section on checking them after its outcome, reporting a false flag as a
+               question. The manager contract's checker spawn carries the flag sentences,
+               and the settled open question is removed.
+
+               Node: graph-workflow/379
+
+RETROSPECTIVE (correction round 1):
+1. What I had to hunt for: nothing new. I checked the amendment on the node and the glossary's definition of the record.
+2. What arrived that this node did not need: nothing. The message was scoped to the one sentence.
+3. What would have made this easier: the amendment could have said how its new sentence sits beside the locked sentence "The one exception is `map-implementation-rules.md`". It could also have said whether that standards file counts as a part of the record the checker is given.
+4. What was stale, wrong or contradictory: the original clause 2 contradicted clause 7 and the glossary. I wrote it as dictated in attempt 2 and did not catch the contradiction, so it should have been a raise from me. The amendment fixes it. The tension that remains between "the one part of the record you are given" and given 6 is stated in the round-1 flag.
+`````
