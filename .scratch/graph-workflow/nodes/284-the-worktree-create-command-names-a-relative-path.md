@@ -207,3 +207,69 @@ RETROSPECTIVE:
 `284.3` `ASSUMPTION` — Node 284 took node 281's worker's condition over node 267's, whose clause 1 names a `map.md` paragraph that node 345 moved to the rules file. *(The worker's full text is under its handover's `FLAGS`.)*
 
 `284.4` `ASSUMPTION` — Node 284 also anchored the worktree route's `test -w` writability check at `<repo root>`, the same relative-path defect one bullet below the Create command. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. A fresh checker; the condition reached it as a verbatim copy of the node's condition and its two clause-4 amendments in `$TMPDIR/c284.md`, and the node's four flags as their `flags.md` sentences with ids.*
+
+> PASS
+>
+> Scope: the work is the uncommitted diff in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/284-worktree-path, which touches .scratch/graph-workflow/map-manager-only.md and .scratch/graph-workflow/map-history.md. Under the rules file's paragraph beginning "An implementation node's work on this effort may be the effort's own record", I read the changed paths as the work. I took no statement of intent from them. I held the condition as amended, with both clause-4 amendments in force: the glossary is `.claude/skills/expedition/glossary.md`, and there are six standing rules for writing.
+>
+> 1. **Clause 1, the path resolves from any working directory: met.**
+>    - The Create bullet now reads `git -C <repo root> worktree add -b worktree-<NN>-<name> .scratch/graph-workflow/worktrees/<NN>-<name>`, and it defines `<repo root>` as the main tree's absolute path, "the first path `git worktree list` prints".
+>    - I tested this in a scratch repo carrying a copy of this repo's .gitignore. Running `git -C $R worktree add ...` from `$R/.scratch/graph-workflow` and from the parent of `$R` both created `$R/.scratch/graph-workflow/worktrees/<NN>-<name>`, as `git worktree list` showed.
+>    - `git worktree list` run from inside a linked worktree also printed the main tree first.
+>
+> 2. **Clause 2, the created worktree is ignored: met.**
+>    - In the real repo, `git check-ignore -v .scratch/graph-workflow/worktrees/284-worktree-path .scratch/graph-workflow/worktrees/12-some-name` matched `.gitignore:19:.scratch/graph-workflow/worktrees/` for both paths.
+>    - The same command matched in the scratch repo for the worktree the command actually created.
+>
+> 3. **Clause 3, displaced wording replaced and banked verbatim: met.**
+>    - Map-history only gains text: `git diff --numstat` gives 33 lines added and 0 removed. The file's committed content (`git show HEAD:...`) is a byte-identical prefix of the new file, which I confirmed with `diff` against `head -n <old line count>`.
+>    - Both bullets the change displaced (Create, and "The route's one failure mode") were taken out with awk from `git show HEAD:.scratch/graph-workflow/map-manager-only.md`. `cmp` finds each byte-identical to its block appended in map-history.
+>    - The headings follow the file's existing pattern, "## Superseded from `map-manager-only.md` at node 284 — ..." / "### From *How the worktree is made* — ...", the same shape as the node 234 and node 276 entries.
+>    - Both bullets were replaced in map-manager-only.md, not struck where they stood. Neither original held any struck text.
+>    - This also meets graph-conventions check 11 on both of its halves.
+>
+> 4. **Clause 4, only the two files touched: met.**
+>    - `git status --porcelain --untracked-files=all` lists only the two files, and there are no new commits (HEAD is still 16ac40915).
+>    - So no node file, `decisions.md` or `flags.md` was touched, and no status line.
+>    - The three links added under `nodes/` (189, 265, 284) all resolve to files that exist.
+>
+> **The bar.**
+> - Commands: no CLAUDE.md or AGENTS.md at the repo root. The rules file records that the repo has no build, no tests, no formatter and no CI, so the command half is empty and the bar is its non-command half.
+> - Standards: I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md`, mainly its `## What the work is held against` list. The work does not touch that file, so no standard moved.
+> - What bore on this work:
+>   - **Glossary `_Avoid_` lines.** I scanned the added lines, unwrapped, for every refused word. The only hits are "run(s)" (running a command), "tree" (git's main tree or working tree, not the graph) and "session". "session" sits inside text reproduced verbatim, so it was not introduced. None is a breach.
+>   - **graph-conventions.md**: `## Writing the map`, `### Change the map` and check 11 are all met. Check 10 does not apply, because the edit is outside `## Notes`.
+>   - **The six standing rules for writing**: no line-number citations were added, and the cross-reference "as in the *Create* bullet" points at its target by name.
+>   - **/writing-for-agents**: read from the mattpocock-skills plugin's SKILL.md. It raised no defect.
+>   - **/coding-principles and /naming**: little to apply to prose.
+> - No reviewing skill is named for this repo, so I ran none.
+> - Considered and not counted as a breach of rule 5 ("Bold a term only where it is defined"): the edited failure-mode bullet keeps three bold spans that are not terms. They are on "So the manager runs `test -w ...` before creating a worktree", "neither created nor written" and "raised to the human". All three were already in the text before this work. The work added no new bold.
+>
+> **Findings handed back alongside the PASS (none is a FAIL on the condition or on a stated standard):**
+>
+> - **Finding A: a false claim about git in the new Create bullet.**
+>   - Instance: the bullet says "The repository's `.gitignore` does not match that path, so the manager's commit of `.scratch/graph-workflow` would stage the whole worktree."
+>   - What git actually does: in the scratch repo, running without `-C` from `.scratch/graph-workflow` did create the doubled path, and `check-ignore` did not match it (exit 1). Both of those claims are true. But `git add .scratch/graph-workflow` then staged one gitlink entry (mode 160000, `git ls-files -s` shows `160000 <sha> 0 .scratch/graph-workflow/.scratch/graph-workflow/worktrees/97-z`) and warned "adding embedded git repository". It did not stage the worktree's files.
+>   - Form: a sentence in the changed text that says what a git command does, where git does something else.
+>   - Extent: none. The instances listed are not exhaustive. Only this sentence was tested against git.
+>
+> - **Finding B: an inaccurate sentence in the new map-history intro paragraph.**
+>   - Instance: the paragraph says "Each passage gave a path relative to the shell's working directory and said only that the manager works from the main tree". The banked failure-mode bullet does not say "main tree" (`grep -c 'main tree'` counts 0 there and 1 in the banked Create bullet).
+>   - Form: a statement in the appended intro about what the banked passages say that is false of one of them.
+>   - Extent: the smallest set that contains every instance is the italic intro paragraph under "## Superseded from `map-manager-only.md` at node 284", compared against the two banked blocks under it.
+>
+> **Not checked:** whether the new Create bullet restates what node 284 holds (writing rule 2). Checking that would mean reading the node, which is outside what I was given.
+>
+> **Flags (no question needed, since none is false):**
+> - 284.1, 284.2 and 284.3: claims about the record that the work cannot make true or false.
+> - 284.4: true. The bullet now reads `test -w <repo root>/.scratch/graph-workflow`.
+>
+> The temporary directory under $TMPDIR has been removed, and the working tree is as I found it.
+
+*The manager's note:* the checker handed back two findings beside its outcome, so the standing yes does not cover this gate. It goes to the human.
