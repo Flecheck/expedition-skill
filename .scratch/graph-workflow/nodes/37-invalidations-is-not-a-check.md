@@ -1,7 +1,13 @@
 # Nothing tells a worker to hold its work against the record
 
 Type: grilling
-Status: claimed
+Status: resolved
+
+## Answer
+
+`INVALIDATIONS` becomes a duty to search: before handing back, a worker searches resolved nodes' Answer and condition sections for its work's handles; the spawn carries nothing more.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. It surfaced [node 382](382-ship-the-search-of-resolved-nodes-before-a-handover.md), which ships the answer. Its `INVALIDATIONS` contradict node 337's clause 13, narrow nodes 263 and 75, and extend nodes 36, 15, 350 and 333; the manager notes them here and edits none. Flags 37.1, 37.2, 37.3 settle at the node closing report.
 
 ## Question
 
@@ -139,3 +145,112 @@ RETROSPECTIVE:
 `verbatim`: *"ok"*
 
 The manager had closed the payload with "Please answer: "ok for recommended", or name an alternative." The reply takes the worker's `RECOMMENDED`: "Yes. Make it the same handle search node 263 shipped for open nodes, pointed at resolved nodes. The spawn hands over nothing more."
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      Nothing tells a worker to hold its work against the record
+
+ANSWER:        **`INVALIDATIONS` is a duty to search, not only a report of what surfaced while working.** The human's reply, `verbatim`: *"ok"*. The payload closed with "Please answer: "ok for recommended", or name an alternative.", so the reply takes this node's `RECOMMENDED` whole. There is no divergence.
+
+               ### The duty
+               Before handing back, a worker searches the resolved nodes' `## Answer` and `## Acceptance condition` sections. It searches for the same handles it already searches the open nodes for under node 263's rule: each word its work refuses, each path it changes or moves something out of, and each phrase it supersedes. It reads only what matches, and reports in `INVALIDATIONS` each resolved node its work changes. This is node 263's handle search pointed at resolved nodes instead of open ones. It sits in the same hand: the party that holds the fact and the handles already.
+
+               ### Against what, and why those sections
+               Measured over the 275 resolved nodes on 2026-10-02:
+               - Whole node files are 79,605 lines. A broad handle such as `map-implementation-rules.md` matches 854 of them, which is too costly.
+               - The `## Answer` and `## Acceptance condition` sections together are 19,465 lines. Across eight handles tried, they cost 4 to 172 matching lines per handle.
+               - The index, `decisions.md` (298 lines), is cheap but misses nodes. For the handle `expedition-triggers` it finds nodes 218 and 226. The section search also finds nodes 255, 260 and 267, which changed the same file.
+               - Conditions are included because 14 resolved implementation nodes hold no `## Answer`, node 218 among them.
+               The question was whether an index is enough to judge a collision as well as notice one. The section search settles it: what matches is the decision's own text, so the worker judges from what it has just read.
+
+               ### What the spawn carries
+               Nothing more. The worker contracts already let a worker search the whole record instead of reading it. Handing more of the record over would spend the manager's context, which this effort has measured as what fails first.
+
+               ### The accepted miss
+               A resolved node that describes a thing in different words from the ones the work uses will not match. This is the same miss node 263 accepted for open nodes. Landed code stays with the cascade's per-candidate pass, under node 15's part 3.
+
+               ### Where it ships
+               - One sentence is added to the "Before you write your handover" paragraph of the five worker contracts.
+               - The manager contract's `## What nothing here settles` loses its item "Does anything tell a worker to look at the record when it reports what its work invalidates?". The item is named by its text, because node 379's pending work renumbers that list.
+               - The `INVALIDATIONS` line and its placeholder are unchanged. The handles are already named in `CONDITIONS`.
+               The implementation node below carries this.
+
+               ### The sequencing note about node 43 is moot
+               Node 43 is superseded. Its wording landed through node 333 (part F, the five contracts) and node 338 (clause 17b, `graph-conventions.md`), and both are resolved. The `INVALIDATIONS` line quoted in this node's `## Question` is the old one.
+
+INDEX LINE:    `INVALIDATIONS` becomes a duty to search: before handing back, a worker searches resolved nodes' Answer and condition sections for its work's handles; the spawn carries nothing more.
+
+FLAGS:
+               ASSUMPTION: I treated the annotation's sequencing note about node 43 as moot. Node 43 is `superseded`. Its demands were carried by node 333's part F and node 338's clause 17b, and both are resolved, which I checked on all three node files and in the five contracts' current `INVALIDATIONS` line. No interview was needed for this, and none was held.
+               Index: Node 37's note sequencing it against node 43 is moot, node 43 being superseded and landed through nodes 333 and 338.
+
+               ASSUMPTION: The search targets resolved nodes' `## Answer` and `## Acceptance condition` sections. This rests on my own measurement on 2026-10-02 (counts in the answer), not on an established figure. Landed code was left to the cascade's per-candidate pass under node 15's part 3. The human approved the recommendation that carried this choice.
+               Index: Node 37's search target, resolved nodes' Answer and condition sections, rests on its worker's own 2026-10-02 measurement of match costs.
+
+               ASSUMPTION: In the sentence the human approved, I changed "report in `INVALIDATIONS` each one your work changes" to "report in `INVALIDATIONS` each resolved node your work changes", so that "one" has a single clear referent under the effort's writing rule 5. The meaning is unchanged.
+               Index: Node 37's shipped sentence says "each resolved node" where the approved wording said "each one", to give the pronoun one referent.
+
+NEW NODES:
+               name:      Ship the search of resolved nodes before a handover
+               kind:      implementation
+               question:  Carry node 37's answer into the five worker contracts and the manager contract: a worker searches the resolved nodes' `## Answer` and `## Acceptance condition` sections for its work's handles before handing back, and reports what it changes in `INVALIDATIONS`.
+               blockers:  none. Sequencing only, because the code slot is shared: node 379 (at its gate) edits `## What nothing here settles` in `.claude/skills/expedition/SKILL.md`, and node 380 (open) edits a different sentence of the same five worker contracts. Not joined to node 380: it is the same files but a different concern (what a worker checks in its spawn), so this is new work rather than a defect of that node.
+               acceptance condition:
+
+> The work is these six files, and no other file may be edited:
+>   `.claude/skills/expedition-grilling/SKILL.md`
+>   `.claude/skills/expedition-research/SKILL.md`
+>   `.claude/skills/expedition-prototype/SKILL.md`
+>   `.claude/skills/expedition-precondition/SKILL.md`
+>   `.claude/skills/expedition-implementation/SKILL.md`
+>   `.claude/skills/expedition/SKILL.md`
+> These are files the workflow ships, so superseded wording is removed rather than struck, and nothing is moved to any history file.
+>
+> Scope came from two searches over the working tree, run on 2026-10-04. `grep -l "^Before you write your handover, search the open nodes'" .claude/skills/*/SKILL.md` returned exactly the five worker contracts listed above. `grep -rln "Does anything tell a worker to look at the record" .claude/` returned exactly `.claude/skills/expedition/SKILL.md`. If either search reaches a file outside this list when the work is done, report it and do not edit it.
+>
+> Done means every one of the following is true of the finished tree.
+>
+> 1. In each of the five worker contracts, the paragraph beginning "Before you write your handover, search the open nodes' `## Acceptance condition` sections" gains one sentence. The sentence is placed immediately after the sentence "Search the open nodes' `## Question` sections the same way, for the same words, paths and phrases, in every open node, claimed or not, and read only what matches." and immediately before "Name in `CONDITIONS` what you searched for." The added sentence is exactly: "Search the resolved nodes' `## Answer` and `## Acceptance condition` sections the same way, for the same words, paths and phrases, read only what matches, and report in `INVALIDATIONS` each resolved node your work changes." Line wrapping may differ. The words may not.
+> 2. The paragraph named in clause 1 is byte-identical across the five worker contracts after the work, as it was before.
+> 3. In each of the five worker contracts, no other sentence changes. In particular, the handover block's line beginning `INVALIDATIONS:`, the sentence "Report `NEW NODES` and `INVALIDATIONS` yourself. Nothing else reports them.", and the sentence beginning "In `INVALIDATIONS`, an outright contradiction is the minority case" are unchanged. Re-wrapping the lines of the paragraph named in clause 1 to fit the added sentence is not a change of sentence.
+> 4. In `.claude/skills/expedition/SKILL.md`, under `## What nothing here settles`, the numbered item beginning "Does anything tell a worker to look at the record when it reports what its work invalidates?" is removed with all of its sentences. The items after it are renumbered in their existing order, so the list's numbers run from 1 with no gap. Every other item keeps its words.
+> 5. In `.claude/skills/expedition/SKILL.md`, nothing outside the change in clause 4 changes. The file does not grow, counting lines as `wc -l` prints them, compared with the commit the work starts from.
+> 6. No file under `.scratch/` changes, and `.claude/skills/expedition-checker/SKILL.md` and `.claude/skills/expedition-cascade/SKILL.md` do not change.
+> 7. The tree meets the bar.
+
+INVALIDATIONS: These come from a search of the resolved nodes' `## Answer` and `## Acceptance condition` sections for "INVALIDATIONS", "go and look", "hold its work against", "What nothing here settles" and "Before you write your handover", reading only what matched.
+               - Node 337 ("Carry the record-file test, the home of a standing rule, …"): contradiction of its clause 13. That clause requires the item "Does anything tell a worker to look at the record when it reports what its work invalidates?" to still stand as an unsettled question. This answer removes the item, because the general duty now exists.
+               - Node 263 ("Nothing tells the party that falsifies an acceptance condition to go and look for it"): extension. Its handle search now also reaches resolved nodes. Narrowing of its section "Node 37 stays separate": that section says node 37's targets are indexed by `decisions.md`, "read whole by every worker". Resolved nodes are now found by searching their sections, not through the index. (Separately, its statement that node 43 is open is stale. Node 43 is superseded.)
+               - Node 36 ("The clause that says no resolved node changes cannot be self-contained"): extension. The duty it placed on `INVALIDATIONS`, which its worker called "checked by nobody … ask a worker to *report* … not to go and look", now carries a duty to search.
+               - Node 15 ("Cascade pass mechanics"): extension of part 1, where resolved-node targets ride the worker's handover. The worker now searches for them. Its phrase "a channel nothing tells a worker to go and look at" no longer holds.
+               - Node 75 ("Gather the manager's accumulated duties"): narrowing of its item 47, "Nothing today tells a worker to *go and look*". That is no longer true for resolved nodes' answer and condition sections.
+               - Node 350 ("Carry the open-question search into the shipped contracts") and node 333: extension. The paragraph they shaped gains a third search.
+
+CONDITIONS:    I listed the open and claimed nodes with `grep -l -E '^Status: (open|claimed)' nodes/*.md`, which returned 22 nodes. I searched their files for: "INVALIDATIONS", "Before you write your handover", "Does anything tell a worker", "What nothing here settles", "read only what matches", "go and look", "the same words, paths and phrases", "resolved nodes'", "Name in `CONDITIONS`", and the paths `expedition-grilling/SKILL.md`, `expedition-research/SKILL.md` and `expedition-implementation/SKILL.md`. I read only what matched.
+               - Node 379 (claimed, implementation): its clause 8 removes another item from `## What nothing here settles` and renumbers the rest. My answer makes nothing in it wrong. The new node's clause 4 names its item by text so that it holds in either landing order.
+               - Node 380 (open, implementation): it edits the same five worker contracts. Its clauses 5 and 6 bound only its own diff, so nothing in it is made wrong. Sequencing only.
+               - Nodes 41 and 32 (open, implementation) name the same contract paths but different passages. Nothing is made wrong.
+               - The node 13 matches are in annotations, not in its condition or question.
+               No replacement clauses are written, and no open node's question changes. Node 185's question (scoping the `decisions.md` pointer) is untouched in its terms. One reason a worker needed the index, finding resolved nodes for `INVALIDATIONS`, now goes through the section search instead.
+
+MISSING FROM MAP: The map does not say which nodes correspond to the items under the manager contract's `## What nothing here settles`. I found that node 37 is item 3 by searching `.claude/skills/expedition/SKILL.md`, and found node 337's clause 13 by searching resolved sections.
+
+RETROSPECTIVE:
+               1. What I had to hunt for: node 379's file and worktree, to confirm the renumbering claim (it is true: node 379 is claimed and at its gate, and its clause 8 removes the flag-check item). I also had to hunt for node 337's clause 13, which the handle search found and which no node file links to node 37. And I checked that all five "Before you write your handover" paragraphs are byte-identical (they are, by md5), so the condition could demand one sentence placed identically.
+               2. What arrived that this node did not need: nothing in this resume. The resume message was exactly what was needed.
+               3. What would have made this easier: node 37's file linking to node 263, and to node 337's clause 13, which kept the item this node removes.
+               4. What was stale, wrong or contradictory: everything the resume message claimed checked out (the human's "ok" is on node 37 under `## Interview`, and node 379's pending removal is real). Still stale: node 37's `## Question` quotes the old `INVALIDATIONS` line, its annotation treats node 43 as pending, and node 263's Answer calls node 43 open.
+`````
+
+## Flags
+
+`37.1` `ASSUMPTION` **· settled** — The annotation's sequencing note about node 43 is treated as moot, node 43 being superseded and landed through nodes 333 and 338. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`37.2` `ASSUMPTION` **· settled** — The search targets resolved nodes' Answer and condition sections, on the worker's own 2026-10-02 measurement. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`37.3` `ASSUMPTION` **· settled** — The shipped sentence says "each resolved node" where the approved wording said "each one". *(The worker's full text is under its handover's `FLAGS`.)*
+
+*The manager's note, 2026-10-04:* flags 37.1, 37.2, 37.3 settle at the node closing report that closes this node.
