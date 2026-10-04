@@ -31,12 +31,12 @@ test](212-the-mint-on-second-report-rule-is-defeated.md)'s worker, and pasted as
 >    many retrospectives carry that name and in which node files — and then gives the means of answering it
 >    against the tree at `.scratch/graph-workflow/nodes/`.
 >
-> 2. The entry's own text names every heading under which a retrospective section is written in that directory,
+> 2. *(Superseded 2026-10-04 by the human's amendment under `## Amendment, 2026-10-04`; the clause that binds is there.)* ~~The entry's own text names every heading under which a retrospective section is written in that directory,
 >    and the means it gives matches all of them. As of 2026-09-09 those headings are `## Retrospective`,
 >    `## Retrospective — attempt 1`, `## Annotation: the retrospective`, `## Annotation: the retrospective, and
 >    the manager's note on filing this node`, and `### The retrospective` — **stated as of that date, not
 >    authoritative, and not to be relied on.** The worker derives the current set itself and the entry covers what
->    it finds.
+>    it finds.~~
 >
 > 3. The entry states in its own text that a retrospective section's body ends at the next heading of the same or
 >    higher level, and that a heading appearing inside a fenced code block is skipped, and it is written so that
@@ -90,3 +90,11 @@ the same shape as every stale number this effort has recorded.
 
 **The manager's own count was five too**, taken from node 212's answer and repeated in a spawn, so this is a third
 carrier of the stale figure rather than a defect of node 212's worker alone.
+
+## Amendment, 2026-10-04
+
+*The human's amendment. The human's reply, `verbatim`: "ok". It took the replacement the manager offered as "Recommended", which the manager wrote in full in the question, so the words are the manager's and the decision is the human's. The manager's grounds, given in the question: re-derived on 2026-10-04 (not authoritative, for scale only), 79 node files hold a retrospective under a heading and 117 hold it as a handover's `RETROSPECTIVE` part inside a fenced block, with no file holding both. Clause 3 tells the entry to skip headings inside fenced blocks, so the old clause 2 would miss most of them. This lifts the hold above.*
+
+**Clause 2, as it now binds:**
+
+> 2. The entry's own text names every form in which a retrospective is written in that directory: each heading under which a retrospective section sits, and a handover's `RETROSPECTIVE` part pasted inside a fenced block, which ends where its fenced block ends. The worker derives the current set of forms itself, and the means the entry gives matches all of them.
