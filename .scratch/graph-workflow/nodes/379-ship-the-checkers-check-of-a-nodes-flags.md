@@ -1,8 +1,14 @@
 # Ship the checker's check of a node's flags
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The checker contract gains a seventh given, the node's flags as id-tagged sentences and the one part of the record it receives, and checks them after its outcome. The manager's checker spawn carries them.
+
+*The manager's note:* landed as commit `bac009dd4`. The gate was put to the human twice, each time answered with a correction that amended clause 2, and run 3's `PASS` was taken under the standing yes. Its replacement clause for node 214 is filed there as an amendment, with flag 214.1. Flags 379.1, 379.2 and 379.3 settled at the human's gates.
 
 ## Question
 
@@ -438,3 +444,11 @@ RETROSPECTIVE (correction round 2):
 ### The gate, third time, 2026-10-04 — standing yes
 
 `standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` (run 3) is taken as the human's approval. The one part it could not cover was established by the manager, above, and the run handed back no question. The node's flags, 379.1 to 379.3, were settled at the human's two earlier gates.
+
+## Flags
+
+`379.1` `ASSUMPTION` **· settled** — The new flags section follows the Questions section, and the closing paragraph's new flag sentence follows the record's definition so the term is defined first. *(The worker's full text is under attempt 2's `FLAGS`.)*
+
+`379.2` `ASSUMPTION` **· settled** — The Questions section defines a false flag in one clause and points at the flags section for how to check one, and its counting sentence uses node 66's "none of them" wording. *(The worker's full text is under attempt 2's `FLAGS`.)*
+
+`379.3` `ASSUMPTION` **· settled** — Round 1 changed only the superseded flag sentence; the opening sentence and the locked "one exception" sentence stay, read as covering what the checker opens rather than what it is handed. *(The worker's full text is under correction round 1's `FLAGS`. Round 2 reports it moot after amendment 2.)*

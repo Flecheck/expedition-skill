@@ -97,3 +97,17 @@ Clauses to add:
                3. No other sentence of `.claude/skills/expedition-checker/SKILL.md` changes to carry clauses 1 and 2, and no heading of the file is renamed.
 
                Scope: the scope came from no search, because the named places are the work rather than instances of a defect.
+
+## Amendment, 2026-10-04 (from node 379)
+
+*Written by [node 379](379-ship-the-checkers-check-of-a-nodes-flags.md)'s worker under its `CONDITIONS`, and filed by the manager after that node's work landed as commit `bac009dd4`, which fixes the sentences it quotes. It replaces clause 2 of the block filed above under `## Amendment, 2026-10-02 (from node 66)`, whose quoted sentence "Two kinds of question reach the human this way, and neither stops your check." no longer exists. Placed here under the human's standing instruction that a related defect goes into a node that already exists and that a node not yet started may be updated. Flag `214.1` records it.*
+
+**The replacement clause 2, in the worker's words:**
+
+> "2. In the same file, under `### Questions, alongside a \`PASS\` or a \`FAIL\``, the sentence "Three kinds of question reach the human this way, and none of them stops your check." becomes "Four kinds of question reach the human this way, and none of them stops your check." After the paragraph that begins "The third is a false flag", and before the paragraph that begins "Hand each question back under your outcome", one paragraph is added, word for word: "The fourth is two parts of the condition that cannot both hold on one reading of their words, where every part holds on another reading. Check the work under the reading on which every part holds. Taking that reading is not a repair of the condition. In the question, name the reading you took, the reading you set aside, and each part the work would fail under the reading you set aside. Where no reading lets every part hold, the condition is self-contradicting, so raise.""
+
+**The worker's ground, pasted:** What fixes the words: the quoted sentence and the "The third is a false flag" paragraph are this node's work once it lands in the tree. The rest is node 66's resolved text word for word. Only two words change: "Three" becomes "Four" in the new sentence, and "third" becomes "fourth" at the start of the paragraph. Both follow from the order of the paragraphs as landed, and no new judgement is made. This replacement holds only if this node lands before node 214 is worked. Clauses 1 and 3 of node 66's block are unaffected, since this work leaves the table alone.
+
+## Flags
+
+`214.1` `ASSUMPTION` — *The manager's filing.* Node 379's replacement for clause 2 of node 66's queued block was filed onto this open, unclaimed node, under the human's standing instruction, without a separate question.
