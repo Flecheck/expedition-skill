@@ -1,9 +1,15 @@
 # Whether the worktree lifecycle is worth putting behind a script
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+No script for the worktree lifecycle: shipping one would hard-code this effort's landing policy against ground rule 1, and the hand-run commands rarely fail since their rules were written.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. It surfaced no node. Its `INVALIDATIONS` extend node 265; the manager notes it here and edits nothing. Flags 270.1, 270.2 settle at the node closing report.
 
 ## Question
 
@@ -108,3 +114,85 @@ RETROSPECTIVE
 `verbatim`: *"for 270, I would say that we want either a shipped script or no script.  since you say shipping a script would be bad because there is logic specific to this project I would say no script ? I guess the script for only this effort is fairly low value but we could still make it if you think mistakes happen often and it would improve things"*
 
 *The manager's note:* **a divergence.** The reply does not take the `RECOMMENDED` (a script for this effort only). It leans to the alternative "No script, keep the commands written in the landing section", and leaves the effort-only script open on a condition: "if you think mistakes happen often and it would improve things". That condition is a judgement handed back, so it goes to the worker holding the interview, not to the manager.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      Whether the worktree lifecycle is worth putting behind a script
+
+ANSWER:        **No script.** The worktree lifecycle stays as commands written in `map-manager-only.md`'s `## Landing an implementation node's work`. No script is built for it, shipped or kept in the effort.
+
+               **Why not shipped.** The human's words were: *"we want either a shipped script or no script"*. A shipped script is ruled out by ground rule 1. It would put into the shipped files what those files deliberately leave to each effort's own landing policy. `SKILL.md` says *"How code lands is set by the effort's own landing policy"* and fixes only the order (approval before any commit, the graph before cleanup). The script would hard-code all of these:
+               - a worktree directory inside this effort's record, `.scratch/graph-workflow/worktrees/`;
+               - this effort's branch names;
+               - workarounds for this machine's sandbox, namely the merge and the removal run with the sandbox off.
+
+               Node 273 shipped `frontier.sh` because that script reads only the expedition's own markdown. That ground does not reach a script that runs git against the host repository, and node 273 said so itself (flag 273.3).
+
+               **Why not a script kept in the effort.** The human made this conditional: *"we could still make it if you think mistakes happen often and it would improve things"*. The worker judged that mistakes do not happen often, on the record as of 2026-10-04:
+               - Under the plain-git route (in force since 2026-09-22) the record holds two lifecycle incidents. Node 277 is a removal run inside the sandbox that left a stale worktree entry. Node 284 is a relative path run from the wrong directory, which doubled the worktree path. Both nodes were filed on 2026-09-24, in the route's first days.
+               - Each incident was answered by a written rule or habit: node 277's sandbox-off removal, and the manager's switch to absolute paths. Node 284's rewording of the Create bullet is still open.
+               - Two other incidents are older than the plain-git route: node 234's partially written merge (filed 2026-09-13) and the rebase leftovers measured at node 143 (filed 2026-09-04). Node 234's has since been answered by node 369's rule that the merge runs with the sandbox off from the first attempt.
+               - The worker found no lifecycle incident recorded after 2026-09-24. There have been about 84 landings since 2026-09-22, counted from `Node:` commit trailers on 2026-10-04. That count is for scale only and is to be re-derived before anyone relies on it.
+
+               The failures came at the start of a new route and were each closed by a written line. They are not recurring. So a script would mainly save the manager a few tool calls per landing, and it would be a second statement of the landing policy that the map's text then has to be kept in step with. On that evidence it is not worth building, and the human's own reading — *"fairly low value"* — stands.
+
+               **What this leaves in place.** Node 284 is now the only fix for the Create bullet's relative path, since no script will build that path by construction.
+
+INDEX LINE:    No script for the worktree lifecycle: shipping one would hard-code this effort's landing policy against ground rule 1, and the hand-run commands rarely fail since their rules were written.
+
+FLAGS:         DELEGATED — The human made the effort-only script conditional on the worker judging *"if you think mistakes happen often and it would improve things"*. The worker judged that they do not, and answered no script. Its evidence was dated incidents set against landings counted from commit trailers on 2026-10-04:
+               - Under the plain-git route since 2026-09-22 there were two incidents (nodes 277 and 284), both filed 2026-09-24, and each answered by a written rule or habit.
+               - Nothing later was found, across about 84 landings (scale only; re-derive).
+               - The other two incidents (nodes 234 and 143) are older than the route. Node 234's has been answered by node 369.
+               The judgement also corrects the worker's first payload. That payload listed all four incidents as evidence that the friction outlived node 265, and two of them are older than node 265. A later run of hand-run failures under the route would reopen the question as an effort-only script, which the human left open on exactly that condition.
+               Index sentence: The worker decided, at the human's handing back, that the hand-run worktree commands fail too rarely to justify a script for this effort only, so none is built.
+
+               ASSUMPTION — The worker reads the human's *"we want either a shipped script or no script"* as the ground for this answer only. It is not proposed as a standing rule for the effort's map, because the human did not say to add a rule, and under node 93 a rule binds only once it is written in the map.
+               Index sentence: The human's "either a shipped script or no script" is recorded as this node's ground, not written into the map as a standing rule about scripts.
+
+NEW NODES:     none
+
+INVALIDATIONS: No resolved node is contradicted.
+               - Node 265 is extended. Its name ends "behind a script", and it held the script half back, ending its answer with *"The script half is not settled here"*. That half is now answered: no script.
+               - Node 273's flag 273.3 (*"a yes here does not carry a yes there"*) agrees with this answer and is unchanged.
+               - Node 05's answer that skills may ship executables is unchanged.
+
+CONDITIONS:    Searched the `## Question` and `## Acceptance condition` sections of every open and claimed node for: `script`, `four commands` / `four plain git commands`, `executable`, `node 270`, and the lifecycle-script wording. Searched resolved nodes' `## Answer` sections for `node 270` and for lifecycle-and-script wording.
+               - The only open match is node 270 itself.
+               - Node 284 (the Create bullet's relative path) did not match the search. I checked it by hand: its question and condition are unchanged by this answer, and it remains needed, since no script will supply the absolute path.
+               - No replacement clause is written, and no open node's question is changed.
+
+MISSING FROM MAP: `map.md` did not say that the shipped files leave the landing policy, and so the whole worktree lifecycle, to each effort. That fact decides shipped versus kept-in-the-effort. I found it in `.claude/skills/expedition/SKILL.md` ("How code lands is set by the effort's own landing policy") and in `graph-conventions.md`'s description of `map-manager-only.md`. `map.md` also never mentions that the effort keeps scripts of its own in `.scratch/graph-workflow/scripts/`; I found that by listing the directory.
+
+RETROSPECTIVE
+1. What I had to hunt for:
+   - That the shipped files leave the landing policy to each effort (in `SKILL.md`, not the map).
+   - The incidents after node 265, which are spread across nodes 277, 284, 234 and 369.
+   - Each incident's filing date, from git, to tell which ones are older than the plain-git route. This is the fact the delegated judgement turned on, and I did not check it before my first payload.
+   - The landing count, from commit trailers.
+   - The effort-only `scripts/` directory.
+2. What arrived that this node did not need:
+   - Most of `decisions.md`; about ten of its roughly 300 lines bore on this node (05, 68, 265, 273, 277, 284, 285, 313, 234, 369).
+   - Most of `map.md`'s standing preferences other than ground rule 1, "most context in workers" and the compaction wish.
+   - The landing section's sandbox measurements beyond the merge and removal bullets.
+3. What would have made this easier:
+   - A dated list of lifecycle incidents in the spawn, or a derivation in `derivations.md` that lists them.
+   - A line in the spawn saying that the shipped files leave the landing policy to each effort.
+4. What was stale, wrong or contradictory:
+   - The node's question says the script would be the first executable this effort ships. That is out of date: `frontier.sh` ships.
+   - The question calls the lifecycle "four plain git commands". The real sequence per node is about nine steps.
+   - The manager's first spawn note put all three sandbox-off steps under node 369. Node 369 covers only the merge; the removal and branch delete are node 277's.
+   - My own first payload was wrong: it presented two incidents older than the route (nodes 234 and 143) as evidence that the friction outlived node 265. It is corrected in the DELEGATED flag above.
+   - The coordinator's message checked out: the divergence it reports matches the human's words, and it is right that the conditional hands the judgement back to me.
+`````
+
+## Flags
+
+`270.1` `DELEGATED` **· settled** — The worker judged, at the human's handing back, that hand-run worktree commands fail too rarely to justify an effort-only script. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`270.2` `ASSUMPTION` **· settled** — The human's "either a shipped script or no script" is this node's ground, not a standing rule in the map. *(The worker's full text is under its handover's `FLAGS`.)*
+
+*The manager's note, 2026-10-04:* flags 270.1, 270.2 settle at the node closing report that closes this node.
