@@ -177,3 +177,41 @@ RETROSPECTIVE
 `````
 
 *The manager's note:* the node the worker surfaced is filed as [node 381](381-the-rules-file-reserves-decisions-md-even-where-it-is-the-work.md).
+
+## Review
+
+### Checker run 1 — `FAIL` on the bar
+
+*The checker's own text, pasted, 2026-10-04. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c156.md`, and the spawn carried the human's answer to raise 1 as their words.*
+
+> FAIL: the bar
+>
+> How I read the work: the only changed path is `.scratch/graph-workflow/decisions.md` in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/156-index-lines. `git status --porcelain` shows ` M .scratch/graph-workflow/decisions.md` and nothing else, and `git diff --numstat` shows `4 0`. I read that changed path as the work, under the rule in `map-implementation-rules.md` that says a record file handed over as the work is read as the work. That same rule says a change to `decisions.md` is bookkeeping reserved to the manager and must be failed on the acceptance condition. Your spawn carries the human's direction, `verbatim` "ok": for this check the append is the work itself. I followed that direction, so this outcome has no bookkeeping FAIL. The rule as written in the file still makes no exception for this case.
+>
+> Standards: I read only the standards in `map-implementation-rules.md`, under `## What the work is held against` plus the record-file paragraph. These bore on the work: the glossary's `_Avoid_` lines, `graph-conventions.md` (the `decisions.md` line format, and the rule that an entry is identified by the first link on its line), the six standing rules for writing (rule 5 especially), and `/writing-for-agents`. The file names no reviewing skill, so I ran none. `/coding-principles` and `/naming` do not bear on prose. The work moved no standard.
+>
+> ## Finding 1 (the bar: writing rule 5)
+> - Instances:
+>   - Entry for node 103: "...otherwise at the pick report closing it." `pick report` is not a term in `.claude/skills/expedition/glossary.md`: `grep -ci 'pick report'` on it returns 0, and the same search over `.claude/skills/expedition*` returns 0 files. The glossary's term for this is **Node closing report**. Existing lines in `decisions.md` itself say `pick report` was retired (search: `grep -n 'pick report' decisions.md`, see the lines saying "`pick report` is retired" and "in place of the retired \"pick report\""). The new sentence uses the retired name in the present tense ("now state one rule").
+>   - Entry for node 133: "...grilling gains dependency-order and find-facts-yourself bullets." `dependency-order` and `find-facts-yourself` are invented hyphenated labels. Neither is a glossary term, and neither appears in any file under `.claude/skills/`. A reader cannot tell from them what the bullets say.
+>   - The words `pick-report` and `method skill` in the link texts are not instances, because the condition dictates the titles.
+> - Form: a phrase in the sentence of an appended entry (the text after the em dash) that names an idea with neither a term defined in the glossary nor plain words. In other words, a retired term or an invented label.
+> - Extent (command): `git -C /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/156-index-lines diff -U0 -- .scratch/graph-workflow/decisions.md | grep '^+- ' | sed 's/^.*) — //'`. This lists the four appended sentences, which are the only text the worker may edit. Check each phrase in them against the glossary's bold terms (`grep -n '^\*\*[^*]*\*\*:' .claude/skills/expedition/glossary.md`).
+>
+> ## Acceptance condition, part by part (all met on what I could establish)
+> 1. Four entries appended at the end, in ascending order: met. The diff is one hunk at the file's end and the file ends with a newline. The first links are nodes/103, 114, 116 and 133, in that order. The search was `git diff` plus `tail -n 4 decisions.md`.
+> 2. Form: met. Each line is `- [title](nodes/<path>) — sentence.` Each link text matches the condition's title exactly. Each node file has exactly one `# <title>` line equal to it (`grep -Fxc '# <title>' <node>` returned 1 for all four), and each target exists (`test -f`). Each is one sentence, at 28, 28, 27 and 25 words (`wc -w` on the text after ` — `). Recent existing entries run from 26 to 39 words.
+> 3. Derived from each node's `## Answer`, restating no reasoning and quoting no figure: see NOT COVERED. On the surface, none of the four sentences contains a figure (no digits in the text after the dash).
+> 4. Nothing existing edited: met. `git diff --numstat` gives `4 0`, so there are no deleted or changed lines.
+> 5. Property re-derived: met. `grep -lx 'Status: resolved' nodes/*.md` gives 273 files. Each one is the first link of some `decisions.md` line, checked by extracting `^- (~~)?\[..\](\K[^)]+`. None is missing, and each of the four new nodes has exactly 1 entry. At HEAD (4ed809c59), the same check finds exactly 103, 114, 116 and 133 unnamed, so the set is neither larger nor smaller and nothing extra was owed. A looser substring search (`grep -l 'Status: resolved'`) gives 274 files. The extra one is `nodes/156-four-resolved-nodes-have-no-index-line.md`, which contains the phrase but has no line that reads exactly `Status: resolved`, so the condition's predicate does not cover it.
+> 6. No other file modified: met. `git status --porcelain` and `git diff HEAD --stat` list only `decisions.md`, and there are no untracked files.
+>
+> ## Bar
+> The repo has no build, tests, formatter or CI, as `map-implementation-rules.md` records under "The bar's commands for this repo". So the bar is entirely the standards above, and Finding 1 is the only standards defect. Mechanical checks: no trailing whitespace or CR in the diff (`git diff | grep -nP '[ \t]+$|\r'` printed nothing), and each entry is one unwrapped line like its neighbours.
+>
+> NOT COVERED:
+> - "Each sentence is derived from that node's own `## Answer` section and states what it settled. It restates no reasoning and quotes no figure from it." The node files are record I was not handed as the work, and the rules file says "a record file it was not handed stays unread". So I did not read the four `## Answer` sections, and I cannot say whether each sentence matches what its node settled. My only reads of those files were the title-line and `Status:` line searches named above.
+>
+> Not checked: I did not hold the "one idea in each sentence" part of rule 5 against the entries. The condition requires exactly one sentence per entry saying what the node settled, which makes a sentence covering several settled points the condition's own form. I wrote two temporary files under $TMPDIR during the check and removed both.
+
+*The manager's note:* a `FAIL` is never covered by the standing yes, so it goes to the human. The part under `NOT COVERED`, clause 3, is left to the re-check, because a correction round would rewrite the sentences it concerns.
