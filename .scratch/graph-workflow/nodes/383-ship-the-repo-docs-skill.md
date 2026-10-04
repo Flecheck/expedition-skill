@@ -1,8 +1,14 @@
 # Ship the `/repo-docs` skill
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+`.claude/skills/repo-docs/SKILL.md` ships: a standalone 647-word skill keeping a repo's glossary and decision records, defaulting to `GLOSSARY.md` and `docs/decisions/`, grep-searched, with a report-only check.
+
+*The manager's note:* landed as commit `ffbd4b07b`, the gate taken under the standing yes on 2026-10-04. Flags 383.1 and 383.2 settle at the node closing report. Node 135's 383 half of its trigger is met.
 
 ## Question
 
@@ -112,9 +118,9 @@ RETROSPECTIVE:
 
 ## Flags
 
-`383.1` `ASSUMPTION` — `/repo-docs` defaults to `GLOSSARY.md` and `docs/decisions/`, chosen by its worker over the `CONTEXT.md` and `docs/adr/` names of the skill it replaces. *(The worker's full text is under its handover's `FLAGS`.)*
+`383.1` `ASSUMPTION` **· settled** — `/repo-docs` defaults to `GLOSSARY.md` and `docs/decisions/`, chosen by its worker over the `CONTEXT.md` and `docs/adr/` names of the skill it replaces. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`383.2` `ASSUMPTION` — `/repo-docs` is model-invoked so an agent reaches it when a change settles a term or decision, at the cost of an always-loaded description. *(The worker's full text is under its handover's `FLAGS`.)*
+`383.2` `ASSUMPTION` **· settled** — `/repo-docs` is model-invoked so an agent reaches it when a change settles a term or decision, at the cost of an always-loaded description. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 
@@ -179,3 +185,5 @@ RETROSPECTIVE:
 ### The gate, 2026-10-04 — standing yes
 
 `standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` is taken as the human's approval. The run covered every part, handed back no question, and found both flags true. A gate taken under a standing yes settles no flag, so flags 383.1 and 383.2 settle at the node closing report.
+
+*The manager's note, 2026-10-04:* flags 383.1 and 383.2 settle at the node closing report that closes this node.
