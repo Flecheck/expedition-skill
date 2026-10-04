@@ -159,3 +159,82 @@ The manager had offered "Recommended: a correction round that amends clause 1(b)
 > (b) the worker checks each claim of fact in the manager's notes, whether they arrive in its spawn or on a resume, before relying on it;
 
 Clause 2's 40-word cap and every other clause stand.
+
+## Handover, correction round 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      Ship the check on a spawn's claims into the five worker contracts
+
+ANSWER:        In each of the five worker contracts (`.claude/skills/expedition-grilling/SKILL.md`, `-research`, `-prototype`, `-precondition`, `-implementation`), one paragraph now stands at the head of `## What you read` where "Read each of the following. Do not trust any summary of them." used to be. The paragraph is identical in all five files:
+
+               "Read each of the following yourself rather than any summary of them. Before you rely on a claim of fact in the manager's notes, in your spawn or on a resume, or in your node's `## Question` outside any text marked as the human's own words, check it."
+
+               It is wrapped over three lines at the files' usual width, and no other line changes. It adds 36 words to each file against the removed sentence, within the cap of 40.
+
+               Correction round 1 carried out the amendment of 2026-10-04 to clause 1(b). The notes covered now include those that arrive on a resume as well as those in the spawn. That matches the glossary's **Manager note** ("The manager's own annotation on a relayed question"). It also matches the `MANAGER NOTES:` field of the resume block in the grilling, prototype and precondition contracts. I used the shorter form "in your spawn or on a resume". The longer "whether they arrive in your spawn or on a resume" would have taken the file to 39 words over the removed sentence, one under the cap.
+
+               Clause 4 still holds:
+               - The resume block's `HUMAN ANSWER:` field and the "never the human's" note on its `MANAGER NOTES:` field keep the human's words outside "the manager's notes".
+               - A direction from the human, a permission the human granted, and the acceptance condition each travel as a separate part of a spawn.
+               - So the sentence reaches none of them.
+
+               In the research and implementation contracts, "on a resume" names no field. Neither has a `MANAGER NOTES:` resume block. It still covers the notes a manager sends when it resumes a worker in those kinds, as this round's own message did. Clause 3 requires identical text, so the phrase stays in all five.
+
+               The condition's scope search, `grep -n 'Do not trust any summary of them' .claude/skills/*/SKILL.md`, returns nothing.
+
+INDEX LINE:    The five worker contracts' `## What you read` tells the worker to read sources, not summaries, and to check claims of fact in manager's notes (spawn or resume) and its `## Question`.
+
+FLAGS:         ASSUMPTION: The condition said "claim of fact" and gave the example "outside the human's quoted words". I kept "claim of fact". It is the condition's own phrase, and "of fact" keeps it apart from the glossary term **Claim** (taking a node off the frontier). For the carve-out I wrote "outside any text marked as the human's own words", because that is clause (c)'s wording and matches how the record marks the human's words (`verbatim`). The glossary refuses "summary" only as another name for the effort closing report. The kept phrase "any summary of them" uses it in its ordinary sense, which node 22 had already judged acceptable. In correction round 1 I wrote the amended clause 1(b) as "in your spawn or on a resume" rather than "whether they arrive in your spawn or on a resume", so that the file stays clear of the 40-word cap.
+               Index sentence: Node 380 kept "claim of fact", phrased the carve-out as "text marked as the human's own words", and wrote the amended 1(b) in its shorter form to stay under the word cap.
+
+NEW NODES:     none
+
+INVALIDATIONS: none. This carries out node 78's answer and extends it to notes that arrive on a resume, as the human's amendment to this node's condition asks. Nothing node 78 says is contradicted. Node 78's answer speaks of "the manager's notes" in a spawn only, so the resume case is an extension of it.
+
+CONDITIONS:    Same search as round 1, over the `## Question` and `## Acceptance condition` sections of every open or claimed node. I searched for:
+               - "summary of"
+               - "manager's notes"
+               - "What you read"
+               - "claim of fact"
+               - the phrases "Read each of the following", "Read each of these" and "Do not trust any summary"
+               - the five contract paths
+               In this round I also searched for "MANAGER NOTES" and "on a resume", which the amendment brings in.
+               Results:
+               - Nodes 41 and 382 edit other paragraphs of the same files, and their clauses still hold as written.
+               - Node 32's `## Question` cites line numbers for the `flags.md` line. They were already stale on master, and this work moves each down by two lines.
+               - The new terms matched no open node outside this one.
+               I replaced no clause and changed no question.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:  Checker run 1: PASS, with one question. The glossary's **Manager note** arrives on a resume, and the round-1 text covered only notes in the spawn. Settled by the human's amendment to clause 1(b), which this round carries out in all five files with identical text.
+               Paths touched (all uncommitted, in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/380-spawn-claims, on branch worktree-380-spawn-claims):
+                 .claude/skills/expedition-grilling/SKILL.md
+                 .claude/skills/expedition-research/SKILL.md
+                 .claude/skills/expedition-prototype/SKILL.md
+                 .claude/skills/expedition-precondition/SKILL.md
+                 .claude/skills/expedition-implementation/SKILL.md
+               Against master, `git diff` shows the same one removed line and the same three added lines in each file, five times. No other file changed.
+               Did the change touch anything the acceptance condition names? Yes. It changes only the replacement text that clauses 1 to 4 govern, to meet the amended clause 1(b).
+               The bar: the repo states no build, test or format commands, the same as in round 1. That command half is empty and complete. I held the changed text against the glossary's `_Avoid_` lines and the six writing rules. It states rules as what to do, has one idea per sentence and one referent for each pronoun, and adds no bold and no prohibition.
+               Proposed commit message:
+                 Tell workers to check the claims of fact in manager's notes and their node question
+
+                 The five worker contracts' `## What you read` now opens by telling the
+                 worker to read each listed source rather than a summary of it, and to
+                 check each claim of fact in the manager's notes, in its spawn or on a
+                 resume, and in its node's `## Question` outside the human's own words,
+                 before relying on it.
+
+                 Node: graph-workflow/380
+
+RETROSPECTIVE (correction round 1):
+1. What I had to hunt for: which contracts actually have a `MANAGER NOTES:` field on a resume, so I could check the round message's claim about it.
+2. What arrived that this node did not need: nothing.
+3. What would have made this easier: the round message saying which contracts carry the `MANAGER NOTES:` resume field.
+4. What was stale, wrong or contradictory: the round message's claim is only partly right. It called the glossary's Manager note "the `MANAGER NOTES:` field a worker receives on a resume". Only the grilling, prototype and precondition contracts have that field. The research and implementation contracts have no `MANAGER NOTES:` resume block, though a manager does send notes when resuming them. The other claims checked out: the glossary entry, the amendment recorded on node 380, and clause 2's cap still standing.
+`````
+
+*The manager's note:* the worker is right that the manager's round message overstated the glossary sense: only the grilling, prototype and precondition contracts carry a `MANAGER NOTES:` resume field.
