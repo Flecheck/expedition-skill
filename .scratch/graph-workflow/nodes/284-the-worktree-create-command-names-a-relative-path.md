@@ -1,9 +1,15 @@
 # The worktree route's create command names a relative path and never says from where
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+The worktree route's create command now runs as `git -C <repo root> worktree add …`, so it gives the same ignored path from any working directory; the writability check is anchored the same way.
+
+*The manager's note:* landed as commit `3679741c0`. The gate was put to the human once and answered with a correction round fixing two factual sentences; run 2's `PASS` was taken under the standing yes. Flags 284.1 to 284.4 settled at the human's gate.
 
 ## Question
 
@@ -200,13 +206,13 @@ RETROSPECTIVE:
 
 ## Flags
 
-`284.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 56 above.* Node 56's replacement naming `.claude/skills/expedition/glossary.md` in place of `CONTEXT.md` was filed on this open, unclaimed node without asking the human first.
+`284.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment from node 56 above.* Node 56's replacement naming `.claude/skills/expedition/glossary.md` in place of `CONTEXT.md` was filed on this open, unclaimed node without asking the human first.
 
-`284.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 354 above.* Node 354's replacement of "five" (or "four") with "six" standing rules for writing was filed on this open, unclaimed node without asking the human first.
+`284.2` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment from node 354 above.* Node 354's replacement of "five" (or "four") with "six" standing rules for writing was filed on this open, unclaimed node without asking the human first.
 
-`284.3` `ASSUMPTION` — Node 284 took node 281's worker's condition over node 267's, whose clause 1 names a `map.md` paragraph that node 345 moved to the rules file. *(The worker's full text is under its handover's `FLAGS`.)*
+`284.3` `ASSUMPTION` **· settled** — Node 284 took node 281's worker's condition over node 267's, whose clause 1 names a `map.md` paragraph that node 345 moved to the rules file. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`284.4` `ASSUMPTION` — Node 284 also anchored the worktree route's `test -w` writability check at `<repo root>`, the same relative-path defect one bullet below the Create command. *(The worker's full text is under its handover's `FLAGS`.)*
+`284.4` `ASSUMPTION` **· settled** — Node 284 also anchored the worktree route's `test -w` writability check at `<repo root>`, the same relative-path defect one bullet below the Create command. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 
