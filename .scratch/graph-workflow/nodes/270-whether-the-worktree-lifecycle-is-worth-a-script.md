@@ -1,7 +1,7 @@
 # Whether the worktree lifecycle is worth putting behind a script
 
 Type: grilling
-Status: open
+Status: claimed
 
 Blocked by: none
 
