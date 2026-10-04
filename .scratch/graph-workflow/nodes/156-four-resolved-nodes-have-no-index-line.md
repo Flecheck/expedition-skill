@@ -285,3 +285,55 @@ RETROSPECTIVE (this round)
 3. What would have made this easier: in round 1, checking each phrase after the em dash against the glossary before handing over. I copied node 103's own wording, which uses a term retired after it.
 4. What was stale, wrong or contradictory: node 103's Answer, and its title that the condition dictates, use the retired `pick report`. That is the never-delete rule at work, not drift. The finding's claims all checked out.
 `````
+
+## Review, continued
+
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. The run 1 checker, resumed for this node's re-check. The manager unescaped `&lt;` and `&gt;` from the notification's encoding.*
+
+> PASS. My earlier finding is fixed, and the bar holds.
+>
+> This PASS covers parts 1, 2, 4, 5 and 6 of the condition. Part 3 is still not covered (see NOT COVERED below).
+>
+> **What changed since my last outcome.** The worktree still has one modified path, `.scratch/graph-workflow/decisions.md`. `git status --porcelain` shows only that file, still uncommitted on base 4ed809c59. `git diff --numstat` gives `4 0`. I compared the four appended lines (`git diff -U0`) with the diff from my last round:
+> - Node 103's sentence now ends "otherwise at the node closing report." That is the glossary term, and it replaces the retired "pick report".
+> - Node 133's sentence now reads "The grilling, implementation, research and prototype contracts no longer tell the worker to invoke a skill, and grilling's now says to work decisions in dependency order and find facts itself." The invented labels and "method skill" are gone.
+> - The sentences for nodes 114 and 116 are word-for-word unchanged, and the link texts and targets of all four lines are unchanged.
+>
+> The work showed no change beyond what the worker reported.
+>
+> **Finding 1 (writing rule 5) is resolved.** No sentence after the em dash in the four lines contains "pick report" or an invented label. The new 133 sentence uses "decisions" as an ordinary word, not as a name for the grilling node kind. The glossary's grilling entry refuses "decision" only as that name. That word list cannot be used as a plain search, so I checked this by hand, as `map-implementation-rules.md` says to.
+>
+> **Each part of the condition:**
+> 1. Four entries at the end, in ascending order: met. There is one hunk at the end of the file, which still ends with a newline. The first links are nodes 103, 114, 116 and 133, in that order (`tail -n 4`).
+> 2. Form: met. Each line is `- [title](nodes/<path>) — sentence.` The link texts match the titles in the condition exactly. I extracted them with `grep -oP '^- \[\K[^\]]+(?=\]\(nodes/)'`. Last round's `grep -Fxc '# <title>'` matches against the node files still stand, because no node file changed. Each sentence is one sentence, of 27, 28, 27 and 30 words.
+> 3. Derived from each node's `## Answer`: not covered, as last round. None of the sentences contains a figure.
+> 4. Nothing existing edited: met. `git diff --numstat` gives `4 0`, so no line was deleted or changed.
+> 5. The general property: met. `grep -lx 'Status: resolved' nodes/*.md` finds 273 files. Each one is the first link of an entry in `decisions.md`, none is missing, and each of the four nodes has exactly one entry.
+> 6. No other file modified: met. `git status --porcelain` lists only `decisions.md`, and there are no untracked files.
+>
+> **The bar.** The repo has no build, tests, formatter or CI, as `map-implementation-rules.md` records under "The bar's commands for this repo". So the bar is entirely the standards. `git diff | grep -nP '[ \t]+$|\r'` printed nothing, and each entry is a single unwrapped line.
+>
+> **Standards.** I read only the standards in `map-implementation-rules.md`. These bore on the work:
+> - the glossary's `_Avoid_` lines
+> - `graph-conventions.md`: the `decisions.md` line format, and the rule that an entry is identified by its first link
+> - the six standing rules for writing, especially rule 5
+> - `/writing-for-agents`
+>
+> No reviewing skill is named, so I ran none. The work moved no standard.
+>
+> **The bookkeeping rule.** I read the changed path as the work, under the record-file rule in `map-implementation-rules.md`. That rule's "bookkeeping reserved to the manager" FAIL was not applied, following the human's `verbatim` "ok" carried in your spawn. The rule as written still makes no exception for this case.
+>
+> NOT COVERED:
+> - "Each sentence is derived from that node's own `## Answer` section and states what it settled. It restates no reasoning and quotes no figure from it." The four node files are record I was not handed as the work. The rules file says a record file the checker was not handed stays unread, so I did not read their `## Answer` sections.
+>
+> I made one temporary directory under `$TMPDIR` and removed it.
+
+*The manager's note on the part under `NOT COVERED`, clause 3:* established by the manager, who read the four nodes' `## Answer` sections against the four sentences. Node 103's Answer states the rule "settled at the first human moment its close reaches — an implementation node's gate where it has one, and otherwise the pick report that closes it", which the glossary now calls the node closing report. Node 114's Answer quotes the `Destination` entry's two added sentences, on whether the effort is expected to end and the steady-state frontier. Node 116's Answer adds `### The enumerator a condition records` to the checker contract, with "never on its own a `FAIL`". Node 133's Answer removes the four `Invoke <skill> if it is present` lines and adds the grilling bullets "Work the decisions in dependency order" and "Finding facts is your own job and never the human's". No sentence restates reasoning, and none quotes a figure.
+
+*The manager's note on routing, 2026-10-04:* run 1's `FAIL` was put to the human, which the contract does not ask for: "Raise the gate once the checker passes." The human remarked: `verbatim` *"I feel for this failed bar we could have had the implementer do the change without asking the user ?"* The manager agreed, and a `FAIL` now goes straight back to the worker.
+
+### The gate, 2026-10-04 — standing yes
+
+`standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` (run 2) is taken as the human's approval. The one part it could not cover was established by the manager, above, and the run handed back no question. The node holds no flags.
