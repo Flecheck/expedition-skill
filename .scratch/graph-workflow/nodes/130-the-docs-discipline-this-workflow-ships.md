@@ -274,3 +274,9 @@ RETROSPECTIVE:
 3. What would have made this easier: knowing at the first round that you would want the survey shown rather than summarised. The first payload gave the survey five lines. A rule that a worker who relies on a survey presents its findings to the human would have saved this round.
 4. What was stale, wrong or contradictory: the first survey (WebFetch summaries) is partly superseded. A subagent reported that two WebFetch calls on the same gist page returned different, partly non-matching comment summaries, and the API enumeration replaces them. Those were notes I had marked as not verbatim.
 `````
+
+#### The human's answer to questions 1 and 2 (second relay), 2026-10-04
+
+`verbatim`: *"q1 ok q2 just use grep for now"*
+
+*The manager's note:* Q1 takes the worker's `RECOMMENDED`, the standalone `/repo-docs` skill of about 50 lines as revised after the research. **Q2 is a divergence.** It takes neither the `RECOMMENDED` ("As a property, naming no product") nor either alternative: it says to use grep, "for now".
