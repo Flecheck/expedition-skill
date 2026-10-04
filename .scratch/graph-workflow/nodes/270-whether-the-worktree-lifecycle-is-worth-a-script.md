@@ -102,3 +102,9 @@ RETROSPECTIVE
 `````
 
 *The manager's note:* the worker is right that the manager's spawn put all three sandbox-off steps under node 369. Node 369 covers the merge, and node 277 covers the removal and the branch delete.
+
+#### The human's answer to question 1, 2026-10-04
+
+`verbatim`: *"for 270, I would say that we want either a shipped script or no script.  since you say shipping a script would be bad because there is logic specific to this project I would say no script ? I guess the script for only this effort is fairly low value but we could still make it if you think mistakes happen often and it would improve things"*
+
+*The manager's note:* **a divergence.** The reply does not take the `RECOMMENDED` (a script for this effort only). It leans to the alternative "No script, keep the commands written in the landing section", and leaves the effort-only script open on a condition: "if you think mistakes happen often and it would improve things". That condition is a judgement handed back, so it goes to the worker holding the interview, not to the manager.
