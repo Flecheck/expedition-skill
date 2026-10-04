@@ -1,9 +1,15 @@
 # Four resolved nodes have no line in the effort's index of decisions
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+Four resolved nodes that carried earlier decisions into files (103, 114, 116, 133) now have their decisions.md lines; a header-block status re-derivation found no others.
+
+*The manager's note:* landed as commit `e0a2089cd`, the gate taken under the standing yes on 2026-10-04 after one correction round. It surfaced [node 381](381-the-rules-file-reserves-decisions-md-even-where-it-is-the-work.md). The node raised no flags.
 
 ## Question
 
