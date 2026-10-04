@@ -1,7 +1,7 @@
 # State in the retrospective bullet the form a standing item's name is written in
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: 220
 
 ## Question
