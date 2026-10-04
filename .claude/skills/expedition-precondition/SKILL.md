@@ -36,7 +36,9 @@ wait.
 
 ## What you read
 
-Read each of the following. Do not trust any summary of them.
+Read each of the following yourself rather than any summary of them. Before you rely on a claim of fact
+in the manager's notes, whether they arrive in your spawn or on a resume, or in your node's `## Question`
+outside any text marked as the human's own words, check it.
 
 - your node's own file — its `## Question` first
 - what the spawn says must be true when you are finished, and which resulting facts later nodes depend
