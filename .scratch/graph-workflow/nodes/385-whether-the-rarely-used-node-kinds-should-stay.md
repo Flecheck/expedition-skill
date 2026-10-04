@@ -70,3 +70,9 @@ RETROSPECTIVE
 `````
 
 *The manager's note:* the worker is right that the manager's spawn placed the kinds' definitions in `SKILL.md`'s `## Words used exactly`; that section defers to `glossary.md`, which holds them.
+
+#### The human's answer to questions 1 to 3, 2026-10-04
+
+`verbatim`: *"Q2 I think we should keep prototyping Q3 what is the status of the cascade, what was it supposed to do, it is already done by anyther way ? When should it be used ? Q1 I think we could do that ? I am not sure what's better"*
+
+*The manager's note:* **Q2 is a divergence.** It takes the alternative "Keep prototype as its own kind", not the `RECOMMENDED` merge. **Q3 is not answered.** The human asks four things back: what the cascade's status is, what it was meant to do, whether that is already done another way, and when it should be used. **Q1 is not settled.** The reply leans to the merge ("I think we could do that ?") and says it is unsure which is better. The manager does not take it as an "ok". All three go back to the worker holding the interview.
