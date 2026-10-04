@@ -25,7 +25,7 @@ Write node 78's answer into the worker contracts. A worker checks each claim of 
 > Done means every one of the following is true of the finished tree.
 > 1. In each of the five files, the sentence "Read each of the following. Do not trust any summary of them." is gone. In its place, at the same spot, the text states all three of the following:
 >    (a) the worker reads each listed source itself rather than a summary of it;
->    (b) the worker checks each claim of fact in the manager's notes in its spawn before relying on it;
+>    (b) ~~the worker checks each claim of fact in the manager's notes in its spawn before relying on it;~~ *(superseded 2026-10-04 by the human's amendment under `## Amendment, 2026-10-04`)*
 >    (c) the worker checks each claim of fact in its own node's `## Question` before relying on it, except text marked there as the human's own words.
 > 2. The replacement text says (a) to (c) as what to do, with no prohibition. It adds no heading and adds at most 40 words to each file compared with the removed sentence. An example of wording that meets clauses 1 and 2: "Read each of the following rather than any summary of them. Before you rely on a claim of fact in the manager's notes, or in your node's `## Question` outside the human's quoted words, check it."
 > 3. The replacement text is the same in all five files.
@@ -143,3 +143,19 @@ RETROSPECTIVE:
 > I wrote no temporary files.
 
 *The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
+### The gate, 2026-10-04
+
+`verbatim`: *"ok"*
+
+The manager had offered "Recommended: a correction round that amends clause 1(b) so the check covers the manager's notes in a spawn or on a resume. For example: "…a claim of fact in the manager's notes, in your spawn or on a resume, or in your node's `## Question`…". That's about 4 more words, still under the 40-word cap." and the alternative "approve as is, covering spawn notes only", closing with "Please answer node 380's gate: "ok for recommended", or "approve as is"." The reply takes the correction round. Flag `380.1` was in the payload and settles here.
+
+## Amendment, 2026-10-04
+
+*The human's amendment at the gate. The human's reply, `verbatim`: "ok". It took the correction the manager offered, so the words are the manager's and the decision is the human's. Its ground is checker run 1's question: the glossary's **Manager note** is the note that arrives on a resume, and the shipped text covered only notes in the spawn.*
+
+**Clause 1(b), as it now binds:**
+
+> (b) the worker checks each claim of fact in the manager's notes, whether they arrive in its spawn or on a resume, before relying on it;
+
+Clause 2's 40-word cap and every other clause stand.
