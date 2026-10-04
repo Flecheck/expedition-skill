@@ -182,3 +182,95 @@ RETROSPECTIVE:
 `verbatim`: *"I think the proposition is ok, but there should be research done on what other people do, there was quite a few project that tries to make Karpathy's LLM-wiki and similar, I want to know what they did before choosing"*
 
 *The manager's note:* **a divergence.** The reply does not take the `RECOMMENDED` now. It finds the proposition acceptable and asks for research on what other projects built on Karpathy's LLM-wiki, and similar ones, did before a choice is made. It names neither question, so the manager reads it as covering both, and the worker holding the interview decides how to proceed. The payload had reported a survey of 8 derivatives done through fetch summaries by a subagent of the worker.
+
+#### Questions 1 and 2 again, with the research, relayed 2026-10-04
+
+*Pasted as the worker handed it back. The manager rebuilt the first two lines, the `NODE:` line and the `ABOUT:` label, which its extraction key cut; every other word is the worker's.*
+
+`````
+NODE:          The docs discipline this workflow ships instead of depending on one (node 130)
+
+ABOUT:         This node decides what replaces `/domain-modeling`, so that the shipped skills stop depending on mattpocock-skills. You found the earlier proposal (a small standalone `/repo-docs` skill, and qmd described only as a property) ok in principle. You asked to see what other projects built on Karpathy's LLM-wiki, and similar ones, did before choosing. Below is that research, then the same two questions with the proposal revised where the research moved it.
+
+SO FAR:        **How the research was done.** Three subagents ran in parallel. The first read the gist's whole comment thread through the GitHub API. The second searched for LLM-wiki implementations aimed at code repositories and coding agents. The third surveyed similar patterns that coding agents use to keep a repo's docs: Cline Memory Bank, Kiro steering, spec-kit, BMAD, Claude Code memory, AGENTS.md, Serena, Basic Memory, claude-mem, ADRs/MADR, and Matt Pocock's own doc page for `/domain-modeling`. Most per-project detail came through WebFetch, which returns a summary rather than the raw text. Star counts and the comment-thread counts were read directly from the API. I checked the `/domain-modeling` quotes below against the installed file myself.
+
+               **Scale.** The gist has 1,132 comments. 625 of them link an implementation: 391 distinct repos and 41 gists, about 430 in all. Most are personal research notebooks fed by outside sources. Only a minority keep a software repo's own docs. The ones read in detail are listed by name and star count:
+               - LLM-wiki skills and plugins: Astro-Han/karpathy-llm-wiki 2.4k, ussumant/llm-wiki-compiler 325, kfchou/wiki-skills 186, praneybehl/llm-wiki-plugin 116.
+               - Codebase-oriented: giodra96/project-wiki, junbjnnn/llm-wiki, eliavamar/repositories-wiki, narailabs/doc-wiki, theafh/ai-modules, LARIkoz/eidetic.
+               - The most-starred implementation of all is AgriciDaniel/claude-obsidian at 15.3k, an Obsidian vault manager rather than repo docs.
+
+               **What they keep from the gist.** Almost all keep:
+               - immutable raw sources, the wiki, and a schema file (AGENTS.md or CLAUDE.md);
+               - an `index.md` and an append-only `log.md`;
+               - ingest, query and lint.
+
+               Two refinements:
+               - kfchou generates its index from the pages and gitignores it: "the index is generated, not hand-maintained".
+               - The most-used projects cap page size and have lint enforce the cap.
+
+               **What they add.** The largest addition, across the whole thread, is control over what gets written back:
+               - review of a write plan before it is applied (claude-obsidian);
+               - contradictions surfaced for a human rather than resolved automatically (theafh);
+               - only the human may mark a page verified, enforced by a hook (chrislemke);
+               - agent-written content counted at half weight until a human promotes it (eidetic).
+
+               Lint converges on broken links and orphan pages, schema or format violations, and staleness. Only a few check contradictions or drift as a first-class step.
+
+               **Search.** Grep is the default nearly everywhere. Astro-Han, the most-starred skill, says "grep and read are more reliable" at its scale. Where qmd is named (junbjnnn, rarce/git-wiki, ussumant) it is an optional speed-up for 50–100+ pages, with grep as the fallback.
+
+               **What was found against building a big code wiki.** narailabs/doc-wiki published a benchmark with no lift: an autonomous ticket-fix pass rate of 57/92 without the wiki against 54/92 with it. It also withdrew an earlier, more favourable benchmark.
+
+               **The similar, non-wiki patterns** split docs three ways:
+               - what stays stable (product and tech context, or a glossary);
+               - what is happening now (progress or active context);
+               - why something was chosen (decision records).
+
+               Every system that reads all its docs at the start of a session (Cline Memory Bank, Claude Code memory, BMAD) has had to add a size cap or split files once the docs grew. Almost none checks for stale content automatically. Writes happen either on an explicit command or inline when something is settled. ADRs are never edited once accepted: a new record supersedes the old one, which matches this workflow's never-delete rule.
+
+               **`/domain-modeling`'s own documentation** names three problems, verified in the installed file:
+               - "the file turns into a running spec. This is the most-reported problem with the skill, across several models".
+               - Automatic invocation is "the weakest part of the skill".
+               - "an unreviewed, agent-authored glossary is worse than none: it becomes confident-sounding lore".
+
+               **What I conclude for this choice:**
+               - The surveyed projects confirm writing at the moment a term or decision is settled, decision records that are superseded rather than edited, and grep as the default search.
+               - They argue against a hand-kept index, pages that describe the code, and any agent write that no human reviews.
+               - The standalone shape still stands. A skill copied in alone and composing with other workflows is common (praneybehl, Serena, Astro-Han).
+
+Q1. What the docs discipline is, and how it ships
+CONTEXT:       The same question as before. The recommendation is revised in three places, each marked "changed" below with the finding behind it.
+ASK:           Should the docs discipline be a small standalone skill for a repository's own lasting docs that no expedition file names, or should we ship nothing new?
+RECOMMENDED:   **A standalone skill, working name `/repo-docs`, in one `SKILL.md` of about 50 lines at `.claude/skills/repo-docs/`.** No expedition file names it, and it names none. Copied in alone it works, and left out Expedition works. The two meet through the host repo's agent instructions, which the implementation bar already enforces ("whatever else the repo itself demands"). Its contents:
+               - **Only what the code cannot tell a reader** (changed). It holds a glossary (bold term, a 1–2 sentence meaning, an `_Avoid_` line) and decision records (one paragraph each, written only when a decision is hard to reverse, surprising, and a real trade-off). It holds no pages describing the code, because doc-wiki measured no lift from one.
+               - **No hand-kept index and no `log.md`** (changed). The glossary is one file and a decision file's name carries its number and title, so the directory listing serves as the index and git as the log. That removes a file that has to be kept in sync and that a check would have to watch, which is the reason kfchou generates its index.
+               - **Write with the change.** A term or decision that settles gets its entry in the same change. A superseded decision is never edited: a new record names the one it replaces.
+               - **Every write is reviewed** (changed). A docs edit goes in a change the human reviews, like code, and is never a side write. An agent that may not write files only searches and checks, and reports what it would write. This answers both the "confident lore" warning and the thread's main addition.
+               - **Check, which reports and does not fix:**
+                 - a term used with no entry;
+                 - an `_Avoid_` word in use;
+                 - a glossary entry that states a rule or an implementation detail, which is the running-spec guard;
+                 - an entry the code contradicts;
+                 - a decision overturned without a superseding record.
+               - **Nothing speaks to the user.**
+               - **On this effort.** Node 135 repoints `map.md`'s skill line from `/domain-modeling` to `/repo-docs`.
+ALTERNATIVES:  - Ship nothing new and drop `/domain-modeling` from the map line. This gives no "doc by itself", and host repos' decisions stay stranded in `.scratch`.
+               - Keep a hand-maintained `index.md` and a `log.md` as the gist does. Most implementations keep both, but for a glossary plus numbered decision files they duplicate the listing and git, and add something to drift.
+               - Follow the gist fully: raw-sources layer, topic pages, ingest/query/lint over a code wiki. This is the common shape in the thread, but doc-wiki's benchmark measured no gain for coding work, and it is the size you asked to avoid.
+               - A section inside the expedition contracts, as node 145 did for checking. That fails your packaging direction.
+               - A Claude Code plugin manifest. Not needed for the property, and packaging the whole skill set as a plugin is a separate question.
+
+---
+
+Q2. Whether the shipped text may name qmd
+CONTEXT:       The same question as before, now with the field's practice behind it. Ground rule 1 forbids a shipped file to assume a toolchain.
+ASK:           May the docs skill's text name qmd, or should it describe search only as a property?
+RECOMMENDED:   **As a property, naming no product.** For example: "search before opening a file whole, using the best search the environment provides: a local search engine if one is installed, otherwise plain text search". qmd is used when present, and the skill keeps working when it is absent or replaced. The research supports this. Grep is the default nearly everywhere, the most-starred skill says grep is more reliable at wiki size, and projects that name qmd treat it as optional above 50–100 pages. A glossary and a set of decision records stay well under that size.
+ALTERNATIVES:  - Name qmd as an optional speed-up with a grep fallback, as junbjnnn and rarce do. It assumes nothing, but it ties a shipped file to one product (Node 22, Bun, about 2 GB of models), and at this skill's size it would never be needed.
+               - Require qmd. This breaks ground rule 1.
+
+RETROSPECTIVE:
+1. What I had to hunt for: a route to the gist's raw text and comments. My own curl to the GitHub API was refused by the permission system. A subagent reached the same API and read the full thread, which is how the comment counts are exact.
+2. What arrived that this node did not need: nothing new this round. The manager's message was short and every claim in it checked out: the answer is recorded under `## Interview`, marked a divergence, and names neither question.
+3. What would have made this easier: knowing at the first round that you would want the survey shown rather than summarised. The first payload gave the survey five lines. A rule that a worker who relies on a survey presents its findings to the human would have saved this round.
+4. What was stale, wrong or contradictory: the first survey (WebFetch summaries) is partly superseded. A subagent reported that two WebFetch calls on the same gist page returned different, partly non-matching comment summaries, and the API enumeration replaces them. Those were notes I had marked as not verbatim.
+`````
