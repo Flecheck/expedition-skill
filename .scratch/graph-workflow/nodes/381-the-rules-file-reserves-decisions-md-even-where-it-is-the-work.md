@@ -83,3 +83,43 @@ RETROSPECTIVE:
 ## Flags
 
 `381.1` `ASSUMPTION` — Node 381's worker added a one-sentence citation of node 381 to the replacement text in the rules file, beyond the (a) and (b) the condition demanded. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c381.md`, and the node's flag as its `flags.md` sentence with its id.*
+
+> PASS
+>
+> Acceptance condition, one line per part. Every check was run on text unwrapped to single lines, against base 10e37789f (the worktree HEAD).
+> - 1(a): the replacement begins "**A change to the node's own status line is bookkeeping reserved to the manager in every case**: where one appears among the work the checker's outcome is `FAIL` on the acceptance condition, and that holds whether or not the acceptance condition itself excluded that path." Established by `git diff --no-index --word-diff=plain` between the old and new versions of the paragraph, each unwrapped.
+> - 1(b): the next sentence reads "**A change to `decisions.md` or to `flags.md` is also bookkeeping reserved to the manager, with the same `FAIL`, except where the node's acceptance condition requires a change to that file.**" It is followed by "Such a required change is the node's work, and the checker holds it against the acceptance condition like any other work." Established by the same word-diff. The replacement also adds one sentence beyond (a) and (b): "The exception was added at [node 381](nodes/381-...md)." No part of the condition forbids extra text in the replacement.
+> - 2: the word-diff of the unwrapped paragraph shows changes only inside the replaced sentence. Every other sentence keeps its exact words.
+> - 3: I extracted the base paragraph from `git show 10e37789f:.scratch/graph-workflow/map-implementation-rules.md` (19 lines) and diffed it against the tail of the new map-history.md: identical, line for line, so it is verbatim. It sits at the end of the file, and the file ends with that paragraph. The heading is "## Superseded from `map-implementation-rules.md` at node 381 — the sentence reserving `decisions.md` and `flags.md` to the manager in every case", which matches the required form with NN = 381. The first 1178 lines of the history file match the base byte for byte (`head -c <base size> | cmp`), so nothing in it was edited or removed. Under the new heading there is also an italic note, a `### From \`## What the work is held against\` — ...` subheading and "*Replaced, and it stood as:*". This matches the shape of the earlier entries at node 190 and others, and the "### From" subheading is what the rules file's supersession paragraph requires ("under the heading mirroring the section it came from").
+> - 4: `git diff --stat 10e37789f` and `git status --porcelain --untracked-files=all` list only the two files, with nothing untracked. I diffed every paragraph of map-implementation-rules.md other than this one against the base (awk with RS=""): identical.
+> - 5: I ran the recorded search as written, `grep -rn "bookkeeping reserved" .claude/skills`, in the worktree. It returned nothing (rc=1), which matches the return the condition records. I also searched every `.claude/**/*.md` file, unwrapped, for "reserved to the manager", "bookkeeping", and "status line" near decisions.md, flags.md or manager. None of these files states the same rule. The nearest related statement is in `.claude/skills/expedition/glossary.md`, under **Worker**: "Where its own node's work is a change to a graph file, the worker makes that change itself, and the recording stays the manager's." It is consistent with the new rule and was not edited, as the condition requires. Reported here only for completeness.
+>
+> The bar:
+> - Commands: the repo has no agent-instruction file at its root (only CONTEXT.md, CONTEXT-MAP.md and .gitignore). The rules file records "no build, no tests, no formatter and no CI", so the command half of the bar is empty and I ran nothing for it.
+> - Standards: I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md`. The ones that bore on this work were these:
+>   - the six standing rules for writing (rule 2 on citing nodes, rule 4 with no line numbers, rule 5 on plain English, one idea per sentence and clear referents);
+>   - the glossary's `_Avoid_` lines (the new text uses "bookkeeping" only, never "bookkeeping commit");
+>   - the file's own "What this file admits" rule (the added sentence "The exception was added at [node 381]" follows the file's existing citation form, like "Moved there by", "placed there at" and "written here at");
+>   - the supersession procedure ("How a rule in this file is superseded", which was met);
+>   - `/writing-for-agents` (the new text states positive rules, with no negation-led steering and no duplication).
+>   - Ground rules 1 to 4 do not bite on an effort-local map file.
+>   - I found no breach.
+> - Link targets: both link targets in the changed paragraph exist, for node 381 and node 163. I checked this with `test -e` only, without opening them.
+> - The work moved a standard: it altered an element of the record-as-work rule (decisions.md and flags.md are now excepted). I settled what moved first. The work changes neither decisions.md, nor flags.md, nor any status line, so it does not breach the rule on either side of the change, and the check is untouched.
+> - I read the changed paths as the work under the record-as-work rule in map-implementation-rules.md.
+> - One observation, not a finding: the rewrap leaves ragged lines in the rules file ("**The checker" / "says in its outcome that it read the changed" / "paths as ..."). No standard or formatter fixes a line width, and the rendered Markdown is unaffected.
+>
+> Flags, checked after reaching the outcome:
+> - 381.1 is true. The replacement contains exactly one added sentence beyond (a) and (b), "The exception was added at [node 381](nodes/381-the-rules-file-reserves-decisions-md-even-where-it-is-the-work.md).", as the word-diff above shows. Since it is not false, I raise no question.
+>
+> I wrote temporary files under $TMPDIR (/tmp/claude-1000/chk381.nJoD) and removed them.
+
+### The gate, 2026-10-04 — standing yes
+
+`standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` is taken as the human's approval. The run covered every part, handed back no question, and found flag 381.1 true. Flag 381.1 settles at the node closing report.
