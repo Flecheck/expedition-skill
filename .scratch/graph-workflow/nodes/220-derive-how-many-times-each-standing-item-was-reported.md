@@ -151,3 +151,9 @@ ALTERNATIVES:  - Also recognise "Standing item: *x*" and "Standing item: **x**" 
 `````
 
 *The manager's note:* the worker is right on two of the manager's errors. The spawn's "117 inside a fenced block, no file holding both" was wrong: about half the handover parts are unfenced, and four files hold both forms. And the manager's spawns since node 219 landed asked for the four-question retrospective but not for the standing-item names that `map-manager-only.md`'s retrospective bullet requires.
+
+#### The human's answer to raise 1, 2026-10-04
+
+`verbatim`: *"ok"*
+
+The manager had closed the payload with "Please answer: "ok for recommended", or name an alternative." The reply takes the worker's `RECOMMENDED`: "Yes. Keep the draft as written, and file a new node that adds one sentence to map-manager-only.md's retrospective bullet fixing that form, so the spawn asks for names in it."
