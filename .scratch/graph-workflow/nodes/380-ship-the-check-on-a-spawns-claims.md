@@ -238,3 +238,43 @@ RETROSPECTIVE (correction round 1):
 `````
 
 *The manager's note:* the worker is right that the manager's round message overstated the glossary sense: only the grilling, prototype and precondition contracts carry a `MANAGER NOTES:` resume field.
+
+## Review, continued
+
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. The run 1 checker, resumed for this node's re-check, given the amendment to clause 1(b) as text.*
+
+> PASS
+>
+> Re-check after correction round 1. I followed "## When you are handed the same work again" in the checker contract as it now stands on master at 3a0b93e0a, which includes node 379's changes: a seventh given (flags) and "### The flags, after your outcome". This spawn gave no flags, so the seventh given is absent and I have no flag to check. The worktree HEAD is still the base 4f8925a46, so nothing is committed on the branch. The work is the five uncommitted paths. I re-checked every clause against the amended condition and re-ran the bar in full.
+>
+> What changed in the work: I compared the words with a word-level diff over the whole change (`git diff --word-diff=porcelain`). The one change from run 1 is inside the replacement. "in the manager's notes in your spawn" became "in the manager's notes, in your spawn or on a resume". The replacement now reads, in all five files: "Read each of the following yourself rather than any summary of them. Before you rely on a claim of fact in the manager's notes, in your spawn or on a resume, or in your node's `## Question` outside any text marked as the human's own words, check it."
+>
+> Acceptance condition, as amended:
+> - Scope and residual clause: the recorded command `grep -n 'Do not trust any summary of them' .claude/skills/*/SKILL.md` returns nothing over the finished tree (exit 1). The condition records five lines, one in each listed file. The work explains the difference, since it removed the sentence. In run 1 I ran the same search on base 4f8925a46 and it returned exactly those five lines, so the recorded claim holds. A search over unwrapped text in every `.claude/skills/*/SKILL.md` also finds no instance outside the list.
+> - 1(a): the new text says "yourself rather than any summary of them". Established by `git diff`.
+> - 1(b), amended: the new text says "a claim of fact in the manager's notes, in your spawn or on a resume … check it". That covers notes arriving either way. Established by `git diff`.
+> - 1(c): the new text says "in your node's `## Question` outside any text marked as the human's own words, check it". Established by `git diff`.
+> - 1, same spot: each file loses one line and gains three at the same place under `## What you read`. Established by `git diff -U1`.
+> - 2: the new text has no "not", "never" or "do not", and the diff adds no `#` line. `wc -w` gives 12 words for the removed sentence and 48 for the new text, so it adds 36 words, under the cap of 40.
+> - 3: `git diff -U0 <file> | grep '^[+-][^+-]' | md5sum` gives the same hash, 643ba42f582f314736e0c5abcc73ad09, for all five files.
+> - 4: the new text tells the worker to check only claims of fact, and only those in the manager's notes and in `## Question`, with the human's marked words exempt. Read as intended, it says nothing about checking a direction from the human, a permission the human granted, or an acceptance condition. See the finding below for a second reading.
+> - 5: the word diff shows the same five removed or added spans in each file, all inside the replaced sentence. Nothing else moved.
+> - 6: `git status --short --ignored --untracked-files=all` lists only the five files. Nothing is untracked or ignored, and nothing changed under `.scratch/graph-workflow/` in the worktree.
+> - 7: see below.
+>
+> The bar:
+> - Commands: the repo has no build, tests, formatter or CI, and its root holds no agent-instruction file or manifest. The standards file says the same. So the bar has no commands to run here, and the standards alone make it up. `git diff --check` prints nothing (exit 0). The new lines are 42 to 103 characters, within the files' existing wrap width.
+> - Standards: I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md` ("What the work is held against"). `git diff 4f8925a46 HEAD` shows no change to that file, `glossary.md` or `graph-conventions.md` since run 1, so I am holding the work to the same standards as in run 1.
+> - Standards that bore on this work: the ground rules (nothing tied to this repo, no skill invoked, nothing addressed to the human), writing rules 5 and 6 (said as what to do, no bold, no figure of speech, one referent per pronoun), the glossary's `_Avoid_` lines (I searched them unwrapped; "summary" is refused only for "Effort closing report"), `graph-conventions.md` (`## Question` is a node-file heading it defines) and `/writing-for-agents` (it prefers a positive instruction over negation). `/coding-principles` and `/naming` did not bear on this prose change. No reviewing skill is named, so I ran none.
+> - I read the changed paths as the work, under the rules file's rule for work that is part of the record. None of them is a status line, `decisions.md` or `flags.md`.
+>
+> Finding, handed back alongside the PASS (it does not change the outcome):
+> - Instances: the same line in all five files reads "in the manager's notes, in your spawn or on a resume, or in your node's `## Question`". Without a serial comma, "the manager's notes, in your spawn or on a resume" can be read as a flat list of three places: the notes, anything in the spawn, and anything on a resume. Read that way, the worker would check every claim of fact in its spawn. An implementation worker's spawn carries its acceptance condition, and a spawn can carry a direction from the human, which is what clause 4 keeps out. The double "or" points to the intended grouping, where "in your spawn or on a resume" says where the notes arrive, so I judged clause 4 met. The other reading is still available. The condition's own wording removes it: "in the manager's notes, whether they arrive in your spawn or on a resume". That adds 2 words, for 38 added in total, still under the cap.
+> - Form: in the replacement, a phrase saying where the manager's notes arrive is punctuated so that it can also be read as further places whose claims must be checked.
+> - Extent: `grep -n "in the manager's notes, in your spawn or on a resume" .claude/skills/expedition-{grilling,research,prototype,precondition,implementation}/SKILL.md` returns one line per file, five in total.
+>
+> I did not check the flags, because this spawn carries none. I wrote no temporary files.
+
+*The manager's note:* the checker handed back a finding beside its outcome, so the standing yes does not cover this gate. It goes to the human.
