@@ -278,3 +278,9 @@ RETROSPECTIVE (correction round 1):
 > I did not check the flags, because this spawn carries none. I wrote no temporary files.
 
 *The manager's note:* the checker handed back a finding beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
+### The gate, second time, 2026-10-04
+
+`verbatim`: *"ok for 380"*
+
+The manager had offered "Recommended: a short correction round to use "whether they arrive in your spawn or on a resume". It's already within the condition as amended, so no amendment is needed, and the same checker re-checks." and the alternative "approve as is", closing with "Please answer: "ok for recommended", or "approve as is"." The reply takes the correction round. Flag `380.1` was in the payload and settles here.
