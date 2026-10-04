@@ -254,3 +254,62 @@ RETROSPECTIVE (correction round 1):
 3. What would have made this easier: the amendment could have said how its new sentence sits beside the locked sentence "The one exception is `map-implementation-rules.md`". It could also have said whether that standards file counts as a part of the record the checker is given.
 4. What was stale, wrong or contradictory: the original clause 2 contradicted clause 7 and the glossary. I wrote it as dictated in attempt 2 and did not catch the contradiction, so it should have been a raise from me. The amendment fixes it. The tension that remains between "the one part of the record you are given" and given 6 is stated in the round-1 flag.
 `````
+
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. The run 1 checker, resumed for this node's re-check, given clause 2's amendment as text.*
+
+> PASS
+> Re-check (run 2) of the uncommitted changes in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/379-flag-check (base 937fe6c9b). I checked them against the amended condition (clause 2 as amended at the gate on 2026-10-04). I read the changed paths as the work under the rule in map-implementation-rules.md.
+>
+> What changed since run 1. I re-read the whole `git diff` rather than relying on the statement.
+> - expedition/SKILL.md is unchanged: its diff carries the same blob, d0ceec2ba, as in run 1.
+> - In expedition-checker/SKILL.md, the only change is one sentence of the paragraph beginning "The givens above". It is now "A flag given under item 7 is the one part of the record you are given, and you read it as a claim about the work." That paragraph is rewrapped. I compared it by unwrapping both sides into sentences and set-diffing them against the base. No other change appears.
+> - `git status --porcelain --untracked-files=all` still lists only the two named files, and nothing is untracked.
+>
+> Clause by clause:
+> 1. Unchanged since run 1, and the set-diff confirms it. The intro reads "You are given seven things. The spawn carries all of them except the sixth…". Item 7 carries its text, its id, the definition of a flag, and the case where the given is absent.
+> 2. Established against the amended words.
+>    - "six" is gone. The paragraph opens "The givens above are everything you are given, so that the record behind the work stays unread."
+>    - It contains "A flag given under item 7 is the one part of the record you are given, and you read it as a claim about the work."
+>    - The set-diff lists only the old "six givens" sentence as removed. So every other sentence keeps its words, including "The one exception is `map-implementation-rules.md`, and only for the standards in it." and "A path you were given as the work is the work wherever it sits, and you read it."
+> 3. and 4. Unchanged since run 1, and the set-diff confirms it. `### The flags, after your outcome` covers (a) to (d). The Questions section reads "Three kinds…" and "The third is a false flag…", and it points at the new heading.
+> 5. The headings diff against the base shows one added line, `### The flags, after your outcome`, and the expedition file's headings are identical. The table, extracted with `sed -n '/^| what you find/,/^$/p'`, is identical on both sides. The set-diff shows no other sentence changed.
+> 6. to 8. The expedition file is byte-identical to run 1, so they stand as established then: the flags item is in `## The checker`, the record sentence has its flag exception, and the open item is removed with the rest renumbered 1–4. The scribe-rule bullet is untouched.
+> 9. `wc -l`:
+>    - expedition-checker/SKILL.md went from 422 to 437, which is +15, exactly the cap.
+>    - expedition/SKILL.md went from 826 to 824.
+> 10. `grep -c ']('` returns 0 for both files. Neither file has a markdown link, so none can fail to resolve.
+> 11. The bar is met (see below).
+>
+> The preamble constraints hold: only the two files are edited, there is no `~~` in the diff, and no history, index or node file changed in the work tree.
+>
+> Recorded search: `grep -n -w -i 'six\|five' .claude/skills/expedition-checker/SKILL.md` returns nothing on the finished tree. In run 1 it returned exactly the two recorded lines on base 937fe6c9b, which matches the condition's recorded return.
+>
+> Bar, re-run in full. map-implementation-rules.md states that this repo has no build, tests, formatter or CI, and there is no agent-instruction file at the root, so I ran no command for the command half.
+> - `git diff --check` is clean.
+> - No trailing whitespace in either file.
+> - The longest added line is 106 columns, which matches the files' existing wrap width.
+>
+> Standards: I read only the standards in .scratch/graph-workflow/map-implementation-rules.md, as in run 1.
+> - Bore on this work: the glossary's `_Avoid_` lines, the ground rules, the six standing rules for writing, graph-conventions.md and `/writing-for-agents`.
+> - The amended sentence uses no refused word, and it places a flag inside the record. That is now consistent with expedition/SKILL.md ("nothing from the effort's own record except those flag sentences"), with glossary.md **Manager** ("The record is every answer, status, index line and flag"), and with graph-conventions.md. The run-1 question is resolved.
+> - No reviewing skill is named, so I ran none.
+> - No flags were given to me, so I checked none.
+>
+> NOT COVERED:
+> - "The worker may not mark this node, resolve it, or write a line in any index file." I established it for the work tree: no node or index file changed there. Whether anything was written to the record in the main checkout is outside the paths I was given.
+>
+> QUESTIONS:
+> - The work complies with amended clause 2, and complying leaves a small tension inside the same paragraph. The wording is the condition's own, because clause 2 dictates the new sentence and requires the other sentences to keep their words, so departing from it was not the worker's call.
+>   - Instances (expedition-checker/SKILL.md, the paragraph beginning "The givens above are everything you are given"):
+>     - "A flag given under item 7 is the one part of the record you are given, and you read it as a claim about the work."
+>     - That sentence is followed by "Leave the record unread, and do not go looking for it." and "The one exception is `map-implementation-rules.md`, and only for the standards in it."
+>   - The tension: a literal reader is told to read one part of the record, the flags, and then told to leave the record unread with only one exception, which is a different file. Read carefully, the two can be reconciled. The flags are handed to the checker, while the rules file is a part of the record the checker reads for itself. But both are called "the one…" and nothing says the exception applies only to going looking.
+>   - Form: a sentence in this paragraph that names a single exception to leaving the record unread, where the paragraph elsewhere permits a different part of the record to be read.
+>   - Extent: the paragraph is the smallest set that contains every instance. Unwrap it and list its sentences matching `\b(one|exception|unread)\b`, which returns exactly the three sentences quoted. No other paragraph of the two files states an exception to the record rule.
+>   - A possible fix is to change "The one exception" to something like "The one file you go and read". The human would need to amend the condition to allow it, because clause 2 freezes that sentence.
+>
+> Temporary files were written only under $TMPDIR/chk379b and have been removed.
+
+*The manager's note on the part under `NOT COVERED`:* established by the manager again. On master, `decisions.md` and `flags.md` name node 379 nowhere, the main checkout holds no uncommitted change, and every master commit touching this node's file since the cut is the manager's own. *On the gate:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
