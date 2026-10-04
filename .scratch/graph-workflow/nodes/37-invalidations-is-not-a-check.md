@@ -133,3 +133,9 @@ RETROSPECTIVE:
                3. What would have made this easier: the node saying it is the manager contract's `## What nothing here settles` item 3, and node 263 being linked from my node file. Node 263 links to node 37, but node 37 does not link back.
                4. What was stale, wrong or contradictory: the node's question quotes the old `INVALIDATIONS` line ("your work contradicts"). Its annotation treats node 43 as open future work, but node 43 is superseded and landed. Node 263's Answer also calls node 43 "open" and says decisions.md is "read whole by every worker", but the contract now reads "the sections the spawn names".
 ```
+
+#### The human's answer to question 1, 2026-10-04
+
+`verbatim`: *"ok"*
+
+The manager had closed the payload with "Please answer: "ok for recommended", or name an alternative." The reply takes the worker's `RECOMMENDED`: "Yes. Make it the same handle search node 263 shipped for open nodes, pointed at resolved nodes. The spawn hands over nothing more."
