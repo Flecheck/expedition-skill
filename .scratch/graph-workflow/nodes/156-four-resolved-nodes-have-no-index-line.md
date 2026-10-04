@@ -221,3 +221,67 @@ RETROSPECTIVE
 `verbatim`: *"ok"*
 
 The manager had offered "Recommended: a correction round. The worker rewrites those two sentences in plain words or glossary terms, and the same checker re-checks.", closing with "Please answer: "ok for recommended", or name an alternative." The reply takes the correction round.
+
+## Handover, correction round 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      Four resolved nodes have no index line (node 156), correction round 1
+
+ANSWER:        No change from the earlier handover except the wording of two of the four appended sentences in `.scratch/graph-workflow/decisions.md`. The current sentences:
+               - 103: "The shipped files and the map now state one rule: a node's flags settle at its gate where it has one, otherwise at the node closing report."
+               - 114: unchanged.
+               - 116: unchanged.
+               - 133: "The grilling, implementation, research and prototype contracts no longer tell the worker to invoke a skill, and grilling's now says to work decisions in dependency order and find facts itself."
+               Both still come from their nodes' `## Answer` sections:
+               - Node 103's Answer states the settling rule. "Node closing report" is the glossary's current term for the message that node called the pick report.
+               - Node 133's Answer reports two changes. The four `Invoke &lt;skill&gt; if it is present` lines were removed. The grilling contract gained "Work the decisions in dependency order" and "Finding facts is your own job and never the human's".
+               The diff is still 1 file, 4 insertions, 0 deletions. Clause 5's re-derivation is unaffected.
+
+INDEX LINE:    Four resolved nodes that carried earlier decisions into files (103, 114, 116, 133) now have their decisions.md lines; a header-block status re-derivation found no others.
+
+FLAGS:         none
+
+NEW NODES:     As in the earlier handover: "The rules file reserves `decisions.md` to the manager even where a node's own work is that file", with its acceptance condition as written there. No change this round.
+
+INVALIDATIONS: none
+
+CONDITIONS:    No change from the earlier handover. This round changed only the wording of two sentences.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:  **Checker run 1, Finding 1 (the bar, writing rule 5).** Fixed. I checked the finding's claims first, and they hold:
+               - The glossary defines **Node closing report**, "the message the manager sends the human the moment a node closes", and has no entry for `pick report`.
+               - `decisions.md`'s entry for node 107 records that `pick report` is retired. The entry for node 137 records the rename.
+               What I changed:
+               - **Node 103:** "the pick report closing it" became "the node closing report", the glossary term.
+               - **Node 133:** "dependency-order and find-facts-yourself bullets" became plain words: "now says to work decisions in dependency order and find facts itself".
+               - **Node 133, beyond the finding:** I also replaced "invoke a method skill" with "tell the worker to invoke a skill". "Method skill" is not a glossary term either, and the finding's form covers it in the sentence even though it excused the link text.
+               - To stay near the ~25-word cap, node 133's sentence no longer says each contract "states its discipline unconditionally". That is what follows from the invoke lines being removed. Node 133's sentence is now 30 words, and the others are 27 to 28.
+               I checked every remaining phrase after the em dash in all four sentences against the glossary's bold terms and plain English: "frontier" is a glossary term, and "steady state", "recorded search" and "its return" are plain words.
+
+               The checker's spawn should still say that this node's acceptance condition makes `decisions.md` the work itself, under the implementation contract's hard rule 1. That is the human's answer to raise 1.
+
+               Bar: no build, tests, formatter or CI, as recorded in `map-implementation-rules.md`. Nothing is committed.
+
+               Paths touched: .scratch/graph-workflow/worktrees/156-index-lines/.scratch/graph-workflow/decisions.md (the same 4 appended lines, two reworded).
+
+               Did the change touch anything the acceptance condition names: yes. Clauses 2 and 3 govern these sentences, and both still hold.
+
+               Proposed commit message:
+               ```
+               Give four resolved nodes their decisions.md index lines
+
+               Nodes 103, 114, 116 and 133 resolved without a line in the index.
+               A header-block re-derivation of resolved status found no others.
+
+               Node: graph-workflow/156
+               ```
+
+RETROSPECTIVE (this round)
+1. What I had to hunt for: the current name of the per-node report. Searching the glossary and `decisions.md` for "closing report" and "pick report" turned it up.
+2. What arrived that this node did not need: nothing. The finding was precise and gave its own form and extent.
+3. What would have made this easier: in round 1, checking each phrase after the em dash against the glossary before handing over. I copied node 103's own wording, which uses a term retired after it.
+4. What was stale, wrong or contradictory: node 103's Answer, and its title that the condition dictates, use the retired `pick report`. That is the never-delete rule at work, not drift. The finding's claims all checked out.
+`````
