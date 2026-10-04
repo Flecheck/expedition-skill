@@ -115,3 +115,67 @@ RETROSPECTIVE:
 `383.1` `ASSUMPTION` — `/repo-docs` defaults to `GLOSSARY.md` and `docs/decisions/`, chosen by its worker over the `CONTEXT.md` and `docs/adr/` names of the skill it replaces. *(The worker's full text is under its handover's `FLAGS`.)*
 
 `383.2` `ASSUMPTION` — `/repo-docs` is model-invoked so an agent reaches it when a change settles a term or decision, at the cost of an always-loaded description. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/c383.md`, and the node's two flags as their `flags.md` sentences with ids, under node 379's rule.*
+
+> PASS
+>
+> Work under check: the untracked `.claude/skills/repo-docs/SKILL.md` in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/383-repo-docs (HEAD 3a0b93e0a). The file has 67 lines, and every paragraph is already one unbroken line, so my searches ran over unwrapped text. F below stands for `.claude/skills/repo-docs/SKILL.md`.
+>
+> Acceptance condition, one line per part:
+> 1. Established by `ls -la .claude/skills/repo-docs/`, which lists only SKILL.md. The frontmatter holds `name: repo-docs`, and its description reads "Keep a repository's glossary and decision records true as work changes the repository. Use when ...".
+> 2. Established by `wc -w F`, which prints 647. The limit is 650.
+> 3. `grep -n -i -E 'expedition|mattpocock|domain-modeling|qmd|\.scratch' F` returns nothing (rc=1). `grep -rn 'repo-docs' .claude/skills/` returns only `.claude/skills/repo-docs/SKILL.md:2:name: repo-docs`. `grep -n -i skill F` hits only "this skill's format", "What this skill produces" and "invoked this skill", so the file names no other skill. The only files it tells the agent to read are "the repository's agent instructions files, such as `AGENTS.md` or `CLAUDE.md`", which are the repository's own files.
+> 4. Under `## Look for existing docs first`, the file says to search before creating anything and gives three steps: the agent instructions files, grep for an existing glossary file, and a listing of directories for an existing decision-records directory. Its fallback names `GLOSSARY.md` and `docs/decisions/`, "both relative to the repository root". It adds "Create a file or a directory only when you have a first entry to write in it."
+> 5. The opening paragraph says "Keep two kinds of content ... and no others. Keep no pages describing what the code does."
+>    - `## The glossary` gives the shape `**Term**:`, then one or two sentences, then a `_Avoid_:` line. It says "It holds no rule, no implementation detail and no specification."
+>    - `## Decision records` says each record is one file of about a paragraph, with a sequential number and a title in the file name, and lists the three conditions.
+> 6. Established by `grep -n index F` (line 50): "Create no index file and no log file. The directory listing serves as the index, and the version-control history serves as the log."
+> 7. `## Writing`, first bullet: "A term or a decision settled in a change gets its glossary entry or decision record in that same change."
+> 8. `## Decision records`: "An accepted decision record is not edited to change the decision. When a decision changes, write a new record that names, by file name, the record it replaces."
+> 9. `## Writing`, second and fourth bullets: edits go "into a change that the human reviews together with the rest of the work, never as a separate write". An agent without write permission should "only search and check, and report the entries you would write".
+> 10. `grep -n -i -E 'grep|rg|ripgrep|search|index|embed|engine|find' F` hits:
+>     - "Search with grep before you open a file whole" (line 10);
+>     - grep again at line 17;
+>     - "index" only in the clause 6 sentence.
+>     No other search tool, engine, index tool or embedding tool is named.
+> 11. `## Check` opens "The check reports and fixes nothing" and lists all five items. The `_Avoid_` item adds a qualifier that a use of the word for another meaning is not a finding, which narrows nothing the condition demands.
+> 12. `grep -n -i -E '\b(ask|user|wait|reply|confirm|question)' F` returns nothing. `## What this skill produces` states the output as entries written, or "a report returned to whoever invoked this skill".
+> 13. `git status --porcelain` shows only `?? .claude/skills/repo-docs/`, and `git diff --stat 3a0b93e0a` is empty. The ignored files outside `.scratch` show nothing new.
+>
+> The condition records no scope search, so I had no recorded command to re-run. I read the changed path as the work, under the record-as-work rule in map-implementation-rules.md. It is a shipped skill file and none of the effort's record files.
+>
+> The bar:
+> - Commands: I found no agent-instruction file at the repo root, only CONTEXT.md and CONTEXT-MAP.md. map-implementation-rules.md records that this repo has no build, no tests, no formatter and no CI, so the command half of the bar is empty and I ran nothing for it. That is a complete bar for this repo.
+> - Standards: I read `.scratch/graph-workflow/map-implementation-rules.md` for its standards only, under `## What the work is held against`, and opened no other file in the effort's directory. No reviewing skill is named for this repo, so I ran none.
+>
+> Which standards bore on this work:
+> - `/coding-principles` and `/naming`: these cover code, and the work holds none, so they did not bear.
+> - The `_Avoid_` lines in `.claude/skills/expedition/glossary.md`: I checked them by hand, as the rules file directs. The file uses "report", "decision", "index", "log", "complete", "review" and "specification" in their ordinary meanings. None of them stands for the expedition concept whose entry refuses the word. "Report" and "the human reviews" are the condition's own words. No breach.
+> - Ground rules 1 to 5:
+>   - The file assumes no repo, machine or toolchain beyond grep, which clause 10 demands.
+>   - It stands alone.
+>   - It tells no agent to address the human.
+>   - It is short prose.
+>   - I held it against `/writing-for-agents`, which I located by name in the mattpocock-skills plugin, together with its SKILL-MECHANICS.md. The description front-loads its leading words and carries two branches, writing and checking. The check has a completion criterion ("complete when each of the five has been searched for across the repository"). Every prohibition in the file is wording the condition demands, and each stands beside a positive where one exists. No breach.
+> - The six writing rules: I found no breach.
+>   - The file is navigable by heading.
+>   - It cites no file by line number. `grep -n -E 'line [0-9]|:[0-9]+' F` returns nothing.
+>   - The only bold is the `**Term**` shape inside the code block.
+>   - It uses no figure of speech or slogan contrast, and every negation is wording demanded by clauses 5, 6, 8, 9 or 11. `grep -n -i -E '\b(no|not|never|nothing|none)\b' F` lists each one.
+>   - It points at no other shipped file.
+> - graph-conventions.md: it governs the effort's record files, not a shipped skill, so it did not bear.
+>
+> I wrote no temporary files.
+>
+> Flags, checked after the outcome. Both are true of the work, so there are no QUESTIONS:
+> - 383.1 is true. The fallback paths are `GLOSSARY.md` and `docs/decisions/`. `CONTEXT.md` does not appear in F, and `docs/adr/` appears only as an example of an existing directory to look for.
+> - 383.2 is true. The frontmatter carries a model-facing description, and `grep -c disable-model-invocation F` prints 0.
+
+### The gate, 2026-10-04 — standing yes
+
+`standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` is taken as the human's approval. The run covered every part, handed back no question, and found both flags true. A gate taken under a standing yes settles no flag, so flags 383.1 and 383.2 settle at the node closing report.
