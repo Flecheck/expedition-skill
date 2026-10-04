@@ -115,8 +115,95 @@ claims this node picks, and says which it took.**
 
 - Node 284 (open, unclaimed). Clause 4's bar sentence says "this effort's ground rules and four standing rules for writing". The manager's note of 2026-09-23 on that node already records that this is stale. Replacement for that phrase: "this effort's ground rules and six standing rules for writing". It is fixed by the same landed work.
 
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      The worktree route's create command names a relative path and never says from where
+
+CONDITION TAKEN: the first one, node 281's worker's, with the two filed amendments applied to clause 4's bar sentence (node 56's amendment and node 354's amendment). I did not take node 267's worker's condition. Its clause 1 requires "`map.md`'s paragraph beginning *"An implementation node's worktree is made with plain git"*" to state the path. `map.md` no longer holds that paragraph. Node 345 moved it verbatim to `map-implementation-rules.md`, and `map.md` now only points there ("how an implementation node's worktree is made and reached is in map-implementation-rules.md"). So that clause cannot be met as written, and taking that condition would have meant a trigger-1 raise. Its other demands are met by this work anyway, and the evidence is in the GATE PAYLOAD. Clause 2: `git check-ignore -v` reports `.gitignore:19`, not `.git/info/exclude`. Clause 4: no worktree or branch was moved, created, deleted or checked out. On clause 3: the work does not depend on `.git/info/exclude` and wrote nothing to it. I did read it once, read-only, while checking the manager's notes. It now holds only git's default comment lines, and the manager's doubled-path entry is gone.
+
+The clause text I worked to, with both amendments applied. Hand the checker this:
+
+> Done when all four hold.
+>
+> **1.** `map-manager-only.md`'s *How the worktree is made* Create bullet states the worktree path in a form that resolves to `<repo root>/.scratch/graph-workflow/worktrees/<NN>-<name>` **whatever working directory the command is issued from** — either by giving an absolute path or by naming the working directory the command must be run from as part of the command.
+>
+> **2.** Whatever it now states, `git check-ignore` matches the resulting path against the repository's `.gitignore` — that is, **the created worktree is ignored**.
+>
+> **3.** Any wording the change displaces that states a rule currently binding is **replaced**, not struck in place, and its existing text is appended verbatim to `.scratch/graph-workflow/map-history.md` under a heading mirroring the section it came from, struck-through text staying struck through; `map-history.md` gains text and loses none.
+>
+> **4.** No file outside `map-manager-only.md` and `map-history.md` is modified; nothing is written in `decisions.md` or `flags.md`; no node's status line is touched. The bar applies: this repository has no build, no tests, no formatter and no CI, which is a complete bar on its remaining half, so what binds is the project criteria, `.claude/skills/expedition/glossary.md`'s `_Avoid_` lines, `graph-conventions.md`, `/writing-for-agents`, `/coding-principles`, `/naming`, and this effort's ground rules and six standing rules for writing.
+
+ANSWER:
+The Create bullet under *How the worktree is made* in `map-manager-only.md` now gives the command as `git -C <repo root> worktree add -b worktree-<NN>-<name> .scratch/graph-workflow/worktrees/<NN>-<name>`. `<repo root>` is defined there as the main tree's absolute path, which is the first path `git worktree list` prints. Git resolves the relative path argument against the `-C` directory. So the command creates the worktree at `<repo root>/.scratch/graph-workflow/worktrees/<NN>-<name>` whatever the shell's working directory is. I chose `-C` over an absolute path argument because `-C` also pins the HEAD the worktree lands on to the main tree's HEAD. A cwd inside a linked worktree would otherwise change both the path and the base. The old bullet's "from the main tree" was dropped, because it named the tree and not the directory. The bullet keeps the trigger as part of the rule, as the map's admission test allows. Without `-C`, a cwd below the repository root produces a doubled path such as `.scratch/graph-workflow/.scratch/graph-workflow/worktrees/<NN>-<name>`. `.gitignore` does not match that path, so the manager's commit of `.scratch/graph-workflow` would stage the whole worktree.
+
+The same section's writability check had the same defect, so it also changed: `test -w .scratch/graph-workflow` became `test -w <repo root>/.scratch/graph-workflow`. From the wrong cwd, the relative form would report a false failure and send a needless raise to the human.
+
+Both displaced passages are appended byte-identical to `map-history.md` under a new section, "Superseded from `map-manager-only.md` at node 284 — the create command's relative path, and the writability check's". Each passage has its own `### From *How the worktree is made* — …` heading.
+
+`.gitignore` is unchanged. Its anchored rule `.scratch/graph-workflow/worktrees/` already matches the path the new command produces. `git check-ignore -v` reports `.gitignore:19` for that path, and returns no match for the doubled path. Making `.gitignore` also catch doubled paths would be a separate, defensive change that neither condition requires.
+
+Left unchanged: the paragraph in `map-implementation-rules.md` beginning "An implementation node's worktree is made with plain git". It still says the manager creates the worktree "from the main tree with `git worktree add`, at `.scratch/graph-workflow/worktrees/<NN>-<name>`". That is a true statement of where the worktree goes, read by workers and not used as a command, and it points at the manager's file for the full route. Clause 4 also bars touching it. Also left unchanged: the Base bullet's "the manager's current `HEAD`". With `-C <repo root>` the base is the main tree's HEAD, which is the manager's HEAD as long as the manager stands in the main tree, as the landing policy assumes.
+
+INDEX LINE:    The worktree route's create command now runs as `git -C <repo root> worktree add …`, so it gives the same ignored path from any working directory; the writability check is anchored the same way.
+
+FLAGS:
+ASSUMPTION: Node prose: The node held two conditions and left the pick to its worker. I took node 281's worker's condition, two files, with the amendments from nodes 56 and 354 applied to its bar sentence. Node 267's worker's clause 1 names a paragraph in `map.md` that node 345 moved to `map-implementation-rules.md`, so it cannot be met as written. Its `.gitignore` demand (check-ignore reports `.gitignore`, not `.git/info/exclude`) and its no-worktree-touched demand both hold for this work anyway, and I verified both. Index: Node 284 took node 281's worker's condition over node 267's, whose clause 1 names a `map.md` paragraph that node 345 moved to the rules file.
+ASSUMPTION: Node prose: Beyond the Create bullet the condition names, I also anchored the same section's `test -w .scratch/graph-workflow` check at `<repo root>`. It is the same defect in the same section, a relative path with no stated cwd. From the wrong directory it gives a false failure that the bullet says to raise to the human. Its old text went to `map-history.md` under clause 3's procedure. Index: Node 284 also anchored the worktree route's `test -w` writability check at `<repo root>`, the same relative-path defect one bullet below the Create command.
+
+NEW NODES:     none
+
+INVALIDATIONS: Node 265 (extension): its route's create command `git worktree add -b worktree-<NN>-<name> .scratch/graph-workflow/worktrees/<NN>-<name>` now carries `-C <repo root>`. Its `decisions.md` line stays true as a statement of location. Node 281: none. Its `map.md` sentence is untouched.
+
+CONDITIONS:    The 18 open or claimed node files (counted 2026-10-04, not authoritative, for scale only) were searched, conditions and questions, for: "from the main tree", "git worktree add", "test -w", "worktrees/<NN>", "How the worktree is made", "Create bullet", "relative path", "doubled". Only node 284 itself matched, plus node 384 on "relative path", where it is about repo-relative paths in conditions and unrelated. No replacements, and no open question changed.
+
+MISSING FROM MAP: The second condition and the spawn both point at a `map.md` paragraph about the worktree. `map.md` now only points at `map-implementation-rules.md` for it. I found that from `map.md`'s own pointer line ("how an implementation node's worktree is made and reached is in map-implementation-rules.md"). Otherwise none.
+
+GATE PAYLOAD:
+Checker findings: none yet (first run).
+Bar: the repo has no build, tests, formatter or CI. I looked for a manifest, task runner or CI config and found none, which matches `map-implementation-rules.md`'s record of the bar's commands. No difference to report. Graph-conventions check 11 run over the touched files: the pre-change `map-history.md` is a byte-exact prefix of the new one, and all 8 removed lines of `map-manager-only.md` appear byte-identically in the appended text. Check 10 is not applicable, since the passage is not under a `## Notes`.
+Verification:
+- `git -C /home/mathieu/projects/graph-agent check-ignore -v .scratch/graph-workflow/worktrees/999-example` gives `.gitignore:19:.scratch/graph-workflow/worktrees/` (also for `284-worktree-path`, and the same inside this worktree). The doubled path gives no match, exit 1.
+- In a scratch repo under `$TMPDIR` with this repo's `.gitignore`, run from cwd `.scratch/graph-workflow`: `git -C "$(git worktree list | head -1 | awk '{print $1}')" worktree add -b worktree-1-x .scratch/graph-workflow/worktrees/1-x` created `<root>/.scratch/graph-workflow/worktrees/1-x`, and check-ignore reported `.gitignore:19`. The scratch repo was then deleted.
+- No worktree or branch was created in this repository.
+- `git worktree list` (2026-10-04): main, `220-retro-derivation`, `284-worktree-path`. The doubled worktrees no longer exist, which confirms the manager's note.
+Paths touched:
+- /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/284-worktree-path/.scratch/graph-workflow/map-manager-only.md
+- /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/284-worktree-path/.scratch/graph-workflow/map-history.md
+Proposed commit message:
+```
+Worktree route: run the create command with git -C <repo root>
+
+The Create bullet gave a path relative to the shell's working directory, so a
+manager whose cwd was below the repository root created worktrees at a doubled
+path that .gitignore does not match. The command now runs as
+git -C <repo root> worktree add ..., and the writability check is anchored
+the same way. The displaced text is appended to map-history.md.
+
+Node: graph-workflow/284
+```
+Method-skill parts skipped: none. `/writing-for-agents` was read and applied, and it has no conflicting part here.
+
+Manager's notes checked:
+- Node 270 resolved "no script" on 2026-10-04: confirmed in `decisions.md` and in the node's interview dates.
+- This worktree was made at an absolute path: confirmed by `git worktree list`.
+- The doubled worktrees are gone: confirmed, and `.scratch/graph-workflow/.scratch` does not exist.
+
+RETROSPECTIVE:
+1. What I had to hunt for: where the second condition's "`map.md` paragraph" now lives. I found it in `map-implementation-rules.md` through `map.md`'s pointer line. I also had to find the shape of a `map-history.md` entry, which I got by grepping its headings and copying node 277's and node 281's entries. The effort name for the commit trailer came from `git log`. Short names: "moved-paragraph pointer stale in a condition"; "history-entry shape found by example". I did not search earlier retrospectives for name counts.
+2. What arrived that this node did not need: most of `map.md`'s Notes, and most of `map-manager-only.md` beyond the landing section (the priority list, the retrospective bullet, fog, out of scope), about 55 KB read whole when the work needed one section. A narrower mandatory read, "the section *How the worktree is made*", would have been enough. Short name: "whole manager file read for one section".
+3. What would have made this easier: the spawn noting that node 267's clause 1 targets a paragraph node 345 moved. That one fact decided the pick.
+4. What was stale, wrong or contradictory: node 267's worker's clause 1 (the `map.md` paragraph no longer exists there). The node's manager note says the doubled worktrees and the local exclude are live, and both are now gone, which the spawn already flagged. The manager's note "absolute path, `"$PWD/..."` from the repo root" still depends on the cwd being the root, which is the same failure mode in a different spelling. The new bullet removes that dependence.
+`````
+
 ## Flags
 
 `284.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 56 above.* Node 56's replacement naming `.claude/skills/expedition/glossary.md` in place of `CONTEXT.md` was filed on this open, unclaimed node without asking the human first.
 
 `284.2` `ASSUMPTION` — *The manager's own entry, carrying the amendment from node 354 above.* Node 354's replacement of "five" (or "four") with "six" standing rules for writing was filed on this open, unclaimed node without asking the human first.
+
+`284.3` `ASSUMPTION` — Node 284 took node 281's worker's condition over node 267's, whose clause 1 names a `map.md` paragraph that node 345 moved to the rules file. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`284.4` `ASSUMPTION` — Node 284 also anchored the worktree route's `test -w` writability check at `<repo root>`, the same relative-path defect one bullet below the Create command. *(The worker's full text is under its handover's `FLAGS`.)*
