@@ -108,3 +108,9 @@ RETROSPECTIVE:
 `````
 
 *The manager's note:* the worker is right that the manager's spawn called node 383's condition "fairly tight" where by size it sits near the 75th percentile.
+
+#### The human's answer to questions 1 to 4, 2026-10-04
+
+`verbatim`: *"Q1 I feel that will be in the repo rules if the user wants tdd or a lot of tests Q2 ok Q3 ok Q4 ok"*
+
+*The manager's note:* **Q1 is a divergence.** It does not take the `RECOMMENDED` (a test-coverage property in the bar). It leaves testing to the repo's own rules, which the bar already honours through "whatever else the repo itself demands". That is closest to the alternative "Take nothing until a code effort shows the gap", though the reply gives its own ground. Q2, Q3 and Q4 take the worker's `RECOMMENDED`.
