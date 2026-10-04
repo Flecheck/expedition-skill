@@ -362,3 +362,65 @@ Names were found by searching the `## Retrospective` sections, and any heading c
    - `absolute-path-form-still-cwd-dependent`: the manager's note gives the absolute form `"$PWD/..."` "from the repo root", which still depends on the cwd being the root, the same defect in a different spelling. New name, 0 earlier.
    - My own round-0 text: the `git add` claim and the history-intro sentence, which the checker found and this round fixed.
 `````
+
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. The run 1 checker, resumed for this node's re-check.*
+
+> PASS
+>
+> Re-check after the correction round on run 1's findings A and B. No statement came with the round naming exactly what changed, so I checked the whole condition and the whole bar again as written. Comparing the new diff with the run-1 diff, word for word with the text unwrapped, shows two passages changed:
+> - The last sentence before "Settled at" in the Create bullet of map-manager-only.md. It now reads "so `git add .scratch/graph-workflow` stages the worktree as one embedded repository entry and warns `adding embedded git repository`". In run 1 it read "would stage the whole worktree".
+> - The italic intro paragraph in map-history.md. It now reads "The create bullet said only that the manager works from the main tree, which names the tree and not the directory, and the writability check named no directory at all". In run 1 it read "Each passage ... said only that the manager works from the main tree".
+>
+> I found no other changed words. The failure-mode bullet and both banked blocks are unchanged from run 1. As before, I read the changed paths as the work, under the rules file's paragraph that begins "An implementation node's work on this effort may be the effort's own record". The condition I held is the one with both clause-4 amendments: the glossary is at `.claude/skills/expedition/glossary.md`, and there are six standing rules for writing.
+>
+> 1. **Clause 1 (the path resolves the same from any working directory): met.**
+>    - The Create bullet gives `git -C <repo root> worktree add -b worktree-<NN>-<name> .scratch/graph-workflow/worktrees/<NN>-<name>`, where `<repo root>` is "the first path `git worktree list` prints".
+>    - I re-ran it in a scratch repo that carries this repo's .gitignore. From `$R/.scratch/graph-workflow` and from the parent directory of `$R`, both runs created `$R/.scratch/graph-workflow/worktrees/<NN>-<name>`, as `git worktree list` showed.
+>    - Run inside a linked worktree, `git worktree list` printed the main tree first.
+>
+> 2. **Clause 2 (the created path is ignored): met.**
+>    - In the real repo, `git check-ignore -v .scratch/graph-workflow/worktrees/284-worktree-path .scratch/graph-workflow/worktrees/12-some-name` matched `.gitignore:19:.scratch/graph-workflow/worktrees/` for both paths.
+>    - In the scratch repo it matched both worktrees the command created.
+>
+> 3. **Clause 3 (displaced text replaced, and banked verbatim): met.**
+>    - `git diff -- map-history.md` shows 0 removed lines.
+>    - `git show HEAD:` of map-history.md is a byte-identical prefix of the current file, checked with `diff` against `head -n <old line count>`.
+>    - Both displaced bullets, the Create bullet and "The route's one failure mode", were extracted with awk from `git show HEAD:.scratch/graph-workflow/map-manager-only.md`. `cmp` against the matching banked blocks reports create-identical and fail-identical.
+>    - The headings mirror the section's existing pattern. Both bullets were replaced, not struck in place. Graph-conventions check 11 holds on both of its halves.
+>
+> 4. **Clause 4 (only the two files are touched): met.**
+>    - `git status --porcelain --untracked-files=all` lists only the two files, and HEAD is still 16ac40915.
+>    - No node file, `decisions.md` or `flags.md` was touched, and no node's status line.
+>    - All three `nodes/` links in the added lines (189, 265 and 284) resolve to existing files.
+>
+> **The bar**
+> - The repo states no commands: there is no CLAUDE.md or AGENTS.md at its root. The rules file records no build, no tests, no formatter and no CI. So the bar is its non-command half, and that is the complete bar.
+> - I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md`, under `## What the work is held against`. The work does not touch that file, so no standard moved.
+> - Standards that bore on this work:
+>   - **Glossary `_Avoid_` lines.** I re-scanned the added lines, unwrapped. The hits are "run(s)" (running a command), "tree" (git's main or working tree), "session" (inside text reproduced verbatim) and the new "warns". "warns" describes git's own output, not the flag concept that "warning" is refused for. None is a breach.
+>   - **graph-conventions.md**: `## Writing the map`, `### Change the map` and check 11 are all met.
+>   - **Six standing rules for writing**: the added lines cite no line numbers.
+>   - **/writing-for-agents**: no defect.
+>   - **/coding-principles** and **/naming** apply little to prose.
+> - No reviewing skill is named for this repo, so I ran none.
+>
+> **Run 1's findings, re-established**
+> - **Finding A is repaired.** In the scratch repo, running without `-C` from `.scratch/graph-workflow` created `.scratch/graph-workflow/.scratch/graph-workflow/worktrees/97-z`. `git check-ignore` did not match it (exit 1). Then `git add .scratch/graph-workflow` at the repo root exited 0 and warned "warning: adding embedded git repository: ...". `git ls-files -s` shows exactly one `160000` entry for that path, and `git ls-files | grep -c '97-z/'` gives 0. So the bullet's new sentence is true as written.
+>   - Note: one intermediate run piped `git add` into `| head -1`, and SIGPIPE killed git before it wrote the index. The result above comes from a run without the pipe.
+> - **Finding B is repaired.** The intro no longer says that both passages mention the main tree. It attributes "said only that the manager works from the main tree" to the create bullet alone, which matches the banked text (`grep -c 'main tree'`: 1 in the create bullet, 0 in the failure-mode bullet). It says the writability check "named no directory at all". From the clause before it, "directory" there means the working directory, and the banked `test -w .scratch/graph-workflow` names none, so I do not count this as a defect.
+>
+> Not checked, as in run 1: whether the Create bullet restates what node 284 holds (writing rule 2). Checking it would mean reading the node, which is outside what I was given.
+>
+> **Flags** (none is false, so I have no question to hand back):
+> - 284.1, 284.2 and 284.3 are claims about the record, and the work can make none of them true or false.
+> - 284.4 is true. The bullet reads `test -w <repo root>/.scratch/graph-workflow`, "with `<repo root>` as in the *Create* bullet".
+>
+> I removed the temporary directory under $TMPDIR. The worktree is as I found it, and the repo's worktree list is unchanged at three entries.
+
+*The manager's note on what the checker did not check:* writing rule 2 is a standard, not a part of the condition. The manager read the new Create bullet in the worktree: it states the command, its trigger and a "Settled at" citation, and restates no reasoning of node 284's.
+
+### The gate, second time, 2026-10-04 — standing yes
+
+`standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` (run 2) is taken as the human's approval. The run covered every part of the condition and handed back no question. Flags 284.1 to 284.4 were settled at the human's gate.
