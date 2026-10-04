@@ -215,3 +215,9 @@ RETROSPECTIVE
 > Not checked: I did not hold the "one idea in each sentence" part of rule 5 against the entries. The condition requires exactly one sentence per entry saying what the node settled, which makes a sentence covering several settled points the condition's own form. I wrote two temporary files under $TMPDIR during the check and removed both.
 
 *The manager's note:* a `FAIL` is never covered by the standing yes, so it goes to the human. The part under `NOT COVERED`, clause 3, is left to the re-check, because a correction round would rewrite the sentences it concerns.
+
+#### The human's answer to checker run 1's `FAIL`, 2026-10-04
+
+`verbatim`: *"ok"*
+
+The manager had offered "Recommended: a correction round. The worker rewrites those two sentences in plain words or glossary terms, and the same checker re-checks.", closing with "Please answer: "ok for recommended", or name an alternative." The reply takes the correction round.
