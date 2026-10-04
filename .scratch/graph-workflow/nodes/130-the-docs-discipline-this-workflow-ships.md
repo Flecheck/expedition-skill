@@ -176,3 +176,9 @@ RETROSPECTIVE:
 3. What would have made this easier: a spawn naming nodes 145 (the precedent of shipping a discipline as a section) and 135 (the node waiting on this one). I found both by search. A stated rule on whether a grilling worker may fetch a URL the human named would also have helped.
 4. What was stale, wrong or contradictory: the manager's note says the contract states whether I may read outside the working directory, and it does not say so explicitly. `map.md`'s "Skills every session should consult" line still names `/domain-modeling` (node 135's expiry, as expected). The node's question frames one candidate purpose as "keeping a glossary true as terms move", which node 56 has since shipped, as the node's own last annotation says.
 `````
+
+#### The human's answer to questions 1 and 2, 2026-10-04
+
+`verbatim`: *"I think the proposition is ok, but there should be research done on what other people do, there was quite a few project that tries to make Karpathy's LLM-wiki and similar, I want to know what they did before choosing"*
+
+*The manager's note:* **a divergence.** The reply does not take the `RECOMMENDED` now. It finds the proposition acceptable and asks for research on what other projects built on Karpathy's LLM-wiki, and similar ones, did before a choice is made. It names neither question, so the manager reads it as covering both, and the worker holding the interview decides how to proceed. The payload had reported a survey of 8 derivatives done through fetch summaries by a subagent of the worker.
