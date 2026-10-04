@@ -370,3 +370,43 @@ RETROSPECTIVE (correction round 2):
 ## Flags
 
 `380.1` `ASSUMPTION` **· settled** — Node 380 kept "claim of fact", phrased the carve-out as "text marked as the human's own words", and in the end used clause 1(b)'s own "whether they arrive" wording. *(The worker's full text is under each handover's `FLAGS`; the flag was put to the human at both gates.)*
+
+### Checker run 3 — `PASS`
+
+*The checker's own text, pasted, 2026-10-04. The same checker, resumed for this node's re-check, given the node's flag under node 379's rule.*
+
+> PASS
+>
+> Re-check after correction round 2. I followed "## When you are handed the same work again". My contract is the checker contract on master. `git diff 3a0b93e0a HEAD` shows no change to it, to `.scratch/graph-workflow/map-implementation-rules.md`, to `glossary.md` or to `graph-conventions.md` since run 2. So the contract and the standards I check against are the ones I used in run 2. The worktree HEAD is still the base 4f8925a46. The work is the five uncommitted paths. I re-checked every clause against the condition as amended before run 2 and re-ran the bar in full.
+>
+> What changed in the work: I compared the words with `git diff --word-diff=porcelain` over the whole change. The one change since run 2 is inside the replacement. "in the manager's notes, in your spawn or on a resume," became "in the manager's notes, whether they arrive in your spawn or on a resume,". The words are otherwise the same as in run 2, and the line breaks moved with the insertion. The replacement now reads, the same in all five files: "Read each of the following yourself rather than any summary of them. Before you rely on a claim of fact in the manager's notes, whether they arrive in your spawn or on a resume, or in your node's `## Question` outside any text marked as the human's own words, check it."
+>
+> Acceptance condition, as amended:
+> - Scope and residual clause: the recorded command `grep -n 'Do not trust any summary of them' .claude/skills/*/SKILL.md` returns nothing over the finished tree (exit 1). The condition records five lines, one in each listed file. The difference comes from the work removing the sentence. In run 1, the same search on base 4f8925a46 returned exactly those five lines, so the recorded claim holds. A search over unwrapped text in every `.claude/skills/*/SKILL.md` finds no instance outside the list.
+> - 1(a): the new text says "yourself rather than any summary of them". Established by `git diff`.
+> - 1(b), amended: the new text says "a claim of fact in the manager's notes, whether they arrive in your spawn or on a resume … check it". Established by `git diff`.
+> - 1(c): the new text says "in your node's `## Question` outside any text marked as the human's own words, check it". Established by `git diff`.
+> - 1, same spot: each file loses one line and gains three at the same place under `## What you read`. Established by `git diff -U1`.
+> - 2: the new text has no "not", "never" or "do not", and the diff adds no `#` line. `wc -w` gives 12 words for the removed sentence and 51 for the new text, so it adds 39 words. The cap is 40. `wc -w` counts `## Question` as two words, so a count that takes it as one gives 38.
+> - 3: `git diff -U0 <file> | grep '^[+-][^+-]' | md5sum` gives the same hash, 87b669ab9a08fdf5fcae55e44c3bf1d6, for all five files.
+> - 4: the new text tells the worker to check only claims of fact, and only those in the manager's notes and in `## Question`, with the human's marked words exempt. "whether they arrive in your spawn or on a resume" can only be read as saying where the notes arrive. So the reading I handed back in run 2, in which anything in the spawn had to be checked, is gone. Nothing in the new text tells the worker to check a direction from the human, a permission the human granted, or an acceptance condition.
+> - 5: the word diff shows the same five removed or added spans in each file, all inside the replaced sentence.
+> - 6: `git status --short --ignored --untracked-files=all` lists only the five files. Nothing is untracked or ignored, and nothing changed under `.scratch/graph-workflow/` in the worktree.
+> - 7: see below.
+>
+> The bar:
+> - Commands: the repo has no build, tests, formatter or CI, and its root holds no agent-instruction file or manifest. The standards file says the same. So the command half of the bar is empty, and the bar is complete without it. `git diff --check` prints nothing (exit 0).
+> - Line width: the new lines are 59 to 105 characters. At base, every one of the five files already holds lines of 105 characters or more (7, 4, 4, 6 and 9 such lines), so the new lines are within the files' existing width.
+> - Standards: I read only the standards in `map-implementation-rules.md` ("What the work is held against").
+> - Standards that bore on this work: the ground rules (nothing tied to this repo, no skill invoked, nothing addressed to the human), writing rules 5 and 6 (said as what to do, no bold, no figure of speech, "they" has the one referent "the manager's notes", "it" has the one referent "a claim of fact"), the glossary's `_Avoid_` lines ("summary" is refused only for "Effort closing report"), `graph-conventions.md` (`## Question` is a node-file heading it defines) and `/writing-for-agents` (it prefers a positive instruction over negation). `/coding-principles` and `/naming` did not bear on this prose change. No reviewing skill is named, so I ran none.
+> - I read the changed paths as the work, under the rules file's rule for work that is part of the record. None of them is a status line, `decisions.md` or `flags.md`.
+>
+> Flags, checked after the outcome:
+> - 380.1 is true of the work. "kept 'claim of fact'": the new text contains "a claim of fact". "phrased the carve-out as 'text marked as the human's own words'": the new text contains "outside any text marked as the human's own words". "used clause 1(b)'s own 'whether they arrive' wording": the new text contains "whether they arrive in your spawn or on a resume". Established by `git diff`.
+> - No flag is false, so I have nothing to hand back under QUESTIONS.
+>
+> I wrote no temporary files.
+
+### The gate, third time, 2026-10-04 — standing yes
+
+`standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` (run 3) is taken as the human's approval. The run covered every part, handed back no question, and found flag 380.1 true. That flag was settled at the human's earlier gates.
