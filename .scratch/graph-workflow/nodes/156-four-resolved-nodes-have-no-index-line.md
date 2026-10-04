@@ -101,3 +101,79 @@ Paths touched: .scratch/graph-workflow/worktrees/156-index-lines/.scratch/graph-
 `verbatim`: *"ok"*
 
 The manager had closed the payload with "Please answer node 156's raise: "ok for recommended", or name an alternative." The reply takes the worker's `RECOMMENDED`: "Yes. Keep the work as it stands and tell the checker in its spawn that this node's acceptance condition makes `decisions.md` the work itself, under contract hard rule 1. Then file a small node to add that exception to the rules-file sentence."
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      Four resolved nodes have no index line (node 156)
+
+ANSWER:        `.scratch/graph-workflow/decisions.md` has four new entries appended at its end, in ascending order: nodes 103, 114, 116 and 133. Each uses the file's existing form: a markdown link whose text is the node's own H1 title and whose target is `nodes/<file>`, then an em dash, then one sentence of 25 to 29 words. Each sentence comes from that node's `## Answer`, restates no reasoning and quotes no figure. Nothing already in the file was edited, and no other file changed (1 file, 4 insertions, 0 deletions).
+
+               **How "a node whose status is resolved" was read (clause 5).** I read the status the way `derivations.md` entry (c) does. It comes from the header block above the first `##` heading only. Fenced blocks are skipped, the first `Status:` line counts, and the value must equal `resolved` exactly. At 4ed809c59 that gives 273 resolved nodes (also 70 superseded, 17 open, 13 out-of-scope, 4 claimed). I tested each resolved node two ways: is its path named on any `- ` entry line, and is it the lead link of an entry. Both tests missed exactly 103, 114, 116 and 133. I also ran a looser cross-check: every node with a `Status: resolved` line anywhere in its text (`grep -lx`, which also catches body lines like the one in node 13's format spec), tested for its path anywhere in decisions.md. It missed the same four. So the set was exactly the four the condition names, with none extra and none short. After the append, all of these checks return nothing.
+
+               **Node 116's line** describes the checker-contract section that node's Answer says it added. That section is no longer in the current `.claude/skills/expedition-checker/SKILL.md` because later work changed it. Clause 3 asks for the line to come from the node's own Answer, so it does. **Node 114's line** says `CONTEXT.md`, the file that node changed at the time, and not the glossary's current path.
+
+               **The record-file rule.** The rules file reserves a change to `decisions.md` to the manager. The human settled at raise 1 that this node's condition makes that file its work, under the implementation contract's hard rule 1. The checker's spawn carries that. Writing the exception into the rules file is the new node below.
+
+INDEX LINE:    Four resolved nodes that carried earlier decisions into files (103, 114, 116, 133) now have their decisions.md lines; a header-block status re-derivation found no others.
+
+FLAGS:         none
+
+NEW NODES:     **Name:** The rules file reserves `decisions.md` to the manager even where a node's own work is that file
+               **Kind:** implementation
+               **Question:** In `map-implementation-rules.md`, the paragraph on an implementation node's work being the effort's own record calls any change to `decisions.md` or `flags.md` in the work "bookkeeping reserved to the manager" and makes the checker FAIL it. The implementation contract's hard rule 1 allows a worker to write a graph file where its node's own work is a change to that file. Node 156's condition demanded exactly that, and node 156 had to raise. The rules file should state that exception.
+               **Blockers:** none
+               **Acceptance condition:**
+               > 1. In `.scratch/graph-workflow/map-implementation-rules.md`, in the paragraph beginning "**An implementation node's work on this effort may be the effort's own record**", the sentence that today reads "**A change to the node's own status line, to `decisions.md`, or to `flags.md` is bookkeeping reserved to the manager**: where one appears among the work the checker's outcome is `FAIL` on the acceptance condition, and that holds whether or not the acceptance condition itself excluded those paths." is replaced. The replacement states both of the following in its own words:
+               >    (a) a change to the node's own status line is bookkeeping reserved to the manager in every case, and where one appears among the work the checker's outcome is `FAIL` on the acceptance condition;
+               >    (b) a change to `decisions.md` or `flags.md` is bookkeeping reserved to the manager, with the same `FAIL`, except where the node's acceptance condition requires a change to that file, in which case that change is the work and is checked against the condition like any other work.
+               > 2. The paragraph's other sentences keep their words.
+               > 3. The paragraph as it stood before the change is appended **verbatim** to `.scratch/graph-workflow/map-history.md`, at the end of that file, under a new `##` heading of the form "Superseded from `map-implementation-rules.md` at node NN — <what was superseded>", where NN is this node's number. Nothing already in `map-history.md` is edited or removed.
+               > 4. No file other than these two is modified. No other paragraph of `map-implementation-rules.md` is modified.
+               > 5. Scope came from no search: the named sentence is the work, not an instance of a defect. A search of `.claude/skills` for "bookkeeping reserved" returned nothing at 4ed809c59. Any other statement of the same rule that the work finds is reported and not edited.
+               >
+               > The work is also held against the bar.
+
+               Not joined to an existing node: I searched the open and claimed nodes' acceptance conditions for `map-implementation-rules` and "bookkeeping reserved". Node 205 targets the same file but a different concern, the bar-commands paragraph. Its clause 5 forbids touching any other paragraph, so it cannot take this one.
+
+INVALIDATIONS: none. The four entries add lines and change nothing any resolved node says.
+
+CONDITIONS:    I searched every open or claimed node's `## Acceptance condition` and `## Question` for `index line`, `decisions.md`, the four node paths `nodes/(103|114|116|133)-`, and "mechanical check 5". Hits:
+               - Node 149 and node 284 name `decisions.md` only as a file their work must not touch. Unaffected.
+               - Nodes 185, 37 and 211 discuss `decisions.md` as a whole (its size, how spawns scope it, index lines as a carrier of numbers). This work changes none of their premises: the file grew by four lines.
+               - Node 156 is this node.
+               I also searched the conditions for `map-implementation-rules` and "bookkeeping reserved" while placing the new node. That found node 205 (different paragraph, unaffected) and node 379 (the checker contract, unaffected).
+               I wrote no replacement clauses and changed no node's question.
+
+MISSING FROM MAP: map.md and the spawn did not say that the rules file's reserved-bookkeeping sentence covers `decisions.md`, nor that this node was exempt from it. I found the conflict by reading `map-implementation-rules.md` whole and raised it. The human's answer is recorded on node 156 under `## Interview`, and I checked it there.
+
+GATE PAYLOAD:  No checker findings yet. The checker has not run.
+               When it does, its spawn should state the human's answer to raise 1: this node's condition makes `decisions.md` the work itself, under the implementation contract's hard rule 1. That answer is recorded on node 156 under `## Interview`, 2026-10-04.
+
+               Bar: the repo has no build, no tests, no formatter and no CI. I checked the repo; this matches the record in `map-implementation-rules.md`, so the bar is the standards and the condition. No method skill was invoked, so none was skipped. Nothing was committed.
+
+               Paths touched: .scratch/graph-workflow/worktrees/156-index-lines/.scratch/graph-workflow/decisions.md (4 lines appended).
+
+               Proposed commit message:
+               ```
+               Give four resolved nodes their decisions.md index lines
+
+               Nodes 103, 114, 116 and 133 resolved without a line in the index.
+               A header-block re-derivation of resolved status found no others.
+
+               Node: graph-workflow/156
+               ```
+
+RETROSPECTIVE
+1. What I had to hunt for: nothing about the derivation, because `derivations.md` (c) gave the header-block reading directly. I found the reserved-bookkeeping conflict only by reading the rules file whole. Neither the spawn nor the node mentioned it.
+2. What arrived that this node did not need: most of map.md (the destination, the Lang and multi-repo notes, the naming history) and most of the rules file (the worktree route, the trigger file, the review route).
+3. What would have made this easier: a spawn that said whether this node was exempt from the rule reserving `decisions.md` to the manager. The new node above makes that unnecessary next time.
+4. What was stale, wrong or contradictory:
+   - The spawn's note said "the contract allows for such a node", but the rules file the checker follows said the opposite. The human has settled that, and the new node fixes it.
+   - Minor and stale: the rules file's review-route paragraph and node 114's Answer still name `CONTEXT.md` as the glossary, which map.md says moved to `.claude/skills/expedition/glossary.md`.
+   - Every claim in the resumption message checked out: the `## Interview` record on node 156 holds the raise and the human's verbatim "ok" taking `RECOMMENDED`.
+`````
+
+*The manager's note:* the node the worker surfaced is filed as [node 381](381-the-rules-file-reserves-decisions-md-even-where-it-is-the-work.md).
