@@ -3,7 +3,7 @@
 Type: precondition
 Status: open
 
-Blocked by: 126, 130
+Blocked by: 126, 383
 
 ## Question
 
@@ -39,3 +39,5 @@ worker stated the trigger rather than the outcome.*
 **correct today**, and node 113's worker was explicit that this is *"a cascade obligation on two open nodes, not a
 defect in what was decided here."* Whether the graph should hold nodes of this shape — work whose premise does not
 yet exist — is not settled anywhere, and the manager has not raised it.
+
+*The manager's note, 2026-10-04:* the edge on node 130 was moved to [node 383](383-ship-the-repo-docs-skill.md), which ships `/repo-docs`. Node 130's worker reported under its `CONDITIONS` that this node's trigger is now that node's landing, not node 130's resolution. Node 130 named `/repo-docs` as the text that replaces `/domain-modeling`.

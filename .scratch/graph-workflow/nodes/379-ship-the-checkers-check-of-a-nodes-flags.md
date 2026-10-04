@@ -329,3 +329,56 @@ The manager had offered "Recommended: one more short correction round. Amend cla
 > The one file you go and read for yourself is `map-implementation-rules.md`, and only for the standards in it.
 
 Every other sentence the clause freezes still keeps its words, and clause 9's caps stand.
+
+## Handover, correction round 2
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      Ship the checker's check of a node's flags (node 379), correction round 2
+ANSWER:        Node 30's answer is now in the checker contract and the manager contract. The text below is the round-1 answer, changed only where amendment 2 of 2026-10-04 reached it.
+
+               `.claude/skills/expedition-checker/SKILL.md` (422 lines before, 437 after by `wc -l`, which is exactly the cap of 15 added lines):
+               - `## What you are given` has a seventh item. It gives the flags the work's node holds, as text, each as one sentence with its id. It says that a flag is a judgement another agent recorded about this work, and that this given is absent where the node holds no flags. The sentence that opens the list reads "You are given seven things. The spawn carries all of them except the sixth, which you read for yourself from one file this contract names."
+               - The paragraph after the list reads, unwrapped: "The givens above are everything you are given, so that the record behind the work stays unread. Behind the work there is a record: the reasoning that led to it, the effort it belongs to, and the rest of the work around it. A flag given under item 7 is the one part of the record you are given, and you read it as a claim about the work. Leave the record unread, and do not go looking for it. The one file you go and read for yourself is `map-implementation-rules.md`, and only for the standards in it. A path you were given as the work is the work wherever it sits, and you read it. The acceptance condition as given to you is the only statement of intent you get." So the paragraph now separates the two cases: the flags are handed to the checker, and the standards file is the one file it opens itself. That also matches the sentence that opens the list, "you read the sixth for yourself from one file this contract names".
+               - In `### Questions, alongside a `PASS` or a `FAIL``, the counting sentence reads "Three kinds of question reach the human this way, and none of them stops your check." A paragraph is added after "The second is…": "The third is a false flag, meaning that what a flag says was done is not true of the work. `### The flags, after your outcome` says when and how you check the flags."
+               - A new section, `### The flags, after your outcome`, comes right after `### Questions…`. It says five things. Check the flags only after reaching `PASS` or `FAIL`, and change no outcome because of them. For each flag, establish one of three things: true of the work, false, or no claim the work can make true or false. Judge only whether what the flag says was done is true. Never judge whether the flag's judgement was right, and ignore any reason the flag gives. Report only a false flag, under `QUESTIONS:`, naming its id and the search that showed it false.
+               - No heading was renamed, and the table under `### When what you check against is itself the problem` is unchanged.
+
+               `.claude/skills/expedition/SKILL.md` (826 lines before, 824 after), unchanged since attempt 2:
+               - `## The checker` gains the item for the flags the node holds, on every run of an implementation node's check, each as its `flags.md` sentence with its id and without the link to its node.
+               - The sentence about the record reads "The checker receives nothing from the effort's own record except those flag sentences, so its spawn never points it at the node file."
+               - The item "Does anything check a flag before the human settles it?" is removed from `## What nothing here settles`, and the items after it are renumbered 2 to 4.
+INDEX LINE:    The checker contract gains a seventh given, the node's flags as id-tagged sentences and the one part of the record it receives, and checks them after its outcome. The manager's checker spawn carries them.
+FLAGS:         none new this round. The round-1 flag about the locked "one exception" sentence is now moot, because amendment 2 replaced that sentence with wording that separates the two cases. The two flags from attempt 2 still stand unchanged: where the new section and sentence go, and the one-clause definition of a false flag in the Questions section.
+NEW NODES:     none
+INVALIDATIONS: none beyond what node 30 already reported: node 26 narrowed, node 42 extended, and node 28's flag 28.3 carried out.
+CONDITIONS:    No new search this round. The only changed sentence is in a paragraph that only this node's condition quotes. I checked attempt 2's search results for "The one exception" and "map-implementation-rules", and no open node matched on that sentence. What attempt 2's CONDITIONS said still holds. Node 214 still needs the replacement clause 2 given there. Node 37's "item 3" is item 2 after this work.
+MISSING FROM MAP: none
+GATE PAYLOAD:  Checker run 2's question: the locked "one exception" sentence sat beside "the one part of the record you are given", and nothing said how the two exceptions differ. The human settled it with amendment 2. I replaced "The one exception is `map-implementation-rules.md`, and only for the standards in it." with the dictated sentence, word for word: "The one file you go and read for yourself is `map-implementation-rules.md`, and only for the standards in it." I unwrapped the paragraph and rewrapped it at 105 columns, and no other word in it moved. The longer sentence still fits in the paragraph's 7 lines, so no other wording had to be shortened to stay inside the cap.
+               Did this touch anything the acceptance condition names: yes, clause 2 as amended twice, and clause 9's line count. The checker contract stays at 437 lines, which is +15 and exactly at the cap. The manager contract stays at 824.
+               Checks run this round:
+               - The heading count is 21, with only `### The flags, after your outcome` added.
+               - `git diff --check` is clean.
+               - `grep -n -w -i 'six\|five'` returns no line.
+               - Neither file contains a markdown link.
+               - The repo still states no build, test or format commands, so the command half of the bar is empty.
+               Claim in the manager's message that I checked: `## Amendment 2, 2026-10-04` on the node matches the message. It takes the "one exception" sentence out of clause 2's list of sentences that keep their words, dictates the replacement word for word, and keeps clause 9's caps.
+               Paths touched: `.claude/skills/expedition-checker/SKILL.md` and `.claude/skills/expedition/SKILL.md`, in `.scratch/graph-workflow/worktrees/379-flag-check`. Both are uncommitted.
+               Proposed commit message:
+               Ship the checker's check of a node's flags
+
+               The checker contract gains a seventh given, the node's flags as id-tagged
+               sentences and the one part of the record the checker receives, and a
+               section on checking them after its outcome, reporting a false flag as a
+               question. The manager contract's checker spawn carries the flag sentences,
+               and the settled open question is removed.
+
+               Node: graph-workflow/379
+
+RETROSPECTIVE (correction round 2):
+1. What I had to hunt for: whether the longer dictated sentence would push the checker contract past its 15-line cap. Rewrapping the paragraph showed it still fits in 7 lines.
+2. What arrived that this node did not need: nothing.
+3. What would have made this easier: the amendment could have said whether the line cap still had to be met with the longer sentence, or what to shorten if it did not fit. As it happened, nothing needed shortening.
+4. What was stale, wrong or contradictory: nothing new. The tension I flagged in round 1 is resolved by this amendment.
+`````

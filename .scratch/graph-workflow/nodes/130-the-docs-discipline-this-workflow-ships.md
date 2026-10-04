@@ -1,9 +1,15 @@
 # The docs discipline this workflow ships instead of depending on one
 
 Type: grilling
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+The workflow ships `/repo-docs`, a standalone ~50-line skill keeping a repo's glossary and decision records, reviewed with each change, searched with grep; Expedition never names it.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. It surfaced [node 383](383-ship-the-repo-docs-skill.md), which ships the skill. Its `INVALIDATIONS` extend nodes 113 and 145 and narrow nodes 128 and 129 consistently. Its `CONDITIONS` report that node 135's trigger is now node 383's landing, and the manager moved that edge. Flags 130.1, 130.2, 130.3, 130.4 settle at the node closing report.
 
 ## Question
 
@@ -280,3 +286,120 @@ RETROSPECTIVE:
 `verbatim`: *"q1 ok q2 just use grep for now"*
 
 *The manager's note:* Q1 takes the worker's `RECOMMENDED`, the standalone `/repo-docs` skill of about 50 lines as revised after the research. **Q2 is a divergence.** It takes neither the `RECOMMENDED` ("As a property, naming no product") nor either alternative: it says to use grep, "for now".
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      The docs discipline this workflow ships instead of depending on one
+
+ANSWER:        **The workflow ships a small standalone skill, `/repo-docs`, at `.claude/skills/repo-docs/SKILL.md`. It keeps a repository's own glossary and decision records true as work changes them, and it searches with grep.** No expedition file names it, and it names no expedition file. A repo can use either one without the other, which is the property the human's "plugin" asked for. The two meet only through the host repo's own agent instructions. The implementation contract's bar already holds work to those ("whatever else the repo itself demands"), so no expedition contract changes. Settled by the human, `verbatim`: *"q1 ok q2 just use grep for now"*. That came after their first reply, `verbatim`: *"I think the proposition is ok, but there should be research done on what other people do, there was quite a few project that tries to make Karpathy's LLM-wiki and similar, I want to know what they did before choosing"*.
+
+               **What the skill holds, as approved (Q1, the worker's recommendation as revised after the research):**
+               - **Only what the code cannot tell a reader.** That means a glossary and decision records, and no pages describing the code.
+                 - Glossary entries: a bold term, a meaning of one or two sentences, and an `_Avoid_` line.
+                 - Decision records: one paragraph each, written only where a decision is hard to reverse, surprising without context, and a real trade-off.
+               - **Files.** The agent first finds where the repo already keeps these. It creates a file only when it has a first entry to write.
+               - **No index file and no log file.** The directory listing and version-control history serve for both.
+               - **Write with the change.** A term or decision settled in a change gets its entry in that same change.
+               - **Decisions are superseded, never edited.** A new record names the one it replaces.
+               - **Every docs edit is reviewed.** It goes in a change the human reviews with the rest of the work. An agent that may not write files only searches and checks, and reports what it would write.
+               - **Check, which reports and does not fix:**
+                 - a term used with no entry;
+                 - an `_Avoid_` word in use;
+                 - a glossary entry that states a rule or an implementation detail;
+                 - an entry the code contradicts;
+                 - a decision overturned with no superseding record.
+               - **Nobody is addressed.** No instruction tells the agent to ask the user anything.
+
+               **Search (Q2): grep, "for now".** This is a divergence from the worker's recommendation, which was to describe search as a property and name no product. The skill names grep and names no search engine. "For now" is not carried into the shipped text. Revisiting qmd stays on the record's existing route: node 129's trigger, a worker reporting it could not find a fact because it did not know the fact's wording.
+
+               **What the choice rests on.** Two sources were read: `/domain-modeling` (the installed skill and its own doc page) and Karpathy's LLM-wiki gist. Three surveys of what others built were run, and their results went to the human in full on the second relay (recorded under `## Interview`):
+               - The gist thread holds 1,132 comments linking about 430 implementations, counted through the GitHub API.
+               - Codebase-oriented LLM-wiki skills and plugins.
+               - Similar agent-kept docs: Cline Memory Bank, Kiro steering, spec-kit, BMAD, Claude Code memory, AGENTS.md, Serena, Basic Memory, claude-mem, ADRs/MADR.
+
+               Most per-project detail came through WebFetch summaries. The decisive findings:
+               - grep is the default search nearly everywhere.
+               - The field's main addition to the gist is control over what an agent writes back.
+               - One codebase-wiki benchmark showed no lift from the wiki (narailabs/doc-wiki, 57/92 without against 54/92 with).
+               - `/domain-modeling`'s own doc names its most-reported failure, the glossary becoming "a running spec". It also warns that "an unreviewed, agent-authored glossary is worse than none".
+
+               **What this node does not change.** The expedition skill's own `glossary.md` stays governed by its own opening paragraph (node 56) and is not brought under `/repo-docs`. The record-search rule in the worker contracts (node 129) is untouched.
+
+INDEX LINE:    The workflow ships `/repo-docs`, a standalone ~50-line skill keeping a repo's glossary and decision records, reviewed with each change, searched with grep; Expedition never names it.
+
+FLAGS:         ASSUMPTION — *Node:* The research the human asked for was done inside this attempt by three of my own subagents, and no `research` node was minted. I read their reply as the contract's "go read X first" row, which says to read and then continue with the same questions. The findings went to the human in full in the second payload before they chose. Fetching from the web rests on two things: the contract's "find facts from the tree or the environment", and the human's own direction to look at the gist, its comments and derivative work. One route, my own curl to the GitHub API, was refused by the permission system. *Index:* Node 130's survey of LLM-wiki derivatives was run by its own worker's subagents and shown to the human before they chose; no research node was minted.
+
+               ASSUMPTION — *Node:* Expedition's own `.claude/skills/expedition/glossary.md` is not brought under `/repo-docs`. It stays governed by its own opening paragraph, which node 56 shipped. `/repo-docs` is for a host repository's lasting docs, and tying the two together would break the property that each works without the other. *Index:* `/repo-docs` does not govern Expedition's own glossary, which stays under its own completeness paragraph so the two remain independent.
+
+               ASSUMPTION — *Node:* I read "just use grep for now" as follows. The shipped skill names grep as its search and names no search engine or embedding tool. "For now" stays out of the shipped text, because a promise of later change in a shipped file would date it. Revisiting rests on node 129's existing qmd trigger in the record. I did not add "or an equivalent plain-text search" to the condition as a demand; the worker may add it. *Index:* "just use grep for now" became a skill that names grep and no engine; "for now" lives only in the record, via node 129's qmd trigger.
+
+               ASSUMPTION — *Node:* Two details of the condition are mine. First, "about 50 lines" became a cap of 650 words counted by `wc -w`, frontmatter included, because a line count depends on wrap width and a word count does not. Second, the name `repo-docs` is taken as final. The recommendation called it a "working name", and the human's "q1 ok" took the recommendation without renaming it. *Index:* `/repo-docs` keeps its working name as final and its ~50-line size became a 650-word cap; both were the worker's renderings of the approved option.
+
+NEW NODES:     **Ship the `/repo-docs` skill**
+               Kind: implementation
+               Question: Write the standalone docs skill node 130 settled, as one new file, `.claude/skills/repo-docs/SKILL.md`.
+               Blockers: none.
+               Acceptance condition:
+               > Done when all of the following hold.
+               >
+               > 1. The file `.claude/skills/repo-docs/SKILL.md` exists and is the only file in the directory `.claude/skills/repo-docs/`. It opens with YAML frontmatter holding `name: repo-docs` and a `description` saying the skill is for keeping a repository's glossary and decision records true as work changes the repository.
+               > 2. The file is at most 650 words as counted by `wc -w .claude/skills/repo-docs/SKILL.md`, frontmatter included.
+               > 3. The file stands alone. `grep -n -i -E 'expedition|mattpocock|domain-modeling|qmd|\.scratch' .claude/skills/repo-docs/SKILL.md` returns nothing. The file names no other skill and tells the reader to read no file outside the repository it is working in, apart from that repository's own files. `grep -rn 'repo-docs' .claude/skills/` returns matches only inside `.claude/skills/repo-docs/`.
+               > 4. Before anything is created, the file tells the agent to find where the repository already keeps a glossary and decision records, and to use those: its agent instructions files (such as `AGENTS.md` or `CLAUDE.md`), an existing glossary file, an existing directory of decision records. It names one default path for a glossary and one default directory for decision records, both relative to the repository root, to be used only when that search finds none. It tells the agent to create a file only when there is a first entry to write in it.
+               > 5. The file keeps two kinds of content and no others.
+               >    - A glossary. Each entry is a term in bold followed by a colon, a meaning of one or two sentences, and a line beginning `_Avoid_` listing rejected synonyms. The file says a glossary entry states what a term means and holds no rule, no implementation detail and no specification.
+               >    - Decision records. Each is one file, about a paragraph long, whose file name carries a sequential number and a title. The file says a decision record is written only when all three hold: the decision is hard to reverse, it would surprise a reader who lacks the context, and it was the result of a real trade-off between alternatives.
+               >    - The file says the skill keeps no pages describing what the code does.
+               > 6. The file tells the agent to create no index file and no log file, and says the directory listing and the version-control history serve those purposes.
+               > 7. The file tells the agent that a term or decision settled in a change gets its glossary entry or decision record in that same change.
+               > 8. The file says an accepted decision record is not edited to change the decision. A changed decision gets a new record that names the record it replaces.
+               > 9. The file says every edit to these docs goes into a change that the human reviews together with the rest of the work, never as a separate write. It says an agent not permitted to write files only searches and checks, and reports the entries it would write.
+               > 10. The file tells the agent to search with grep before opening a file whole. It names no other search tool, search engine, index or embedding tool.
+               > 11. The file gives a check operation that reports and fixes nothing. The check reports each of these five:
+               >     - a term used in the repository with no glossary entry;
+               >     - a word listed on an `_Avoid_` line in use for that term's meaning;
+               >     - a glossary entry that states a rule or an implementation detail;
+               >     - a glossary entry or decision record that the code contradicts;
+               >     - a decision overturned with no record superseding it.
+               > 12. The file contains no instruction to ask the user anything, to address the user, or to wait for a reply. What it produces is stated as entries written or a report returned to whoever invoked it.
+               > 13. No file outside `.claude/skills/repo-docs/` is changed.
+               >
+               > Scope: the work creates a file, and the named places are the work rather than instances of a defect. So the scope came from no search. The `grep` commands in clauses 3 and 10 are demands on the finished file, not a scope search.
+
+INVALIDATIONS: No resolved node is contradicted.
+               - Extension: [node 113](113-whether-the-method-skill-instruction-does-any-work.md)'s answer names "node 130 ships the docs discipline that replaces `/domain-modeling`" as a forward reference. It now has a referent, `/repo-docs`, shipped by the new node.
+               - Extension: [node 145](145-whether-the-workflow-ships-its-own-reviewing-discipline.md)'s answer says the count of separately packaged discipline deliverables "stays at one, and it is node 130's". That deliverable is now named, and it is separately installable as node 145 assumed.
+               - Narrowing, consistent: [nodes 128](128-whether-qmd-lowers-this-workflows-token-cost.md) and [129](129-what-to-do-about-the-records-token-cost.md) kept qmd out of the shipped files. This answer keeps it out too, by the human's direction (grep, "for now") rather than only by ground rule 1. Flag 129.1's open point, whether the human would relax ground rule 1 for a tool, was put to them here. They chose grep "for now", which leaves ground rule 1 as it is.
+               - Unaffected: [node 56](56-ship-the-glossary-into-the-skill-set.md)'s glossary paragraph stays the discipline for Expedition's own vocabulary.
+
+CONDITIONS:    **What I searched.** The `## Acceptance condition`, `## Question` and `## What must be true when it is done` sections of all 20 open or claimed nodes, for: `domain-modeling`, `repo-docs`, `qmd`, `130-the-docs`, `node 130`, `decision record`, `ADR`, `docs discipline` and `grep`. I also searched them for any glob or count over the shipped skill set (`.claude/skills/*`, `expedition*`, "every skill", "shipped set", "twelve", "eleven"), because the new node adds a skill directory beside the expedition ones.
+
+               **Results.**
+               - Nodes 380 and 382 scope their work with `grep ... .claude/skills/*/SKILL.md` for phrases that the new file will not contain, so no clause of theirs becomes wrong.
+               - No clause of any unclaimed node's condition is made wrong, so I write no replacement.
+               - **Open node whose question changes:** [node 135](135-repoint-the-maps-skill-line-when-its-replacements-land.md) ("Repoint the map's `## Notes` skill line when its two replacements land"). Its question is answered in part: the shipped text that replaces `/domain-modeling` is `.claude/skills/repo-docs/SKILL.md`, invoked as `/repo-docs`.
+               - The trigger for node 135 is now the new node's landing, not node 130's resolution. Its `Blocked by: 126, 130` should read `126` plus the new node "Ship the `/repo-docs` skill". That is the manager's edit to make or put to the human.
+
+MISSING FROM MAP: Whether a worker may fetch from the web. The map and the contract are both silent; the contract says only "find facts from the tree or the environment". I relied on that clause and on the human's own direction to read the gist, and the permission system refused one route and allowed another. The map's standing-preferences item on the `mattpocock-skills` direction still says what ships in place of `/domain-modeling` "is" node 130. That stays true as a pointer, and the manager may want it to name `/repo-docs` once the new node lands, which is node 135's subject.
+
+RETROSPECTIVE:
+1. What I had to hunt for: where `/domain-modeling` lives on disk (a nix store path). A route to the gist's raw text and comment thread: my own curl was refused, and a subagent later reached the GitHub API. Whether adding a skill directory makes any open condition's glob over `.claude/skills/*` wrong: it does not, after a search.
+2. What arrived that this node did not need: most of `decisions.md`, of which about six lines bore on this node (56, 113, 128, 129, 132, 145), and the map's worktree, landing and code-slot items.
+3. What would have made this easier: a spawn naming node 145 (the precedent of shipping a discipline) and node 135 (the node waiting on this one). A stated rule on whether a worker may fetch a URL the human named. And knowing from the start that the human wanted a survey's findings shown rather than summarised, which cost one relay.
+4. What was stale, wrong or contradictory: the manager's first note said the contract states whether I may read outside the working directory, and it does not say so explicitly. The node's question still lists "keeping a glossary true as terms move" as a candidate purpose, which node 56 had already shipped. My first survey's comment summaries were partly unreliable: two WebFetch calls on one page disagreed. The API enumeration replaced them. Node 135's `Blocked by: 130` now points at the wrong trigger, as stated under CONDITIONS. All claims in the manager's last message checked out against node 130's `## Interview`.
+`````
+
+## Flags
+
+`130.1` `ASSUMPTION` **· settled** — The research was run by the worker's own subagents inside this attempt, and no research node was minted. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`130.2` `ASSUMPTION` **· settled** — Expedition's own glossary.md is not brought under /repo-docs. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`130.3` `ASSUMPTION` **· settled** — "just use grep for now" became a skill naming grep and no engine; "for now" stays in the record only. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`130.4` `ASSUMPTION` **· settled** — The working name repo-docs is final, and ~50 lines became a 650-word cap. *(The worker's full text is under its handover's `FLAGS`.)*
+
+*The manager's note, 2026-10-04:* flags 130.1, 130.2, 130.3, 130.4 settle at the node closing report that closes this node.
