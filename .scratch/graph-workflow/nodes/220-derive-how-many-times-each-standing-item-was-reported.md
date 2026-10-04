@@ -268,3 +268,92 @@ RETROSPECTIVE:
 `220.2` `ASSUMPTION` — Entry (j) reads unfenced, emphasised and blockquoted RETROSPECTIVE parts too, ending them at the next heading or the end of the blockquote, which clause 2 did not list. *(The worker's full text is under its handover's `FLAGS`.)*
 
 `220.3` `ASSUMPTION` — Entry (j) treats node 70's refining annotation and the manager's disposal headings as not retrospectives, contrary to node 178's count of six heading forms. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `FAIL` on the acceptance condition
+
+*The checker's own text, pasted, 2026-10-04. A fresh checker; the condition reached it as clause 2 amended, the human's raise-1 direction on the name form as their words, and the node's three flags with ids.*
+
+> FAIL: acceptance condition
+>
+> Work checked: the uncommitted change to .scratch/graph-workflow/derivations.md in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/220-retro-derivation. The diff is pure addition: entry "## (j) Item names carried by the retrospectives". I read the changed path as the work, under the rules file's paragraph on record files. I read nodes/ only as the measurement target the spawn names. I left the record unread.
+>
+> ### Finding 1 (clause 1): the entry asks one question and counts another
+>
+> - **Instances.** The entry's question line reads "For each standing item named in a retrospective, how many retrospectives carry that name, and in which node files?", matching clause 1. Its means counts node files instead. The prose says so: "The count is the number of those node files, so a node file that carries a name in more than one retrospective, such as a first attempt and a correction round, counts once." The block does the same through `if ((name, file) in carried) return` and `count[name]++`, so each name counts once per file.
+>   - I demonstrated this on a synthetic two-file `nodes/` tree under $TMPDIR. A name was carried by three retrospectives: two in file 1 (`## Retrospective` and `## Retrospective — attempt 1`) and one in file 2 (a fenced `RETROSPECTIVE:` part). The block printed `2 alpha-one: 1-a.md 2-b.md`, and the number of retrospectives is 3.
+>   - On the current tree the two quantities agree. Each node carrying a name (178 and 212) has exactly one retrospective holding names. So the output is right today, and the means still does not answer the stated question.
+> - **Form.** The entry's means returns, as a name's count, any quantity other than the number of retrospectives carrying that name.
+> - **Extent.** Two sites in the added entry: the paragraph beginning "Each output line is a count", and `read_name()` in the block. List them with `git -C <worktree> diff -U0 -- .scratch/graph-workflow/derivations.md | grep -nE 'number of those node files|in carried|count\[name\]\+\+'`.
+>
+> ### Finding 2 (clause 2): the means opens the blockquoted form but can read no item in it
+>
+> - **Instances.** The entry derives a blockquoted form, `> RETROSPECTIVE`, which ends at the first line not beginning with `>`. That form exists in the tree at nodes/131-a-just-do-it-mode-that-skips-grilling.md, under the line `> RETROSPECTIVE (effort-scoped; I wrote no graph file)`. Every line inside such a part begins with `>`.
+>   - `read_name()` matches only `/^[ \t]*([0-9]+\.|[-*+])[ \t]+`.../`, so a list item inside a blockquote can never be recognised. The block opens the part and can read nothing from it.
+>   - This contradicts the entry's own statements "The block reads every form of both" and "a numbered or bulleted list item inside a retrospective".
+>   - Synthetic test: `> RETROSPECTIVE` followed by ``> - `lam-da` quoted list item`` printed nothing for `lam-da`.
+>   - No output changes on the current tree: node 131's blockquoted part holds no qualifying item. The same pattern also misses a blockquoted list item inside a heading section.
+> - **Form.** A retrospective form the entry names, in which a list item opening with a hyphen-joined lowercase code span cannot match `read_name()`'s pattern.
+> - **Extent.** The smallest set containing every instance is the forms the entry names whose lines carry a prefix the pattern does not admit. Of the forms in the entry, that is only the blockquote form: in the sentence "Where the line opens with a blockquote marker", and in the `part == "quoted"` handling against the regex in `read_name()`. I computed this by comparing each named form's line prefix with the pattern.
+>
+> ### Clause by clause
+>
+> - **Clause 1: not met** (finding 1). It is met in the other respects:
+>   - the entry has its own name, (j);
+>   - it sits alongside entries (a) to (i);
+>   - its question is on one line;
+>   - it gives a means that runs against `nodes/`.
+> - **Clause 2: not met** (finding 2), otherwise established.
+>   - **Headings.** An awk pass found every heading in nodes/*.md mentioning "retrospective", case-insensitive, skipping fenced blocks. None occur inside fences. Distinct forms:
+>     - `## Retrospective`, `### Retrospective`, `## RETROSPECTIVE`;
+>     - `## Retrospective — attempt 1`, `## Retrospective — what the two correction rounds added`;
+>     - `## Annotation: the retrospective`, `## Annotation: the retrospective, and the manager's note on filing this node`;
+>     - `### The retrospective`;
+>     - and, not retrospectives: four level-1 titles, 17 `## The manager's disposal of the retrospective's record items`, and node 70's `## Annotation: this node's retrospective claim is refined…`.
+>   - The entry names all eight retrospective forms. I instrumented the block to print where it opens a section. It opens every heading except the titles, the disposals, node 70's annotation, and node 86's `### The retrospective`, which sits inside an already-open level-2 section. Its stderr check printed nothing.
+>   - **Part starts.** `^[ \t>*_]*(RETROSPECTIVE|Retrospective)` outside or inside fences finds 167 lines: 91 fenced, 76 unfenced. The block opens a fenced part at all 91 and a plain or quoted part at 74. The remaining 2 (nodes 200 and 204) sit inside open `## Annotation: the retrospective` sections. So every start is covered.
+>   - The fenced form, "the part ends where its fenced block ends", is stated and coded.
+> - **Clause 3: met.** Both statements are present: "A retrospective section's body ends at the next heading of the same or higher level." and "A heading inside a fenced code block is skipped".
+>   - Synthetic test: a `###` heading kept the section open, the next `##` closed it, and a `##` inside a 4-backtick fence neither opened nor closed it.
+>   - A note that is not a finding: node 86's level-2 section `## Annotation: the retrospective, and the manager's note…` therefore runs on through `### The manager's note`. That note is read as retrospective text. It holds no qualifying item today.
+> - **Clause 4: met.**
+>   - **The search.** `grep -nE '^[[:space:]>]*([0-9]+\.|[-*+])[[:space:]]+`[a-z0-9]+(-[a-z0-9]+)+`' nodes/*.md` lists every candidate. A broader variant allowing `)`, emphasis and uppercase added only bold-wrapped items outside any retrospective.
+>   - **Placing each hit.** I placed each hit by headings, fences and RETROSPECTIVE lines:
+>     - inside a retrospective: nodes 178 (under `## Retrospective`, 6 names) and 212 (under `## Retrospective`, 4 names);
+>     - outside one: the hits in 289 (under `### Search of open conditions`), 350, 355 and 359 (before the RETROSPECTIVE line in their fences, or under `## Review`).
+>   - **Direct measure.** 2 stale-number-in-the-record (178, 212); 2 record-is-not-mechanically-scannable (178, 212); and 1 each for one-rule-stated-at-several-sites, map-read-whole-for-a-few-items, rules-file-read-whole-for-one-section, nothing-pointed-me-at-it (all 178), manager-owes-a-promotion-and-has-not-made-it and worker-forbidden-a-file-reaches-it-by-search (both 212).
+>   - **The block's output** under gawk 5.4.1 is identical. A count of retrospectives would also be identical today.
+>   - **Nothing written into the file.** None of the 8 names occurs in derivations.md (grep -c each, all 0). The added digits are only regex ranges, `attempt 1`, `{0,3}` and sort keys, so no count, table or measurement is written.
+> - **Clause 5: met.** The text states "A name carried by only one retrospective is reported too, so that a name minted once is visible…". The block prints every name with count ≥ 1, and the output contains six names with count 1.
+> - **Clause 6: met.**
+>   - `git status` shows derivations.md as the only change, with nothing untracked.
+>   - `git diff` has a single hunk, `@@ -266,3 +266,110 @@`, of added lines only, so no existing entry changed.
+>   - Nothing under `.claude/` changed.
+> - **Clause 7, the bar: holds.** Details in the next section.
+>
+> ### The bar
+>
+> - **Commands.** The repo states none, and the commands half of the bar is empty. The repo root holds only .claude/, CONTEXT.md, CONTEXT-MAP.md, .gitignore and .scratch/. There is no CLAUDE.md or AGENTS.md, no manifest, no CI.
+> - **Whitespace.** `git diff --check` printed nothing and exited 0.
+> - **Other awks.** The block gives the same output under `gawk --posix`, nawk 20260426 and busybox awk 1.37.0. Under mawk 1.3.4-20240819 it aborts with `REcompile() - panic: values still on machine stack for ^ {0,3}(```|~~~)`. I record this as information, not a finding: the file only promises that blocks use `awk`, and ground rule 1 binds shipped files, which this is not.
+>
+> ### Standards
+>
+> - **Source.** I read only the standards in .scratch/graph-workflow/map-implementation-rules.md, the main tree's copy. It differs from the worktree's copy only in the paragraph reserving decisions.md and flags.md, which bears on nothing here.
+> - **What bore on the work:**
+>   - **The six writing rules and /writing-for-agents** (on the prose). No breach found: no line-number citations, one idea per sentence, plainly stated.
+>   - **The glossary's _Avoid_ lines.** "item" is refused only as a word for a node. "report" and "tree" come from the condition's own wording. No breach.
+>   - **/coding-principles and /naming,** applied by hand to the awk block. Function names are clear, and uncovered headings are reported on stderr rather than passing silently. No breach.
+>   - **The ground rules.** No breach.
+> - **What did not bear:** graph-conventions.md (no mention of derivations). No reviewing skill is named for this repo, so I ran none.
+>
+> QUESTIONS:
+> - None of the three flags is false.
+>   - **220.1** is true of the work. The block counts each node file once; synthetic test above.
+>   - **220.2** is true. The entry's text and code read unfenced, emphasised and blockquoted parts, ending them at the next heading or at a line not beginning with `>`.
+>   - **220.3** is true of the work. The instrumented run opens neither node 70's annotation nor any disposal heading. Its clause about node 178's count makes no claim the work can make true or false.
+>
+> Temporary files were under $TMPDIR/chk220 and have been removed.
+
+*The manager's note:* a `FAIL` goes back to the worker for a correction round, under "Raise the gate once the checker passes". The human sees it at the gate as one of the checker's runs.
