@@ -1,7 +1,7 @@
 # Begin an implementation node's question with what the work makes possible and for whom
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
 
 ## Question
@@ -33,6 +33,12 @@ Make the author of an implementation node begin its `## Question` with one or tw
 > 4. Apart from clauses 1 and 3, no sentence in the six files changes. In particular, every heading is unchanged, including `### The four constraints on a condition you write yourself`, and the handover block's line beginning `NEW NODES:` is unchanged in each worker contract.
 > 5. No file under `.scratch/` changes. `.claude/skills/expedition-checker/SKILL.md`, `.claude/skills/expedition-cascade/SKILL.md`, `.claude/skills/expedition/graph-conventions.md` and `.claude/skills/expedition/glossary.md` do not change.
 > 6. The tree meets the bar.
+
+## Answer
+
+The five worker contracts and the manager's `## Acceptance conditions` now require an implementation node's question to begin with one or two sentences on what the work makes possible and for whom.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `5d6cb9820`.
 
 ## Handover, attempt 1
 
