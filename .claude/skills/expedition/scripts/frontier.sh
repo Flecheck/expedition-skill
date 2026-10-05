@@ -143,7 +143,7 @@ in_fence { next }
 }
 
 END {
-	type_order = "grilling research prototype precondition implementation"
+	type_order = "grilling prototype precondition implementation"
 	type_count = split(type_order, ordered_types, " ")
 	for (i = 1; i <= type_count; i++) known_type[ordered_types[i]] = 1
 	for (n = 0; n <= max_number; n++) {

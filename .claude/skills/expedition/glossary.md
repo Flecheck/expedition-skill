@@ -128,7 +128,7 @@ condition without having read the node.
 _Avoid_: reviewer, verifier, auditor (reviewing is the human's), reject (the human's word at the
 gate)
 
-## The five kinds of node
+## The four kinds of node
 
 Each kind names what its worker does.
 
@@ -138,10 +138,6 @@ own questions in one payload. Two questions share a payload only where neither's
 other's. A question whose answer depends on another question in that payload is held for a later
 payload.
 _Avoid_: decision, question, interview
-
-**research**:
-A fact from outside the working directory, read and reported. Its ordinary work is done without the
-human. Its worker may raise where the node's premise is broken.
 
 **prototype**:
 A probe built to be reacted to and then discarded. It need not be code. It is kept outside the
@@ -154,10 +150,12 @@ act on it. The node continues after its gate: after approval the manager commits
 it, and the node resolves after that.
 
 **precondition**:
-Work that must happen before something else can be decided. It does only that work: it decides
-nothing, probes nothing, and produces no product code.
+Work that must happen before something else can be decided, including establishing a fact that a later
+node needs, from the working tree or from outside it. It does only that work: it decides nothing,
+probes nothing, and produces no product code.
 _Avoid_: task (every node is a task in ordinary English, and it is too close to the words used for a
-worker), chore, setup
+worker), chore, setup, research (a fact that a later node needs is precondition work, and a fact that
+one decision needs is found inside that grilling node)
 
 ## Working a node
 
@@ -183,14 +181,9 @@ An already-settled node that turns out to be wrong. It is handled in place where
 to exist, and by supersession where it does not.
 _Avoid_: correction (a correction round is a different thing), change request
 
-**Cascade**:
-An AFK pass that propagates a known revision outward along edges and into code. It queues graph
-edits and does not interrupt the human.
-
 **Sweep**:
-A pass that looks for revisions nobody propagated. It is the same work as a cascade, done in the
-opposite direction: a cascade starts from a known change, and a sweep searches for changes.
-_Avoid_: audit, full cascade
+A pass that looks for revisions nobody propagated.
+_Avoid_: audit
 
 **Flag**:
 A note recording a judgement that an agent made on its own and that the human may want to revisit.

@@ -167,7 +167,7 @@ the fields in the order shown below.
 ```markdown
 # <free-form name — carries a foreign label when one exists>
 
-Type: grilling | research | prototype | precondition | implementation
+Type: grilling | prototype | precondition | implementation
 Status: open | claimed | resolved | superseded | out-of-scope
 Labels: EFF, REG
 Blocked by: 31, 47
@@ -554,7 +554,7 @@ Both writes are part of raising the flag, and are never left to a tidy-up afterw
 The round that raised the flag, an `## Interview` attempt or a round in `## Review`, says what produced
 it. For a flag from a worker's own unprompted judgement, what produced it is what the worker actually
 did, told in the worker's words. A one-line summary is enough under `## Flags`. The round needs the full
-account. Where a node has no round at all, as with a `research` node or an AFK `precondition` node, the
+account. Where a node has no round at all, as with an AFK `precondition` node, the
 `## Flags` entry carries that account itself.
 
 3. Whoever raises the flag runs check 6 below itself, as part of raising it, over the material it

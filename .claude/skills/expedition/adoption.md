@@ -89,7 +89,7 @@ work. The recording of the import node itself stays yours.
 - **Its name.** The foreign identifier survives in the node's free-form filename, such as
   `nodes/24-auth-2-token-refresh.md` for `AUTH-2`. It is never written as a field. Its label is its
   identifier's family.
-- **Its kind.** It takes the kind the foreign record gives it where that kind is one of the five. It is
+- **Its kind.** It takes the kind the foreign record gives it where that kind is one of the four. It is
   a `grilling` node otherwise, because a question the foreign record holds open is one the human
   decides.
 - **Its words.** Foreign prose moved into a node keeps its own words, including words the glossary

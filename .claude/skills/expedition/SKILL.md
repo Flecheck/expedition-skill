@@ -177,13 +177,13 @@ not summarise it. A spawn carries the following:
 
 What each kind of node adds:
 
-- `research`: the sources and their standing, and that it may read outside the working directory.
 - `prototype`: where the artifact goes, and that it is discarded.
 - `implementation`: its acceptance condition, the bar by way of the map, and the paths the spawning node
   expects it to touch. The paths tell the worker where to start. A worker that writes outside them
   breaks no rule, and reports what it touched.
-- `precondition`: what must be true when its work is finished, and which of its results later nodes
-  depend on.
+- `precondition`: what must be true when its work is finished, which of its results later nodes depend
+  on, and, where its work establishes facts, the sources and their standing and that it may read outside
+  the working directory.
 - `grilling`: nothing extra.
 
 Write a note only from context you already hold. Do not read code, or go and find things out, in order

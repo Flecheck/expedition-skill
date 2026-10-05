@@ -16,7 +16,7 @@ Every ticket already written under that doc stays valid.
 
 ## Added
 
-- A fifth node type, `implementation`.
+- The node type `implementation`.
 - Three more statuses: `open`, `superseded`, `out-of-scope`.
 - Two more edge kinds: `Supersedes:` and `Superseded by:`.
 - The `Labels:` field.
@@ -35,8 +35,8 @@ operations above. Five differences:
 
 - **Node files live at `.scratch/<effort>/nodes/NN-<name>.md`**, not under `issues/`. An effort's
   nodes never share a directory with this repo's own tickets.
-- **The fourth node type is `precondition`**, not `task`. The other four are unchanged, and a
-  fifth, `implementation`, is added.
+- **`precondition` replaces wayfinder's `task` and also holds what wayfinder calls `research`.**
+  `grilling` and `prototype` are unchanged, and `implementation` is added.
 - **Conversation appends under `## Interview`**, not `## Comments`, and each recorded answer is
   marked `verbatim` or `paraphrase`.
 - **Resolving appends a capped line to `.scratch/<effort>/decisions.md`**, not to the map body.
