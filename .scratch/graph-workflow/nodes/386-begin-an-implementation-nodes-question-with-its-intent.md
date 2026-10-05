@@ -76,3 +76,42 @@ RETROSPECTIVE
 4. What I read that was stale, wrong, or contradictory: open node 32 cites line numbers in the five contracts that have long been stale, and this work shifts them again. Otherwise nothing.
    - `stale-number-in-the-record`: carried by 6 earlier retrospectives (nodes 178, 212, 220, 382, 385). The instance this time is node 32's line-number citations.
 `````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-05. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/check386.md`. The node holds no flags.*
+
+> PASS
+>
+> I read the changed paths as the work, under the rule in map-implementation-rules.md. I wrote no files, so there was nothing to clean up.
+>
+> Condition, part by part:
+> - Scope's recorded search: in the worktree, `grep -c 'No other kind of node carries a'` returns 1 for each of grilling, research, prototype, precondition and implementation. `grep -c 'Where you minted the node, you write the condition.' .claude/skills/expedition/SKILL.md` returns 1. Both match the recorded returns, and there is no discrepancy.
+> - Clause 1: each of the five files was unwrapped with `tr '\n' ' '` and searched for "No other kind of node carries a condition.  Begin the node's question with one or two sentences that say what the work makes possible and for whom. The worker that claims the node then knows what the work is for without reading the node that spawned it.  If you genuinely cannot say what done means". It returns 1 in each of the five worker contracts. An awk scan of the nearest `## ` heading puts each new paragraph under "## When a node you report is an implementation node". The words are exact.
+> - Clause 2: I extracted the paragraph from each of the five files and hashed it with md5sum. All five give the same hash, a34b860cff986e444eacb126ce5db759, so the paragraph is byte-identical, wrapping included.
+> - Clause 3: `.claude/skills/expedition/SKILL.md` was unwrapped and searched for "Where you minted the node, you write the condition. You also begin its question with one or two sentences that say what the work makes possible and for whom. Where a condition carries none of the". It matches. The awk heading scan puts it under "## Acceptance conditions". `git diff --word-diff` shows only that sentence added, with the paragraph rewrapped and no other word changed.
+> - Clause 4: `git diff -U0` shows only the five added paragraphs and the one rewrapped line pair in expedition/SKILL.md. `grep -n '^NEW NODES:\|^### The four constraints'` shows the `NEW NODES:` lines and the heading still present and untouched by the diff. No heading line appears in the diff.
+> - Clause 5: `git diff --name-only -- .scratch .claude/skills/expedition-checker .claude/skills/expedition-cascade .claude/skills/expedition/graph-conventions.md .claude/skills/expedition/glossary.md` prints nothing. `git status --short --untracked-files=all` lists only the six named files, so no other file was edited or created.
+> - Clause 6: see the bar below.
+>
+> Bar:
+> - Commands: the repo has no build, tests, formatter or CI. The worktree root holds only CONTEXT.md, CONTEXT-MAP.md, .gitignore, .claude and .scratch. There is no CLAUDE.md, no AGENTS.md and no manifest, which agrees with the record in the standards file, so the command half of the bar is empty.
+> - Whitespace and line length: `git diff --check` prints nothing (rc=0). No added line is longer than the surrounding 105-column wrap.
+> - Standards: I read only the standards in .scratch/graph-workflow/map-implementation-rules.md. That means /coding-principles and /naming, the glossary's `_Avoid_` lines, the ground rules, the six writing rules, graph-conventions.md and /writing-for-agents.
+>   - Bore on this work: the glossary `_Avoid_` lines, the writing rules and /writing-for-agents.
+>     - "question" in the new text names the node's question field, as existing text already does. The glossary refuses it only as a name for the grilling kind (line 140). "claims" matches the glossary term **Claim**.
+>     - The new sentences are plain, positive, one idea each, with one clear referent. The wording is also dictated by the condition.
+>     - I held the work against /writing-for-agents by hand rather than invoking it, since no reviewing skill is named for this repo.
+>   - Did not bear: /coding-principles and /naming, because nothing in the work is code or a name.
+>
+> Flags: the node holds none.
+>
+> QUESTIONS: none.
+> NOT COVERED: none.
+
+### Gate — approve, `standing yes`, 2026-10-05
+
+Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and covered every clause.
+
