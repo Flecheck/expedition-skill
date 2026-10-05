@@ -180,3 +180,59 @@ Covers only what is new since the raise:
    - `stale-number-in-the-record`: does not fit, because this is a stale status, not a stale number.
    - `stale-status-quoted-in-a-question`: newly minted; no earlier retrospective carries it.
 `````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-05. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/check388.md`. The node holds no flags.*
+
+> PASS
+>
+> The work: I read the changed paths in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/388-merge-kinds from `git diff HEAD` and `git status --porcelain --untracked-files=all`. There are 8 paths: 2 deletions, which are staged, and 6 modifications. There are no untracked files and no other paths.
+>
+> The scope list: the diff touches exactly the eight listed paths. `git diff HEAD --stat` shows 8 files.
+>
+> 1. Clause 1 holds. `ls -d .claude/skills/expedition-research .claude/skills/expedition-cascade` returns "No such file or directory" for both.
+> 2. Clause 2 holds. In the diff of expedition-precondition/SKILL.md, the paragraph "Your node's kind is **precondition**" gains the required sentence word for word, and nothing else in it changes.
+> 3. Clause 3 holds. The diff of the same file inserts rules 5, 6 and 7 with the exact words, in order, before the old rule 5. That rule is renumbered 8. Rules 1 to 4 are unchanged, and there are no other hunks.
+> 4. Clause 4 holds. In the diff of expedition/SKILL.md, the `research` bullet is removed. The `precondition` bullet, unwrapped, matches the required text word for word. These are the only hunk's changes.
+> 5. Clause 5 holds. The diff of glossary.md has these changes and no other hunks:
+>    - (a) The heading now reads "four kinds".
+>    - (b) The `**research**:` entry is removed in full.
+>    - (c) The `precondition` definition, unwrapped, is exact. Its `_Avoid_` line keeps "task (...), chore, setup" and appends the required fourth item.
+>    - (d) The `**Cascade**:` entry is removed in full.
+>    - (e) The Sweep definition and its `_Avoid_: audit` line are exact.
+>    - (f) Nothing else changes.
+> 6. Clause 6 holds. The diff of graph-conventions.md has exactly two one-line changes, as required. The second is not rewrapped.
+> 7. Clause 7 holds. The diff of wayfinder-divergences.md replaces the bullet with the exact text. "Five differences" appears as an unchanged context line, and there are no other hunks.
+> 8. Clause 8 holds. The diff of frontier.sh is the one required line. `sh .claude/skills/expedition/scripts/frontier.sh .scratch/graph-workflow` exited 0 with empty stderr, and `sh -n` passes.
+> 9. Clause 9 (amended) holds. `git ls-files | grep -v '^\.scratch/' | xargs grep -n -i -E 'expedition-(research|cascade)|cascade|`research`'` returns only `.claude/skills/expedition/wayfinder-divergences.md:38`, which is the line clause 7 requires.
+> 10. Clause 10 holds. `git status --porcelain` and `git diff HEAD --stat -- .scratch` show no change under `.scratch/`.
+> 11. Clause 11 holds. See the bar below.
+>
+> The recorded scope searches, run as written over the finished tree:
+> - The `\bresearch\b` search now returns adoption.md, glossary.md and wayfinder-divergences.md. The recorded return was the two contracts, SKILL.md, adoption.md, glossary.md, graph-conventions.md and frontier.sh. The difference comes from the work's own edits, which are expected to remove those matches. The one file outside the list is adoption.md, and the condition already excludes it, with a reason.
+> - The `cascade` search returns nothing. The recorded return was the cascade contract and glossary.md.
+> - The `five kinds` search returns nothing. The recorded return was the glossary heading.
+>
+> None of the three searches reaches a file outside the list that the condition did not already account for.
+>
+> The bar: the repo root holds no CLAUDE.md, AGENTS.md or manifest. `ls -a` shows only .claude, .gitignore, CONTEXT.md and CONTEXT-MAP.md. The repo therefore has no build, no tests and no formatter, and the command half of the bar is empty. I also ran `sh -n` on frontier.sh, which passed. shellcheck and shfmt are not installed. The non-command half of the bar is the standards.
+>
+> The standards: I read only the standards in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md and opened no other file in the effort's directory. The list is:
+> - /coding-principles and /naming
+> - the glossary's `_Avoid_` lines
+> - the ground rules
+> - the six standing rules for writing
+> - graph-conventions.md
+> - /writing-for-agents
+>
+> The ones that bore on this work were the `_Avoid_` lines, the writing rules (rule 6 on renaming a cited heading is met, because no other shipped file cites "five kinds"), ground rule 2 (the precondition contract now carries the research rules within itself) and graph-conventions.md. The edit to frontier.sh is a one-token data change, so coding-principles has nothing to bite on. I found no breach. The rule in that file about `.claude/rules/expedition-triggers.md` does not apply, because the edit to SKILL.md is under `## Spawning a worker` and not under the trigger-duty headings. I settled what moved in the standards first. glossary.md is one of the standards, and the work only added and removed entries, so no element this work is held against moved. No reviewing skill is named, and I ran none. I read the changed paths as the work under the rule about record files, although none of them is a record file. There are no flags. I wrote no temporary files.
+>
+> QUESTIONS:
+> - A defect produced by complying with clause 7. The form is shipped text that still counts five node kinds now that there are four. In `.claude/skills/expedition/wayfinder-divergences.md`, under `## Added`, the line "- A fifth node type, `implementation`." is now false. Wayfinder has four types (grilling, research, prototype, task), and the expedition now also has four (grilling, prototype, precondition, implementation), so `implementation` is not a fifth type. It is also inconsistent with the new bullet in the same file, "...and `implementation` is added." Clause 7 requires that "every other line is unchanged", so the worker was not free to fix this line. The fix is the condition's to make, through an amendment or a follow-up node. I found it with `grep -n -i -E 'five|fifth' $(git ls-files | grep -v '^\.scratch/')`, and that command is the extent.
+> - A stale count outside the condition's list. `.claude/skills/expedition/adoption.md`, under `### What an imported node looks like`, says: "**Its kind.** It takes the kind the foreign record gives it where that kind is one of the five." There are now four kinds. adoption.md is not in the condition's list, and the condition says it is not edited, so the worker was right to leave it alone. It needs a follow-up or an amendment. The same grep finds it and is the extent. Over the files I hold, the grep's other hits that mention five are unrelated to node kinds: a checker ground, the five points of a condition, five parties, five things and five conventions.
+
+*The manager's note:* the checker handed back questions beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
