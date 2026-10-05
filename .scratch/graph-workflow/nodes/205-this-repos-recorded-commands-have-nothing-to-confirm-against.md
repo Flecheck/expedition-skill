@@ -1,9 +1,15 @@
 # Say in the rules file that this repo's recorded bar commands are a copy with nothing to confirm them against
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: none
+
+## Answer
+
+The rules file's bar paragraph now says its record is a copy of an earlier discovery, that a repo's own statement wins after confirmation, and that this repo states none, so it stands.
+
+*The manager's note:* landed as commit `7fa60ab3d`, the gate taken under the standing yes on 2026-10-05. Flags 205.1 and 205.2 settle at the node closing report. The worker's retrospective reports a stray tracked file, `map-implementation-rules.md.block`, which no file references; the manager records it here for a later node.
 
 ## Question
 
@@ -130,9 +136,9 @@ RETROSPECTIVE:
 
 ## Flags
 
-`205.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 190's replacement for clause 3 was filed on this open, unclaimed node without asking the human first.
+`205.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above.* Node 190's replacement for clause 3 was filed on this open, unclaimed node without asking the human first.
 
-`205.2` `ASSUMPTION` — Editing the rules file's bar paragraph, the worker read "First discovered and used by node 21" as a citation the admission test allows, not history it would have had to move out. *(The worker's full text is under its handover's `FLAGS`.)*
+`205.2` `ASSUMPTION` **· settled** — Editing the rules file's bar paragraph, the worker read "First discovered and used by node 21" as a citation the admission test allows, not history it would have had to move out. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 
