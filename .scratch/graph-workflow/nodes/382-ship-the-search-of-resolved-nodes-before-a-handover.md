@@ -1,7 +1,7 @@
 # Ship the search of resolved nodes before a handover
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
 
 ## Question
@@ -34,6 +34,12 @@ Carry node 37's answer into the five worker contracts and the manager contract: 
 > 5. In `.claude/skills/expedition/SKILL.md`, nothing outside the change in clause 4 changes. The file does not grow, counting lines as `wc -l` prints them, compared with the commit the work starts from.
 > 6. No file under `.scratch/` changes, and `.claude/skills/expedition-checker/SKILL.md` and `.claude/skills/expedition-cascade/SKILL.md` do not change.
 > 7. The tree meets the bar.
+
+## Answer
+
+The five worker contracts now tell a worker to search resolved nodes' Answer and condition sections before handing back and report what it changes in INVALIDATIONS. The manager contract's matching open question is removed.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `dd6428981`.
 
 ## Handover, attempt 1
 
