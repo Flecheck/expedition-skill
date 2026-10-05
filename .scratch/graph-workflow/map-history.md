@@ -1249,3 +1249,25 @@ had under *How the worktree is made*. What replaces the create bullet runs the c
 *Replaced, and it stood as:*
 
 **Skills every session should consult:** `/grilling` and `/domain-modeling` by default, `/naming` for terminology, `/coding-principles` before writing code, `/prototype` for prototype nodes. **Plus one file, not a skill:** [`glossary.md`](../../.claude/skills/expedition/glossary.md) in the skill directory is the glossary, moved there by [node 56](nodes/56-ship-the-glossary-into-the-skill-set.md), and reading it is a precondition for writing anything — its `_Avoid_` lines are what stop a settled term from drifting back.
+
+## Superseded from `map-manager-only.md` at node 391 — the retrospective bullet's filing sentences and its two duplicated sentences on existing names
+
+*Replaced under the `Change the map` procedure at [File a retrospective where the worker put it, and fold the bullet's duplicated sentences](nodes/391-file-a-retrospective-where-the-worker-put-it.md). The filing sentences had the manager copy a retrospective out under a `## Retrospective` heading placed last in the node file. What replaces them has the manager file a retrospective where the worker put it, as the last part of the pasted handover or question payload, and leaves a retrospective filed under that heading before 2026-10-05 where it is. Two older sentences said again what the bullet's newer sentences on a name's written form already say, as [node 387](nodes/387-state-the-written-form-of-a-standing-items-name.md)'s checker found. They are removed, and the sentence that points at derivations.md entry (j) gains the older sentence's "not from memory" clause. The rest of the bullet is unchanged and is not reproduced here.*
+
+### From `map-manager-only.md`'s `## Notes` — the retrospective bullet's two older sentences on a name's count and on finding existing names
+
+*Removed, and they stood as:*
+
+It states how many earlier retrospectives carry that name, and lists their node ids. It finds the existing names by searching the retrospective sections of the files under `.scratch/graph-workflow/nodes/`, whatever heading each section was filed under, and not from memory or from any list held elsewhere.
+
+### From `map-manager-only.md`'s `## Notes` — the retrospective bullet's sentence pointing at derivations.md entry (j)
+
+*Replaced, and it stood as:*
+
+The worker obtains the existing names, with their counts and node files, by running the entry headed `## (j) Item names carried by the retrospectives` in [derivations.md](derivations.md).
+
+### From `map-manager-only.md`'s `## Notes` — the retrospective bullet's filing sentences
+
+*Replaced, and they stood as:*
+
+The manager writes it into the node file in the same edit that writes that node's answer, its flags and its line in `decisions.md`. It is written last in the file, so the mandatory section order is untouched. It is written under the heading `## Retrospective` and under no other heading. It is not an annotation, since `graph-conventions.md` defines an annotation as what a later piece of work changed about a node's answer. It is a section the shipped node-file format does not list, allowed on this effort only; the human's `verbatim` "ok for A", 2026-09-27, on the manager's question after [node 340](nodes/340-add-the-annotation-section-and-what-a-hard-rule-is.md) landed.
