@@ -49,3 +49,9 @@ RETROSPECTIVE (provisional; this is a question payload, and the full retrospecti
 `````
 
 *The manager's note:* the worker is right. The manager's spawn note said the human raised Claude credits as a cost when asking about the cascade. It was node 385's worker that raised it. The human's own words on credits are in map.md's Notes.
+
+#### The human's answer to question 1, 2026-10-05
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the manager's message ended "Please answer node 389's question. \"ok for recommended\" takes the mechanical checks only.", so the reply takes the worker's `RECOMMENDED`: "Just the mechanical checks, written as a few sentences in SKILL.md's `## Closing an effort`, with no new procedure or skill." No divergence.
