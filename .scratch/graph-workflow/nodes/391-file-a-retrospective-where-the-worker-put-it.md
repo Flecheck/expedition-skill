@@ -88,6 +88,56 @@ RETROSPECTIVE
    - The frozen sentence citing node 212 for "the filing in the resolving edit" now refers to a sentence that no longer exists (see the FLAGS entry).
 `````
 
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-05. A fresh checker; the condition and the node's two flags reached it as text in `$TMPDIR/check391.md`.*
+
+> PASS
+>
+> I treated the changed paths I was given as the work, as `map-implementation-rules.md` requires. Both are record files. I took no statement of intent from them. In `.scratch/graph-workflow/map-implementation-rules.md` I read only the standards, and I opened no other file in the effort's directory.
+>
+> Method: I extracted HEAD versions of both files with `git show HEAD:<path>` into a temporary directory. A Python script then compared each file as unwrapped lines with the worktree copy. It found the bullet as the single line starting with `- **Every worker returns a retrospective as the last handover part, on this effort only**`. Each of the old and new files has exactly one such line.
+>
+> - Clause 1: both sentences each occur once in the old bullet. The script removes them with `str.replace`. They are absent from the new bullet, as the exact-equality check below shows.
+> - Clause 2: the old entry-(j) sentence occurs once in the old bullet. The script replaces it with the clause's exact extended sentence, and the new bullet equals the expected text.
+> - Clause 3: the script took the span from "The manager writes it into the node file" up to " The superseded wording is in [map-history.md](map-history.md). The name, the ranking". That span is exactly the five named sentences, the last being the one beginning "It is a section the shipped node-file format does not list". It replaced that span with the clause's four sentences, verbatim.
+> - Clause 4: applying clauses 1 to 3 to the old bullet gives a string exactly equal to the new bullet, which returned True. All lines of `map-manager-only.md` other than the bullet are identical: old and new are both 272 lines, and the prefix and suffix lists are equal.
+> - Clause 5: the HEAD version of `map-history.md` is an exact prefix of the new file, which returned True, so the file loses no text. Every removed or replaced text from clauses 1 to 3 appears verbatim in the appended text. That includes the pre-change entry-(j) sentence and all five filing sentences.
+>   - The new heading is "## Superseded from `map-manager-only.md` at node 391 — the retrospective bullet's filing sentences and its two duplicated sentences on existing names". It names the file, the retrospective bullet and node 391.
+>   - The entry follows the form of the latest entries, matched against the node 219, 276, 381 and 135 entries:
+>     - an italic "*Replaced under the `Change the map` procedure at [...]*" paragraph ending "The rest of the bullet is unchanged and is not reproduced here.";
+>     - "### From `map-manager-only.md`'s `## Notes` — ..." subheadings;
+>     - each subheading followed by "*Replaced/Removed, and it stood as:*" and the verbatim text.
+> - Clause 6: `git status --porcelain --untracked-files=all` in the worktree lists only the two work files. So `decisions.md`, `flags.md` and every node file, status lines included, are untouched.
+> - Clause 7: see the bar below.
+>
+> Bar:
+> - The repo root has no `CLAUDE.md`, no `AGENTS.md` and no manifest. It holds only `.claude`, `CONTEXT-MAP.md`, `CONTEXT.md`, `.gitignore` and `.scratch`. The rules file's own record agrees: no build, no tests, no formatter. So I ran no commands, and the bar is its non-command half alone.
+> - Standards read:
+>   - `/coding-principles` and `/naming`
+>   - the glossary's `_Avoid_` lines
+>   - the ground rules
+>   - the six standing rules for writing
+>   - `graph-conventions.md`
+>   - `/writing-for-agents`
+> - The ones that bore on this work were the `_Avoid_` lines and the writing rules. They apply to the new prose: the dictated replacement sentences and the worker's italic summary paragraph in `map-history.md`. I checked the `_Avoid_` words by hand, following the rules file's warning that grepping for them gives false positives.
+> - I found no breach. "handover or question payload" uses "payload", which the glossary refuses for a handover. The phrase is the condition's own dictated wording, and read as "a handover, or a question payload" it uses the glossary's sense of a payload carrying questions. So it is not a finding.
+> - The map-history entry is a record of what happened, which is what that file is for.
+> - I ran no reviewing skill, because the standards name none.
+> - `.gitignore` excludes the worktree, so I checked the diff with git inside the worktree.
+>
+> Flags:
+> - 391.1: true. The pre-change entry-(j) sentence is present verbatim in the appended `map-history.md` text, alongside the sentences clauses 1 and 3 removed.
+> - 391.2: true. The sentence "The name, the ranking and the filing in the resolving edit were settled at [node 212](...)" is unchanged in the new bullet, which the exact-equality check established.
+>
+> No questions. Nothing not covered. I wrote no files apart from the temporary directory under $TMPDIR, which I have removed.
+
+### Gate — approve, `standing yes`, 2026-10-05
+
+Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, found both flags true, and covered every clause. This settles none of the node's flags; they settle at the node closing report.
+
 ## Flags
 
 `391.1` `ASSUMPTION` — map-history.md also gets the pre-change form of the sentence clause 2 extended. *(The worker's full text is under its handover's `FLAGS`.)*
