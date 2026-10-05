@@ -142,3 +142,9 @@ RETROSPECTIVE
 > The node holds no flags, so I had none to check. I left the tree as I found it. I removed the temporary directory I made under $TMPDIR, and `git status` shows only the work's one modification.
 
 *The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
+### Gate — approve, 2026-10-05
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the manager's message ended "Please approve node 387, or tell me to send it back for the fold now.", and recommended approving as is, with the fold of the checker's two duplicated pairs left to a later change. The reply takes the approval. The fold is not yet a node.
