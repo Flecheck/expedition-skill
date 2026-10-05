@@ -61,6 +61,16 @@ Carry node 385's answer into the shipped files. Merge the research kind into pre
 
 > 9. `git ls-files | grep -v '^\.scratch/' | xargs grep -n -i -E 'expedition-(research|cascade)|cascade|` + "`research`" + `'` returns nothing, except the line in `.claude/skills/expedition/wayfinder-divergences.md` that clause 7 requires.
 
+## Amendment, 2026-10-05 (the human's answer at the gate)
+
+*Written by the manager from the human's direction "just fix it now", given at the gate on the checker's run 1 question. It adds to the condition; every clause above stands, except that clause 7's "every other line is unchanged" yields to clause 12 for the one line it names.*
+
+> The work also includes `.claude/skills/expedition/adoption.md`, which may be edited only as clause 13 says.
+>
+> 12. In `.claude/skills/expedition/wayfinder-divergences.md`, the line "- A fifth node type, `implementation`." becomes exactly "- The node type `implementation`.". No other line of that file changes beyond what clause 7 requires.
+> 13. In `.claude/skills/expedition/adoption.md`, under `### What an imported node looks like`, the words "where that kind is one of the five" become "where that kind is one of the four". Nothing else in the file changes.
+> 14. `grep -n -i -E 'five|fifth' $(git ls-files | grep -v '^\.scratch/')` returns no line that counts the node kinds as five or calls one of them the fifth.
+
 ## Interview
 
 #### Raise 1, relayed 2026-10-05
@@ -235,4 +245,10 @@ Covers only what is new since the raise:
 > - A stale count outside the condition's list. `.claude/skills/expedition/adoption.md`, under `### What an imported node looks like`, says: "**Its kind.** It takes the kind the foreign record gives it where that kind is one of the five." There are now four kinds. adoption.md is not in the condition's list, and the condition says it is not edited, so the worker was right to leave it alone. It needs a follow-up or an amendment. The same grep finds it and is the extent. Over the files I hold, the grep's other hits that mention five are unrelated to node kinds: a checker ground, the five points of a condition, five parties, five things and five conventions.
 
 *The manager's note:* the checker handed back questions beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
+### Gate — sent back, 2026-10-05
+
+`verbatim`: *"just fix it now"*
+
+*The manager's note:* the manager's message ended "Please approve node 388 (with the follow-up), or tell me to send it back to fix them now.", and recommended approving with a follow-up node for the checker's two stale "five" lines. The reply diverges from that recommendation and takes the other option: the work goes back to the worker to fix both lines now. The manager wrote the amendment above from that direction.
 
