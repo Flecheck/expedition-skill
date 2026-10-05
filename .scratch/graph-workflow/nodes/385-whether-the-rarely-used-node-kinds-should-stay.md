@@ -151,3 +151,9 @@ RETROSPECTIVE
    - The glossary defines research as facts "from outside the working directory", but 6 of the 10 research nodes audited this repo's own text. Standing item `kind-definition-drifted-from-use`, a new name: 0 earlier retrospectives carry it.
    - This resume's claims checked out against node 385's `## Interview`: the reply is verbatim, the divergence is on Q2, and Q1 and Q3 are open.
 `````
+
+#### The human's answer to questions 1 and 3, 2026-10-05
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the manager's message ended "Please answer Q1 and Q3. \"ok for recommended\" takes both.", so the reply takes both `RECOMMENDED` options as the worker wrote them. Q1: "Merge, and keep the name `precondition`. The fact-reporting rules move into the precondition contract in about five lines, and the research contract is deleted." Q3: "Remove it. Delete .claude/skills/expedition-cascade/, mark node 87 superseded as no longer needed, and reword the glossary's `Cascade` and `Sweep` entries, since `Sweep` is defined as \"the same work as a cascade\"." No divergence on either. Q2's divergence of 2026-10-04 stands: prototype stays its own kind.
