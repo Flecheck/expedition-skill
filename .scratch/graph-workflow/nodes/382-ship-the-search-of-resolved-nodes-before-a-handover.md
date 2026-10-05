@@ -89,3 +89,51 @@ RETROSPECTIVE
 - `stale-number-in-the-record` (4 earlier retrospectives: nodes 178, 212, 220, 385). Node 76's "nine open questions" and node 362's "item 4" both name a list that has since shrunk.
 The manager's notes held: nodes 379 and 380 had landed as described, and the list as it stood had four items.
 `````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-05. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/check382.md`. The node holds no flags.*
+
+> PASS
+>
+> Work: uncommitted changes in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/382-resolved-search against HEAD 3706023f3. `git status --short` shows exactly the six listed paths modified, with no untracked files.
+>
+> - Scope (only the six files edited). `git status --short` and `git diff --stat` list exactly the six paths. `git ls-files --others --exclude-standard` prints 0 lines. Met.
+> - Clause 1 (the sentence is added, worded exactly, and placed correctly in all five worker contracts). Checked with a Python script that splits each file into paragraphs on blank lines and unwraps each one. In each of the five files, the paragraph starting "Before you write your handover, search the open nodes' `## Acceptance condition` sections" contains `<Question sentence> + " " + <added sentence> + " " + "Name in `CONDITIONS` what you searched for."`, and the added sentence appears exactly once. Met.
+> - Clause 2 (the paragraph is byte-identical across the five files). I extracted the raw paragraph from each file with `awk 'BEGIN{RS=""} /^Before you write your handover/' | md5sum`. Before the change all five give 82cef63f…. After it all five give dd16dd6a…. Met.
+> - Clause 3 (no other sentence changes). The same script checked two things. First, for each file, the unwrapped old paragraph with the added sentence inserted between the Question sentence and the "Name in `CONDITIONS`" sentence equals the unwrapped new paragraph. Second, every other unwrapped paragraph in the file is identical before and after, with the same paragraph count and an empty list of differing paragraphs. That covers the `INVALIDATIONS:` handover line, "Report `NEW NODES` and `INVALIDATIONS` yourself…", and "In `INVALIDATIONS`, an outright contradiction…". Met.
+> - Clause 4 (the item is removed and the list renumbered). I printed `## What nothing here settles` onward with `sed`. The "Does anything tell a worker to look at the record…" item is gone with all its sentences. The list now runs 1, 2, 3 in the original order, and the remaining items keep their words; the diff changes only the numerals. `grep -rln "Does anything tell a worker to look at the record" .claude/` returns nothing. Met.
+> - Clause 5 (nothing else changes in `.claude/skills/expedition/SKILL.md`, and the file does not grow). `git diff` shows one hunk, the item removal and renumbering, at 2 insertions and 7 deletions. `wc -l` gives 819 now against 824 at HEAD. Met.
+> - Clause 6 (`.scratch/`, the checker contract and the cascade contract are untouched). `git diff HEAD --stat -- .scratch .claude/skills/expedition-checker .claude/skills/expedition-cascade` prints nothing. Met.
+> - Clause 7 (the bar). See the bar below.
+>
+> Recorded searches, run as written in the worktree:
+> - `grep -l "^Before you write your handover, search the open nodes'" .claude/skills/*/SKILL.md` returned exactly the five worker contracts: implementation, grilling, prototype, research and precondition. This matches the recorded return.
+> - `grep -rln "Does anything tell a worker to look at the record" .claude/` returned nothing (exit 1). The recorded return was `.claude/skills/expedition/SKILL.md`. The difference is expected, because the work removed that item. The search reaches no file outside the list.
+>
+> The bar. This repo has no build, tests, formatter or CI. The repo root holds only CONTEXT.md, CONTEXT-MAP.md and .gitignore, with no CLAUDE.md, AGENTS.md or manifest, which agrees with the record in map-implementation-rules.md. So the bar comes down to its non-command half.
+> - `git diff --check` printed nothing (rc=0).
+> - Line length matches the surrounding text: the longest added line is 106 characters, and the count of lines over 110 characters is the same before and after in each file.
+>
+> Standards. I read only the standards in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md and opened no other file in that directory. That file lists six standards:
+> - `/coding-principles` and `/naming`
+> - the glossary's `_Avoid_` lines
+> - the ground rules
+> - the six standing rules for writing
+> - graph-conventions.md
+> - `/writing-for-agents`
+>
+> The ones that bore on this work were the `_Avoid_` lines, the writing rules and `/writing-for-agents`, applied to the one added sentence and the removal. The added sentence's wording is dictated word for word by the condition. Its verb "report in `INVALIDATIONS`" matches the unchanged existing sentence "Report `NEW NODES` and `INVALIDATIONS` yourself". The rules file itself says the glossary's `report` refusal applies to the noun for one concept only. No finding.
+>
+> Notes:
+> - No reviewing skill is named for this repo, and none was run.
+> - The record-as-work rule in the rules file did not apply, because no record file was among the changed paths.
+> - The node holds no flags.
+> - The temp directory I created has been removed.
+
+### Gate — approve, `standing yes`, 2026-10-05
+
+Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies: the checker handed back no question and no raise, and covered every clause.
+
