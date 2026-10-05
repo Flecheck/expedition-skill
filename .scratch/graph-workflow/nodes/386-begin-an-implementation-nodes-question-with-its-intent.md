@@ -1,7 +1,7 @@
 # Begin an implementation node's question with what the work makes possible and for whom
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
