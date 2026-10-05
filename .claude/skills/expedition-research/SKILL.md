@@ -198,6 +198,10 @@ manager where the manager created it. When you report one, your node is the one 
 write its condition in the `NEW NODES` block as the node will hold it. No other kind of node carries a
 condition.
 
+Begin the node's question with one or two sentences that say what the work makes possible and for whom.
+The worker that claims the node then knows what the work is for without reading the node that spawned
+it.
+
 If you genuinely cannot say what done means, because the work depends on something you did not settle,
 write the part you can and say plainly what is missing and why. Never leave the condition out silently,
 because a node reported without one cannot be worked at all. The manager puts what you could not write

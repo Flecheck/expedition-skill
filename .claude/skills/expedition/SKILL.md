@@ -378,7 +378,8 @@ never answered, because they never spoke again.
 under `## The node file` states the rules that bind every condition.
 
 Where an agent minted the node, that agent wrote the condition before any work on the node started, and
-you file it. Where you minted the node, you write the condition. Where a condition carries none of the
+you file it. Where you minted the node, you write the condition. You also begin its question with one or
+two sentences that say what the work makes possible and for whom. Where a condition carries none of the
 three things it owes about its scope and is malformed for it, file it as malformed rather than claim the
 node on it.
 
