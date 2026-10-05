@@ -334,3 +334,47 @@ Covers only what is new since the last handover:
    - `scope-search-misses-the-count`: newly minted; no earlier retrospective carries it.
 4. What I read that was stale, wrong or contradicted something else: nothing new.
 `````
+
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-05. The run 1 checker, resumed for the re-check; the second amendment reached it as text in the resume. The node holds no flags.*
+
+> PASS (re-check after a correction round, with the condition as amended at clause 9 and by the second amendment, clauses 12 to 14 and the added path adoption.md)
+>
+> What I re-checked: I re-ran the bar in full. I re-checked clauses 7, 12, 13 and 14, the scope list, clause 9 and the recorded searches. I also confirmed that the run 1 diff of the other six paths is unchanged. I compared the +/- lines of `git diff HEAD` for those paths word for word against the diff I read in run 1, and they are identical. Modification times played no part in this.
+>
+> The scope list: `git status --porcelain --untracked-files=all` shows 9 paths. They are the 8 from run 1 plus `.claude/skills/expedition/adoption.md`, which the amendment adds. There are no untracked files and no other paths.
+>
+> 1. Clause 1 holds. `ls -d` on both directories reports "No such file or directory".
+> 2. Clauses 2 to 6 and 8 are unchanged from run 1 and still hold. The diff lines for expedition-precondition/SKILL.md, expedition/SKILL.md, glossary.md, graph-conventions.md and frontier.sh are identical to run 1.
+> 3. Clause 7 holds. The second hunk of wayfinder-divergences.md is the bullet clause 7 requires, and it is exact. "Five differences" is unchanged, and the only other hunk is the one clause 12 permits.
+> 4. Clause 8 holds. `sh .claude/skills/expedition/scripts/frontier.sh .scratch/graph-workflow` exits 0.
+> 5. Clause 9 (amended) holds. `git ls-files | grep -v '^\.scratch/' | xargs grep -n -i -E 'expedition-(research|cascade)|cascade|`research`'` returns only `wayfinder-divergences.md:38`, which is the line clause 7 requires.
+> 6. Clause 10 holds. The status shows no change under `.scratch/`.
+> 7. Clause 12 holds. In `git diff HEAD -- .claude/skills/expedition/wayfinder-divergences.md`, the line "- A fifth node type, `implementation`." becomes exactly "- The node type `implementation`.". The file has no other hunks beyond clause 7's.
+> 8. Clause 13 holds. `git diff HEAD -- .claude/skills/expedition/adoption.md` has one hunk, in which "one of the five" becomes "one of the four" under `### What an imported node looks like`. The rest of the line and the file are unchanged.
+> 9. Clause 14 holds. The grep for five|fifth as written returns 16 lines, and none of them counts the node kinds as five or calls one of them the fifth. The hits are about other counts:
+>    - the five points of a condition, in the grilling, prototype, implementation and precondition contracts
+>    - the checker's fifth ground
+>    - the five parties and the five things in SKILL.md
+>    - repo-docs' five
+>    - wayfinder-divergences' five conventions and "Five differences"
+> 10. Clause 11 holds. See the bar below.
+>
+> The recorded scope searches, run again as written:
+> - The `\bresearch\b` search returns adoption.md, glossary.md and wayfinder-divergences.md. All three are now in the list. The two matches in adoption.md are still the ordinary "research output".
+> - The `cascade` search returns nothing.
+> - The `five kinds` search returns nothing.
+>
+> The recorded returns were larger because the work removed matches. That is a difference, not a false claim. No search reaches a file outside the list.
+>
+> The bar: the repo root still holds no agent-instruction file and no manifest, so there is no build, no tests and no formatter. `sh -n` on frontier.sh passed in run 1, and that file is unchanged since then. The frontier script exits 0.
+>
+> The standards: I read only the standards in map-implementation-rules.md, the same reading as run 1. The two new one-line edits breach none of them. Both use the glossary's word "kind" or "node type" as the surrounding text already does, and neither renames a cited heading. I ran no reviewing skill, because none is named. There are no flags, and I wrote no temporary files.
+
+*The manager's note:* the checker handed back no question and no raise, and covered every clause. The gate is taken under the standing yes, below.
+
+
+### Gate — approve, `standing yes`, 2026-10-05
+
+Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 2 outcome, `PASS`. No exclusion applies: run 2 handed back no question and no raise, and covered every clause. The human's direction at the run 1 gate, "just fix it now", is carried out by the second amendment.
