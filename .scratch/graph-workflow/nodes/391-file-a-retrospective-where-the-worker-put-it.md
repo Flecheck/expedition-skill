@@ -1,7 +1,7 @@
 # File a retrospective where the worker put it, and fold the bullet's duplicated sentences
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
 
 ## Question
@@ -29,6 +29,12 @@ A worker reading the map's retrospective bullet learns where the manager files i
 > 5. The text removed by clauses 1 to 3 is appended verbatim to `.scratch/graph-workflow/map-history.md` under a heading that names `map-manager-only.md`'s retrospective bullet and node 391, in the form of that file's most recent entries. `map-history.md` gains text and loses none.
 > 6. Nothing is written in `decisions.md` or `flags.md`, and no node's status line is touched.
 > 7. The tree meets the bar.
+
+## Answer
+
+map-manager-only.md's retrospective bullet now files a retrospective inside the pasted handover or question payload, not under `## Retrospective`, and states once how a worker finds existing names.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `4d84523aa`. Flags 391.1, 391.2 settle at the node closing report.
 
 ## Handover, attempt 1
 
@@ -140,6 +146,8 @@ Taken under the standing yes recorded in `map-manager-only.md`, scope text *"App
 
 ## Flags
 
-`391.1` `ASSUMPTION` — map-history.md also gets the pre-change form of the sentence clause 2 extended. *(The worker's full text is under its handover's `FLAGS`.)*
+`391.1` `ASSUMPTION` **· settled** — map-history.md also gets the pre-change form of the sentence clause 2 extended. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`391.2` `ASSUMPTION` — the frozen sentence citing node 212 for "the filing in the resolving edit" was left unchanged. *(The worker's full text is under its handover's `FLAGS`.)*
+`391.2` `ASSUMPTION` **· settled** — the frozen sentence citing node 212 for "the filing in the resolving edit" was left unchanged. *(The worker's full text is under its handover's `FLAGS`.)*
+
+*The manager's note, 2026-10-05:* flags 391.1, 391.2 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
