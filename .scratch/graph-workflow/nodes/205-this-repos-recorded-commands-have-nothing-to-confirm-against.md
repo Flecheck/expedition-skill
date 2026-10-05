@@ -133,3 +133,52 @@ RETROSPECTIVE:
 `205.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 190's replacement for clause 3 was filed on this open, unclaimed node without asking the human first.
 
 `205.2` `ASSUMPTION` — Editing the rules file's bar paragraph, the worker read "First discovered and used by node 21" as a citation the admission test allows, not history it would have had to move out. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-05. A fresh checker; the condition reached it with clause 3 as replaced, and the node's two flags with ids.*
+
+> PASS
+>
+> Scope of what I read: the work is the single changed path `.scratch/graph-workflow/map-implementation-rules.md` in worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/205-bar-copy (HEAD abbc4ca48, which is also the merge-base with master). Under that file's rule "An implementation node's work on this effort may be the effort's own record", I read the changed path as the work. I read only the standards in that file and opened no other file in the effort's directory.
+>
+> Settled what moved first. The work edits the bar paragraph ("The bar's commands for this repo, discovered on first use"), which is a standard the bar carries. A Python check confirmed the edit is purely additive: removing the inserted span (from "What this paragraph records is a copy of an earlier discovery" through "is taken from this record.") from the new file gives back `git show HEAD:` of the file byte for byte (`new.replace(ins,'',1)==old` -> True, and the span occurs once). Every earlier element is unmoved: no build, tests, formatter or CI; no manifest or task runner; `.gitignore` invokes nothing; the command half is empty and the bar is complete; the non-command half is the standards plus the acceptance condition. I held the work against those elements. I held the added elements against the acceptance condition and against no element the work introduced.
+>
+> Acceptance condition, one line per clause:
+> 1. Met. All three statements are in the clause-1 paragraph (searched the unwrapped line of the paragraph under `## What the work is held against`):
+>    (a) "What this paragraph records is a copy of an earlier discovery, and it is not the authority for what is run."
+>    (b) "Where a repo states its own build, test or format commands, a copy like this one is confirmed against that statement before use. Where the two differ, the repo's statement wins."
+>    (c) "This repo states no commands of its own, so there is nothing to confirm this record against, and it stands as it is."
+>    I also checked (c) and the new claim about the repo root against the tree. The root holds `.claude/` (only `rules/` and `skills/`), `.gitignore`, `CONTEXT.md` (a superseded pointer to the glossary), `CONTEXT-MAP.md` and `.scratch/`. `find` returned no CLAUDE.md, AGENTS.md, package.json, Cargo.toml, Makefile, justfile, *.toml, flake.nix, pyproject.toml, .github, .editorconfig or .prettierrc*. A grep for npm, cargo, make, just, pytest, prettier, dprint, mdformat, markdownlint and nix build/flake over `.claude/rules`, CONTEXT*.md and `.gitignore` returned nothing. `git ls-files` outside `.claude/skills` and `.scratch` lists only `.claude/rules/expedition-triggers.md`, `.gitignore`, `CONTEXT-MAP.md` and `CONTEXT.md`.
+> 2. Met. The removal check above shows the old paragraph text intact and unchanged. "no build, no tests, no formatter and no CI", "no manifest, no task runner, nothing to invoke" and the `.gitignore` clause "and invokes nothing" all survive unchanged.
+> 3. Met. Same check: "So the bar here is entirely its non-command half: the standards listed at the head of this section, and the **node's acceptance condition**, which binds too and reaches a checker by its own route." and "that is a **complete** bar rather than a deficient one" are unchanged.
+> 4. Met. Nothing was removed (removal check True). The work supersedes no existing text, so no in-place superseded marking was owed.
+> 5. Met. `git diff` has one hunk and changes exactly one line, the clause-1 paragraph. No other paragraph or section changed.
+> 6. Met. `git status --porcelain --ignored` shows only ` M .scratch/graph-workflow/map-implementation-rules.md`. There are no untracked or other modified files.
+> 7. Met. See the bar below.
+>
+> Bar. I discovered the commands from the repo: there is no agent-instruction file at the root, no manifest, no task runner and no CI, and none of the repo's tracked files states a command (searches above). So the command half is empty, and the remaining half is the complete bar. The only thing I ran was `git diff --check`, which printed nothing (rc=0, no whitespace errors).
+>
+> Standards (non-command half), each held separately:
+> - Standards read: the list at the head of `## What the work is held against` (`/coding-principles`, `/naming`, the glossary `_Avoid_` lines, the ground rules, the six standing writing rules, `graph-conventions.md`, `/writing-for-agents`), plus the file's own rules ("What this file admits", the supersession rule, the record-as-work rule).
+> - Glossary `_Avoid_`: the added text uses "tree", which is refused only for Graph and here means working tree, as the glossary's own bar entry uses it. It uses "run", which is refused only for Effort and Attempt and here means commands executed. Neither is a breach.
+> - Writing rules 1-6: the added text has no bold, no line numbers and no prohibitions, and every pronoun has one referent ("Seeing that" refers to the sentence before it). The contrast wording in (a) is dictated by the condition.
+> - `graph-conventions.md`: the never-delete rule and check 11 hold vacuously, because nothing was removed.
+> - `/writing-for-agents`: I read the skill inline and ran no subagent. The added text frames the paragraph as a cache of an environment lookup, which is consistent with its Pruning section.
+> - "What this file admits": the added sentences change what a reader does (confirm against the repo's statement, one look at the root), so they pass.
+> - Bore on nothing here: ground rules 1-4 (this file is not shipped) and `/coding-principles` and `/naming` (no code, nothing named). I invoked neither skill.
+> - No reviewing skill is named for this repo, so I ran none.
+>
+> Search the condition records: none recorded.
+>
+> Flags, checked after the outcome:
+> - 205.1: makes no claim the work can make true or false (it concerns filing on the node).
+> - 205.2: true of the work. "First discovered and used by [Write the graph conventions document](nodes/21-conventions-document.md)." is still in the paragraph, unchanged.
+>
+> No temporary files were written.
+
+### The gate, 2026-10-05 — standing yes
+
+`standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` is taken as the human's approval. The run covered every part and handed back no question. Flags 205.1 and 205.2 settle at the node closing report.
