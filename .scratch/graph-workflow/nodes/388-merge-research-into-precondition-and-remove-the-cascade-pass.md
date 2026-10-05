@@ -1,8 +1,14 @@
 # Merge research into precondition and remove the cascade pass
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: 382, 386
+
+## Answer
+
+Research merged into precondition and the research and cascade contracts deleted. The glossary, spawning bullets, node template, wayfinder divergences, adoption and frontier now name four node kinds.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1, correction round 1`. The checker passed run 1 with a question. The human sent the work back at that gate ("just fix it now"), and the condition was amended. The checker passed run 2, and that gate was taken under the human's standing yes (see `## Review`). The work landed as commit `5f8c85480`. The node raised no flags.
 
 ## Question
 
