@@ -1,7 +1,7 @@
 # How the sweep runs, now that the cascade's machinery is gone
 
 Type: grilling
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question

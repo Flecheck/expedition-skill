@@ -1,7 +1,7 @@
 # Ship the search of resolved nodes before a handover
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question

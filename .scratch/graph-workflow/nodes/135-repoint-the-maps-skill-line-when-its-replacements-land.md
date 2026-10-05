@@ -1,7 +1,7 @@
 # Repoint the map's `## Notes` skill line when its two replacements land
 
 Type: precondition
-Status: open
+Status: claimed
 
 Blocked by: 126, 383
 
