@@ -80,3 +80,5 @@ A second thing that has arrived since: [Review every shipped file against
 [Reconcile a method skill's instructions with the contract's hard rules](48-method-skill-conflicts-hard-rules.md),
 whose clause 2 names two other sentences. So this node now carries two changes to the same clause in the same
 five files: the carve-out it was minted for, and a stated positive beside the prohibition.
+
+*The manager's note, 2026-10-05:* the question changed, as reported by [node 385](385-whether-the-rarely-used-node-kinds-should-stay.md)'s worker under its `CONDITIONS`: "It names the flags.md clause in \"five shipped contracts\", the research contract among them. After the new node lands there are four, and the research link is dead." The new node is [node 388](388-merge-research-into-precondition-and-remove-the-cascade-pass.md).

@@ -87,3 +87,5 @@ as a raise.
 Beside it, and not this node's to fix: [Widen the invalidation channel](43-widen-the-invalidation-channel.md)
 already widens a different handover part, so the two touch the same sections of the same five files and are not
 concurrently claimable.
+
+*The manager's note, 2026-10-05:* the question changed, as reported by [node 385](385-whether-the-rarely-used-node-kinds-should-stay.md)'s worker under its `CONDITIONS`: "It quotes graph-conventions' \"a `research` node, an AFK `precondition` node\", which after the new node reads \"an AFK `precondition` node\"." The new node is [node 388](388-merge-research-into-precondition-and-remove-the-cascade-pass.md).

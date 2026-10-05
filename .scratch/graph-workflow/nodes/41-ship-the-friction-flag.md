@@ -118,3 +118,5 @@ standard. Node 29's answer is what makes that refusal correct rather than merely
 ## Edge, 2026-09-29 (from node 366)
 
 *The manager's note:* node 41 gains `Blocked by: 170`, carrying out the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q3 (`verbatim`: *"ok"*) as node 366's worker proposed: 41 and 170 edit the same closed list of flag markers, and 170 still waits on a human choice. See flag 366.3. Node 56, its earlier blocker, is resolved.
+
+*The manager's note, 2026-10-05:* [node 385](385-whether-the-rarely-used-node-kinds-should-stay.md)'s worker reported under its `CONDITIONS` that this condition's file list includes `.claude/skills/expedition-research/SKILL.md`, which becomes wrong once [node 388](388-merge-research-into-precondition-and-remove-the-cascade-pass.md) lands: "When the new node lands, the replacement is the same list without that path, fixed by that landed work. The manager amends it then, node 41 being unclaimed."
