@@ -1,7 +1,7 @@
 # Merge research into precondition and remove the cascade pass
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: 382, 386
 
 ## Question
