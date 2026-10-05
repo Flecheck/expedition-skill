@@ -55,6 +55,12 @@ Carry node 385's answer into the shipped files. Merge the research kind into pre
 > 10. No file under `.scratch/` changes.
 > 11. The tree meets the bar.
 
+## Amendment, 2026-10-05 (the human's answer to raise 1)
+
+*Clause 9 gains the exception the worker recommended and the human accepted, in the worker's words. The clause as filed stays above, unchanged.*
+
+> 9. `git ls-files | grep -v '^\.scratch/' | xargs grep -n -i -E 'expedition-(research|cascade)|cascade|` + "`research`" + `'` returns nothing, except the line in `.claude/skills/expedition/wayfinder-divergences.md` that clause 7 requires.
+
 ## Interview
 
 #### Raise 1, relayed 2026-10-05
@@ -92,3 +98,9 @@ RETROSPECTIVE
    - `condition-clauses-contradict-each-other`: newly minted; no earlier retrospective carries it.
 4. What I read that was stale, wrong or contradicted something else: only the contradiction above, between clause 7 and clause 9. The manager's notes held: the scope searches still return the same files after nodes 382 and 386 landed.
 `````
+
+#### The human's answer to raise 1, 2026-10-05
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the manager's message ended "Please answer node 388's raise. \"ok for recommended\" takes the exception in clause 9.", so the reply takes the worker's `RECOMMENDED`: "Keep clause 7's text and amend clause 9 to exclude that one line. For example, add: \"except the line in `.claude/skills/expedition/wayfinder-divergences.md` that clause 7 requires\"." No divergence. The amendment is filed below.
