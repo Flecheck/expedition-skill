@@ -65,6 +65,71 @@ instructions disagree](174-which-statement-of-the-bars-commands-wins.md)'s worke
 
 - **Clause 3.** "3. That paragraph keeps its statement that the bar here is entirely its non-command half and that this is a complete bar rather than a deficient one, and its pointer to the standards listed at the head of that section, together with the node's acceptance condition, is unchanged."
 
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      Say in the rules file that this repo's recorded bar commands are a copy with nothing to confirm them against (node 205)
+
+ANSWER:
+**The rules file's bar paragraph now says what its record is and what confirming it costs on this repo. The change only adds text.** Six sentences were inserted into the paragraph of `.scratch/graph-workflow/map-implementation-rules.md`, `## What the work is held against`, that opens "**The bar's commands for this repo, discovered on first use**". They sit after the sentence "So the bar here is entirely its non-command half: …" and before "First discovered and used by [node 21]". The inserted text:
+
+> What this paragraph records is a copy of an earlier discovery, and it is not the authority for what is run. Where a repo states its own build, test or format commands, a copy like this one is confirmed against that statement before use. Where the two differ, the repo's statement wins. This repo states no commands of its own, so there is nothing to confirm this record against, and it stands as it is. Seeing that takes one look at the repo's root, which holds no agent-instruction file such as `CLAUDE.md` or `AGENTS.md` and no manifest. That look is all that using this record costs. The absence of a build, tests and a formatter from the rest of the tree is taken from this record.
+
+Calls a later reader would otherwise have to work out again:
+- **No word of the existing paragraph changed.** `git diff --word-diff=porcelain` shows 0 removed words. Clause 2's factual claims and the amended clause 3's sentences ("entirely its non-command half", "complete bar rather than a deficient one", the pointer to "the standards listed at the head of this section" together with the node's acceptance condition) are byte-identical to before.
+- **The collision the manager named (clause 4 against node 189) does not arise.** Node 189's rule only applies when the work supersedes a passage that states a binding rule. This work supersedes nothing. "recorded here so no later node re-derives them" still holds, because with no repo statement to compare against, confirming the record means re-deriving nothing. So nothing is struck in place, and nothing is owed to `map-history.md`.
+- **"What confirming costs here" is one look at the root, and no more.** That matches both shipped contracts. The implementer contract says "Where the repo states no commands of its own, use the recorded ones unconfirmed". The checker contract finds commands "from the repo itself" and says a repo that states them "typically states them in its agent-instruction file, at the repo's root". So the new text keeps the look for a repo statement. It drops only the step of re-checking the whole tree for a build, tests and a formatter. Three checkers took that step, and so did a fourth on node 197.
+- **New factual claim, checked against the tree on 2026-10-04.** The root holds `.claude/` (only `rules/` and `skills/`), `CONTEXT.md` (a superseded pointer), `CONTEXT-MAP.md` (one link), `.gitignore` and `.scratch/`. It holds no `CLAUDE.md`, no `AGENTS.md`, no manifest, no task runner and no `.github/`.
+- The bar on this repo: it states no build, test or format commands of its own, which agrees with the record. The command half is empty. `git diff --check` is clean. The non-command half is the standards and this node's condition. Glossary `_Avoid_` lines were checked against the new words: `tree` is refused only as a name for the graph, and here it means the repo's files, as the glossary's own bar entry uses it.
+
+INDEX LINE:    The rules file's bar paragraph now says its record is a copy of an earlier discovery, that a repo's own statement wins after confirmation, and that this repo states none, so it stands.
+
+FLAGS:
+ASSUMPTION: Node 191's rule says whoever edits a passage of the rules file applies its admission test to that passage. I judged the bar paragraph's "First discovered and used by [Write the graph conventions document](nodes/21-conventions-document.md)" and "discovered on first use" to be citations of the nodes that shaped the record, not accounts of how it was learned. The admission paragraph itself lets "the markdown link … to the node that shaped it" stand, and "discovered on first use" now supports the new sentence that the record is "a copy of an earlier discovery". So I left both as they were. Reading them as history would have meant a raise: removing them breaks clause 4 ("Nothing already in that file is deleted"), and banking them to `map-history.md` breaks clause 6. No gate or exchange with the human has happened yet. What I did was add six sentences and leave every existing word in place.
+Index: Editing the rules file's bar paragraph, the worker read "First discovered and used by node 21" as a citation the admission test allows, not history it would have had to move out.
+
+NEW NODES:     none
+
+INVALIDATIONS: none. The text adds node 174's rule, already shipped by node 204, to this repo's record and contradicts no resolved node. Node 189's boundary was not triggered, because nothing was superseded.
+
+CONDITIONS:    I searched every open node's file (100 files whose status is not resolved, dropped, moot, merged or superseded), conditions and questions alike, for "bar's commands for this repo", "re-derives them", "nothing to confirm", "recorded bar commands", "confirm(ed) against" and "First discovered and used". Only node 205 matched, plus node 250, whose status is `superseded`. I also searched the open nodes that name `map-implementation-rules.md` for clauses about the bar paragraph. Nodes 220 and 214 match on "the bar" only generically, and their clauses still hold. I wrote no replacement clauses, and no open node's question changes.
+
+MISSING FROM MAP: none. The map's never-delete preference and the rules file's own supersession paragraph were enough to judge the collision.
+
+GATE PAYLOAD:
+- Checker findings: none received yet.
+- Paths touched: `.scratch/graph-workflow/map-implementation-rules.md`, in the worktree `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/205-bar-copy`, left uncommitted on `worktree-205-bar-copy`.
+- Method skill parts skipped: none invoked.
+- Proposed commit message:
+  ```
+  Rules file: the recorded bar commands are a copy with nothing to confirm them against
+
+  The bar paragraph in map-implementation-rules.md now says that its record
+  is a copy of an earlier discovery, that a repo's own statement of its
+  commands is confirmed against and wins, and that this repo states none, so
+  the record stands and costs one look at the root to use. Only added text;
+  no existing word changed.
+
+  Node: graph-workflow/205
+  ```
+
+RETROSPECTIVE:
+1. What I had to hunt for.
+   - Whether this repo states any commands of its own. I listed the worktree root, `git ls-files` outside `.scratch/`, and searched for CLAUDE.md, AGENTS.md, README, manifests and CI config. I looked in the tree first, and the tree was the only place to look.
+   - How the shipped contracts phrase the no-statement case, so the new text would agree with them. I found it in the implementer contract's `## The bar` and the checker contract's item 2 of "You are given seven things", using grep for "command|discover". Node 174's `## Answer` gave the rule's origin, and I read it after a narrow grep.
+   - The existing retrospective names, by grepping the backticked kebab-case list items under `nodes/`.
+2. What arrived that this node did not need. Most of `map.md`'s `## Notes` bore on nothing here. Three items bore on this node: the never-delete preference, the rule that a contradiction is a raise, and the writing rules.
+   - `map-read-whole-for-a-few-items`: 4 earlier retrospectives carry it (nodes 178, 220, 243, 284).
+3. What would have made this node easier. The spawn could have said whether the inserted text has to supersede anything. The manager's collision note made me analyse a case that a purely additive edit avoids. One line in the spawn, such as "if the work only adds text, clause 4 and node 189 do not meet", would have saved that. No standing name fits this, so I mint none.
+4. What was stale, wrong or contradicted something else.
+   - `.scratch/graph-workflow/map-implementation-rules.md.block` is tracked, added in commit 175c4ebae ("nodes 266, 275 and 348 resolved; map pass"). No `.md` file in the record references it. It holds a ground-rules block whose closing paragraph has drifted from `map.md`'s: it reads "Every rule above is drawn from a standing preference", where `map.md` reads "Every rule above, in both lists". Node 348 struck the sibling-file allowance, so this looks like a leftover. It is outside my condition, so I did not touch it. The manager may want to file it. No existing name fits a stray file. A fitting new name would be `unreferenced-copy-of-a-map-block`, with 0 earlier retrospectives.
+   - Node 174's `## Answer` quotes `CONTEXT.md` as "the glossary this effort declares authoritative". `CONTEXT.md` is now a superseded pointer. This is record text kept under never-delete, not a defect, but a reader who follows it lands on a stub.
+`````
+
 ## Flags
 
 `205.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 190's replacement for clause 3 was filed on this open, unclaimed node without asking the human first.
+
+`205.2` `ASSUMPTION` — Editing the rules file's bar paragraph, the worker read "First discovered and used by node 21" as a citation the admission test allows, not history it would have had to move out. *(The worker's full text is under its handover's `FLAGS`.)*
