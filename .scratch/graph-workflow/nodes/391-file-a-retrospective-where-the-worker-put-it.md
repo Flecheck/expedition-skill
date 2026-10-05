@@ -1,7 +1,7 @@
 # File a retrospective where the worker put it, and fold the bullet's duplicated sentences
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
