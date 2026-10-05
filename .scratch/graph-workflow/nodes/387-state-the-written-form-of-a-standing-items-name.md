@@ -1,8 +1,14 @@
 # State in the retrospective bullet the form a standing item's name is written in
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: 220
+
+## Answer
+
+map-manager-only.md's retrospective bullet now fixes the written form of a standing item's name, a kebab-case code span opening a list item, and points at derivations.md entry (j).
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1 with one question, and the human approved the gate on 2026-10-05 (see `## Review`). The work landed as commit `2c0cf66c8`. The node raised no flags.
 
 ## Question
 
