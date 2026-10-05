@@ -1239,3 +1239,13 @@ had under *How the worktree is made*. What replaces the create bullet runs the c
   Where that check fails the worktree can be **neither created nor written** and there is no fallback, no tool call
   being able to widen the region for that path, so it is **raised to the human** rather than worked around. Settled
   at [node 265](nodes/265-should-the-worktree-route-drop-enterworktree-for-git.md).
+
+## Superseded from `map.md`'s `## Notes` at node 135 — the skills line naming `/grilling` and `/domain-modeling`
+
+*Replaced under the `Change the map` procedure at [Repoint the map's `## Notes` skill line when its two replacements land](nodes/135-repoint-the-maps-skill-line-when-its-replacements-land.md). The line was correct when [node 113](nodes/113-whether-the-method-skill-instruction-does-any-work.md) kept it, and stopped being correct when its two replacements landed: the batching rules in the grilling contract at [node 126](nodes/126-carry-question-batching-into-the-grilling-contract.md), and `/repo-docs`, which [node 130](nodes/130-the-docs-discipline-this-workflow-ships.md) named as replacing `/domain-modeling`, at [node 383](nodes/383-ship-the-repo-docs-skill.md). The new line names `/repo-docs` in place of `/domain-modeling`, points at the grilling contract's `## How you grill` in place of `/grilling`, and leaves `/naming`, `/coding-principles`, `/prototype` and the glossary sentence unchanged. The item is shown whole.*
+
+### From *Notes* — the skills line
+
+*Replaced, and it stood as:*
+
+**Skills every session should consult:** `/grilling` and `/domain-modeling` by default, `/naming` for terminology, `/coding-principles` before writing code, `/prototype` for prototype nodes. **Plus one file, not a skill:** [`glossary.md`](../../.claude/skills/expedition/glossary.md) in the skill directory is the glossary, moved there by [node 56](nodes/56-ship-the-glossary-into-the-skill-set.md), and reading it is a precondition for writing anything — its `_Avoid_` lines are what stop a settled term from drifting back.
