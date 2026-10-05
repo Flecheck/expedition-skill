@@ -1,8 +1,14 @@
 # How the sweep runs, now that the cascade's machinery is gone
 
 Type: grilling
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The sweep at an empty frontier is every mechanical check run over the whole graph by one read-only agent, with each failure becoming a node; no agent re-checks landed code.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. It surfaced [node 390](390-state-the-sweep-as-a-whole-graph-run-of-the-mechanical-checks.md), implementation. Flags 389.1, 389.2 settle at the node closing report.
 
 ## Question
 
@@ -55,3 +61,109 @@ RETROSPECTIVE (provisional; this is a question payload, and the full retrospecti
 `verbatim`: *"ok"*
 
 *The manager's note:* the manager's message ended "Please answer node 389's question. \"ok for recommended\" takes the mechanical checks only.", so the reply takes the worker's `RECOMMENDED`: "Just the mechanical checks, written as a few sentences in SKILL.md's `## Closing an effort`, with no new procedure or skill." No divergence.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back.*
+
+`````
+HANDOVER:      How the sweep runs, now that the cascade's machinery is gone
+
+ANSWER:        Accepted 2026-10-05, `verbatim` "ok", taking the recommendation as written.
+
+               ### The sweep is the mechanical checks, run over the whole graph
+
+               When an effort's frontier empties, the sweep is a run of every check under `## Mechanical checks` in `graph-conventions.md` over the whole graph. The manager gives that run to one read-only agent, which reports only the failures. Each failure becomes a node. When the frontier empties again, the sweep runs again, and every round still goes into the effort closing report.
+
+               The sweep spawns no agent to re-check landed code. Code that no longer matches a later decision is left to:
+               - the search each worker makes of the resolved nodes before it hands back (node 382);
+               - the checker;
+               - the gate;
+               - the human's reading at the closing report.
+
+               That is the residual risk node 10 already named: a semantic miss in code that builds cleanly.
+
+               ### Where it is written
+
+               A few sentences in the manager's contract, `SKILL.md`, under `## Closing an effort`. There is no new procedure and no new skill. In `graph-conventions.md`, `### Who runs a check, and when` says "no separately spawned agent runs any of them". That sentence gains an exception for the sweep's run.
+
+               ### Grounds
+
+               - Re-checking old acceptance conditions against the final tree would mostly find text that later decisions changed on purpose. Telling those changes apart from real drift needs the whole record, which is the context cost that pushed node 15 to fan out.
+               - The sweep runs only on efforts that end. Node 15's note 3 says that on a non-terminating effort such as Lang it never fires.
+               - Ground rule 4 refuses machinery for a need nobody has measured, and no effort has yet reached an empty frontier. If a sweep later misses real drift, a semantic pass can be added then.
+               - Giving the run to one agent keeps the manager's own context from reading every node file. The map names that context as what runs out first.
+
+               ### Set aside
+
+               - One read-only agent per group of landed implementation nodes.
+               - `expedition-triage` extended to resolved nodes and run as the sweep. That would also break triage's rule that only the human invokes it.
+               - The manager running the checks itself.
+               - The human's reading alone, with the done test's third condition dropped.
+
+INDEX LINE:    The sweep at an empty frontier is every mechanical check run over the whole graph by one read-only agent, with each failure becoming a node; no agent re-checks landed code.
+
+FLAGS:         ASSUMPTION — The human accepted the SKILL.md wording I proposed. The wording for the exception in graph-conventions.md's `### Who runs a check, and when` is mine. I wrote it to say only that the sweep is the exception, and to point at `## Closing an effort` for who runs the sweep, under writing rule 6. — Index: The graph-conventions.md wording that makes the sweep the one exception to "no separately spawned agent" was written by node 389's worker, not by the human.
+               ASSUMPTION — I leave the glossary's `Sweep` entry as node 388's clause (e) writes it, "A pass that looks for revisions nobody propagated.", and mint no edit to it. A run of the mechanical checks finds a kind of unpropagated revision, such as a node still blocked by a superseded node, so the definition stays true though loose. Node 388 is claimed, and its condition stays as written. — Index: The glossary's Sweep entry is left as node 388 writes it, being loose but still true of a mechanical-check sweep.
+
+NEW NODES:     Name: State the sweep as a whole-graph run of the mechanical checks
+               Kind: implementation
+               Question: Carry node 389's answer into the shipped files. The manager's contract says what the sweep is and who runs it, and graph-conventions.md makes the sweep the one exception to its rule that no separately spawned agent runs a check.
+               Blockers: none. Note for the manager's slot filter: node 388 (claimed) edits both files in other sections, and node 317 (open, no condition) concerns the flags bullet of the same `## Closing an effort` section.
+               Acceptance condition:
+               > The work is these two paths, and no other file may be edited. These are files the workflow ships, so superseded wording is removed rather than struck, and nothing is moved to any history file.
+               >   `.claude/skills/expedition/SKILL.md`
+               >   `.claude/skills/expedition/graph-conventions.md`
+               >
+               > The scope came from no search: these two places are the work, not instances of a defect.
+               >
+               > Done means every one of the following is true of the finished tree.
+               >
+               > 1. In `.claude/skills/expedition/SKILL.md`, the section `## Closing an effort` ends with its bulleted list, whose last bullet is "- What the sweep found, and every sweep round." Immediately after that list, still inside the section, there is a new paragraph with exactly these words: "The sweep is a run of every check under `## Mechanical checks` in `graph-conventions.md` over the whole graph. Give the run to one read-only agent, which reports only the failures. Each failure becomes a node. When the frontier empties again, the sweep runs again." Line wrapping may differ, but the words may not. Nothing else in the file changes.
+               > 2. In `.claude/skills/expedition/graph-conventions.md`, under `### Who runs a check, and when`, these two sentences: "No schedule, no periodic pass and no separately spawned agent runs any of them. One run is not tied to an act: a run of every check over the whole graph, which remains available at an empty frontier." are replaced by exactly: "No schedule, no periodic pass and no separately spawned agent runs any of them, with one exception. The sweep runs every check over the whole graph at an empty frontier, and `## Closing an effort` in `SKILL.md` says who runs it." Line wrapping may differ, but the words may not. Nothing else in the file changes.
+               > 3. No file under `.scratch/` changes.
+               > 4. The tree meets the bar.
+               Read back against the five points: the paths are relative; every demand is stated in the text; the old and new words are copied in; nothing quantifies over the record; and the scope is stated as coming from no search. Over the tracked files outside `.scratch/`, `grep -i 'separately spawned\|whole graph\|whole-graph'` returned only SKILL.md (the "triggers the whole-graph sweep" line, which stays) and the graph-conventions.md sentence above.
+
+INVALIDATIONS: - Node 10 (Done-ness and termination): narrowed. Condition 3 of the done test stands, and the sweep is now the whole-graph run of the mechanical checks. Node 10 listed "resolved nodes whose code no longer matches" and "coupling the graph never recorded" under "What the sweep found". The sweep no longer looks for those, which fall to the backstops node 10 already named. Its section "The final sweep" ("the cascade agent run with the whole graph as its scope") and its annotation "the sweep now has a shape" no longer describe the method.
+               - Node 15 (Cascade pass mechanics): its specification of the sweep as triage over every resolved answer, already withdrawn by node 385, is replaced by this answer.
+               - Node 385: extended. The open part it handed on, the sweep's method, is answered here.
+
+CONDITIONS:    I searched the `## Acceptance condition` and `## Question` sections of the open and claimed nodes for: `sweep`, `Mechanical checks`, `Who runs a check`, `separately spawned agent`, `Closing an effort`, `empty frontier` and `whole graph`.
+               Matches:
+               - Node 388 (claimed): clause 5(e) sets the `Sweep` entry. It stays valid, and I write no replacement, since a claimed node's condition stays as written in any case.
+               - Node 317 (open, no condition): its question concerns the flags bullet under `## Closing an effort`. Its question is unchanged, and the two pieces of work only share a section.
+               - Node 13 also matched, but it is resolved; its `Status` line matched a later line of the file.
+               - Node 389 matched itself.
+               Node 41 (open) edits graph-conventions.md's flag markers, a different concern, so I joined nothing to it. No unclaimed node's clause is made wrong, and no replacement is written.
+
+MISSING FROM MAP: none
+
+RETROSPECTIVE
+
+The item names and counts below come from running derivations.md entry (j) on 2026-10-05. They are not authoritative and are for scale only.
+
+1. What I had to hunt for:
+   - Who may run the whole-graph check. I found it in graph-conventions.md under `### Who runs a check, and when`, after first searching SKILL.md for "sweep".
+   - Whether the human had raised Claude credits at node 385. I found the human's own words in node 385's `## Interview` (they had not), and the human's credits quote in map.md's Notes.
+   - `nothing-pointed-me-at-it`: 3 earlier retrospectives carry it (nodes 135, 178, 385). Neither the spawn nor the node named graph-conventions.md's `## Mechanical checks` or its exception sentence, which were the existing pieces this decision is built on.
+2. What arrived that the node did not need:
+   - `map-read-whole-for-a-few-items`: 9 earlier retrospectives carry it (nodes 135, 178, 205, 220, 284, 382, 386, 387, 388). Of map.md I used ground rule 4, the credits note, the expectation line, and writing rules 5 and 6. Most of the standing preferences bore on nothing.
+   - The retrospective bullet in map-manager-only.md is a single paragraph of about 900 words. I went to it for the four questions and the naming form. The spawn already paraphrased both, so a pointer to derivations (j) alone would have served.
+3. What would have made this node easier: the spawn naming `## Mechanical checks`, `### Who runs a check, and when`, and expedition-triage's scope as the candidate building blocks, beside the three candidates it listed.
+4. What I read that was stale, wrong, or contradicted something else:
+   - `unestablished-inference`: 1 earlier retrospective carries it (node 385). The manager's note said "The human raised Claude credits as a cost when asking about the cascade". The node 385 worker raised that cost, not the human.
+   - The glossary's `Sweep` entry still defines the sweep as "the same work as a cascade" until node 388 lands.
+   - Node 10's "The final sweep" section and its annotation describe a method that no longer exists.
+   - The first spawn said node 388 was open; it is claimed.
+
+Skipped from the method skills: nothing invoked.
+`````
+
+## Flags
+
+`389.1` `ASSUMPTION` **· settled** — The graph-conventions.md exception wording is the worker's, not the human's. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`389.2` `ASSUMPTION` **· settled** — The glossary's Sweep entry is left as node 388 writes it. *(The worker's full text is under its handover's `FLAGS`.)*
+
+*The manager's note, 2026-10-05:* flags 389.1, 389.2 settle at the node closing report that closes this node.
