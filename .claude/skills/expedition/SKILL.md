@@ -807,15 +807,10 @@ front of you, raise it.
 
 1. What must your report to the human contain? Duties on it come from several places, and nothing
    gathers them into one statement.
-2. Does anything tell a worker to look at the record when it reports what its work invalidates? Nothing
-   does in general: no duty to look covers the effort's record as a whole. The worker answers from
-   whatever it happened to read, and nothing checks the answer afterwards. One bounded class does carry
-   a duty to look, the open nodes' acceptance conditions and questions. `### Changing one after it is
-   written`, under `## Acceptance conditions`, states that duty.
-3. May you file a flag about your own conduct, and is there any step between the judgement and the
+2. May you file a flag about your own conduct, and is there any step between the judgement and the
    record? You do file such flags, and nothing authorises it. When you file one, the party judged and
    the party writing the judgement are the same, with no step between them.
-4. What limits what a spawn may assert about the conclusion its node is meant to reach? Nothing does. An
+3. What limits what a spawn may assert about the conclusion its node is meant to reach? Nothing does. An
    inference of yours that nobody has established, written into a node's question or into a spawn, is
    read by the worker as settled fact.
 
