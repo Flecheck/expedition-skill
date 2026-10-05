@@ -252,3 +252,85 @@ Covers only what is new since the raise:
 
 *The manager's note:* the manager's message ended "Please approve node 388 (with the follow-up), or tell me to send it back to fix them now.", and recommended approving with a follow-up node for the checker's two stale "five" lines. The reply diverges from that recommendation and takes the other option: the work goes back to the worker to fix both lines now. The manager wrote the amendment above from that direction.
 
+
+## Handover, attempt 1, correction round 1
+
+*Pasted as the worker handed it back, 2026-10-05. The manager rebuilt the first two lines' labels, which its extraction key cut; every other word is the worker's.*
+
+`````
+HANDOVER:      Merge research into precondition and remove the cascade pass (388)
+ANSWER:        The research kind is merged into precondition. The research and cascade worker contracts are deleted, along with every shipped statement of them. The work was done against the condition as amended twice: by the human's answer to raise 1 (an exception in clause 9) and by the human's answer at the gate ("just fix it now", which added clauses 12 to 14 and `adoption.md`).
+               - `.claude/skills/expedition-research/` and `.claude/skills/expedition-cascade/` are deleted. Their deletions are staged in the index, and nothing else is staged.
+               - `.claude/skills/expedition-precondition/SKILL.md`: the kind paragraph ends with "Establishing a fact that a later node needs, from the working tree or from outside it, is such work, and you may read outside the working directory to do it." Under `## Hard rules`, rules 5 to 7 are new: say where each fact was read; report a fact that could not be established as a result and never give a plausible answer in its place; mark what a source states separately from what is inferred from it. The old rule 5 is now rule 8. Rules 1 to 4 are unchanged.
+               - `.claude/skills/expedition/SKILL.md`, `## Spawning a worker`: the `research` bullet is gone. The `precondition` bullet now adds "and, where its work establishes facts, the sources and their standing and that it may read outside the working directory".
+               - `.claude/skills/expedition/glossary.md`:
+                 - The heading now reads `## The four kinds of node`.
+                 - The `research` and `Cascade` entries are removed.
+                 - `precondition` covers establishing a fact a later node needs. Its `_Avoid_` line gains research, with the reason.
+                 - `Sweep` is now "A pass that looks for revisions nobody propagated." with "_Avoid_: audit".
+               - `.claude/skills/expedition/graph-conventions.md`: the template line now reads `Type: grilling | prototype | precondition | implementation`. The no-round example now reads "as with an AFK `precondition` node". I did not rewrap that now-shorter line, because the condition allows no other change to the file.
+               - `.claude/skills/expedition/wayfinder-divergences.md`:
+                 - The precondition bullet in the appended block now says `precondition` replaces wayfinder's `task` and also holds what wayfinder calls `research`.
+                 - Under `## Added`, "- A fifth node type, `implementation`." is now "- The node type `implementation`.".
+                 - The lead-in "Five differences" still counts the five bullets of that block correctly, so it stays.
+               - `.claude/skills/expedition/adoption.md`, under `### What an imported node looks like`: "where that kind is one of the five" now reads "where that kind is one of the four". Nothing else in the file changes.
+               - `.claude/skills/expedition/scripts/frontier.sh`: `type_order` drops research. A node that still carries `Type: research` is not rejected: the script already appends unknown types after the known ones. No open or claimed node carries it.
+               Verified on the finished tree:
+               - Clause 9's command returns only the wayfinder-divergences.md line that the first amendment excepts.
+               - Clause 14's command `grep -n -i -E 'five|fifth' $(git ls-files | grep -v '^\.scratch/')` returns no line that counts node kinds. What remains:
+                 - "the five points" in four worker contracts
+                 - the checker's "a fifth ground"
+                 - SKILL.md's "Five parties" and "five things"
+                 - repo-docs' "each of the five"
+                 - wayfinder-divergences' "five conventions that differ" and "Five differences", which count the appended block's five bullets
+               - `sh .claude/skills/expedition/scripts/frontier.sh .scratch/graph-workflow` exits 0.
+               - Nothing under `.scratch/` changed.
+               - The bar: the repo has no build, tests or formatter. Its root has no CLAUDE.md, AGENTS.md or manifest, so there are no repo commands. This matches map-implementation-rules.md's record, and the bar is its non-command half.
+INDEX LINE:    Research merged into precondition and the research and cascade contracts deleted. The glossary, spawning bullets, node template, wayfinder divergences, adoption and frontier now name four node kinds.
+FLAGS:         none
+NEW NODES:     none
+INVALIDATIONS: The earlier handover's list is unchanged:
+               - 07 and 13: there are four kinds, not five, and the template line loses research.
+               - 15, 44 and 351: their cascade product is deleted.
+               - 290 and 335: their research product is deleted.
+               - 10: its sweep is no longer defined through the cascade, and node 389 owns the method.
+               - 292: extended by the three hard rules and the fact-establishing sentence.
+               - 26, 35, 48, 75, 333, 380, 382 and 386: narrowed, where they edited the deleted contracts.
+               New since that handover: no resolved node's `## Answer` or `## Acceptance condition` quotes "fifth node type", "fifth, `implementation`" or "kind is one of the five". Node 97 wrote the adoption procedure, and its count of kinds is changed in `adoption.md`, but its Answer does not state the count.
+CONDITIONS:    The earlier handover's searches and results stand:
+               - Node 41: the replacement for clause 7 drops the research contract path, leaving four files.
+               - Nodes 32 and 40: their questions' terms changed, as the manager's notes already record.
+               - Node 389: its premise is confirmed, though it calls node 388 "open, unclaimed".
+               New: I searched the open and claimed nodes' conditions and questions for "fifth node type" and "one of the five". Nothing matched outside node 388 itself.
+MISSING FROM MAP: none
+GATE PAYLOAD:  The checker's PASS came with a question about two lines that still counted five kinds. Both are fixed under the amendment's clauses 12 and 13, and clause 14 holds as verified above. No other finding was left open.
+               Paths touched (all in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/388-merge-kinds):
+               - .claude/skills/expedition-research/SKILL.md (deleted, staged)
+               - .claude/skills/expedition-cascade/SKILL.md (deleted, staged)
+               - .claude/skills/expedition-precondition/SKILL.md
+               - .claude/skills/expedition/SKILL.md
+               - .claude/skills/expedition/glossary.md
+               - .claude/skills/expedition/graph-conventions.md
+               - .claude/skills/expedition/wayfinder-divergences.md
+               - .claude/skills/expedition/adoption.md
+               - .claude/skills/expedition/scripts/frontier.sh
+               This round changed only wayfinder-divergences.md's `## Added` line (clause 12) and adoption.md (clause 13). Neither touches what clauses 1 to 11 name, except clause 7's "every other line is unchanged", which yields to clause 12 for that one line.
+               Proposed commit message:
+                 Merge research into precondition and remove the cascade pass
+
+                 Delete the research and cascade worker contracts. Give the precondition
+                 contract the fact-establishing work and three rules on reporting facts,
+                 and bring the glossary, the spawning bullets, the node template, the
+                 wayfinder divergences, adoption and the frontier's type order to four
+                 kinds.
+
+                 Node: graph-workflow/388
+
+RETROSPECTIVE
+Covers only what is new since the last handover:
+1. What I had to hunt for: nothing. The amendment gave the exact lines, and the checker's grep came with it.
+2. What arrived that this node did not need: nothing new.
+3. What would have made this node easier: a broader scope search when the condition was written. It searched for research and cascade but not for the count of kinds ("five", "fifth"). That is why two lines outside the scope survived to the gate. A condition that removes a member of a counted set should also search for the count.
+   - `scope-search-misses-the-count`: newly minted; no earlier retrospective carries it.
+4. What I read that was stale, wrong or contradicted something else: nothing new.
+`````
