@@ -59,3 +59,13 @@ seventeen reports is the most-reported item on the effort after `map.md`'s whole
 *The manager's note, 2026-09-28:* [node 356](356-whether-node-165s-remaining-shadow-pairs-still-run.md)'s worker reports this node's question changed. Its words, pasted: **Node 185 (open grilling):** a premise in its filing note is overtaken. That note calls node 165 a "live measurement" that the scoping practice "bears directly on". The measurement is retired, so node 185 need not protect a protocol any more. The new node above is related to it.
 
 *The manager's note, 2026-10-06:* kept at the triage the human invoked and approved (`verbatim` *"ok"*). A read-only agent checked it against the current files and found it still live; it has no acceptance condition yet.
+
+## Interview
+
+#### The human's answer, 2026-10-06
+
+*The manager put the node's question directly, after the 2026-10-06 triage kept the node. The manager's recommendation, as sent:* "the worker contracts tell the worker to search `decisions.md` for its node's terms and paths, plus any node numbers the spawn names, and read only the lines that match. The spawn may name node numbers I already know are relevant. This works on any effort, with or without labels." *Alternatives offered: the spawn alone names the relevant node numbers; add headings to `decisions.md`; declare a label vocabulary. The message ended:* "Please answer node 185. \"ok for recommended\" takes the search."
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the reply takes the recommendation. The condition is still to be written.
