@@ -159,3 +159,33 @@ RETROSPECTIVE
    - `condition-clauses-contradict-each-other`: 1 earlier retrospective carries it (node 388), derived 2026-10-05 by derivations.md entry (j); the count is for scale only. That was the closest existing name. Here the verbatim text contradicted another shipped rule rather than another clause, so a fresh name may fit better: `verbatim-condition-overrides-a-rule-unnamed`, carried by no earlier retrospective.
 4. Stale, wrong or contradictory: nothing new.
 `````
+
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-06. The run 1 checker, resumed for the re-check; the amended clause 1 reached it as text in the resume. The node holds no flags.*
+
+> PASS (re-check after the amendment to clause 1; I checked the whole condition again as amended)
+>
+> Node: 390-sweep. Work = uncommitted changes in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/390-sweep (HEAD 545e5e23d). I read the changed paths as the work, under the rules file's rule on record files. Neither path is a record file.
+>
+> Acceptance condition, one line per part:
+> 1. (amended) SKILL.md `## Closing an effort`: PASS. I unwrapped the file (whitespace collapsed to single spaces) and found the exact string "- What the sweep found, and every sweep round. The sweep is a run of every check under `## Mechanical checks` in `graph-conventions.md` over the whole graph. Give the run to one read-only agent, which reports every failure and every report of check 10. Each failure becomes a node, in place of the routes under `### What a failure produces` in `graph-conventions.md`. When the frontier empties again, the sweep runs again. ## Conflicts this contract leaves open". So the paragraph comes right after the list's last bullet and before the next heading, inside the section, with the amended words exact. `git diff --numstat` gives 5 added and 0 removed for this file, and the hunk is only the paragraph plus a blank line, so nothing else in the file changed. The cited headings resolve: `## Mechanical checks` and `### What a failure produces` are in graph-conventions.md, and check 10 is item 10 under `## Mechanical checks`.
+> 2. graph-conventions.md `### Who runs a check, and when`: PASS. I re-ran the same search: the unwrapped file contains the exact replacement text followed by "### What a failure produces", and "One run is not tied to an act" is absent. numstat gives 2 and 2, and the hunk is only those two rewrapped lines.
+> 3. Nothing under `.scratch/` changed: PASS. `git status --porcelain --ignored` in the worktree lists only the two modified paths.
+> 4. The bar: see below. Porcelain shows exactly the two allowed paths, so no other file was edited.
+>
+> Bar, re-run: the worktree root is unchanged (.claude, CONTEXT-MAP.md, CONTEXT.md, .gitignore, .scratch). It has no CLAUDE.md, AGENTS.md or manifest, so there are no build, test or format commands, and nothing was run. The non-command half is the standards, below.
+>
+> Standards: I read only the standards in .scratch/graph-workflow/map-implementation-rules.md, as in the first round. No reviewing skill is named there, and none was run. I held the changed text against the glossary `_Avoid_` lines, the ground rules, the six writing rules and graph-conventions.md by hand.
+> - Glossary `_Avoid_`: "run" and "report" are used in their ordinary sense, not as names for the refused concepts, so there is no breach.
+> - Writing rule 6: the paragraph now names `### What a failure produces` by heading and states its change, which settles my first-round question 2.
+> - Ground rules: no repo, machine or toolchain is assumed, and nothing addresses the human.
+> - The work moved no standard.
+> On first-round question 1: this worktree's glossary.md is still at base 545e5e23d, so I did not hold the work against node 388's glossary edit on master. As you told me, that question is answered outside this node.
+>
+> Flags: the node holds none. No temporary files were written.
+
+### Gate — approve, `standing yes`, 2026-10-06
+
+Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 2 outcome, `PASS`. No exclusion applies: run 2 handed back no question and no raise, and covered every clause. The human's direction at the run 1 gate is carried out by the amendment to clause 1.
+
