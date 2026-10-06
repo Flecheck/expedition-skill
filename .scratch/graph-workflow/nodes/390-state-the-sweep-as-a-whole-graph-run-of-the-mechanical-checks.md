@@ -27,6 +27,12 @@ Carry node 389's answer into the shipped files. The manager's contract says what
 > 3. No file under `.scratch/` changes.
 > 4. The tree meets the bar.
 
+## Amendment, 2026-10-06 (the human's answer at the gate)
+
+*Written by the manager from the recommendation the human accepted at the gate on the checker's run 1 question 2. It replaces clause 1; every other clause stands.*
+
+> 1. In `.claude/skills/expedition/SKILL.md`, the section `## Closing an effort` ends with its bulleted list, whose last bullet is "- What the sweep found, and every sweep round." Immediately after that list, still inside the section, there is a new paragraph with exactly these words: "The sweep is a run of every check under `## Mechanical checks` in `graph-conventions.md` over the whole graph. Give the run to one read-only agent, which reports every failure and every report of check 10. Each failure becomes a node, in place of the routes under `### What a failure produces` in `graph-conventions.md`. When the frontier empties again, the sweep runs again." Line wrapping may differ, but the words may not. Nothing else in the file changes.
+
 ## Handover, attempt 1
 
 *Pasted as the worker handed it back, 2026-10-05.*
@@ -106,4 +112,10 @@ RETROSPECTIVE
 > Flags: the node holds none. No temporary files were written.
 
 *The manager's note:* the checker handed back questions beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
+### Gate — sent back, 2026-10-06
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the manager's message ended "Please answer: \"ok for recommended\" sends node 390 back with that wording, or say approve as is." The recommendation was to send the work back on the checker's question 2. The paragraph's second sentence would become "Give the run to one read-only agent, which reports every failure and every report of check 10." and its third "Each failure becomes a node, in place of the routes under `### What a failure produces`." The reply takes it. The amendment above writes that wording into clause 1, naming the file of the cited heading. The checker's question 1 is answered by node 388's landed glossary edit and flag 389.2.
 
