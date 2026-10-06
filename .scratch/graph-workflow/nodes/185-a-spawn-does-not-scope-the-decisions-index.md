@@ -95,3 +95,108 @@ seventeen reports is the most-reported item on the effort after `map.md`'s whole
 `verbatim`: *"ok"*
 
 *The manager's note:* the reply takes the recommendation. The condition is still to be written.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back, 2026-10-06.*
+
+`````
+HANDOVER:      A spawn points at the decisions index without naming which sections bear on the node
+
+ANSWER:
+The four worker contracts no longer list `decisions.md` among the files read in full. Each now tells the worker to search it. The manager's contract lets a spawn name the relevant node numbers instead of pointing at the index as something to read.
+
+- In `.claude/skills/expedition-{grilling,prototype,precondition,implementation}/SKILL.md`, under `## What you read`:
+  - The list item "- `decisions.md` — the sections the spawn names" is removed.
+  - A new paragraph sits between the unchanged "Read everything the list above names in full." paragraph and "Leave `flags.md` unread. It is not yours." It reads, byte-identical in all four files:
+    "Search `decisions.md` for your node's terms and paths, and for any node numbers the spawn names. Read only the lines that match."
+  - It goes after the read-in-full paragraph, not inside or just after the list, so that "the list above" keeps meaning only what is read whole. `decisions.md` now falls under that paragraph's "Search the rest of the effort's record" as well, and the two do not conflict.
+- In `.claude/skills/expedition/SKILL.md`, under `## Spawning a worker`, the pointer bullet now names only the worker's node file and the effort's map. A new bullet follows it:
+  "The node numbers whose lines in the effort's index of decisions you already know bear on the node. The spawn may name them and need not. The worker searches that index for those numbers and for its node's own terms and paths, rather than reading it."
+- The sentences "Where the effort has a label vocabulary, scope that index by label. Scoping is a filter, so the index stays a pointer." are removed. Flag 392.3 left that choice open. The search works with or without labels, and no worker contract tells a worker what to do with a label scope.
+- Unchanged: graph-conventions.md's grouping of `decisions.md` lines under labels, and labels narrowing the frontier. Neither depended on the spawn sentence.
+- The existing "Write a note only from context you already hold" rule already covers the "already know" in the new bullet.
+
+INDEX LINE:    Workers search `decisions.md` for their node's terms, paths and any node numbers the spawn names, reading only matching lines; a spawn may name known-relevant node numbers; label scoping dropped.
+
+FLAGS:
+- ASSUMPTION: I removed the manager contract's label-scoping sentence and its "Scoping is a filter" follow-up rather than keeping them.
+  - Grounds: the search replaces scoping on every effort. No worker contract says what to do with a label scope. The human's decision set a declared label vocabulary aside as an alternative. Labels still group `decisions.md` lines and narrow the frontier, in graph-conventions.md.
+  - Index sentence: The manager contract's "scope that index by label" sentence was dropped, since workers now search `decisions.md` rather than read a scoped part of it.
+- ASSUMPTION: I placed the search paragraph after the unchanged "Read everything the list above names in full." paragraph, not in the list or between the list and that paragraph.
+  - Grounds: "the list above" then still names only what is read whole, and the new rule sits beside the general search rule it narrows.
+  - Index sentence: The worker contracts' `decisions.md` search rule sits as its own paragraph after the read-in-full paragraph, not in the pointer list.
+
+NEW NODES:     none
+
+INVALIDATIONS:
+- Node 129 (record token cost): its "`decisions.md` stays read whole" is contradicted. Part (ii), re-offered here, is now taken in search form.
+- Node 358: what it moved into node 185 is now carried out. No contradiction.
+- Node 13 (graph file format): narrowed. Its "a worker receives … `decisions.md` scoped by label", and its "a session scoped to one area reads one section", no longer describe what a spawn does. The label grouping of `decisions.md` itself still stands.
+- Node 12 (subagent context contract): narrowed. Its pointer set "node file, `map.md`, and `decisions.md` scoped by label" and "Scoping a pointer is a filter instruction" are superseded. A spawn now carries the node file and the map, plus optional node numbers.
+- Node 297 (manager contract rewrite, part 2): its rewording "Scoping is a filter, so the index stays a pointer." is removed.
+- Node 333 (D3): it kept "- `decisions.md` — the sections the spawn names" byte-identical. That item is now gone. This is a rename of the rule, not a contradiction of 333's work at the time.
+- Node 28: it cites "the sections the spawn names" as an example of binding content a spawn fills. That example no longer exists. The other examples it cites stand.
+- Nodes 291, 293 and 294 (contract rewrites) carried the removed list item. It is now replaced.
+
+CONDITIONS:
+- What I searched: open nodes 13 (actually resolved), 40, 41, 185 and 317. In their `## Acceptance condition` and `## Question` sections I searched for "sections the spawn names", "scope that index by label", "Scoping is a filter", "scoped by label", "index of decisions", "label vocabulary", "What you read", "Spawning a worker", "Read everything the list above" and `decisions.md`.
+- Result: no open node other than 185 matches. No replacement clauses, and no other open node's question is changed.
+- For INVALIDATIONS I ran the same phrases over the resolved nodes, reading only the matches.
+
+MISSING FROM MAP:
+- The map does not say which nodes are open. I derived it from the `Status:` lines.
+
+GATE PAYLOAD:
+- Checker findings: none yet (first run).
+- Bar: I looked at the worktree root. It holds `.claude`, `CONTEXT-MAP.md`, `CONTEXT.md`, `.gitignore` and `.scratch`, with no manifest and no CLAUDE.md or AGENTS.md. The repo states no build, test or format command, so the recorded "no build, no tests, no formatter" stands, and the bar is the standards plus the condition.
+- Checks I ran:
+  - `grep -rn "sections the spawn names" .claude/` returns nothing (clause 6).
+  - The "Read everything the list above names in full." paragraph has the same md5 in all four files before and after (clause 4).
+  - The new search paragraph has the same md5 in all four files (clause 3).
+  - The search reached no instance outside the five files.
+- Paths touched (worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/185-decisions-search, uncommitted):
+  - .claude/skills/expedition-grilling/SKILL.md
+  - .claude/skills/expedition-prototype/SKILL.md
+  - .claude/skills/expedition-precondition/SKILL.md
+  - .claude/skills/expedition-implementation/SKILL.md
+  - .claude/skills/expedition/SKILL.md
+- Proposed commit message:
+
+  Workers search decisions.md instead of reading named sections
+
+  The four worker contracts drop "decisions.md — the sections the spawn
+  names" from the read-in-full list and instead search decisions.md for
+  the node's terms and paths and any node numbers the spawn names, reading
+  only matching lines. The manager's spawn may name the node numbers it
+  already knows bear on the node; the label-scoping sentence is dropped.
+
+  Node: graph-workflow/185
+
+- Method skills: none invoked, so nothing was skipped.
+
+RETROSPECTIVE
+(1) What I had to hunt for:
+- Whether removing the label-scoping sentence left anything without its target. I searched `.claude/` for label, index of decisions and `decisions.md`, and found graph-conventions' label grouping, which does not depend on the sentence.
+- Whether `.claude/rules/expedition-triggers.md` copies the spawning text. It does not.
+- The open-node list, from the `Status:` lines.
+- I looked in the node file first for all three, and none was there.
+
+(2) What arrived that this node did not need:
+- `map-read-whole-for-a-few-items` (carried by 15 earlier retrospectives: 135, 178, 205, 214, 220, 284, 317, 382, 386, 387, 388, 389, 390, 391, 392). From map.md I needed only the ground rules and the six writing rules.
+- `rules-file-read-whole-for-one-section` (carried by 12 retrospectives in 11 files: 178, 214, 220, 317, 382, 386, 387, 388, 390, 391, 392). I needed only the bar's commands paragraph.
+- The node file's provenance, filing note and miscount annotation bore nothing on the condition.
+
+(3) What would have made this easier:
+- A spawn line listing the open node ids for the CONDITIONS search.
+
+(4) Stale or contradicting material I read:
+- `stale-number-in-the-record` (carried by 10 retrospectives in 9 files: 178, 212, 220, 382, 385, 386, 388, 391, 392). The node's question gives `decisions.md` as 80,400 bytes, and `wc -c` gave 102,204 on 2026-10-06 (for scale only).
+- `question-quotes-superseded-text` (carried by 3 retrospectives: 214, 317, 392). The question quotes the manager contract as "the effort's index of decisions scoped by label where a vocabulary exists". The shipped text before this work read "Where the effort has a label vocabulary, scope that index by label."
+`````
+
+## Flags
+
+`185.1` `ASSUMPTION` — The manager contract's label-scoping sentence was dropped. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`185.2` `ASSUMPTION` — The search rule sits as its own paragraph after the read-in-full paragraph. *(The worker's full text is under its handover's `FLAGS`.)*
