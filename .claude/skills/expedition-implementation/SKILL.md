@@ -52,7 +52,6 @@ outside any text marked as the human's own words, check it.
 - `map.md` — the destination and the standing preferences
 - `map-implementation-rules.md`, beside `map.md` — the standards your work is held to, and the bar's
   commands where the effort has recorded them
-- `decisions.md` — the sections the spawn names
 - the paths the spawn expects you to touch
 
 Read everything the list above names in full. Search the rest of the effort's record instead of reading
@@ -64,6 +63,9 @@ longer text than the file it was meant to spare. Your environment provides the s
 tool is required. This governs the facts the record holds, and never the rules you are held to. Those
 arrive in the spawn and in the files the list above names, and you never go looking for a standard you
 are judged against.
+
+Search `decisions.md` for your node's terms and paths, and for any node numbers the spawn names. Read
+only the lines that match.
 
 Leave `flags.md` unread. It is not yours.
 

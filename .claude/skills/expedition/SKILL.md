@@ -169,9 +169,10 @@ not summarise it. A spawn carries the following:
 - A statement that the worker is not the manager and has no channel to the human.
 - The contract to follow, named by its path. Say that the file on disk wins over anything you say about
   it.
-- The pointers the worker reads: its own node file, the effort's map, and the effort's index of
-  decisions. Where the effort has a label vocabulary, scope that index by label. Scoping is a filter, so
-  the index stays a pointer.
+- The pointers the worker reads: its own node file and the effort's map.
+- The node numbers whose lines in the effort's index of decisions you already know bear on the node.
+  The spawn may name them and need not. The worker searches that index for those numbers and
+  for its node's own terms and paths, rather than reading it.
 - Your own notes, if you have any.
 - What the node's kind adds, listed below.
 
