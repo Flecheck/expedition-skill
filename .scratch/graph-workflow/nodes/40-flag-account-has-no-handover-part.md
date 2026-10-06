@@ -209,3 +209,41 @@ RETROSPECTIVE:
 `40.1` `ASSUMPTION` — The worker moved a flag's full account into its `## Flags` entry on every node. *(The worker's full text is under its handover's `FLAGS`.)*
 
 *The manager's note, 2026-10-06:* the worker's `CONDITIONS` says node 41's clause 7 still lists the research contract. That clause was replaced by node 41's `## Amendment, 2026-10-05 (from node 388's landing)`, which drops the path. The worker read the clause as first filed.
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-06. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/check40.md`. The node's one flag, 40.1, reached it as text.*
+
+> PASS
+>
+> Work: the uncommitted changes in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/40-flag-account. `git status --short` lists only the five named paths. No node status line, `decisions.md` or `flags.md` is among them. I read the changed paths as the work, under the record-as-work rule in map-implementation-rules.md.
+>
+> 1. The statement places the account in a section of the node file on every kind of node. Under `### Raise a flag` (in `## Procedures`) in graph-conventions.md, `git diff` shows the old paragraph replaced by: "The flag's entry under `## Flags` holds the full account of what produced the flag, on every kind of node. … The entry holds the account whether or not the node has an `## Interview` attempt or a round in `## Review`." It places the account in `## Flags` with no exception by node kind. Met.
+> 2. The named section admits the account in its own description. `### \`## Flags\`` under `## The node file` now says: "Each entry holds the full account of what produced its flag, as `### Raise a flag` under `## Procedures` states." The statement names neither `## Review` nor `## Interview`, so those sub-clauses do not apply. Met. Shown by the diff, and the heading positions were confirmed with `grep -n "^## \|^### "`.
+> 3. All four files name the hand-back shape and part. Each of grilling, prototype, precondition and implementation says: "Hand the account back in your handover's `FLAGS` part, inside the flag's prose for your node." `grep -n FLAGS` confirms each file's `### handover` shape (implementation: `## What you hand back`) has a `FLAGS:` part reading "the prose for your node, then the one sentence…". Met.
+> 4. Met. The `FLAGS` prose is filed under `## Flags`, the same section the statement names. graph-conventions.md also states it: "A worker hands the account back as part of its handover's `FLAGS` part, which is filed under `## Flags`."
+> 5. Met. All four files say "Your `## Flags` entry holds the account … on every kind of node, whether or not your node has an `## Interview` attempt or a `## Review` round", which agrees with clause 1. I also ran a Python sentence scan over the unwrapped text of every file under .claude/skills/expedition*/ and .claude/rules/, looking for sentences with "account" or "what produced" next to flag, round, interview or review. It finds no surviving statement that places the account in a round.
+> 6. Met. I extracted both sections from each file with awk and hashed them with sha256sum. After the work, all four files share one hash per section (e5faafd7… and 2730fab9…). Before the work, I ran the same on `git show master:` and they also shared one hash per section (01492ab8… and 2730fab9…).
+> 7. Fixes no form, so there is nothing to establish. The work uses the routes it allows (moving the account to `## Flags`, which the `FLAGS` route already reaches).
+> 8. The bar holds. Commands: the repo root holds no CLAUDE.md, AGENTS.md or manifest. `git ls-files` outside the skills and .scratch directories shows only .claude/rules/expedition-triggers.md, .gitignore, CONTEXT.md and CONTEXT-MAP.md. So there is no build, test or formatter to run, and the bar is its non-command half.
+>
+> Standards: I read only the standards in .scratch/graph-workflow/map-implementation-rules.md. They are `/coding-principles` and `/naming`, the glossary's `_Avoid_` lines, the ground rules, the six standing rules for writing, graph-conventions.md, and `/writing-for-agents`. No reviewing skill is named, so I ran none and held the work against the standards by hand.
+> - Bearing on this work: the glossary's `_Avoid_` lines, the writing rules, and graph-conventions.md.
+> - `_Avoid_` lines: I grepped them for the words in the new text. The four files keep the phrase "a `## Review` round" from the text they replaced, and the condition itself uses that phrase. It names a round in the `## Review` section rather than using "review round" as a synonym for correction round, so I raise no finding on it.
+> - Writing rules: the new text points at `### Raise a flag` by heading rather than restating it (rule 6) and cites no line numbers. I found no breach.
+> - The work changed no standard.
+>
+> Recorded search: the condition records none ("the scope came from no search"), so there was nothing to run.
+>
+> Flags: 40.1 is true of the work. The diff moves the full account into the `## Flags` entry on every kind of node, and the handover shapes are unchanged: the account travels in the existing `FLAGS` part and no new part was added. No questions.
+>
+> Temporary file under $TMPDIR removed.
+
+*The manager's note:* the checker handed back no question and no raise, covered every clause, and found the flag true. The gate is taken under the standing yes, below.
+
+
+### Gate — approve, `standing yes`, 2026-10-06
+
+Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies. This settles none of the node's flags; they settle at the node closing report.
