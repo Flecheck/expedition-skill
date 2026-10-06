@@ -213,3 +213,48 @@ RETROSPECTIVE:
    - The node's `## Amendment, 2026-10-02 (from node 66)` still quotes "Two kinds of question…", which node 379's amendment had already superseded.
      - `question-quotes-superseded-text` (1 earlier retrospective: 392)
 `````
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-06. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/check214.md`. The node's two flags, 214.1 and 214.2, reached it as text.*
+
+> PASS
+>
+> Work under check: the uncommitted changes in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/214-clause-raise (branch worktree-214-clause-raise, HEAD 431b7c45b), paths .claude/skills/expedition-checker/SKILL.md and .claude/skills/expedition-implementation/SKILL.md. I held the work against the checker contract as it stands on master. Master has moved to 7a30a74f7, but `git diff --stat HEAD master` shows only record files changed (flags.md and two node files), so the checker contract on master is the same as the base the work was cut from.
+>
+> 1. Implementer sentence: met. I collapsed all whitespace in the implementation SKILL.md (python `re.sub(r'\s+',' ')`) and searched for the exact sentence "When a clause of your condition cannot hold together with another clause or with a standard you are held against, your premise is broken: raise under trigger 1 before you finish." It was found at an offset between `## The acceptance condition` and `## The standards your work is held to`. Trigger 1 exists in the table under `## Flag, or raise`.
+> 2. New table row: met. The same unwrapped search found the exact row "| two parts of the condition cannot both hold on one reading of them, and every part holds on another | your outcome under the reading on which every part holds, and a question |" between `### When what you check against is itself the problem` and `### Questions, alongside`. `git diff --word-diff=porcelain master -- .claude/skills/expedition-checker/SKILL.md` shows the other rows unchanged.
+> 3. Sentence and paragraph: met. The unwrapped search found "Four kinds of question reach the human this way, and none of them stops your check.", and "Three kinds of question" is gone. The fourth paragraph matches word for word. It sits after "The third is a false flag" and before "Hand each question back under your outcome", and the diff shows it as a separate paragraph between those two.
+> 4. and 5. Nothing else in the checker file changed: met. The word diff against master has exactly three changes: the added row, the swap of "Three" for "Four", and the added paragraph. No heading changed, and `### raise — nothing left to check against` is untouched.
+> 6. The bar: met (see below).
+>
+> Bar:
+> - The repo root (`ls -a`) holds no CLAUDE.md, AGENTS.md or manifest, so there is nothing to build, test or format. CONTEXT.md is only a superseded pointer to the glossary.
+> - `git diff --check` printed nothing (no whitespace errors).
+> - The longest added line is 179 characters, the table row. The file's longest existing line is 180, so that length is normal for the file's table rows.
+>
+> Standards:
+> - I read only the standards in .scratch/graph-workflow/map-implementation-rules.md and opened no other file in the effort directory. It names no reviewing skill, so I ran none, and I held the work against the standards by hand.
+> - These standards bore on the work: the glossary's `_Avoid_` lines, the ground rules, the six standing rules for writing, and `/writing-for-agents` (located in the mattpocock-skills plugin by name). `/coding-principles`, `/naming` and graph-conventions.md had little to apply to two prose additions.
+> - No `_Avoid_` word is introduced. "premise is broken" is the glossary's own usage. Nothing assumes this repo, nothing addresses the human, and no bold or figurative wording is added.
+> - "self-contradicting" matches the grounds listed in the raise section.
+> - A grep over .claude/ for "kinds of question" and similar count phrases found no stale count left behind.
+> - Every added word is dictated by the condition, so any concern about style would be the condition's own, not the worker's. I found none worth raising.
+>
+> Search the condition records: the condition records no search command ("the scope came from no search"), so none was run.
+>
+> Flags, checked after the outcome:
+> - 214.1 makes a claim about the record, not about the work, so the work cannot make it true or false.
+> - 214.2 is true of the work. The condition fixed the section for the sentence (`## The acceptance condition`) but not where in it, and it did not fix where the row goes. The worker placed both.
+> - Neither flag is false, so there are no QUESTIONS.
+>
+> No temporary files were written.
+
+*The manager's note:* the checker handed back no question and no raise, covered every clause, and found no flag false. The gate is taken under the standing yes, below.
+
+
+### Gate — approve, `standing yes`, 2026-10-06
+
+Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies. This settles none of the node's flags; they settle at the node closing report.
