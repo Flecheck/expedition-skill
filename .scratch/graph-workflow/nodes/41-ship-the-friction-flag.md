@@ -1,7 +1,7 @@
 # Ship the FRICTION flag and the self-edit disclosure duty
 
 Type: implementation
-Status: open
+Status: claimed
 Supersedes: 170
 
 Blocked by: ~~56~~, ~~170~~
@@ -155,3 +155,13 @@ Before a worker starts this node, the human chooses how a permission the human g
 
 *The human's answer to the triage proposal, `verbatim`, 2026-10-06:* *"ok"*. The manager's proposal ended "Please answer Q1 to Q4. \"ok for all\" approves each as proposed."
 
+
+## Interview
+
+#### The human's answer on recording a permission, 2026-10-06
+
+*The manager put node 170's question, merged here, directly after the 2026-10-06 triage. The manager's recommendation, as sent:* "add `PERMISSION` as a marker beside `FRICTION`, defined in one line: \"a permission the human granted for one attempt, past a contract clause that blocked the node\". It's settled like any flag. One list grows by one entry, and nothing else moves." *Alternatives offered: declare the marker list open-ended; record permissions outside `## Flags`, in the node's interview. The message ended:* "Please answer. \"ok for recommended\" takes the `PERMISSION` marker."
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the reply takes the recommendation. It is still to become an amendment clause on this node's condition.
