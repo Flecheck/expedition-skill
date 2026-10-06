@@ -1,7 +1,7 @@
 # Ship the FRICTION flag and the self-edit disclosure duty
 
 Type: implementation
-Status: open
+Status: claimed
 Supersedes: 170
 
 Blocked by: ~~56~~, ~~170~~, 392
