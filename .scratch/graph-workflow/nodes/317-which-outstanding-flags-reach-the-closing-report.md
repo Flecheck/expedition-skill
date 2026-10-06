@@ -98,3 +98,33 @@ RETROSPECTIVE
 ## Flags
 
 `317.1` `ASSUMPTION` — `## Flags` restates the rule rather than only pointing at `## Closing an effort`. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-06. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/check317.md`. The node's one flag, 317.1, reached it as text.*
+
+> PASS
+>
+> Work checked: uncommitted change in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/317-closing-flags. `git status --porcelain --ignored` shows only ` M .claude/skills/expedition/SKILL.md`. The diff replaces one paragraph under `## Flags` and nothing else.
+>
+> Acceptance condition, one line per part:
+> 1. Met. I printed `## Flags` with `awk '/^## Flags/{f=1} /^## Acceptance conditions/{f=0} f'`. The sentence "Flags reach the effort closing report in one case only…" is gone. In its place are "Every outstanding flag reaches the effort closing report, whatever the state of its node." and "The list under `## Closing an effort` gives what that report carries." A grep for "one case only" or "in one case" over the worktree's `.claude/` returns nothing.
+> 2. Met. Under `## Closing an effort` (awk extract), the bullet "Every outstanding flag, taken from the unchecked lines of the effort's index of flags and never reconstructed by you." is unchanged, and the diff does not touch it.
+> 3. Met. I unwrapped every `.claude/` file containing "effort closing report" (perl join of single newlines) and extracted every sentence containing that phrase. None restricts which flags reach the report to fewer than every outstanding flag. The glossary `**Flag**:` entry, from `grep -A6 '^\*\*Flag\*\*'`, says nothing about the effort closing report. graph-conventions.md says "`## Flags` in `SKILL.md` says when a node's flags settle, and which flags reach the effort closing report", which is still true. A grep for "never answered", "spoke again" and "speaks again" finds only SKILL.md "Where the human never speaks again, nothing settles, and those flags stay outstanding.", which is consistent with the new rule.
+> 4. Met, see the bar below.
+>
+> Bar: the repo root holds .claude, CONTEXT-MAP.md, CONTEXT.md and .gitignore. It has no CLAUDE.md, AGENTS.md or manifest, and the repo states no build, test or formatter commands, so there was nothing to run. The bar is therefore its non-command half, which is the standards. Standards: I read only the standards in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md (`## What the work is held against`) and opened no other file in the effort's directory. These bore on the work: the glossary `_Avoid_` lines (none of the new text's words is refused for its concept, checked with grep against the `_Avoid_` lines), the ground rules, the six writing rules (plain English, one idea per sentence, a heading cited rather than restated), graph-conventions.md (its pointer at `## Flags` stays accurate) and /writing-for-agents (short and direct). /coding-principles and /naming do not apply to this prose change. No reviewing skill is named, so I ran none. Under the rules-file provision on record files, the changed path is a shipped file and not a record file, so that rule did not come into play.
+>
+> Recorded search: I ran `grep -rn -i "closing report" .claude/ | grep -i flag` as written over the worktree. It returned 7 lines: standing-yes:76 heading, SKILL.md 363, 366, 371 and 574, cleanup:59, and precondition:107. These are the same places and phrases the condition records, except that the "one case only" line is now line 371, "Every outstanding flag reaches…". That replacement is the work itself.
+>
+> QUESTIONS:
+> - The condition's scope list misdescribes one line. It places SKILL.md's "A node closing report for a node holding flags carries every one of those flags" among "four lines under `## Flags`", but that line (now 574) sits under `## What is in front of the human, and when`, both in the work and at base 431b7c45b. I checked this with an awk that prints the nearest preceding `## ` heading for line 574 in each file. The command's return matches the record. Only the condition's heading attribution is wrong. Form: a line the scope list attributes to a heading it does not sit under. Extent: the four SKILL.md lines in the scope list, which is the whole set of heading attributions the list makes. Not a FAIL, because the work did not need that line.
+>
+> Flags: 317.1 is true of the work. `## Flags` both states the rule in its own words and points at `## Closing an effort`.
+>
+> No temporary files remain. The one I wrote under $TMPDIR is removed.
+
+*The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
