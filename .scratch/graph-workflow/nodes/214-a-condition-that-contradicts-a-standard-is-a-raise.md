@@ -113,3 +113,13 @@ Clauses to add:
 `214.1` `ASSUMPTION` — *The manager's filing.* Node 379's replacement for clause 2 of node 66's queued block was filed onto this open, unclaimed node, under the human's standing instruction, without a separate question.
 
 *The manager's note, 2026-10-06:* kept at the triage the human invoked and approved (`verbatim` *"ok"*). A read-only agent checked it against the current files and found it still live; it has no acceptance condition yet.
+
+## Interview
+
+#### The human's answer, 2026-10-06
+
+*The manager put the node's question directly, after the 2026-10-06 triage kept the node. The manager's recommendation, as sent:* "put the duty on the implementer only. The implementation contract would say: \"When a clause of your condition cannot hold together with another clause or with a standard you are held against, your premise is broken: raise under trigger 1 before you finish.\" The checker keeps its current route. A question beside its outcome already reaches you at the gate, and the standing yes never covers a gate with a question. Node 66's queued checker rule then stands unchanged." *Alternative offered: also make it a raise for the checker, withholding its outcome. The message ended:* "Please answer node 214. \"ok for recommended\" takes the implementer-only raise."
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the reply takes the recommendation. The condition is still to be written. Node 66's queued block and its 2026-10-04 replacement clause 2 (flag 214.1) stand as filed.
