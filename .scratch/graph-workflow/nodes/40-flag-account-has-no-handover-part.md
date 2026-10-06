@@ -1,7 +1,7 @@
 # Nothing carries a flag's account of what produced it out of a worker
 
 Type: implementation
-Status: claimed
+Status: open
 
 ## Question
 

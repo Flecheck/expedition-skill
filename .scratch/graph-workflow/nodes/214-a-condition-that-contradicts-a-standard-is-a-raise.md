@@ -1,10 +1,10 @@
 # A condition that cannot be honoured with a standard is a raise, in both workers' contracts
 
 Type: implementation
-Status: claimed
+Status: open
 Supersedes: 208
 
-Blocked by: none
+Blocked by: 392
 
 ## Question
 

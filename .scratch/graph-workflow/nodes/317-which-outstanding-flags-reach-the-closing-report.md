@@ -1,8 +1,8 @@
 # Which outstanding flags reach the closing report
 
 Type: implementation
-Status: claimed
-Blocked by: none
+Status: open
+Blocked by: 392
 
 ## Question
 
