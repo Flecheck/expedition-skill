@@ -1,7 +1,7 @@
 # Nothing carries a flag's account of what produced it out of a worker
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: 392
 
 ## Question
@@ -122,6 +122,12 @@ concurrently claimable.
 
 *The manager's note, 2026-10-06:* kept at the triage the human invoked and approved (`verbatim` *"ok"*). A read-only agent checked it against the current files and found it still live; it has no acceptance condition yet.
 
+## Answer
+
+A flag's full account of what produced it now lives in its `## Flags` entry on every node, carried out of a worker by the existing `FLAGS` part.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `09eb28a8f`. Flags 40.1 settle at the node closing report.
+
 ## Handover, attempt 1
 
 *Pasted as the worker handed it back, 2026-10-06.*
@@ -206,7 +212,7 @@ RETROSPECTIVE:
 
 ## Flags
 
-`40.1` `ASSUMPTION` — The worker moved a flag's full account into its `## Flags` entry on every node. *(The worker's full text is under its handover's `FLAGS`.)*
+`40.1` `ASSUMPTION` **· settled** — The worker moved a flag's full account into its `## Flags` entry on every node. *(The worker's full text is under its handover's `FLAGS`.)*
 
 *The manager's note, 2026-10-06:* the worker's `CONDITIONS` says node 41's clause 7 still lists the research contract. That clause was replaced by node 41's `## Amendment, 2026-10-05 (from node 388's landing)`, which drops the path. The worker read the clause as first filed.
 
@@ -247,3 +253,5 @@ RETROSPECTIVE:
 ### Gate — approve, `standing yes`, 2026-10-06
 
 Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies. This settles none of the node's flags; they settle at the node closing report.
+
+*The manager's note, 2026-10-06:* flags 40.1 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
