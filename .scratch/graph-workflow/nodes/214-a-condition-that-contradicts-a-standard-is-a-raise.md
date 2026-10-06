@@ -1,7 +1,7 @@
 # A condition that cannot be honoured with a standard is a raise, in both workers' contracts
 
 Type: implementation
-Status: claimed
+Status: resolved
 Supersedes: 208
 
 Blocked by: 392
@@ -129,11 +129,11 @@ Clauses to add:
 
 ## Flags
 
-`214.1` `ASSUMPTION` — *The manager's filing.* Node 379's replacement for clause 2 of node 66's queued block was filed onto this open, unclaimed node, under the human's standing instruction, without a separate question.
+`214.1` `ASSUMPTION` **· settled** — *The manager's filing.* Node 379's replacement for clause 2 of node 66's queued block was filed onto this open, unclaimed node, under the human's standing instruction, without a separate question.
 
 *The manager's note, 2026-10-06:* kept at the triage the human invoked and approved (`verbatim` *"ok"*). A read-only agent checked it against the current files and found it still live; it has no acceptance condition yet.
 
-`214.2` `ASSUMPTION` — The worker chose where the new table row and the new sentence go. *(The worker's full text is under its handover's `FLAGS`.)*
+`214.2` `ASSUMPTION` **· settled** — The worker chose where the new table row and the new sentence go. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Interview
 
@@ -144,6 +144,12 @@ Clauses to add:
 `verbatim`: *"ok"*
 
 *The manager's note:* the reply takes the recommendation. The condition is still to be written. Node 66's queued block and its 2026-10-04 replacement clause 2 (flag 214.1) stand as filed.
+
+## Answer
+
+The implementation contract now treats a clause that cannot hold with another clause or a standard as a broken premise and a trigger-1 raise. The checker gains node 66's fourth question kind and table row.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `c9ae15ba1`. Flags 214.1, 214.2 settle at the node closing report.
 
 ## Handover, attempt 1
 
@@ -258,3 +264,5 @@ RETROSPECTIVE:
 ### Gate — approve, `standing yes`, 2026-10-06
 
 Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies. This settles none of the node's flags; they settle at the node closing report.
+
+*The manager's note, 2026-10-06:* flags 214.1, 214.2 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
