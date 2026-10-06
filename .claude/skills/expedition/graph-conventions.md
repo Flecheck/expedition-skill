@@ -239,8 +239,9 @@ with a condition that leaves part of its demand in another file.
 
 ### `## Flags`
 
-The section holds one entry per flag, in free prose. Each entry starts with the flag's id and then its
-marker, one word saying which kind of judgement the flag records. There are three markers:
+The section holds one entry per flag, in free prose. Each entry holds the full account of what produced
+its flag, as `### Raise a flag` under `## Procedures` states. Each entry starts with the flag's id and
+then its marker, one word saying which kind of judgement the flag records. There are three markers:
 
 - `ASSUMPTION` — the worker decided a small ambiguity itself.
 - `CONDITION-WRONG` — filed by the manager, after a worker raised its acceptance condition as wrong and
@@ -551,11 +552,11 @@ is written` in `SKILL.md` says who may change it and what the change may cover.
 
 Both writes are part of raising the flag, and are never left to a tidy-up afterwards.
 
-The round that raised the flag, an `## Interview` attempt or a round in `## Review`, says what produced
-it. For a flag from a worker's own unprompted judgement, what produced it is what the worker actually
-did, told in the worker's words. A one-line summary is enough under `## Flags`. The round needs the full
-account. Where a node has no round at all, as with an AFK `precondition` node, the
-`## Flags` entry carries that account itself.
+The flag's entry under `## Flags` holds the full account of what produced the flag, on every kind of
+node. For a flag from a worker's own unprompted judgement, that account is what the worker actually did,
+told in the worker's words. The entry holds the account whether or not the node has an `## Interview`
+attempt or a round in `## Review`. A worker hands the account back as part of its handover's `FLAGS`
+part, which is filed under `## Flags`.
 
 3. Whoever raises the flag runs check 6 below itself, as part of raising it, over the material it
    touched: the flag's entry on its node and its line in `flags.md`.

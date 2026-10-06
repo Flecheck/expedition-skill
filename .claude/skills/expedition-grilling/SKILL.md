@@ -285,8 +285,8 @@ Write the human's words here as they said them, without summarizing them. Then s
 A flag's **entry** is two separate texts in two places, each with its own length limit, and you write
 both.
 
-- On your node, under `## Flags`: free prose, one entry per flag. A one-line summary is enough, and you
-  may write more. Say what you decided and on what grounds.
+- On your node, under `## Flags`: free prose, one entry per flag. Say what you decided and on what
+  grounds, and give the full account of what produced the flag.
 - In `flags.md`, the graph's capped index of every judgement an agent made on its own: one sentence that
   reports your judgement. Write it for a reader who has not read your node, long after the node has
   resolved.
@@ -294,9 +294,10 @@ both.
 Write both when you raise the flag, while you still have the context, and give each the flag's marker.
 The manager adds only bookkeeping: the flag's id, the link to your node, and the flag's state.
 
-The round that created the flag, an `## Interview` attempt or a `## Review` round, holds the account of
-what produced the flag. If your node holds no round at all, meaning no exchange with the human and no
-gate, your `## Flags` entry holds that account instead: what you actually did, in your words.
+Your `## Flags` entry holds the account of what produced the flag on every kind of node, whether or not
+your node has an `## Interview` attempt or a `## Review` round. For a judgement you made unprompted, the
+account is what you actually did, in your words. Hand the account back in your handover's `FLAGS` part,
+inside the flag's prose for your node.
 
 ## When a node you report is an implementation node
 
