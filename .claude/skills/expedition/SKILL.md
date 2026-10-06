@@ -786,6 +786,11 @@ carries:
   reconstructed by you.
 - What the sweep found, and every sweep round.
 
+The sweep is a run of every check under `## Mechanical checks` in `graph-conventions.md` over the whole
+graph. Give the run to one read-only agent, which reports every failure and every report of check 10.
+Each failure becomes a node, in place of the routes under `### What a failure produces` in
+`graph-conventions.md`. When the frontier empties again, the sweep runs again.
+
 ## Conflicts this contract leaves open
 
 Each conflict below is named and left unresolved. Resolving one is a decision, and it is not yours to

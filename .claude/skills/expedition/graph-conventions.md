@@ -629,8 +629,8 @@ Each of these is decidable by reading the files.
 Every check is run by whoever performs an act that can make it false, at that act, over the material
 that act touched. So each procedure under `## Procedures`, and `## Adding a node`, ends with a step
 naming the checks its writes can make false. No schedule, no periodic pass and no separately spawned
-agent runs any of them. One run is not tied to an act: a run of every check over the whole graph, which
-remains available at an empty frontier.
+agent runs any of them, with one exception. The sweep runs every check over the whole graph at an empty
+frontier, and `## Closing an effort` in `SKILL.md` says who runs it.
 
 ### What a failure produces
 
