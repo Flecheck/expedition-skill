@@ -1,7 +1,7 @@
 # Nothing carries a flag's account of what produced it out of a worker
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: 392
 
 ## Question
