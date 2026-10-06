@@ -1,7 +1,7 @@
 # A spawn points at the decisions index without naming which sections bear on the node
 
 Type: implementation
-Status: open
+Status: claimed
 
 Blocked by: 392
 
