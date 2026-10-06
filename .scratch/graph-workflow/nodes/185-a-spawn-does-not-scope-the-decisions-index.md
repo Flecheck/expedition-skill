@@ -1,7 +1,7 @@
 # A spawn points at the decisions index without naming which sections bear on the node
 
 Type: implementation
-Status: claimed
+Status: resolved
 
 Blocked by: 392
 
@@ -95,6 +95,12 @@ seventeen reports is the most-reported item on the effort after `map.md`'s whole
 `verbatim`: *"ok"*
 
 *The manager's note:* the reply takes the recommendation. The condition is still to be written.
+
+## Answer
+
+Workers search `decisions.md` for their node's terms, paths and any node numbers the spawn names, reading only matching lines; a spawn may name known-relevant node numbers; label scoping dropped.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `3027afb90`. Flags 185.1, 185.2 settle at the node closing report.
 
 ## Handover, attempt 1
 
@@ -197,9 +203,9 @@ RETROSPECTIVE
 
 ## Flags
 
-`185.1` `ASSUMPTION` — The manager contract's label-scoping sentence was dropped. *(The worker's full text is under its handover's `FLAGS`.)*
+`185.1` `ASSUMPTION` **· settled** — The manager contract's label-scoping sentence was dropped. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`185.2` `ASSUMPTION` — The search rule sits as its own paragraph after the read-in-full paragraph. *(The worker's full text is under its handover's `FLAGS`.)*
+`185.2` `ASSUMPTION` **· settled** — The search rule sits as its own paragraph after the read-in-full paragraph. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 
@@ -255,3 +261,5 @@ RETROSPECTIVE
 ### Gate — approve, `standing yes`, 2026-10-06
 
 Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies. This settles none of the node's flags; they settle at the node closing report.
+
+*The manager's note, 2026-10-06:* flags 185.1, 185.2 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
