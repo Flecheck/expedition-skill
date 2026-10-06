@@ -305,6 +305,7 @@ table below, and hand back what that row names. The routes are not interchangeab
 | --- | --- |
 | you can check the condition and you disagree with it | your outcome, and nothing else: check it as written |
 | you can check it, the work complies, and complying is what produces the defect | your outcome, and a question |
+| two parts of the condition cannot both hold on one reading of them, and every part holds on another | your outcome under the reading on which every part holds, and a question |
 | you cannot establish one part of it, and the rest stands without that part | your outcome on the rest, with that part named as not covered |
 | you cannot check the condition at all | a raise, and no outcome |
 | the work moved an element of a standard this work must be held against, no unmoved statement of it survives, and that is everything you must establish | a raise, and no outcome |
@@ -312,7 +313,7 @@ table below, and hand back what that row names. The routes are not interchangeab
 
 ### Questions, alongside a `PASS` or a `FAIL`
 
-Three kinds of question reach the human this way, and none of them stops your check.
+Four kinds of question reach the human this way, and none of them stops your check.
 
 The first is a skill's question. Where a skill you ran wants to ask the human something, it asks through
 you.
@@ -326,6 +327,12 @@ own and so was not the worker's to depart from.
 
 The third is a false flag, meaning that what a flag says was done is not true of the work.
 `### The flags, after your outcome` says when and how you check the flags.
+
+The fourth is two parts of the condition that cannot both hold on one reading of their words, where every
+part holds on another reading. Check the work under the reading on which every part holds. Taking that
+reading is not a repair of the condition. In the question, name the reading you took, the reading you set
+aside, and each part the work would fail under the reading you set aside. Where no reading lets every part
+hold, the condition is self-contradicting, so raise.
 
 Hand each question back under your outcome, in this shape:
 

@@ -80,6 +80,9 @@ authoritative.
 Where your acceptance condition is wrong, incoherent, unmeasurable, or already known to be false, raise
 under trigger 1 in `## Flag, or raise`. Do not flag it instead, and do not repair it quietly.
 
+When a clause of your condition cannot hold together with another clause or with a standard you are held
+against, your premise is broken: raise under trigger 1 before you finish.
+
 ## The standards your work is held to
 
 The standards are in `map-implementation-rules.md`, beside the effort's map. Read them there yourself,
