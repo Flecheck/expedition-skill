@@ -57,3 +57,5 @@ manager's sentence. **This node's subject and its urgency both go up rather than
 seventeen reports is the most-reported item on the effort after `map.md`'s whole-file read.
 
 *The manager's note, 2026-09-28:* [node 356](356-whether-node-165s-remaining-shadow-pairs-still-run.md)'s worker reports this node's question changed. Its words, pasted: **Node 185 (open grilling):** a premise in its filing note is overtaken. That note calls node 165 a "live measurement" that the scoping practice "bears directly on". The measurement is retired, so node 185 need not protect a protocol any more. The new node above is related to it.
+
+*The manager's note, 2026-10-06:* kept at the triage the human invoked and approved (`verbatim` *"ok"*). A read-only agent checked it against the current files and found it still live; it has no acceptance condition yet.

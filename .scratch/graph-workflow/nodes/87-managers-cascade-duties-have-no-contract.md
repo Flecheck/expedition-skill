@@ -85,10 +85,13 @@ The human's question at node 76's gate, `verbatim`: *"for the cascade, it will b
 
 ## Flags
 
-`87.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 272's replacement for this node's fourth duty was filed on this open, unclaimed node without asking the human first.
+`87.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above.* Node 272's replacement for this node's fourth duty was filed on this open, unclaimed node without asking the human first.
 
 *The manager's note, 2026-09-27:* [node 351](351-the-cascades-per-candidate-agent-does-not-join-a-defect-to-an-open-node.md)'s worker made the location of the effort's node files an input of the cascade's per-candidate agent, so the manager's cascade spawn must carry it. No manager-side text describes the cascade spawn yet; that belongs to this node's duties.
 
 *The manager's note, 2026-09-27:* [node 350](350-carry-the-open-question-search-into-the-shipped-contracts.md)'s worker reports that this node's question is changed, "part of it answered": the fourth duty, already superseded by node 272's amendment above, is now stated in the shipped manager contract's paragraph beginning "Before a party hands back a fact it established", once node 350 lands. No replacement clause is owed.
 
 *The manager's note, 2026-10-05:* superseded by [node 385](385-whether-the-rarely-used-node-kinds-should-stay.md), whose answer removes the cascade pass and its contract. The trigger this node would have written is no longer needed, as node 385's worker reported under its `CONDITIONS`.
+
+*The manager's note, 2026-10-06:* flag 87.1 settled in the triage flag batch the human approved.
+

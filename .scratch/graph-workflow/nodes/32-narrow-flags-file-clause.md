@@ -1,7 +1,7 @@
 # Narrow the flags.md clause in the worker contracts
 
 Type: implementation
-Status: open
+Status: out-of-scope
 
 ## Question
 
@@ -82,3 +82,10 @@ whose clause 2 names two other sentences. So this node now carries two changes t
 five files: the carve-out it was minted for, and a stated positive beside the prohibition.
 
 *The manager's note, 2026-10-05:* the question changed, as reported by [node 385](385-whether-the-rarely-used-node-kinds-should-stay.md)'s worker under its `CONDITIONS`: "It names the flags.md clause in \"five shipped contracts\", the research contract among them. After the new node lands there are four, and the research link is dead." The new node is [node 388](388-merge-research-into-precondition-and-remove-the-cascade-pass.md).
+
+## Ruled out of scope, 2026-10-06
+
+Dropped at the triage the human invoked on 2026-10-06: only this self-hosting effort hits the clause, the per-attempt permission route already covers it, and its other half (wording the rule as what to do) is already met by the current "Leave `flags.md` unread. It is not yours.". A read-only agent checked the node against the current files.
+
+*The human's answer to the triage proposal, `verbatim`, 2026-10-06:* *"ok"*. The manager's proposal ended "Please answer Q1 to Q4. \"ok for all\" approves each as proposed."
+

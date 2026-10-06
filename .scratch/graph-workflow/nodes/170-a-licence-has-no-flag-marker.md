@@ -1,7 +1,8 @@
 # A licence the human granted has no flag marker to be recorded under
 
 Type: implementation
-Status: open
+Status: superseded
+Superseded by: 41
 
 Blocked by: none
 
@@ -37,3 +38,8 @@ live. Writing a condition that picked one would be a judgement of the manager's 
 standard. **That choice goes to the human**, and until it is made this node is not startable.
 
 *The manager's note, 2026-09-28:* [node 353](353-whether-implementer-becomes-a-glossary-headword.md)'s worker reports this node's question changed. Its words, pasted: Node 170 (open, implementation, no condition yet): the question is partly answered. Whichever repair the human picks for a licence, a new marker such as `LICENCE` owes no glossary entry. Whoever writes its condition must not demand one.
+
+*The manager's note, 2026-10-06:* merged into [node 41](41-ship-the-friction-flag.md) at the triage the human invoked; both change the same closed marker list. Superseded by node 41.
+
+*The human's answer to the triage proposal, `verbatim`, 2026-10-06:* *"ok"*. The manager's proposal ended "Please answer Q1 to Q4. \"ok for all\" approves each as proposed."
+

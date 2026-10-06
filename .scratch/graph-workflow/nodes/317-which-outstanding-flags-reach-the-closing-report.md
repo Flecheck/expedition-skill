@@ -13,3 +13,5 @@ The two statements in `.claude/skills/expedition/SKILL.md` disagree about an out
 *Manager's note: minted by the manager. No acceptance condition is written yet. It depends on the answer to the question.*
 
 *The manager's note, 2026-09-26:* node 309 landed as `c52c03e`, so `## Flags` now reads "Flags reach the closing report in one case only: a flag whose pick report the human never answered, because they never spoke again." [Node 320](320-the-glossarys-flag-entry-names-one-case-of-a-flag-reaching-the-closing-report.md) was superseded by 309 on the human's "ok for superseded", on the understanding that this node's work keeps `CONTEXT.md`'s `**Flag**:` entry in line with whatever it decides. The condition written for this node carries that entry.
+
+*The manager's note, 2026-10-06:* kept at the triage the human invoked and approved (`verbatim` *"ok"*). A read-only agent checked it against the current files and found it still live; it has no acceptance condition yet.

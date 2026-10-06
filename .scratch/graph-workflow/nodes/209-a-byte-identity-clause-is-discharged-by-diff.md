@@ -1,7 +1,7 @@
 # A clause demanding byte-identity is discharged by diff, and says so
 
 Type: implementation
-Status: open
+Status: out-of-scope
 
 Blocked by: none
 
@@ -40,3 +40,10 @@ nothing. What makes this mintable is that the saving is measured, not that measu
 
 **It is adjacent to [node 183](183-nothing-measures-the-record-about-itself.md) and is not the same item.** Node 183
 is deciding what derives numbers about the record; this is about what a condition tells its worker it may skip.
+
+## Ruled out of scope, 2026-10-06
+
+Dropped at the triage the human invoked on 2026-10-06: the cost it measured is gone: node 188 moved the landing section out of the rules file, and workers already prove byte-identity with `cmp` or a hash unprompted. A read-only agent checked the node against the current files.
+
+*The human's answer to the triage proposal, `verbatim`, 2026-10-06:* *"ok"*. The manager's proposal ended "Please answer Q1 to Q4. \"ok for all\" approves each as proposed."
+

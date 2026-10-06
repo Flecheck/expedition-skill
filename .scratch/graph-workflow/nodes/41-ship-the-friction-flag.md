@@ -2,8 +2,9 @@
 
 Type: implementation
 Status: open
+Supersedes: 170
 
-Blocked by: ~~56~~, 170
+Blocked by: ~~56~~, ~~170~~
 
 ## Question
 
@@ -126,4 +127,31 @@ standard. Node 29's answer is what makes that refusal correct rather than merely
 *Replacement for clause 7, written by [node 388](388-merge-research-into-precondition-and-remove-the-cascade-pass.md)'s worker under its `CONDITIONS`, and filed by the manager now that node 388 has landed (commit `5f8c85480`) and deleted the research contract. Node 41 is open and unclaimed. Its words are the clause's own minus that path.*
 
 > 7. Each of these four files lists `FRICTION` among the markers its worker may use, and includes it in that file's `FLAGS:` handover line, with its meaning stated as a defect in the expedition workflow itself that this worker noticed while using it: `.claude/skills/expedition-grilling/SKILL.md`, `.claude/skills/expedition-implementation/SKILL.md`, `.claude/skills/expedition-prototype/SKILL.md`, `.claude/skills/expedition-precondition/SKILL.md`
+
+## Amendment, 2026-10-06 (node 170 merged in at the triage)
+
+Node 170's question is merged into this node: both change the closed list of flag markers under `graph-conventions.md`'s `### `## Flags``. Node 170 had no acceptance condition, so no clause moves. Its question, pasted as it stands on node 170:
+
+> *Surfaced by the manager while filing [flag `144.5`](144-make-the-rules-file-stand-alone.md). The manager's own text,
+> and marked as the manager's.*
+>
+> The manager's contract says that where a clause of a worker contract blocks the node in front of it, the manager
+> raises it, and the human's answer produces **two things, always both**: *"a licence for that one attempt, recorded as
+> a flag on the node"*, and a node for the permanent fix.
+>
+> `graph-conventions.md`'s `## Flags` section defines **three** markers and closes the list: `ASSUMPTION` — the worker
+> decided a small ambiguity itself; `CONDITION-WRONG` — the manager's, after a worker raised its condition as wrong and
+> the human said ship it anyway; and `DELEGATED` — the human said *"you decide"* and the worker answered.
+>
+> **A licence is none of the three.** It is not a judgement an agent made on its own, which is what the glossary says a
+> flag records; it is the human's own grant, made in answer to a raise, and it binds one attempt. Recording it under
+> any of the three states something false about who judged what. The manager wrote `LICENCE` on flag `144.5` for that
+> reason, which is a marker no file defines.
+>
+> **Two settled rules produce a duty neither states**, which is the shape this effort's own contract names as a node
+> rather than something to settle in the moment.
+
+Before a worker starts this node, the human chooses how a permission the human grants is recorded (a fourth marker, an open-ended marker list, or somewhere other than `## Flags`), and that choice becomes a clause here. The term in `SKILL.md` is now "permission", not "licence".
+
+*The human's answer to the triage proposal, `verbatim`, 2026-10-06:* *"ok"*. The manager's proposal ended "Please answer Q1 to Q4. \"ok for all\" approves each as proposed."
 

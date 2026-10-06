@@ -111,3 +111,5 @@ Clauses to add:
 ## Flags
 
 `214.1` `ASSUMPTION` — *The manager's filing.* Node 379's replacement for clause 2 of node 66's queued block was filed onto this open, unclaimed node, under the human's standing instruction, without a separate question.
+
+*The manager's note, 2026-10-06:* kept at the triage the human invoked and approved (`verbatim` *"ok"*). A read-only agent checked it against the current files and found it still live; it has no acceptance condition yet.

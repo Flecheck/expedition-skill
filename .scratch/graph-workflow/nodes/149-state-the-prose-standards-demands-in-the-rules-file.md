@@ -1,7 +1,7 @@
 # State the prose standard's demands in the rules file, instead of locating it by plugin name
 
 Type: implementation
-Status: open
+Status: out-of-scope
 
 Blocked by: 144
 
@@ -85,10 +85,19 @@ the manager, which is why no map change was made when node 132 resolved.
 
 ## Flags
 
-`149.1` `ASSUMPTION` — *The manager's own.* This node's acceptance condition names three absolute paths beginning
+`149.1` `ASSUMPTION` **· settled** — *The manager's own.* This node's acceptance condition names three absolute paths beginning
 `/home/ten/Projects/expedition/`, which is the machine-specific form node 147 removed from every other live condition
 and node 148 is minted to prevent. The manager filed the condition unaltered rather than repairing it, on the rule
 that rewriting an acceptance condition is never the manager's. The consequence is that this node's worker and its
 checker are handed a path that names this machine, and the node is startable only on a machine where that path
 resolves. Sequencing node 148 before it would fix the class rather than this instance; the manager has not made that
 an edge.
+
+## Ruled out of scope, 2026-10-06
+
+Dropped at the triage the human invoked on 2026-10-06: the plugin standard still resolves, and the map's six standing rules for writing already state the prose demands as text; its condition is stale three ways (a rules-file block that no longer exists, a rule that now lives in `map.md`, and `/home/ten/...` paths). A read-only agent checked the node against the current files.
+
+*The human's answer to the triage proposal, `verbatim`, 2026-10-06:* *"ok"*. The manager's proposal ended "Please answer Q1 to Q4. \"ok for all\" approves each as proposed."
+
+*The manager's note, 2026-10-06:* flag 149.1 settled in the triage flag batch the human approved.
+
