@@ -1,8 +1,14 @@
 # State the sweep as a whole-graph run of the mechanical checks
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+SKILL.md's closing section now says the sweep is one read-only agent running every mechanical check over the whole graph, with each failure becoming a node, and graph-conventions.md makes this the one exception.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1, correction round 1`. The checker passed run 1 with two questions. The human sent the work back at that gate, and clause 1 was amended. The checker passed run 2, and that gate was taken under the human's standing yes (see `## Review`). The work landed as commit `53c63dc85`. The node raised no flags.
 
 ## Question
 
