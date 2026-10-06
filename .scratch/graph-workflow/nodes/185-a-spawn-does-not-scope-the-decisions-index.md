@@ -200,3 +200,58 @@ RETROSPECTIVE
 `185.1` `ASSUMPTION` — The manager contract's label-scoping sentence was dropped. *(The worker's full text is under its handover's `FLAGS`.)*
 
 `185.2` `ASSUMPTION` — The search rule sits as its own paragraph after the read-in-full paragraph. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-06. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/check185.md`. The node's two flags, 185.1 and 185.2, reached it as text.*
+
+> PASS
+>
+> Acceptance condition. I unwrapped the text before every search. All searches ran in the worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/185-decisions-search.
+>
+> 1. Clause 1 holds. Under `## What you read` in each of the four worker contracts, the only line mentioning decisions is the new search paragraph. No list item names `decisions.md` any more. Search: `awk '/^## /{s=$0} s=="## What you read"' <file> | grep -n decisions`, run on each file. The diff shows that the item "`decisions.md` — the sections the spawn names" was removed from each list.
+> 2. Clause 2 holds. Each of the four files has this paragraph under `## What you read`: "Search `decisions.md` for your node's terms and paths, and for any node numbers the spawn names. Read only the lines that match." It sits at grilling line 55, prototype 56, precondition 60 and implementation 67. Each of those lines falls between the `## What you read` heading and the next heading, which I confirmed with `awk '/^## /{print NR": "$0}'`.
+> 3. Clause 3 holds. The search paragraph, taken out as a whole paragraph with `awk -v RS= 'index($0,"Search \`decisions.md\`")==1'`, gives the same md5 in all four files (db0e5edb…).
+> 4. Clause 4 holds. The paragraph beginning "Read everything the list above names in full." gives the same md5 in all four files, both in the worktree and at 9c0322810 (4766d171…). It is therefore identical across the files and unchanged by the work.
+> 5. Clause 5 holds. Under `## Spawning a worker` in .claude/skills/expedition/SKILL.md, the spawn list now reads "The node numbers whose lines in the effort's index of decisions you already know bear on the node. The spawn may name them and need not. The worker searches that index for those numbers and for its node's own terms and paths, rather than reading it." The pointers item now names only the node file and the map. I extracted the section with awk and grepped the whole file for `decisions`, `scope that index` and `label`. Nothing else in the file presents the index as something the worker reads in full.
+> 6. Clause 6 holds. `grep -rn "sections the spawn names" .claude/` returns nothing (rc=1).
+> 7. Clause 7, the bar, is covered below.
+>
+> The condition's recorded search. I ran `grep -rn "sections the spawn names" .claude/` as written. In the worktree it now returns nothing, which is the outcome the work intends. Run against the base with `git grep` at 9c0322810, it returns exactly one line in each of the four files: grilling:44, implementation:55, precondition:49 and prototype:44. Each is the list item. That matches the return the condition records. No instance falls outside the condition's list.
+>
+> The bar.
+> - The repo root holds no agent-instruction file (only CONTEXT.md, CONTEXT-MAP.md and .gitignore) and no manifest, so there are no build, test or format commands to run. That matches what map-implementation-rules.md records.
+> - `git diff --check` printed nothing (rc=0).
+> - `git status --porcelain --untracked-files=all` lists only the five expected paths, all modified, with nothing untracked. No path outside the condition's list was edited, and no record file was touched.
+>
+> The standards. I read only the standards in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md and opened no other file in the effort's directory. That file lists six standards:
+> - /coding-principles and /naming
+> - glossary.md `_Avoid_` lines
+> - the ground rules
+> - the six standing rules for writing
+> - graph-conventions.md
+> - /writing-for-agents
+>
+> The file names no reviewing skill, so I ran none and checked the standards by hand. These bore on the work:
+> - **Glossary `_Avoid_` lines.** "index" is refused only for **Map**. "Index of decisions" was already used in SKILL.md, and the new text uses no other refused word.
+> - **graph-conventions.md.** It says decisions.md holds one line per resolved node, and that an entry is identified by the first link on its line, which is a node path carrying its number. A search by node number and term therefore fits the file's form, and nothing in graph-conventions.md contradicts the change.
+> - **Ground rules 1–3.** The search rule names no tool ("Your environment provides the search" is unchanged), and each contract still stands alone.
+> - **Writing rules 5 and 6.** The new sentences each state one idea, plainly, and each pronoun has one clear referent.
+> - **The rules file's auto-loaded trigger-file rule.** `## Spawning a worker` is not one of the trigger-duty or priority statements, so .claude/rules/expedition-triggers.md owed no matching edit.
+>
+> I found no breach. I read the changed paths as the work, under the rules file's rule for record work, though none of them is a record file.
+>
+> Flags, checked after the outcome:
+> - 185.1 is true. "Where the effort has a label vocabulary, scope that index by label." no longer appears in .claude/skills/expedition/SKILL.md (grep for `scope that index` and `label`; the only remaining hit is line 760, which is unrelated).
+> - 185.2 is true. In all four files the search rule is its own paragraph straight after the "Read everything the list above names in full." paragraph, not an item in the pointer list.
+>
+> I wrote no temporary files.
+
+*The manager's note:* the checker handed back no question and no raise, covered every clause, and found both flags true. The gate is taken under the standing yes, below.
+
+
+### Gate — approve, `standing yes`, 2026-10-06
+
+Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies. This settles none of the node's flags; they settle at the node closing report.
