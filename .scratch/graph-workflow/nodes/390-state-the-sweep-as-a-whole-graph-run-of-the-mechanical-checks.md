@@ -119,3 +119,43 @@ RETROSPECTIVE
 
 *The manager's note:* the manager's message ended "Please answer: \"ok for recommended\" sends node 390 back with that wording, or say approve as is." The recommendation was to send the work back on the checker's question 2. The paragraph's second sentence would become "Give the run to one read-only agent, which reports every failure and every report of check 10." and its third "Each failure becomes a node, in place of the routes under `### What a failure produces`." The reply takes it. The amendment above writes that wording into clause 1, naming the file of the cited heading. The checker's question 1 is answered by node 388's landed glossary edit and flag 389.2.
 
+
+## Handover, attempt 1, correction round 1
+
+*Pasted as the worker handed it back, 2026-10-06. The manager rebuilt the first two lines' labels and opening words, which its extraction key cut; every other word is the worker's.*
+
+`````
+HANDOVER:      State the sweep as a whole-graph run of the mechanical checks
+ANSWER:        Node 389's answer is now in the two shipped files, with the wording the human chose at the gate on 2026-10-06. In `.claude/skills/expedition/SKILL.md`, a new paragraph sits at the end of `## Closing an effort`, right after the bullet "- What the sweep found, and every sweep round.". It reads: "The sweep is a run of every check under `## Mechanical checks` in `graph-conventions.md` over the whole graph. Give the run to one read-only agent, which reports every failure and every report of check 10. Each failure becomes a node, in place of the routes under `### What a failure produces` in `graph-conventions.md`. When the frontier empties again, the sweep runs again." The paragraph names the two rules it departs from. Check 10 "reports and never fails", so the agent also passes on check 10's report. A sweep failure becomes a node rather than taking either route under `### What a failure produces`, which are repair inside the act or putting it to the human. In `.claude/skills/expedition/graph-conventions.md`, under `### Who runs a check, and when`, "No schedule, no periodic pass and no separately spawned agent runs any of them. One run is not tied to an act: a run of every check over the whole graph, which remains available at an empty frontier." was replaced by "No schedule, no periodic pass and no separately spawned agent runs any of them, with one exception. The sweep runs every check over the whole graph at an empty frontier, and `## Closing an effort` in `SKILL.md` says who runs it." Both files use the condition's words exactly. The lines are wrapped to the files' existing width, and nothing else in either file changed. `.claude/rules/expedition-triggers.md` needs no edit: the edited section is not one of the two whose duties it copies, and it does not mention the sweep.
+
+INDEX LINE:    SKILL.md's closing section now says the sweep is one read-only agent running every mechanical check over the whole graph, with each failure becoming a node, and graph-conventions.md makes this the one exception.
+
+FLAGS:         none
+
+NEW NODES:     none
+
+INVALIDATIONS: none beyond what node 389 already reported (nodes 10 and 15).
+
+CONDITIONS:    The searches from the first handover still hold. This round added "What a failure produces" and "check 10" as search phrases. I did not re-run those over the open nodes, because the amended clause adds only references to existing headings, which no other node's wording depends on. No replacement clauses.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:  Correction round (the human's "ok" on the manager's recommendation). Change: the SKILL.md paragraph now uses amended clause 1's wording. "reports only the failures" became "reports every failure and every report of check 10", and "Each failure becomes a node." became "Each failure becomes a node, in place of the routes under `### What a failure produces` in `graph-conventions.md`." This touched clause 1, and clauses 2 to 4 are unaffected. I confirmed both references against the tree: `### What a failure produces` exists in graph-conventions.md, and check 10 reads "It reports and never fails.". Checker question 1 (the glossary's Sweep entry) needs nothing from this node. Paths touched: `.claude/skills/expedition/SKILL.md`, `.claude/skills/expedition/graph-conventions.md`. Nothing under `.scratch/` changed, and `git status` in the worktree shows only those two files. Bar: the repo states no commands and the record's bar is unchanged.
+Proposed commit message:
+  State the sweep as a whole-graph run of the mechanical checks
+
+  SKILL.md's closing section says the sweep runs every mechanical check
+  over the whole graph with one read-only agent, which passes on every
+  failure and check 10's report, each failure becoming a node in place of
+  the usual failure routes. graph-conventions.md makes the sweep the one
+  exception to its rule that no separately spawned agent runs a check.
+
+  Node: graph-workflow/390
+
+RETROSPECTIVE
+1. What I had to hunt for: nothing new. I checked the two references the new wording makes with one grep and one look at check 10.
+2. What arrived that the node did not need: nothing new this round.
+3. What would have made it easier: node 389 could have checked its verbatim paragraph against the rules it overrides, `### What a failure produces` and check 10's "reports and never fails". The departure was made by the condition's author. As the worker bound to verbatim text, I copied it and did not test it against the rest of graph-conventions.md either.
+   - `condition-clauses-contradict-each-other`: 1 earlier retrospective carries it (node 388), derived 2026-10-05 by derivations.md entry (j); the count is for scale only. That was the closest existing name. Here the verbatim text contradicted another shipped rule rather than another clause, so a fresh name may fit better: `verbatim-condition-overrides-a-rule-unnamed`, carried by no earlier retrospective.
+4. Stale, wrong or contradictory: nothing new.
+`````
