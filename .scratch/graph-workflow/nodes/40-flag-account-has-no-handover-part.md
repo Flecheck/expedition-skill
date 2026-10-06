@@ -6,6 +6,10 @@ Blocked by: 392
 
 ## Question
 
+This work lets the human see what the worker actually did, in the worker's own words, when they come back to a flag on a node that had an interview or a review. It does this by giving that account a route from the worker to the place where it is filed.
+
+*The opening sentence above was written by [node 392](392-write-the-acceptance-conditions-for-the-five-kept-nodes.md)'s worker and filed by the manager on 2026-10-06.*
+
 [`graph-conventions.md`](../../../.claude/skills/expedition/graph-conventions.md)'s `### Raise a flag`
 procedure requires a **third** piece of writing for every flag, beyond the two [A worker's handover carries
 no acceptance condition for the node it mints](35-handover-mints-no-condition.md) just fixed:
@@ -68,6 +72,31 @@ contracts](32-narrow-flags-file-clause.md) and [Nothing tells a worker to hold i
 record](37-invalidations-is-not-a-check.md). The landing policy forbids a second commit against one **node**,
 not against one **file**, so these may run in any order — but not concurrently, the code slot being
 exclusive.
+
+## Acceptance condition
+
+*Authored by [node 392](392-write-the-acceptance-conditions-for-the-five-kept-nodes.md)'s worker, from the human's 2026-10-06 decision where the node has one, and filed by the manager.*
+
+> Done when all of the following hold. In this condition, a *round* is an `## Interview` attempt or a round in `## Review` on a node file. A flag's *account* is the full account of what produced the flag. For a flag from a worker's own unprompted judgement, the account is what the worker actually did, told in the worker's words.
+>
+> 1. `.claude/skills/expedition/graph-conventions.md` states, for every node, which section of the node file holds a flag's account. Before this work, that statement is this paragraph under `### Raise a flag`: "The round that raised the flag, an `## Interview` attempt or a round in `## Review`, says what produced it. For a flag from a worker's own unprompted judgement, what produced it is what the worker actually did, told in the worker's words. A one-line summary is enough under `## Flags`. The round needs the full account. Where a node has no round at all, as with an AFK `precondition` node, the `## Flags` entry carries that account itself." The work may change where the statement places the account. After the work, the statement still places the account in some section of the node file, on every kind of node.
+> 2. Every section that clause 1's statement names as holding the account admits it in graph-conventions.md's own description of that section, under `## The node file`. Where the statement names `## Review`, that section's description lists the account among the kinds of entry it holds. Before this work, that description lists three kinds of entry "and nothing else": a checker run, a correction round, and the gate's outcome. Where the statement names `## Interview`, that section's description lists the account among what an attempt's block holds.
+> 3. Each of these four files states in which part of which of its hand-back shapes its worker hands back the account, for every section where clause 1's statement places the account on that worker's kind of node:
+>    - `.claude/skills/expedition-grilling/SKILL.md`
+>    - `.claude/skills/expedition-prototype/SKILL.md`
+>    - `.claude/skills/expedition-precondition/SKILL.md`
+>    - `.claude/skills/expedition-implementation/SKILL.md`
+> 4. The account may travel inside a part whose other text is filed under a different section of the node file. An example is the `FLAGS` part, whose prose is filed under `## Flags`. In that case, `.claude/skills/expedition/SKILL.md` or `.claude/skills/expedition/graph-conventions.md` states that the account is filed under the section clause 1's statement names.
+> 5. Where each of the four files in clause 3 states where the account is held, that statement agrees with clause 1's statement. Before this work, the four files' statement is this paragraph of `## When you raise a flag`: "The round that created the flag, an `## Interview` attempt or a `## Review` round, holds the account of what produced the flag. If your node holds no round at all, meaning no exchange with the human and no gate, your `## Flags` entry holds that account instead: what you actually did, in your words."
+> 6. The sections headed `## When you raise a flag` and `## When a node you report is an implementation node` are byte-identical across the four files of clause 3 before this work, and are byte-identical across them after it.
+> 7. This condition fixes no form. Any of the following meets it, provided clauses 1 to 6 hold:
+>    - the account travels as a new part of a hand-back shape;
+>    - the account travels as a further element of an existing part, such as `FLAGS`;
+>    - the account travels inside text a shape already carries, such as a question's `SO FAR` or a correction round's report of what changed;
+>    - clause 1's statement moves the account to a section that an existing route already reaches.
+> 8. The working tree meets the bar.
+>
+> Scope: the scope came from no search, because the named places are the work rather than instances of a defect.
 
 ## Annotation: this node is now startable, on the same decision that unstuck node 32
 

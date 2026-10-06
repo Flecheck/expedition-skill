@@ -7,6 +7,10 @@ Blocked by: 392
 
 ## Question
 
+This work lets every worker find the decisions that bear on its node without reading the whole index of decisions. It works on any effort, with or without a label vocabulary.
+
+*The opening sentence above was written by [node 392](392-write-the-acceptance-conditions-for-the-five-kept-nodes.md)'s worker and filed by the manager on 2026-10-06.*
+
 *Minted by the manager under the map's rule that a standing retrospective item reported a second time becomes a node.
 Reported by [node 175](175-what-the-worktree-cycle-does-to-the-sandbox.md)'s worker and then by [node
 169](169-rules-file-bar-paragraph-names-the-maps-standing-preferences.md)'s.*
@@ -27,6 +31,28 @@ answer is a heading structure in `decisions.md`, a per-spawn list of node number
 effort has so far refused; and whether any of it is this effort's practice or reaches a shipped file.
 
 *Added 2026-09-28 by the manager, the text written by [node 358](358-whether-decisions-mds-size-trigger-is-re-offered-or-retired.md)'s worker:* **`decisions.md` is 80,400 bytes**, past the ~43,847-byte anchor at which node 129's package said part (ii) would be re-offered, which is taking the file off every worker's read-whole list. The human's ground for keeping it read whole at node 129 was *"it's small enough"*, and it no longer holds. [Node 358](358-whether-decisions-mds-size-trigger-is-re-offered-or-retired.md) retired that size trigger and made this node the place where part (ii) is re-offered, in the scoped form spawns already use.
+
+## Acceptance condition
+
+*Authored by [node 392](392-write-the-acceptance-conditions-for-the-five-kept-nodes.md)'s worker, from the human's 2026-10-06 decision where the node has one, and filed by the manager.*
+
+> Done when all of the following hold.
+>
+> 1. Each of the following four files, under `## What you read`, no longer lists `decisions.md` among the things read in full:
+>    - `.claude/skills/expedition-grilling/SKILL.md`
+>    - `.claude/skills/expedition-prototype/SKILL.md`
+>    - `.claude/skills/expedition-precondition/SKILL.md`
+>    - `.claude/skills/expedition-implementation/SKILL.md`
+>
+>    Before this work, each file lists it as "`decisions.md` — the sections the spawn names".
+> 2. Each of those four files, under `## What you read`, states the following: the worker searches `decisions.md` for its node's terms and paths, and for any node numbers the spawn names; and the worker reads only the lines that match.
+> 3. The text that states clause 2's search is byte-identical across the four files.
+> 4. The paragraph beginning "Read everything the list above names in full." is byte-identical across the four files after this work, as it is before.
+> 5. `.claude/skills/expedition/SKILL.md`, under `## Spawning a worker`, states that a spawn may name the node numbers whose lines in the effort's index of decisions the manager already knows bear on the node. It does not present that index as something the worker reads in full. This condition demands nothing of that section's sentence "Where the effort has a label vocabulary, scope that index by label.": it may stay, change or go.
+> 6. The phrase "the sections the spawn names" appears in no file under `.claude/`.
+> 7. The working tree meets the bar.
+>
+> Scope: on 2026-10-06, `grep -rn "sections the spawn names" .claude/` was run over the working tree. It returned one line in each of the four files of clause 1, each the list item "`decisions.md` — the sections the spawn names" under `## What you read`, and nothing else. `.claude/skills/expedition/SKILL.md` is named because it is part of the work, not because the search found it. Any instance the search reaches outside these five files is reported and not edited.
 
 ## The manager's note at filing
 

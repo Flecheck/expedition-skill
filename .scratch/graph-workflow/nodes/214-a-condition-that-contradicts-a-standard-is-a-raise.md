@@ -8,6 +8,10 @@ Blocked by: 392
 
 ## Question
 
+This work lets the human hear before the work is finished, by way of a raise, when an implementation worker's acceptance condition cannot be honoured together with another clause or with a standard. Without it, the human meets the collision at the gate.
+
+*The opening sentence above was written by [node 392](392-write-the-acceptance-conditions-for-the-five-kept-nodes.md)'s worker and filed by the manager on 2026-10-06.*
+
 *Directed by the human at [node 200](200-collapse-the-rules-files-two-map-history-statements.md)'s gate, in their
 own words.*
 
@@ -36,9 +40,24 @@ what the trigger is precisely enough that it does not fire on every hard clause.
 
 ## Acceptance condition
 
-**None. The human directed the work rather than minting a node with a condition, and the manager did not write
-one** — authoring the standard the work is judged against is not the manager's, and this node's whole subject is an
-agent's conduct toward such a standard. The condition is owed by whoever the human sends at it, or by them.
+*Authored by [node 392](392-write-the-acceptance-conditions-for-the-five-kept-nodes.md)'s worker, from the human's 2026-10-06 decision where the node has one, and filed by the manager.*
+
+> Done when all of the following hold.
+>
+> 1. `.claude/skills/expedition-implementation/SKILL.md`, in the section `## The acceptance condition`, tells the worker what to do in this case: where a clause of its acceptance condition cannot hold together with another clause of the condition, or with a standard its work is held against, its premise is broken, and it raises under trigger 1 of `## Flag, or raise` before it finishes the work. This sentence meets the clause word for word: "When a clause of your condition cannot hold together with another clause or with a standard you are held against, your premise is broken: raise under trigger 1 before you finish." Other wording meets it where it states every element of that sentence.
+> 2. In `.claude/skills/expedition-checker/SKILL.md`, the table under `### When what you check against is itself the problem` gains one row, word for word. Its first cell is "two parts of the condition cannot both hold on one reading of them, and every part holds on another". Its second cell is "your outcome under the reading on which every part holds, and a question". The table's other rows keep their words, though the work for the rest of this node's condition may change them.
+> 3. In the same file, under `### Questions, alongside a \`PASS\` or a \`FAIL\``, the sentence "Three kinds of question reach the human this way, and none of them stops your check." becomes "Four kinds of question reach the human this way, and none of them stops your check." One paragraph is added after the paragraph that begins "The third is a false flag" and before the paragraph that begins "Hand each question back under your outcome". The paragraph is, word for word: "The fourth is two parts of the condition that cannot both hold on one reading of their words, where every part holds on another reading. Check the work under the reading on which every part holds. Taking that reading is not a repair of the condition. In the question, name the reading you took, the reading you set aside, and each part the work would fail under the reading you set aside. Where no reading lets every part hold, the condition is self-contradicting, so raise."
+> 4. No other sentence of `.claude/skills/expedition-checker/SKILL.md` changes to carry clauses 2 and 3, and no heading of the file is renamed.
+> 5. Apart from the row clause 2 adds and the sentence and paragraph clause 3 changes and adds, `.claude/skills/expedition-checker/SKILL.md` is unchanged by this work. In particular, the section `### raise — nothing left to check against` keeps its words.
+> 6. The working tree meets the bar.
+>
+> Scope: the scope came from no search, because the named places are the work rather than instances of a defect.
+
+*The section as it stood before, kept as written:*
+
+> **None. The human directed the work rather than minting a node with a condition, and the manager did not write
+> one** — authoring the standard the work is judged against is not the manager's, and this node's whole subject is an
+> agent's conduct toward such a standard. The condition is owed by whoever the human sends at it, or by them.
 
 ## The manager's note at filing
 

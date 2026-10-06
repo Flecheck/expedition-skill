@@ -8,6 +8,10 @@ Blocked by: ~~56~~, ~~170~~, 392
 
 ## Question
 
+This work lets an agent on any effort record a defect it noticed in the expedition workflow itself. It also lets the manager record a permission the human granted past a blocking contract clause. Each gets a flag marker that says what it is.
+
+*The opening sentence above was written by [node 392](392-write-the-acceptance-conditions-for-the-five-kept-nodes.md)'s worker and filed by the manager on 2026-10-06.*
+
 Land in the shipped files what node 19 settled: the `FRICTION` marker, its settlement rule, the fact that an
 effort not owning the skill never fixes it, the human's carried instruction as the way past blocking friction,
 and the gate-disclosure duty on a self-edit.
@@ -165,3 +169,18 @@ Before a worker starts this node, the human chooses how a permission the human g
 `verbatim`: *"ok"*
 
 *The manager's note:* the reply takes the recommendation. It is still to become an amendment clause on this node's condition.
+
+## Amendment, 2026-10-06 (from node 392)
+
+*Pasted as node 392's worker wrote it. It carries the human's 2026-10-06 decision on recording a permission. Flag 392.1 records its judgement on clause 5.*
+
+*Written by node 392's worker. The words are fixed by four sources:*
+- *the condition's own clauses 1 and 5, written by node 19's worker;*
+- *the human's 2026-10-06 answer on this node, which takes the recommendation to "add `PERMISSION` as a marker beside `FRICTION`, defined in one line: \"a permission the human granted for one attempt, past a contract clause that blocked the node\". It's settled like any flag. One list grows by one entry, and nothing else moves.";*
+- *node 312's landed split (commit `e64b3de`): rules about the graph's files go in graph-conventions.md, and rules about the manager's choices go in SKILL.md;*
+- *the shipped text of `.claude/skills/expedition/SKILL.md` under `### Two things that travel in a spawn and are not yours`.*
+
+- **A replacement for clause 1.** Read clause 1 as: "1. `.claude/skills/expedition/graph-conventions.md`, where it lists the markers a node's `## Flags` entry may carry, lists two markers alongside `ASSUMPTION`, `CONDITION-WRONG` and `DELEGATED`, and states that the list holds five markers. One is named `FRICTION`, and its stated meaning is: a defect the agent noticed in the expedition workflow itself while using it, rather than a judgement about the work in front of it. The other is named `PERMISSION`, and its stated meaning is: a permission the human granted for one attempt, past a contract clause that blocked the node."
+- **A replacement for clause 5.** Read clause 5 as: "5. `.claude/skills/expedition/SKILL.md`, under `### Two things that travel in a spawn and are not yours`, states three things: that where friction blocks a node, the way past it is an instruction from the human carried into the spawn as their own words; that where the same instruction is needed more than once, it is written into that effort's ground rules in `map.md`'s `## Notes`; and that the manager may not invent such an instruction on its own authority. Text already under that heading counts toward any of the three. `.claude/skills/expedition/graph-conventions.md` gains none of the three statements."
+- **An added clause.** "11. `PERMISSION` is added to the marker list named in clause 1, and to no other file's list of markers. No sentence about how a `PERMISSION` flag settles is added anywhere. It settles under the same rules as every other flag."
+- Scope of the three clauses: the scope came from no search, because the named places are the work rather than instances of a defect.
