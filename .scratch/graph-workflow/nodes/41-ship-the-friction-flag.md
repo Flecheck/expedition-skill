@@ -120,6 +120,14 @@ standard. Node 29's answer is what makes that refusal correct rather than merely
 
 *The manager's note, 2026-09-28:* [node 353](353-whether-implementer-becomes-a-glossary-headword.md)'s worker reports this node's question changed. Its words, pasted: Node 41 (open, implementation): the question changes, but no clause does. The manager's 2026-09-27 note, relaying node 56's worker, says the `FRICTION` entry its worker owes "now goes in `.claude/skills/expedition/glossary.md`". Under this answer, `FRICTION` is a flag marker and owes no glossary entry. So that obligation, and the manager's filing note that `UPSTREAM` belongs in the glossary as its refused alternative, no longer hold. The marker is defined where its shape is defined, which clauses 1 and 7 already require. Its condition does not mention the glossary, so no replacement clause is needed. Clause 8 ("the checker contract is not changed by this work") limits that node's own work and does not conflict with the new rename node, which changes that file.
 
+`41.2` `ASSUMPTION` — The disclosure duty also went into the implementation contract's GATE PAYLOAD line. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`41.3` `ASSUMPTION` — "A direction from the human" was renamed "an instruction from the human". *(The worker's full text is under its handover's `FLAGS`.)*
+
+`41.4` `ASSUMPTION` — The glossary's and flags.md's "judgement an agent made on its own" wording was left unchanged. *(The worker's full text is under its handover's `FLAGS`.)*
+
+`41.5` `ASSUMPTION` — The "one case only" sentence was left to node 317. *(The worker's full text is under its handover's `FLAGS`.)*
+
 ## Edge, 2026-09-29 (from node 366)
 
 *The manager's note:* node 41 gains `Blocked by: 170`, carrying out the human's answer to [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q3 (`verbatim`: *"ok"*) as node 366's worker proposed: 41 and 170 edit the same closed list of flag markers, and 170 still waits on a human choice. See flag 366.3. Node 56, its earlier blocker, is resolved.
@@ -184,3 +192,89 @@ Before a worker starts this node, the human chooses how a permission the human g
 - **A replacement for clause 5.** Read clause 5 as: "5. `.claude/skills/expedition/SKILL.md`, under `### Two things that travel in a spawn and are not yours`, states three things: that where friction blocks a node, the way past it is an instruction from the human carried into the spawn as their own words; that where the same instruction is needed more than once, it is written into that effort's ground rules in `map.md`'s `## Notes`; and that the manager may not invent such an instruction on its own authority. Text already under that heading counts toward any of the three. `.claude/skills/expedition/graph-conventions.md` gains none of the three statements."
 - **An added clause.** "11. `PERMISSION` is added to the marker list named in clause 1, and to no other file's list of markers. No sentence about how a `PERMISSION` flag settles is added anywhere. It settles under the same rules as every other flag."
 - Scope of the three clauses: the scope came from no search, because the named places are the work rather than instances of a defect.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back, 2026-10-06.*
+
+`````
+HANDOVER:      Ship the FRICTION flag and the self-edit disclosure duty
+
+ANSWER:        The FRICTION and PERMISSION markers, FRICTION's settlement rule, the rule that an effort not owning the skill files never fixes them, the human's carried instruction as the way past blocking friction, and the self-edit disclosure duty are now in the shipped files. All changes are uncommitted in the worktree at 0cf4d4acf.
+               - `.claude/skills/expedition/graph-conventions.md`:
+                 - `### `## Flags``: "There are five markers". `FRICTION` and `PERMISSION` are added with the condition's exact meanings. The lead-in now reads "one word saying which kind of flag it is" instead of "which kind of judgement the flag records", because a permission is not a judgement.
+                 - Under `flags.md`'s line form: a `FRICTION` flag uses the same form, with its marker where `ASSUMPTION` stands.
+                 - `### `## Acceptance condition``: an effort whose product is not the expedition skill files never fixes them, so no acceptance condition and no condition for closing that effort may depend on a change to them.
+                 - `### Settle a flag`: a `FRICTION` flag on such an effort has exactly two dispositions, refused (settled in place with the human's reason on its entry) and outstanding (left unchecked, and carried again by the effort closing report). It is never settled as fixed by an agent, for the cross-repository reason. The human may check the line by hand, and mark the entry settled, once they know the fix landed. The paragraph names the `## Flags` rule in `SKILL.md` that it changes for such a flag.
+                 - A new section, `## Work that changes a file other nodes are written against`, holds the gate disclosure duty.
+               - `.claude/skills/expedition/SKILL.md`, `### Two things that travel in a spawn and are not yours`: the first bullet is now "An instruction from the human" (it said "direction"). It states the three things clause 5 requires: a defect in the workflow that blocks a node is passed by the human's instruction carried as their words; an instruction needed more than once goes into the effort's ground rules in `map.md`'s `## Notes`; the manager never invents one. No `PERMISSION` text was added, and no settlement sentence for it anywhere.
+               - Four worker contracts (grilling, prototype, precondition, implementation): `FRICTION` is added to "markers are yours", with the meaning "a defect in the expedition workflow itself that you noticed while using it", and to the `FLAGS:` handover line.
+               - The implementation contract's `GATE PAYLOAD:` also carries the disclosure duty.
+               - The checker contract, the glossary and all `.scratch/` files are untouched.
+
+INDEX LINE:    The FRICTION and PERMISSION flag markers, FRICTION's two-disposition settlement, the carried-instruction route past blocking friction, and the gate disclosure duty for self-edits ship in the skill files.
+
+FLAGS:
+  ASSUMPTION: The disclosure duty was also put in the implementation contract's GATE PAYLOAD line. The condition places it only in graph-conventions.md, but the worker that owes it reads its contract, and on other efforts it does not read graph-conventions.md. So without this line the duty would reach nobody who owes it. Index: Node 41 added the gate disclosure duty to the implementation contract's GATE PAYLOAD line as well as graph-conventions.md, so the worker owing it reads it.
+  ASSUMPTION: Renamed the first bullet under SKILL.md `### Two things that travel in a spawn and are not yours` from "A direction from the human" to "An instruction from the human". Clause 5 uses "instruction", and keeping both words for one thing would give it two names. No other shipped file used "direction" for it (grep over .claude/). Index: Node 41 renamed the spawn's "direction from the human" to "instruction from the human" so the carried-instruction rule uses one word.
+  ASSUMPTION: Two places were left unchanged, following the human's "nothing else moves" on the PERMISSION decision. The glossary's `**Flag**:` entry and graph-conventions.md's description of flags.md ("every judgement an agent made on its own") still describe a flag as an agent's own judgement. A PERMISSION flag is the human's grant, and a FRICTION flag is an observation rather than a judgement. Only the marker list's lead-in was reworded ("which kind of flag it is"), because otherwise that sentence would be false next to the list it introduces. If the human wants the definitions aligned, that is a small node. Index: Node 41 left the glossary's and flags.md's "a judgement an agent made on its own" wording unchanged despite PERMISSION and FRICTION, rewording only the marker list's lead-in.
+  ASSUMPTION: Did not edit SKILL.md `## Flags`'s "Flags reach the effort closing report in one case only" sentence. It becomes narrower than the outstanding-FRICTION case, but claimed node 317 replaces exactly that sentence with "every outstanding flag reaches the effort closing report", which covers it. Editing it here would collide with 317's work. graph-conventions.md's new paragraph names the SKILL.md `## Flags` rule it changes for such a flag. Index: Node 41 left SKILL.md's "one case only" closing-report sentence to node 317, which replaces it with a rule covering outstanding FRICTION flags.
+
+NEW NODES:     none
+
+INVALIDATIONS:
+               - Node 19 (Workflow self-improvement): extended. Its settled marker, settlement rule, carried-instruction route and gate duty now ship.
+               - Node 170 (merged here): answered by the PERMISSION marker.
+               - Node 353: narrowed. Its answer says the markers are defined in graph-conventions.md "There are three markers: ..."; there are now five.
+               - Node 312: item 17 maps "one word saying which kind of judgement the flag records", which now reads "which kind of flag it is".
+               - Node 297: its recorded wording "such a direction is the only way the node can proceed" is renamed to "such an instruction".
+               - Nodes 380 and 78: their answers name the spawn part "a direction from the human", now called "an instruction from the human" (rename).
+               - Node 392: its note quoting "There are three markers:" is superseded as expected.
+
+CONDITIONS:
+               - Searched the conditions and questions of the open and claimed nodes (317, 393; 41 itself excluded) for "One marker is yours", "Two markers are yours", "three markers", "There are three", "FLAGS:", "prefixed ASSUMPTION", "GATE PAYLOAD", "in one case only", "direction from the human", "FRICTION", "PERMISSION", "LICENCE" and "kind of judgement".
+               - Node 317 (claimed) matches on "in one case only". No clause of it is made wrong: my work leaves that sentence untouched, and 317's replacement covers outstanding FRICTION flags.
+               - Node 393 is unaffected: its "all seven parts" sentences were not edited.
+               - No replacement clauses.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:
+               - Checker: not yet run.
+               - Paths touched:
+                 - .claude/skills/expedition/graph-conventions.md
+                 - .claude/skills/expedition/SKILL.md
+                 - .claude/skills/expedition-grilling/SKILL.md
+                 - .claude/skills/expedition-prototype/SKILL.md
+                 - .claude/skills/expedition-precondition/SKILL.md
+                 - .claude/skills/expedition-implementation/SKILL.md
+               - Bar: the repo root holds no CLAUDE.md, AGENTS.md or manifest, which matches map-implementation-rules.md: no build, tests or formatter. All added lines are within the files' existing wrap width.
+               - Disclosure under this node's own clause 6:
+                 - Files moved: the six above. The marker list, FLAGS: lines, "markers are yours" sentences, GATE PAYLOAD line and the spawn bullet changed form.
+                 - Left in the older form: every existing flag entry and flags.md line (three markers, by clause 9); the glossary `**Flag**:` entry; SKILL.md `## Flags`'s "one case only" sentence (node 317's); the precondition contract's "The flag settles at the node closing report" (not true of an outstanding FRICTION flag on a foreign effort; graph-conventions states the exception); and node answers quoting "A direction from the human" or "There are three markers".
+               - Proposed commit message:
+                 Ship the FRICTION and PERMISSION flag markers and the self-edit disclosure duty
+
+                 Node: graph-workflow/41
+
+RETROSPECTIVE:
+1. What I had to hunt for:
+   - Where clause 6's duty should sit in graph-conventions.md. No existing section fits a gate duty, so I added one.
+   - That claimed node 317 owns the SKILL.md sentence my settlement rule makes narrow. I found it only through the CONDITIONS search, after I had already edited that sentence, and then reverted the edit.
+   - `condition-collides-with-claimed-node` (new, carried by 0 earlier retrospectives): an open node's planned edit overlaps a claimed node's, and nothing in the spawn said so.
+2. What arrived that the node did not need:
+   - Most of map.md and map-implementation-rules.md. Only ground rules, writing rules and the bar's commands bore on the work.
+   - `map-read-whole-for-a-few-items` (17 earlier retrospectives: 135, 178, 185, 205, 214, 220, 284, 317, 382, 386, 387, 388, 389, 390, 391, 392, 40).
+   - `rules-file-read-whole-for-one-section` (14 earlier retrospectives: 178, 185, 214, 220, 317, 382, 386, 387, 388, 390, 391, 392, 40).
+   - The node file's superseded clause text and history, read to reach the current condition.
+   - `node-history-read-to-reach-current-condition` (2 earlier retrospectives: 214, 392).
+3. What would have made the node easier:
+   - The spawn naming node 317 as editing SKILL.md `## Flags` concurrently.
+   - The condition stating the consolidated current clauses once, rather than an original plus three amendments.
+4. What was stale, wrong or contradictory:
+   - The node's question says it edits "the same five worker contracts as open nodes 32, 38 and 40". There are four now, and 40 is resolved.
+   - `question-quotes-superseded-text` (5 earlier retrospectives: 185, 214, 317, 392, 40).
+   - The manager's gap note says the FRICTION glossary entry is owed under the bar. Node 353 superseded that, as the node's own later note records.
+`````
+
+*The manager's note, 2026-10-06:* the worker is right that the spawn did not say node 317 was editing `SKILL.md`'s `## Flags` at the same time. The manager knew it and left it out.
