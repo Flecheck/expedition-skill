@@ -133,6 +133,8 @@ Clauses to add:
 
 *The manager's note, 2026-10-06:* kept at the triage the human invoked and approved (`verbatim` *"ok"*). A read-only agent checked it against the current files and found it still live; it has no acceptance condition yet.
 
+`214.2` `ASSUMPTION` — The worker chose where the new table row and the new sentence go. *(The worker's full text is under its handover's `FLAGS`.)*
+
 ## Interview
 
 #### The human's answer, 2026-10-06
@@ -142,3 +144,72 @@ Clauses to add:
 `verbatim`: *"ok"*
 
 *The manager's note:* the reply takes the recommendation. The condition is still to be written. Node 66's queued block and its 2026-10-04 replacement clause 2 (flag 214.1) stand as filed.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back, 2026-10-06.*
+
+`````
+HANDOVER:      A condition that cannot be honoured with a standard is a raise, in both workers' contracts
+
+ANSWER:        The work went into two shipped files in worktree `.scratch/graph-workflow/worktrees/214-clause-raise`, branch `worktree-214-clause-raise`, cut from 431b7c45b. It is uncommitted.
+               - `.claude/skills/expedition-implementation/SKILL.md`, `## The acceptance condition`: a second paragraph was added after the existing one, using the condition's own sentence word for word: "When a clause of your condition cannot hold together with another clause or with a standard you are held against, your premise is broken: raise under trigger 1 before you finish." Under the human's 2026-10-06 decision, the duty to raise sits with the implementer only.
+               - `.claude/skills/expedition-checker/SKILL.md`: this carries node 66's queued block, with node 379's replacement for clause 2.
+                 - One new row in the table under `### When what you check against is itself the problem`, word for word. It sits directly after the row "you can check it, the work complies, and complying is what produces the defect", because both rows hand back an outcome and a question.
+                 - The counting sentence now reads "Four kinds of question reach the human this way, and none of them stops your check."
+                 - The "The fourth is two parts of the condition…" paragraph is added word for word, between the "The third is a false flag" paragraph and "Hand each question back under your outcome".
+                 - No other sentence or heading changed, and `### raise — nothing left to check against` is untouched.
+               - The checker keeps its question route. A checker that finds two clauses that cannot both hold on any reading already raises under the existing "self-contradicting" ground, and the new paragraph's last sentence points there.
+
+INDEX LINE:    The implementation contract now treats a clause that cannot hold with another clause or a standard as a broken premise and a trigger-1 raise. The checker gains node 66's fourth question kind and table row.
+
+FLAGS:         ASSUMPTION: The condition fixes neither the position of the new table row nor the position of the new sentence within `## The acceptance condition`. I put the row directly after the "work complies, and complying is what produces the defect" row, because both rows hand back an outcome and a question. I put the sentence as its own paragraph after the existing one, which keeps that paragraph's words. Neither placement changes any other row or sentence.
+               Index: Node 214's worker chose where the checker's new table row and the implementer's new sentence go, since the condition fixed only their words.
+
+NEW NODES:     none
+
+INVALIDATIONS: - Node 66 ("The checker has no form for two clauses of one condition that cannot both hold"): its queued checker block is now carried out, with node 379's replacement clause 2. Its answer's "three kinds of question" becomes four as landed. This extends it and does not contradict it.
+               - Node 379: its counting sentence "Three kinds of question…" is now "Four kinds…". This extends it.
+               - Node 31: the non-blocking kinds of question it fixed, already extended by 66 and 379, now number four. This extends it.
+               - Node 23 (worker cannot proceed, broken premise): what counts as a broken premise for an implementation worker now names explicitly a clause that cannot hold with another clause or a standard. This extends it.
+               - map.md `## Notes`, standing preference "Where an agent sees that its acceptance condition forces a contradiction, that is a raise and not a flag": it says "an agent" and refers to both agents. The human's 2026-10-06 decision on this node puts the raise duty on the implementer only and keeps the checker's question beside its outcome. The map line is now wider than what shipped. A checker on this effort reading it could take a raise where its contract says to ask a question. The map line should be narrowed by the `Change the map` procedure. That is the manager's act and not mine.
+
+CONDITIONS:    I listed the open and claimed nodes with `grep -l -E '^Status: (open|claimed)' nodes/*.md`, which found 6 nodes on 2026-10-06; this count is for scale only and not authoritative. The nodes are 13, 185, 214, 317, 40 and 41. I searched their conditions and questions for: `expedition-implementation/SKILL.md`, `expedition-checker/SKILL.md`, "When what you check against", "## The acceptance condition", "trigger 1", "Questions, alongside", "kinds of question", "broken premise" and "premise is broken".
+               - Nodes 185, 40 and 41 name the implementation contract, but in other sections: `## What you read`, `## When you raise a flag`, and the `FLAGS`/markers line. None quotes text this work changed.
+               - Node 41's clause 8 requires that the checker contract not be changed by node 41's own work. That is unaffected, but whichever of 41 and 214 lands second integrates against the other's tree.
+               - No replacement clauses, and no open question changed.
+               I searched the resolved nodes' `## Answer` and `## Acceptance condition` sections for the same phrases. The matches are covered under INVALIDATIONS. The matches in nodes 242, 333 and 335 concern other contracts' raise wording and are unaffected.
+
+MISSING FROM MAP: Nothing blocking. map.md's standing preference about node 214 still describes the raise for "an agent", both agents, and does not reflect the human's 2026-10-06 implementer-only decision. I got that decision from the node's `## Interview` instead.
+
+GATE PAYLOAD:  Checker findings: none yet.
+               Paths touched:
+                 .claude/skills/expedition-implementation/SKILL.md
+                 .claude/skills/expedition-checker/SKILL.md
+               The bar: the repo root holds no CLAUDE.md, AGENTS.md or manifest, only `.claude`, `CONTEXT.md`, `CONTEXT-MAP.md`, `.gitignore` and `.scratch`. So it has no build, test or format commands, which matches `map-implementation-rules.md`. The bar is therefore its non-command half: the standards and the condition. The added lines add no trailing whitespace. The new table row is as long as its neighbours, which are already longer than the prose wrap width. I ran no method skill.
+               Proposed commit message:
+                 Implementation and checker contracts: a clause that cannot hold is a raise or a question
+
+                 The implementer raises under trigger 1 when a clause of its condition cannot hold with another
+                 clause or with a standard. The checker gains a fourth kind of question, and a routing-table
+                 row, for two parts that hold together only on one reading.
+
+                 Node: graph-workflow/214
+
+RETROSPECTIVE:
+1. What I had to hunt for: very little, because the condition dictated every word. The one thing I checked was whether the checker contract's current text matched the sentences the condition quotes. It did, at 431b7c45b. My first open-node search matched "Status: open" anywhere in a file, which pulled in resolved node 23. Anchoring on `^Status:` fixed it.
+   - `open-node-list-re-derived-by-hand` (1 earlier retrospective: 388)
+2. What arrived that this node did not need:
+   - I read all of map.md, and only the standing preference about node 214 and the ground rules bore on the work.
+     - `map-read-whole-for-a-few-items` (13 earlier retrospectives: 135, 178, 205, 220, 284, 382, 386, 387, 388, 389, 390, 391, 392)
+   - I read all of map-implementation-rules.md, and only the standards list and the bar paragraph were needed.
+     - `rules-file-read-whole-for-one-section` (10 earlier retrospectives: 178, 220, 382, 386, 387, 388, 390, 391, 392)
+   - The node file's superseded amendment blocks and its old condition text came along with the current condition.
+     - `node-history-read-to-reach-current-condition` (1 earlier retrospective: 392)
+3. What would have made it easier: nothing material. A fully word-for-word condition made this node mechanical. The spawn's verbatim copy of the condition meant I never needed the node's history.
+4. What was stale, wrong or contradictory:
+   - The node's title and question say "in both workers' contracts", and map.md's standing preference says "an agent". The human's 2026-10-06 decision made the raise implementer-only, so both are now wider than the decision.
+     - `map-rule-wider-than-shipped-decision` (new, 0 earlier retrospectives)
+   - The node's `## Amendment, 2026-10-02 (from node 66)` still quotes "Two kinds of question…", which node 379's amendment had already superseded.
+     - `question-quotes-superseded-text` (1 earlier retrospective: 392)
+`````

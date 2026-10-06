@@ -48,3 +48,53 @@ The two statements in `.claude/skills/expedition/SKILL.md` disagree about an out
 `verbatim`: *"ok"*
 
 *The manager's note:* the reply takes the recommendation: every outstanding flag reaches the effort closing report, and the `## Flags` sentence is reworded to say so. The condition is still to be written.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back, 2026-10-06.*
+
+`````
+HANDOVER:      Which outstanding flags reach the closing report
+ANSWER:        Every outstanding flag reaches the effort closing report. The answer is the human's, given on 2026-10-06. In `.claude/skills/expedition/SKILL.md`, under `## Flags`, the sentence "Flags reach the effort closing report in one case only: a flag whose node closing report the human never answered, because they never spoke again." is replaced by: "Every outstanding flag reaches the effort closing report, whatever the state of its node. The list under `## Closing an effort` gives what that report carries." The bullet under `## Closing an effort`, "Every outstanding flag, taken from the unchecked lines of the effort's index of flags and never reconstructed by you.", is unchanged, so the two statements now agree.
+               Calls a later reader would otherwise have to re-derive:
+               (1) The rule is restated in `## Flags` and not only pointed at. `graph-conventions.md`'s `### Settle a flag` says "`## Flags` in `SKILL.md` says when a node's flags settle, and which flags reach the effort closing report". A pointer-only paragraph would leave that citation pointing at a section that does not state the rule.
+               (2) The phrase is "whatever the state of its node" and not "whether or not its node has closed". The glossary's **Resolve** entry lists `close` in its `_Avoid_` line for a node, and **Closed** is defined for an effort only.
+               (3) The glossary's `**Flag**:` entry already names no case of a flag reaching the effort closing report, so it needed no edit. The scope search found no other sentence under `.claude/` that is narrower than every outstanding flag. A broader search for "one case", "cases only", "reach.*closing" and "outstanding flag" found none either. `expedition-triage`'s "for this one case" is about settling, not about reaching the report.
+INDEX LINE:    `SKILL.md`'s `## Flags` now says every outstanding flag reaches the effort closing report, whatever its node's state, which matches `## Closing an effort`; the one-case sentence is gone.
+FLAGS:         ASSUMPTION: I did not reduce `## Flags` to a pure pointer at `## Closing an effort`. I restated the rule in one sentence and added a pointer after it. The reason is that `graph-conventions.md`'s `### Settle a flag` cites `## Flags` as the place that says "which flags reach the effort closing report". This node held no exchange with the human beyond the 2026-10-06 answer recorded under `## Interview`. What I did: I edited one paragraph of SKILL.md and checked the glossary and the other `.claude/` files by search.
+               Index sentence: `## Flags` in the manager contract restates "every outstanding flag reaches the effort closing report" instead of only pointing at `## Closing an effort`, because `graph-conventions.md` cites `## Flags` for that rule.
+NEW NODES:     none
+INVALIDATIONS: - Node 309 (resolved): its answer, that `## Flags` states one case only (an unanswered pick report), is contradicted. That sentence is gone, and every outstanding flag now reaches the report.
+               - Node 370 (resolved): its answer describes `## Flags` as giving "the one case in which flags reach the effort closing report". That description no longer holds. `## Flags` now names every outstanding flag.
+               - Nodes 46, 102 and 103 (resolved): their answers say flags reach the closing report where the human never speaks again. My work extends that rule: it remains true, but it is no longer the whole of the rule.
+               - Node 364 (resolved): its condition kept "Flags reach the effort closing report" unchanged and deferred to this node. Nothing is contradicted, but the text it protected no longer exists.
+CONDITIONS:    I searched the open nodes (13, 185, 214, 40, 41) for: "one case only", "in one case", "reach(es) the (effort) closing report", "closing report", "outstanding flag", "under `## Flags`" and "## Closing an effort". The only match bearing on this work is node 41's "outstanding — left unchecked, meaning carried, and re-surfaced in the effort closing report", and it agrees with my work. No replacement clause is needed and no open node's question changes. The resolved nodes' `## Answer` and `## Acceptance condition` sections were searched for the same phrases, with the results listed under INVALIDATIONS.
+MISSING FROM MAP: none
+GATE PAYLOAD:  The checker has not run yet, so there are no findings.
+               The bar: the repo root holds no CLAUDE.md, no AGENTS.md and no manifest, which confirms `map-implementation-rules.md`'s record that there is no build, no tests, no formatter and no CI. The bar is therefore the standards plus the acceptance condition. The line wraps at the file's existing width.
+               One note on the condition: its scope lists "A node closing report for a node holding flags carries every one of those flags" among four lines under `## Flags`. That line actually sits under `## What is in front of the human, and when`. This is harmless and has no effect on any clause.
+               Paths touched: .claude/skills/expedition/SKILL.md, the only file, in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/317-closing-flags. The change is left uncommitted.
+               Proposed commit message:
+                 Every outstanding flag reaches the effort closing report
+
+                 The manager contract's `## Flags` named one case only, which
+                 disagreed with `## Closing an effort`'s "Every outstanding flag".
+                 `## Flags` now states the same rule and points at that list.
+
+                 Node: graph-workflow/317
+
+RETROSPECTIVE
+1. What I had to hunt for: whether "close" may be used of a node. I found it in the glossary's **Resolve** `_Avoid_` line and its **Closed** entry, after I had first written "whether or not its node has closed". I also had to establish that `graph-conventions.md` cites `## Flags` for this rule, which I found by a broad grep over `.claude/`.
+   - `glossary-refusal-found-after-writing`: new name, carried by 0 earlier retrospectives. A refused word is caught only by a lookup after it is written, because nothing at the point of writing names the refusals that bear on the section being edited.
+2. What arrived that the node did not need: most of `map.md` (the destination, the v2 and Lang notes, the graph-file history) and nearly all of `map-implementation-rules.md` (worktree mechanics, record-as-work, the triggers file). This node needed only the writing rules, the glossary and the bar's paragraph.
+   - `map-read-whole-for-a-few-items`: carried by 13 earlier retrospectives (nodes 135, 178, 205, 220, 284, 382, 386, 387, 388, 389, 390, 391, 392).
+   - `rules-file-read-whole-for-one-section`: carried by 10 earlier retrospectives across 9 node files (nodes 178, 220, 382, 386, 387, 388, 390, 391, 392).
+3. What would have made this node easier: a spawn note that `graph-conventions.md`'s `### Settle a flag` cites `## Flags` for this rule. That citation decides whether a pointer-only rewrite is acceptable.
+4. What was stale, wrong or contradictory:
+   - `question-quotes-superseded-text`: carried by 1 earlier retrospective (node 392). The node's `## Question` quotes "two cases only", "pick report" and `CONTEXT.md`'s `**Flag**:` entry. All three are superseded: the entry now lives in `glossary.md`, and the condition handles that correctly.
+   - `condition-scope-misplaces-a-match`: new name, carried by 0 earlier retrospectives. The condition's scope puts the line "A node closing report for a node holding flags carries…" under `## Flags`, but it sits under `## What is in front of the human, and when`.
+`````
+
+## Flags
+
+`317.1` `ASSUMPTION` — `## Flags` restates the rule rather than only pointing at `## Closing an effort`. *(The worker's full text is under its handover's `FLAGS`.)*
