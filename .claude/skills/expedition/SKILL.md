@@ -198,9 +198,12 @@ Keep a spawn focused, because the worker pays for all of it from its first turn.
 A spawn may also carry two things that are not your material, so the limit on notes above does not apply
 to them.
 
-- A direction from the human, carried in their words and marked as theirs. Where the thing blocking a
-  node is not owned by the effort's own repository, such a direction is the only way the node can
-  proceed.
+- An instruction from the human, carried in their words and marked as theirs. Where a defect in the
+  expedition workflow itself blocks a node, the kind a `FRICTION` flag records, the way past it is such
+  an instruction, carried into the spawn as the human's own words. Where the thing blocking a node is
+  not owned by the effort's own repository, such an instruction is the only way the node can proceed.
+  Where the same instruction is needed more than once, write it into that effort's ground rules in
+  `map.md`'s `## Notes`. Never invent such an instruction on your own authority.
 - A permission the human gave in answer to a raise of yours, described in the next section.
 
 ### When a contract blocks the node in front of it

@@ -161,8 +161,8 @@ ANSWER:        <your node's `## Answer`, written as the node will hold it: what 
                 every resulting fact later nodes depend on — where a credential lives, a new
                 address, a count, a version>
 INDEX LINE:    <one sentence, about 25 words, for decisions.md>
-FLAGS:         <per flag, prefixed ASSUMPTION or DELEGATED: the prose for your node, then the one
-                sentence for the index>
+FLAGS:         <per flag, prefixed ASSUMPTION, DELEGATED or FRICTION: the prose for your node, then
+                the one sentence for the index>
 NEW NODES:     <name, kind, question, blockers — one block each, and for an implementation node
                 its acceptance condition too; for a defect that joins an open node, that node
                 and the clauses to add to its condition>
@@ -205,8 +205,9 @@ where it looks too small to write down.
 Do the best you can with what you have. Where something could not be done at all, say in `ANSWER` what
 it was and how far you got, and leave the shortfall visible.
 
-Two markers are yours: `ASSUMPTION`, for a small ambiguity you settled yourself, and `DELEGATED`, for
-anything the human handed back to you.
+Three markers are yours: `ASSUMPTION`, for a small ambiguity you settled yourself, `DELEGATED`, for
+anything the human handed back to you, and `FRICTION`, for a defect in the expedition workflow itself
+that you noticed while using it.
 
 The manager writes every part of your handover onto the graph unaltered. So write `ANSWER` as the node's
 own text, not as a message about it.

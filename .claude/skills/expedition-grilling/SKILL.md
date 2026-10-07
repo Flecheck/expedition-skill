@@ -223,8 +223,8 @@ Hand back all seven parts every time. Write `none` in full for a part you have n
 HANDOVER:      <your node's name>
 ANSWER:        <your node's `## Answer`, written as the node will hold it>
 INDEX LINE:    <one sentence, about 25 words, for decisions.md>
-FLAGS:         <per flag, prefixed ASSUMPTION or DELEGATED: the prose for your node, then the one
-                sentence for the index>
+FLAGS:         <per flag, prefixed ASSUMPTION, DELEGATED or FRICTION: the prose for your node, then
+                the one sentence for the index>
 NEW NODES:     <name, kind, question, blockers — one block each, and for an implementation node
                 its acceptance condition too; for a defect that joins an open node, that node
                 and the clauses to add to its condition>
@@ -261,8 +261,9 @@ for it. This part never blocks: wait for no answer to it, and let nothing in you
 one. It is not the route for something you cannot go on without. That route is the question shape
 under `### question — you need the human`.
 
-Two markers are yours: `ASSUMPTION`, for a small ambiguity you settled yourself, and `DELEGATED`, for
-anything the human handed back to you.
+Three markers are yours: `ASSUMPTION`, for a small ambiguity you settled yourself, `DELEGATED`, for
+anything the human handed back to you, and `FRICTION`, for a defect in the expedition workflow itself
+that you noticed while using it.
 
 The manager writes every part of your handover onto the graph unaltered. So write `ANSWER` as the node's
 own text, not as a message about it.

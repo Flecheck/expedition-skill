@@ -99,6 +99,9 @@ form:
 - [ ] NN.k ASSUMPTION · [<node name>](nodes/NN-<name>.md) — <one line>
 ```
 
+A `FRICTION` flag uses this same form. Its marker stands where `ASSUMPTION` stands above, as every
+other marker does.
+
 Every flag carries an id, `NN.k`, made of its node's number and then a sequence number within that node,
 allocated in write order and never reused. In `flags.md` the id sits between the checkbox and the
 marker. On the node's `## Flags` entry it sits in front of the marker.
@@ -234,6 +237,11 @@ A condition's scope is a finding stated in advance. Its readers, the checker and
 cannot go and look at how the scope was found, so a condition owes them the same extent that a
 checker's finding owes.
 
+An effort whose product is not the expedition skill files never fixes those files. So on such an effort,
+no acceptance condition, and no condition for closing the effort, may be made to depend on a change to
+them. A defect found in them is recorded as a `FRICTION` flag, which `### Settle a flag` under
+`## Procedures` covers.
+
 `## The checker` in `SKILL.md` says how the manager hands a condition to the checker, and what it does
 with a condition that leaves part of its demand in another file.
 
@@ -241,12 +249,16 @@ with a condition that leaves part of its demand in another file.
 
 The section holds one entry per flag, in free prose. Each entry holds the full account of what produced
 its flag, as `### Raise a flag` under `## Procedures` states. Each entry starts with the flag's id and
-then its marker, one word saying which kind of judgement the flag records. There are three markers:
+then its marker, one word saying which kind of flag it is. There are five markers:
 
 - `ASSUMPTION` — the worker decided a small ambiguity itself.
 - `CONDITION-WRONG` — filed by the manager, after a worker raised its acceptance condition as wrong and
   the human answered *ship it anyway*.
 - `DELEGATED` — the human said "you decide" and the worker answered.
+- `FRICTION` — a defect the agent noticed in the expedition workflow itself while using it, rather than
+  a judgement about the work in front of it.
+- `PERMISSION` — a permission the human granted for one attempt, past a contract clause that blocked
+  the node.
 
 A settled flag's entry takes this form:
 
@@ -572,6 +584,25 @@ report.
 A flag the human turns into a node is settled the same way. The new node is created by the steps under
 `## Adding a node`.
 
+A `FRICTION` flag raised on an effort whose product is not the expedition skill files has exactly two
+dispositions, and being settled as fixed is not one of them:
+
+- declined — the human judges the flag not worth carrying. Settle it in place by steps 1 and 2, and
+  record the human's reason on its entry under `## Flags`.
+- outstanding — its line stays unchecked, which means the flag is carried. The effort closing report of
+  that effort carries it again.
+
+No agent may mark such a flag settled as fixed, because the fix lands only in the repository holding the
+expedition skill files, and no agent crosses a repository boundary. Once the human knows the fix landed,
+they may check the flag's line by hand, and mark its entry settled.
+
+This changes, for such a flag, two rules under `## Flags` in `SKILL.md`:
+
+- the rule that a node's flags settle at its gate or at its node closing report. Such a flag stays
+  outstanding past both, until the human declines it or checks it by hand.
+- the rule on which flags reach the effort closing report. Such a flag reaches that report while it is
+  outstanding, whatever that rule says of other flags.
+
 3. Whoever settles the flag runs check 6 below itself, as part of settling it, over the material it
    touched: the flag's entry on its node and its line in `flags.md`.
 
@@ -659,6 +690,11 @@ A check reads the files by these rules.
 - A flag counts as settled on its node only where the marker `**· settled**` stands in an entry's
   marker position, directly after its id, as the settled form under `## The node file` shows. The bare
   word `settled` in an entry's prose does not settle it.
+
+## Work that changes a file other nodes are written against
+
+An implementation node that changes a file which other nodes of the same effort are written against
+must, at its gate, name which files it moved and which existing files are left in the older form.
 
 ## What a hard rule in a worker contract is
 

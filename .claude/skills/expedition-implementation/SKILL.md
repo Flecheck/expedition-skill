@@ -223,8 +223,8 @@ HANDOVER:      <your node's name>
 ANSWER:        <your node's `## Answer`, written as the node will hold it: what you built, and
                 every call inside it a later reader would otherwise have to re-derive>
 INDEX LINE:    <one sentence, about 25 words, for decisions.md>
-FLAGS:         <per flag, prefixed ASSUMPTION: the prose for your node, then the one sentence for
-                the index>
+FLAGS:         <per flag, prefixed ASSUMPTION or FRICTION: the prose for your node, then the one
+                sentence for the index>
 NEW NODES:     <name, kind, question, blockers — one block each, and for an implementation node
                 its acceptance condition too; for a defect that joins an open node, that node
                 and the clauses to add to its condition>
@@ -236,7 +236,9 @@ CONDITIONS:    <what you searched the open nodes' conditions and questions for; 
 MISSING FROM MAP: <what you needed about the effort that map.md did not tell you, and where you got
                   it instead or how you went on without it>
 GATE PAYLOAD:  <for each thing the checker found, what you changed, or why you left it unfixed;
-                the paths you actually touched; a proposed commit message carrying the trailer
+                the paths you actually touched; where your work changes a file that other nodes of
+                this effort are written against, which files it moved and which existing files are
+                left in the older form; a proposed commit message carrying the trailer
                 `Node: <effort>/NN`>
 ```
 
@@ -264,7 +266,8 @@ for it. This part never blocks: wait for no answer to it, and let nothing in you
 one. It is not the route for something you cannot go on without. That route is the raise under
 `### The raise`.
 
-One marker is yours: `ASSUMPTION`, for a small ambiguity you settled yourself. `CONDITION-WRONG` is the
+Two markers are yours: `ASSUMPTION`, for a small ambiguity you settled yourself, and `FRICTION`, for a
+defect in the expedition workflow itself that you noticed while using it. `CONDITION-WRONG` is the
 manager's to file after a raise.
 
 Leave the diff in the working tree and out of your output. The manager joins your text to the checker's
