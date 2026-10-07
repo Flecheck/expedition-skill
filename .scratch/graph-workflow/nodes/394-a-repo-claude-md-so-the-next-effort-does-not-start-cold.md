@@ -119,3 +119,59 @@ RETROSPECTIVE:
 ## Flags
 
 `394.1` `ASSUMPTION` — CLAUDE.md tells a new effort to check that `.gitignore` covers its worktrees directory. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `FAIL` (acceptance condition)
+
+*The checker's own text, pasted, 2026-10-07. A fresh checker; the condition and the node's one flag reached it as text in `$TMPDIR/check394.md`.*
+
+> FAIL: acceptance condition
+>
+> I read the changed path as the work. That path is the untracked `CLAUDE.md` in /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/394-claude-md. For standards, I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md`.
+>
+> ### Finding 1: clause 5 ("keeps every demand they make, … and adds no new demand")
+> - **Instances.** In `## Rules for the files under .claude/skills/`, writing rule 6 contains two sentences that are not in the text of standing rule for writing 6 as the spawn gave it to me:
+>   - "A pointer names the heading and says, in one clause at most, what the reader goes there for."
+>   - "It lists none of the entries that heading holds and states none of its rules."
+>
+>   Both are demands. Nothing in the rule text I was given states either one. I found this by unwrapping and comparing each of the 11 numbered rules in that section, sentence by sentence, against the ground rules and standing rules for writing quoted in the spawn. The other ten rules, and the rest of rule 6, are rewordings that keep every demand: "shipped" became "these files", "item" became "entry", the glossary path was dropped because the first section names it, and node citations were dropped. I am blind to `map.md`. If its `## Notes` now carries these two sentences, the spawn's copy is stale, and the manager decides which is right.
+> - **Form.** A sentence under `## Rules for the files under .claude/skills/` that requires or refuses something no sentence of the five ground rules or six standing rules for writing (as given) requires or refuses.
+> - **Extent.** The smallest set that provably contains every instance is the 11 numbered items under that heading. Extract them with `awk '/^## Rules for the files/,/^## The trigger file/' CLAUDE.md`. I compared all 11 by hand, and the two sentences above are the only additions I found.
+>
+> ### The other parts, each established
+> 1. Passes. `git status --short` shows only `?? CLAUDE.md`, and HEAD is still 4749c24d2.
+> 2. Passes. `## What this repository holds` names `.claude/skills/`, `.claude/rules/expedition-triggers.md` and `.scratch/<effort>/`, and says "An effort's map is the file `map.md` in that directory."
+> 3. Passes. `## Commands` says "This is the repository's own statement of its commands", with no build, tests, formatter or CI, so the bar is the standards plus the acceptance condition.
+> 4. Passes. `## Standards` lists all four items.
+> 5. Fails, per finding 1.
+> 6. Passes. `## The worktree of an implementation node` covers git worktree add, the path, the branch, `.gitignore`, the absolute-path worker with no cleanup owed, and the sandbox-off merge and removal. It also points at map-manager-only.md, which the condition allows. I did not open that file. The names it cites, "Landing an implementation node's work" and "How the worktree is made", are corroborated by the comments in `.gitignore` and by map-implementation-rules.md.
+> 7. Passes. `## The trigger file` says to edit both in the same change "or says plainly why not".
+> 8. Passes. `## Two traps` has both bullets: a hand check of the distinctive refusals, and a date plus "scale only".
+> 9. Passes. `## Pushing`.
+> 10. Passes. `grep -nE "nodes?/|node [0-9]|\[[^]]*\]\(" CLAUDE.md` returned nothing. The only graph-workflow-specific line is the map-manager-only.md pointer that clause 6 allows. I found no account of how any rule was learned.
+> 11. Passes. `wc -w CLAUDE.md` gives 852, which is at most 900.
+> 12. Passes on the bar as below.
+>
+> ### Bar
+> - **Commands.** The repo states none: the new CLAUDE.md says there are none, and map-implementation-rules.md records the same. I ran nothing.
+> - **Glossary `_Avoid_` lines.** A grep for all refused words over CLAUDE.md hit:
+>   - `graph-agent`, as the repository's name, which its own line allows;
+>   - `CI`, `run` and `tree`, in ordinary senses;
+>   - `report`, `run`, `session` and `question`, only as quoted examples inside the trap bullet.
+>
+>   None of these is a breach.
+> - **`/writing-for-agents`.** I read it by hand at /nix/store/shg018ki8icxyv5n3flxakvnpqqygw7l-claude-code-mattpocock-skills-patched/skills/productivity/writing-for-agents/SKILL.md. I found no breach.
+> - **Ground rules and writing rules.** I found no bold, no line numbers and no node citations.
+> - **Other standards.** `/coding-principles`, `/naming` and graph-conventions.md bear on nothing here, since the file is neither code nor a graph file.
+> - **Reviewing skill.** None is named for this repo, so I ran none.
+>
+> QUESTIONS:
+> - The condition requires a root `CLAUDE.md`. Meeting it makes a statement in `.scratch/graph-workflow/map-implementation-rules.md` false. That file's "The bar's commands for this repo" paragraph says the repo's root "holds no agent-instruction file such as `CLAUDE.md` or `AGENTS.md`", and that "This repo states no commands of its own". The condition forbids editing any other file, so this was not the worker's to fix. Should a follow-up update that paragraph?
+>
+> Flags: 394.1 is true of the work. Under the worktree section, CLAUDE.md says: "Before an effort's first worktree, check that an entry in `.gitignore` covers that effort's directory, and add one where none does." `.gitignore` ignores only `.scratch/graph-workflow/worktrees/`, plus `.worktrees/` and `.claude/worktrees/`.
+>
+> I wrote no temporary files.
+
+*The manager's note:* the finding rests on a stale copy that the manager gave the checker. The ground-rules block in the manager's spawn file (`$TMPDIR/ground.md`) predated [node 361](361-whether-a-pointer-that-summarises-its-target-restates-it.md)'s change to standing rule for writing 6. `map.md`'s `## Notes` holds both sentences the checker named, "A pointer names the heading and says, in one clause at most, what the reader goes there for." and "It lists none of the items that heading holds and states none of its rules." So the work did not add a demand. The manager refreshed the copy from `map.md` and resumed the same checker with the current rule 6 for a re-check of the unchanged work. Every checker spawned since node 361 landed received the same stale rule 6. The checker's question on the rules file's bar paragraph goes to the human at the gate.
+
