@@ -369,8 +369,8 @@ that is about. Where the human never speaks again, nothing settles, and those fl
 Settle a flag only at the moments this section names, never on your own judgement or on the passage of
 time.
 
-Flags reach the effort closing report in one case only: a flag whose node closing report the human
-never answered, because they never spoke again.
+Every outstanding flag reaches the effort closing report, whatever the state of its node. The list
+under `## Closing an effort` gives what that report carries.
 
 ## Acceptance conditions
 
