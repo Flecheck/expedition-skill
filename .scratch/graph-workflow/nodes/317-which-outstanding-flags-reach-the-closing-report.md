@@ -128,3 +128,9 @@ RETROSPECTIVE
 
 *The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
 
+
+### Gate — approve, 2026-10-07
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the manager's message ended "Please approve node 317, or tell me what to change.", and recommended approving. The checker's question on the scope note's heading attribution is answered by the approval: a slip in the record, with no effect on the work.
