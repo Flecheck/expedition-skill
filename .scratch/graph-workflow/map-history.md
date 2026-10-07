@@ -1271,3 +1271,14 @@ The worker obtains the existing names, with their counts and node files, by runn
 *Replaced, and they stood as:*
 
 The manager writes it into the node file in the same edit that writes that node's answer, its flags and its line in `decisions.md`. It is written last in the file, so the mandatory section order is untouched. It is written under the heading `## Retrospective` and under no other heading. It is not an annotation, since `graph-conventions.md` defines an annotation as what a later piece of work changed about a node's answer. It is a section the shipped node-file format does not list, allowed on this effort only; the human's `verbatim` "ok for A", 2026-09-27, on the manager's question after [node 340](nodes/340-add-the-annotation-section-and-what-a-hard-rule-is.md) landed.
+
+## Superseded from `map.md`'s `## Notes` at 2026-10-07 — the bold sentence of the standing instruction on a condition that forces a contradiction
+
+*Replaced under the `Change the map` procedure by the manager, on the human's `verbatim` "ok", 2026-10-07, to the manager's recommendation to narrow it to what [node 214](nodes/214-a-condition-that-contradicts-a-standard-is-a-raise.md) shipped. The rest of the bullet, including the human's quoted words, is unchanged and is not reproduced here.*
+
+### From `map.md`'s `## Notes` — the bullet's bold opening sentence
+
+*Replaced, and it stood as:*
+
+**Where an agent sees that its acceptance condition forces a contradiction, that is a raise and not a flag.**
+
