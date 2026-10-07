@@ -10,10 +10,10 @@
 # See .scratch/graph-workflow/map-manager-only.md, "How the worktree is made".
 .claude/worktrees/
 
-# The current path. It holds one git worktree per claimed implementation node,
-# created with plain `git worktree add` rather than by the harness, and placed
-# inside the repository so that a review can see the diff. Ignored so those
-# worktrees are never committed. The two entries above are the paths used by the
-# earlier routes.
+# The current path, one directory per effort. Each holds one git worktree per
+# claimed implementation node, created with plain `git worktree add` rather than
+# by the harness, and placed inside the repository so that a review can see the
+# diff. Ignored so those worktrees are never committed, whichever effort cut them.
+# The two entries above are the paths used by the earlier routes.
 # See .scratch/graph-workflow/map-manager-only.md, "How the worktree is made".
-.scratch/graph-workflow/worktrees/
+.scratch/*/worktrees/

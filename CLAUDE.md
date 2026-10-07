@@ -45,7 +45,7 @@ Rules for writing:
 ## The worktree of an implementation node
 
 - The manager makes it with plain `git worktree add`, at `.scratch/<effort>/worktrees/<NN>-<name>`, on a branch `worktree-<NN>-<name>`. `<NN>` is the node's id.
-- `.gitignore` ignores that path. Before an effort's first worktree, check that an entry in `.gitignore` covers that effort's directory, and add one where none does.
+- `.gitignore` ignores that path.
 - The worker writes the tree by absolute path, and owes no cleanup.
 - The fast-forward merge into the main checkout, and the worktree's removal, run with the sandbox off.
 
