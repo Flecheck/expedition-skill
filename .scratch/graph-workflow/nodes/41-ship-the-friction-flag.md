@@ -279,6 +279,12 @@ RETROSPECTIVE:
 
 *The manager's note, 2026-10-06:* the worker is right that the spawn did not say node 317 was editing `SKILL.md`'s `## Flags` at the same time. The manager knew it and left it out.
 
+## Amendment, 2026-10-07 (the human's answer at the gate)
+
+*Written by the manager from the recommendation the human accepted at the gate on the checker's question. It changes one word of clause 3; every other clause stands.*
+
+> Where clause 3 names a `FRICTION` flag's disposition "refused", read "declined". The shipped text names that disposition "declined", and says "declines" wherever it would say the human "refuses" such a flag. The words "refuse", "refused" and "refuses" do not appear in the `FRICTION` passage under `### Settle a flag`.
+
 ## Review
 
 ### Checker run 1 — `FAIL` (the bar)
@@ -454,4 +460,10 @@ RETROSPECTIVE:
 > I wrote no temporary files.
 
 *The manager's note:* the checker's run 1 question on "refused" still stands beside this outcome, so the standing yes does not cover this gate. It goes to the human.
+
+### Gate — sent back, 2026-10-07
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the manager's message ended "Please answer: \"ok for recommended\" sends node 41 back for that rename, or say approve as is." The recommendation was to rename "refused" to "declined" in the new passage, including "until the human refuses it", so the gate word "reject" stays unambiguous. The reply takes it, and the amendment above records it.
 
