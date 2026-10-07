@@ -1,7 +1,7 @@
 # Which outstanding flags reach the closing report
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: 392
 
 ## Question
@@ -48,6 +48,12 @@ The two statements in `.claude/skills/expedition/SKILL.md` disagree about an out
 `verbatim`: *"ok"*
 
 *The manager's note:* the reply takes the recommendation: every outstanding flag reaches the effort closing report, and the `## Flags` sentence is reworded to say so. The condition is still to be written.
+
+## Answer
+
+`SKILL.md`'s `## Flags` now says every outstanding flag reaches the effort closing report, whatever its node's state, which matches `## Closing an effort`; the one-case sentence is gone.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The human approved the gate on 2026-10-07 (see `## Review`). The work landed as commit `4be715288`. Flag 317.1 settled at that gate.
 
 ## Handover, attempt 1
 
@@ -97,7 +103,7 @@ RETROSPECTIVE
 
 ## Flags
 
-`317.1` `ASSUMPTION` — `## Flags` restates the rule rather than only pointing at `## Closing an effort`. *(The worker's full text is under its handover's `FLAGS`.)*
+`317.1` `ASSUMPTION` **· settled** — `## Flags` restates the rule rather than only pointing at `## Closing an effort`. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 
@@ -134,3 +140,5 @@ RETROSPECTIVE
 `verbatim`: *"ok"*
 
 *The manager's note:* the manager's message ended "Please approve node 317, or tell me what to change.", and recommended approving. The checker's question on the scope note's heading attribution is answered by the approval: a slip in the record, with no effect on the work.
+
+*The manager's note, 2026-10-07:* flag 317.1 settled at the human's gate.
