@@ -514,3 +514,54 @@ GATE PAYLOAD:
 RETROSPECTIVE:
 - `glossary-refusal-found-after-writing`: carried by 1 earlier retrospective (node 317). The condition's own word "refused" collided with the glossary's Reject `_Avoid_` line ("refuse"). I copied the condition's word without checking it against the `_Avoid_` lines, and the checker caught it rather than me. A worker carrying a condition's coined word into shipped text should grep the `_Avoid_` lines for it first.
 `````
+
+### Checker run 3 — `PASS`
+
+*The checker's own text, pasted, 2026-10-07. The run 1 checker, resumed for the re-check; the 2026-10-07 amendment reached it as text in the resume.*
+
+> PASS
+>
+> This is the re-check of node 41 after correction round 2. The working tree is the same, and the work is still uncommitted.
+>
+> **What changed this round.**
+> - The same six paths are changed, and the diffstat is the same as in round 1 (`git status --porcelain --untracked-files=all`, `git diff --stat HEAD`).
+> - Only graph-conventions.md was touched after SKILL.md (`find .claude -newer .claude/skills/expedition/SKILL.md -type f`).
+> - I read the whole `### Settle a flag` section with `awk '/^### Settle a flag/{f=1} /^### Change the map/{f=0} f'`. The only difference from round 1 is two words, both inside the `FRICTION` passage:
+>   - "refused" became "declined" in the first disposition bullet.
+>   - "refuses" became "declines" in the settle-timing bullet.
+> - This matches the worker's statement.
+>
+> **The condition, as amended.**
+> 1. Met. The text is unmoved since I established it. There are five markers, and `FRICTION` and `PERMISSION` carry the meanings the clause requires.
+> 2. Met. The text is unmoved since I established it.
+> 3. Re-established against the amended words. The passage keeps "exactly two dispositions, and being settled as fixed is not one of them", and the two are:
+>    - "declined": the human judges the flag not worth carrying. It is settled in place by steps 1 and 2, and the human's reason is recorded.
+>    - "outstanding": the flag stays unchecked and is carried, and "The effort closing report of that effort carries it again".
+>
+>    The no-agent-marks-fixed sentence and its repository-boundary reason are present. So is the human checking the line by hand. "declines" stands where the passage would say the human refuses the flag. Searching the section for refus/declin finds only the two "declin" hits. `git diff HEAD | grep '^+' | grep -i refus` returns nothing, with exit 1, and `grep -i refus` over the whole of graph-conventions.md also finds nothing.
+> 4. Met. The text is unmoved since I established it.
+> 5. Met. The text is unmoved since I established it, and SKILL.md is unchanged this round.
+> 6. Met. The text is unmoved since I established it.
+> 7. Met. The four contracts are unchanged this round.
+> 8. Met. `git diff --quiet HEAD -- .claude/skills/expedition-checker .scratch` exits 0.
+> 9. Met, by the same command.
+> 10. Met. See the bar below.
+> 11. Met. `grep -rn PERMISSION .claude/` returns one hit, the marker-list line, and the work says nothing about how a `PERMISSION` flag settles.
+>
+> **The bar, re-run in full.**
+> - This repo has no build, test or format commands, since its root has no CLAUDE.md, AGENTS.md or manifest.
+> - `git diff --check` is clean, and no added line is longer than 110 characters.
+> - I read only the standards in `map-implementation-rules.md`.
+> - Four of them bear on this work: graph-conventions.md, the glossary's `_Avoid_` lines, the ground rules, and the six standing rules for writing. I found no breach.
+> - The rename removes the clash with the Reject entry's `_Avoid_: refuse` line, so last round's question no longer applies.
+> - This round's edit to graph-conventions.md, which is itself a standard, adds no element and removes none.
+> - No record files are among the changed paths.
+>
+> **Flags.** Flags 41.1 to 41.5 have not changed, and none of them is false.
+>
+> I wrote no temporary files.
+
+### Gate — approve, `standing yes`, 2026-10-07
+
+Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 3 outcome, `PASS`. No exclusion applies: run 3 handed back no question and no raise, covered every clause, and found no flag false. The human's direction at the run 2 gate is carried out by the 2026-10-07 amendment. This settles none of the node's flags; they settle at the node closing report.
+
