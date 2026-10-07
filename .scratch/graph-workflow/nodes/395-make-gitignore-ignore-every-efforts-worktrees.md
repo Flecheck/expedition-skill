@@ -1,7 +1,7 @@
 # Make `.gitignore` ignore every effort's worktrees directory
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: 394
 
 ## Question
@@ -20,6 +20,12 @@ This lets a later effort in this repository cut implementation worktrees without
 > 3. The sentence in `CLAUDE.md`'s `## The worktree of an implementation node` that tells an effort to check `.gitignore` before its first worktree, and to add an entry where none covers it, is removed. The bullet still states that `.gitignore` ignores that path.
 > 4. `CLAUDE.md` is at most 900 words by `wc -w CLAUDE.md`.
 > 5. The working tree meets the bar.
+
+## Answer
+
+`.gitignore` replaces `.scratch/graph-workflow/worktrees/` with `.scratch/*/worktrees/`, so any effort's worktrees are ignored; CLAUDE.md drops its "check `.gitignore` before your first worktree" sentence.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1. The gate was taken under the human's standing yes (see `## Review`). The work landed as commit `13bb6ed9c`. Flags 395.1 settle at the node closing report.
 
 ## Handover, attempt 1
 
@@ -62,7 +68,7 @@ RETROSPECTIVE:
 
 ## Flags
 
-`395.1` `ASSUMPTION` — The literal ignore entry was replaced, not supplemented, by the glob. *(The worker's full text is under its handover's `FLAGS`.)*
+`395.1` `ASSUMPTION` **· settled** — The literal ignore entry was replaced, not supplemented, by the glob. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 
@@ -103,3 +109,5 @@ RETROSPECTIVE:
 ### Gate — approve, `standing yes`, 2026-10-07
 
 Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies. This settles none of the node's flags; they settle at the node closing report.
+
+*The manager's note, 2026-10-07:* flags 395.1 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.

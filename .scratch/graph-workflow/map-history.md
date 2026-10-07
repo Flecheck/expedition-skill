@@ -1292,3 +1292,13 @@ The manager writes it into the node file in the same edit that writes that node'
 
 What this paragraph records is a copy of an earlier discovery, and it is not the authority for what is run. Where a repo states its own build, test or format commands, a copy like this one is confirmed against that statement before use. Where the two differ, the repo's statement wins. This repo states no commands of its own, so there is nothing to confirm this record against, and it stands as it is. Seeing that takes one look at the repo's root, which holds no agent-instruction file such as `CLAUDE.md` or `AGENTS.md` and no manifest. That look is all that using this record costs.
 
+## Superseded from `map-implementation-rules.md` at node 395 — the bar paragraph's list of `.gitignore` entries
+
+*Replaced under the `Change the map` procedure by the manager after [node 395](nodes/395-make-gitignore-ignore-every-efforts-worktrees.md) landed, whose worker reported this copy stale. It changes one entry of a copy of a repository file, so it is a correction of fact. The rest of the paragraph is unchanged and is not reproduced here.*
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the bar's commands paragraph
+
+*Replaced, and it stood as:*
+
+ignores `.worktrees/`, `.claude/worktrees/` and `.scratch/graph-workflow/worktrees/` and invokes nothing
+
