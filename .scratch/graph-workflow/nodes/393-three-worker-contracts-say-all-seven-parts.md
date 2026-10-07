@@ -52,3 +52,9 @@ RETROSPECTIVE
 3. What would have made it easier: a premise check by whoever files a count-fix node, comparing the count against every shipped statement of the same count (here SKILL.md's bullet and the implementation contract's own label count) before writing the condition.
 4. Stale, wrong or contradictory: the node's question and condition (eight parts, four grep lines) contradict SKILL.md's "seven parts ... an eighth, the gate payload". decisions.md's line for node 335 says the glossary's `Handover` entry lists the seven parts, but the current glossary entry has no count. Either the line is stale or the glossary text it describes was later removed.
 `````
+
+#### The human's answer to raise 1, 2026-10-07
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the manager's message ended "Please answer node 393. \"ok for recommended\" reverts and closes it with no change.", so the reply takes the worker's `RECOMMENDED`: "Revert, and resolve the node with no change." No divergence.
