@@ -188,3 +188,5 @@ RETROSPECTIVE:
 ### The gate, 2026-10-05 — standing yes
 
 `standing yes`. The scope, word for word: *"Approve all gates automatically"*. The checker's `PASS` is taken as the human's approval. The run covered every part and handed back no question. Flags 205.1 and 205.2 settle at the node closing report.
+
+*The manager's note, 2026-10-07:* the stray file `.scratch/graph-workflow/map-implementation-rules.md.block`, which this node's worker reported, was deleted with `git rm` on the human's `verbatim` *"ok"* to the manager's recommendation. The manager had committed it by accident in commit `175c4ebae`. Its text stays in git history.

@@ -1,9 +1,0 @@
-**Ground rules for this effort.**
-
-1. Nothing in the shipped files may assume this repo, this machine, or a toolchain. Prefer properties that are discovered over commands that are declared.
-2. Each shipped worker contract stands alone as a file, rather than depending on any skill being invocable.
-3. The human talks only to the manager. No agent the workflow spawns addresses the human directly, and nothing in the files may tell one to.
-4. Prefer short, simple prose that can be changed later over machinery built for predicted needs. Reserve heavy design for the hard-to-reverse core.
-5. Prose deliverables are held against the `/writing-for-agents` standard, which is specific to this repo, is never shipped, and is located by name in the `mattpocock-skills` plugin rather than by path.
-
-Every rule above is drawn from a standing preference, and every one passes the test [The checker's spawn carries the effort's ground rules](nodes/42-checker-spawn-carries-ground-rules.md) shipped for what may travel to a blind checker: **a standing constraint true of any node's work, rather than an account of what happened.** That test is what keeps the rest of this file out of the block, and the block is appended to like any other part of this map.
