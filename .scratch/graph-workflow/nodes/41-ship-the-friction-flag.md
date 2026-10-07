@@ -1,10 +1,16 @@
 # Ship the FRICTION flag and the self-edit disclosure duty
 
 Type: implementation
-Status: claimed
+Status: resolved
 Supersedes: 170
 
 Blocked by: ~~56~~, ~~170~~, 392
+
+## Answer
+
+The FRICTION and PERMISSION flag markers, FRICTION's two-disposition settlement, the carried-instruction route past blocking friction, and the gate disclosure duty for self-edits ship in the skill files.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`, with two correction rounds under `## Review`. Run 1 failed on the bar, and the worker fixed it. Run 2 passed with a question, and the human sent the work back at that gate for a rename. Run 3 passed, and its gate was taken under the human's standing yes. The work landed as commit `eabe726d4`. Flags 41.1, 41.2, 41.3, 41.4, 41.5 settle at the node closing report.
 
 ## Question
 
@@ -114,19 +120,19 @@ standard. Node 29's answer is what makes that refusal correct rather than merely
 
 ## Flags
 
-`41.1` `ASSUMPTION` — *The manager's own entry, carrying the amendment above.* Node 137's worker's replacement clause was filed on this open, unclaimed node without asking the human first, under the rule node 327 landed.
+`41.1` `ASSUMPTION` **· settled** — *The manager's own entry, carrying the amendment above.* Node 137's worker's replacement clause was filed on this open, unclaimed node without asking the human first, under the rule node 327 landed.
 
 *The manager's note, 2026-09-27:* [node 56](56-ship-the-glossary-into-the-skill-set.md)'s worker reports this node's question is changed, once node 56 lands. Its words, pasted: Node 41 (open), question changed: the entry for `FRICTION` that its worker owes under the bar now goes in `.claude/skills/expedition/glossary.md`. The completeness paragraph node 29 designed is now in place, so node 41 is the mechanism's first test as planned. Its manager-note link `[CONTEXT.md](../../../CONTEXT.md)` now reaches the superseded pointer. Its condition clause "written into that effort's ground rules in `map.md`'s `## Notes`" agrees with the new `Ground rules` entry.
 
 *The manager's note, 2026-09-28:* [node 353](353-whether-implementer-becomes-a-glossary-headword.md)'s worker reports this node's question changed. Its words, pasted: Node 41 (open, implementation): the question changes, but no clause does. The manager's 2026-09-27 note, relaying node 56's worker, says the `FRICTION` entry its worker owes "now goes in `.claude/skills/expedition/glossary.md`". Under this answer, `FRICTION` is a flag marker and owes no glossary entry. So that obligation, and the manager's filing note that `UPSTREAM` belongs in the glossary as its refused alternative, no longer hold. The marker is defined where its shape is defined, which clauses 1 and 7 already require. Its condition does not mention the glossary, so no replacement clause is needed. Clause 8 ("the checker contract is not changed by this work") limits that node's own work and does not conflict with the new rename node, which changes that file.
 
-`41.2` `ASSUMPTION` — The disclosure duty also went into the implementation contract's GATE PAYLOAD line. *(The worker's full text is under its handover's `FLAGS`.)*
+`41.2` `ASSUMPTION` **· settled** — The disclosure duty also went into the implementation contract's GATE PAYLOAD line. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`41.3` `ASSUMPTION` — "A direction from the human" was renamed "an instruction from the human". *(The worker's full text is under its handover's `FLAGS`.)*
+`41.3` `ASSUMPTION` **· settled** — "A direction from the human" was renamed "an instruction from the human". *(The worker's full text is under its handover's `FLAGS`.)*
 
-`41.4` `ASSUMPTION` — The glossary's and flags.md's "judgement an agent made on its own" wording was left unchanged. *(The worker's full text is under its handover's `FLAGS`.)*
+`41.4` `ASSUMPTION` **· settled** — The glossary's and flags.md's "judgement an agent made on its own" wording was left unchanged. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`41.5` `ASSUMPTION` — The "one case only" sentence was left to node 317. *(The worker's full text is under its handover's `FLAGS`.)*
+`41.5` `ASSUMPTION` **· settled** — The "one case only" sentence was left to node 317. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Edge, 2026-09-29 (from node 366)
 
@@ -565,3 +571,4 @@ RETROSPECTIVE:
 
 Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 3 outcome, `PASS`. No exclusion applies: run 3 handed back no question and no raise, covered every clause, and found no flag false. The human's direction at the run 2 gate is carried out by the 2026-10-07 amendment. This settles none of the node's flags; they settle at the node closing report.
 
+*The manager's note, 2026-10-07:* flags 41.1, 41.2, 41.3, 41.4, 41.5 settle at the node closing report that closes this node, which names its gate as taken under the standing yes.
