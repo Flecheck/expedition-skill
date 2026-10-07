@@ -345,3 +345,55 @@ RETROSPECTIVE:
 
 *The manager's note:* under the human's ruling that a `FAIL` goes straight back to the worker for a correction round, the finding is sent to the worker. The checker's question on "refused" goes to the human at the gate.
 
+
+### Correction round 1
+
+*The worker's handover, pasted as handed back, 2026-10-07.*
+
+`````
+HANDOVER:      Ship the FRICTION flag and the self-edit disclosure duty (correction round 1)
+
+ANSWER:        Unchanged from the first handover, except under `### Settle a flag` in `.claude/skills/expedition/graph-conventions.md`. The FRICTION passage now ends by naming both of the rules under `## Flags` in `SKILL.md` that it changes for such a flag, each with the change stated:
+               - The rule that a node's flags settle at its gate or at its node closing report. Such a flag stays outstanding past both, until the human refuses it or checks it by hand.
+               - The rule on which flags reach the effort closing report. Such a flag reaches that report while it is outstanding, whatever that rule says of other flags.
+
+INDEX LINE:    The FRICTION and PERMISSION flag markers, FRICTION's two-disposition settlement, the carried-instruction route past blocking friction, and the gate disclosure duty for self-edits ship in the skill files.
+
+FLAGS:         The four ASSUMPTION flags from the first handover stand as written. The fourth one ("Did not edit SKILL.md `## Flags`'s 'one case only' sentence ...") is still true: the sentence is untouched. graph-conventions.md now also names the rule that sentence states, as the paragraph it changes. No new flags.
+
+NEW NODES:     none
+
+INVALIDATIONS: unchanged from the first handover.
+
+CONDITIONS:    Unchanged. Node 317 (passed its check, gate waiting on the human) replaces the "one case only" sentence with "Every outstanding flag reaches the effort closing report, whatever the state of its node." The new wording reads correctly against both states of the tree:
+               - Against the tree this work starts from, it names the "one case only" rule and says what changes for an outstanding FRICTION flag.
+               - Once 317 lands, "whatever that rule says of other flags" stays true, and nothing in the passage quotes or depends on the sentence 317 removes.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:
+               - Checker run 1, Finding 1 (standing rule for writing 6): fixed.
+                 - The single closing sentence of the `### Settle a flag` FRICTION passage is replaced by a lead-in, "This changes, for such a flag, two rules under `## Flags` in `SKILL.md`:", followed by two bullets. Each bullet names one rule and states the change for such a flag.
+                 - The second bullet is the one the checker found missing: the rule on which flags reach the effort closing report.
+                 - The other FRICTION passage, under `### `## Acceptance condition``, is unchanged. As the checker found, it changes no rule stated elsewhere.
+               - Does the change touch anything the acceptance condition names? Yes. It is inside the `### Settle a flag` procedure, which clause 3 names. The clause 3 content (two dispositions, never settled as fixed, the cross-repository reason, the human ticking the line by hand) is unchanged.
+               - The checker's question to the human ("refused" against the glossary's Reject `_Avoid_` line): not acted on, as instructed. "refused" is the condition's own word.
+               - Paths touched this round: `.claude/skills/expedition/graph-conventions.md`.
+               - Paths touched overall:
+                 - .claude/skills/expedition/graph-conventions.md
+                 - .claude/skills/expedition/SKILL.md
+                 - .claude/skills/expedition-grilling/SKILL.md
+                 - .claude/skills/expedition-prototype/SKILL.md
+                 - .claude/skills/expedition-precondition/SKILL.md
+                 - .claude/skills/expedition-implementation/SKILL.md
+               - Bar: unchanged. This repo has no build, tests or formatter, and the new lines are within the existing wrap width.
+               - Clause 6 disclosure: same as the first handover. No further file moved.
+               - Proposed commit message:
+                 Ship the FRICTION and PERMISSION flag markers and the self-edit disclosure duty
+
+                 Node: graph-workflow/41
+
+RETROSPECTIVE:
+- `one-rule-stated-at-several-sites`: carried by 1 earlier retrospective (node 178). Which flags reach the effort closing report is stated in SKILL.md `## Flags`, and now also implied by graph-conventions' settle procedure. I noticed the collision with node 317's sentence but treated "leave it to 317" as enough. The writing standard required the passage to name every rule elsewhere that it changes, whoever later edits that rule.
+- `condition-collides-with-claimed-node`: carried by 0 earlier retrospectives; it is my own first-round name. It recurs here: a claimed node's pending change shaped what the fix had to say, so that it reads correctly both before and after 317 lands.
+`````
