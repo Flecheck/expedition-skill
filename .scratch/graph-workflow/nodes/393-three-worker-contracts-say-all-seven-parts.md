@@ -1,7 +1,7 @@
 # Three worker contracts say "all seven parts" over a handover of eight
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
