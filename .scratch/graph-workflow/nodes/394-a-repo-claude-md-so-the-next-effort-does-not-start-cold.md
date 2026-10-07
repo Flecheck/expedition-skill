@@ -1,8 +1,14 @@
 # A repo `CLAUDE.md` so the next effort in this repo does not start cold
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+A root `CLAUDE.md` now states what the repo is, its commandless bar, its standards, the skill-file ground and writing rules, the worktree route, the trigger-file duty, two traps, and no-push.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. Checker run 1 failed on a stale copy of writing rule 6 that the manager gave it. Run 2, with the current rule, passed with a question. The human approved the gate on 2026-10-07, and flag 394.1 settled there. The work landed as commit `e1d10361d`. It surfaced [node 395](395-make-gitignore-ignore-every-efforts-worktrees.md).
 
 ## Question
 
@@ -118,7 +124,7 @@ RETROSPECTIVE:
 
 ## Flags
 
-`394.1` `ASSUMPTION` — CLAUDE.md tells a new effort to check that `.gitignore` covers its worktrees directory. *(The worker's full text is under its handover's `FLAGS`.)*
+`394.1` `ASSUMPTION` **· settled** — CLAUDE.md tells a new effort to check that `.gitignore` covers its worktrees directory. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 

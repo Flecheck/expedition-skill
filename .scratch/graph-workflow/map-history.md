@@ -1282,3 +1282,13 @@ The manager writes it into the node file in the same edit that writes that node'
 
 **Where an agent sees that its acceptance condition forces a contradiction, that is a raise and not a flag.**
 
+## Superseded from `map-implementation-rules.md` at node 394 — the bar paragraph's sentences on the repo stating no commands
+
+*Replaced under the `Change the map` procedure by the manager, on the human's `verbatim` "ok" at [node 394](nodes/394-a-repo-claude-md-so-the-next-effort-does-not-start-cold.md)'s gate, 2026-10-07, to the manager's recommendation. The root `CLAUDE.md` that node landed made these sentences false. The rest of the paragraph is unchanged and is not reproduced here.*
+
+### From `map-implementation-rules.md`'s `## What the work is held against` — the bar's commands paragraph
+
+*Replaced, and it stood as:*
+
+What this paragraph records is a copy of an earlier discovery, and it is not the authority for what is run. Where a repo states its own build, test or format commands, a copy like this one is confirmed against that statement before use. Where the two differ, the repo's statement wins. This repo states no commands of its own, so there is nothing to confirm this record against, and it stands as it is. Seeing that takes one look at the repo's root, which holds no agent-instruction file such as `CLAUDE.md` or `AGENTS.md` and no manifest. That look is all that using this record costs.
+
