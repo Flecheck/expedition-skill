@@ -1,8 +1,14 @@
 # Three worker contracts say "all seven parts" over a handover of eight
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+No change: the three contracts' "all seven parts" was already right, because the shipped files count a handover's parts below the HANDOVER header (seven, plus the implementation worker's gate payload).
+
+*The manager's note:* discharged with no edit, on the human's `verbatim` "ok" to the worker's raise. The worker's answer is under `## Handover, attempt 1`. The worktree held no change, so there was nothing to check or land. The node raised no flags.
 
 ## Question
 
@@ -58,3 +64,23 @@ RETROSPECTIVE
 `verbatim`: *"ok"*
 
 *The manager's note:* the manager's message ended "Please answer node 393. \"ok for recommended\" reverts and closes it with no change.", so the reply takes the worker's `RECOMMENDED`: "Revert, and resolve the node with no change." No divergence.
+
+## Handover, attempt 1
+
+*Pasted as the worker handed it back, 2026-10-07.*
+
+`````
+HANDOVER:      Three worker contracts say "all seven parts" over a handover of eight (node 393)
+ANSWER:        No change was needed. In the grilling, prototype and precondition contracts, "Hand back all seven parts every time." is already correct under the counting rule the shipped files use. That rule does not count the `HANDOVER:` header line as a part. The implementation contract's handover shape has nine labelled lines (HANDOVER, ANSWER, INDEX LINE, FLAGS, NEW NODES, INVALIDATIONS, CONDITIONS, MISSING FROM MAP, GATE PAYLOAD) and says "all eight parts". `.claude/skills/expedition/SKILL.md`'s bullet "A handover has seven parts every time" lists the seven parts below the header and adds "An implementation worker returns an eighth, the gate payload." Each of the three contracts lists exactly those seven parts below its header. The node's premise of eight parts came from counting the header line. The scope search in the condition also misstated what it returns: `grep -n "parts every time" .claude/skills/expedition-*/SKILL.md` returns three lines, not four. The implementation contract's sentence wraps between "all" and "eight", so the grep does not reach it. A worker briefly edited the three sentences to "eight". The human answered "ok" to the raise recommending a revert, and the edits were reverted, so the tree holds no change.
+INDEX LINE:    No change: the three contracts' "all seven parts" was already right, because the shipped files count a handover's parts below the HANDOVER header (seven, plus the implementation worker's gate payload).
+FLAGS:         none
+NEW NODES:     none
+INVALIDATIONS: none. Node 40's NEW NODES block and its retrospective item `count-wrong-when-written` describe the three contracts as saying seven over a handover of eight. This node's answer shows that description is wrong. It is a correction to a report and changes no resolved answer's rule.
+CONDITIONS:    I searched the `## Acceptance condition` and `## Question` sections of open and claimed nodes, and the resolved nodes' `## Answer` and `## Acceptance condition` sections, for "seven parts", "eight parts" and "parts every time". Among open or claimed nodes, only node 393 itself and node 41 matched. Node 41's match is its own note "Node 393 is unaffected: its 'all seven parts' sentences were not edited", which still holds. No replacement clauses and no changed questions.
+MISSING FROM MAP: none
+GATE PAYLOAD:  The checker has not run, so there are no findings. The worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/393-part-count holds no change: `git status --short` prints nothing after the three edits were reverted. No paths are left changed. The paths that were touched and then restored are .claude/skills/expedition-grilling/SKILL.md, .claude/skills/expedition-prototype/SKILL.md and .claude/skills/expedition-precondition/SKILL.md. The bar's commands: the repo states none, which matches map-implementation-rules.md. No commit is proposed, since there is nothing to land.
+
+RETROSPECTIVE
+- `condition-scope-misplaces-a-match` (carried by 1 earlier retrospective: node 317). New since the raise: the misstated grep line count also passed through the manager's filing unchecked, which is a second instance in the same node.
+- `count-wrong-when-written` (carried by 2 earlier retrospectives: nodes 135, 40). New since the raise: the miscount that produced this node was in node 40's NEW NODES, and the effort's only other statement of the count (SKILL.md's "seven parts" bullet) would have caught it there. Nothing new beyond the items in the raise's retrospective.
+`````
