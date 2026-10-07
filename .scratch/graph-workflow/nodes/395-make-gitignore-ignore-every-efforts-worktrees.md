@@ -63,3 +63,43 @@ RETROSPECTIVE:
 ## Flags
 
 `395.1` `ASSUMPTION` — The literal ignore entry was replaced, not supplemented, by the glob. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-07. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/check395.md`. The node's one flag, 395.1, reached it as text.*
+
+> PASS
+>
+> Acceptance condition, one line per part:
+> - Preamble (edits `.gitignore` and `CLAUDE.md` only): `git status --porcelain --untracked-files=all` in the worktree lists only ` M .gitignore` and ` M CLAUDE.md`. The diff is 7 insertions and 7 deletions across those two files. No search is recorded in the condition ("Scope came from no search"), so I had no recorded command to re-run.
+> - Part 1: `.gitignore` now ends with the entry `.scratch/*/worktrees/`. `git check-ignore .scratch/anyname/worktrees/x` printed `.scratch/anyname/worktrees/x` with rc=0.
+> - Part 2: `git check-ignore .scratch/graph-workflow/worktrees/x .scratch/graph-workflow/worktrees/` printed both paths with rc=0. `git check-ignore -v .scratch/graph-workflow/worktrees/395-gitignore` attributes the match to `.gitignore:19:.scratch/*/worktrees/`.
+> - Part 3: `grep -n "Before an effort's first worktree\|add one where none" CLAUDE.md` matched nothing (rc=1). `grep -n "ignores that path" CLAUDE.md` matched line 48, ``- `.gitignore` ignores that path.``, which is under `## The worktree of an implementation node`. The diff shows that the bullet lost only its second and third sentences.
+> - Part 4: `wc -w CLAUDE.md` gives 831, which is at most 900.
+> - Part 5 (the bar): see below.
+>
+> The bar:
+> - Commands: the root `CLAUDE.md` `## Commands` says the repo has no build, no tests, no formatter and no CI, so there is no command to run. The copy in the rules file agrees. I also ran `git diff --check`, which printed nothing (rc=0).
+> - Standards: I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md`, under `## What the work is held against`. They are `/coding-principles` and `/naming`, the glossary `_Avoid_` lines, the effort's ground rules and six writing rules (taken from the spawn text), `graph-conventions.md`, and `/writing-for-agents`. No reviewing skill is named, so I ran none and held the work against these standards by hand.
+> - Standards that bore on this work: the glossary `_Avoid_` lines, the six writing rules / `/writing-for-agents` (for the edited `.gitignore` comment and the `CLAUDE.md` bullet), and ground rule 4. `graph-conventions.md` says nothing about `.gitignore` or worktrees, so it did not bear.
+> - `_Avoid_` result: I grepped the `_Avoid_` lines for the words in the changed lines. The only hit is `review` (line 290, refused as a name for the gate). The comment's "so that a review can see the diff" already stood before this change, and it uses "review" for the human's act, which the refusal's own parenthetical allows. Not a finding.
+> - Writing-rules result: the opening comment line "The current path, one directory per effort." is a label phrase. It keeps the form of the earlier "The current path." I judged it a comment label rather than a breach of "Write every sentence grammatically". Not a finding.
+> - Did the work move a standard: no. Neither changed path holds a standard I hold the work against. The `CLAUDE.md` edit removes a procedural instruction and leaves the `## Standards` list and the writing rules unchanged.
+>
+> Under the rules file's rule, I read the changed paths as the work. Neither path is a record file, a status line, `decisions.md` or `flags.md`.
+>
+> Flags, checked after the outcome:
+> - 395.1 is true of the work. The diff removes `-.scratch/graph-workflow/worktrees/` and adds `+.scratch/*/worktrees/`, and no literal entry for that path remains in `.gitignore`.
+>
+> No QUESTIONS, no NOT COVERED. I wrote no temporary files.
+>
+> Paths: /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/395-gitignore/.gitignore, /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/395-gitignore/CLAUDE.md
+
+*The manager's note:* the checker handed back no question and no raise, covered every clause, and found the flag true. The gate is taken under the standing yes, below.
+
+
+### Gate — approve, `standing yes`, 2026-10-07
+
+Taken under the standing yes recorded in `map-manager-only.md`, scope text *"Approve all gates automatically"*. What was taken: the checker's run 1 outcome, `PASS`. No exclusion applies. This settles none of the node's flags; they settle at the node closing report.
