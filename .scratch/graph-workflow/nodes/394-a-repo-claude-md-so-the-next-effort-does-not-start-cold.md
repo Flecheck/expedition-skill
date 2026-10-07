@@ -215,3 +215,9 @@ RETROSPECTIVE:
 
 *The manager's note:* the checker's run 1 question on the rules file's bar paragraph still stands, so the standing yes does not cover this gate. It goes to the human.
 
+
+### Gate — approve, 2026-10-07
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the manager's message ended "Please approve node 394, or tell me what to change in the file.", and recommended approving, then narrowing the rules file's bar paragraph as a record edit after landing. The reply takes both. Flag 394.1 settles at this gate.
