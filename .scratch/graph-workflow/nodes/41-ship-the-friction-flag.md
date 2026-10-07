@@ -397,3 +397,61 @@ RETROSPECTIVE:
 - `one-rule-stated-at-several-sites`: carried by 1 earlier retrospective (node 178). Which flags reach the effort closing report is stated in SKILL.md `## Flags`, and now also implied by graph-conventions' settle procedure. I noticed the collision with node 317's sentence but treated "leave it to 317" as enough. The writing standard required the passage to name every rule elsewhere that it changes, whoever later edits that rule.
 - `condition-collides-with-claimed-node`: carried by 0 earlier retrospectives; it is my own first-round name. It recurs here: a claimed node's pending change shaped what the fix had to say, so that it reads correctly both before and after 317 lands.
 `````
+
+### Checker run 2 — `PASS`
+
+*The checker's own text, pasted, 2026-10-07. The run 1 checker, resumed for the re-check.*
+
+> PASS
+>
+> This re-check comes after correction round 1, in the same worktree with the work still uncommitted.
+>
+> **What changed this round.**
+> - The six changed paths are the same as last round (`git status --porcelain --untracked-files=all`).
+> - Only graph-conventions.md was touched after SKILL.md (`find .claude -newer .claude/skills/expedition/SKILL.md -type f`).
+> - I reread the full added text of graph-conventions.md and SKILL.md (`git diff HEAD | grep '^[-+]'`). The one change from last round is under `### Settle a flag`. The old closing sentence, which named only the settle-timing rule, has become a lead-in, "This changes, for such a flag, two rules under `## Flags` in `SKILL.md`:", followed by two bullets:
+>   - when a node's flags settle: "Such a flag stays outstanding past both, until the human refuses it or checks it by hand."
+>   - which flags reach the effort closing report: "Such a flag reaches that report while it is outstanding, whatever that rule says of other flags."
+> - This matches the worker's statement, and nothing else moved.
+>
+> **Last round's Finding 1 (writing rule 6) is repaired.** The passage now names both `SKILL.md` `## Flags` rules it changes, and states the change for each.
+>
+> The condition, as amended:
+> 1. Met, and the text is unmoved. graph-conventions.md says "There are five markers". `FRICTION` and `PERMISSION` are listed with the meanings the clause gives.
+> 2. Met, and the text is unmoved. The sentence "A `FRICTION` flag uses this same form…" follows the `flags.md` line form.
+> 3. Re-established, because this round edited the passage. The passage still holds:
+>    - "exactly two dispositions, and being settled as fixed is not one of them";
+>    - refused, settled in place by steps 1 and 2 with the human's reason recorded;
+>    - outstanding, left unchecked and carried again in "The effort closing report of that effort";
+>    - "No agent may mark such a flag settled as fixed", with the reason about the repository boundary;
+>    - the human checking the flag's line by hand once the fix landed.
+>
+>    The new bullets add to this and contradict nothing in the clause.
+> 4. Met, and the text is unmoved. The paragraph "An effort whose product is not the expedition skill files never fixes those files…" is unchanged.
+> 5. Met, and the text is unmoved. `SKILL.md` under `### Two things that travel in a spawn and are not yours` holds all three statements, and graph-conventions.md gains none of them (from the diff).
+> 6. Met, and the text is unmoved. The section `## Work that changes a file other nodes are written against` is unchanged.
+> 7. Met, and the diff for these files is the same size as last round. The four contracts each list `FRICTION` in their marker paragraph and their `FLAGS:` line, with the meaning required.
+> 8. Met. `git diff --quiet HEAD -- .claude/skills/expedition-checker .scratch` exits 0.
+> 9. Met, by the same command.
+> 10. Met. See the bar below.
+> 11. Met. `grep -rn PERMISSION .claude/` gives one hit, the marker-list line. The new bullets say nothing about how a `PERMISSION` flag settles.
+>
+> The bar, re-run in full:
+> - **Commands:** the repo has no build, test or format commands, since the root has no CLAUDE.md, AGENTS.md or manifest. `git diff --check` is clean, and no added line is over 110 characters.
+> - **Standards:** I read only the standards in `map-implementation-rules.md`. The ones that bear on this work:
+>   - graph-conventions.md;
+>   - the glossary's `_Avoid_` lines;
+>   - the ground rules;
+>   - the six standing rules for writing.
+> - **The edited standard:** graph-conventions.md is both changed by this work and one of the standards. This round's edit only adds elements, so the analysis from last round stands.
+> - **Breaches:** none found.
+> - **Record files:** none are among the changed paths.
+>
+> **Flags.** The flags are unchanged, and none is false. 41.5 is still true: the "one case only" sentence is unchanged in SKILL.md, and graph-conventions.md now names its change for `FRICTION` flags.
+>
+> My question about "refused" stands as handed back last round. My view of it has not changed.
+>
+> I wrote no temporary files.
+
+*The manager's note:* the checker's run 1 question on "refused" still stands beside this outcome, so the standing yes does not cover this gate. It goes to the human.
+
