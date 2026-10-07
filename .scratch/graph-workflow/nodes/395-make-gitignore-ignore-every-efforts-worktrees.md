@@ -1,7 +1,7 @@
 # Make `.gitignore` ignore every effort's worktrees directory
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: 394
 
 ## Question
