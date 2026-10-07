@@ -467,3 +467,50 @@ RETROSPECTIVE:
 
 *The manager's note:* the manager's message ended "Please answer: \"ok for recommended\" sends node 41 back for that rename, or say approve as is." The recommendation was to rename "refused" to "declined" in the new passage, including "until the human refuses it", so the gate word "reject" stays unambiguous. The reply takes it, and the amendment above records it.
 
+
+### Correction round 2
+
+*The worker's handover, pasted as handed back, 2026-10-07.*
+
+`````
+HANDOVER:      Ship the FRICTION flag and the self-edit disclosure duty (correction round 2)
+
+ANSWER:        Unchanged from the first handover and correction round 1, except for one rename. Under `### Settle a flag` in `.claude/skills/expedition/graph-conventions.md`, the FRICTION passage names the human's not-worth-carrying disposition "declined" instead of "refused". The second bullet of the closing list now reads "until the human declines it or checks it by hand". A FRICTION flag on an effort whose product is not the expedition skill files has exactly two dispositions, declined and outstanding.
+
+INDEX LINE:    The FRICTION and PERMISSION flag markers, FRICTION's two-disposition settlement, the carried-instruction route past blocking friction, and the gate disclosure duty for self-edits ship in the skill files.
+
+FLAGS:         The four ASSUMPTION flags from the first handover stand as written. No new flags.
+
+NEW NODES:     none
+
+INVALIDATIONS: Unchanged from the first handover.
+
+CONDITIONS:    Unchanged. "declined" and "declines" appear in no `_Avoid_` line: grep over `.claude/skills/expedition/glossary.md` for "declin" returns nothing.
+
+MISSING FROM MAP: none
+
+GATE PAYLOAD:
+               - What changed: the human's 2026-10-07 answer, "ok" to the manager's recommendation, is filed as `## Amendment, 2026-10-07 (the human's answer at the gate)`. Carrying it out took two edits in `.claude/skills/expedition/graph-conventions.md`, both in the FRICTION passage under `### Settle a flag`:
+                 - "- refused — the human judges the flag not worth carrying." became "- declined — the human judges the flag not worth carrying."
+                 - "until the human refuses it or checks it by hand." became "until the human declines it or checks it by hand."
+               - Verification: the `### Settle a flag` section no longer contains "refuse", "refused" or "refuses" (case-insensitive grep returns nothing). No other added line in the diff contains "refus".
+               - Does it touch anything the acceptance condition names? Yes. It is clause 3's disposition word, as amended. Nothing else in clause 3's content moved.
+               - Bar: unchanged. This repo has no build, tests or formatter, and no added line exceeds the existing wrap width.
+               - Paths touched this round: `.claude/skills/expedition/graph-conventions.md`.
+               - Paths touched overall:
+                 - .claude/skills/expedition/graph-conventions.md
+                 - .claude/skills/expedition/SKILL.md
+                 - .claude/skills/expedition-grilling/SKILL.md
+                 - .claude/skills/expedition-prototype/SKILL.md
+                 - .claude/skills/expedition-precondition/SKILL.md
+                 - .claude/skills/expedition-implementation/SKILL.md
+               - Landing note: node 317 landed on master after this worktree was cut. My SKILL.md edit is under `### Two things that travel in a spawn and are not yours`, and 317's is under `## Flags`, so they should not conflict.
+               - Clause 6 disclosure: same as the first handover, plus one item. graph-conventions.md's closing-report bullet ("whatever that rule says of other flags") was written against the old "one case only" sentence and reads correctly against 317's new sentence.
+               - Proposed commit message:
+                 Ship the FRICTION and PERMISSION flag markers and the self-edit disclosure duty
+
+                 Node: graph-workflow/41
+
+RETROSPECTIVE:
+- `glossary-refusal-found-after-writing`: carried by 1 earlier retrospective (node 317). The condition's own word "refused" collided with the glossary's Reject `_Avoid_` line ("refuse"). I copied the condition's word without checking it against the `_Avoid_` lines, and the checker caught it rather than me. A worker carrying a condition's coined word into shipped text should grep the `_Avoid_` lines for it first.
+`````
