@@ -278,3 +278,70 @@ RETROSPECTIVE:
 `````
 
 *The manager's note, 2026-10-06:* the worker is right that the spawn did not say node 317 was editing `SKILL.md`'s `## Flags` at the same time. The manager knew it and left it out.
+
+## Review
+
+### Checker run 1 — `FAIL` (the bar)
+
+*The checker's own text, pasted, 2026-10-07. A fresh checker; the condition, its amendments and the node's five flags reached it as text in `$TMPDIR/check41.md`.*
+
+> FAIL: the bar
+>
+> ### Finding 1: the FRICTION settle passage changes a second SKILL.md rule without naming it (standing rule for writing 6)
+> - **Instances:** In `.claude/skills/expedition/graph-conventions.md`, under `### Settle a flag`, the new passage says of an outstanding FRICTION flag: "The effort closing report of that effort carries it again."
+>   - That changes a rule in `.claude/skills/expedition/SKILL.md` under `## Flags`: "Flags reach the effort closing report in one case only: a flag whose node closing report the human never answered, because they never spoke again." An outstanding FRICTION flag whose node closing report the human did answer now also reaches the effort closing report.
+>   - The passage's last sentence names one SKILL.md rule it changes: "the rule under `## Flags` in `SKILL.md` that a node's flags settle at its gate or at its node closing report". It does not name the "one case only" rule, and it does not state that change.
+>   - Standing rule 6 says: "A passage that changes a rule for its own case names that rule by heading and states the change in its own words."
+>   - The work's wording follows the condition, so this is not a condition failure. The breach is the missing statement of the change.
+>   - Found by reading the unwrapped `## Flags` section of the worktree's SKILL.md, using `awk '/^## Flags/{f=1} f&&/^## /&&!/^## Flags/{f=0} f' .claude/skills/expedition/SKILL.md | tr '\n' ' '`, and comparing it with the new passage.
+> - **Form:** a sentence in the new FRICTION text of graph-conventions.md that changes, for FRICTION flags, a rule stated in another shipped file, where the passage does not name that rule by heading and state the change.
+> - **Extent:** the smallest set that contains every instance is the two new FRICTION passages in graph-conventions.md. One is the paragraph after "A `FRICTION` flag raised on an effort whose product is not the expedition skill files" under `### Settle a flag`. The other is the paragraph starting "An effort whose product is not the expedition skill files never fixes those files". These are the only added text that changes how flags or conditions behave elsewhere. I checked the second one, and it changes no rule stated elsewhere. Flag 41.5 says the SKILL.md sentence was left for node 317. I did not judge that reason. The finding is only that the graph-conventions passage does not name this change.
+>
+> Acceptance condition (held as amended: clause 1 replaced by the 2026-10-06 text, clause 3's wording per the 2026-09-27 amendment, clause 5 replaced 2026-10-06, clause 7 replaced 2026-10-05, clause 11 added). All parts hold:
+> 1. Met. The `## Flags` description in graph-conventions.md says "There are five markers". It lists ASSUMPTION, CONDITION-WRONG, DELEGATED, FRICTION (worded exactly as the clause) and PERMISSION (worded exactly as the clause). Established by `git diff` on graph-conventions.md.
+> 2. Met. Directly after the `flags.md` line form: "A `FRICTION` flag uses this same form. Its marker stands where `ASSUMPTION` stands above, as every other marker does."
+> 3. Met. `### Settle a flag` says there are "exactly two dispositions, and being settled as fixed is not one of them".
+>    - The two dispositions are "refused", settled in place with the human's reason recorded, and "outstanding", where the line stays unchecked and "The effort closing report of that effort carries it again".
+>    - It also says "No agent may mark such a flag settled as fixed", gives the reason about the repository boundary, and says the human may check the line by hand.
+> 4. Met. The paragraph after the condition-scope text says "never fixes those files … no acceptance condition, and no condition for closing the effort, may be made to depend on a change to them."
+> 5. Met.
+>    - `.claude/skills/expedition/SKILL.md` keeps the heading `### Two things that travel in a spawn and are not yours` (`grep -n "^#"`).
+>    - Its first bullet holds all three statements: the human's instruction is carried as their own words, an instruction needed more than once is written into the ground rules in `map.md`'s `## Notes`, and "Never invent such an instruction on your own authority".
+>    - `grep -n "instruction\|ground rules"` over graph-conventions.md's diff shows it gained none of the three.
+> 6. Met. graph-conventions.md has a new section, `## Work that changes a file other nodes are written against`, with the required duty.
+> 7. Met. Each of the four files (grilling, implementation, prototype, precondition) has `FRICTION` in its `FLAGS:` line. Each one's marker paragraph says "`FRICTION`, for a defect in the expedition workflow itself that you noticed while using it". The research contract is absent from `.claude/skills/` (`ls`).
+> 8. Met. `git diff --quiet HEAD -- .claude/skills/expedition-checker` exits 0.
+> 9. Met. `git diff --stat HEAD -- .scratch` is empty, and `git status --porcelain --untracked-files=all` shows only the six modified paths.
+> 10. Not met: see Finding 1. Under the bar there is no command to run (see below).
+> 11. Met. `grep -rn PERMISSION .claude/` finds one hit, the marker list line in graph-conventions.md. No sentence about how a PERMISSION flag settles was added.
+>
+> The bar:
+> - **No commands to run.** The worktree root has no CLAUDE.md, AGENTS.md or manifest (`ls -a`), so there is nothing to build, test or format. `git diff --check` is clean, and no added line is longer than 110 characters.
+> - **Standards file.** I read only the standards in `/home/mathieu/projects/graph-agent/.scratch/graph-workflow/map-implementation-rules.md`.
+> - **Standards that bore on this work:**
+>   - graph-conventions.md
+>   - the glossary's `_Avoid_` lines
+>   - the ground rules
+>   - the six standing rules for writing
+> - **Not run:** `/coding-principles` and `/naming` (no code), and `/writing-for-agents`, which is not invocable here and which I applied through the six written rules. No reviewing skill is named, so I ran none.
+> - **Where the work moved a standard:** the work changes graph-conventions.md, which is itself a standard, so I settled what moved first.
+>   - The marker list, the new paragraphs and the new section are added elements, so I held them against the condition.
+>   - The lead-in changing from "which kind of judgement the flag records" to "which kind of flag it is" is explanatory wording only.
+>   - No element was removed.
+> - **Record files:** none are among the changed paths, so the record-as-work rule did not apply.
+>
+> The flags, checked after the outcome:
+> - 41.2 is true: the GATE PAYLOAD line has the duty.
+> - 41.3 is true: `grep -rn "direction from"` over `.claude/` finds nothing.
+> - 41.4 is true: "judgement an agent made on its own" is unchanged in glossary.md, in graph-conventions.md's flags.md description, and in the four contracts.
+> - 41.5 is true: the "one case only" sentence is still in SKILL.md.
+> - 41.1 is true as far as the work shows: the work uses "the effort closing report of that effort". Where the clause was filed is part of the record, which I can't see.
+> - No flag is false.
+>
+> QUESTIONS:
+> - One word may clash with the glossary. The condition's own disposition name "refused" (clause 3) sits beside the glossary's `**Reject**` entry, whose `_Avoid_` line lists "refuse". The work uses the condition's word as it was told to, so it was not the worker's to change. The question for the human is whether a FRICTION flag's "refused" disposition should be reworded to stay clear of the Reject entry's refused synonym. Extent: `grep -n "refused" .claude/skills/expedition/graph-conventions.md`, one hit in the new `### Settle a flag` passage.
+>
+> I wrote no temporary files.
+
+*The manager's note:* under the human's ruling that a `FAIL` goes straight back to the worker for a correction round, the finding is sent to the worker. The checker's question on "refused" goes to the human at the gate.
+
