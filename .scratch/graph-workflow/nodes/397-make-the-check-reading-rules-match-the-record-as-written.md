@@ -125,3 +125,9 @@ RETROSPECTIVE
 
 *The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
 
+
+### Gate — approve, 2026-10-08
+
+`verbatim`: *"approve"*
+
+*The manager's note:* the manager's message ended "Please approve node 397, or tell me to send it back.", and recommended approving as is. The checker's question, the same point as flag 397.1, is answered by the approval. Flag 397.1 settles at this gate.
