@@ -263,7 +263,7 @@ then its marker, one word saying which kind of flag it is. There are five marker
 A settled flag's entry takes this form:
 
 ```
-`NN.k` **· settled** `ASSUMPTION` — <the judgement, in the worker's own prose>
+`NN.k` `ASSUMPTION` **· settled** — <the judgement, in the worker's own prose>
 ```
 
 The word for a flag is `settled`, and `resolved` is kept for a node. Only the line in `flags.md` carries
@@ -687,9 +687,14 @@ A check reads the files by these rules.
   whose text cites another node is not counted as an entry for that node.
 - A `## Flags` entry is line-anchored: it begins at the start of a line with the flag's id. So a flag
   id that appears mid-sentence inside another entry's prose is not itself an entry.
-- A flag counts as settled on its node only where the marker `**· settled**` stands in an entry's
-  marker position, directly after its id, as the settled form under `## The node file` shows. The bare
-  word `settled` in an entry's prose does not settle it.
+- A flag counts as settled on its node only where the marker `**· settled**` stands in one of two
+  positions: directly after the entry's kind marker, as the settled form under `## The node file` shows,
+  or directly after its id. The bare word `settled` in an entry's prose does not settle it.
+- A number for which no node file has ever existed is a skipped number. It is not a gap that indicates a
+  reused number, and check 3 does not fail on it.
+- A heading that begins `## Acceptance condition` and continues with further words counts as the node's
+  `## Acceptance condition`.
+- A `NOT COVERED:` label inside a blockquote is quoted text. Check 9 does not read it as a label.
 
 ## Work that changes a file other nodes are written against
 
