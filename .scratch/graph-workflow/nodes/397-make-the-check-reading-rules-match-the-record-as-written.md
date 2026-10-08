@@ -1,8 +1,14 @@
 # Make the check-reading rules match the record as it is written
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+graph-conventions.md's settled form puts `**· settled**` after the kind marker, the reading rule accepts either position, and three reading rules clear checks 3, 7 and 9's false failures.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1 with a question. The human approved the gate on 2026-10-08, and flag 397.1 settled there. The work landed as commit `c9b6188ea`.
 
 ## Question
 
@@ -82,7 +88,7 @@ RETROSPECTIVE
 
 ## Flags
 
-`397.1` `ASSUMPTION` — The skipped-number rule leaves unstated how a reader establishes that no file ever existed. *(The worker's full text is under its handover's `FLAGS`.)*
+`397.1` `ASSUMPTION` **· settled** — The skipped-number rule leaves unstated how a reader establishes that no file ever existed. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 
