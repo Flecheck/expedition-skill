@@ -206,3 +206,13 @@ Check 6 breaks down as:
 - 387 settled markers in the wrong position
 - 9 entries with no settled marker
 `````
+
+## Interview
+
+#### The human's answer on the sweep's failures, 2026-10-08
+
+*The manager's proposal, as sent, in summary of its four parts:* (1) a node to make the settled-mark reading rule match practice and to clarify three rule gaps (a skipped id, a suffixed condition heading, blockquoted pasted checker text); (2) a node to fix the small graph defects (the stale edge, the five back-edges, the three index-line counts, the four flag entries with no index line); (3) leave the old flag drift and the missing `## Answer` headings as they are, with a note in the closing report, as records of what happened; (4) record the check 11 breaches in the closing report, with no node. Then a second sweep. *The message ended:* "Please answer: \"ok for recommended\" takes the four-way split, or tell me what to change."
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the reply takes the four-way split. Parts 1 and 2 are nodes [397](397-make-the-check-reading-rules-match-the-record-as-written.md) and [398](398-fix-the-small-graph-defects-the-first-sweep-found.md). Parts 3 and 4 are carried by the effort closing report from this node's report. This departs, on the human's word, from `SKILL.md`'s "Each failure becomes a node" for this round.
