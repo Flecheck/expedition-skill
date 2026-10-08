@@ -83,3 +83,45 @@ RETROSPECTIVE
 ## Flags
 
 `397.1` `ASSUMPTION` — The skipped-number rule leaves unstated how a reader establishes that no file ever existed. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-08. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/check397.md`. The node's one flag, 397.1, reached it as text.*
+
+> PASS
+>
+> Parts of the acceptance condition. Each was established by a search over the worktree /home/mathieu/projects/graph-agent/.scratch/graph-workflow/worktrees/397-reading-rules, against the unwrapped text of the bullets.
+>
+> - Only `.claude/skills/expedition/graph-conventions.md` is edited, and nothing was moved to any history file. Established by `git status --short` and `git diff --stat`, which show that one file changed, with 9 lines added and 4 removed. The superseded wording was removed and not struck: the diff shows `-`/`+` lines and no `~~` markers.
+> - Scope: the condition records no search command, so there was nothing to re-run.
+> - Part 1: met. `grep -n "· settled" F` shows line 266 under `### \`## Flags\`` in `## The node file`, reading `` `NN.k` `ASSUMPTION` **· settled** — <the judgement, in the worker's own prose> ``.
+> - Part 2: met. Found by `awk '/^## Mechanical checks/,/^## Work that changes/'` and by the grep above at line 690. The bullet says the marker `**· settled**` stands "in one of two positions: directly after the entry's kind marker, as the settled form under `## The node file` shows, or directly after its id". It keeps "The bare word `settled` in an entry's prose does not settle it."
+> - Part 3: met, in a new bullet under `### How a check reads the files`. It reads "A number for which no node file has ever existed is a skipped number. It is not a gap that indicates a reused number, and check 3 does not fail on it."
+> - Part 4: met, in a new bullet under `### How a check reads the files`. It reads "A heading that begins `## Acceptance condition` and continues with further words counts as the node's `## Acceptance condition`."
+> - Part 5: met, in a new bullet under `### How a check reads the files`. It reads "A `NOT COVERED:` label inside a blockquote is quoted text. Check 9 does not read it as a label."
+> - Part 6: met. `git diff` shows exactly two hunks: the settled-form line (part 1), and the settled-flag reading rule plus three added bullets (parts 2 to 5). No other sentence changed. Headings were compared with `diff` over `grep -n "^#"` of HEAD against the working tree, and they are identical, so none was renamed.
+> - Part 7 (the bar): met, as below.
+>
+> The bar:
+> - Commands. The repo's root `CLAUDE.md`, under `## Commands`, states that it has no build, no tests, no formatter and no CI. So there was no command to run. `git diff --check` printed nothing (no whitespace errors).
+> - Standards. I read only the standards in `.scratch/graph-workflow/map-implementation-rules.md`, under `## What the work is held against`. They are `/coding-principles` and `/naming`, the glossary's `_Avoid_` lines, the ground rules and six writing rules given in the spawn, `graph-conventions.md`, and `/writing-for-agents`.
+> - Standards that bore on this work: the glossary `_Avoid_` lines (the refusals were checked by hand, and the new text uses none), the writing rules (plain English, one referent per pronoun, no line-number citations, no heading renamed), `/writing-for-agents` (read from the mattpocock-skills plugin in the nix store, and no breach found), and the ground rules (nothing assumes this repo or a toolchain). `/coding-principles` and `/naming` do not bear on a prose-only change.
+> - No reviewing skill is named for this repo, so I ran none.
+> - What moved first. The work edits `graph-conventions.md`, which is itself a standard, so I settled what moved before checking. The settled-marker rule was altered, and three reading rules were added. This work is a prose change, not a node file with flags, so it need not be held against the altered element. The added elements are the work itself and were held against the condition. Every other element is unmoved.
+> - I read the changed path as the work, under the rules file's rule on record files. The changed path is a shipped skill file, not a record file.
+>
+> QUESTIONS:
+> - (Condition met, but complying with it creates a tension. The wording is the condition's own, so it was not the worker's to depart from.)
+>   - Instances: `## Mechanical checks` opens with "Each of these is decidable by reading the files." The new bullet makes check 3 depend on "a number for which no node file has ever existed", and the current files do not show that. Nothing in `graph-conventions.md` says how a reader establishes it.
+>   - Form: a reading rule under `### How a check reads the files` that needs facts not present in the files' current state.
+>   - Extent: `grep -n "ever existed\|has ever" .claude/skills/expedition/graph-conventions.md`, which returns only the new skipped-number bullet.
+>   - Flag 397.1 already records this. It is restated here only because the tension is with the opening sentence of that section.
+>
+> The flags: 397.1 ASSUMPTION is true of the work. The skipped-number bullet relies on file history and states no way to establish it. A grep of the work for "ever existed" returns only that bullet, which names no method. No false flag.
+>
+> Temporary files: two heading-list files under $TMPDIR, now removed. The worktree is unchanged by me: `git status` shows only the worker's one modified file.
+
+*The manager's note:* the checker handed back a question beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
