@@ -1,7 +1,7 @@
 # Fix the small graph defects the first sweep found
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question

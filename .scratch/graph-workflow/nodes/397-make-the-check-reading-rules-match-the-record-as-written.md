@@ -1,7 +1,7 @@
 # Make the check-reading rules match the record as it is written
 
 Type: implementation
-Status: open
+Status: claimed
 Blocked by: none
 
 ## Question
