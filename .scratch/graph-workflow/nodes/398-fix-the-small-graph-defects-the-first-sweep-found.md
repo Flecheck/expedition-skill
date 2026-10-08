@@ -116,3 +116,53 @@ RETROSPECTIVE
 `398.5` `ASSUMPTION` — The four flag lines were built from each entry's opening or key sentence. *(The worker's full text is under its handover's `FLAGS`.)*
 
 `398.6` `FRICTION` — The implementation contract's "leave flags.md unread" has no exception for a node whose work is flags.md. *(The worker's full text is under its handover's `FLAGS`.)*
+
+## Review
+
+### Checker run 1 — `PASS`
+
+*The checker's own text, pasted, 2026-10-08. A fresh checker; the condition reached it as a verbatim copy in `$TMPDIR/check398.md`. The node's six flags, 398.1 to 398.6, reached it as text.*
+
+> PASS
+>
+> Read the changed paths as the work under the rule in map-implementation-rules.md that covers a node whose work is the effort's own record. From that file I read only its standards: the list under "## What the work is held against", the bar's-commands paragraph, the review route, and the record-as-work rule. The standards that applied here were graph-conventions.md (the never-delete rule, field order, the decisions.md and flags.md line forms, and mechanical checks 2, 5 and 6), the effort's writing rules, and the glossary's _Avoid_ lines. /coding-principles and /naming did not apply, because no code changed. The standards name no reviewing skill, so I ran none. The work moved no standard.
+>
+> What I diffed: the worktree 398-graph-fixes against HEAD b7284f42d, using `git diff --word-diff=plain`, `git diff HEAD --name-only` and `git status --untracked-files=all`.
+>
+> Condition, part by part:
+> - Scope and file limit. The changed paths are exactly the 8 files the spawn names. There are no untracked files. No `Status:` line changed: the word-diff shows no change on any Status line.
+> - 1. In node 164, the blocker line now reads `Blocked by: 143, ~~151~~ 334`. 151 is struck in place and 334 is named. Checked with `grep -n "^Blocked by" nodes/164-*.md`.
+> - 2. Supersedes fields: node 76 has `Supersedes: 61`, node 143 has `Supersedes: 72`, node 332 has `Supersedes: 90, 92, 134, 247, 81`, node 100 has `Supersedes: 192`, and node 311 has `Supersedes: 279`. All are added in the order graph-conventions sets (after Status / Blocked by). Checked with `grep -n "^Supersedes"` over the five files plus the header-block awk.
+> - 3. Node 131: `grep -n "](nodes/131-" decisions.md` returns line 219, which is not struck, and line 220, which is struck in place with a strike note.
+> - 4. Nodes 218 and 243: `grep -n "](nodes/218-"` and `"](nodes/243-"` each return one struck line that was already there (lines 142 and 152) and one new line that is not struck (lines 335 and 336). Each node now has exactly one line not struck. Whether each line's wording matches the node file's current answer is listed under NOT COVERED.
+> - 5. flags.md: `grep -n " 265\.[0-9] \| 283\.[0-9] " flags.md` shows one line each for 265.2, 265.3, 265.4 and 283.1 (lines 859–862). There are no duplicate ids. Each line follows the file's form `- [x] NN.k MARKER · [name](nodes/NN-…md) — sentence`. Every link resolves to an existing node file. Whether each sentence is taken from the flag's entry on its node is listed under NOT COVERED.
+> - 6. The word-diff removes no content. The only `[-…-]` spans are text re-emitted with strike markers or appended numbers: "[A" became "~~[A", "scope." became "scope.~~ …", "151" became "~~151~~ 334", and "247" became "247, 81".
+> - 7. The bar: see below.
+>
+> Bar: root CLAUDE.md, under "## Commands", says the repo has no build, tests, formatter or CI, so there is nothing to run. The bar is the standards plus the condition. Against graph-conventions.md:
+> - Check 2: each added Supersedes field is required by the condition.
+> - Check 5: holds for 131, 218 and 243.
+> - Field order: holds.
+> - Never-delete rule: holds.
+> - The new lines are plain English, and the strike note follows the bold-note style of the file's other strike notes.
+> I found no breach of the standards.
+>
+> NOT COVERED:
+> - Part 4, "Each added line uses the node's current answer as the node file states it". Node files 218 and 243 are record files that were not handed to me as the work, so I cannot compare the lines with them.
+> - Part 5, "taking each flag's index sentence from its entry on its node". The entries are on nodes 265 and 283, which are outside what I was given.
+> - Scope, "the instances are the ones the first sweep listed, in node 396's pasted report". That report is record material I am blind to. I checked the work only against the parts the condition enumerates.
+>
+> QUESTIONS:
+> - Mechanical check 6 versus flag 398.4. Check 6 requires a flag that is `- [x]` in flags.md to carry `**· settled**` on its node entry. The work files 265.2, 265.3, 265.4 and 283.1 as `- [x]`. Flag 398.4 says their node entries were left without the settled marker. The condition forbids editing nodes 265 and 283, so if 398.4 is accurate, check 6 now reports four mismatches. graph-conventions says flags.md wins where the two disagree. I cannot see the node side, so this is not a finding against the work. The question for the manager: should the settled markers be added to the entries on nodes 265 and 283 by another act? Form of the issue: a flags.md `- [x]` line whose node entry has no `**· settled**` marker. Extent: the four lines at flags.md 859–862 and the matching entries on nodes 265 and 283. That is the smallest set, because these are the only checkbox states the work wrote.
+>
+> Flags, checked after the outcome:
+> - 398.1 is true. 151 is struck in place and 334 is added.
+> - 398.3 is true. Line 336 differs from the replacement text in the strike note on struck line 152.
+> - 398.4 is true as to the work: the lines are `- [x]`. Its claim about the node entries is outside what I hold.
+> - 398.2, 398.5 and 398.6 make no claim the work can make true or false.
+> No flag is false.
+>
+> I wrote no temporary files.
+
+*The manager's note:* the checker handed back a question and three NOT COVERED parts beside its outcome, so the standing yes does not cover this gate. It goes to the human.
+
