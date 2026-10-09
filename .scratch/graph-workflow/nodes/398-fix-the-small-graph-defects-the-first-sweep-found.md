@@ -166,3 +166,9 @@ RETROSPECTIVE
 
 *The manager's note:* the checker handed back a question and three NOT COVERED parts beside its outcome, so the standing yes does not cover this gate. It goes to the human.
 
+
+### Gate — approve, 2026-10-09
+
+`verbatim`: *"ok"*
+
+*The manager's note:* the manager's message ended "Please approve node 398, or tell me what to change.", and recommended approving, with the manager adding the missing settled marks to the entries of flags 265.2, 265.3, 265.4 and 283.1 while landing. The reply takes both. The checker's three NOT COVERED parts were established by the manager by reading the four flag entries on nodes 265 and 283 and the new `decisions.md` lines against nodes 218 and 243. Flags 398.1 to 398.6 settle at this gate.
