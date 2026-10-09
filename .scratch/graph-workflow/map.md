@@ -1,5 +1,7 @@
 # Map: a graph workflow that ends in finished code
 
+**This effort is closed.** The human closed it on 2026-10-09, `verbatim`: *"close"*, after the effort closing report that followed [sweep round 2](nodes/399-sweep-round-2.md). Its rules bind no later effort. The repository-wide rules a later effort starts from are in the root `CLAUDE.md`.
+
 **Every worker reads this whole file, cold, once per node, so it holds only what every worker can act on.** Where a line below has an account behind it — how it came to say what it says — that account is in [map-history.md](map-history.md), moved there verbatim by [Restructure `map.md` to what every worker needs](nodes/59-restructure-the-map.md): read that file when a line here has more history than it states, and this one to work a node. Whether the split falls in the right place is settled by measurement rather than argument — a worker reporting what this file did not tell it is [A worker reports what the map did not tell it](nodes/60-worker-reports-map-shortfall.md).
 
 **What only the manager acts on is in [map-manager-only.md](map-manager-only.md)**, a part of this map that no worker reads: the dogfood target, the label vocabulary, the fog, and what is out of scope — moved there by [Move the manager's material out of the map, and give each item a soft size target](nodes/139-move-the-managers-material-out-of-the-map.md).
