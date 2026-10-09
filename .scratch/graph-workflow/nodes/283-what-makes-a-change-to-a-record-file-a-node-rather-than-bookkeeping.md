@@ -52,7 +52,7 @@ the thing that makes the node feel redundant.
 
 ## Flags
 
-`283.1` `MANAGER-WRONG` — ***Filed by the manager against itself, from its worker's correction.*** The manager's
+`283.1` `MANAGER-WRONG` **· settled** — ***Filed by the manager against itself, from its worker's correction.*** The manager's
 note above and its spawn both stated that **three of the last six implementation nodes have been this shape.** The
 worker re-derived it: that is true of the last six **filed** (276, 277, 281 of 276–281), but **four of those six
 have not been built**, and of the last six that actually **landed**, two were record-only. **The real figure is 2 of
@@ -402,3 +402,5 @@ class and I have not enumerated it"* rather than list what it happens to recall,
 invites a worker to build on it.**
 
 *The manager's note, 2026-09-29:* this node's outstanding flags are settled in the batch the human approved at [node 366](366-triage-the-open-nodes-and-the-outstanding-flags.md)'s Q4 (`verbatim`: *"ok"*): the node had closed, and only the two writes of `### Settle a flag` were owed.
+
+*The manager's note, 2026-10-09:* flags 283.1 carry the settled mark now. They were settled in the triage batch the human approved at node 366's Q4, and the manager did not mark the entries then. Their `flags.md` lines were added by [node 398](398-fix-the-small-graph-defects-the-first-sweep-found.md).

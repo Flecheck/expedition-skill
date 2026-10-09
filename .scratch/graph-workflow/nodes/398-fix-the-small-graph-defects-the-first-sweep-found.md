@@ -1,8 +1,14 @@
 # Fix the small graph defects the first sweep found
 
 Type: implementation
-Status: claimed
+Status: resolved
 Blocked by: none
+
+## Answer
+
+The first sweep's small defects are repaired: node 164's stale blocker, five `Supersedes:` back-edges, the `decisions.md` lines for nodes 131, 218 and 243, and four missing `flags.md` lines.
+
+*The manager's note:* the worker's answer is under `## Handover, attempt 1`. The checker passed it on run 1 with a question and three parts it could not cover, which the manager established. The human approved the gate on 2026-10-09, and flags 398.1, 398.2, 398.3, 398.4, 398.5, 398.6 settled there. The work landed as commit `89a0a0dd3`. The manager added the settled marks to the entries of flags 265.2, 265.3, 265.4 and 283.1 as the gate's approved bookkeeping.
 
 ## Question
 
@@ -105,17 +111,17 @@ RETROSPECTIVE
 
 ## Flags
 
-`398.1` `ASSUMPTION` — Node 164's stale blocker was struck in place and 334 added. *(The worker's full text is under its handover's `FLAGS`.)*
+`398.1` `ASSUMPTION` **· settled** — Node 164's stale blocker was struck in place and 334 added. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`398.2` `ASSUMPTION` — Node 218's line was written from its gate approval and annotations. *(The worker's full text is under its handover's `FLAGS`.)*
+`398.2` `ASSUMPTION` **· settled** — Node 218's line was written from its gate approval and annotations. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`398.3` `ASSUMPTION` — Node 243's line follows the node file's annotation, not the struck line's replacement text. *(The worker's full text is under its handover's `FLAGS`.)*
+`398.3` `ASSUMPTION` **· settled** — Node 243's line follows the node file's annotation, not the struck line's replacement text. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`398.4` `ASSUMPTION` — The four flag lines were filed as settled, per the 2026-09-29 notes. *(The worker's full text is under its handover's `FLAGS`.)*
+`398.4` `ASSUMPTION` **· settled** — The four flag lines were filed as settled, per the 2026-09-29 notes. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`398.5` `ASSUMPTION` — The four flag lines were built from each entry's opening or key sentence. *(The worker's full text is under its handover's `FLAGS`.)*
+`398.5` `ASSUMPTION` **· settled** — The four flag lines were built from each entry's opening or key sentence. *(The worker's full text is under its handover's `FLAGS`.)*
 
-`398.6` `FRICTION` — The implementation contract's "leave flags.md unread" has no exception for a node whose work is flags.md. *(The worker's full text is under its handover's `FLAGS`.)*
+`398.6` `FRICTION` **· settled** — The implementation contract's "leave flags.md unread" has no exception for a node whose work is flags.md. *(The worker's full text is under its handover's `FLAGS`.)*
 
 ## Review
 
