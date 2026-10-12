@@ -839,7 +839,8 @@ The expectation decides what an empty frontier means:
 Which files the act creates, and in what order, is mechanical detail. It is in `### Start an effort`
 in `graph-conventions.md`, and not in this contract.
 
-Adoption adds steps of its own, which are in `adoption.md`, beside this file.
+Adoption adds steps of its own, which are in `adoption.md`, beside this file. Where the conversation
+already holds work, the skill `expedition-upgrade` adds the steps that carry that work into the effort.
 
 ## Closing an effort
 
