@@ -583,13 +583,17 @@ Re-derive an enumerated scope before the node is claimed. Where a condition's sc
 re-run the search that produced the list, rather than reading the list. Where the list has grown, widen
 it before the node is claimed, so that no worker reads the short version. Where the condition records
 the command that produced its scope, re-deriving the scope is running that recorded command, rather
-than reconstructing one.
+than reconstructing one. Where the node's `Deliverable:` field names a deliverable, run the search over
+the tip of that deliverable's branch. Read that tip's files through git, without checking the branch
+out.
 
 Before you claim an implementation node, read everything written on its file after its acceptance
 condition: its annotations, its amendments and your own notes. Then search the working tree for each
-passage the condition quotes or names by heading. Where such a passage is gone, or an annotation or
-note says the condition is wrong, amend the condition under this section's rules or put the node to the
-human. Claim the node only once neither is true.
+passage the condition quotes or names by heading. Where the node's `Deliverable:` field names a
+deliverable, search the tip of that deliverable's branch instead. Read that tip's files through git,
+without checking the branch out. Where such a passage is gone, or an annotation or note says the
+condition is wrong, amend the condition under this section's rules or put the node to the human. Claim
+the node only once neither is true.
 
 Every amendment, whoever wrote it, comes with five things. `### Amend an acceptance condition` in
 `graph-conventions.md` gives the writes that record them.
