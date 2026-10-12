@@ -187,6 +187,17 @@ What each kind of node adds:
   the working directory.
 - `grilling`: nothing extra.
 
+A `grilling`, `precondition` or `prototype` node whose `Deliverable:` field names deliverables also adds
+the following:
+
+- For each deliverable it names, the deliverable's branch, and the commit at that branch's tip when you
+  write the spawn.
+- That the worker reads each such deliverable's files at that commit through git, without checking it
+  out.
+- That the same commit holds for the whole attempt, a resume included.
+
+Make no worktree for this reading.
+
 Write a note only from context you already hold. Do not read code, or go and find things out, in order
 to write one. A note may name the one of a worker's questions you believe is sharpest. It may not say
 what you think the answer is.
@@ -399,9 +410,9 @@ A standing yes whose scope covers a push counts as the human's yes to that push.
 A deliverable that needs another deliverable's work before that work has merged names that deliverable
 as its base. Its branch is cut from that deliverable's branch.
 
-A node may be blocked on a node of its own deliverable, or on a node of its deliverable's base. It may
-be blocked on no other deliverable's node. A node that names no deliverable is not limited by this
-rule.
+A node belongs to every deliverable its `Deliverable:` field names. It may be blocked on a node
+belonging to any deliverable it names, or to such a deliverable's base. It may be blocked on no other
+deliverable's node. A node that names no deliverable is not limited by this rule.
 
 When the base deliverable gains commits the dependent deliverable needs, rebase the dependent's branch
 onto the base's branch. When the base deliverable's pull request merges upstream, the dependent's base
@@ -667,9 +678,10 @@ cannot tell whether two startable nodes would edit the same file, because no fie
 a node touches, so apply that filter yourself before you fill a second implementation slot. Two
 grilling nodes can never collide, because a grilling worker writes no file.
 
-Every worker reads a consistent snapshot: an implementation worker reads its own working tree, and
-every other worker reads the main checkout. So no worker reads a file while it is being changed. Two
-snapshots that differ are reconciled when the work is integrated, not while they are read.
+Every worker reads a consistent snapshot. An implementation worker reads its own working tree. Every
+other worker reads the main checkout, and reads each deliverable its node names at the commit its spawn
+gives. So no worker reads a file while it is being changed. Two snapshots that differ are reconciled
+when the work is integrated, not while they are read.
 
 One kind of pick waits on the human instead of on a count: a pick you cannot start without an answer
 first, such as a node whose acceptance condition you cannot write in full. Starting it is a question to

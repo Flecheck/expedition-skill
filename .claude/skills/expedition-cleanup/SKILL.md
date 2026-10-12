@@ -64,10 +64,15 @@ propose it without the human invoking this skill.
 
 The proposed set holds:
 
-- every node whose `Deliverable:` field names that deliverable;
+- every node whose `Deliverable:` field names that deliverable, and whose every named deliverable has
+  merged;
 - each resolved node that blocks at least one node, and whose every dependent is in the set. A
   node's dependents are the nodes that list it in `Blocked by:`. Apply this item again until it adds
   no node.
+
+A node that also names a deliverable not yet merged stays out of the set. The merged deliverable then
+keeps its entry and its local branch, as the passage below beginning "A deliverable that a remaining
+node still names" says.
 
 Steps 2 to 6 above apply to that set unchanged: the three conditions, the outstanding flags, the
 human's confirmation, and the removal.

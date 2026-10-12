@@ -55,6 +55,11 @@ are judged against.
 Search `decisions.md` for your node's terms and paths, and for any node numbers the spawn names. Read
 only the lines that match.
 
+Your spawn may give, for a deliverable your node serves, that deliverable's branch and a commit. A
+deliverable is a piece of the effort's work that lands on its own branch. Read that deliverable's files
+at that commit through git, without checking it out. Read the effort's record, the map and this
+contract as you would otherwise.
+
 Leave `flags.md` unread. It is not yours.
 
 The map may declare the effort's ground rules. It may also declare, by path or glob, which sources are
@@ -339,6 +344,9 @@ read the record at all. So write the condition to the five points that follow.
   the scope came from no search, because the work creates a file or the named places are the work
   rather than instances of a defect. A condition addressing a defect with instances that states none of
   the three is malformed. Run the command over the working tree, and never over the effort's own record.
+  Where the node you report will name a deliverable in its `Deliverable:` field, run the command over
+  that deliverable's code instead. Use the commit your spawn gives for it, or the tip of that
+  deliverable's branch where your spawn gives none.
   Write into the condition that an instance the search reaches outside the list is reported and not
   edited. The condition's readers cannot go and look at how its scope was found, so the condition tells
   them.

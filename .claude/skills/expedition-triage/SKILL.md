@@ -16,6 +16,9 @@ Check each open node against the current working tree and the current shipped fi
 what the effort's record says about it. You may give this checking to read-only agents. Have each one
 quote the current text its finding rests on.
 
+Also check an open node whose `Deliverable:` field names deliverables against the tip of each named
+deliverable's branch. Read each tip's files through git, without checking the branch out.
+
 Sort each open node into exactly one of four classes:
 
 - **moot**: the work the node asks for is already done, or the text it targets no longer exists.

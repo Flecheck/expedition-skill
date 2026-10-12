@@ -184,16 +184,21 @@ first `##` heading.
 The name, `Type:` and `Status:` are mandatory. Every other field appears only when it has a value. Write
 the fields in the order shown below.
 
-`Deliverable:` is carried only by an `implementation` node, and only where the node's code lands on a
-deliverable's branch. It holds exactly one name, which is the name of an entry under `## Deliverables`
-in `map-manager-only.md`.
+`Deliverable:` names the deliverables a node serves. Each name is the name of an entry under
+`## Deliverables` in `map-manager-only.md`.
+
+- An `implementation` node carries the field only where its code lands on a deliverable's branch. It
+  then holds exactly one name.
+- A `grilling`, `precondition` or `prototype` node may carry the field. It lists one or more names,
+  separated by commas, one for each deliverable the node serves.
+- A node that serves no deliverable carries no `Deliverable:` field.
 
 ```markdown
 # <free-form name — carries a foreign label when one exists>
 
 Type: grilling | prototype | precondition | implementation
 Status: open | claimed | resolved | superseded | out-of-scope
-Deliverable: <name>
+Deliverable: <name>, <name>
 Labels: EFF, REG
 Blocked by: 31, 47
 Supersedes: 12
@@ -247,7 +252,9 @@ malformed.
 3. An explicit statement that the scope came from no search, because the work creates a file, or
    because the named places are the work rather than instances of a defect.
 
-An enumerator searches the working tree and never the effort's record. A search over the effort's own
+An enumerator searches the working tree and never the effort's record. For a node that names a
+deliverable, the working tree searched is that deliverable's code, at the commit the spawn gave for it,
+or at the tip of the deliverable's branch where the spawn gave none. A search over the effort's own
 node files or its indexes quantifies over the record, which a condition may not do, and no copy
 repairs it.
 
@@ -678,8 +685,8 @@ Each of these is decidable by reading the files.
     is decided by comparing the two states of the files character by character, and not by reading
     them for sense, so it too is decidable by reading the files. It fails where either half does not
     hold.
-12. Every `Deliverable:` field holds exactly one name, and that name is the name of an entry under
-    `## Deliverables` in `map-manager-only.md`. Only `implementation` nodes carry the field.
+12. Every name in a `Deliverable:` field is the name of an entry under `## Deliverables` in
+    `map-manager-only.md`, and an `implementation` node's field holds exactly one name.
 
 ### Who runs a check, and when
 

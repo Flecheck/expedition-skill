@@ -332,9 +332,10 @@ carries the effort because `NN` restarts at `01` for every new effort a repo hos
 
 **Deliverable**:
 One piece of an effort's work that lands on its own branch and becomes its own pull request. It is
-declared in the effort's map. Each implementation node belongs to at most one deliverable, and names it
-in its `Deliverable:` field. An effort that declares no deliverable has none, and its code lands as its
-landing policy says.
+declared in the effort's map. An implementation node belongs to at most one deliverable, and names it
+in its `Deliverable:` field. Any other node may name, in its `Deliverable:` field, every deliverable it
+serves. An effort that declares no deliverable has none, and its code lands as its landing policy
+says.
 _Avoid_: feature (a deliverable may as well be a fix or an upgrade), PR (the pull request is what a
 deliverable becomes on the host)
 
