@@ -19,7 +19,7 @@ one agent talks to the human on behalf of a crew of agents.
 The workflow itself, invoked as `/expedition`. Its ancestor works out what the work is, and leaves the
 implementation to follow afterwards. An expedition also implements the work, as nodes inside its own
 graph.
-_Avoid_: graph-agent (the repository's name, not the workflow's), wayfinder
+_Avoid_: wayfinder
 
 **Effort**:
 One expedition's work: a single graph, from a loose idea until the human closes the effort. Its files

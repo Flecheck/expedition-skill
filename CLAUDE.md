@@ -1,4 +1,4 @@
-# graph-agent
+# expedition-skill
 
 ## What this repository holds
 
