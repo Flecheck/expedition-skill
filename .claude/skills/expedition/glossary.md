@@ -165,7 +165,7 @@ Taking a node off the frontier before any work starts, so that a concurrent sess
 **Handover**:
 What a worker returns when it has finished.
 _Avoid_: report (a report goes to the human; a handover goes to the manager), return, payload,
-deliverable (that word names one piece of an effort's work that lands as its own pull request)
+deliverable (that word names one piece of an effort's work that lands on its own branch)
 
 **Resolve**:
 Answering a node's question and writing that answer onto it. The only outcome that satisfies an edge.
@@ -272,8 +272,9 @@ _Avoid_: comments, discussion, log
 A yes the human gives in advance, for a scope they state, which the manager takes in place of the
 human's reply on items inside that scope. On a worker's question or raise it takes the worker's
 recommendation, and on a gate it takes the checker's `PASS` as the approval. On a push of a
-deliverable's branch it counts as the human's yes to that push. The human gives it by
-invoking `/expedition-standing-yes`, and it is recorded in the effort's map.
+deliverable's branch it counts as the human's yes to that push. On a local merge of a deliverable it
+counts as the human's yes to that merge. The human gives it by invoking `/expedition-standing-yes`,
+and it is recorded in the effort's map.
 _Avoid_: auto-approve (in Claude Code the word means approving tool-permission prompts)
 
 **Node closing report**:
@@ -331,13 +332,14 @@ _Avoid_: bookkeeping commit
 carries the effort because `NN` restarts at `01` for every new effort a repo hosts.
 
 **Deliverable**:
-One piece of an effort's work that lands on its own branch and becomes its own pull request. It is
-declared in the effort's map. An implementation node belongs to at most one deliverable, and names it
-in its `Deliverable:` field. Any other node may name, in its `Deliverable:` field, every deliverable it
+One piece of an effort's work that lands on its own branch. That branch then either becomes its own
+pull request, or is merged locally into a branch named in the deliverable's map entry. It is declared
+in the effort's map. An implementation node belongs to at most one deliverable, and names it in its
+`Deliverable:` field. Any other node may name, in its `Deliverable:` field, every deliverable it
 serves. An effort that declares no deliverable has none, and its code lands as its landing policy
 says.
 _Avoid_: feature (a deliverable may as well be a fix or an upgrade), PR (the pull request is what a
-deliverable becomes on the host)
+pushed deliverable becomes on the host)
 
 ## Starting an effort
 

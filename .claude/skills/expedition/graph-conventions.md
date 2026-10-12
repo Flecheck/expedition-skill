@@ -64,18 +64,25 @@ Among what `map-manager-only.md` holds are three of the map's sections:
   out.
 - `## Landing an implementation node's work` — the landing policy: where a node's worker works, what one
   path-limited commit of that node's paths takes, what happens to the worker's tree on each of the
-  gate's three outcomes, and what happens when integrating the node's work conflicts. Landing is the
-  manager's, so neither a worker nor its checker reads this section.
+  gate's three outcomes, and what happens when integrating the node's work conflicts. It may also say
+  which form of base a new deliverable takes by default, and how a deliverable is merged locally.
+  Landing is the manager's, so neither a worker nor its checker reads this section.
 
 `map-manager-only.md` also holds the declared label vocabulary, where the effort declares one.
 
 `map-manager-only.md` may also hold `## Deliverables`, the list of the effort's deliverables in
-progress. Each entry gives the deliverable's name, its branch, and its base. The base is either the
-upstream branch the deliverable's pull request targets, or the name of another deliverable. An entry
-takes one of these two forms:
+progress. Each entry gives the deliverable's name, its branch, and its base. The base is one of three
+things:
+
+- the upstream branch the deliverable's pull request targets;
+- a local branch the deliverable is merged into, with no push and no pull request;
+- the name of another deliverable.
+
+An entry takes one of these three forms:
 
 ```
 - <name> · branch `<branch>` · base: upstream `<branch>`
+- <name> · branch `<branch>` · base: local `<branch>`
 - <name> · branch `<branch>` · base: deliverable <name>
 ```
 
@@ -83,7 +90,8 @@ An entry is added when its deliverable is declared, and it is written straight i
 removed when that deliverable is cleaned up. Changing an entry or removing it follows
 `### Change the map` below. An effort whose map declares no deliverables lands every implementation
 node as its landing policy says, with no deliverable involved. `## Deliverables` in `SKILL.md` says
-how a deliverable is declared, where its code lands, and when its branch is pushed.
+how a deliverable is declared, where its code lands, when its branch is pushed, and how it is merged
+locally.
 
 `map-implementation-rules.md` holds the bar's commands and the standards an implementation node's work
 is held against. Its readers are that node's worker and its checker, rather than every worker. What the

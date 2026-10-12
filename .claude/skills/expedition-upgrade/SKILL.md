@@ -92,20 +92,22 @@ They stay as they are. No node is linked to them.
 ### A branch that already exists
 
 A branch that already exists may be declared as a deliverable's branch. It then takes the place of a
-branch created from the deliverable's base. The deliverable's entry still names a base, which is the
-branch its pull request targets.
+branch created from the deliverable's base. The deliverable's entry still names a base, in any of
+the three forms `## The seven files` in `graph-conventions.md` gives.
 
 This changes, for an upgrade, the rule in `### Declaring a deliverable` in the manager contract. That
 rule creates every deliverable's branch from the current tip of its base. In an upgrade, a deliverable
 may instead take a branch that already exists, and no branch is created for it.
 
-Once the rest of the upgrade is done, check two things about each such branch:
+Once the rest of the upgrade is done, check the following about each such branch:
 
-- it holds no commit of the effort's own record;
-- the main checkout does not have it checked out.
+- For a deliverable that lands by pull request, the branch holds no commit of the effort's own record.
+  A commit of the record would otherwise reach the pull request.
+- For every such branch, the main checkout does not have it checked out. The main checkout's graph
+  commits would otherwise land on it.
 
-Each must hold, because a commit of the effort's record would otherwise reach the pull request. Where
-either does not hold, ask the human what to do. Change neither the branch nor the checkout yourself.
+Where a check does not hold, ask the human what to do. Change neither the branch nor the checkout
+yourself.
 
 ### Uncommitted changes
 

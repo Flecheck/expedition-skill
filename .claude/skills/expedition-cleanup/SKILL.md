@@ -1,6 +1,6 @@
 ---
 name: expedition-cleanup
-description: Clean up an expedition's record. The human invokes it in an expedition's manager thread to remove record that a finished part of the effort no longer needs, by one of two operations, region cleanup or flag cleanup. The manager also reads it to propose a region cleanup when the human says a deliverable's pull request has merged.
+description: Clean up an expedition's record. The human invokes it in an expedition's manager thread to remove record that a finished part of the effort no longer needs, by one of two operations, region cleanup or flag cleanup. The manager also reads it to propose a region cleanup when the human says a deliverable's pull request has merged, or when the manager has merged a deliverable locally.
 ---
 
 # Cleaning up the record
@@ -58,9 +58,13 @@ files, rather than on a node. So it is never in a region to begin with.
 ### A merged deliverable as the region
 
 An effort may declare deliverables, each one listed under `## Deliverables` in its
-`map-manager-only.md`. When the human says a deliverable's pull request has merged, propose a region
-cleanup whose region is that deliverable. The human's word that it merged names the region, so you
-propose it without the human invoking this skill.
+`map-manager-only.md`. Propose a region cleanup whose region is a deliverable at either of two
+moments:
+
+- when the human says the deliverable's pull request has merged;
+- right after you have merged the deliverable locally.
+
+The merge names the region, so you propose the cleanup without the human invoking this skill.
 
 The proposed set holds:
 
@@ -77,12 +81,14 @@ node still names" says.
 Steps 2 to 6 above apply to that set unchanged: the three conditions, the outstanding flags, the
 human's confirmation, and the removal.
 
-Once the record is cleaned, take each deliverable that the human has said merged and that no remaining
-node names:
+Once the record is cleaned, take each deliverable that has merged, by either route, and that no
+remaining node names. A deliverable has merged when the human has said its pull request merged, or
+when you have merged it locally. For each such deliverable:
 
 1. Remove its entry from `## Deliverables`, by the steps of `### Change the map` in
    `graph-conventions.md`.
-2. Delete its local branch. Leave its remote branch as it is, because the human's host owns it.
+2. Delete its local branch. Leave its remote branch as it is, because the human's host owns it. A
+   deliverable that landed locally has no remote branch.
 
 A deliverable that a remaining node still names keeps its entry and its branch, until a later cleanup
 removes that node.

@@ -372,10 +372,24 @@ policy says, and nothing in this section applies to it.
 
 ### Declaring a deliverable
 
-Declare a deliverable when the human brings a piece of work that is to land as its own pull request.
-Add its entry to the map, and create its branch at the same time, from the current tip of its base.
-Create the branch from its base and never from the main checkout, because the main checkout holds
-graph commits, and they would reach the pull request.
+Declare a deliverable when the human brings a piece of work that is to land as its own pull request
+or by its own local merge. Add its entry to the map, and create its branch at the same time, from the
+current tip of its base.
+
+How a deliverable lands follows from its base:
+
+- A deliverable with an upstream base lands by pull request.
+- A deliverable with a local base lands locally, by being merged into that local branch.
+- A deliverable whose base is another deliverable lands the way that deliverable lands.
+
+The effort's landing policy may say which form of base a new deliverable takes by default. Where it
+says nothing, give the deliverable an upstream base, so that it lands by push and pull request. Do not
+ask the human which form to take.
+
+For a deliverable that lands by pull request, create the branch from its base and never from the main
+checkout, because the main checkout holds graph commits, and they would reach the pull request. For a
+deliverable with a local base, create the branch from the current tip of that local branch, even where
+the main checkout has that branch checked out.
 
 ### Where a deliverable's code lands
 
@@ -390,10 +404,14 @@ how a worktree is made and removed.
 4. Move the deliverable's branch to the node's commit, by fast-forward only.
 5. Remove the node's worktree and its branch.
 
-The main checkout never receives the node's code. That code reaches the main checkout only through the
-upstream merge of the deliverable's pull request.
+The node's code reaches the main checkout's branch only when its deliverable lands. That happens
+either through the upstream merge of the deliverable's pull request, or through the local merge where
+the deliverable's base is the main checkout's branch.
 
 ### Pushing a deliverable's branch
+
+This applies to a deliverable that lands by pull request. A deliverable that lands locally is never
+pushed.
 
 Push a deliverable's branch only on the human's yes to that push. The human creates the pull request.
 
@@ -404,6 +422,32 @@ Every push needs its own yes. That includes a push that overwrites the remote br
 
 A standing yes whose scope covers a push counts as the human's yes to that push.
 `## Taking a covered item` in `expedition-standing-yes` says what you do with a covered push.
+
+### Merging a deliverable locally
+
+This applies to a deliverable that lands locally.
+
+Merge it only on the human's yes to that merge. Offer the merge when every implementation node naming
+the deliverable has resolved, and also whenever the human asks for it. The offer is your own raise,
+under `## What is in front of the human, and when`.
+
+Every merge needs its own yes. A standing yes whose scope covers a merge counts as the human's yes to
+that merge. `## Taking a covered item` in `expedition-standing-yes` says what you do with a covered
+merge.
+
+By default, merge in two moves:
+
+1. Rebase the deliverable's branch onto the current tip of its local branch.
+2. Move the local branch to the tip of the deliverable's branch, by fast-forward only. Where a checkout
+   has the local branch checked out, make the move in that checkout, so that its files follow the
+   branch.
+
+A rebase that conflicts becomes an implementation node of the deliverable. Leave the deliverable's
+branch as it was before the rebase, and mint that node.
+
+The effort's landing policy may name a merge commit or a squash in place of the default. The human may
+also name either in their yes to one merge. A squash commit carries the `Node:` trailer of every commit
+it replaces, because that trailer joins git history to the graph.
 
 ### A deliverable whose base is another deliverable
 
@@ -419,14 +463,22 @@ onto the base's branch. When the base deliverable's pull request merges upstream
 becomes the upstream branch that pull request targeted. Change the dependent's entry to say so, and
 rebase its branch onto that upstream branch.
 
+When the base deliverable has merged locally, the dependent's base becomes the local branch the base
+merged into. Change the dependent's entry to `local <branch>`, and rebase its branch onto that local
+branch.
+
 A rebase that conflicts becomes an implementation node of the dependent deliverable. Leave the branch
 as it was before the rebase, and mint that node.
 
 ### Cleaning up a merged deliverable
 
-You learn that a deliverable's pull request has merged only when the human says so. Then propose a
-region cleanup whose region is that deliverable, as `### A merged deliverable as the region` in the
-skill `expedition-cleanup` says.
+Once a deliverable has merged, propose a region cleanup whose region is that deliverable, as
+`### A merged deliverable as the region` in the skill `expedition-cleanup` says.
+
+- For a deliverable that lands by pull request, you learn that it has merged only when the human says
+  so. Propose the cleanup then.
+- For a deliverable that lands locally, you made the merge yourself. Propose the cleanup right after
+  the merge.
 
 ## Flags
 
@@ -624,7 +676,7 @@ place in tier 1.
 An item that a standing yes covers is handled by the skill `expedition-standing-yes`, and you do not put
 it to the human. Such an item never enters the queue. That skill says which items a standing yes can
 cover, and what you do in place of putting one to the human. A push of a deliverable's branch is
-one such item.
+one such item. A local merge of a deliverable is one such item too.
 
 ### The last line of a report
 

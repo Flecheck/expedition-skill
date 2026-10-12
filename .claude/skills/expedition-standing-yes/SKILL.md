@@ -1,6 +1,6 @@
 ---
 name: expedition-standing-yes
-description: Give a standing yes in an expedition's manager thread. The human invokes it with a scope, and the manager then takes the worker's recommendation, or the checker's PASS at a gate, as the human's reply on items inside that scope. It may also cover a push of a deliverable's branch.
+description: Give a standing yes in an expedition's manager thread. The human invokes it with a scope, and the manager then takes the worker's recommendation, or the checker's PASS at a gate, as the human's reply on items inside that scope. It may also cover a push of a deliverable's branch, or a local merge of a deliverable.
 ---
 
 # A standing yes
@@ -28,13 +28,15 @@ scope text.
 
 ## What a standing yes covers
 
-A standing yes covers four kinds of item, and no other:
+A standing yes covers five kinds of item, and no other:
 
 - A worker's question. The worker's `RECOMMENDED` is taken as the human's *"ok for recommended"*.
 - A worker's raise. The worker's `RECOMMENDED` is taken as the human's *"ok for recommended"*.
 - A gate. The checker's `PASS` is taken as the human's approval, and you then commit as on an approval.
 - A push of a deliverable's branch, which you would otherwise offer the human as your own raise. The
   standing yes is taken as the human's yes to that one push.
+- A local merge of a deliverable, which you would otherwise offer the human as your own raise. The
+  standing yes is taken as the human's yes to that one merge.
 
 You decide whether an item is inside a scope, at the moment you would otherwise put the item to the
 human. Where you cannot tell, put the item to the human as usual.
@@ -56,8 +58,8 @@ Each of the following goes to the human as usual, whatever the scope says:
 - an acceptance condition judged wrong
 - closing the effort
 
-Anything outside the four kinds above is not covered either. That includes every raise of your own
-other than the offer of a push.
+Anything outside the five kinds above is not covered either. That includes every raise of your own
+other than the offer of a push or of a local merge.
 
 ## Taking a covered item
 
@@ -79,6 +81,10 @@ the item in the same turn you would otherwise have queued it.
 4. For a push, push the deliverable's branch. A push belongs to no node, so nothing is recorded on
    one. Say in your next report to the human which branch you pushed, and quote the scope text of the
    standing yes that covered it.
+5. For a merge, merge the deliverable as `### Merging a deliverable locally` in the `expedition`
+   skill's `SKILL.md` says. A merge belongs to no node, so nothing is recorded on one. Say in your next
+   report to the human which branch you merged, and quote the scope text of the standing yes that
+   covered it.
 
 ## Flags, and the node closing report
 
