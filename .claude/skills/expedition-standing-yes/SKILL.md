@@ -1,6 +1,6 @@
 ---
 name: expedition-standing-yes
-description: Give a standing yes in an expedition's manager thread. The human invokes it with a scope, and the manager then takes the worker's recommendation, or the checker's PASS at a gate, as the human's reply on items inside that scope.
+description: Give a standing yes in an expedition's manager thread. The human invokes it with a scope, and the manager then takes the worker's recommendation, or the checker's PASS at a gate, as the human's reply on items inside that scope. It may also cover a push of a deliverable's branch.
 ---
 
 # A standing yes
@@ -28,11 +28,13 @@ scope text.
 
 ## What a standing yes covers
 
-A standing yes covers three kinds of item, and no other:
+A standing yes covers four kinds of item, and no other:
 
 - A worker's question. The worker's `RECOMMENDED` is taken as the human's *"ok for recommended"*.
 - A worker's raise. The worker's `RECOMMENDED` is taken as the human's *"ok for recommended"*.
 - A gate. The checker's `PASS` is taken as the human's approval, and you then commit as on an approval.
+- A push of a deliverable's branch, which you would otherwise offer the human as your own raise. The
+  standing yes is taken as the human's yes to that one push.
 
 You decide whether an item is inside a scope, at the moment you would otherwise put the item to the
 human. Where you cannot tell, put the item to the human as usual.
@@ -54,15 +56,17 @@ Each of the following goes to the human as usual, whatever the scope says:
 - an acceptance condition judged wrong
 - closing the effort
 
-Anything outside the three kinds above is not covered either, your own raise included.
+Anything outside the four kinds above is not covered either. That includes every raise of your own
+other than the offer of a push.
 
 ## Taking a covered item
 
 Your contract's `## What is in front of the human, and when` says what happens to a covered item. Take
 the item in the same turn you would otherwise have queued it.
 
-1. Record the item on the node. A question or a raise goes under `## Interview`. A gate goes under
-   `## Review`. `### Recording the human's words` in `graph-conventions.md` holds the entry's form.
+1. For a question, a raise or a gate, record the item on the node. A question or a raise goes under
+   `## Interview`. A gate goes under `## Review`. `### Recording the human's words` in
+   `graph-conventions.md` holds the entry's form.
 2. For a question or a raise, resume the worker with this line in place of `HUMAN ANSWER`:
 
    ```
@@ -72,6 +76,9 @@ the item in the same turn you would otherwise have queued it.
    The rest of the worker's resume shape is unchanged. `DIVERGENCE` is never present, because a standing
    yes always takes the recommendation.
 3. For a gate, commit as on an approval. The node then resolves.
+4. For a push, push the deliverable's branch. A push belongs to no node, so nothing is recorded on
+   one. Say in your next report to the human which branch you pushed, and quote the scope text of the
+   standing yes that covered it.
 
 ## Flags, and the node closing report
 

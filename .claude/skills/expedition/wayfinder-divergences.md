@@ -20,6 +20,8 @@ Every ticket already written under that doc stays valid.
 - Three more statuses: `open`, `superseded`, `out-of-scope`.
 - Two more edge kinds: `Supersedes:` and `Superseded by:`.
 - The `Labels:` field.
+- The `Deliverable:` field, on an `implementation` node only, and the optional `## Deliverables` list
+  in `map-manager-only.md` that it names an entry of.
 - The `## Acceptance condition`, `## Flags` and `## Review` sections.
 
 ## Changed

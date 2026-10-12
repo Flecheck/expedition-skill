@@ -44,7 +44,7 @@ yourself.
    2. Build the lookup table under `## Citations inside imported material`.
    3. Mint the pass-one nodes and the pass-two node, as `## The bulk import` describes them. Mint a
       node of its own for each file the sorting left undecided.
-   4. Run checks 1, 3 and 4 under `## Mechanical checks` in `graph-conventions.md`, as step 9 of
+   4. Run checks 1, 3, 4 and 12 under `## Mechanical checks` in `graph-conventions.md`, as step 9 of
       `### Start an effort` requires.
 
    Your part ends here.

@@ -69,6 +69,22 @@ Among what `map-manager-only.md` holds are three of the map's sections:
 
 `map-manager-only.md` also holds the declared label vocabulary, where the effort declares one.
 
+`map-manager-only.md` may also hold `## Deliverables`, the list of the effort's deliverables in
+progress. Each entry gives the deliverable's name, its branch, and its base. The base is either the
+upstream branch the deliverable's pull request targets, or the name of another deliverable. An entry
+takes one of these two forms:
+
+```
+- <name> · branch `<branch>` · base: upstream `<branch>`
+- <name> · branch `<branch>` · base: deliverable <name>
+```
+
+An entry is added when its deliverable is declared, and it is written straight into the file. It is
+removed when that deliverable is cleaned up. Changing an entry or removing it follows
+`### Change the map` below. An effort whose map declares no deliverables lands every implementation
+node as its landing policy says, with no deliverable involved. `## Deliverables` in `SKILL.md` says
+how a deliverable is declared, where its code lands, and when its branch is pushed.
+
 `map-implementation-rules.md` holds the bar's commands and the standards an implementation node's work
 is held against. Its readers are that node's worker and its checker, rather than every worker. What the
 file admits is under `## Writing the map` below.
@@ -156,8 +172,9 @@ adopted from a tracker that had one. For example, a node imported as `AUTH-2` is
 Create the file with its mandatory fields and its `## Question`. When you create several nodes at once,
 write every file first, then fill in `Blocked by:` in a second pass.
 
-1. Whoever adds the node runs checks 1, 3 and 4 under `## Mechanical checks` itself, as part of adding
-   it, over the material this addition touched: each new node's number, `Blocked by:` and `Labels:`.
+1. Whoever adds the node runs checks 1, 3, 4 and 12 under `## Mechanical checks` itself, as part of
+   adding it, over the material this addition touched: each new node's number, `Blocked by:`,
+   `Labels:` and `Deliverable:`.
 
 ## The node file
 
@@ -167,11 +184,16 @@ first `##` heading.
 The name, `Type:` and `Status:` are mandatory. Every other field appears only when it has a value. Write
 the fields in the order shown below.
 
+`Deliverable:` is carried only by an `implementation` node, and only where the node's code lands on a
+deliverable's branch. It holds exactly one name, which is the name of an entry under `## Deliverables`
+in `map-manager-only.md`.
+
 ```markdown
 # <free-form name — carries a foreign label when one exists>
 
 Type: grilling | prototype | precondition | implementation
 Status: open | claimed | resolved | superseded | out-of-scope
+Deliverable: <name>
 Labels: EFF, REG
 Blocked by: 31, 47
 Supersedes: 12
@@ -451,9 +473,10 @@ establishes and who performs it.
 6. `flags.md`: create it, holding no line yet.
 7. `nodes/`: create the directory.
 8. `nodes/NN-<name>.md`: create each of the effort's first nodes by the steps under `## Adding a node`.
-9. Whoever starts the effort, which is the manager, runs checks 1, 3 and 4 under `## Mechanical checks`
-   itself, as part of this act, over the material it touched: each first node's number, `Blocked by:`
-   and `Labels:`, and the declared label vocabulary.
+9. Whoever starts the effort, which is the manager, runs checks 1, 3, 4 and 12 under
+   `## Mechanical checks` itself, as part of this act, over the material it touched: each first node's
+   number, `Blocked by:`, `Labels:` and `Deliverable:`, the declared label vocabulary, and any list of
+   deliverables.
 
 ### Claim
 
@@ -621,7 +644,7 @@ bind no longer holds. A new item is written straight into its file, with no othe
 
 `## Writing the map` above says why a map file holds the current statement and not the account.
 
-3. Whoever changes the map runs checks 4, 10 and 11 below itself, as part of this change, over the
+3. Whoever changes the map runs checks 4, 10, 11 and 12 below itself, as part of this change, over the
    material it touched: the map file it changed and `map-history.md`. Check 11 is what establishes that
    step 1 was carried out.
 
@@ -655,6 +678,8 @@ Each of these is decidable by reading the files.
     is decided by comparing the two states of the files character by character, and not by reading
     them for sense, so it too is decidable by reading the files. It fails where either half does not
     hold.
+12. Every `Deliverable:` field holds exactly one name, and that name is the name of an entry under
+    `## Deliverables` in `map-manager-only.md`. Only `implementation` nodes carry the field.
 
 ### Who runs a check, and when
 

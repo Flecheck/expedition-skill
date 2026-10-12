@@ -330,6 +330,7 @@ How code lands is set by the effort's own landing policy. `## The seven files` i
 says where the map records the policy and what the policy covers. This contract fixes only the order:
 approval before any commit, and the graph before the cleanup. The one other thing that permits a commit
 is a standing yes covering the gate, which `expedition-standing-yes` takes as the human's approval.
+For a node that names a deliverable, `## Deliverables` below says where its code lands.
 
 An implementation node superseded before its work has landed is cleaned up in the same order as a
 reject. Edit the graph first. Then remove the node's working tree, and anything else that holds that
@@ -351,6 +352,70 @@ Where a reject or a revision would have you supersede a node that is itself a re
 supersede it again. Put the chain to the human instead, as a decision about the shape of the graph.
 There is no depth counter and no budget on supersession. The chain itself makes the friction visible,
 because each replacement in it names the node it replaced.
+
+## Deliverables
+
+An effort may declare deliverables. `## The seven files` in `graph-conventions.md` says where the map
+lists them and what each entry gives. An effort that declares none lands every node as its landing
+policy says, and nothing in this section applies to it.
+
+### Declaring a deliverable
+
+Declare a deliverable when the human brings a piece of work that is to land as its own pull request.
+Add its entry to the map, and create its branch at the same time, from the current tip of its base.
+Create the branch from its base and never from the main checkout, because the main checkout holds
+graph commits, and they would reach the pull request.
+
+### Where a deliverable's code lands
+
+These rules apply to an implementation node that names a deliverable. They replace what the effort's
+landing policy says about where the node's code lands. The rest of that policy still applies, such as
+how a worktree is made and removed.
+
+1. Cut the node's worktree from the tip of its deliverable's branch.
+2. On approval, make the code commit on the node's own branch.
+3. Where the deliverable's branch has moved since the worktree was cut, put the node's commit on the
+   branch's new tip first. A conflict there starts a correction round naming the conflicted paths.
+4. Move the deliverable's branch to the node's commit, by fast-forward only.
+5. Remove the node's worktree and its branch.
+
+The main checkout never receives the node's code. That code reaches the main checkout only through the
+upstream merge of the deliverable's pull request.
+
+### Pushing a deliverable's branch
+
+Push a deliverable's branch only on the human's yes to that push. The human creates the pull request.
+
+Offer the push when every implementation node naming the deliverable has resolved, and also whenever
+the human asks for it. The offer is your own raise, under `## What is in front of the human, and when`.
+
+Every push needs its own yes. That includes a push that overwrites the remote branch after a rebase.
+
+A standing yes whose scope covers a push counts as the human's yes to that push.
+`## Taking a covered item` in `expedition-standing-yes` says what you do with a covered push.
+
+### A deliverable whose base is another deliverable
+
+A deliverable that needs another deliverable's work before that work has merged names that deliverable
+as its base. Its branch is cut from that deliverable's branch.
+
+A node may be blocked on a node of its own deliverable, or on a node of its deliverable's base. It may
+be blocked on no other deliverable's node. A node that names no deliverable is not limited by this
+rule.
+
+When the base deliverable gains commits the dependent deliverable needs, rebase the dependent's branch
+onto the base's branch. When the base deliverable's pull request merges upstream, the dependent's base
+becomes the upstream branch that pull request targeted. Change the dependent's entry to say so, and
+rebase its branch onto that upstream branch.
+
+A rebase that conflicts becomes an implementation node of the dependent deliverable. Leave the branch
+as it was before the rebase, and mint that node.
+
+### Cleaning up a merged deliverable
+
+You learn that a deliverable's pull request has merged only when the human says so. Then propose a
+region cleanup whose region is that deliverable, as `### A merged deliverable as the region` in the
+skill `expedition-cleanup` says.
 
 ## Flags
 
@@ -547,7 +612,8 @@ place in tier 1.
 
 An item that a standing yes covers is handled by the skill `expedition-standing-yes`, and you do not put
 it to the human. Such an item never enters the queue. That skill says which items a standing yes can
-cover, and what you do in place of putting one to the human.
+cover, and what you do in place of putting one to the human. A push of a deliverable's branch is
+one such item.
 
 ### The last line of a report
 

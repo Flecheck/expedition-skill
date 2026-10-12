@@ -1,6 +1,6 @@
 ---
 name: expedition-cleanup
-description: Clean up an expedition's record. The human invokes it in an expedition's manager thread to remove record that a finished part of the effort no longer needs, by one of two operations, region cleanup or flag cleanup.
+description: Clean up an expedition's record. The human invokes it in an expedition's manager thread to remove record that a finished part of the effort no longer needs, by one of two operations, region cleanup or flag cleanup. The manager also reads it to propose a region cleanup when the human says a deliverable's pull request has merged.
 ---
 
 # Cleaning up the record
@@ -20,7 +20,8 @@ Remove only text that the effort's version control history already holds, so the
 
 This skill has two operations: **region cleanup** and **flag cleanup**. The human invokes each one
 separately, and neither implies the other. Where the invocation does not say which one it is, ask the
-human.
+human. The one region cleanup you propose without an invocation is the one under
+`### A merged deliverable as the region`.
 
 The two operations are the whole of what this skill does. It removes no text because the text is old,
 because its file has grown long, or because the text is marked superseded.
@@ -54,6 +55,33 @@ What this removes is each node's account of what happened. Text stating a rule t
 never removed by this operation. Such text is held in the map's files, which are the effort's rule
 files, rather than on a node. So it is never in a region to begin with.
 
+### A merged deliverable as the region
+
+An effort may declare deliverables, each one listed under `## Deliverables` in its
+`map-manager-only.md`. When the human says a deliverable's pull request has merged, propose a region
+cleanup whose region is that deliverable. The human's word that it merged names the region, so you
+propose it without the human invoking this skill.
+
+The proposed set holds:
+
+- every node whose `Deliverable:` field names that deliverable;
+- each resolved node that blocks at least one node, and whose every dependent is in the set. A
+  node's dependents are the nodes that list it in `Blocked by:`. Apply this item again until it adds
+  no node.
+
+Steps 2 to 6 above apply to that set unchanged: the three conditions, the outstanding flags, the
+human's confirmation, and the removal.
+
+Once the record is cleaned, take each deliverable that the human has said merged and that no remaining
+node names:
+
+1. Remove its entry from `## Deliverables`, by the steps of `### Change the map` in
+   `graph-conventions.md`.
+2. Delete its local branch. Leave its remote branch as it is, because the human's host owns it.
+
+A deliverable that a remaining node still names keeps its entry and its branch, until a later cleanup
+removes that node.
+
 ## Flag cleanup
 
 `flags.md` holds one line per flag, with its state. The effort closing report is built from its lines
@@ -69,4 +97,5 @@ operation does not modify that node.
 ## Reporting
 
 Report to the human what each operation removed: for region cleanup the region and the node ids, and
-for flag cleanup the ids of the lines removed.
+for flag cleanup the ids of the lines removed. For a merged deliverable, also report whether its entry
+and its local branch were removed, and, where they were kept, which remaining node names it.
