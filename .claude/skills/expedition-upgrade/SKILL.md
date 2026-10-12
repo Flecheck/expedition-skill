@@ -39,11 +39,11 @@ Write none of these three yourself.
      upgrade, the human ends the management session of any other thread managing that effort, with
      `/expedition-stop`.
 3. **Declare the deliverables**, as `### Declaring a deliverable` in the manager contract says, and as
-   `## A branch that already exists` below changes it.
+   `### A branch that already exists` below changes it.
 4. **Carry the conversation into the record**, as `## What is carried into the record` below says.
 5. **Carry the work already done or under way**, as `## Work already done or under way` below says.
 6. **Check each existing branch declared as a deliverable's branch**, as
-   `## A branch that already exists` below says.
+   `### A branch that already exists` below says.
 
 Write the record so that the effort needs nothing from the conversation once the upgrade is done. A
 later compaction of this thread's context, or the end of its management session, then loses nothing
