@@ -88,6 +88,16 @@ function blocker_numbers(field,    text, count, word, words, i) {
 	return blockers
 }
 
+function has_unresolved_blocker(n,    blocker_count, blocker_list, b) {
+	blocker_count = split(blocker_numbers(blocked_by[n]), blocker_list, " ")
+	for (b = 1; b <= blocker_count; b++) {
+		if (!(blocker_list[b] in statuses) || statuses[blocker_list[b]] != "resolved") {
+			return 1
+		}
+	}
+	return 0
+}
+
 function field_value(line) {
 	sub(/^[^:]*:[ \t]*/, "", line)
 	sub(/[ \t]+$/, "", line)
@@ -152,17 +162,10 @@ END {
 			known_type[types[n]] = 1
 			ordered_types[++type_count] = types[n]
 		}
-		if (statuses[n] == "claimed") claimed[types[n]]++
+		is_paused = statuses[n] == "claimed" && types[n] == "implementation" && has_unresolved_blocker(n)
+		if (statuses[n] == "claimed" && !is_paused) claimed[types[n]]++
 		if (statuses[n] != "open") continue
-		blocker_count = split(blocker_numbers(blocked_by[n]), blocker_list, " ")
-		unblocked = 1
-		for (b = 1; b <= blocker_count; b++) {
-			if (!(blocker_list[b] in statuses) || statuses[blocker_list[b]] != "resolved") {
-				unblocked = 0
-				break
-			}
-		}
-		if (unblocked) {
+		if (!has_unresolved_blocker(n)) {
 			startable[n] = 1
 			startable_by_type[types[n]]++
 			startable_total++
@@ -171,7 +174,7 @@ END {
 
 	print "Claimed nodes against their target:"
 	printf "  grilling, the nodes that need the human: %d of %d\n", claimed["grilling"], human_target
-	printf "  implementation, the nodes that hold a code slot: %d of %d\n", claimed["implementation"], implementation_target
+	printf "  implementation, the nodes that hold a code slot, not counting a paused node: %d of %d\n", claimed["implementation"], implementation_target
 	print ""
 	printf "Startable nodes: %d in total\n", startable_total
 	for (i = 1; i <= type_count; i++) {

@@ -753,11 +753,10 @@ sometimes more than one node.
 `scripts/frontier.sh`, beside this file, reads the graph and writes nothing. Run it when a node finishes,
 to see what is startable and whether a slot has emptied. Pass it the effort's directory, then the count
 of nodes that need the human and the count of code slots. It prints how many grilling and implementation
-nodes are claimed against those counts, and the startable nodes grouped by kind. It counts a paused
-implementation node as claimed, so take each paused node off its count of implementation nodes. It cannot
-tell whether two startable nodes would edit the same file, because no field records which files a node
-touches, so apply that filter yourself before you fill a second implementation slot. Two grilling nodes
-can never collide, because a grilling worker writes no file.
+nodes are claimed against those counts, and the startable nodes grouped by kind. It cannot tell whether
+two startable nodes would edit the same file, because no field records which files a node touches, so
+apply that filter yourself before you fill a second implementation slot. Two grilling nodes can never
+collide, because a grilling worker writes no file.
 
 Every worker reads a consistent snapshot. An implementation worker reads its own working tree. Every
 other worker reads the main checkout, and reads each deliverable its node names at the commit its spawn
