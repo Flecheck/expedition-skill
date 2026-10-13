@@ -93,7 +93,7 @@ They stay as they are. No node is linked to them.
 
 A branch that already exists may be declared as a deliverable's branch. It then takes the place of a
 branch created from the deliverable's base. The deliverable's entry still names a base, in any of
-the three forms `## The seven files` in `graph-conventions.md` gives.
+the three forms `## The graph's files` in `graph-conventions.md` gives.
 
 This changes, for an upgrade, the rule in `### Declaring a deliverable` in the manager contract. That
 rule creates every deliverable's branch from the current tip of its base. In an upgrade, a deliverable

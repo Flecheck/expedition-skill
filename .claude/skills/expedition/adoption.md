@@ -15,10 +15,10 @@ yourself.
 1. **Take the effort's name from the directory.** The effort's name is the name of the directory that
    already exists. Write the graph's files into that directory, and not into a new one beside it.
 2. **Resolve each reserved name the directory already uses for something else.** The graph reserves
-   `map.md`, `map-history.md`, `map-manager-only.md`, `map-implementation-rules.md`, `decisions.md`,
-   `flags.md` and `nodes/`. Rename each foreign file or directory on one of these names to a name the
+   `map.md`, `map-history.md`, `map-manager-only.md`, `map-implementation-rules.md`, `decisions.md`
+   and `nodes/`. Rename each foreign file or directory on one of these names to a name the
    graph does not use, and follow the rule under `## A reserved name already in use`.
-3. **Write `map.md`** with the three sections `## The seven files` in `graph-conventions.md` gives it.
+3. **Write `map.md`** with the three sections `## The graph's files` in `graph-conventions.md` gives it.
    Take its content from what the effort already wrote, and invent none of it:
    - the destination, and whether the effort is expected to reach it;
    - the notes and the standing preferences;

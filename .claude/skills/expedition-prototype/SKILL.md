@@ -44,14 +44,13 @@ outside any text marked as the human's own words, check it.
 - `prototypes/NN-<name>/`, where anything you build goes
 
 Read everything the list above names in full. Search the rest of the effort's record instead of reading
-it, leaving out any file this section tells you to leave unread. Where you need a fact you cannot place,
-search for it in that way before you open any file whole. Open a file of the record that is not on the
-list above only because such a search led you to it. Narrow a search before you read its results:
-establish the files that match, narrow the phrase, then read what matched. A broad term can match a
-longer text than the file it was meant to spare. Your environment provides the search, and no particular
-tool is required. This governs the facts the record holds, and never the rules you are held to. Those
-arrive in the spawn and in the files the list above names, and you never go looking for a standard you
-are judged against.
+it. Where you need a fact you cannot place, search for it in that way before you open any file whole.
+Open a file of the record that is not on the list above only because such a search led you to it. Narrow
+a search before you read its results: establish the files that match, narrow the phrase, then read what
+matched. A broad term can match a longer text than the file it was meant to spare. Your environment
+provides the search, and no particular tool is required. This governs the facts the record holds, and
+never the rules you are held to. Those arrive in the spawn and in the files the list above names, and
+you never go looking for a standard you are judged against.
 
 Search `decisions.md` for your node's terms and paths, and for any node numbers the spawn names. Read
 only the lines that match.
@@ -61,8 +60,6 @@ deliverable is a piece of the effort's work that lands on its own branch. Read t
 at that commit through git, without checking it out. Read the effort's record, the map and this
 contract as you would otherwise. Where you need to build on that code, copy the files you need from
 that commit into `prototypes/NN-<name>/`.
-
-Leave `flags.md` unread. It is not yours.
 
 The map may declare the effort's ground rules. It may also declare, by path or glob, which sources are
 authoritative, which are evidence only, and which hold statements known to be false. Follow both. Each
@@ -74,8 +71,8 @@ authoritative.
 1. Put everything you build in `prototypes/NN-<name>/`. Keep all of it out of the product tree, and make
    none of it product code. You do not hold the code slot.
 2. Write a graph file only where your node's own work is a change to that file. Leave all recording on
-   the graph to the manager, whatever your node's work is. The manager marks your node, resolves it, and
-   writes its lines in `decisions.md` and `flags.md`.
+   the graph to the manager, whatever your node's work is. The manager writes your flags onto your node,
+   marks it, resolves it, and writes its line in `decisions.md`.
 3. Leave the answer to each of your questions to the human. Where the human explicitly hands a question
    back to you, follow `### When the answer is not an answer`.
 4. To put a question to the human, end your turn and make that question your entire final output, in the
@@ -161,8 +158,8 @@ HANDOVER:      <your node's name>
 ANSWER:        <your node's `## Answer`, written as the node will hold it: what the probe showed,
                 what the human's reaction settled, and the artifact linked by path>
 INDEX LINE:    <one sentence, about 25 words, for decisions.md>
-FLAGS:         <per flag, prefixed ASSUMPTION, DELEGATED or FRICTION: the prose for your node, then
-                the one sentence for the index>
+FLAGS:         <per flag, prefixed ASSUMPTION, DELEGATED or FRICTION: the sentence that opens the
+                entry, then the rest of its prose>
 NEW NODES:     <name, kind, question, blockers — one block each, and for an implementation node
                 its acceptance condition too; for a defect that joins an open node, that node
                 and the clauses to add to its condition>
@@ -222,17 +219,15 @@ Write the human's words here as they said them, without summarizing them. Then s
 
 ## When you raise a flag
 
-A flag's **entry** is two separate texts in two places, each with its own length limit, and you write
-both.
+A flag's **entry** is one text, on your node under `## Flags`, with one entry per flag. Write it when
+you raise the flag, while you still have the context, and give it the flag's marker.
 
-- On your node, under `## Flags`: free prose, one entry per flag. Say what you decided and on what
-  grounds, and give the full account of what produced the flag.
-- In `flags.md`, the graph's capped index of every judgement an agent made on its own: one sentence that
-  reports your judgement. Write it for a reader who has not read your node, long after the node has
-  resolved.
+- Open the entry with one sentence that reports your judgement. Write that sentence for a reader who has
+  not read your node, long after the node has resolved.
+- Follow it with free prose. Say what you decided and on what grounds, and give the full account of
+  what produced the flag.
 
-Write both when you raise the flag, while you still have the context, and give each the flag's marker.
-The manager adds only bookkeeping: the flag's id, the link to your node, and the flag's state.
+The manager adds only bookkeeping: the flag's id and the flag's state.
 
 Your `## Flags` entry holds the account of what produced the flag on every kind of node, whether or not
 your node has an `## Interview` attempt or a `## Review` round. For a judgement you made unprompted, the

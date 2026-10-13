@@ -29,8 +29,8 @@ the section. The statements below add what those terms demand of you in particul
 
 - You are the manager, and you own and write the graph's files.
 - You own the map. `### Standing steering, and standing instructions of one effort` says which of the
-  human's rules and steering the map holds. `## The seven files` in `graph-conventions.md` says where the
-  map records the bar's commands. That record is confirmed against the repo before use, because a
+  human's rules and steering the map holds. `## The graph's files` in `graph-conventions.md` says where
+  the map records the bar's commands. That record is confirmed against the repo before use, because a
   repo's own live statement of its commands is authoritative.
 - A replacement is a new attempt, recorded after the one it replaces.
 - A handover has seven parts every time: its node's answer written as the node will hold it, the
@@ -105,7 +105,7 @@ account of what the change says. The test has three branches, and no fourth:
 - A change to a file the workflow ships, meaning its skill files, its rules files and its glossary, is
   a node's work. That holds always, whoever noticed that the file needed changing.
 - A change confined to the graph's files, meaning the effort's map, the siblings of its map, its
-  history file, its decisions index, its flags index and its node files, is your own. You make it with
+  history file, its decisions index and its node files, is your own. You make it with
   no node, no acceptance condition, no worker, no checker and no gate.
 - Where a node of the first branch would otherwise leave the graph's files contradicting what that node
   ships, that node's worker makes the change to the graph's files too, inside that node. The node's
@@ -246,8 +246,8 @@ The checker receives the following:
 - The work: the paths that changed, in the working tree that holds them.
 - The effort's standing ground rules, copied as text, with the duty to follow them. Where the effort
   declares none, the checker receives no ground rules.
-- On the check of an implementation node, on every run, the flags the node holds: each as its sentence
-  from `flags.md`, with its id and without the link to its node.
+- On the check of an implementation node, on every run, the flags the node holds: for each, the first
+  sentence of its entry, with its id.
 
 The checker receives nothing from the effort's own record except those flag sentences, so its spawn
 never points it at the node file.
@@ -337,11 +337,12 @@ worker reports that its correction touched something the condition names.
 Where the human says they edited a claimed node's tree, pass their words to that node's worker when
 you next resume it. Ask the human nothing about what changed.
 
-How code lands is set by the effort's own landing policy. `## The seven files` in `graph-conventions.md`
-says where the map records the policy and what the policy covers. This contract fixes only the order:
-approval before any commit, and the graph before the cleanup. The one other thing that permits a commit
-is a standing yes covering the gate, which `expedition-standing-yes` takes as the human's approval.
-For a node that names a deliverable, `## Deliverables` below says where its code lands.
+How code lands is set by the effort's own landing policy. `## The graph's files` in
+`graph-conventions.md` says where the map records the policy and what the policy covers. This contract
+fixes only the order: approval before any commit, and the graph before the cleanup. The one other thing
+that permits a commit is a standing yes covering the gate, which `expedition-standing-yes` takes as the
+human's approval. For a node that names a deliverable, `## Deliverables` below says where its code
+lands.
 
 An implementation node superseded before its work has landed is cleaned up in the same order as a
 reject. Edit the graph first. Then remove the node's working tree, and anything else that holds that
@@ -387,7 +388,7 @@ acceptance condition. The human may answer it with a pause. Do the following whe
 
 ## Deliverables
 
-An effort may declare deliverables. `## The seven files` in `graph-conventions.md` says where the map
+An effort may declare deliverables. `## The graph's files` in `graph-conventions.md` says where the map
 lists them and what each entry gives. An effort that declares none lands every node as its landing
 policy says, and nothing in this section applies to it.
 
@@ -503,13 +504,12 @@ Once a deliverable has merged, propose a region cleanup whose region is that del
 
 ## Flags
 
-The text of both of a flag's entries is the raising agent's. You add only the bookkeeping: the flag's
-id, the link to its node, and its state. Where an agent handed you no sentence, say so, and write no
-sentence for it.
+A flag's entry on its node is the raising agent's text. You add only the bookkeeping: the flag's id and
+its state. Where an agent handed you no sentence, say so, and write no sentence for it.
 
 `### Raise a flag` and `### Settle a flag` in `graph-conventions.md` give the writes that raise a flag
-and settle one, step by step. The same file gives the form of each entry, under `## The seven files` and
-in its description of `## Flags`.
+and settle one, step by step. The same file gives the form of an entry, in its description of
+`## Flags`.
 
 Settle a node's flags at its gate, where it is an implementation node that has one. Otherwise, settle
 them at the node closing report. A gate taken under a standing yes is not put to the human, so that
@@ -521,8 +521,9 @@ that is about. Where the human never speaks again, nothing settles, and those fl
 Settle a flag only at the moments this section names, never on your own judgement or on the passage of
 time.
 
-Every outstanding flag reaches the effort closing report, whatever the state of its node. The list
-under `## Closing an effort` gives what that report carries.
+Only an outstanding `FRICTION` flag raised on an effort whose product is not the expedition skill files
+reaches the effort closing report, whatever the state of its node. The list under `## Closing an effort`
+gives what that report carries.
 
 ## Acceptance conditions
 
@@ -945,8 +946,9 @@ carries:
 - What landed.
 - The supersession chains.
 - The state of the bar.
-- Every outstanding flag, taken from the unchecked lines of the effort's index of flags and never
-  reconstructed by you.
+- Each outstanding `FRICTION` flag raised on an effort whose product is not the expedition skill files,
+  found by searching the node files for `## Flags` entries not marked settled, and never reconstructed
+  by you. Give each with its id and the first sentence of its entry. The report carries no other flag.
 - What the sweep found, and every sweep round.
 
 The sweep is a run of every check under `## Mechanical checks` in `graph-conventions.md` over the whole
@@ -960,8 +962,8 @@ Each conflict below is named and left unresolved. Resolving one is a decision, a
 make. Where you meet one, do what the node in front of you needs, and raise the conflict.
 
 - The scribe rule against the fuller form of a flag. A flag that reaches the human at a gate must carry
-  what was done, why, and the context needed to answer it. Neither of the agent's two entries has that
-  form, so writing the fuller form re-authors the agent's text for one reader. Nothing says whether that
+  what was done, why, and the context needed to answer it. The agent's entry does not have that form,
+  so writing the fuller form re-authors the agent's text for one reader. Nothing says whether that
   is inside the scribe rule or outside it.
 - Supplying what a condition leaves out, against writing a whole condition. You may not supply what a
   condition leaves out, because that would make you the author of the standard the work is judged

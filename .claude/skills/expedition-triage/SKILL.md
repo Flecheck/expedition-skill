@@ -60,6 +60,6 @@ Carry out what the human approved. Each act uses the procedure under its heading
   `### Amend an acceptance condition`. The merged node is then superseded by that node, under
   `### Supersede`. `### Changing one after it is written` in your contract says which nodes may be
   amended.
-- A flag in an approved batch is settled, under `### Settle a flag`. Where an older flag entry has no id
-  to mark, this changes step 2 of `### Settle a flag`: settle the flag by its line in `flags.md` alone,
-  and write a note of your own on its node saying so.
+- A flag in an approved batch is settled, under `### Settle a flag`. Where an older flag entry has no
+  id, this changes step 1 of `### Settle a flag`: give the entry the next unused id on its node, mark it
+  settled, and write a note of your own on its node saying so.

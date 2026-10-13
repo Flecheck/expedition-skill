@@ -56,19 +56,16 @@ outside any text marked as the human's own words, check it.
 - the paths the spawn expects you to touch
 
 Read everything the list above names in full. Search the rest of the effort's record instead of reading
-it, leaving out any file this section tells you to leave unread. Where you need a fact you cannot place,
-search for it in that way before you open any file whole. Open a file of the record that is not on the
-list above only because such a search led you to it. Narrow a search before you read its results:
-establish the files that match, narrow the phrase, then read what matched. A broad term can match a
-longer text than the file it was meant to spare. Your environment provides the search, and no particular
-tool is required. This governs the facts the record holds, and never the rules you are held to. Those
-arrive in the spawn and in the files the list above names, and you never go looking for a standard you
-are judged against.
+it. Where you need a fact you cannot place, search for it in that way before you open any file whole.
+Open a file of the record that is not on the list above only because such a search led you to it. Narrow
+a search before you read its results: establish the files that match, narrow the phrase, then read what
+matched. A broad term can match a longer text than the file it was meant to spare. Your environment
+provides the search, and no particular tool is required. This governs the facts the record holds, and
+never the rules you are held to. Those arrive in the spawn and in the files the list above names, and
+you never go looking for a standard you are judged against.
 
 Search `decisions.md` for your node's terms and paths, and for any node numbers the spawn names. Read
 only the lines that match.
-
-Leave `flags.md` unread. It is not yours.
 
 The paths the spawn expects you to touch neither permit nor forbid an edit. Where the work needs changes
 outside those paths, make them.
@@ -109,8 +106,8 @@ raise under `## Flag, or raise`.
 For each place you edit on one of these grounds:
 
 - Hand back one `ASSUMPTION` flag naming the place, the reason and the ground. Put the place, the reason
-  and the ground in the flag's one sentence for the index too, because that sentence is all of the flag
-  your checker receives.
+  and the ground in the sentence that opens the flag's entry too, because that sentence is all of the
+  flag your checker receives.
 - List the place in `GATE PAYLOAD` among the paths you touched.
 
 Such an edit leaves your condition's text as it is. It is allowed even where your condition says that an
@@ -157,9 +154,9 @@ complete bar for such a repo.
 
 1. Write product code. Write a graph file only where your node's own work is a change to that file.
 2. Leave all recording on the graph to the manager, whatever your node's work is. The manager writes your
-   answer onto your node, marks and resolves the node, and writes its lines in `decisions.md` and
-   `flags.md`. Report a node you have found on your handover's `NEW NODES` part, and create no file for
-   it.
+   answer and your flags onto your node, marks and resolves the node, and writes its line in
+   `decisions.md`. Report a node you have found on your handover's `NEW NODES` part, and create no file
+   for it.
 3. Leave your work uncommitted, on the branch it is on. Never commit, branch, switch branches, push, or
    rewrite history. The manager makes one commit of your work, after the human has approved it.
 4. Contact the human only by a flag or a raise, and call no tool that addresses the human.
@@ -271,8 +268,8 @@ HANDOVER:      <your node's name>
 ANSWER:        <your node's `## Answer`, written as the node will hold it: what you built, and
                 every call inside it a later reader would otherwise have to re-derive>
 INDEX LINE:    <one sentence, about 25 words, for decisions.md>
-FLAGS:         <per flag, prefixed ASSUMPTION or FRICTION: the prose for your node, then the one
-                sentence for the index>
+FLAGS:         <per flag, prefixed ASSUMPTION or FRICTION: the sentence that opens the entry, then
+                the rest of its prose>
 NEW NODES:     <name, kind, question, blockers — one block each, and for an implementation node
                 its acceptance condition too; for a defect that joins an open node, that node
                 and the clauses to add to its condition>
@@ -328,17 +325,15 @@ Report `NEW NODES` and `INVALIDATIONS` yourself. Nothing else reports them.
 
 ## When you raise a flag
 
-A flag's **entry** is two separate texts in two places, each with its own length limit, and you write
-both.
+A flag's **entry** is one text, on your node under `## Flags`, with one entry per flag. Write it when
+you raise the flag, while you still have the context, and give it the flag's marker.
 
-- On your node, under `## Flags`: free prose, one entry per flag. Say what you decided and on what
-  grounds, and give the full account of what produced the flag.
-- In `flags.md`, the graph's capped index of every judgement an agent made on its own: one sentence that
-  reports your judgement. Write it for a reader who has not read your node, long after the node has
-  resolved.
+- Open the entry with one sentence that reports your judgement. Write that sentence for a reader who has
+  not read your node, long after the node has resolved.
+- Follow it with free prose. Say what you decided and on what grounds, and give the full account of
+  what produced the flag.
 
-Write both when you raise the flag, while you still have the context, and give each the flag's marker.
-The manager adds only bookkeeping: the flag's id, the link to your node, and the flag's state.
+The manager adds only bookkeeping: the flag's id and the flag's state.
 
 Your `## Flags` entry holds the account of what produced the flag on every kind of node, whether or not
 your node has an `## Interview` attempt or a `## Review` round. For a judgement you made unprompted, the

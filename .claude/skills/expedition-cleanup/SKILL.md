@@ -1,6 +1,6 @@
 ---
 name: expedition-cleanup
-description: Clean up an expedition's record. The human invokes it in an expedition's manager thread to remove record that a finished part of the effort no longer needs, by one of two operations, region cleanup or flag cleanup. The manager also reads it to propose a region cleanup when the human says a deliverable's pull request has merged, or when the manager has merged a deliverable locally.
+description: Clean up an expedition's record. The human invokes it in an expedition's manager thread to remove record that a finished part of the effort no longer needs, by its one operation, region cleanup. The manager also reads it to propose a region cleanup when the human says a deliverable's pull request has merged, or when the manager has merged a deliverable locally.
 ---
 
 # Cleaning up the record
@@ -16,15 +16,13 @@ entry that paragraph describes.
 
 Remove only text that the effort's version control history already holds, so the entry's claim is true.
 
-## Two operations
+## One operation
 
-This skill has two operations: **region cleanup** and **flag cleanup**. The human invokes each one
-separately, and neither implies the other. Where the invocation does not say which one it is, ask the
-human. The one region cleanup you propose without an invocation is the one under
-`### A merged deliverable as the region`.
+This skill has one operation, **region cleanup**. The human invokes it. The one region cleanup you
+propose without an invocation is the one under `### A merged deliverable as the region`.
 
-The two operations are the whole of what this skill does. It removes no text because the text is old,
-because its file has grown long, or because the text is marked superseded.
+Region cleanup is the whole of what this skill does. It removes no text because the text is old, because
+its file has grown long, or because the text is marked superseded.
 
 ## Region cleanup
 
@@ -40,13 +38,16 @@ region in their own words. Never judge on your own that a region is finished.
      file of the record that this operation does not remove;
    - the human has confirmed the set.
    Where one of the first two fails, say which node fails it and why, and propose an amended set.
-3. A node in the set that holds an outstanding flag also stops the removal. Put that flag to the human
-   first, because removing its line would drop it from the effort closing report.
+3. Find the outstanding flags the set's nodes hold, by searching their `## Flags` entries for those not
+   marked settled. No outstanding flag stops the removal. Removing a node removes its flags. An
+   outstanding `FRICTION` flag raised on an effort whose product is not the expedition skill files
+   would otherwise have reached the effort closing report. List each such flag, with its id and the
+   first sentence of its entry, in the set you put to the human in step 4.
 4. Put the set in front of the human for confirmation or amendment. Remove nothing before they confirm
    it.
 5. Remove the region from every file of the effort's record, and not from the node files alone. That
    covers each node file in the set, and the part of each other file attributable to the region, such
-   as the set's lines in `decisions.md` and in `flags.md`.
+   as the set's lines in `decisions.md`.
 6. In `decisions.md`, where the region's lines stood, write one entry. It names the region as the human
    named it, lists the ids of the nodes removed, and records that the removed text remains recoverable
    from the effort's version control history.
@@ -93,20 +94,8 @@ when you have merged it locally. For each such deliverable:
 A deliverable that a remaining node still names keeps its entry and its branch, until a later cleanup
 removes that node.
 
-## Flag cleanup
-
-`flags.md` holds one line per flag, with its state. The effort closing report is built from its lines
-whose flag is not yet settled.
-
-1. Remove from `flags.md` each line whose flag is settled, marked `- [x]`.
-2. Leave every line whose flag is outstanding, marked `- [ ]`.
-3. Leave every node file unchanged.
-
-Nothing is lost. A flag's prose and its `settled` marking both live on the node that raised it, and this
-operation does not modify that node.
-
 ## Reporting
 
-Report to the human what each operation removed: for region cleanup the region and the node ids, and
-for flag cleanup the ids of the lines removed. For a merged deliverable, also report whether its entry
+Report to the human what the operation removed: the region, the node ids, and the ids of the
+outstanding flags removed with those nodes. For a merged deliverable, also report whether its entry
 and its local branch were removed, and, where they were kept, which remaining node names it.

@@ -13,13 +13,13 @@ how the manager pastes what a worker hands it.
 
 No edit deletes. When a graph file changes, strike through or mark in place the text that no longer
 holds, and add the new text around it. Remove text from a file only when it is wrong or the human asks
-for it gone. The never-delete rule covers only the graph's own files, listed under `## The seven files`
-below. Edit the product the effort changes, and every file the effort ships, plainly: remove superseded
-wording, and move nothing to a history file. The never-delete rule also does not reach a removal made by
-an act that is invoked and whose declared purpose is removal. The rule guards against deletion that is
-unannounced, and being invoked for that purpose is the announcement. Such an act leaves an entry in
-place of what it removed. The entry names what was removed and records that the text remains recoverable
-from the effort's version control history.
+for it gone. The never-delete rule covers only the graph's own files, listed under
+`## The graph's files` below. Edit the product the effort changes, and every file the effort ships,
+plainly: remove superseded wording, and move nothing to a history file. The never-delete rule also does
+not reach a removal made by an act that is invoked and whose declared purpose is removal. The rule
+guards against deletion that is unannounced, and being invoked for that purpose is the announcement.
+Such an act leaves an entry in place of what it removed. The entry names what was removed and records
+that the text remains recoverable from the effort's version control history.
 
 Inside the graph's files, two separate questions settle what happens to superseded text. The first is
 what the text is, and this test answers it: *"text is rule-stating if an agent could act differently
@@ -32,16 +32,15 @@ A node file does: it holds every superseded thing about its one node, so superse
 stays in it, marked superseded where it stands. `map.md`, and every sibling of it that states rules
 that currently bind, does not. So a superseded item in one of them is replaced by its current form, and
 its superseded text is appended verbatim to `map-history.md`. `## Writing the map` below describes
-how. Text that records what happened, such as a line in `decisions.md` or an entry in `flags.md`, is
-marked superseded in place and never removed. `map-history.md` holds superseded text only, and is never
-rewritten.
+how. Text that records what happened, such as a line in `decisions.md`, is marked superseded in place
+and never removed. `map-history.md` holds superseded text only, and is never rewritten.
 
 An implementation node's acceptance condition is rule-stating while its node is live. A superseded
 clause of one stays in the node file and is never appended to `map-history.md`. The clause is marked
 superseded where the clause itself stands, rather than only recorded elsewhere in the node file. The
 reason is that the checker is handed the condition as text and does not read the node.
 
-## The seven files
+## The graph's files
 
 ```
 .scratch/<effort>/
@@ -50,7 +49,6 @@ reason is that the checker is handed the condition as text and does not read the
   map-manager-only.md    The part of the map only the manager acts on. No worker reads it.
   map-implementation-rules.md  The rules an implementation node's work is held to.
   decisions.md           One capped line per resolved node. Append-only.
-  flags.md               One capped line per flag, with its state. Append-only.
   nodes/NN-<name>.md     One file per node. All detail.
 ```
 
@@ -114,34 +112,12 @@ file admits is under `## Writing the map` below.
 relevance and never a restatement. The lines are grouped under the declared labels where a vocabulary
 exists, and flat where it does not.
 
-`flags.md` is the graph's capped index of every judgement an agent made on its own. It holds one line
-per flag, one sentence long, written as a report. `## Flags` in `SKILL.md` says whose text the line is,
-and `## Closing an effort` there says what the effort closing report takes from this file. The line's
-form:
-
-```
-- [ ] NN.k ASSUMPTION · [<node name>](nodes/NN-<name>.md) — <one line>
-```
-
-A `FRICTION` flag uses this same form. Its marker stands where `ASSUMPTION` stands above, as every
-other marker does.
-
-Every flag carries an id, `NN.k`, made of its node's number and then a sequence number within that node,
-allocated in write order and never reused. In `flags.md` the id sits between the checkbox and the
-marker. On the node's `## Flags` entry it sits in front of the marker.
-
-`- [ ]` means outstanding. `- [x]` means the human has dealt with the flag, which does not mean they
-agreed with it. The node holds the same state, marking a settled flag `settled`, so the node and
-`flags.md` can disagree. Where they disagree, `flags.md` wins, because the sweep and the effort closing
-report are built from it. The flag's node is the first link on the line. The text after the dash may
-contain other links.
-
 ## Writing the map
 
 This section covers `map.md` and every sibling of it that states rules that currently bind, including a
 file the map later splits into, from the day it is written. None of these files archives its own
-subject, so their superseded text goes to `map-history.md`, as the paragraphs above `## The seven files`
-state.
+subject, so their superseded text goes to `map-history.md`, as the paragraphs above
+`## The graph's files` state.
 
 Each file of the map declares its reader: one kind of worker, or the manager alone. The file admits a
 line only where that reader would do something differently for having read it while working a node.
@@ -286,9 +262,18 @@ with a condition that leaves part of its demand in another file.
 
 ### `## Flags`
 
-The section holds one entry per flag, in free prose. Each entry holds the full account of what produced
-its flag, as `### Raise a flag` under `## Procedures` states. Each entry starts with the flag's id and
-then its marker, one word saying which kind of flag it is. There are five markers:
+The section holds one entry per flag, in free prose. A flag's entry on its node is the only record of
+that flag. Each entry starts with the flag's id and then its marker, one word saying which kind of flag
+it is.
+
+Every flag carries an id, `NN.k`, made of its node's number and then a sequence number within that node,
+allocated in write order and never reused. The id stands in front of the marker.
+
+The entry's first sentence is the raising agent's one-sentence report of the judgement, written for a
+reader who has not read the node. The full account of what produced the flag follows it, as
+`### Raise a flag` under `## Procedures` states. `## Flags` in `SKILL.md` says whose text the entry is.
+
+There are five markers:
 
 - `ASSUMPTION` — the worker decided a small ambiguity itself.
 - `CONDITION-WRONG` — filed by the manager, after a worker raised its acceptance condition as wrong and
@@ -299,14 +284,21 @@ then its marker, one word saying which kind of flag it is. There are five marker
 - `PERMISSION` — a permission the human granted for one attempt, past a contract clause that blocked
   the node.
 
+A flag is outstanding until its entry carries the marker `**· settled**`, in one of the positions that
+`### How a check reads the files` under `## Mechanical checks` allows. A settled flag is one the human
+has dealt with, which does not mean they agreed with it. The outstanding flags are found by searching
+the node files for `## Flags` entries not marked settled.
+
 A settled flag's entry takes this form:
 
 ```
-`NN.k` `ASSUMPTION` **· settled** — <the judgement, in the worker's own prose>
+`NN.k` `ASSUMPTION` **· settled** — <the one-sentence report> <the full account>
 ```
 
-The word for a flag is `settled`, and `resolved` is kept for a node. Only the line in `flags.md` carries
-a checkbox.
+A `FRICTION` flag uses this same form. Its marker stands where `ASSUMPTION` stands above, as every other
+marker does. An outstanding flag's entry takes the same form without `**· settled**`.
+
+The word for a flag is `settled`, and `resolved` is kept for a node.
 
 ### Recording the human's words
 
@@ -479,7 +471,7 @@ Each procedure lists every file it changes, in the order the changes are made.
 Use this to create an effort's files. `## Starting an effort` in `SKILL.md` says what the act
 establishes and who performs it.
 
-1. `map.md`: write its three sections, as `## The seven files` above describes them. Its
+1. `map.md`: write its three sections, as `## The graph's files` above describes them. Its
    `## Destination` says both what reaching the end of the effort looks like and whether the effort is
    expected to reach it.
 2. `map-history.md`: create it, holding no text yet.
@@ -487,10 +479,9 @@ establishes and who performs it.
    effort declares none.
 4. `map-implementation-rules.md`: create it.
 5. `decisions.md`: create it, holding no line yet.
-6. `flags.md`: create it, holding no line yet.
-7. `nodes/`: create the directory.
-8. `nodes/NN-<name>.md`: create each of the effort's first nodes by the steps under `## Adding a node`.
-9. Whoever starts the effort, which is the manager, runs checks 1, 3, 4 and 12 under
+6. `nodes/`: create the directory.
+7. `nodes/NN-<name>.md`: create each of the effort's first nodes by the steps under `## Adding a node`.
+8. Whoever starts the effort, which is the manager, runs checks 1, 3, 4 and 12 under
    `## Mechanical checks` itself, as part of this act, over the material it touched: each first node's
    number, `Blocked by:`, `Labels:` and `Deliverable:`, the declared label vocabulary, and any list of
    deliverables.
@@ -591,32 +582,28 @@ is written` in `SKILL.md` says who may change it and what the change may cover.
 1. `nodes/NN-<name>.md`: under `## Acceptance condition`, mark each clause the amendment replaces as
    superseded where the clause stands. Append the amendment after the text of the condition's author,
    marked as its own author's, beside the search or the fact that justified it.
-2. `nodes/NN-<name>.md` and `flags.md`: raise the amendment's flag by the steps under
-   `### Raise a flag`.
+2. `nodes/NN-<name>.md`: raise the amendment's flag by the steps under `### Raise a flag`.
 3. Whoever amends the condition runs check 6 below itself, as part of this amendment, over the material
-   it touched: the flag's entry on its node and its line in `flags.md`.
+   it touched: the flag's entry on its node.
 
 ### Raise a flag
 
 1. `nodes/NN-<name>.md`: append the flag under `## Flags`, starting with its id and its marker. The id's
    `k` is the next unused one for that node.
-2. `flags.md`: append one unchecked line with the same id and marker, linking the node.
 
-Both writes are part of raising the flag, and are never left to a tidy-up afterwards.
+The flag's entry opens with the raising agent's one-sentence report of the judgement. The entry then
+holds the full account of what produced the flag, on every kind of node. For a flag from a worker's own
+unprompted judgement, that account is what the worker actually did, told in the worker's words. The
+entry holds the account whether or not the node has an `## Interview` attempt or a round in `## Review`.
+A worker hands the account back as part of its handover's `FLAGS` part, which is filed under `## Flags`.
 
-The flag's entry under `## Flags` holds the full account of what produced the flag, on every kind of
-node. For a flag from a worker's own unprompted judgement, that account is what the worker actually did,
-told in the worker's words. The entry holds the account whether or not the node has an `## Interview`
-attempt or a round in `## Review`. A worker hands the account back as part of its handover's `FLAGS`
-part, which is filed under `## Flags`.
-
-3. Whoever raises the flag runs check 6 below itself, as part of raising it, over the material it
-   touched: the flag's entry on its node and its line in `flags.md`.
+2. Whoever raises the flag runs check 6 below itself, as part of raising it, over the material it
+   touched: the flag's entry on its node.
 
 ### Settle a flag
 
-1. `flags.md`: change that flag's `- [ ]` to `- [x]`.
-2. `nodes/NN-<name>.md`: mark that flag `settled` under `## Flags`.
+1. `nodes/NN-<name>.md`: mark that flag's entry under `## Flags` with `**· settled**`, directly after
+   its marker.
 
 `## Flags` in `SKILL.md` says when a node's flags settle, and which flags reach the effort closing
 report.
@@ -627,24 +614,22 @@ A flag the human turns into a node is settled the same way. The new node is crea
 A `FRICTION` flag raised on an effort whose product is not the expedition skill files has exactly two
 dispositions, and being settled as fixed is not one of them:
 
-- declined — the human judges the flag not worth carrying. Settle it in place by steps 1 and 2, and
-  record the human's reason on its entry under `## Flags`.
-- outstanding — its line stays unchecked, which means the flag is carried. The effort closing report of
+- declined — the human judges the flag not worth carrying. Settle it in place by step 1, and record the
+  human's reason on its entry under `## Flags`.
+- outstanding — its entry stays unmarked, which means the flag is carried. The effort closing report of
   that effort carries it again.
 
 No agent may mark such a flag settled as fixed, because the fix lands only in the repository holding the
 expedition skill files, and no agent crosses a repository boundary. Once the human knows the fix landed,
-they may check the flag's line by hand, and mark its entry settled.
+they may mark its entry settled by hand.
 
-This changes, for such a flag, two rules under `## Flags` in `SKILL.md`:
+This changes, for such a flag, the rule under `## Flags` in `SKILL.md` that a node's flags settle at
+its gate or at its node closing report. Such a flag stays outstanding past both, until the human
+declines it or marks it settled by hand. While it is outstanding, it reaches the effort closing report,
+as `## Flags` in `SKILL.md` says.
 
-- the rule that a node's flags settle at its gate or at its node closing report. Such a flag stays
-  outstanding past both, until the human declines it or checks it by hand.
-- the rule on which flags reach the effort closing report. Such a flag reaches that report while it is
-  outstanding, whatever that rule says of other flags.
-
-3. Whoever settles the flag runs check 6 below itself, as part of settling it, over the material it
-   touched: the flag's entry on its node and its line in `flags.md`.
+2. Whoever settles the flag runs check 6 below itself, as part of settling it, over the material it
+   touched: the flag's entry on its node.
 
 ### Change the map
 
@@ -676,10 +661,8 @@ Each of these is decidable by reading the files.
 4. Every `Labels:` entry appears in the map's declared vocabulary.
 5. Every `resolved` node has an `## Answer` and exactly one line in `decisions.md` that is not struck
    through. It may have any number of struck-through lines there.
-6. Every `## Flags` entry has a line in `flags.md` with the same id, and every line there has an entry.
-   The two agree on state: a flag that is `- [x]` in `flags.md` is marked `settled` on its node, and a
-   flag marked `settled` on its node is `- [x]`. A settled flag whose index line has been removed is not
-   a mismatch. An outstanding flag missing its index line still is one.
+6. Every `## Flags` entry begins at the start of a line with an id `NN.k` whose `NN` is its node's
+   number. No two entries on one node share an id.
 7. Every `implementation` node has an `## Acceptance condition` before it is `claimed`.
 8. Every node has at most three `## Interview` attempt blocks.
 9. Every item under a `NOT COVERED:` label in a `## Review` opens with `OWED` or with `ESTABLISHED BY`.
@@ -724,7 +707,6 @@ A check reads the files by these rules.
   there.
 - Text is unwrapped into unbroken lines before any phrase is matched, because a phrase that wraps is
   invisible to a search over lines.
-- In `flags.md`, a flag's node is the first link on the line.
 - In `decisions.md`, a resolved node's entry is identified by the first link on its line. So an entry
   whose text cites another node is not counted as an entry for that node.
 - A `## Flags` entry is line-anchored: it begins at the start of a line with the flag's id. So a flag
