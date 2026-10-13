@@ -77,6 +77,10 @@ the item in the same turn you would otherwise have queued it.
 
    The rest of the worker's resume shape is unchanged. `DIVERGENCE` is never present, because a standing
    yes always takes the recommendation.
+
+   Where a covered raise's `RECOMMENDED` is a pause, also carry out the steps under
+   `## A paused implementation node` in the `expedition` skill's `SKILL.md`. The worker reads the
+   `STANDING YES` line as the pause.
 3. For a gate, commit as on an approval. The node then resolves.
 4. For a push, push the deliverable's branch. A push belongs to no node, so nothing is recorded on
    one. Say in your next report to the human which branch you pushed, and quote the scope text of the
