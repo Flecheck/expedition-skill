@@ -248,11 +248,10 @@ none of them, or that everything in it traces back to one. Such a demand goes in
 what that answer says: a rename, an extension, a narrowing or a contradiction. A demand about what
 changed in the tree, such as *no file under `.scratch/` changes*, is permitted.
 
-Where a condition's scope was derived from a search, the condition states that search. The list of
-files stays, and so does the clause that excludes every other file. The search is written beside the
-list, as what produced it, and never in place of it. The condition's author owes exactly one of the
-three below. A condition addressing a defect with instances that carries none of the three is
-malformed.
+Where a condition's scope was derived from a search, the condition states that search. The list of files
+stays, and so does the clause that limits edits to every other file. The search is written beside the
+list, as what produced it, and never in place of it. The condition's author owes exactly one of the three
+below. A condition addressing a defect with instances that carries none of the three is malformed.
 
 1. An **enumerator**: the command, and what it returned when it was run.
 2. Where no command fits, a **bounding set**: the smallest set that provably contains every instance,
@@ -266,9 +265,12 @@ or at the tip of the deliverable's branch where the spawn gave none. A search ov
 node files or its indexes quantifies over the record, which a condition may not do, and no copy
 repairs it.
 
-An instance the search reaches outside the condition's list is reported and not edited. A worker whose
-search matches a place the list does not name gains a duty to report it, and never a permission to edit
-it. A false positive costs one line in a handover.
+An instance the search reaches outside the condition's list is edited only on one of three grounds: the
+work's own change makes the place wrong, the place is a further instance of the defect the condition
+describes, or the work cannot meet its condition or the bar without the change. The worker hands back a
+flag naming each place it edits that way and the reason. Any other instance is reported and not edited.
+A false positive costs one line in a handover. `## A place outside your condition's list` in the
+implementation worker's contract, `expedition-implementation`, states the three grounds in full.
 
 A condition's scope is a finding stated in advance. Its readers, the checker and the worker before it,
 cannot go and look at how the scope was found, so a condition owes them the same extent that a

@@ -281,7 +281,10 @@ read the record at all. So write the condition to the five points that follow.
   Where the node you report will name a deliverable in its `Deliverable:` field, run the command over
   that deliverable's code instead. Use the commit your spawn gives for it, or the tip of that
   deliverable's branch where your spawn gives none.
-  Write into the condition that an instance the search reaches outside the list is reported and not
+  Write into the condition that an instance the search reaches outside the list is edited only on one
+  of three grounds, with a flag naming the place and the reason: the work's own change makes the place
+  wrong, the place is a further instance of the defect the condition describes, or the work cannot meet
+  its condition or the bar without the change. Write too that any other instance is reported and not
   edited. The condition's readers cannot go and look at how its scope was found, so the condition tells
   them.
 

@@ -364,6 +364,27 @@ supersede it again. Put the chain to the human instead, as a decision about the 
 There is no depth counter and no budget on supersession. The chain itself makes the friction visible,
 because each replacement in it names the node it replaced.
 
+## A paused implementation node
+
+An implementation worker may raise, under the size of its own node, that an enabling change is too big
+to make inside its node. An enabling change is one the work cannot meet its condition or the bar
+without. Such a raise proposes a node for the enabling change, with its name, its question and its
+acceptance condition. The human may answer it with a pause. Do the following when they do:
+
+1. Mint the enabling node from the raise, marked as proposed by that worker. Its acceptance condition is
+   the one the raise wrote, which you file. Where the paused node names a deliverable, give the enabling
+   node a `Deliverable:` field that lets the paused node be blocked on it, under
+   `### A deliverable whose base is another deliverable`.
+2. Add the enabling node to the paused node's `Blocked by:`.
+3. Leave the paused node `claimed`. It keeps its worktree, with its work left in place.
+4. While the paused node is blocked, its worktree counts against none of the effort's code slots. A
+   paused node reads as `claimed` with a `Blocked by:` node that is not resolved.
+5. When the enabling node lands, bring the paused node's worktree onto the commit where the enabling node
+   landed, keeping the paused work. Where that conflicts, resume the paused worker with the conflicted
+   files to fix in place.
+6. Then resume the paused worker with "continue". Where the worker cannot be resumed, a replacement
+   attempt takes the node, under `## When an agent dies or is stopped`.
+
 ## Deliverables
 
 An effort may declare deliverables. `## The seven files` in `graph-conventions.md` says where the map
@@ -717,22 +738,25 @@ Two counts, each a setting of the effort, limit how much you start:
 - How many nodes that need the human run at once. The count is two, unless the effort's map sets another
   number.
 - How many implementation nodes run at once. The count is the effort's number of code slots, recorded in
-  its map. A slot holds one worker. Where no slot is free, start no implementation node. Raising the
-  count buys parallel implementation at the price of conflicts to resolve when the work is integrated.
-  The human sets the number. Never raise it on your own judgement, and never treat the effort's current
-  value as a ceiling you must justify leaving. When the human moves the count, name this trade to them.
+  its map. A slot holds one worker. A paused node holds no slot while it is blocked, as
+  `## A paused implementation node` says. Where no slot is free, start no implementation node. Raising
+  the count buys parallel implementation at the price of conflicts to resolve when the work is
+  integrated. The human sets the number. Never raise it on your own judgement, and never treat the
+  effort's current value as a ceiling you must justify leaving. When the human moves the count, name
+  this trade to them.
 
 Where a pick would go over either count, it waits. Say what it is waiting for. Each count is a number to
 reach. When a node finishes, start enough work to bring every count back up to its number, which is
 sometimes more than one node.
 
-`scripts/frontier.sh`, beside this file, reads the graph and writes nothing. Run it when a node
-finishes, to see what is startable and whether a slot has emptied. Pass it the effort's directory, then
-the count of nodes that need the human and the count of code slots. It prints how many grilling and
-implementation nodes are claimed against those counts, and the startable nodes grouped by kind. It
-cannot tell whether two startable nodes would edit the same file, because no field records which files
-a node touches, so apply that filter yourself before you fill a second implementation slot. Two
-grilling nodes can never collide, because a grilling worker writes no file.
+`scripts/frontier.sh`, beside this file, reads the graph and writes nothing. Run it when a node finishes,
+to see what is startable and whether a slot has emptied. Pass it the effort's directory, then the count
+of nodes that need the human and the count of code slots. It prints how many grilling and implementation
+nodes are claimed against those counts, and the startable nodes grouped by kind. It counts a paused
+implementation node as claimed, so take each paused node off its count of implementation nodes. It cannot
+tell whether two startable nodes would edit the same file, because no field records which files a node
+touches, so apply that filter yourself before you fill a second implementation slot. Two grilling nodes
+can never collide, because a grilling worker writes no file.
 
 Every worker reads a consistent snapshot. An implementation worker reads its own working tree. Every
 other worker reads the main checkout, and reads each deliverable its node names at the commit its spawn

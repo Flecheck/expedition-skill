@@ -196,6 +196,31 @@ and the rest of the condition stands without it, name it under `NOT COVERED:`.
 An effort's own rules may add method specific to that effort on top of this section. Where they do,
 follow that method as well. Every demand of this section still holds.
 
+### An edit outside the condition's list
+
+A condition may list the files the work may change. The work's writer may still edit a place outside
+that list on exactly three grounds:
+
+1. The work's own change makes the place wrong. Examples are a stale count, a pointer to something the
+   work moved, and a statement the work now contradicts. In code, examples are a caller of a function or
+   type whose signature the work changed, and a test, document or configuration file that describes what
+   changed. This ground has no size limit.
+2. The place is a further instance of the defect the condition describes.
+3. The change is an enabling change: the work cannot meet its condition or the bar without it.
+
+On every ground, the edit adds places to the work, and adds no requirement of its own.
+
+Judge each such edit while you reach your outcome, as follows:
+
+- A place the work made wrong is a finding wherever it lies, inside or outside the condition's list.
+- An edit outside the list is not a `FAIL` where a flag you were given names that place and gives a
+  reason on one of the three grounds, and the reason holds. Establish whether the reason holds from the
+  work. For ground 3, ask whether the work would meet its condition or the bar without the edit.
+- An edit outside the list with no such flag, or whose reason does not hold, is a `FAIL` on the
+  acceptance condition.
+
+This holds even where the condition says that an instance outside its list is reported and not edited.
+
 ## What you hand back
 
 Hand back exactly one of three things: a `PASS`, a `FAIL`, or a raise. `PASS` and `FAIL` are outcomes. A
@@ -256,11 +281,13 @@ not name. Neither is on its own a `FAIL`, for three reasons:
   the work is not a finding.
 - A `FAIL` sends the work back to a worker who met the scope as written, and who may not repair a
   condition.
-- The condition's own residual clause already routes an instance outside its list to being reported and
-  not edited.
+- The condition's own residual clause already routes an instance outside its list. Such an instance is
+  edited only on the three grounds under `### An edit outside the condition's list`, with a flag naming
+  the place and the reason. Any other instance is reported and not edited.
 
-The work editing a file outside the condition's list stays a `FAIL` on the acceptance condition. Establish
-that from the diff, and not from the recorded command.
+Whether the work's edit to a file outside the condition's list is a `FAIL` is settled under
+`### An edit outside the condition's list`. Establish the edit from the diff, and not from the recorded
+command.
 
 Where the recorded command searches the effort's record instead of the working tree, run it as written
 anyway, and never quietly narrow it to the tree. Report that the condition's command searches material you
@@ -346,11 +373,15 @@ questions to the human with the rest of what it puts in front of them.
 
 ### The flags, after your outcome
 
-Check the flags only after reaching your `PASS` or `FAIL`, and change no outcome because of them. For
-each flag, establish one of three things: what it says was done is true of the work, it is false, or it
-makes no claim the work can make true or false. Judge only whether what the flag says was done is true of
-the work. Never judge whether the flag's judgement was right, and ignore any reason the flag gives.
+Apart from the one exception at the end of this section, check the flags only after reaching your `PASS`
+or `FAIL`, and change no outcome because of them. For each flag, establish one of three things: what it
+says was done is true of the work, it is false, or it makes no claim the work can make true or false.
+Judge only whether what the flag says was done is true of the work. Never judge whether the flag's
+judgement was right, and ignore any reason the flag gives.
 Report only a false flag, under `QUESTIONS:`, naming the flag's id and the search that showed it false.
+
+A flag that names a place outside the condition's list is the one exception. You read it while you reach
+your outcome, and you judge its reason, as `### An edit outside the condition's list` says.
 
 ### A part you could not establish, alongside a `PASS` or a `FAIL`
 

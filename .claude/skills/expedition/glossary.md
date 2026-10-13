@@ -214,8 +214,13 @@ _Avoid_: quality bar, default checks, CI
 The right to modify product code. How many code slots an effort runs is that effort's own setting, one
 worker to a slot, and the number may be more than one. A slot's occupancy is discovered by counting
 the live worktrees, one per claimed implementation node, rather than by inspecting the working tree
-for uncommitted changes.
+for uncommitted changes. A paused node's worktree is not counted while the node is blocked.
 _Avoid_: write lock, code lock — there is no lock
+
+**Enabling change**:
+A change that an implementation node's work cannot meet its acceptance condition or the bar without,
+in a place the condition did not list. A node made to carry such a change on its own is an enabling
+node.
 
 ## Talking to the human
 
@@ -236,7 +241,8 @@ a finished diff. A worker opens an unscheduled blocking raise when its premise i
 that is wrong is not the worker's to change, the decision changes a lot, or the choice is genuinely
 too hard to make alone. Where none of these holds, the worker decides and leaves a flag instead. A
 blocking raise holds the code slot while it waits, and is put ahead of grilling work in the
-manager's queue. Its answer either continues that worker or stops it.
+manager's queue. Its answer continues that worker, stops it, or, for an implementation worker's raise
+that proposes an enabling node, pauses its node.
 _Avoid_: escalate, interrupt, and *ask* (asking is the ordinary work of a worker built to question the
 human, and a raise is what a worker meant to work mostly by itself does when it needs input it does
 not have)
@@ -256,7 +262,15 @@ A marker on a recorded answer noting that the human contradicted the recommendat
 **Park**:
 The human deferring a live question. The node stores its progress and returns to open, and it keeps
 the answers it already holds as banked answers.
-_Avoid_: pause, snooze, postpone
+_Avoid_: pause (that names a different act, under **Pause**), snooze, postpone
+
+**Pause**:
+The human's answer to an implementation worker's raise that proposes an enabling node: a node for a
+change the worker's work cannot meet its condition or the bar without, too big to make inside the
+worker's own node. The paused node stays claimed, keeps its worktree and its work, and is blocked on the
+enabling node. Its worker continues once the enabling node has landed. A parked node, unlike a paused
+one, returns to open.
+_Avoid_: park (a parked node gives up its claim)
 
 **Banked answer**:
 An answer the human has already given, held on a parked node and waiting for a fresh worker. The human
