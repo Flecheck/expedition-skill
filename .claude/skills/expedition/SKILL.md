@@ -737,11 +737,11 @@ Two counts, each a setting of the effort, limit how much you start:
 
 - How many nodes that need the human run at once. The count is two, unless the effort's map sets another
   number.
-- How many implementation nodes run at once. The count is the effort's number of code slots, recorded in
-  its map. A slot holds one worker. A paused node holds no slot while it is blocked, as
-  `## A paused implementation node` says. Where no slot is free, start no implementation node. Raising
-  the count buys parallel implementation at the price of conflicts to resolve when the work is
-  integrated. The human sets the number. Never raise it on your own judgement, and never treat the
+- How many implementation nodes run at once. The count is the effort's number of code slots. It is two,
+  unless the effort's map sets another number. A slot holds one worker. A paused node holds no slot
+  while it is blocked, as `## A paused implementation node` says. Where no slot is free, start no
+  implementation node. Raising the count buys parallel implementation at the price of conflicts to
+  resolve when the work is integrated. The human sets the number. Never raise it on your own judgement, and never treat the
   effort's current value as a ceiling you must justify leaving. When the human moves the count, name
   this trade to them.
 
