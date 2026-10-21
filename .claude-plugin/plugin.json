@@ -1,0 +1,6 @@
+{
+  "name": "expedition",
+  "description": "/expedition: one manager thread drives a graph of decision, prototype and implementation nodes from a loose idea to finished, reviewed code.",
+  "repository": "https://github.com/Flecheck/expedition-skill",
+  "skills": "./.claude/skills/"
+}
