@@ -2,6 +2,7 @@
 paths:
   - ".scratch/**/map-manager-only.md"
   - "**/expedition/SKILL.md"
+  - "~/.claude/skills/expedition/SKILL.md"
 ---
 
 # Triggers a manager acts on
