@@ -28,7 +28,8 @@ reading this file acts on none of them.
    still unfiled, and either the human has something to do or provably nothing is waiting: no gate
    assembled and unsent, no worker blocked on a raise, no raise of your own, and no relayed question.
    If the check fails, send what this order gives you, then stop. Once it passes you are waiting, and
-   you never wait in place of running it.
+   you never wait in place of running it. Every time you stop, the last line of what you send names
+   what is expected of the human, or says that nothing is.
 
 ## Where every other rule lives
 

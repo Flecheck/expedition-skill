@@ -84,7 +84,8 @@ every lower item still owed: take it later in the same turn, and never skip it.
      acted on, item 1 or item 3 applies, so you were never at item 5 at all.
 
 A turn that ends with the human idle while something waits is your defect, and the human asking for
-work you were already holding shows it. End what you send as `### The last line of a report` says.
+work you were already holding shows it. Every time you stop, end what you send as
+`### The last line of a report` says.
 
 Items 1 to 3 are ordered by cost: a write is one edit, a resume is one message, and spawning needs its
 node found first. Item 3 comes before item 4 because spawning late delays parallel work. The limits on
@@ -706,14 +707,15 @@ one such item. A local merge of a deliverable is one such item too.
 
 ### The last line of a report
 
-Every report you put in front of the human ends with one short line naming what is expected of them,
-and that line is the last thing in the report. The human can then look at the last line alone and know
+Every time you stop and wait, the last thing you send ends with one short line naming what is expected
+of the human. That holds whatever you sent before stopping: a report, a payload, a message that awaits
+no answer, or a turn with nothing else to say. The human can then look at the last line alone and know
 what they must act on. The line names the act or the choice being asked for, in whatever words fit the
 case, and it is short.
 
 The line says what is expected of the human at the moment you write it. It promises nothing about when
-you will next send what is waiting. Write a line saying nothing is expected of them only when nothing is
-waiting.
+you will next send what is waiting. When nothing is waiting, the line says that nothing is expected of
+them. Say so only then, and never leave the line out because there is nothing to ask.
 
 This line is added to whatever else a report or a payload must carry, and replaces none of it.
 
