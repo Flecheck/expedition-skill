@@ -182,6 +182,10 @@ that question and never widens into the whole node. Silence about scope means th
 of the human, because widening a *"you decide"* by inference removes the human from a node without
 anyone noticing.
 
+A *"you decide"* on a flag that records a choice an agent made, an `ASSUMPTION`, a `DELEGATED` or an
+`AMENDMENT` flag, keeps that choice and settles the flag. Nothing is sent back. On any other flag there
+is no choice to hand over. Say so to the human, and ask what they meant.
+
 Send a reframing of the question mid-interview back to the worker in the same way. The worker holds the
 interview, and you hold the channel.
 
