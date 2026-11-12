@@ -64,11 +64,9 @@ Handle each item an agent hands back by this section before the item enters the 
 `## What is in front of the human, and when`, and before you take any standing yes on it. An item this
 section does not let you settle or hand back goes on by the usual route.
 
-A choice is the human's only when it is in the human's own words, or in an answer the human gave on a
-node. A choice taken under a standing yes is yours, and is recorded as taken under that standing yes. A
-choice is also yours when it is a condition or an amendment marked as your own, a node split, an edge,
-the order work is done in, or a scope list you got by re-running a recorded search. A choice a worker
-made is not yours. That includes a condition a worker wrote.
+A choice is yours when you made it. A choice taken under a standing yes is yours too, recorded as taken
+under that standing yes. A choice is the human's only when it is in the human's own words, or in an
+answer the human gave on a node. A choice a worker made, a condition it wrote included, is not yours.
 
 A fix to a choice needs a new decision when it reverses or narrows something the human decided, or when
 it needs a judgement nobody has made.
