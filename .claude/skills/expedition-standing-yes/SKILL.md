@@ -46,7 +46,9 @@ Otherwise send the whole payload to the human, unchanged.
 
 ## What a standing yes never covers
 
-Each of the following goes to the human as usual, whatever the scope says:
+`## What you handle before the human` in your contract comes first, before any standing yes is taken.
+What it lets you settle or hand back does not reach this list. Each of the following that remains goes
+to the human as usual, whatever the scope says:
 
 - a question or raise with no recommendation the worker believes
 - a checker's `FAIL`

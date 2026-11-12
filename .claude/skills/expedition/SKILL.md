@@ -49,14 +49,38 @@ Each row names something you will be tempted to do, and what you do instead.
 
 | never yours | what you do instead |
 | --- | --- |
-| answering anything on the human's behalf, except by taking a standing yes the human gave for that item's scope | put it back to the worker holding that node, or to the human; take a standing yes as `expedition-standing-yes` says |
+| answering anything on the human's behalf, except by taking a standing yes the human gave for that item's scope, or by settling or handing back what `## What you handle before the human` lets you | put it back to the worker holding that node, or to the human; take a standing yes as `expedition-standing-yes` says |
 | re-authoring what an agent wrote | paste it, and put your own words beside it as your own marked note |
 | authoring an acceptance condition for a node an agent minted | file the one that agent wrote; where it wrote none, say so to the human |
 | authoring the text of an agent's flag | file the agent's own text; add the bookkeeping and nothing else |
-| rewriting an acceptance condition | hand it over as written; a condition a worker already holds and judges wrong goes to the human; the one exception, amending the condition of a node nobody holds yet, is stated under `## Acceptance conditions` |
+| rewriting an acceptance condition | hand it over as written; a condition a worker already holds and judges wrong goes to the human; the two exceptions, amending the condition of a node nobody holds yet and amending a clause of your own in the condition of a node a worker holds, are stated under `### Changing one after it is written` |
 | rendering a diff into the conversation | say where the work is |
 | deciding between a worker and its checker | put that disagreement to the human, who alone settles it |
 | closing an effort | report that the conditions hold, and let the human close it |
+
+## What you handle before the human
+
+Handle each item an agent hands back by this section before the item enters the queue under
+`## What is in front of the human, and when`, and before you take any standing yes on it. An item this
+section does not let you settle or hand back goes on by the usual route.
+
+A choice is yours when you made it. A choice taken under a standing yes is yours too, recorded as taken
+under that standing yes. A choice is the human's only when it is in the human's own words, or in an
+answer the human gave on a node. A choice a worker made, a condition it wrote included, is not yours.
+
+A fix to a choice needs a new decision when it reverses or narrows something the human decided, or when
+it needs a judgement nobody has made.
+
+Settle a fix to a choice yourself only when the choice is your own and the fix needs no new decision.
+Every other fix goes to the human. A choice you settle this way carries no flag. Name it in no gate
+payload and in no node closing report.
+
+A worker's raise, or a checker's question or raise, may say that the agent is blocked by missing
+information that is already in your context. Hand that information back and resume the agent, instead of
+putting the item to the human. Hand back only what is already in your context, and read nothing and run
+nothing to find it. To a checker, hand back only where something is or how to reach it. A recorded
+decision or a reading of the condition never goes to a checker. To a worker, you may hand back any fact
+or recorded decision. Where the agent hands the item back again, the item takes the usual route.
 
 ## The order you act in
 
@@ -263,9 +287,9 @@ would make you the author of the standard the work is judged against. Where what
 check turns on, the condition goes to the human instead. Where you find such a condition before the
 check, you raise it. The checker raises one it cannot check.
 
-Where the human amends the condition of a node a worker already holds, you pass the amended text to that
-worker. Where a check is also live, you pass the amended text to the checker too. The amended text is
-then the whole condition.
+Where the human amends the condition of a node a worker already holds, or you amend it under
+`### Changing one after it is written`, you pass the amended text to that worker. Where a check is also
+live, you pass the amended text to the checker too. The amended text is then the whole condition.
 
 ## What comes back
 
@@ -567,10 +591,18 @@ Five parties may change a condition after it is written:
 - The human, who receives everything else.
 
 The amendments in this section, by the party that established a fact, by a worker reporting a related
-defect and by you, apply only to a node nobody holds yet. You make or file each of them without first
-asking the human. Where a worker already holds the node, its condition is handed over as written. A
-worker that judges the condition wrong raises it, and the human answers. The human may also amend a
+defect and by you, apply only to a node nobody holds yet. The one exception is the permission in the next
+paragraph. You make or file each of them without first asking the human. Where a worker already holds
+the node, its condition is otherwise handed over as written. A worker that judges the condition wrong
+raises it, and the human answers, unless that permission covers the clause. The human may also amend a
 condition of their own accord at any time.
+
+You may amend the condition of a node a worker already holds, without asking the human, where the clause
+shown wrong is your own and the fix needs no new decision, as `## What you handle before the human`
+defines it. Write the replacement under the two provisos below: every word of it is already fixed, and
+the amendment names the source that fixed it. Hand the amended text to the worker, and to the checker
+where a check is live. A clause made out of date by a later decision of the human falls under the same
+permission. A clause someone else wrote still goes to the human.
 
 Where a node resolving or work landing establishes a fact that makes a clause of an unclaimed node's
 condition wrong, the party that established the fact writes the replacement as text on its handover. You
@@ -618,15 +650,21 @@ without checking the branch out. Where such a passage is gone, or an annotation 
 condition is wrong, amend the condition under this section's rules or put the node to the human. Claim
 the node only once neither is true.
 
-Every amendment, whoever wrote it, comes with five things. `### Amend an acceptance condition` in
-`graph-conventions.md` gives the writes that record them.
+Every amendment, whoever wrote it, comes with five things, apart from the exceptions that item 4 and the
+paragraph after the list name. `### Amend an acceptance condition` in `graph-conventions.md` gives the writes that
+record them.
 
 1. It is recorded on the node, beside the search or the fact that justified it.
 2. It is marked as its author's own, and as yours where you wrote it.
 3. It is kept apart from the minting author's text, and never merged into it.
-4. It is carried as a flag of its own, which settles at that node's gate under `## Flags`.
+4. It is carried as a flag of its own, which settles at that node's gate under `## Flags`. The flag
+   carries the marker `AMENDMENT`. An amendment the human makes carries no flag.
 5. It is named in the node closing report that names the node as started. Where the amendment is made
    after the node is claimed, it is named in that node's own node closing report instead.
+
+An amendment you make under the permission above for a node a worker already holds comes with the first
+three of those things, and with neither a flag nor a mention in a node closing report. So does any other
+amendment of yours that settles a fix to a clause of your own under `## What you handle before the human`.
 
 Before a party hands back a fact it established, it searches for the conditions and questions that fact
 makes wrong. It searches the open nodes' `## Acceptance condition` sections and their `## Question`
@@ -699,6 +737,9 @@ Three things never enter the queue:
 
 A checker's question never enters the queue either. It travels inside the gate payload, so it needs no
 place in tier 1.
+
+An item an agent hands back first goes through `## What you handle before the human`. What that section
+lets you settle or hand back never enters the queue.
 
 An item that a standing yes covers is handled by the skill `expedition-standing-yes`, and you do not put
 it to the human. Such an item never enters the queue. That skill says which items a standing yes can

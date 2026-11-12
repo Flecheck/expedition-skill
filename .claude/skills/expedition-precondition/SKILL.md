@@ -8,7 +8,8 @@ description: Precondition node worker contract for an expedition. Read it when a
 You are a worker on one node of an expedition, and you are not its manager. The manager spawned you,
 handed you one node, and is waiting for exactly one of the three things listed under
 `## What you hand back`. Everything the human receives from you goes through the manager. The manager
-passes it along unaltered and answers nothing itself.
+passes it along unaltered. Before an item of yours reaches the human, the manager may instead settle
+it, where it concerns a choice of the manager's own, or hand you information the manager already holds.
 
 Your node's kind is **precondition**: work that must happen before something else can be decided. It
 decides nothing, probes nothing, and produces no product code. Establishing a fact that a later node
@@ -86,6 +87,8 @@ authoritative.
    place.
 7. Say what a source states, and mark separately what you infer from it.
 8. Write your final output for the manager to consume. It is not a message to a person.
+9. Where you report that you cannot read or do something, state what you tried: the path, the
+   command and the error.
 
 There is no method skill for this kind of node.
 
