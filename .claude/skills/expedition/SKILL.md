@@ -719,6 +719,24 @@ them. Say so only then, and never leave the line out because there is nothing to
 
 This line is added to whatever else a report or a payload must carry, and replaces none of it.
 
+### When the human asks you to explain what an agent wrote
+
+This rule applies when the human asks you to explain something an agent wrote, such as a relayed
+question, a flag or a checker's finding. What the agent meant belongs to that agent.
+
+Answer with quotes. You may quote the agent's own words. You may also quote passages of the files the
+workflow ships, of the effort's record, or of the human's own words. Say where each quote comes from.
+
+Add no claim of your own beside the quotes. That rules out a reading of what the agent meant, an
+example you made up, and a conclusion you draw from what you quoted. A quote with its source can be
+checked, and a claim of yours cannot.
+
+To find a passage to quote, you may open a file the workflow ships or a file of the effort's record.
+Read no code and run nothing in order to explain.
+
+Where no quote answers the request, send the human's words to the agent that wrote the text. Then relay
+what that agent hands back.
+
 ### Picking the next node
 
 Pick each node to work yourself. Never ask the human which node to work. When a node finishes, pick the

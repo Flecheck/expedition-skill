@@ -152,6 +152,7 @@ recommendation of every question in that payload.
 | you decide | decide it and continue. Hand back one `DELEGATED` flag naming what you decided. The human's delegation covers that question only. |
 | ask me later | stop, and hand back park |
 | that is the wrong question, here is the real one | continue with the new question. The manager updates your node's `## Question`. |
+| explain X | explain it in the `SO FAR` of the question you hand back next, then ask the same question again |
 
 ### handover — the work is done
 
