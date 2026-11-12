@@ -650,14 +650,15 @@ without checking the branch out. Where such a passage is gone, or an annotation 
 condition is wrong, amend the condition under this section's rules or put the node to the human. Claim
 the node only once neither is true.
 
-Every amendment, whoever wrote it, comes with five things, apart from the amendments the paragraph after
-the list names. `### Amend an acceptance condition` in `graph-conventions.md` gives the writes that
+Every amendment, whoever wrote it, comes with five things, apart from the exceptions that item 4 and the
+paragraph after the list name. `### Amend an acceptance condition` in `graph-conventions.md` gives the writes that
 record them.
 
 1. It is recorded on the node, beside the search or the fact that justified it.
 2. It is marked as its author's own, and as yours where you wrote it.
 3. It is kept apart from the minting author's text, and never merged into it.
-4. It is carried as a flag of its own, which settles at that node's gate under `## Flags`.
+4. It is carried as a flag of its own, which settles at that node's gate under `## Flags`. The flag
+   carries the marker `AMENDMENT`. An amendment the human makes carries no flag.
 5. It is named in the node closing report that names the node as started. Where the amendment is made
    after the node is claimed, it is named in that node's own node closing report instead.
 

@@ -273,8 +273,9 @@ The entry's first sentence is the raising agent's one-sentence report of the jud
 reader who has not read the node. The full account of what produced the flag follows it, as
 `### Raise a flag` under `## Procedures` states. `## Flags` in `SKILL.md` says whose text the entry is.
 
-There are five markers:
+There are six markers:
 
+- `AMENDMENT` — an agent amended a condition after it was written; the manager files it.
 - `ASSUMPTION` — the worker decided a small ambiguity itself.
 - `CONDITION-WRONG` — filed by the manager, after a worker raised its acceptance condition as wrong and
   the human answered *ship it anyway*.
@@ -582,8 +583,9 @@ is written` in `SKILL.md` says who may change it and what the change may cover.
 1. `nodes/NN-<name>.md`: under `## Acceptance condition`, mark each clause the amendment replaces as
    superseded where the clause stands. Append the amendment after the text of the condition's author,
    marked as its own author's, beside the search or the fact that justified it.
-2. `nodes/NN-<name>.md`: raise the amendment's flag by the steps under `### Raise a flag`. Skip this
-   step for an amendment that `### Changing one after it is written` in `SKILL.md` makes without a flag.
+2. `nodes/NN-<name>.md`: raise the amendment's flag, with the marker `AMENDMENT`, by the steps under
+   `### Raise a flag`. Skip this step for an amendment that `### Changing one after it is written` in
+   `SKILL.md` makes without a flag.
 3. Where step 2 raised a flag, whoever amends the condition runs check 6 below itself, as part of this
    amendment, over the material it touched: the flag's entry on its node.
 
