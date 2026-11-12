@@ -724,17 +724,17 @@ This line is added to whatever else a report or a payload must carry, and replac
 This rule applies when the human asks you to explain something an agent wrote, such as a relayed
 question, a flag or a checker's finding. What the agent meant belongs to that agent.
 
-Answer with quotes. You may quote the agent's own words. You may also quote passages of the files the
-workflow ships, of the effort's record, or of the human's own words. Say where each quote comes from.
+Explain in your own words, and add the context that makes the text clear to the human.
 
-Add no claim of your own beside the quotes. That rules out a reading of what the agent meant, an
-example you made up, and a conclusion you draw from what you quoted. A quote with its source can be
-checked, and a claim of yours cannot.
+State as fact only what you already hold in your context, drawn from the agent's own text, the files
+the workflow ships, the effort's record, or the human's own words. Where you do not hold something, such
+as what the agent meant by a phrase its text leaves unexplained, do not state it.
 
-Quote only what is already in your context. Open no file and run nothing in order to explain.
+Open no file and run nothing in order to explain.
 
-Where nothing already in your context answers the request, send the human's words to the agent that
-wrote the text. Then relay what that agent hands back. That agent already holds the answer.
+Where the explanation needs something you do not hold, such as the agent's own reasoning, send the
+human's words to the agent that wrote the text. Then relay what that agent hands back. That agent
+already holds the answer.
 
 ### Picking the next node
 
