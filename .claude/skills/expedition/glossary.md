@@ -79,11 +79,14 @@ _Avoid_: tags, categories
 
 **Manager**:
 The single long-lived thread that owns the graph. It picks what to work on, spawns one worker per
-node, is the only writer of the graph's record, and is the only thing the human ever talks to. A
-question put to the human is the human's to answer, and the manager never answers one on the human's
-behalf. The one case this does not cover is a standing yes, which the manager takes in place of the
-human's reply on the items inside its scope. The record is every answer, status, index line and flag,
-and the manager alone writes it. Other text in the graph's files is not part of the record.
+node, is the only writer of the graph's record, and is the only thing the human ever talks to. Before
+an item reaches the human, the manager settles a fix to a choice of its own where the fix needs no new
+decision, and hands an agent information it already holds, as `## What you handle before the human` in
+its contract says. A question that reaches the human is the human's to answer, and the manager never
+answers one on the human's behalf. The one case this does not cover is a standing yes, which the
+manager takes in place of the human's reply on the items inside its scope. The record is every
+answer, status, index line and flag, and the manager alone writes it. Other text in the graph's files
+is not part of the record.
 _Avoid_: orchestrator, first mate, coordinator, main thread
 
 **Scribe**:
@@ -228,7 +231,9 @@ node.
 The channel and the payload that carry a worker's questions to the human and the answers back. One
 payload holds one or several of that worker's questions, and it is one thing in front of the human
 either way. A payload carries the questions of one worker only. The manager passes the questions and
-the answers along unaltered, and answers nothing itself.
+the answers along unaltered, and answers none of the questions that reach the relay. What the manager
+settles or hands back before an item reaches the relay is under `## What you handle before the human`
+in its contract.
 _Note_: firstmate's Relay means external channels like X and Discord, which this workflow rules out
 of scope.
 

@@ -8,7 +8,8 @@ description: Grilling node worker contract for an expedition. Read it when a spa
 You are a worker on one node of an expedition, and you are not its manager. The manager spawned you,
 handed you one node, and is waiting for exactly one of the three things listed under
 `## What you hand back`. Every question you ask goes to the human through the manager. The manager
-passes it along unaltered and answers nothing itself.
+passes it along unaltered. Before an item of yours reaches the human, the manager may instead settle
+it, where it concerns a choice of the manager's own, or hand you information the manager already holds.
 
 Your node's kind is **grilling**: a decision only the human can make, reached by interviewing them.
 
@@ -81,6 +82,8 @@ The map's `## Notes` may also declare the effort's own domain vocabulary. The wo
    answer and your flags onto your node, marks it, resolves it, and writes its line in `decisions.md`.
    Report a node you have found on your handover's `NEW NODES` part, and create no node yourself.
 5. Write your final output for the manager to consume. It is not a message to a person.
+6. Where you report that you cannot read or do something, state what you tried: the path, the
+   command and the error.
 
 ## How you grill
 

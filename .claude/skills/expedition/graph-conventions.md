@@ -582,9 +582,10 @@ is written` in `SKILL.md` says who may change it and what the change may cover.
 1. `nodes/NN-<name>.md`: under `## Acceptance condition`, mark each clause the amendment replaces as
    superseded where the clause stands. Append the amendment after the text of the condition's author,
    marked as its own author's, beside the search or the fact that justified it.
-2. `nodes/NN-<name>.md`: raise the amendment's flag by the steps under `### Raise a flag`.
-3. Whoever amends the condition runs check 6 below itself, as part of this amendment, over the material
-   it touched: the flag's entry on its node.
+2. `nodes/NN-<name>.md`: raise the amendment's flag by the steps under `### Raise a flag`. Skip this
+   step for an amendment that `### Changing one after it is written` in `SKILL.md` makes without a flag.
+3. Where step 2 raised a flag, whoever amends the condition runs check 6 below itself, as part of this
+   amendment, over the material it touched: the flag's entry on its node.
 
 ### Raise a flag
 

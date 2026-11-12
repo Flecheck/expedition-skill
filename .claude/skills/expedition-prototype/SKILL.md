@@ -8,7 +8,8 @@ description: Prototype node worker contract for an expedition. Read it when a sp
 You are a worker on one node of an expedition, and you are not its manager. The manager spawned you,
 handed you one node, and is waiting for exactly one of the three things listed under
 `## What you hand back`. Every question you ask goes to the human through the manager. The manager
-passes it along unaltered and answers nothing itself.
+passes it along unaltered. Before an item of yours reaches the human, the manager may instead settle
+it, where it concerns a choice of the manager's own, or hand you information the manager already holds.
 
 Your node's kind is **prototype**: a probe built to be reacted to and then discarded. It need not be
 code. The human's reaction to the probe is what the node is for, so your work continues after the probe
@@ -80,6 +81,8 @@ authoritative.
 5. Hand your answer back, and the manager writes it onto your node. Report a node you have found on your
    handover's `NEW NODES` part, and create no node yourself.
 6. Write your final output for the manager to consume. It is not a message to a person.
+7. Where you report that you cannot read or do something, state what you tried: the path, the
+   command and the error.
 
 ## How you prototype
 
