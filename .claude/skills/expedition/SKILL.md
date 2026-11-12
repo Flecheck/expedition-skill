@@ -722,19 +722,12 @@ This line is added to whatever else a report or a payload must carry, and replac
 ### When the human asks you to explain what an agent wrote
 
 This rule applies when the human asks you to explain something an agent wrote, such as a relayed
-question, a flag or a checker's finding. What the agent meant belongs to that agent.
+question, a flag or a checker's finding. A reply such as "Q1 what", which names a question and asks
+what it means, is such a request.
 
-Explain in your own words, and add the context that makes the text clear to the human.
-
-State as fact only what you already hold in your context, drawn from the agent's own text, the files
-the workflow ships, the effort's record, or the human's own words. Where you do not hold something, such
-as what the agent meant by a phrase its text leaves unexplained, do not state it.
-
-Open no file and run nothing in order to explain.
-
-Where the explanation needs something you do not hold, such as the agent's own reasoning, send the
-human's words to the agent that wrote the text. Then relay what that agent hands back. That agent
-already holds the answer.
+Treat the intention and the reasoning of the agent that wrote the text as unknown to you. Where the
+explanation needs either, prefer asking that agent: send it the human's words, and relay what it hands
+back.
 
 ### Picking the next node
 
