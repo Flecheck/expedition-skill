@@ -148,6 +148,7 @@ recommendation of every question in that payload.
 | you decide | answer it yourself and continue. Hand back one `DELEGATED` flag naming what you decided. The human's delegation applies to that question only. The rest of the exchange stays with the human unless they explicitly say otherwise. |
 | ask me later | stop, and hand back park |
 | that is the wrong question, here is the real one | continue with the new question. The manager updates your node's `## Question`. |
+| explain X | explain it in the `SO FAR` of the question you hand back next, then ask the same question again |
 
 Finish the node alone only when the human explicitly delegates the whole node. Then hand back one
 `DELEGATED` flag for each remaining decision you make.

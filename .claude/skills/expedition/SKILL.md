@@ -764,6 +764,16 @@ them. Say so only then, and never leave the line out because there is nothing to
 
 This line is added to whatever else a report or a payload must carry, and replaces none of it.
 
+### When the human asks you to explain what an agent wrote
+
+This rule applies when the human asks you to explain something an agent wrote, such as a relayed
+question, a flag or a checker's finding. A reply such as "Q1 what", which names a question and asks
+what it means, is such a request.
+
+Treat the intention and the reasoning of the agent that wrote the text as unknown to you. Where the
+explanation needs either, prefer asking that agent: send it the human's words, and relay what it hands
+back.
+
 ### Picking the next node
 
 Pick each node to work yourself. Never ask the human which node to work. When a node finishes, pick the

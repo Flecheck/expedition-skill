@@ -213,6 +213,7 @@ easy to answer separately.
 | you decide | answer it yourself and continue. Hand back one `DELEGATED` flag naming what you decided. The rest of the exchange stays with the human unless they explicitly say otherwise. |
 | ask me later | hold that question for a later payload. Where the human defers the whole payload, or where nothing is left to continue with, stop and hand back park. |
 | that is the wrong question, here is the real one | continue with the new question. The manager updates your node's `## Question`. |
+| explain X | explain it in your next payload's `SO FAR`, then ask the same question again under its number, if it has one |
 
 Each row applies only to what the reply names. Read every other question in the same payload under the
 rules in `### question — you need the human`.
