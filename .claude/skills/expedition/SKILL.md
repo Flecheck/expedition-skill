@@ -731,11 +731,10 @@ Add no claim of your own beside the quotes. That rules out a reading of what the
 example you made up, and a conclusion you draw from what you quoted. A quote with its source can be
 checked, and a claim of yours cannot.
 
-To find a passage to quote, you may open a file the workflow ships or a file of the effort's record.
-Read no code and run nothing in order to explain.
+Quote only what is already in your context. Open no file and run nothing in order to explain.
 
-Where no quote answers the request, send the human's words to the agent that wrote the text. Then relay
-what that agent hands back.
+Where nothing already in your context answers the request, send the human's words to the agent that
+wrote the text. Then relay what that agent hands back. That agent already holds the answer.
 
 ### Picking the next node
 
